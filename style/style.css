@@ -27,18 +27,14 @@ html a{
 }
 
 body{
-    padding: 0;
-		width: 80%;
-		margin: 0 auto;
+    padding: 40px;
     color: #2f3030;
+
 }
 
 header{
     font-family: 'Varela', sans-serif;
-    width: inherit;
-		background-color: red;
-		padding-top: 10vh;
-		
+    width: 100%;
 }
 
 ul {
@@ -53,16 +49,18 @@ ul {
 
 #site_logo{
     font-weight: 900;
-    font-size: 2.5em; 
+    font-size: 1.8em; 
     color: #171a1a;
     display: inline;
     position: relative;
-    float: left;
+    top: 0;
+    left: 0;
 }
 
 #site_nav{
     position: relative;
-    float: right;
+    top: 0;
+    right: 0;
 }
 
 #site_nav li{
@@ -71,5 +69,5 @@ ul {
 
 #site_nav a{
     color: #6e7d7d !important;
-    padding-left: 10px;
+    padding-right: 10px;
 }
