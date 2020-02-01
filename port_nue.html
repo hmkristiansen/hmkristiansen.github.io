@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>hinken | Henrik Kristiansen</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Signika&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" type = "text/css" href = "style/style.css"/>
+        <script src="script/jquery-3.4.1.min.js"></script>
+    </head>
+    <body onload="initiate()" onkeydown='getKeyAndMove(event)'>
+
+        
+        <div class="navigation init_show">
+            <a  class="about_link" id="1" onclick="callPage(this.id)">
+                <div class="about_link_content" id="about_link"><p>about me</p></div>
+            </a>
+            <a  class="port_link" id="2" onclick="callPage(this.id)">
+                <div class="port_link_content"><p>portfolio</p></div>
+            </a>
+            <a  class="fun_link" id="3" onclick="callPage(this.id)">
+                <div class="fun_link_content"><p>fun stuff</p></div>
+            </a>
+        </div>
+    
+        <div class="back-btn showBtn"><span id="back-arrow"></span>Go back</div>
+        
+        <div class="nav-img">
+            <img id="nav-img-src" src="img/keyboard/0.png">
+        </div>
+
+        <section class="greeting 0">
+            <p>
+                Hei! <span class="emoji-ani" id="waving-hand">👋</span><br><br>
+                My name is Henrik, but I often go by "hinken".<br>
+                I’m a UX design student, currently living in <span id="trondheim">Trondheim 🇳🇴</span> Lisbon 🇵🇹<span class="emoji-ani" id="dancing-lady">💃</span><br> <br>
+                I also like beagles and hipster-coffee 🐶☕️ 
+            </p>
+        </section>
+
+        <section class="about 1">
+            <div class="about_content">
+                <div id="about_text">
+                    <p>Hi again!
+                        Is I said; my name is Henrik, and I’m a UX and interaction design student at NTNU Gløshaugen. <br><br>
+                        
+                        I enjoy solving complex problems with doodles and emoji, always bring a truckload of childishness into every team and/or project I am part of. <br><br>
+                        
+                        If I’m not creating silly wireframes or killer keynotes, I’m usually playing Zelda on my Switch 🎮👾 <br> 
+                        
+                        <br>
+            
+                        <a href="https://www.instagram.com/hmkristiansen/" class="mobile_link" target="_blank">Instagram</a>
+                        <a href="https://www.linkedin.com/in/hmkristiansen/" class="mobile_link" target="_blank"><br><br>LinkedIn</a>
+                        <a href="mailto:hinkendesign@gmail.com" class="mobile_link" target="_blank"><br><br>Mail me</a>
+                    
+                    </p>
+                    
+                    <ul id="doodles">
+                        <li><a href="https://www.instagram.com/hmkristiansen/" class="nav_insta" target="_blank">
+                            <img class="bottom" src="img/doodles/insta2.png">
+                            <img class="top" src="img/doodles/insta1.png">
+                        </a></li>
+            
+                        <li><a href="https://www.linkedin.com/in/hmkristiansen/" class="nav_li" target="_blank">
+                            <img class="bottom" src="img/doodles/li2.png">
+                            <img class="top" src="img/doodles/li1.png">
+                        </a></li>
+            
+                        <li><a href="mailto:hinkendesign@gmail.com" class="nav_mail" target="_blank">
+                            <img class="bottom" src="img/doodles/mail2.png">
+                            <img class="top" src="img/doodles/mail1.png">
+                        </a></li>
+                    </ul> 
+                </div> 
+                
+                <div id="about_image">
+                    <img id="me-img" src="img/me.JPG">
+                    <img id="me-doodle" src="img/doodles/me.png">
+                </div> 
+            </div>
+        </section>
+
+        <section class="portfolio 2">
+            <div class="spacer" id="spacer-test"></div>
+            <a class="portfolio-item" id="1">
+                <img src="img/portfolio/shake/shake_thumb.jpg">
+                <h1>Safer 2nd hand purchase of cars</h1>
+                <h3>SHAKE</h3>
+            </a>
+            <div class="spacer"></div>
+            <a class="portfolio-item portfolio-right" id="2">
+                <img src="img/portfolio/nn/d6_thumb.jpg">
+                <h1>Helping kids with school refusal</h1>
+                <h3>Neurotiske Nevroner</h3>
+            </a>
+            <div class="spacer"></div>
+            <a class="portfolio-item" id="3">
+                <img src="img/portfolio/dcd/mockup_thumb.jpg">
+                <h1>Democratize urban development</h1>
+                <h3>Trondheim Kommune</h3>
+            </a>
+            <div class="spacer"></div>
+            <a class="portfolio-item portfolio-right" id="4">
+                <img src="img/portfolio/ss/sustain_thumb.png">
+                <h1>Making shopping more sustainable</h1>
+                <h3>Research project</h3>
+            </a>
+            <div class="spacer"></div>
+            <a class="more-work" href="#">
+                More work
+            </a>
+        </section>
+
+        <section class="portfolio-page" id="port-page">
+            <header id="header"><img id="header-img" src=""></header>
+            <a href="#" class="close"></a>
+            <div class="port-content">
+                <table>
+                    <tr>
+                        <td class="table-section">Client:   </td>
+                        <td id="client-input"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-section">Role:   </td>
+                        <td id="role-input"></td>
+                    </tr>
+                    <tr>
+                        <td class="table-section">Period:   </td>
+                        <td id="period-input"></td>
+                    </tr>
+                </table>
+                <div id="port-cont"></div>
+                <!--<div class="top-btn"><i class="arrow up"></i></div>-->
+            </div>     
+        
+        </section>
+
+        
+        <section class="fun 3">
+            <div id="background-wrap">
+                <div class="x1">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x2">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x3">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x4">
+                    <div class="cloud"></div>
+                </div>
+            
+                <div class="x5">
+                    <div class="cloud"></div>
+                </div>
+            </div>
+            <section id="idle_greeting">
+                <h1>Ojsann!</h1>
+                <p>This part is under construction 🚧<br>
+                Come back later! 🥳</p>
+            </section>
+        </section>
+
+        <!--
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+        
+        <script type="text/javascript" src="script/script.js"></script>
+        <script type="text/javascript" src="script/canvas.js"></script>
+    </body>
+</html>
