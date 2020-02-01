@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative|Varela&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
 
 /*Colors and fonts*/
 
@@ -29,12 +30,14 @@ html a{
 body{
     padding: 40px;
     color: #2f3030;
-
 }
 
 header{
-    font-family: 'Varela', sans-serif;
+    font-family: 'Raleway', sans-serif;
     width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		/*background-color: red;*/
 }
 
 ul {
@@ -59,12 +62,12 @@ ul {
 
 #site_nav{
     position: relative;
-    top: 0;
-    right: 0;
+		float: right;
 }
 
 #site_nav li{
-    display: inline;
+    /*display: inline;*/
+		text-align: right;
 }
 
 #site_nav a{
