@@ -49,6 +49,10 @@ ul {
     list-style-type: none;
 }
 
+section{
+	width: 100%;
+}
+
 /* ANIMATIONS AND KEYFRAMES */
 
 //for waving hand
@@ -109,14 +113,14 @@ ul {
     }
 }
 
-#greeting p:hover #waving-hand {
+.greeting p:hover #waving-hand {
   -webkit-animation: shake 90ms ease;
           animation: shake 90ms ease;
   -webkit-animation-iteration-count: 8;
           animation-iteration-count: 8;
 }
 
-#greeting p:hover #dancing-lady {
+.greeting p:hover #dancing-lady {
   -webkit-animation: dance 360ms ease;
           animation: dance 360ms ease;
   -webkit-animation-iteration-count: 2;
@@ -144,30 +148,38 @@ ul {
 }
 
 #site_nav li{
-    display: inline;
+    display: inline-block;
 		text-align: right;
 		margin-left: 10px;
 }
 
 #site_nav a{
     color: #6e7d7d !important;
+		font-weight: 300 !important;
+		transition: all 0.2s;
+}
+
+#site_nav a:hover{
+	color: #171a1a;
 }
 
 /*Greeting*/
 
-#greeting{
+.greeting{
 	padding-top: 100px;
 }
 
-#greeting p{
+.greeting p{
 	font-family: 'Kreon', serif;
 	font-size: 2.5em;
+	font-weight: 600;
+	color: #1e1b4a;
 	width: 80%;
 	max-width: 850px;
 	text-align:left;
 }
 
-#greeting .emoji-ani {
+.greeting .emoji-ani {
   	position: relative;
   	top: 0;
   	-webkit-transition: top ease 0.5s;
@@ -175,82 +187,160 @@ ul {
   	display: inline-block;
 }
 
-#greeting #trondheim {
+.greeting #trondheim {
   	text-decoration: line-through;
   	opacity: 0.5;
+}
+
+/*ARROW DOWN*/
+
+.arrow_down{
+	font-size: 2em;
+	margin-top: 100px;
+}
+
+/* PORTFOLIO */
+
+.column {
+  float: left;
+  width: 50%;
+	padding: 20px;
+	height: 500px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column img{
+	width: 100%;
+	max-height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 
 /* RESPONSIVITY AND MEDIA QUYERIES*/
 
+@media only screen and (max-width: 600px) {
+	
+	.column {
+    width: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 375px) {
+  body{
+		padding: 10px;
+	}
+	
+	.greeting{
+		padding-top: 50px;
+	}
+	
+	.greeting p{
+		width: 100%;
+		font-size: 2em;
+	}
+	
+	#site_nav{
+		float: none;
+	}
+	#site_nav li{
+    display: block;
+		text-align: left;
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
 /* ----------- Non-Retina Screens ----------- */
+/*
 @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
 }
+*/
 
 /* ----------- Retina Screens ----------- */
-@media screen 
+/*@media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
 }
-
+*/
 /* ----------- iPad Pro 10.5" ----------- */
 
 /* Portrait and Landscape */
+/*
 @media only screen 
   and (min-device-width: 834px) 
   and (max-device-width: 1112px)
   and (-webkit-min-device-pixel-ratio: 2) {
 }
-
+*/
 /* ----------- iPad Pro 12.9" ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
+/*@media only screen 
   and (min-device-width: 1024px) 
   and (max-device-width: 1366px)
   and (-webkit-min-device-pixel-ratio: 2) {
-}
+}*/
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
+/*@media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
-}
+}*/
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
+/*@media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-}
+}*/
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
+/*@media only screen 
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
-}
+}*/
 
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
-@media only screen 
+/*@media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
+		
+		#site_nav{
+			float: left;
+		}
 
 }
-
+*/
 
