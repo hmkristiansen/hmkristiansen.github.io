@@ -1,10 +1,73 @@
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative|Varela&display=swap');
-//font-family: 'Varela', sans-serif;
-//font-family: 'Signika Negative', sans-serif;
 
-body{
-    width: 1000px;
-    height: 1000px;
-    color: red;
+/*Colors and fonts*/
+
+/*font-family: 'Varela', sans-serif;*/
+/*font-family: 'Signika Negative', sans-serif;*/
+
+/*
+accent blue: #364f6b
+text general: #2f3030
+
+*/
+
+
+/*global settings*/ 
+
+html{
+    width: 100%;
+    height: 100%;
+    
+    font-size: 14px;
 }
 
+html a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    padding: 40px;
+    color: #2f3030;
+
+}
+
+header{
+    font-family: 'Varela', sans-serif;
+    width: 100%;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+/*--------------------------------*/
+
+
+/* id's and specific changes*/
+
+#site_logo{
+    font-weight: 900;
+    font-size: 1.8em; 
+    color: #171a1a;
+    display: inline;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#site_nav{
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+#site_nav li{
+    display: inline;
+}
+
+#site_nav a{
+    color: #6e7d7d !important;
+    padding-right: 10px;
+}
