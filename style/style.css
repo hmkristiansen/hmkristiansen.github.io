@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative|Varela&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kreon&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rokkitt:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
 /*Colors and fonts*/
 
 /*font-family: 'Varela', sans-serif;*/
@@ -170,7 +172,7 @@ section{
 }
 
 .greeting p{
-	font-family: 'Kreon', serif;
+	font-family: 'DM Serif Display', serif;
 	font-size: 2.5em;
 	font-weight: 600;
 	color: #1e1b4a;
