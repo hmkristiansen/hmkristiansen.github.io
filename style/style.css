@@ -204,8 +204,8 @@ section{
 /* PORTFOLIO */
 
 .column {
-  float: left;
-  width: 50%;
+ 	float: left;
+ 	width: 50%;
 	padding: 20px;
 	height: 500px;
 }
@@ -220,8 +220,11 @@ section{
 .column img{
 	width: 100%;
 	max-height: 300px;
-  background-position: center center;
-  background-repeat: no-repeat;
+	/*
+	background-position: center center;
+	background-repeat: no-repeat;
+	*/
+	object-fit: cover;
 }
 
 
