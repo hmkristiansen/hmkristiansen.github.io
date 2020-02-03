@@ -219,6 +219,37 @@ section{
 
 /* PORTFOLIO */
 
+.portItem{
+	width: 70%;
+	max-width: 1200px;
+	height: auto;
+	float: left;
+	clear: both;
+	margin-bottom: 100px;
+}
+
+.right{
+	float: right;
+}
+
+.portItem img{
+	width: 100%;
+	max-height: 500px;
+	object-fit: cover;
+}
+
+.portItem h1{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;	
+}
+
+.portItem h3{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+} 
+
+
+/* old with columns and rows
 .column {
  	float: left;
  	width: 50%;
@@ -226,7 +257,6 @@ section{
 	height: 500px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -248,6 +278,7 @@ section{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 }
+*/
 
 
 /* ABOUT PAGE */
@@ -332,6 +363,11 @@ footer #up_button{
  	
  	.about img{
  		margin-left: 20vw;
+ 	}
+ 	
+ 	.portItem{
+ 		width: 100%;
+ 		margin-bottom: 50px;
  	}
   
 }
