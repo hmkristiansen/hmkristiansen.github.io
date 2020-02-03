@@ -154,7 +154,7 @@ section{
 	float: right;
 }
 
-#site_nav li{
+#site_nav li, footer li{
     display: inline-block;
 	text-align: right;
 	margin-left: 10px;
@@ -174,8 +174,8 @@ section{
 
 .greeting{
 	padding-top: 100px;
-	width: 80%;
 	max-width: 850px;
+	padding-bottom: 30vh;
 }
 
 .greeting h1{
@@ -192,7 +192,7 @@ section{
 
 }
 
-.greeting .emoji-ani {
+.about .emoji-ani {
   	position: relative;
   	top: 0;
   	-webkit-transition: top ease 0.5s;
@@ -200,7 +200,7 @@ section{
   	display: inline-block;
 }
 
-.greeting #trondheim {
+.about #trondheim {
   	text-decoration: line-through;
   	opacity: 0.5;
 }
@@ -250,18 +250,72 @@ section{
 }
 
 
+/* ABOUT PAGE */
+
+.about{
+	padding-top: 100px;
+	width: 80%;
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+.about h3, p{
+	max-width: 600px;
+}
+
+.about h3{
+	font-family: "Raleway", sans-serif;
+}
+
+.about p{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.about img{
+	max-width: 500px;
+	width: 80%;
+	height: auto;
+	object-fit: cover;
+	/*float: right;*/
+	margin-left: 15vw;	
+	padding: 20px;
+}
+
+/* FOOTER */
+
+footer{
+	font-family: 'Raleway', sans-serif;
+}
+
+footer a{
+    color: #6e7d7d !important;
+	font-weight: 500;
+	transition: all 0.2s;
+	opacity: 0.6;
+}
+
+footer a:hover{
+	color: #171a1a;
+	opacity: 1;
+}
+
+footer li{
+	padding-top: 20px;
+}
+
+
 /* RESPONSIVITY AND MEDIA QUYERIES*/
 
 @media only screen and (max-width: 600px) {
 	
 	.column {
-    width: 100%;
-  }
+    	width: 100%;
+ 	}
   
 }
 
 @media only screen and (max-width: 375px) {
-  body{
+  	body{
 		padding: 10px;
 	}
 	
@@ -282,6 +336,16 @@ section{
 		text-align: left;
 		margin-left: 0px;
 		margin-top: 10px;
+	}
+	
+	.about {
+		width: 95%;
+		padding-top: 30px;
+	}
+	.about img{
+		width: 100%;
+		padding: 0;	
+		margin: 0;
 	}
 }
 
