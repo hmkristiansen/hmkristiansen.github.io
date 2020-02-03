@@ -3,10 +3,10 @@ console.log("Hello loggers");
 /* DATABASE FOR PORTFOLIO */
 
 var projects = [
-	['shake'],
-	['tackl'],
-	['dcd'],
-	['sustain'],
+	['shake','SHAKE','Safer 2nd hand purchase of cars'],
+	['tackl','TACKL','Helping children with school refusal'],
+	['dcd','Trondheim Kommune','Democratize urban development'],
+	['sustain','Research project','Making shopping more sustainable'],
 	['trends']		
 ];
 
@@ -45,12 +45,31 @@ function populateColumns(){
 	var columnElements = document.querySelectorAll('.column');
 	
 	for(var i=0; i < columnElements.length; i++){
-		
-		
 	
+		var atag = document.createElement('a');
+		
+		var img = document.createElement('img');
+		img.src = "img/" + projects[i][0] + "/" + projects[i][0] + ".jpg"; 
+		
+		var h1 = document.createElement('h1');
+		h1.innerText = projects[i][2];
+		
+		var h3 = document.createElement('h3');
+		h3.innerText = projects[i][1];
+		
+		atag.appendChild(img);
+		atag.appendChild(h1);
+		atag.appendChild(h3);
+		
+		columnElements[i].appendChild(atag);
+		
+		/*
+		columnElements[i].appendChild(img);
+		columnElements[i].appendChild(h1);
+		columnElements[i].appendChild(h3);
+		*/
+		
 	}
-	
-	
 }
 
 

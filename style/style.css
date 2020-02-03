@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Signika+Negative|Varela&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Kreon&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Rokkitt:300&display=swap');
-@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
 /*Colors and fonts*/
 
-/*font-family: 'Varela', sans-serif;*/
-/*font-family: 'Signika Negative', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Martel:200,400,800,900&display=swap');
+
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+/*font-family: 'Martel', serif;*/
 
 /*
 accent blue: #364f6b
@@ -41,9 +41,14 @@ body{
 header{
     font-family: 'Raleway', sans-serif;
     width: 100%;
-		max-width: 1200px;
-		margin: 0 auto;
-		/*background-color: red;*/
+	max-width: 1200px;
+	margin: 0 auto;
+	/*background-color: red;*/
+}
+
+span {
+	padding: 0;
+	margin: 0;
 }
 
 ul {
@@ -135,7 +140,7 @@ section{
 /* id's and specific changes*/
 
 #site_logo{
-    font-weight: 900;
+    font-weight: 700;
     font-size: 1.8em; 
     color: #171a1a;
     display: inline;
@@ -146,19 +151,19 @@ section{
 
 #site_nav{
     position: relative;
-		float: right;
+	float: right;
 }
 
 #site_nav li{
     display: inline-block;
-		text-align: right;
-		margin-left: 10px;
+	text-align: right;
+	margin-left: 10px;
 }
 
 #site_nav a{
     color: #6e7d7d !important;
-		font-weight: 300 !important;
-		transition: all 0.2s;
+	font-weight: 500;
+	transition: all 0.2s;
 }
 
 #site_nav a:hover{
@@ -169,16 +174,22 @@ section{
 
 .greeting{
 	padding-top: 100px;
+	width: 80%;
+	max-width: 850px;
+}
+
+.greeting h1{
+	font-family: 'Martel', serif;
+	font-size: 2.4em;
+	font-weight: 900;
+	color: #1e1b4a;
+	text-align:left;
 }
 
 .greeting p{
-	font-family: 'DM Serif Display', serif;
-	font-size: 2.5em;
-	font-weight: 600;
-	color: #1e1b4a;
-	width: 80%;
-	max-width: 850px;
-	text-align:left;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+
 }
 
 .greeting .emoji-ani {
@@ -192,6 +203,11 @@ section{
 .greeting #trondheim {
   	text-decoration: line-through;
   	opacity: 0.5;
+}
+
+.greeting #together{
+	color: #8082d1;
+	white-space: nowrap;
 }
 
 /*ARROW DOWN*/
@@ -220,11 +236,17 @@ section{
 .column img{
 	width: 100%;
 	max-height: 300px;
-	/*
-	background-position: center center;
-	background-repeat: no-repeat;
-	*/
 	object-fit: cover;
+}
+
+.column h1{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;	
+}
+
+.column h3{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 }
 
 
