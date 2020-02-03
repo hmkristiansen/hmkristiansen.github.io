@@ -276,8 +276,8 @@ section{
 	width: 80%;
 	height: auto;
 	object-fit: cover;
-	/*float: right;*/
-	margin-left: 30vw;	
+	float: right;
+	/*margin-left: 30vw;*/	
 	padding: 20px;
 }
 
@@ -285,6 +285,8 @@ section{
 
 footer{
 	font-family: 'Raleway', sans-serif;
+	clear: both;
+	width: 100%;
 }
 
 footer a{
@@ -299,9 +301,22 @@ footer a:hover{
 	opacity: 1;
 }
 
+/*
+footer ul{
+	float: left;
+	clear: left;
+}*/
+
 footer li{
 	padding-top: 20px;
 }
+
+/*
+footer #up_button{
+	float: right;
+	clear: right;
+}
+*/
 
 
 /* RESPONSIVITY AND MEDIA QUYERIES*/
