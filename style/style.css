@@ -287,6 +287,7 @@ footer{
 	font-family: 'Raleway', sans-serif;
 	clear: both;
 	width: 100%;
+	display: inline-block;
 }
 
 footer a{
@@ -301,22 +302,24 @@ footer a:hover{
 	opacity: 1;
 }
 
-/*
+
 footer ul{
-	float: left;
-	clear: left;
-}*/
+	width: 80%;
+}
 
 footer li{
 	padding-top: 20px;
 }
 
-/*
+
 footer #up_button{
-	float: right;
-	clear: right;
+	margin-left: 80%;
+	width: 20%;
+	position: relative;
+	top: -40px;
+	text-align: right;
 }
-*/
+
 
 
 /* RESPONSIVITY AND MEDIA QUYERIES*/

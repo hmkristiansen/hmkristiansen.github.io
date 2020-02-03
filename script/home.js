@@ -6,8 +6,7 @@ var projects = [
 	['shake','SHAKE','Safer 2nd hand purchase of cars'],
 	['tackl','TACKL','Helping children with school refusal'],
 	['dcd','Trondheim Kommune','Democratize urban development'],
-	['sustain','Research project','Making shopping more sustainable'],
-	['trends']		
+	['sustain','Research project','Making shopping more sustainable']		
 ];
 
 /* Rendering elements in front-page portfolio */
