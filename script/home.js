@@ -38,6 +38,8 @@ function populatePort(){
 	for(var i=0; i < portElements.length; i++){
 	
 		var atag = document.createElement('a');
+		atag.id = projects[i][0];
+		atag.href = "projects/" +  atag.id + ".html"; 
 		
 		var img = document.createElement('img');
 		img.src = "img/" + projects[i][0] + "/" + projects[i][0] + ".jpg"; 
