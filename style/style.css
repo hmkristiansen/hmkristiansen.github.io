@@ -472,15 +472,31 @@ footer #up_button{
 		margin: 0;
 	}
 	
-	footer{
-		padding: 0px;
+	.port_content{
+		width: 95%;
+	}
+	
+	footer{ 
+		padding: 10px;
+		width: 100%;
+	}
+	footer ul{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	footer li{
+		display: block;
+		text-align: left;
+		margin-left: 0px;
+		margin-top: 5px;
 	}
 	
 	footer #up_button{
-		margin-left: 0;
+		margin: 0;
 		position: relative;
-		top: -40px;
 		text-align: right;
+		float: right;
 	}
 
 }
