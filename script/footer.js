@@ -32,7 +32,7 @@ function renderFooter(){
 	}
 	
 	var paragraph = document.createElement('p');
-	paragraph.innerHTML = "Built by me using GitHub Pages and iPad Pro<br>Pages are using JavaScript for rendering the content (so please don't disable it 🥺";
+	paragraph.innerHTML = "Built by me using GitHub Pages and iPad Pro<br>I am using JavaScript to render the content (so please don't disable it 🥺)";
 	
 	footer.appendChild(list);
 	footer.appendChild(paragraph);

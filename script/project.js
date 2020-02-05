@@ -15,10 +15,25 @@ var tackl = [
 	["01", "02"]	
 ];
 
+var dcd = [
+	"dcd",
+	[["Course","GUI"],["Role", "UI designer"],["Period", "Autmn '18"]],
+	["this is a paragraph","this is a paragraph"],
+	["01", "02"]	
+];
+
+var sustain = [
+	"sustain",
+	[["Course","Sustainable design"],["Role", "Design & research"],["Period", "Spring '19"]],
+	["this is a paragraph","this is a paragraph"],
+	["01", "02"]	
+];
 
 var projectDatabase = [
 	shake,
-	tackl
+	tackl,
+	dcd,
+	sustain
 ]; 
 	
 var stringDatabase = [];
@@ -43,7 +58,7 @@ function renderProject(){
 		}
 	}
 	
-	console.log(projectIndex);
+	//console.log(projectIndex);
 
 	var header_img = document.querySelector('#header_img');
 	header_img.src = "img/" + currentProject + "/" + currentProject + ".jpg";
