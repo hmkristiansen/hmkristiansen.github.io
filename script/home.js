@@ -11,7 +11,7 @@ var projects = [
 
 /* Rendering elements in front-page portfolio */
 
-function initilize() {
+function renderProjects() {
 	addPortDivs();
 }
 

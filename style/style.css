@@ -381,12 +381,15 @@ footer{
 	font-family: 'Raleway', sans-serif;
 	clear: both;
 	width: 100%;
-	display: inline-block;
-	padding: 40px;
+	position: relative;
+	text-align:  center;
+	padding: 20px;
+	color: #6e7d7d !important; 
+	padding-bottom: 40px;
 }
 
 footer a{
-    color: #6e7d7d !important;
+	color: #6e7d7d !important;
 	font-weight: 500;
 	transition: all 0.2s;
 	opacity: 0.8;
@@ -399,19 +402,28 @@ footer a:hover{
 
 
 footer ul{
-
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	font-size: 1.2em;
 }
 
 footer li{
-	padding-top: 20px;
+	padding: 10px;
+}
+
+footer p{
+	width: 80%;
+	font-size: 0.8em;
+	margin: 0 auto;
 }
 
 
 footer #up_button{
-	margin-left: 80%;
-	position: relative;
-	top: -40px;
-	text-align: right;
+	position: absolute;
+	top: 20px;
+	right: 40px;
 }
 
 
@@ -456,7 +468,7 @@ footer #up_button{
 		float: none;
 	}
 	#site_nav li{
-    display: block;
+    	display: block;
 		text-align: left;
 		margin-left: 0px;
 		margin-top: 10px;
@@ -476,29 +488,12 @@ footer #up_button{
 		width: 95%;
 	}
 	
-	footer{ 
-		padding: 10px;
-		width: 100%;
-	}
 	footer ul{
-		padding: 0;
-		margin: 0;
-		width: 100%;
+		font-size: 1em;
 	}
-	footer li{
-		display: block;
-		text-align: left;
-		margin-left: 0px;
-		margin-top: 5px;
+	footer p{
+		width: 95%;
 	}
-	
-	footer #up_button{
-		margin: 0;
-		position: relative;
-		text-align: right;
-		float: right;
-	}
-
 }
 
 
