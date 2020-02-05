@@ -431,11 +431,11 @@ footer #up_button{
 /* RESPONSIVITY AND MEDIA QUYERIES*/
 
 @media only screen and (max-width: 600px) {
-	
-	.column {
-    	width: 100%;
- 	}
- 	
+	 
+	.greeting{
+		padding-bottom: 20vh;
+	}
+	 	
  	.about img{
  		margin-left: 20vw;
  	}
@@ -456,12 +456,13 @@ footer #up_button{
 		padding: 10px;
 	}
 	.greeting{
-		padding-top: 50px;
+		padding-top: 20px;
+		padding-bottom: 10vh;
 	}
 	
 	.greeting p{
 		width: 100%;
-		font-size: 2em;
+		font-size: 1em;
 	}
 	
 	#site_nav{

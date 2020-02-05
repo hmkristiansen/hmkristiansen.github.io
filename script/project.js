@@ -1,6 +1,3 @@
-
-//var shake = ["this is a paragraph", "01", "this is another paragraph", "this is a third paragrap"];
-
 var shake = [
 	"shake",
 	[["Client","Santander Bank"],["Role", "UX designer"],["Period", "Summer '19"]],
@@ -36,8 +33,6 @@ var projectDatabase = [
 	sustain
 ]; 
 	
-var stringDatabase = [];
-
 var currentProject = "";
 
 function getProject(){
