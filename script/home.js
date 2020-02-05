@@ -1,5 +1,3 @@
-console.log("Hello loggers");
-
 /* DATABASE FOR PORTFOLIO */
 
 var projects = [
@@ -8,6 +6,8 @@ var projects = [
 	['dcd','Trondheim Kommune','Democratize urban development'],
 	['sustain','Research project','Making shopping more sustainable']		
 ];
+
+var selectedProject = "";
 
 /* Rendering elements in front-page portfolio */
 
@@ -39,7 +39,8 @@ function populatePort(){
 	
 		var atag = document.createElement('a');
 		atag.id = projects[i][0];
-		atag.href = "projects/" +  atag.id + ".html"; 
+		atag.className = "portItemTag";
+		/*atag.href = "projects/" +  atag.id + ".html";*/ 
 		
 		var img = document.createElement('img');
 		img.src = "img/" + projects[i][0] + "/" + projects[i][0] + ".jpg"; 
@@ -57,6 +58,24 @@ function populatePort(){
 		portElements[i].appendChild(atag);
 	}
 }
+
+function openProject(){	
+	var queryString = "?project=" + selectedProject;
+	//console.log(queryString);
+	window.location.href = "project.html" + queryString;
+}
+
+$(document).ready(function(){
+
+	$(".portItemTag").click(function() {
+		selectedProject = $(this).attr('id');
+		openProject();
+	});
+
+});
+
+
+
 
 /*
 function addPortDivs() {
