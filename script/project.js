@@ -1,15 +1,16 @@
 var shake = [
 	"shake",
 	[["Client","Santander Bank"],["Role", "UX designer"],["Period", "Summer '19"]],
-	["this is a paragraph","this is a paragraph"],
-	["01", "02"]	
+	["During an internship at " + '<a href="https://www.itera.no" taget= "_blank">Itera</a>'+ " in the summer of 2019, I worked in a multidisciplinary team at Santander Consumer Bank with the service SHAKE."],
+	["01", "02","03","04"]	
 ];
 
 var tackl = [
 	"tackl",
 	[["Client","TACKL"],["Role", "Game designer"],["Period", "Spring '19"]],
-	["this is a paragraph","this is a paragraph"],
-	["01", "02"]	
+	["In the spring of 2019, I was tasked with my hardest problem to date; making a game aimed at kids with school refusal. <br>&quotWhat is school refusal?&quot you ask. It's very complicated, and my solution revolved around Cognitive Behavioural Therapy and responding to possible scenarios."],
+	["01", "02"]
+	[""]	
 ];
 
 var dcd = [
@@ -53,13 +54,13 @@ function renderProject(){
 		}
 	}
 	
-	//console.log(projectIndex);
-
+	/*RENDERING HEADER IMG*/
 	var header_img = document.querySelector('#header_img');
 	header_img.src = "img/" + currentProject + "/" + currentProject + ".jpg";
 	
 	var port_content = document.querySelector('.port_content');
 	
+	/*RENDERING FAQ TABLE*/
 	var project_faq = document.createElement('div');
 	var table = document.createElement('table');
 	table.className = "tg";
@@ -81,5 +82,28 @@ function renderProject(){
 	project_faq.appendChild(table);
 	port_content.appendChild(project_faq);
 	
+	/*RENDERING TEXT (& IMAGES?)*/
+	
+		
+	var text = document.createElement('p');
+	text.innerHTML = projectDatabase[projectIndex][2];
+	text.className = "project_text";
+	port_content.appendChild(text);
+	
+	var k = 0;
+	
+	while(projectDatabase[projectIndex][3][k] != null){
+		var img = document.createElement('img');
+		img.className = "project_img";
+		img.id = projectDatabase[projectIndex][3][k];
+		img.src = "img/" + currentProject + "/" + projectDatabase[projectIndex][3][k] +".jpg";
+		
+		port_content.appendChild(img);
+		
+		k++;	
+	}
+	
+	var moreLink
+		
 	
 }

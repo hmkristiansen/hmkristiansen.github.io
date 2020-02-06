@@ -273,7 +273,6 @@ section{
 }
 
 #hor_line{
-	
 	width: 1px;
 	height: 100px;
 	margin: 0 auto;
@@ -360,10 +359,11 @@ section{
 }
 
 .port_content{
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 20px;
 }
+
 
 .tg{
 	border-collapse:collapse;
@@ -371,12 +371,12 @@ section{
 	font-family: "Raleway", sans-serif;
 	font-weight: 300 !important;
 	border-radius: 5px;
-	padding: 5px;
+	padding: 10px;
 	background-color: #e9f5f8;
 	overflow: hidden;
 }
 .tg td{
-	padding:10px 18px;
+	padding:5px 15px;
 	overflow:hidden;
 	word-break:normal;
 }
@@ -389,6 +389,10 @@ section{
 	
 	font-family: 'Open Sans', sans-serif;
 	
+}
+
+.project_text a{
+	color: #8082d1;
 }
 
 .project_img{
@@ -472,6 +476,11 @@ footer #up_button{
  		width: 100%;
  		margin-bottom: 50px;
  	}
+ 	
+ 	.port_content{
+ 		width: 95%;
+ 		margin-top: 20px;
+ 	}
   
 }
 
@@ -519,6 +528,9 @@ footer #up_button{
 	
 	footer ul{
 		font-size: 1em;
+	}
+	footer li{
+		padding: 10px;
 	}
 	footer p{
 		width: 95%;
