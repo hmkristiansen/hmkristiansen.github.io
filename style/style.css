@@ -252,34 +252,39 @@ section{
 
 .portItem h1{
 	font-family: 'Raleway', sans-serif;
-	font-weight: 700;	
+	font-weight: 700;
 }
 
 .portItem h3{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	top: -10px;
 } 
 
 
 /* HORIZONTAL LINE */
 
+#hor_line_wrap{
+	clear: both;
+	padding: 60px;
+}
+
 #hor_line{
 	
-	width: 2px;
+	width: 1px;
 	height: 100px;
 	margin: 0 auto;
+	opacity: 0.7;
 	background-color: dimgray;
-	opacity: 0.5;
-	clear: both;
-	position: relative;
-	top:60px;
-
 }
 
 /* ABOUT PAGE */
 
 .about{
-	padding-top: 100px;
+	padding-top: 4vh;
 	width: 80%;
 	max-width: 850px;
 	margin: 0 auto;
@@ -308,7 +313,13 @@ section{
 	padding: 20px;
 }
 
-#vision h1{
+.section_edit{
+	padding: 0 !important;
+	position: relative;
+	top: -30px;
+}
+
+.section_edit h1{
 	
 	width: 100%;
 	text-align: center;
@@ -319,12 +330,24 @@ section{
 
 }
 
-#vision p{
+.section_edit p{
 	
 	width: 80%;
 	max-width: 600px;
 	text-align: center;
 	margin: 0 auto;
+
+}
+
+.section_edit h4{
+
+	text-align: center;
+	margin: 0 auto;
+	font-family: "Raleway", sans-serif;
+	font-size: 1.3em;
+	padding: 0;
+	margin-bottom: 10px;
+	opacity: 0.7;
 
 }
 
@@ -410,13 +433,14 @@ footer ul{
 }
 
 footer li{
-	padding: 10px;
+	padding: 15px;
 }
 
 footer p{
 	width: 80%;
 	font-size: 0.8em;
 	margin: 0 auto;
+	opacity: 0.6;
 }
 
 
@@ -434,6 +458,10 @@ footer #up_button{
 	 
 	.greeting{
 		padding-bottom: 20vh;
+	}
+	
+	.about{
+		
 	}
 	 	
  	.about img{
