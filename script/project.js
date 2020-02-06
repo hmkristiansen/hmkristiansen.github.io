@@ -22,8 +22,7 @@ var dcd = [
 var sustain = [
 	"sustain",
 	[["Course","Sustainable design"],["Role", "Design & research"],["Period", "Spring '19"]],
-	["In the subject Sustainable Design, my group and I were tasked with finding a daily practice to which we were to analyse and improve from a sustainability point of view. We chose the practice of online shopping, and the result was a graphic representation of the different impacts the clothes have in certain categories (as you can see above).<br>The full report can be read " + '<a href="other/sustain_rapport.pdf" target="_blank">here</a>'+" (in English 🥳)" ],
-	["01"]	
+	["In the subject Sustainable Design, my group and I were tasked with finding a daily practice to which we were to analyse and improve from a sustainability point of view. We chose the practice of online shopping, and the result was a graphic representation of the different impacts the clothes have in certain categories (as you can see above).<br>The full report can be read " + '<a href="other/sustain_rapport.pdf" target="_blank">here</a>'+" (in English 🥳), and the accompanying poster can be viewed " + '<a href="other/sustain.pdf" target="_blank">here.</a>']	
 ];
 
 var projectDatabase = [
