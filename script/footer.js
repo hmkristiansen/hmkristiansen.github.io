@@ -10,7 +10,7 @@ btn.on('click', function(e) {
 
 function renderFooter(){
 
-	var links = ["https://www.instagram.com/hmkristiansen/", "https://www.linkedin.com/in/hmkristiansen/", "other/cv.pdf", "mailto:hinkendesign@gmail.com"];
+	var links = ["https://www.instagram.com/hmkristiansen/", "https://www.linkedin.com/in/hmkristiansen/", "other/cv.pdf", "mailto:hei@hinken.no"];
 	var names = ["instagram", "linkedIn", "cv", "contact"]; 
 
 	var footer = document.querySelector('footer');

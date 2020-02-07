@@ -17,7 +17,7 @@ function renderHeaderPort() {
 
 function renderHeader(){
 
-	var links = ["index.html", "about.html", "404.html","mailto:hinkendesign@gmail.com"];
+	var links = ["index.html", "about.html", "404.html","mailto:hei@hinken.no"];
 	var names = ["hinken", "about", "more work", "email me"]; 
 
 	var header = document.querySelector('header');
