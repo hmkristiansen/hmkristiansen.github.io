@@ -59,6 +59,7 @@ function populatePort(){
 	}
 }
 
+
 function openProject(){	
 	var queryString = "?project=" + selectedProject;
 	//console.log(queryString);
