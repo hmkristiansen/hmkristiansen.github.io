@@ -14,20 +14,7 @@ var projectDatabase = [
 	lighting,
 	spire
 ]; 
-
-/*
-var archiveDatabase = [
-	trends,
-	players,
-	alice,
-	boo,
-	blackboard,
-	expo,
-	sportscenteret,
-	lighting,
-	spire
-];
-*/	
+	
 var currentProject = "";
 
 function getProject(){
@@ -51,6 +38,16 @@ function renderProject(){
 	/*SETTING PAGE TITLE*/
 	document.title = currentProject + " | Henrik Kristiansen";
 	
+	/*Intro text*/
+	
+	var h1 = document.querySelector('.page_header');
+	h1.innerHTML = projectDatabase[projectIndex][2];
+	
+	var h3 = document.querySelector('.page_subheader');
+	h3.innerHTML = projectDatabase[projectIndex][1];
+	
+
+	
 	/*RENDERING HEADER IMG*/
 	var header_img = document.querySelector('#header_img');
 	header_img.src = "img/" + currentProject + "/" + currentProject + ".jpg";
@@ -71,7 +68,7 @@ function renderProject(){
 			}else{
 				td.className = "tg-reg";
 			}
-			td.innerHTML = projectDatabase[projectIndex][1][i][j];
+			td.innerHTML = projectDatabase[projectIndex][3][i][j];
 			tr.appendChild(td);
 		}
 		table.appendChild(tr);
@@ -81,18 +78,18 @@ function renderProject(){
 	
 	/*RENDERING TEXT*/		
 	var text = document.createElement('p');
-	text.innerHTML = projectDatabase[projectIndex][2];
+	text.innerHTML = projectDatabase[projectIndex][4];
 	text.className = "project_text";
 	port_content.appendChild(text);
 	
 	
 	/*RENDERING IMAGES*/
 	var k = 0;
-	while(projectDatabase[projectIndex][3][k] != null){
+	while(projectDatabase[projectIndex][5][k] != null){
 		var img = document.createElement('img');
 		img.className = "project_img";
-		img.id = projectDatabase[projectIndex][3][k];
-		img.src = "img/" + currentProject + "/" + projectDatabase[projectIndex][3][k] +".jpg";
+		img.id = projectDatabase[projectIndex][5][k];
+		img.src = "img/" + currentProject + "/" + projectDatabase[projectIndex][5][k] +".jpg";
 		
 		port_content.appendChild(img);
 		

@@ -1,10 +1,11 @@
-/* DATABASE FOR PORTFOLIO */
 
 var projects = [
-	['shake','SHAKE','Safer 2nd hand purchase of cars'],
-	['tackl','TACKL','Helping children with school refusal'],
-	['dcd','Trondheim Kommune','Democratize urban development'],
-	['sustain','Research project','Making shopping more sustainable']		
+	
+	shake,
+	tackl,
+	dcd,
+	sustain
+
 ];
 
 var selectedProject = "";
@@ -62,7 +63,6 @@ function populatePort(){
 
 function openProject(){	
 	var queryString = "?project=" + selectedProject;
-	//console.log(queryString);
 	window.location.href = "project.html" + queryString;
 }
 
@@ -159,4 +159,15 @@ for (var i = 0; i < columnElements.length; i++){
 */
 
 //console.log(0%2);
+
+/* DATABASE FOR PORTFOLIO */
+
+/*
+var projects = [
+	['shake','SHAKE','Safer 2nd hand purchase of cars'],
+	['tackl','TACKL','Helping children with school refusal'],
+	['dcd','Trondheim Kommune','Democratize urban development'],
+	['sustain','Research project','Making shopping more sustainable']		
+];*/
+
 

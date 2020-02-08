@@ -71,6 +71,14 @@ section{
 	margin: 0;
 }
 
+.page_intro{
+	
+	padding: 40px;
+	width: 100%;
+
+
+}
+
 .page_header{
 	font-family: 'Martel', serif;
 	font-size: 2.4em;
@@ -78,7 +86,17 @@ section{
 	color: #1e1b4a;
 	text-align:left;
 	width: 100%;
-	padding-left: 40px;
+}
+
+.page_subheader{
+	
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	top: -10px;
+
 }
 
 /* ANIMATIONS AND KEYFRAMES */
@@ -571,11 +589,15 @@ footer #up_button{
 		font-size: 1em;
 	}
 	
-	.page_header{
+	.page_intro{
 		padding: 10px;
-		font-size: 1.5em;
+		width: 100%;
 	}
 	
+	.page_intro h1{
+		font-size: 2em;
+	}
+		
 	#site_nav{
 		float: none;
 	}
