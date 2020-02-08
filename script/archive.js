@@ -1,14 +1,17 @@
 var archiveItems = [
 	['trends','CTRL frame','Minimalistic spendings tracker for families'],
-	['players','Lisbon Players','Re-designing a historic theatre&lsquos out']
+	['players','Lisbon Players','Re-designing a historic theatre'+'&#39'+'s public outreach'],
+	['alice','Alice in Wonderland','Telling a children'+'&#39'+'s story using type'],
 	['boo','Boo','Pencil sharpener for kids'],
-	['blackboard','BlackBoard 2.0','Redesigning our university learning platform'],
+	['blackboard','BlackBoard 2.0','Making our university learning platform user-centric'],
 	['expo','Design Expo 2019','Web Design for student arranged event'],
 	['proto','Dirigenten','Interactive conductor simulator'],
 	['sportscenteret', 'Sportsenteret', 'Web re-design for my fathers company'],
 	['lighting','Regi','Lighting design for local student society'],
 	['spire','Spire','Coffee maker concept inspired by nordic design']		
 ];
+
+var selectedItem = "";
 
 function renderArchive(){
 	
@@ -36,6 +39,7 @@ function addGrid(){
 			
 			var column = document.createElement('div');
 			column.className = "column";
+			column.id = archiveItems[itemCounter][0];
 			
 			var atag = document.createElement('a');
 			
@@ -44,8 +48,9 @@ function addGrid(){
 			var h3 = document.createElement('h3');
 			
 			img.src = "img/" + archiveItems[itemCounter][0] + "/" + archiveItems[itemCounter][0] + ".jpg";
-			h1.innerText = archiveItems[itemCounter][2];
-			h3.innerText = archiveItems[itemCounter][1];
+			
+			h1.innerHTML = archiveItems[itemCounter][2];
+			h3.innerHTML = archiveItems[itemCounter][1];
 			
 			atag.appendChild(img);
 			atag.appendChild(h1);
@@ -61,20 +66,14 @@ function addGrid(){
 }
 
 
-
-
-/*function openProject(){	
-	var queryString = "?project=" + selectedProject;
-	//console.log(queryString);
+function openProject(){	
+	var queryString = "?project=" + selectedItem;
 	window.location.href = "project.html" + queryString;
 }
 
 $(document).ready(function(){
-
-	$(".portItemTag").click(function() {
-		selectedProject = $(this).attr('id');
+	$(".column").click(function() {
+		selectedItem = $(this).attr('id');
 		openProject();
 	});
-
 });
-*/

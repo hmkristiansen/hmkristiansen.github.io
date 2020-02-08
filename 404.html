@@ -3,13 +3,18 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>404 | Henrik Kristiansen  </title>
+    <title>404 🥺 | Henrik Kristiansen  </title>
     
     <script src="script/jquery-3.4.1.min.js"></script>
     <link rel = "stylesheet" type = "text/css" href = "style/style.css"/>
     <style>
         /*Clouds from https://codepen.io/Mark_Bowley/pen/xEbuI */
 
+		@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900&display=swap');
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+		@import url('https://fonts.googleapis.com/css?family=Martel:200,400,800,900&display=swap');
+
+		
         html{
             padding:  0;
             margin:  0;
@@ -19,14 +24,14 @@
         }
         .back_btn{
             font-family: 'Raleway', sans-serif;
-            text-decoration: none;
             cursor: pointer;
-            font-weight: 300;
-            
-            position: fixed;
-            
+       
+            position: fixed;     
             top: 20px;
             left: 20px;
+            
+            color: #6e7d7d !important;
+			font-weight: 500;
         }
         body{
             background-color: #f1f1f1;
@@ -223,13 +228,16 @@
             </div>
     </div>
     
-    <div class="back_btn"><a href="index.html">👈 back to base</a></div> 
-
+    <div class="back_btn" onclick="goBack()">👈 back to base</div> 
     <section>
         <h1>🚧 oh noes! 🚧</h1>
         <p>You were not supposed to see me like this 🥺 <br> I'm updating this part of my site, it will not take long! <br> In the meanwhile; relax and look at the clouds ☁️☁️☁️</p>
      </section>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+   	<script>
+		function goBack() {
+  			window.history.back();
+		}
+   	</script>
 
 </body>

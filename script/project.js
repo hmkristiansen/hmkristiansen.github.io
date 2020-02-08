@@ -2,9 +2,32 @@ var projectDatabase = [
 	shake,
 	tackl,
 	dcd,
-	sustain
+	sustain,
+	trends,
+	players,
+	alice,
+	boo,
+	blackboard,
+	expo,
+	proto,
+	sportscenteret,
+	lighting,
+	spire
 ]; 
-	
+
+/*
+var archiveDatabase = [
+	trends,
+	players,
+	alice,
+	boo,
+	blackboard,
+	expo,
+	sportscenteret,
+	lighting,
+	spire
+];
+*/	
 var currentProject = "";
 
 function getProject(){
