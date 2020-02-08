@@ -44,7 +44,7 @@ body{
 header{
     font-family: 'Raleway', sans-serif;
     width: 100%;
-	/*max-width: 1200px;*/
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 40px;
 	/*background-color: red;*/
@@ -67,6 +67,7 @@ ul {
 
 section{
 	width: 100%;
+	max-width: 1400px;
 	padding: 40px;
 	margin: 0;
 }
@@ -75,6 +76,7 @@ section{
 	
 	padding: 40px;
 	width: 100%;
+	max-width: 1400px;
 
 
 }
