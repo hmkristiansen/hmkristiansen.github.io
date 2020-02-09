@@ -1,6 +1,6 @@
 var archiveItems = [
 	
-	trends,
+	dcd,
 	players,
 	alice,
 	boo,
@@ -41,10 +41,14 @@ function addGrid(){
 			
 			var column = document.createElement('div');
 			column.className = "column";
-			column.id = archiveItems[itemCounter][0];
+			//column.id = archiveItems[itemCounter][0];
 			
 			var atag = document.createElement('a');
 			
+			atag.id = archiveItems[itemCounter][0];
+			atag.className = "portItemTag";
+			atag.href = "project.html?project=" + atag.id;
+					
 			var img = document.createElement('img'); 
 			var h1 = document.createElement('h1');
 			var h3 = document.createElement('h3');
@@ -67,7 +71,7 @@ function addGrid(){
 	}
 }
 
-
+/*
 function openProject(){	
 	var queryString = "?project=" + selectedItem;
 	window.location.href = "project.html" + queryString;
@@ -79,7 +83,7 @@ $(document).ready(function(){
 		openProject();
 	});
 });
-
+*/
 
 /*
 var archiveItems = [

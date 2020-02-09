@@ -14,11 +14,14 @@ function renderHeaderPort() {
 	renderHeader();
 }
 
-
 function renderHeader(){
 
-	var links = ["index.html", "about.html", "archive.html","mailto:hei@hinken.no"];
-	var names = ["hinken", "about", "more work", "email me"]; 
+	var links = ["index.html", "about.html", "archive.html"];
+	var names = ["hinken", "about", "archive"]; 
+	
+	var currentPage = document.title;
+	nameString =  currentPage.split(" | ");	
+	currentProject = nameString[0];
 
 	var header = document.querySelector('header');
 	
@@ -38,6 +41,11 @@ function renderHeader(){
 		var atag = document.createElement('a');
 		atag.href = folderExt + links[i];
 		atag.innerText = names[i];
+		
+		if(names[i] == currentProject){
+			atag.className="currentPage";
+		}
+		
 		listItems[i].appendChild(atag);
 		list.appendChild(listItems[i]);
 	}

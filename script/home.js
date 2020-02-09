@@ -2,8 +2,8 @@
 var projects = [
 	
 	shake,
+	trends,
 	tackl,
-	dcd,
 	sustain
 
 ];
@@ -41,7 +41,7 @@ function populatePort(){
 		var atag = document.createElement('a');
 		atag.id = projects[i][0];
 		atag.className = "portItemTag";
-		/*atag.href = "projects/" +  atag.id + ".html";*/ 
+		atag.href = "project.html?project=" + atag.id; 
 		
 		var img = document.createElement('img');
 		img.src = "img/" + projects[i][0] + "/" + projects[i][0] + ".jpg"; 
@@ -60,7 +60,7 @@ function populatePort(){
 	}
 }
 
-
+/*
 function openProject(){	
 	var queryString = "?project=" + selectedProject;
 	window.location.href = "project.html" + queryString;
@@ -74,6 +74,8 @@ $(document).ready(function(){
 	});
 
 });
+*/
+
 
 /*
 class User {

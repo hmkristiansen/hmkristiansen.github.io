@@ -1,9 +1,9 @@
 var projectDatabase = [
 	shake,
-	tackl,
-	dcd,
-	sustain,
 	trends,
+	tackl,
+	sustain,
+	dcd,
 	players,
 	alice,
 	boo,
@@ -96,6 +96,12 @@ function renderProject(){
 		k++;	
 	}
 	
-		
+	/*Adding next project button*/
 	
+	var nextLink = document.querySelector('#moreProjectLink');
+	nextLink.href = "project.html?project=" + projectDatabase[projectIndex+1][0];
+	
+	console.log(nextLink.href);
+	
+		
 }

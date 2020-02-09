@@ -24,7 +24,8 @@ var dcd = [
 var sustain = [
 	"sustain",'Research project','Making shopping more sustainable',
 	[["Course","Sustainable design"],["Role", "Design & research"],["Period", "Spring '19"]],
-	["In the subject Sustainable Design, my group and I were tasked with finding a daily practice to which we were to analyse and improve from a sustainability point of view. We chose the practice of online shopping, and the result was a graphic representation of the different impacts the clothes have in certain categories (as you can see above).<br>The full report can be read " + '<a href="other/sustain_rapport.pdf" target="_blank">here</a>'+" (in English 🥳), and the accompanying poster can be viewed " + '<a href="other/sustain.pdf" target="_blank">here.</a>']	
+	["In the subject Sustainable Design, my group and I were tasked with finding a daily practice to which we were to analyse and improve from a sustainability point of view. We chose the practice of online shopping, and the result was a graphic representation of the different impacts the clothes have in certain categories (as you can see above).<br>The full report can be read " + '<a href="other/sustain_rapport.pdf" target="_blank">here</a>'+" (in English 🥳), and the accompanying poster can be viewed " + '<a href="other/sustain.pdf" target="_blank">here.</a>'],
+	[]	
 ];
 
 /*ARCHIVE PROJECTS*/
@@ -88,9 +89,9 @@ var proto = [
 
 var sportscenteret = [
 
-	"sportscenteret", 'Sportsenteret', 'Web re-design for my fathers company',
+	"sportscenteret", 'Sportsenteret', 'Company re-branding',
 	[["Client","Sportscenteret"],["Role", "Web designer"],["Period", "Summer '16"]],
-	["This might be the project that made me interested in web design in the first place. While studying to become a mechanical engineer, my father asked me to update his website with some new information. <br>I ended up with making a new one instead.<br>It is still being used" + '<a href="http://sportscenteret.no" target="_blank"> at this moment</a>'+"🥳"],
+	["This might be the project that made me interested in web design in the first place. While studying to become a mechanical engineer, my father asked me to update his website with some new information. <br>I ended up with making a new one instead, along with guidelines for marketing.<br>It is still being used" + '<a href="http://sportscenteret.no" target="_blank"> at this moment</a>'+"🥳"],
 	[]
 	
 ];

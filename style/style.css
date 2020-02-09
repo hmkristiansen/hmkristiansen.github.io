@@ -18,7 +18,7 @@ text general: #2f3030
 /*global settings*/ 
 
 *{ 
-		box-sizing: border-box; 
+	box-sizing: border-box; 
 }
 
 html{
@@ -32,11 +32,16 @@ html{
 
 html a{
     text-decoration: none;
-    color: black;
+	color: #2f3030;
+}
+
+a:hover{
+	cursor: pointer;
 }
 
 body{
     /*padding: 40px;*/
+    margin:0;
     color: #2f3030;
     overflow-x: hidden;
 }
@@ -73,19 +78,17 @@ section{
 }
 
 .page_intro{
-	
 	padding: 40px;
 	width: 100%;
 	max-width: 1400px;
 	margin: 0 auto;
-
-
 }
 
 .page_header{
 	font-family: 'Martel', serif;
 	font-size: 2.4em;
 	font-weight: 900;
+	line-height: 1.2;
 	color: #1e1b4a;
 	text-align:left;
 	width: 100%;
@@ -94,11 +97,14 @@ section{
 .page_subheader{
 	
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	font-weight: 400;
+	font-size: 2em;
 	margin: 0px;
 	padding: 0px;
 	position: relative;
 	top: -10px;
+	opacity: 0.8;
+
 
 }
 
@@ -161,14 +167,23 @@ section{
     }
 }
 
-.greeting p:hover #waving-hand {
-  -webkit-animation: shake 90ms ease;
+.greeting:hover #waving-hand-index {
+	   -webkit-animation: shake 90ms ease;
           animation: shake 90ms ease;
   -webkit-animation-iteration-count: 8;
           animation-iteration-count: 8;
+
 }
 
-.greeting p:hover #dancing-lady {
+.about:hover #waving-hand {
+	   -webkit-animation: shake 90ms ease;
+          animation: shake 90ms ease;
+  -webkit-animation-iteration-count: 8;
+          animation-iteration-count: 8;
+
+}
+
+.about:hover #dancing-lady {
   -webkit-animation: dance 360ms ease;
           animation: dance 360ms ease;
   -webkit-animation-iteration-count: 2;
@@ -190,6 +205,10 @@ section{
     left: 0;
 }
 
+#site_logo{
+	cursor: pointer;
+}
+
 #site_nav{
     position: relative;
 	float: right;
@@ -199,25 +218,36 @@ section{
 #site_nav li, footer li{
     display: inline-block;
 	text-align: right;
-	margin-left: 10px;
+	margin-left: 15px;
 }
 
 #site_nav a{
-    color: #6e7d7d !important;
+    color: #6e7d7d;
 	font-weight: 500;
 	transition: all 0.2s;
+	opacity: 0.6;
 }
 
 #site_nav a:hover{
-	color: #171a1a;
+	cursor: pointer;
 }
+
+.currentPage{
+    font-weight: 700 !important;
+    color: #6e7d7d !important;
+    opacity: 1 !important;
+    font-weight: 500;
+	/*text-decoration: underline;*/
+}
+
 
 /*Greeting*/
 
 .greeting{
 	padding-top: 100px;
+	padding-bottom: 20vh;
 	max-width: 850px;
-	padding-bottom: 30vh;
+	/*padding-bottom: 30vh;*/
 }
 
 .greeting h1{
@@ -226,12 +256,15 @@ section{
 	font-weight: 900;
 	color: #1e1b4a;
 	text-align:left;
+	margin: 0;
+	padding: 0;
 }
 
 .greeting p{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-
+	margin: 0;
+	padding: 0;
 }
 
 .about .emoji-ani {
@@ -270,6 +303,10 @@ section{
 	margin-bottom: 100px;
 }
 
+.portItem:hover{
+	cursor: pointer;
+}
+
 .right{
 	float: right;
 }
@@ -299,7 +336,7 @@ section{
 
 #hor_line_wrap{
 	clear: both;
-	padding: 60px;
+	padding: 50px;
 }
 
 #hor_line{
@@ -321,10 +358,13 @@ section{
 }
 
 .about h3, p{
+	width: 80%;
 	max-width: 600px;
+	clear: both
 }
 
 .about h3{
+	padding-top: 30px;
 	font-family: "Raleway", sans-serif;
 }
 
@@ -332,14 +372,20 @@ section{
 	font-family: 'Open Sans', sans-serif;
 }
 
+.about a{
+	font-weight: 500;
+	color: #8082d1;
+}
+
 .about img{
-	max-width: 500px;
+	max-width: 300px;
 	width: 80%;
 	height: auto;
 	object-fit: cover;
+	display: block;
 	float: right;
 	/*margin-left: 30vw;*/	
-	padding: 20px;
+	/*margin: 20px;*/
 }
 
 .section_edit{
@@ -402,7 +448,7 @@ section{
 	font-weight: 300 !important;
 	border-radius: 5px;
 	padding: 10px;
-	background-color: #e9f5f8;
+	background-color: #F1F9FA;
 	overflow: hidden;
 }
 .tg td{
@@ -487,8 +533,33 @@ section{
 	position: relative;
 	top: -10px;
 }
-	
 
+.column_hover{
+	cursor: pointer;
+}
+
+/* GO TO ARHCIVE BUTTON */
+
+.moreProjectBtn{
+	
+	width: 100%;
+	clear: both;
+	text-align: center;
+
+}
+
+.moreProjectBtn a{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 1.2em;
+	transition: all 0.2s;
+}
+
+.moreProjectBtn a:hover{
+	text-decoration: underline;
+}
+
+	
 /* FOOTER */
 
 footer{
@@ -541,7 +612,6 @@ footer #up_button{
 }
 
 
-
 /* RESPONSIVITY AND MEDIA QUYERIES*/
 
 @media only screen and (max-width: 600px) {
@@ -553,6 +623,10 @@ footer #up_button{
 	.column{
 		width: 100%;
 	} 
+	
+	.about{
+		width: 95%;
+	}
 		
  	.about img{
  		margin-left: 20vw;
@@ -618,7 +692,7 @@ footer #up_button{
 	.about img{
 		width: 100%;
 		padding: 0;	
-		margin: 0;
+		margin:0;
 	}
 	
 	.port_content{
