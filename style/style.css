@@ -500,13 +500,14 @@ section{
  	float: left;
  	width: 50%;
 	padding: 20px;
-	height: 60vh;
+	height: 500px;
 }
 
 .row{
 	padding:0;
 	margin:0;
 }
+
 
 .row:after {
   content: "";
