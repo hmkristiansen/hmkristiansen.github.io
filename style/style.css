@@ -1,18 +1,7 @@
-/*Colors and fonts*/
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Martel:200,400,800,900&display=swap');
-
-/*font-family: 'Raleway', sans-serif;*/
-/*font-family: 'Open Sans', sans-serif;*/
-/*font-family: 'Martel', serif;*/
-
-/*
-accent blue: #364f6b
-text general: #2f3030
-
-*/
 
 
 /*global settings*/ 
@@ -41,7 +30,6 @@ a:hover{
 }
 
 body{
-    /*padding: 40px;*/
     margin:0;
     color: #2f3030;
     overflow-x: hidden;
@@ -53,7 +41,6 @@ header{
 	max-width: 1400px;
 	margin: 0 auto;
 	padding: 40px;
-	/*background-color: red;*/
 }
 
 img{
@@ -105,8 +92,6 @@ section{
 	position: relative;
 	top: -10px;
 	opacity: 0.8;
-
-
 }
 
 /* ANIMATIONS AND KEYFRAMES */
@@ -166,6 +151,37 @@ section{
       transform: rotate(0deg) scale(1);
       opacity: 0.3;
     }
+}
+
+@keyframes jump { 
+    0%{
+      transform: translateY(0px)
+    }50%{
+		transform: translateY(-5px)
+    }67%{
+		transform: translateY(0px)
+    }
+    80%{
+		transform: translateY(-3px)
+    }
+    90%{
+		transform: translateY(0px)
+    }
+    95%{
+		transform: translateY(-2px)
+    }
+    100%{
+		transform: translateY(0px)
+    }
+}
+
+.greeting:hover #jumping-emoji{
+
+	-webkit-animation: jump 360ms ease;
+	animation: jump 360ms ease;
+-webkit-animation-iteration-count: 2;
+	animation-iteration-count: 2;
+
 }
 
 .greeting:hover #waving-hand {
@@ -239,7 +255,6 @@ section{
     color: #6e7d7d !important;
     opacity: 1 !important;
     font-weight: 500;
-	/*text-decoration: underline;*/
 }
 
 
@@ -250,7 +265,6 @@ section{
 	padding-bottom: 20vh;
 	max-width: 850px;
 	cursor: default;
-	/*padding-bottom: 30vh;*/
 }
 
 .greeting h1{
@@ -300,7 +314,7 @@ section{
 .portItem{
 	width: 70%;
 	max-width: 1200px;
-	height: 700px;
+	max-height: 700px;
 	float: left;
 	clear: both;
 	margin-bottom: 100px;
@@ -322,6 +336,7 @@ section{
 .portItem h1{
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
+	width: 90%;
 }
 
 .portItem h3{
@@ -352,22 +367,24 @@ section{
 /* ABOUT PAGE */
 
 .about{
-	padding-top: 4vh;
-	width: 80%;
-	max-width: 850px;
+	padding-top: 10vh;
+	width: 95%;
+	max-width: 1200px;
+	height: 60vh;
 	margin: 0 auto;
 	clear: both;
 	cursor: default;
 }
 
 .about h3, p{
-	width: 80%;
-	max-width: 600px;
-	clear: both
+	width: 45%;
+	padding: 10px;
+	float: left;
 }
 
 .about h3{
 	padding-top: 30px;
+	font-size: 1.5em;
 	font-family: "Raleway", sans-serif;
 }
 
@@ -381,8 +398,9 @@ section{
 }
 
 .about img{
-	max-width: 300px;
-	width: 80%;
+	max-width: 500px;
+	margin-top: 8vh;
+	width: 50%;
 	height: auto;
 	object-fit: cover;
 	display: block;
@@ -391,10 +409,12 @@ section{
 	/*margin: 20px;*/
 }
 
+
 .section_edit{
 	padding: 0 !important;
 	position: relative;
 	top: -30px;
+	height: auto;
 }
 
 .section_edit h1{
@@ -405,7 +425,6 @@ section{
 	font-size: 2.4em;
 	font-weight: 900;
 	color: #1e1b4a;
-
 }
 
 .section_edit p{
@@ -414,6 +433,7 @@ section{
 	max-width: 600px;
 	text-align: center;
 	margin: 0 auto;
+	float: none;
 
 }
 
@@ -426,8 +446,36 @@ section{
 	padding: 0;
 	margin-bottom: 10px;
 	opacity: 0.7;
+}
+
+.row-about{
+
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
 
 }
+
+.column-about {
+	float: left;
+	width: 50%;
+
+	text-align: center;
+	margin: 0 auto;
+	font-family: "Raleway", sans-serif;
+	font-size: 1.3em;
+	font-weight: 500;
+	padding: 0;
+	margin-bottom: 10px;
+	opacity: 0.7;
+}
+  
+  /* Clear floats after the columns */
+  .row-about:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
 
 /* PORTFOLIO PAGE */
 
@@ -520,7 +568,8 @@ section{
 
 .column img{
 	width: 100%;
-	height: 300px;
+	height: 70%;
+	max-height: 400px;
 	object-fit: cover;
 }
 
@@ -558,26 +607,23 @@ section{
 	font-size: 1.2em;
 	display: inline-block;
 }
+
 .moreProjectBtn a:after {
 	content: ' 👉';
-	display: inline;
 	position: relative;
-	/*
-	width: 0px;
-	height: 3px;
-	background: #6e7d7d;*/
-	transition: 500ms;
+	overflow: hidden;
+	left: 2px;
 
-	-webkit-transition: all 0.7s ease-out;
-	-moz-transition: all 0.7s ease-out;
-	 -ms-transition: all 0.7s ease-out;
-	  -o-transition: all 0.7s ease-out;
-		 transition: all 0.7s ease-out;
-  }
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	 -ms-transition: all 0.1s ease-out;
+	  -o-transition: all 0.1s ease-out;
+		 transition: all 0.1s ease-out;
+}
 
-  .moreProjectBtn a:hover:after {
-	right: -10px;
-  }
+.moreProjectBtn a:hover:after {
+	left: 8px;
+}
 
 	
 /* FOOTER */
@@ -622,6 +668,8 @@ footer p{
 	font-size: 0.8em;
 	margin: 0 auto;
 	opacity: 0.6;
+	text-align: center;
+	float: none;
 }
 
 
@@ -634,15 +682,55 @@ footer #up_button{
 
 /* RESPONSIVITY AND MEDIA QUYERIES*/
 
+@media only screen and (max-width: 1000px) {
+
+	.about{
+
+		padding-top: 4vh;
+	}
+
+	.about h3, p{
+		width: 80%;
+		padding: 0px;
+		clear: both;
+	}
+
+	.about h3{
+
+		font-size: 1.2em;
+	}
+
+	.about img{
+		max-width: 500px;
+		margin-top: 0vh;
+		width: 80%;
+		height: auto;
+		object-fit: cover;
+		display: block;
+		float: right;
+		/*margin-left: 30vw;*/	
+		/*margin: 20px;*/
+	}
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+	.column{
+		width: 100%;
+	} 
+	.column-about{
+		width: 100%;
+	}
+
+}
+
 @media only screen and (max-width: 600px) {
 	 
 	.greeting{
 		padding-bottom: 20vh;
 	}
-	 
-	.column{
-		width: 100%;
-	} 
 	
 	.about{
 		width: 95%;
@@ -711,8 +799,18 @@ footer #up_button{
 	}
 	.about img{
 		width: 100%;
+		float: none;
 		padding: 0;	
-		margin:0;
+		margin:0 auto;
+		max-width: 400px;
+	}
+
+	.about h3{
+		width: 100%;
+	}
+
+	.about p{
+		width: 100%;
 	}
 	
 	.port_content{
@@ -733,89 +831,3 @@ footer #up_button{
 		width: 95%;
 	}
 }
-
-
-
-
-
-
-
-
-
-/* ----------- Non-Retina Screens ----------- */
-/*
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-}
-*/
-
-/* ----------- Retina Screens ----------- */
-/*@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-}
-*/
-/* ----------- iPad Pro 10.5" ----------- */
-
-/* Portrait and Landscape */
-/*
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-}
-*/
-/* ----------- iPad Pro 12.9" ----------- */
-
-/* Portrait and Landscape */
-/*@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-}*/
-
-/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
-
-/* Portrait and Landscape */
-/*@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-}*/
-
-/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-
-/* Portrait and Landscape */
-/*@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-}*/
-
-/* ----------- iPhone 6+, 7+ and 8+ ----------- */
-
-/* Portrait and Landscape */
-/*@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-}*/
-
-/* ----------- iPhone X ----------- */
-
-/* Portrait and Landscape */
-/*@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-		
-		#site_nav{
-			float: left;
-		}
-
-}
-*/
