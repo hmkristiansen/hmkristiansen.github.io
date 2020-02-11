@@ -37,6 +37,7 @@ html a{
 
 a:hover{
 	cursor: pointer;
+	transition: all 0.2s;
 }
 
 body{
@@ -167,7 +168,7 @@ section{
     }
 }
 
-.greeting:hover #waving-hand-index {
+.greeting:hover #waving-hand {
 	   -webkit-animation: shake 90ms ease;
           animation: shake 90ms ease;
   -webkit-animation-iteration-count: 8;
@@ -230,6 +231,7 @@ section{
 
 #site_nav a:hover{
 	cursor: pointer;
+	color: #2f3030;
 }
 
 .currentPage{
@@ -247,6 +249,7 @@ section{
 	padding-top: 100px;
 	padding-bottom: 20vh;
 	max-width: 850px;
+	cursor: default;
 	/*padding-bottom: 30vh;*/
 }
 
@@ -267,7 +270,7 @@ section{
 	padding: 0;
 }
 
-.about .emoji-ani {
+.emoji-ani {
   	position: relative;
   	top: 0;
   	-webkit-transition: top ease 0.5s;
@@ -297,14 +300,12 @@ section{
 .portItem{
 	width: 70%;
 	max-width: 1200px;
-	height: auto;
+	height: 700px;
 	float: left;
 	clear: both;
 	margin-bottom: 100px;
-}
-
-.portItem:hover{
 	cursor: pointer;
+	transition: 200ms;
 }
 
 .right{
@@ -315,6 +316,7 @@ section{
 	width: 100%;
 	max-height: 500px;
 	object-fit: cover;
+	overflow: hidden;
 }
 
 .portItem h1{
@@ -355,6 +357,7 @@ section{
 	max-width: 850px;
 	margin: 0 auto;
 	clear: both;
+	cursor: default;
 }
 
 .about h3, p{
@@ -553,12 +556,28 @@ section{
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	font-size: 1.2em;
-	transition: all 0.2s;
+	display: inline-block;
 }
+.moreProjectBtn a:after {
+	content: ' 👉';
+	display: inline;
+	position: relative;
+	/*
+	width: 0px;
+	height: 3px;
+	background: #6e7d7d;*/
+	transition: 500ms;
 
-.moreProjectBtn a:hover{
-	text-decoration: underline;
-}
+	-webkit-transition: all 0.7s ease-out;
+	-moz-transition: all 0.7s ease-out;
+	 -ms-transition: all 0.7s ease-out;
+	  -o-transition: all 0.7s ease-out;
+		 transition: all 0.7s ease-out;
+  }
+
+  .moreProjectBtn a:hover:after {
+	right: -10px;
+  }
 
 	
 /* FOOTER */
