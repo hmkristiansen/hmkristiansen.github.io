@@ -103,5 +103,5 @@ function renderProject(){
 	
 	console.log(nextLink.href);
 	
-		
 }
+

@@ -31,7 +31,7 @@ var sustain = [
 /*ARCHIVE PROJECTS*/
 
 var trends = [
-	"trends",'CTRL frame','Minimal spendings tracker for families',
+	"trends",'CTRL frame','Minimal expence tracker for families',
 	[["Course","Trend Driven Design"],["Role", "Concept designer"],["Period", "Autumn '19"]],
 	["User-centric design is all about creating solutions towards target end-users. During my studies in Trondheim, these end-users are often the ideal users in an ideal world, observe and tested on in micro-environments. <br>During my first semester in Lisbon I was challenged to look broader in the field of user motivations. Through observing current and upcoming trends, we were tasked with creating a product and/or service that met these trends. <br>The CTRL frame is a product for profamilies that are looking to become more open about household economy and be more aware of spendings. The frame is connected to an application and uses the PSD2 API to gather abstracted and relative information about spendings within selected categories."],
 	["03","04","02","01"]

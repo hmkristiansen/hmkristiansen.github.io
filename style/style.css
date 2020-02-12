@@ -312,22 +312,24 @@ section{
 /* PORTFOLIO */
 
 .portItem{
-	width: 70%;
+	width: 100%;
+	height: auto;
 	max-width: 1200px;
-	max-height: 700px;
+	max-height: 2000px;
 	float: left;
 	clear: both;
 	margin-bottom: 100px;
 	cursor: pointer;
 	transition: 200ms;
-}
-
-.right{
-	float: right;
+	
+	overflow: hidden;
+	
+	position: relative;
 }
 
 .portItem img{
-	width: 100%;
+	width: 70%;
+	min-height: 400px;
 	max-height: 500px;
 	object-fit: cover;
 	overflow: hidden;
@@ -336,17 +338,57 @@ section{
 .portItem h1{
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
-	width: 90%;
+	font-size: 2.5em;
+	position: absolute;
+	top: 15%;
+	left: 65%;
+	padding: 20px;
+	color: #1e1b4a;
+	
+	width: 35%;
+	/*
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+	*/
+	
+	hypen
+	
+}
+
+.portItem h1:after{
+	content: "learn more >";
+	display: block;
+	padding-top: 10px;
+	text-decoration: underline;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 0.5em;
+
 }
 
 .portItem h3{
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	margin: 0px;
-	padding: 0px;
-	position: relative;
-	top: -10px;
+	font-weight: 700;
+	font-size: 1.5em;
+	position: absolute;
+	top: 30%;
+	left: 60%;
+	display: none;
 } 
+
+
+.right{
+	float: right;
+}
+
+.right img{
+	float: right;
+}
+
+.right h1{
+	left: 5%;
+}
 
 
 /* HORIZONTAL LINE */
@@ -711,7 +753,10 @@ footer #up_button{
 		/*margin-left: 30vw;*/	
 		/*margin: 20px;*/
 	}
-
+	
+	.portItem h1{
+		font-size: 2em;
+	}
 }
 
 
@@ -723,7 +768,24 @@ footer #up_button{
 	.column-about{
 		width: 100%;
 	}
+	
+	
+	.portItem img{
+		width: 100%;
+		max-height: 500px;
+	}
+	
+	.portItem h1{
+		position: relative;
+		float:left;
+		top:0;
+		left: 0;
+		width: 100%;
+		padding: 0;
+		font-size: 1.5em;
+	}
 
+	
 }
 
 @media only screen and (max-width: 600px) {
@@ -749,6 +811,12 @@ footer #up_button{
  		margin-bottom: 50px;
  	}
  	
+ 	.portItem img{
+ 		
+ 		max-height: 300px;
+ 		min-height: unset;
+ 	}
+ 	
  	.port_content{
  		width: 95%;
  		margin-top: 20px;
@@ -765,13 +833,24 @@ footer #up_button{
 		padding: 10px;
 	}
 	.greeting{
-		padding-top: 20px;
-		padding-bottom: 10vh;
+		padding-top: 10vh;
+		padding-bottom: 20vh;
 	}
 	
+	.greeting h1{
+		font-size: 1.6em;
+	}
 	.greeting p{
 		width: 100%;
 		font-size: 1em;
+	}
+	
+	.page_header{
+		font-size: 1.6em;
+	}
+	
+	.page_subheader{
+		font-size: 1.2em;
 	}
 	
 	.page_intro{
@@ -780,7 +859,6 @@ footer #up_button{
 	}
 	
 	.page_intro h1{
-		font-size: 2em;
 	}
 		
 	#site_nav{
