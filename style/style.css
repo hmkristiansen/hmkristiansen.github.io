@@ -346,14 +346,13 @@ section{
 	color: #1e1b4a;
 	
 	width: 35%;
+	
 	/*
-	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-	*/
-	
-	hypen
-	
+	-webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
+box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
+	background-color: white;
+	*/ 
 }
 
 .portItem h1:after{
@@ -629,6 +628,10 @@ section{
 	top: -10px;
 }
 
+.column_hr{
+	display: none;
+}
+
 .column_hover{
 	cursor: pointer;
 }
@@ -769,6 +772,80 @@ footer #up_button{
 		width: 100%;
 	}
 	
+	/*Testing alternative*/
+	
+	.column{
+		position: relative;
+		float: left;
+ 		width: 100%;
+		padding: 10px;
+		height: 100px;
+		margin-bottom: 5vh;
+		border-radius: 5px;
+		
+		
+		
+		
+		-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+
+		
+	}
+	
+	.column img{
+		
+		float: left;
+		height: 100%;
+		width: 30%;
+		object-fit: cover;
+	
+	}
+	
+	.column h1, .column h3{
+		display: inline-block;
+		position: relative;
+		top: -10px;
+		padding: 0;
+		float: left;
+		width: 60%;
+		padding-left: 10%;
+	}
+	
+	.column h1{
+		padding-top: 0px;
+		font-size: 1.2em;
+	}
+	
+	.column h3{
+		font-size: 1em;
+		position: relative;
+		top: -15px;
+	}
+	
+	.column a:after{
+		content: ">";
+		font-size: 1.5em;
+		font-weight: 500;
+		opacity: 0.5;
+		position: absolute;
+		right: 20px;
+		top: 40%;
+		font-family: 'Raleway', sans-serif;
+	}
+	
+	/*
+	.column:before{
+		content:"";
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: red;
+	
+	}*/
+	
+	/* --- */
 	
 	.portItem img{
 		width: 100%;
@@ -907,5 +984,33 @@ footer #up_button{
 	}
 	footer p{
 		width: 95%;
+	}
+	
+	/*NEW ARCHIVE STUFF*/
+	
+	.column{
+		margin-bottom: 2vh;
+	}
+	
+	
+	.column h1, .column h3{
+		display: inline-block;
+		position: relative;
+		top: 0px;
+		padding: 0;
+		float: left;
+		width: 60%;
+		padding-left: 5%;
+	}
+
+	
+	.column h1{
+		font-size: 0.8em;
+	}
+	
+	.column h3{
+		font-size: 0.5em;
+		position: relative;
+		
 	}
 }

@@ -63,6 +63,7 @@ function addGrid(){
 			atag.appendChild(h3);
 			
 			column.appendChild(atag);
+			
 			row.appendChild(column);
 			
 			itemCounter++;
@@ -70,31 +71,3 @@ function addGrid(){
 		archiveSection.appendChild(row);
 	}
 }
-
-/*
-function openProject(){	
-	var queryString = "?project=" + selectedItem;
-	window.location.href = "project.html" + queryString;
-}
-
-$(document).ready(function(){
-	$(".column").click(function() {
-		selectedItem = $(this).attr('id');
-		openProject();
-	});
-});
-*/
-
-/*
-var archiveItems = [
-	['trends','CTRL frame','Minimal spendings tracker for families'],
-	['players','Lisbon Players','Re-designing a historic theatre'+'&#39'+'s public outreach'],
-	['alice','Alice in Wonderland','Telling a children'+'&#39'+'s story using type'],
-	['boo','Boo','Pencil sharpener for kids'],
-	['blackboard','BlackBoard 2.0','Making our university learning platform user-centric'],
-	['expo','Design Expo 2019','Web Design for student arranged event'],
-	['proto','Dirigenten','Interactive conductor simulator'],
-	['sportscenteret', 'Sportsenteret', 'Web re-design for my fathers company'],
-	['lighting','Regi','Lighting design for local student society'],
-	['spire','Spire','Coffee maker concept inspired by nordic design']		
-];*/

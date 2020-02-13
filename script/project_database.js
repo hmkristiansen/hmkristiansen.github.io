@@ -39,7 +39,7 @@ var trends = [
 
 var players = [
 
-	"players",'Lisbon Players','Re-designing a historic theatre'+'&#39'+'s public outreach',
+	"players",'Lisbon Players','Re-designing a theatre'+'&#39'+'s online profile',
 	[["Course","Web Design"],["Role", "Web designer"],["Period", "Autumn '19"]],
 	["Re-designing is never a simple task, especially when the subject is a historic culture group." + '<a href="http://www.lisbonplayers.com.pt/site/" target="_blank">The Lisbon Players</a>'+ " is a theatre group in Lisbon that has been setting up plays in English for decades, but their website is due for an update. The website is the group’s way of communicating with the attendees and the volunteers, both young and old. In the course Web Design I chose to re-design their site, focusing on clear site structure, readability and the overall atmosphere found in Estrela Hall and with The Lisbon Players."],
 	["01","02","03"]
