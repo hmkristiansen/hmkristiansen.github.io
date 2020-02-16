@@ -1,5 +1,9 @@
 var archiveItems = [
 	
+	shake,
+	trends,
+	tackl,
+	sustain,
 	dcd,
 	players,
 	alice,

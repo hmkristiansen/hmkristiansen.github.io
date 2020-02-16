@@ -15,8 +15,9 @@ html{
     height: 100%;
     padding: 0;
     margin: 0;
-    
     font-size: 14px;
+    
+    scroll-behaviour: smooth;
 }
 
 html a{
@@ -33,6 +34,14 @@ body{
     margin:0;
     color: #2f3030;
     overflow-x: hidden;
+    
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 header{
@@ -261,27 +270,40 @@ section{
 /*Greeting*/
 
 .greeting{
-	padding-top: 100px;
-	padding-bottom: 20vh;
-	max-width: 850px;
+	height: 100vh;
+	max-height: 1200px;
+	padding-top: 0;
+	width: 100%;
+	margin: 0 auto;
 	cursor: default;
+	line-height: 1.2;
+}
+
+
+.greeting h1, .greeting p{
+	position: relative;
+	top: 20vh;
+	text-align:left;
+	max-width: 65%;
+	margin: 0 auto;
+	padding: 0;
+	
+	margin-left: 15vw;
 }
 
 .greeting h1{
 	font-family: 'Martel', serif;
-	font-size: 2.4em;
+	font-size: 3em;
 	font-weight: 900;
 	color: #1e1b4a;
-	text-align:left;
-	margin: 0;
-	padding: 0;
+	
 }
 
 .greeting p{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	margin: 0;
-	padding: 0;
+	font-size: 1.5em;
+	text-align: right;
 }
 
 .emoji-ani {
@@ -311,6 +333,8 @@ section{
 
 /* PORTFOLIO */
 
+/*
+
 .portItem{
 	width: 100%;
 	height: auto;
@@ -323,7 +347,6 @@ section{
 	transition: 200ms;
 	
 	overflow: hidden;
-	
 	position: relative;
 }
 
@@ -345,14 +368,7 @@ section{
 	padding: 20px;
 	color: #1e1b4a;
 	
-	width: 35%;
-	
-	/*
-	-webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
--moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
-	background-color: white;
-	*/ 
+	width: 35%; 
 }
 
 .portItem h1:after{
@@ -388,18 +404,168 @@ box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
 .right h1{
 	left: 5%;
 }
+*/
+
+
+
+/*NEW HOME SCREEN*/
+
+/*https://alligator.io/css/scroll-snapping/*/
+
+/*
+
+.portfolio{
+	padding: 0;
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+.home_page_body{
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	padding: 0;
+}
+
+.portItem{
+	scroll-snap-align: start;
+  	height: 100vh;
+  	width: 100%;
+  	max-height: 1400px;
+  	position: relative;
+}
+
+.portItem img{
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 60%;
+	object-fit: cover;
+	overflow: hidden;
+	float: left;
+}
+
+.portItem h1{
+	position: absolute;
+	max-width: 300px;
+	top: 60%;
+	left: 65%;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 2.5em;
+	color: #1e1b4a;
+}
+
+.portItem h1:after{
+	content: "learn more >";
+	display: block;
+	padding-top: 10px;
+	text-decoration: underline;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 0.5em;
+}
+
+.portItem h3{
+	max-width: 300px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+	position: absolute;
+	top: 45%;
+	left: 55%;
+	display: none;
+}
+*/
+
+/*THIRD ALTERNATIVE PORT PAGE*/
+
+.portfolio{
+	padding: 0;
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+.portItem{
+  	height: 225vh;
+  	width: 100%;
+  	position: relative;
+  	padding-bottom: 40px;
+}
+
+
+.portItem img{
+	position: relative;
+	top:0;
+	left:0;
+	height: 100vh;
+	width: 100%;
+	object-fit: cover;
+	overflow: hidden;
+	float: left;
+	z-index:0;
+}
+
+
+.portItem h1{
+	position: absolute;
+	top: 0;
+	transform: translateY(90vh);
+	max-width: 400px;
+
+	z-index: 100;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 2.5em;
+	color: #1e1b4a;
+	background-color: white;
+	padding: 20px;
+	margin-left: 40px;
+	
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+
+}
+
+.portItem h1:after{
+	content: "learn more >";
+	display: block;
+	padding-top: 10px;
+	text-decoration: underline;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 0.5em;
+}
+
+.portItem img{
+	position: -webkit-sticky;
+	position: sticky;
+}
+
+.portItem h3{
+	max-width: 300px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+	position: absolute;
+	top: 45%;
+	left: 55%;
+	display: none;
+}
+
 
 
 /* HORIZONTAL LINE */
 
 #hor_line_wrap{
 	clear: both;
-	padding: 50px;
+	padding: 100px;
 }
 
 #hor_line{
 	width: 1px;
-	height: 100px;
+	height: 150px;
 	margin: 0 auto;
 	opacity: 0.7;
 	background-color: dimgray;
@@ -408,29 +574,42 @@ box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
 /* ABOUT PAGE */
 
 .about{
-	padding-top: 10vh;
-	width: 95%;
+	position: relative;
+	top:0;
+	padding-top: 5vh;
+	width: 100%;
 	max-width: 1200px;
-	height: 60vh;
 	margin: 0 auto;
 	clear: both;
 	cursor: default;
 }
 
-.about h3, p{
-	width: 45%;
-	padding: 10px;
+.about h3, .about p{
+	
+	width: 40%;
 	float: left;
 }
 
 .about h3{
-	padding-top: 30px;
+	
+	padding-top: 150px;
+	padding-left: 50px;
 	font-size: 1.5em;
+	font-weight: 500;
 	font-family: "Raleway", sans-serif;
 }
 
 .about p{
+	clear: both;
 	font-family: 'Open Sans', sans-serif;
+	padding: 0; 
+	margin: 0;
+	font-size: 1.2em;
+	
+	width: 60%;
+	
+	padding-top: 100px;
+	padding-left: 150px;
 }
 
 .about a{
@@ -439,10 +618,10 @@ box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
 }
 
 .about img{
-	max-width: 500px;
-	margin-top: 8vh;
-	width: 50%;
+	max-width: 600px;
+	width: 60%;
 	height: auto;
+	max-height: 600px;
 	object-fit: cover;
 	display: block;
 	float: right;
@@ -469,6 +648,8 @@ box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
 }
 
 .section_edit p{
+
+	padding: 0;
 	
 	width: 80%;
 	max-width: 600px;
@@ -612,6 +793,11 @@ box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
 	height: 70%;
 	max-height: 400px;
 	object-fit: cover;
+		
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+
 }
 
 .column h1{
@@ -636,13 +822,15 @@ box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
 	cursor: pointer;
 }
 
+
 /* GO TO ARHCIVE BUTTON */
 
 .moreProjectBtn{
-	
 	width: 100%;
 	clear: both;
 	text-align: center;
+	padding: 40px;
+	margin-top: 100px;
 
 }
 
@@ -675,12 +863,13 @@ box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
 
 footer{
 	font-family: 'Raleway', sans-serif;
+	position: relative;
 	clear: both;
 	width: 100%;
-	position: relative;
 	text-align:  center;
 	padding: 20px;
 	color: #6e7d7d !important; 
+	
 	padding-bottom: 40px;
 }
 
@@ -709,6 +898,9 @@ footer li{
 }
 
 footer p{
+	position: relative;
+	top:0;
+	padding: 0;
 	width: 80%;
 	font-size: 0.8em;
 	margin: 0 auto;
@@ -730,25 +922,25 @@ footer #up_button{
 @media only screen and (max-width: 1000px) {
 
 	.about{
-
-		padding-top: 4vh;
+		width: 95%;
 	}
 
-	.about h3, p{
+	.about p{
 		width: 80%;
-		padding: 0px;
-		clear: both;
+		padding-left: 50px;
 	}
 
 	.about h3{
-
+		width: 35%;
+		padding-left: 0;
 		font-size: 1.2em;
 	}
 
 	.about img{
 		max-width: 500px;
 		margin-top: 0vh;
-		width: 80%;
+		max-height: 500px;
+		width: 60%;
 		height: auto;
 		object-fit: cover;
 		display: block;
@@ -757,13 +949,32 @@ footer #up_button{
 		/*margin: 20px;*/
 	}
 	
+	.section_edit p{
+		padding-left: 0;
+	}
+	
+	/*
 	.portItem h1{
 		font-size: 2em;
-	}
+	}*/
 }
 
 
 @media only screen and (max-width: 800px) {
+
+	
+	.greeting h1, .greeting p{
+		position: relative;
+		top: 20vh;
+		text-align:left;
+		max-width: 80%;
+		margin: 0 auto;
+		padding: 0;
+		
+		margin-left: 10vw;
+	}
+
+
 
 	.column{
 		width: 100%;
@@ -799,7 +1010,11 @@ footer #up_button{
 		height: 100%;
 		width: 30%;
 		object-fit: cover;
-	
+		
+		-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
+		-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
+		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0);
+
 	}
 	
 	.column h1, .column h3{
@@ -835,33 +1050,32 @@ footer #up_button{
 	}
 	
 	/*
-	.column:before{
-		content:"";
-		position: relative;
-		display: block;
-		width: 100%;
-		height: 2px;
-		background-color: red;
-	
-	}*/
-	
-	/* --- */
-	
-	.portItem img{
-		width: 100%;
-		max-height: 500px;
+	.portItem{
+		height: 95vh;
+		overflow: hidden;
 	}
 	
-	.portItem h1{
-		position: relative;
-		float:left;
-		top:0;
-		left: 0;
+
+	.portItem img{
+		height: 50% !important;
 		width: 100%;
-		padding: 0;
-		font-size: 1.5em;
+		object-fit: cover;
+		overflow: hidden;
 	}
 
+	
+	.portItem h1{
+		position: absolute;
+		text-align: right;
+		top: 45%;
+		left: 40%;
+		padding: 0;
+		font-size: 2em;
+	}
+	
+	.portItem h3{
+		
+	}*/
 	
 }
 
@@ -872,16 +1086,64 @@ footer #up_button{
 	}
 	
 	.about{
+		padding-top: 3vh;
 		width: 95%;
+	}
+	
+	.about h3{
+		padding-top: 3vh;
+		clear: both;
+		width: 80%;
 	}
 		
  	.about img{
- 		margin-left: 20vw;
+		max-width: 500px;
+		margin-top: 0vh;
+		max-height: 300px;
+		width: 70%;
  	}
+ 	
+ 	.about p{
+ 		width: 80%;
+ 		padding:0;
+ 		font-size: 1em;
+ 		float: right;
+ 		padding-top: 5vh;
+ 	}
+ 	
+ 	.section_edit h1{
+		font-size: 2em;
+	}
+	
+	.section_edit{
+		text-align: center;
+	}
+ 	
+ 	
+	#hor_line_wrap{
+		clear: both;
+		padding: 50px;
+	}
+	
+	#hor_line{
+		width: 1px;
+		height: 150px;
+		margin: 0 auto;
+		opacity: 0.7;
+		background-color: dimgray;
+	}
+ 	
+ 	.section_edit p{
+ 		float: none;
+ 		padding:0;
+ 	}
+ 	
  	
  	.project_text{
  		width: 85%;
  	}
+ 	
+ 	/*
  	
  	.portItem{
  		width: 100%;
@@ -893,6 +1155,7 @@ footer #up_button{
  		max-height: 300px;
  		min-height: unset;
  	}
+ 	*/
  	
  	.port_content{
  		width: 95%;
@@ -910,12 +1173,12 @@ footer #up_button{
 		padding: 10px;
 	}
 	.greeting{
-		padding-top: 10vh;
-		padding-bottom: 20vh;
+		padding-top: 0;
+		padding-bottom: 5vh;
 	}
 	
 	.greeting h1{
-		font-size: 1.6em;
+		font-size: 2em;
 	}
 	.greeting p{
 		width: 100%;
@@ -948,6 +1211,22 @@ footer #up_button{
 		margin-top: 10px;
 	}
 	
+	.portItem h1{
+		margin-left: 10px;
+		font-size: 1.5em;
+		max-width: 250px;
+	}
+	
+	/*
+	.portItem h1{
+		position: relative;
+		text-align: left;
+		padding: 0;
+		margin: 0;
+		float: left;
+		font-size: 2em;
+	}
+	*/
 	.about {
 		width: 95%;
 		padding-top: 30px;

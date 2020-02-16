@@ -1,11 +1,7 @@
-/*
-<div id="site_logo"><a href="index.html">hinken</a></div>
-<ul id="site_nav">
-    <li><a href="about.html">about</a></li>
-    <li><a href="404.html">more work</a></li>
-    <li><a href="mailto:hinkendesign@gmail.com">email me</a></li>
-</ul>
-*/
+
+/*Fade til sider*/
+document.body.className += ' fade-out';
+
 
 var folderExt = "";
 

@@ -32,8 +32,12 @@ function renderFooter(){
 	}
 	
 	var paragraph = document.createElement('p');
-	paragraph.innerHTML = "Built by me using GitHub Pages and iPad Pro<br>I am using JavaScript to render the content (so please don't disable it 🥺)";
+	paragraph.innerHTML = "built by "+"<a href='about.html'>me</a><br>hosted on "+"<a href='https://github.com/henkrist/henkrist.github.io' target='_blank'>github pages</a>";
 	
 	footer.appendChild(list);
 	footer.appendChild(paragraph);
 }
+
+
+var body = document.querySelector('body');
+body.classList.remove('fade-out');
