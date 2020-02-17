@@ -333,150 +333,6 @@ section{
 
 /* PORTFOLIO */
 
-/*
-
-.portItem{
-	width: 100%;
-	height: auto;
-	max-width: 1200px;
-	max-height: 2000px;
-	float: left;
-	clear: both;
-	margin-bottom: 100px;
-	cursor: pointer;
-	transition: 200ms;
-	
-	overflow: hidden;
-	position: relative;
-}
-
-.portItem img{
-	width: 70%;
-	min-height: 400px;
-	max-height: 500px;
-	object-fit: cover;
-	overflow: hidden;
-}
-
-.portItem h1{
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
-	font-size: 2.5em;
-	position: absolute;
-	top: 15%;
-	left: 65%;
-	padding: 20px;
-	color: #1e1b4a;
-	
-	width: 35%; 
-}
-
-.portItem h1:after{
-	content: "learn more >";
-	display: block;
-	padding-top: 10px;
-	text-decoration: underline;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	font-size: 0.5em;
-
-}
-
-.portItem h3{
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
-	font-size: 1.5em;
-	position: absolute;
-	top: 30%;
-	left: 60%;
-	display: none;
-} 
-
-
-.right{
-	float: right;
-}
-
-.right img{
-	float: right;
-}
-
-.right h1{
-	left: 5%;
-}
-*/
-
-
-
-/*NEW HOME SCREEN*/
-
-/*https://alligator.io/css/scroll-snapping/*/
-
-/*
-
-.portfolio{
-	padding: 0;
-	margin: 0 auto;
-	max-width: 1400px;
-}
-
-.home_page_body{
-	scroll-snap-type: y mandatory;
-	overflow-y: scroll;
-	padding: 0;
-}
-
-.portItem{
-	scroll-snap-align: start;
-  	height: 100vh;
-  	width: 100%;
-  	max-height: 1400px;
-  	position: relative;
-}
-
-.portItem img{
-	position: absolute;
-	top:0;
-	left:0;
-	height: 100%;
-	width: 60%;
-	object-fit: cover;
-	overflow: hidden;
-	float: left;
-}
-
-.portItem h1{
-	position: absolute;
-	max-width: 300px;
-	top: 60%;
-	left: 65%;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
-	font-size: 2.5em;
-	color: #1e1b4a;
-}
-
-.portItem h1:after{
-	content: "learn more >";
-	display: block;
-	padding-top: 10px;
-	text-decoration: underline;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	font-size: 0.5em;
-}
-
-.portItem h3{
-	max-width: 300px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
-	font-size: 1.5em;
-	position: absolute;
-	top: 45%;
-	left: 55%;
-	display: none;
-}
-*/
 
 /*THIRD ALTERNATIVE PORT PAGE*/
 
@@ -1284,12 +1140,161 @@ footer #up_button{
 
 	
 	.column h1{
-		font-size: 0.8em;
+		font-size: 1em;
 	}
 	
 	.column h3{
-		font-size: 0.5em;
+		font-size: 0.8em;
 		position: relative;
 		
 	}
 }
+
+
+/* OLD STUFF*/
+
+
+/*
+
+.portItem{
+	width: 100%;
+	height: auto;
+	max-width: 1200px;
+	max-height: 2000px;
+	float: left;
+	clear: both;
+	margin-bottom: 100px;
+	cursor: pointer;
+	transition: 200ms;
+	
+	overflow: hidden;
+	position: relative;
+}
+
+.portItem img{
+	width: 70%;
+	min-height: 400px;
+	max-height: 500px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.portItem h1{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 2.5em;
+	position: absolute;
+	top: 15%;
+	left: 65%;
+	padding: 20px;
+	color: #1e1b4a;
+	
+	width: 35%; 
+}
+
+.portItem h1:after{
+	content: "learn more >";
+	display: block;
+	padding-top: 10px;
+	text-decoration: underline;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 0.5em;
+
+}
+
+.portItem h3{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+	position: absolute;
+	top: 30%;
+	left: 60%;
+	display: none;
+} 
+
+
+.right{
+	float: right;
+}
+
+.right img{
+	float: right;
+}
+
+.right h1{
+	left: 5%;
+}
+*/
+
+
+
+/*NEW HOME SCREEN*/
+
+/*https://alligator.io/css/scroll-snapping/*/
+
+/*
+
+.portfolio{
+	padding: 0;
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+.home_page_body{
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	padding: 0;
+}
+
+.portItem{
+	scroll-snap-align: start;
+  	height: 100vh;
+  	width: 100%;
+  	max-height: 1400px;
+  	position: relative;
+}
+
+.portItem img{
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 60%;
+	object-fit: cover;
+	overflow: hidden;
+	float: left;
+}
+
+.portItem h1{
+	position: absolute;
+	max-width: 300px;
+	top: 60%;
+	left: 65%;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 2.5em;
+	color: #1e1b4a;
+}
+
+.portItem h1:after{
+	content: "learn more >";
+	display: block;
+	padding-top: 10px;
+	text-decoration: underline;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 0.5em;
+}
+
+.portItem h3{
+	max-width: 300px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+	position: absolute;
+	top: 45%;
+	left: 55%;
+	display: none;
+}
+*/

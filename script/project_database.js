@@ -65,7 +65,7 @@ var boo = [
 
 var blackboard = [
 	
-	"blackboard",'BlackBoard 2.0','Making our university learning platform user-centric',
+	"blackboard",'BlackBoard 2.0','Making a learning platform more user-centric',
 	[["Course","Design 3 - Use"],["Role", "Interaction researcher"],["Period", "Autumn '18"]],
 	["BlackBoard is the NTNU's chosen learning platform, but it is due for a redesign. During the autumn semester of 2018, my class was slit into groups and tasked with redesigning the platform from a user centred point of view.<br><br>The course Design 3 is all about teaching us the theories about user centred design and how to use various techniques to solve the right problem to the right user. By redesigning your school’s learning platform, we were given the opportunity to try out these theories in practice. <br><br>The deliverable was a poster that can be viewed " + '<a href="other/poster.pdf" target="_blank"> here</a>'+"."],
 	["01","02","03","04"]
