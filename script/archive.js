@@ -1,3 +1,4 @@
+AOS.init();
 var archiveItems = [
 	
 	shake,
@@ -67,11 +68,11 @@ function addGrid(){
 			atag.appendChild(h3);
 			
 			column.appendChild(atag);
-			
 			row.appendChild(column);
 			
 			itemCounter++;
 		}
+		row.setAttribute('data-aos', "fade-up");
 		archiveSection.appendChild(row);
 	}
 }

@@ -1,3 +1,5 @@
+AOS.init();
+
 var projectDatabase = [
 	shake,
 	trends,
@@ -50,6 +52,7 @@ function renderProject(){
 	
 	/*RENDERING HEADER IMG*/
 	var header_img = document.querySelector('#header_img');
+	header_img.setAttribute('data-aos', "fade-up");
 	header_img.src = "img/" + currentProject + "/" + currentProject + ".jpg";
 	
 	var port_content = document.querySelector('.port_content');
@@ -74,12 +77,15 @@ function renderProject(){
 		table.appendChild(tr);
 	}
 	project_faq.appendChild(table);
+	project_faq.setAttribute('data-aos', "fade-up");
+	
 	port_content.appendChild(project_faq);
 	
 	/*RENDERING TEXT*/		
 	var text = document.createElement('p');
 	text.innerHTML = projectDatabase[projectIndex][4];
 	text.className = "project_text";
+	text.setAttribute('data-aos', "fade-up");
 	port_content.appendChild(text);
 	
 	
@@ -87,6 +93,9 @@ function renderProject(){
 	var k = 0;
 	while(projectDatabase[projectIndex][5][k] != null){
 		var img = document.createElement('img');
+		
+		img.setAttribute('data-aos', "fade-up");
+		
 		img.className = "project_img";
 		img.id = projectDatabase[projectIndex][5][k];
 		img.src = "img/" + currentProject + "/" + projectDatabase[projectIndex][5][k] +".jpg";

@@ -11,23 +11,23 @@
 
 </head>
 
-<body onLoad="renderHeader();renderFooter();">
+<body onLoad="renderHeader();renderFooter();" class="body-focus-in">
 
     <header></header>
    
 	<section class="about">
 		
 		
-		<img src="img/me.JPG">
+		<img src="img/me.JPG" data-aos = "fade-up">
 		
-		<h3>
+		<h3 data-aos = "fade-up">
 			Hei again! <span class="emoji-ani" id="waving-hand">👋</span><br>
 			My name is Henrik, but I often go by "hinken".
 			I’m a design student from Norway, currently living in <span id="trondheim">Trondheim 🇳🇴</span> Lisbon 🇵🇹<span class="emoji-ani" id="dancing-lady">💃</span>
 			<br><br><br> ↓
 		</h3>
 				
-		<p>
+		<p data-aos = "fade-up">
             I enjoy solving complex problems with doodles and emoji, and always bring a truckload of childishness into every team and project I am contributing to. <br>
 			If I’m not creating silly wireframes or coding wonky websites I’m usually playing Mini Motorways on my iPad or taking pictures of buildings 👾📷 <br> <br>
 			Want to say hei? Or just curious about what I'm up to? <br> You can reach me at <a href="mailto:hei@hinken.no">hei@hinken.no</a> 🤗
@@ -36,22 +36,22 @@
 			
 	</section>
 	
-	<div id="hor_line_wrap">
+	<div id="hor_line_wrap" data-aos = "fade-up">
 		<div id="hor_line"></div>
 	</div>
 	
-	<section class="about section_edit" id="vision">
+	<section class="about section_edit" id="vision" data-aos = "fade-up">
 		
 		<h1>Vision 😇</h1>
 		<p>I want to help companies - big and small - create a philosophy where a strong foundation of thoughtful user-centric design is instinctive in all projects.</p>
 		
 	</section>
 	
-	<div id="hor_line_wrap">
+	<div id="hor_line_wrap" data-aos = "fade-up">
 		<div id="hor_line"></div>
 	</div>
 	
-	<section class="about section_edit" id="skills">
+	<section class="about section_edit" id="skills" data-aos = "fade-up">
 		<h1>Know-how's 💪</h1>
 
 		<div class = "row-about">
@@ -68,7 +68,7 @@
 		</div>	
 	</section>
 
-	<div id="hor_line_wrap">
+	<div id="hor_line_wrap" data-aos = "fade-up">
 		<div id="hor_line"></div>
 	</div>
 
@@ -80,8 +80,10 @@
 
 	
 	<footer></footer>
-		  
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>	 
+	 
 	<script src="script/header.js"></script>
+	<script src="script/about.js"></script>
     <script src="script/footer.js"></script>
 </body>
 

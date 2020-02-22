@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Martel:200,400,800,900&display=swap');
+@import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
 
 
 /*global settings*/ 
@@ -216,6 +217,31 @@ section{
           animation-iteration-count: 2;
 }
 
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
 /*--------------------------------*/
 
 
@@ -266,13 +292,19 @@ section{
     font-weight: 500;
 }
 
+.body-focus-in {
+	-webkit-animation: text-focus-in 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
 
 /*Greeting*/
 
 .greeting{
-	height: 100vh;
+	height: 80vh;
 	max-height: 1200px;
 	padding-top: 0;
+	max-width: 1400px;
 	width: 100%;
 	margin: 0 auto;
 	cursor: default;
@@ -288,7 +320,7 @@ section{
 	margin: 0 auto;
 	padding: 0;
 	
-	margin-left: 15vw;
+	margin-left: 10vw;
 }
 
 .greeting h1{

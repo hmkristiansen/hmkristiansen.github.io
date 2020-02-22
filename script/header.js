@@ -23,6 +23,7 @@ function renderHeader(){
 	
 	var logo = document.createElement('div');
 	logo.id = "site_logo";
+	//logo.className ="text-focus-in"
 	var atag_logo = document.createElement('a');
 	atag_logo.href = folderExt + links[0];
 	atag_logo.innerText = names[0];
