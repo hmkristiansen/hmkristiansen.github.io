@@ -52,7 +52,7 @@ function renderProject(){
 	
 	/*RENDERING HEADER IMG*/
 	var header_img = document.querySelector('#header_img');
-	header_img.setAttribute('data-aos', "fade-up");
+	/*header_img.setAttribute('data-aos', "fade-up");*/
 	header_img.src = "img/" + currentProject + "/" + currentProject + ".jpg";
 	
 	var port_content = document.querySelector('.port_content');
