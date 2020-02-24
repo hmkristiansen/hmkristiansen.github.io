@@ -14,6 +14,7 @@ var selectedProject = "";
 
 function renderProjects() {
 	addPortDivs();
+	//changeLogo();
 }
 
 function addPortDivs(){
@@ -59,3 +60,27 @@ function populatePort(){
 		portElements[i].appendChild(atag);
 	}
 }
+
+/*
+
+function changeLogo(){
+	
+	var logo = document.getElementById('site_logo');	
+	logo.className = "logoAniShow";
+	
+	setTimeout(function() {
+       logo.removeClass("logoAniShow");
+   	}, 800);
+	
+}
+
+
+
+$(document).ready(function () {
+	   
+	setTimeout(function() {
+		//$("#site_logo").addClass("addName");
+	}, 1500);
+});
+
+*/

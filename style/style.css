@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Martel:200,400,800,900&display=swap');
 @import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap');
 
 
 /*global settings*/ 
@@ -51,6 +52,7 @@ header{
 	max-width: 1400px;
 	margin: 0 auto;
 	padding: 40px;
+	position: relative;
 }
 
 img{
@@ -255,11 +257,36 @@ section{
     position: relative;
     top: 0;
     left: 0;
+    width: 600px;
 }
 
 #site_logo{
 	cursor: pointer;
+	position: relative;
 }
+
+/*
+.addName:after{
+	content:"hello";
+}
+
+@keyframes changeLogo{
+
+	0%{
+		
+	}
+	
+	100%{
+		
+	}
+
+}
+
+.changeLogoAni{
+	animation: changeLogo 500ms ease;
+}
+*/
+
 
 #site_nav{
     position: relative;
@@ -316,11 +343,11 @@ section{
 	position: relative;
 	top: 20vh;
 	text-align:left;
-	max-width: 65%;
+	max-width: 80%;
 	margin: 0 auto;
 	padding: 0;
 	
-	margin-left: 10vw;
+	
 }
 
 .greeting h1{
@@ -354,6 +381,14 @@ section{
 .greeting #together{
 	color: #8082d1;
 	white-space: nowrap;
+}
+
+#hinken{
+	font-weight: 600;
+	font-family: 'Nanum Pen Script';
+	font-size: 1.7em;
+	position: relative;
+	top: 2px;
 }
 
 /*ARROW DOWN*/

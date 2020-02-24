@@ -13,7 +13,7 @@ function renderHeaderPort() {
 function renderHeader(){
 
 	var links = ["index.html", "about.html", "archive.html"];
-	var names = ["hinken", "about", "archive"]; 
+	var names = ["Henrik M. Kristiansen", "about", "archive"]; 
 	
 	var currentPage = document.title;
 	nameString =  currentPage.split(" | ");	
@@ -23,10 +23,26 @@ function renderHeader(){
 	
 	var logo = document.createElement('div');
 	logo.id = "site_logo";
-	//logo.className ="text-focus-in"
 	var atag_logo = document.createElement('a');
+	atag_logo.id = "site_logo_cont";
 	atag_logo.href = folderExt + links[0];
 	atag_logo.innerText = names[0];
+	
+	/*
+	var logo_hinken = document.createElement('div');
+	logo_hinken.id ="logo_hinken";
+	logo_hinken.className = "logo";
+	logo_hinken.innerText = "hinken";
+	
+	var logo_name = document.createElement('div');
+	logo_name.id ="logo_name";
+	logo_name.className = "logo";
+	logo_name.innerText = "Henrik M. Kristiansen";
+		
+	atag_logo.appendChild(logo_hinken);	
+	atag_logo.appendChild(logo_name);
+	*/
+	
 	logo.appendChild(atag_logo);
 	
 	var list = document.createElement('ul');
