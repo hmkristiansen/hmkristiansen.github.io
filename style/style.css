@@ -816,6 +816,8 @@ footer p{
 	bottom: -60px;
 	right: 20px;
 	
+	cursor: pointer;
+	
 	
 	align-items: center;
 	font-size: 1.5em;
@@ -837,6 +839,8 @@ footer p{
 	-ms-transition: all 0.1s ease-out;
 	-o-transition: all 0.1s ease-out;
 	 transition: all 0.1s ease-out;
+	 
+	 -webkit-transform: translateZ(0);
 	
 }
 
