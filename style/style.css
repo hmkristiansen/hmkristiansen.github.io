@@ -848,6 +848,12 @@ footer p{
 	-ms-transition: all 0.1s ease-out;
 	-o-transition: all 0.1s ease-out;
 	 transition: all 0.1s ease-out;
+	 
+	 
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+	 
 	bottom: 20px;
 }
 
