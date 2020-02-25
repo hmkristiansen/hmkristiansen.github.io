@@ -13,7 +13,7 @@ function renderHeaderPort() {
 function renderHeader(){
 
 	var links = ["index.html", "about.html", "archive.html"];
-	var names = ["Henrik M. Kristiansen", "about", "archive"]; 
+	var names = ["h.m. kristiansen", "about", "archive"]; 
 	
 	var currentPage = document.title;
 	nameString =  currentPage.split(" | ");	
@@ -27,22 +27,6 @@ function renderHeader(){
 	atag_logo.id = "site_logo_cont";
 	atag_logo.href = folderExt + links[0];
 	atag_logo.innerText = names[0];
-	
-	/*
-	var logo_hinken = document.createElement('div');
-	logo_hinken.id ="logo_hinken";
-	logo_hinken.className = "logo";
-	logo_hinken.innerText = "hinken";
-	
-	var logo_name = document.createElement('div');
-	logo_name.id ="logo_name";
-	logo_name.className = "logo";
-	logo_name.innerText = "Henrik M. Kristiansen";
-		
-	atag_logo.appendChild(logo_hinken);	
-	atag_logo.appendChild(logo_name);
-	*/
-	
 	logo.appendChild(atag_logo);
 	
 	var list = document.createElement('ul');
@@ -66,3 +50,19 @@ function renderHeader(){
 	header.appendChild(logo);
 	header.appendChild(list);
 }
+
+
+$(document).ready(function(){ 
+	var offset = 200;
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('.up_btn').addClass("fadeInBtn"); 
+        } else { 
+            $('.up_btn').removeClass("fadeInBtn"); 
+        } 
+    }); 
+    $('.up_btn').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 400); 
+        return false; 
+    }); 
+});

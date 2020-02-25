@@ -265,29 +265,6 @@ section{
 	position: relative;
 }
 
-/*
-.addName:after{
-	content:"hello";
-}
-
-@keyframes changeLogo{
-
-	0%{
-		
-	}
-	
-	100%{
-		
-	}
-
-}
-
-.changeLogoAni{
-	animation: changeLogo 500ms ease;
-}
-*/
-
-
 #site_nav{
     position: relative;
 	float: right;
@@ -398,8 +375,8 @@ section{
 	margin-top: 100px;
 }
 
-/* PORTFOLIO */
 
+/* PORTFOLIO */
 
 /*THIRD ALTERNATIVE PORT PAGE*/
 
@@ -516,7 +493,6 @@ section{
 .about h3{
 	
 	padding-top: 150px;
-	padding-left: 50px;
 	font-size: 1.5em;
 	font-weight: 500;
 	font-family: "Raleway", sans-serif;
@@ -833,11 +809,46 @@ footer p{
 }
 
 
-footer #up_button{
-	position: absolute;
-	top: 20px;
-	right: 40px;
+/*Scroll up btn*/
+
+.up_btn{
+	position: fixed;
+	bottom: -60px;
+	right: 20px;
+	
+	
+	align-items: center;
+	font-size: 1.5em;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+/*	background-color: white;*/
+	background: rgba(255,255,255,.5);
+	border-radius: 5px;
+	
+	z-index: 1000;
+	
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+	
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	 transition: all 0.1s ease-out;
+	
 }
+
+.fadeInBtn{
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	 transition: all 0.1s ease-out;
+	bottom: 20px;
+}
+
 
 
 /* RESPONSIVITY AND MEDIA QUYERIES*/
@@ -868,18 +879,11 @@ footer #up_button{
 		object-fit: cover;
 		display: block;
 		float: right;
-		/*margin-left: 30vw;*/	
-		/*margin: 20px;*/
 	}
 	
 	.section_edit p{
 		padding-left: 0;
 	}
-	
-	/*
-	.portItem h1{
-		font-size: 2em;
-	}*/
 }
 
 
@@ -972,34 +976,6 @@ footer #up_button{
 		font-family: 'Raleway', sans-serif;
 	}
 	
-	/*
-	.portItem{
-		height: 95vh;
-		overflow: hidden;
-	}
-	
-
-	.portItem img{
-		height: 50% !important;
-		width: 100%;
-		object-fit: cover;
-		overflow: hidden;
-	}
-
-	
-	.portItem h1{
-		position: absolute;
-		text-align: right;
-		top: 45%;
-		left: 40%;
-		padding: 0;
-		font-size: 2em;
-	}
-	
-	.portItem h3{
-		
-	}*/
-	
 }
 
 @media only screen and (max-width: 600px) {
@@ -1065,21 +1041,7 @@ footer #up_button{
  	.project_text{
  		width: 85%;
  	}
- 	
- 	/*
- 	
- 	.portItem{
- 		width: 100%;
- 		margin-bottom: 50px;
- 	}
- 	
- 	.portItem img{
- 		
- 		max-height: 300px;
- 		min-height: unset;
- 	}
- 	*/
- 	
+ 	 	
  	.port_content{
  		width: 95%;
  		margin-top: 20px;
@@ -1140,16 +1102,6 @@ footer #up_button{
 		max-width: 250px;
 	}
 	
-	/*
-	.portItem h1{
-		position: relative;
-		text-align: left;
-		padding: 0;
-		margin: 0;
-		float: left;
-		font-size: 2em;
-	}
-	*/
 	.about {
 		width: 95%;
 		padding-top: 30px;
