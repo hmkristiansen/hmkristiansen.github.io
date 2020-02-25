@@ -813,6 +813,7 @@ footer p{
 
 .up_btn{
 	position: fixed;
+	-webkit-transform: translateZ(0) !important;
 	bottom: -60px;
 	right: 20px;
 	
@@ -839,9 +840,6 @@ footer p{
 	-ms-transition: all 0.1s ease-out;
 	-o-transition: all 0.1s ease-out;
 	 transition: all 0.1s ease-out;
-	 
-	 -webkit-transform: translateZ(0);
-	
 }
 
 .fadeInBtn{
