@@ -849,12 +849,13 @@ footer p{
 	-o-transition: all 0.1s ease-out;
 	 transition: all 0.1s ease-out;
 	 
-	 
+	bottom: 20px;
+}
+
+.up_btn:hover{
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-	 
-	bottom: 20px;
 }
 
 
