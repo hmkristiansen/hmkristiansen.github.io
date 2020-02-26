@@ -843,12 +843,13 @@ footer p{
 }
 
 .fadeInBtn{
+ 
 	-webkit-transition: all 0.1s ease-out;
 	-moz-transition: all 0.1s ease-out;
 	-ms-transition: all 0.1s ease-out;
 	-o-transition: all 0.1s ease-out;
 	 transition: all 0.1s ease-out;
-	 
+		 
 	bottom: 20px;
 }
 
