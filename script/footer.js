@@ -23,7 +23,7 @@ function renderFooter(){
 	}
 	
 	var paragraph = document.createElement('p');
-	paragraph.innerHTML = "built by "+"<a href='about.html'>me</a><br>hosted on "+"<a href='https://github.com/henkrist/henkrist.github.io' target='_blank'>github pages</a>";
+	paragraph.innerHTML = "<br>"+"<a href='https://github.com/henkrist/henkrist.github.io' target='_blank'>hosted on github pages</a><br>"+"<a href='https://forms.gle/R1CpqJjBmg6Ls1Rq6' target='_blank'>site feedback survey</a>";
 	
 	footer.appendChild(list);
 	footer.appendChild(paragraph);
