@@ -4,7 +4,7 @@ var shake = [
 	"shake",'SHAKE','Safer 2nd hand purchase of cars',
 	[["Client","Santander Bank"],["Role", "UX designer"],["Period", "Summer '19"]],
 	["During an internship at " + '<a href="https://www.itera.no" target="_blank">Itera</a>'+ " in the summer of 2019, I worked in a multidisciplinary team at Santander Consumer Bank with the service SHAKE.<br>My contributions to the project included end-user testing, UI design and some front end development.<br><br>Due to this project still being in development, specific details are not to be disclosed just yet 😇"],
-	["02","03"]	
+	["03"]	
 ];
 
 var tackl = [

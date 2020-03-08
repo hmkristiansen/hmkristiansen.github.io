@@ -25,6 +25,8 @@ function getProject(){
 	nameString =  queryString.split("=");	
 	currentProject = nameString[1];	
 	renderProject();
+	
+	renderOtherProjects();
 }
 
 function renderProject(){
@@ -114,3 +116,8 @@ function renderProject(){
 	
 }
 
+function renderOtherProjects(){
+
+	
+
+}
