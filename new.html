@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hinken | Henrik Kristiansen</title>
+    
+	
+	<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+       
+    <script src="script/jquery-3.4.1.min.js"></script>
+    <style>
+    	
+    	@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Inter:700&display=swap');
+    
+    	html{
+    		width: 100%;
+    		height: 100%;
+    		background-color: #fcfcfc;
+    		color: #252b33;
+    		font-size: 14px;
+    	}
+    	
+    	a{
+    		color: #252b33;
+    		text-decoration: underline;
+    		/*border-bottom: 2px solid #4e5861;*/
+    		transition: all 0.2s;
+    	}
+    	
+    	body{
+    		width: 40%;
+    		max-width: 1200px;
+    		font-family: 'Barlow Condensed', sans-serif;
+    		padding-left: 20%;
+    		padding-top: 10%;
+    		font-size: 1em;
+    	}
+    	
+    	section, footer{
+    		width: 100%;
+    		clear: both;
+    		padding-bottom: 40px;
+    	}
+    	
+    	.greeting h1{
+    		font-family: 'Inter', sans-serif;
+    		font-size: 2em;
+    	}
+    	
+    	ul{
+    		list-style-type: none;
+  			margin: 0;
+  			padding: 0;
+    	}
+    	
+    	li{
+    		margin-bottom: 5px;
+    	}
+    	.column {
+			float:left;
+ 			width: 50%;
+ 			height: 100%;
+ 			padding: 0;
+ 			margin: 0;
+ 			
+ 			/*padding-right: 60px;*/
+		}
+		
+		.column .li_header{
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+
+		.row{
+			padding:0;
+			margin:0;
+			height: 100%;
+			width: 100%;
+			
+			text-transform: uppercase;
+		}
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		} 
+		
+		.footer ul li{
+			display: inline;
+			margin-right: 10px;
+			font-size: 1.1em;
+		}
+		
+		#previous ul, #mode ul{
+		
+			/*background-color: red;*/
+			margin-left: 15%;
+		}
+		
+		a:hover{
+			transition: all 0.2s;
+			filter: brightness(200%);
+		}
+		
+		/*
+		
+		footer ul{
+			display: inline;
+			width: 50%;
+		}
+		
+		.footer ul li{
+			display: inline;
+		}
+		
+		#mode{
+			text-align: left;
+			float: right;
+		}*/
+		   	
+    </style>
+</head>
+
+<body">
+	
+    <header></header>
+    
+	<section class="greeting">
+		<h1>Stuff is complicated.</h1>
+		<h1>The number of services we are expected to just understand is baffeling.</h1>
+		<h1>I aim to create less complicated experiences for everyone.<h1>
+		<h1>Whether it is 
+			<a href="#" target="_blank">buying 2nd hand cars</a>, 
+			<a href="#" target="_blank">tracking family expences</a>, 
+			<a href="#" target="_blank">helping kids with school refusal</a>, or 
+			<a href="#" traget="_blank">making shopping more sustainable</a>.
+		<h1>
+		<h1>I'm at your service.</h1>
+	</section>
+		
+	<section class="bio">
+		
+		<div
+			<div id="age"></div>
+			<div id="location">📍 : 38.703321, -9.179565</div>
+			<div id="interest">👍 : 🐶☕️🍂<br>👎 : 🐱🥵🗯</div>
+		</div>
+	</section>
+	
+	<section class="cv">
+		<div class="row">	
+			<div class="column" id="currently">
+				<ul>
+					<li class="li_header">Currently<li>
+					<li>
+						Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, working on a MS.c from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a>.
+					</li>
+					<li>
+						Upcoming summer intern at <a href="#" target="_blank">Iterate</a>  
+					</li>
+				
+				</ul>
+			</div>
+			<div class="column" id="previous">
+				<ul>
+					<li class="li_header">Previous</li>
+					<li><a href="https://www.itera.no/en/" target="_blank">Itera - summer intern</li>
+					<li><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</li>
+					<li><a href="https://www.samfundet.no" target="_blank">Studentersamfundet</li>
+				<ul>
+			</div>
+		</div>
+	</section>
+	
+	<section class="footer">
+		<div class="row">
+			<div class="column" id="links">
+				<ul>
+					<li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">instagram</a></li>
+					<li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedIn</a></li>
+					<li><a href="mailto:hei@hinken.no" target="_blank">hei@hinken.no</a></li>
+				</ul>
+			</div>
+			<div class="column" id="mode">
+				<ul>
+					<li><a href="" target="_blank" id="btn_light">light</a></li>
+					<li><a href="" target="_blank" id="btn_dark">dark</a></li>
+					<li><a href="" target="_blank" id="btn_contrast">contrast</a></li>
+				</ul>
+			</div>	
+		</div>
+	</section>
+	
+		
+	<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script> 
+	<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+	
+	<script>
+		var bday = new Date("Nov 19, 1996 05:55:25").getTime();
+		var update = setInterval(function() {
+		  var now = new Date().getTime(); 
+		  var diffTime = Math.abs(now - bday);
+		  document.getElementById("age").innerHTML ="🗓 : " + (diffTime/31557600000);
+		}, 10);	      
+	</script>
+</body>
+
+</html>
