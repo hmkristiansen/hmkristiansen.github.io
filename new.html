@@ -75,12 +75,9 @@
  			height: 100%;
  			padding: 0;
  			margin: 0;
- 			
- 			/*padding-right: 60px;*/
 		}
 		
 		.column .li_header{
-			/*font-size: 1.5rem;*/
 			font-weight: 600;
 		}
 
@@ -116,8 +113,7 @@
 			filter: brightness(200%);
 		}
 
-		/*Color Modes*/
-		
+		/*Color Modes*/		
 		.goDark{
     		color: #fcfcfc;
     		background-color: #141414;
@@ -144,6 +140,15 @@
 			transition: all 0.2s;
 			filter: brightness(50%);
 		}
+
+		.currentTheme{
+			text-decoration: none;
+			pointer-events: none;
+		}
+		/*
+		.currentTheme:hover{
+			filter: none;
+		}*/
 
 		@media only screen and (max-width: 550px) {
 			html{
@@ -242,9 +247,9 @@
 			</div>
 			<div class="column" id="mode">
 				<ul>
-					<li><a href="#" onclick="changeTheme();return false;" id="goLight">light</a></li>
-					<li><a href="#" onclick="changeTheme();return false;" id="goDark">dark</a></li>
-					<li><a href="#" onclick="changeTheme();return false;" id="goContrast">contrast</a></li>
+					<li><a href="#" onclick="changeTheme();return false;" id="goLight" class="">light</a></li>
+					<li><a href="#" onclick="changeTheme();return false;" id="goDark" class="">dark</a></li>
+					<li><a href="#" onclick="changeTheme();return false;" id="goContrast" class="">contrast</a></li>
 				</ul>
 			</div>	
 		</div>
@@ -255,7 +260,9 @@
 	<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
 	
 	<script>
-	
+
+		document.getElementById('goLight').setAttribute("class", "currentTheme");
+
 		var bday = new Date("Nov 19, 1996 05:55:25").getTime();
 		var dday = new Date("Nov 19, 2077 12:00:00").getTime();
 		
@@ -272,10 +279,12 @@
 			var id = target.id;
 			document.getElementById('page').setAttribute("class", "");
 			document.getElementById('page').setAttribute("class", id);
-		}
 
-		function goDark(){
-    		document.getElementById('page').setAttribute("class", "darkStyle");
+			document.getElementById('goLight').classList.remove("currentTheme");
+			document.getElementById('goDark').classList.remove("currentTheme");
+			document.getElementById('goContrast').classList.remove("currentTheme");
+
+			document.getElementById(id).setAttribute("class", "currentTheme");
 		}	      
 	</script>
 </body>
