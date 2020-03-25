@@ -46,7 +46,26 @@
 			padding-right: 10%;
     		padding-top: 5%;
     		font-size: 1.3rem;
-    	}
+    		
+    		animation: fadeInPage ease 1s; 
+    		animation-iteration-count: 1; 
+    		animation-fill-mode: forwards;
+  	    }
+  	    
+  	    
+		@keyframes fadeInPage { 
+    		0% { 
+        		opacity: 0;
+        		transform: translateY(20px); 
+    		}40%{
+    			opacity: 0; 
+    			transform: translateY(20px); 
+    		} 
+    		100% {
+    			transform: translateY(0px); 
+        		opacity: 1; 
+     		} 
+		} 
     	
     	section, footer{
     		width: 100%;
@@ -170,6 +189,10 @@
 				font-size: 10px;
 			}
 			
+			body{
+				font-size: 1.5rem;
+			}
+			
 			.column{
 				width: 100%;
 				margin-bottom: 10px ;			
@@ -182,14 +205,13 @@
 			.footer ul li{
 				display: inline;
 				margin-right: 10px;
-				font-size: 1.3rem;
+				font-size: 1.5rem;
 			}
-		}
-		   	
+		}		   	
     </style>
 </head>
 
-<body">
+<body>
 	
     <header></header>
     
@@ -267,7 +289,7 @@
 	<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
 	
 	<script>
-
+	
 		document.getElementById('goLight').setAttribute("class", "currentTheme");
 
 		var bday = new Date("Nov 19, 1996 05:55:25").getTime();
