@@ -20,7 +20,7 @@
     		height: 100%;
     		background-color: #fcfcfc;
     		color: #252b33;
-    		font-size: 14px;
+    		font-size: 12px;
     	}
     	
     	a{
@@ -34,9 +34,9 @@
     		width: 40%;
     		max-width: 1200px;
     		font-family: 'Barlow Condensed', sans-serif;
-    		padding-left: 20%;
-    		padding-top: 10%;
-    		font-size: 1em;
+    		padding-left: 10%;
+    		padding-top: 5%;
+    		font-size: 1.3rem;
     	}
     	
     	section, footer{
@@ -47,7 +47,7 @@
     	
     	.greeting h1{
     		font-family: 'Inter', sans-serif;
-    		font-size: 2em;
+    		font-size: 2.5rem;
     	}
     	
     	ul{
@@ -70,7 +70,7 @@
 		}
 		
 		.column .li_header{
-			font-size: 1.1em;
+			/*font-size: 1.5rem;*/
 			font-weight: bold;
 		}
 
@@ -91,13 +91,14 @@
 		.footer ul li{
 			display: inline;
 			margin-right: 10px;
-			font-size: 1.1em;
+			font-size: 1rem;
+			
 		}
 		
 		#previous ul, #mode ul{
 		
 			/*background-color: red;*/
-			margin-left: 15%;
+			margin-left: 40%;
 		}
 		
 		a:hover{
@@ -129,22 +130,23 @@
     <header></header>
     
 	<section class="greeting">
-		<h1>Stuff is complicated.</h1>
-		<h1>The number of services we are expected to just understand is baffeling.</h1>
-		<h1>I aim to create less complicated experiences for everyone.<h1>
+		<h1>Design is not easy.</h1>
+		<h1>But it is not suppsed to be easy. It is supposed to be good.</h1>
+		<h1>I aim to create a philosophy where thoughtful user-centric design is instinctive in all projects.<h1>
 		<h1>Whether it is 
-			<a href="#" target="_blank">buying 2nd hand cars</a>, 
-			<a href="#" target="_blank">tracking family expences</a>, 
-			<a href="#" target="_blank">helping kids with school refusal</a>, or 
-			<a href="#" traget="_blank">making shopping more sustainable</a>.
+			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">buying 2nd hand cars</a>, 
+			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">tracking family expences</a>, 
+			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">helping kids with school refusal</a>, or 
+			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" traget="_blank">making shopping more sustainable</a>.
 		<h1>
-		<h1>I'm at your service.</h1>
+		<h1>I am here to help.</h1>
 	</section>
 		
 	<section class="bio">
 		
 		<div
 			<div id="age"></div>
+			<div id="dead"></div>
 			<div id="location">📍 : 38.703321, -9.179565</div>
 			<div id="interest">👍 : 🐶☕️🍂<br>👎 : 🐱🥵🗯</div>
 		</div>
@@ -199,11 +201,16 @@
 	<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
 	
 	<script>
+	
 		var bday = new Date("Nov 19, 1996 05:55:25").getTime();
+		var dday = new Date("Nov 19, 2077 12:00:00").getTime();
+		
 		var update = setInterval(function() {
 		  var now = new Date().getTime(); 
-		  var diffTime = Math.abs(now - bday);
-		  document.getElementById("age").innerHTML ="🗓 : " + (diffTime/31557600000);
+		  var diffTime1 = Math.abs(now - bday);
+		  var diffTime2 = Math.abs(dday - now);
+		  document.getElementById("age").innerHTML ="👶 : " + (diffTime1/31557600000);
+		  //document.getElementById("dead").innerHTML ="💀 : " + (diffTime2/31557600000);
 		}, 10);	      
 	</script>
 </body>
