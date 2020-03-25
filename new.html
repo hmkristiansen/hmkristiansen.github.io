@@ -28,13 +28,16 @@
     		text-decoration: underline;
     		/*border-bottom: 2px solid #4e5861;*/
     		transition: all 0.2s;
+			-webkit-text-decoration-color: #C0C0C0; /* Safari */  
+  			text-decoration-color: #C0C0C0;
     	}
     	
     	body{
-    		width: 40%;
-    		max-width: 1200px;
+    		/*width: 40%;*/
+    		max-width: 600px;
     		font-family: 'Barlow Condensed', sans-serif;
     		padding-left: 10%;
+			padding-right: 10%;
     		padding-top: 5%;
     		font-size: 1.3rem;
     	}
@@ -121,6 +124,37 @@
 			text-align: left;
 			float: right;
 		}*/
+
+		@media only screen and (max-width: 550px) {
+			html{
+				font-size: 11px;
+			}
+  			body {
+    			padding: 5%;
+  			}
+
+			#previous ul, #mode ul{
+				/*background-color: red;*/
+				margin-left: 20%;
+			}
+		}
+
+		@media only screen and (max-width: 400px) {
+			
+			html{
+				font-size: 10px;
+			}
+			
+			.column{
+				width: 100%;
+				margin-bottom: 10px ;			
+			}
+			#previous ul, #mode ul{
+				/*background-color: red;*/
+				margin: 0;
+				padding: 0;
+			}
+		}
 		   	
     </style>
 </head>
@@ -132,7 +166,7 @@
 	<section class="greeting">
 		<h1>Design is not easy.</h1>
 		<h1>But it is not suppsed to be easy. It is supposed to be good.</h1>
-		<h1>I aim to create a philosophy where thoughtful user-centric design is instinctive in all projects.<h1>
+		<h1>I aim to be a messenger of thoughtful user-centric design in all projects I take part in.<h1>
 		<h1>Whether it is 
 			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">buying 2nd hand cars</a>, 
 			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">tracking family expences</a>, 
@@ -144,7 +178,7 @@
 		
 	<section class="bio">
 		
-		<div
+		<div>
 			<div id="age"></div>
 			<div id="dead"></div>
 			<div id="location">📍 : 38.703321, -9.179565</div>
@@ -161,7 +195,7 @@
 						Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, working on a MS.c from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a>.
 					</li>
 					<li>
-						Upcoming summer intern at <a href="#" target="_blank">Iterate</a>  
+						Upcoming summer intern at <a href="https://www.iterate.no/" target="_blank">Iterate</a>  
 					</li>
 				
 				</ul>
