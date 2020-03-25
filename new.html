@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     <script src="script/jquery-3.4.1.min.js"></script>
     <style>
     	
-    	@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Inter:700&display=swap');
+    	@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,600|Inter:700&display=swap');
     
     	html{
     		width: 100%;
@@ -21,6 +21,7 @@
     		background-color: #fcfcfc;
     		color: #252b33;
     		font-size: 12px;
+			transition: all 0.2s;
     	}
     	
     	a{
@@ -40,6 +41,7 @@
     		/*width: 40%;*/
     		max-width: 600px;
     		font-family: 'Barlow Condensed', sans-serif;
+			font-weight: 400;
     		padding-left: 10%;
 			padding-right: 10%;
     		padding-top: 5%;
@@ -66,6 +68,7 @@
     	li{
     		margin-bottom: 5px;
     	}
+
     	.column {
 			float:left;
  			width: 50%;
@@ -78,7 +81,7 @@
 		
 		.column .li_header{
 			/*font-size: 1.5rem;*/
-			font-weight: bolder;
+			font-weight: 600;
 		}
 
 		.row{
@@ -112,22 +115,35 @@
 			transition: all 0.2s;
 			filter: brightness(200%);
 		}
+
+		/*Color Modes*/
 		
-		/*
-		
-		footer ul{
-			display: inline;
-			width: 50%;
+		.goDark{
+    		color: #fcfcfc;
+    		background-color: #141414;
 		}
-		
-		.footer ul li{
-			display: inline;
+		.goDark a{
+			color: #fcfcfc;
 		}
-		
-		#mode{
-			text-align: left;
-			float: right;
-		}*/
+		.goDark a:hover{
+			transition: all 0.2s;
+			filter: brightness(50%);
+		}
+
+		.goContrast{
+			background-color: black;
+			color: yellow;
+		}
+
+		.goContrast a{
+			color: yellow;
+			-webkit-text-decoration-color: blue; /* Safari */  
+  			text-decoration-color: blue;
+		}
+		.goContrast a:hover{
+			transition: all 0.2s;
+			filter: brightness(50%);
+		}
 
 		@media only screen and (max-width: 550px) {
 			html{
@@ -226,9 +242,9 @@
 			</div>
 			<div class="column" id="mode">
 				<ul>
-					<li><a href="" target="_blank" id="btn_light">light</a></li>
-					<li><a href="" target="_blank" id="btn_dark">dark</a></li>
-					<li><a href="" target="_blank" id="btn_contrast">contrast</a></li>
+					<li><a href="#" onclick="changeTheme();return false;" id="goLight">light</a></li>
+					<li><a href="#" onclick="changeTheme();return false;" id="goDark">dark</a></li>
+					<li><a href="#" onclick="changeTheme();return false;" id="goContrast">contrast</a></li>
 				</ul>
 			</div>	
 		</div>
@@ -249,7 +265,18 @@
 		  var diffTime2 = Math.abs(dday - now);
 		  document.getElementById("age").innerHTML ="👶 : " + (diffTime1/31557600000);
 		  //document.getElementById("dead").innerHTML ="💀 : " + (diffTime2/31557600000);
-		}, 10);	      
+		}, 10);
+
+		function changeTheme(){
+			var target = event.target || event.srcElement;
+			var id = target.id;
+			document.getElementById('page').setAttribute("class", "");
+			document.getElementById('page').setAttribute("class", id);
+		}
+
+		function goDark(){
+    		document.getElementById('page').setAttribute("class", "darkStyle");
+		}	      
 	</script>
 </body>
 
