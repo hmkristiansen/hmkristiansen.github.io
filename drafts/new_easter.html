@@ -7,213 +7,48 @@
     <title>H.M. Kristiansen | hinken</title>
     
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <script src="assets/jquery-3.4.1.min.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel = "stylesheet"type = "text/css" href ="style.css"/>
     <style>
-    	
-    	/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
-
-    	html{
-    		width: 100%;
-    		height: 100%;
-    		background-color: #f7f7f7;
-    		color: #252b33;
-    		font-size: 16px;
-			transition: all 0.2s;
-            overflow: auto;
-            top:0;
-    	}
-    	
-    	a{
-    		color: #252b33;
-    		text-decoration: underline;
-    		transition: all 0.2s;
-			-webkit-text-decoration-color: #C0C0C0; /* Safari */  
-  			text-decoration-color: #C0C0C0;
-    	}
-
-        a:hover{
-			transition: all 0.2s;
-			filter: brightness(200%);
-        }
-        
-        .current{
-            color:red;
-        }
-
-        ul{
-    		list-style-type: none;
-  			margin: 0;
-  			padding: 0;
-    	}
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .content::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Hide scrollbar for IE and Edge */
-        .content {
-            -ms-overflow-style: none;
-        }
-
-        /*--------------*/
-
-    	body{ 
-            font-family: 'Roboto Slab', monospace;
-            display: block;
-            height: 100%;
-            width: 100%;
-            
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-  	    }
-        
-        h1{
-            font-weight: normal;
-            font-size: 2rem;
-        }
-
-        h2{
-            font-weight: bold;
-        }
-
-        p,li,div{
-            font-weight: normal;
-            font-size: 1rem;
-        }
-
-        .nav{
-            float: left;
-            width: 12vw;
-            height: 100vh;
-            position: relative;
-            display: table;
-            overflow: hidden;
-        }
-        #menu{
-            display: table-cell;
-            vertical-align: middle;
-            text-align: right;
-        }
-
-        #menu li{
-            margin-bottom: 5px;
-            margin-top: 5px;
-        }
-
-        .space{
-            width:10vw;
-            height: 100vh;
-            float: left;
-        }
-
-        .content{
-            width: 60vw;
-            height: 100%;
-            float: left;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
-        }
-
-        section{
-            height: 100%;
-            width: inherit;
-
-            scroll-snap-align: start;
-            text-align: left;
-            /*position: relative;*/
-
-            display: table;
-            
-        }
-
-        .section_content{  
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        .section_content p,ul,h1,h2,div{
-            max-width: 400px;
-        }
-
-		/*Color Modes*/		
-		.goDark{
-    		color: #fcfcfc;
-    		/*background-color: #141414;*/
-    		background-color: black;
-		}
-		.goDark a{
-			color: #fcfcfc;
-		}
-		.goDark a:hover{
-			transition: all 0.2s;
-			filter: brightness(50%);
-		}
-		.goContrast{
-			background-color: red;
-			color: blue;
-		}
-		.goContrast body, .goContrast h1{
-			font-family: 'Gloria Hallelujah', cursive;
-		}
-		.goContrast a{
-			color: blue;
-			-webkit-text-decoration-color: blue; /* Safari */  
-  			text-decoration-color: yellow;
-		}
-		.goContrast a:hover{
-			transition: all 0.2s;
-			filter: brightness(50%);
-		}
-		.currentTheme{
-			text-decoration: none;
-			pointer-events: none;
-		}
-		@media only screen and (max-width: 550px) {
-			
-		}
-		@media only screen and (max-width: 400px) {
-			
-		}		   	
+    	   	
     </style>
 </head>
 
 <body>
-
     <div class="nav">
         <ul id="menu">
-            <li><a href="#home" class="scrollLink">home</a></li>
-            <li><a href="#vision" class="scrollLink">vision</a></li>
-            <li><a href="#work" class="scrollLink">work</a></li>
-            <li><a href="#about" class="scrollLink">about</a></li>
-            <li><a href="#cv" class="scrollLink">cv</a></li>
-            <li><a href="#contact" class="scrollLink">contact</a></li>
+            <li><a href ="#home" id="#home" class="scrollLink">home</a></li>
+            <li><a href="#vision" id="#vision" class="scrollLink">vision</a></li>
+            <li><a href="#work" id="#work" class="scrollLink">work</a></li>
+            <li><a href="#about" id="#about" class="scrollLink">about</a></li>
+            <li><a href="#cv" id="#cv" class="scrollLink">cv</a></li>
+            <li><a href="#contact" id="#contact" class="scrollLink">contact</a></li>
         </ul>
     </div>
 
     <div class="space"></div>
 
     <div class="content">
-
-        <section id="home" class="">
+        
+        <div class="section" id="home">
             <div class="section_content">
                 <h1>Heisann!<br>
                     My name is Henrik.<br>
                     Welcome to my little corner on the web.</h1>
             </div>
-        </section>
+        </div>
     
-        <section id="vision" class="hide">
+        <div class="section hidden" id="vision">
             <div class="section_content">
                  <h2>Life is a timeline of everyday problems.</h2>
                 <p>In the long run, these problems are sources of stress and anxiety.<br>
                 I aim to create tools and experiences that can help make this better.</p>
             </div>
-        </section>
+        </div>
     
-        <section id="work" class="hide">
+        <div class="section hidden" id="work"  >
             <div class="section_content">
                 <h2>A selection of some of my projects;</h2>
                 <ul>
@@ -223,9 +58,9 @@
                     <li><a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">Sustainable online shopping</a></li>
                 </ul>
             </div>
-        </section>
+        </div>
     
-        <section id="about" class="hide">
+        <div class="section hidden" id="about"  >
             <div class="section_content">
                 <h2>I'm unreasonably enthusiastic about beagles.</h2>
                 <p>
@@ -235,9 +70,9 @@
                     <div id="interest">👍 : 🐶☕️🍂<br>👎 : 🐱🥵🍓</div>
                 </p>
             </div>
-        </section>
+        </div>
     
-        <section id="cv" class="hide">
+        <div class="section hidden" id="cv"  >
             <div class="section_content">
                 <h2>Currently</h2>
                 <p>
@@ -255,9 +90,9 @@
                     </ul>
                 </p>
             </div>
-        </section>
+        </div>
     
-        <section id="contact" class="hide">
+        <div class="section hidden" id="contact"  >
             <div class="section_content">
                 <ul>
                     <li><a href="">instagram</a></li>
@@ -265,10 +100,10 @@
                     <li><a href="">hei@hinken.no</a></li>
                 </ul>
             </div>
-        </section>
+        </div>
     </div> 
     <!-- end of class="content" -->
-    <script src="jquery-3.4.1.min.js"></script>
+    
     <script src="script.js"></script>
 	<script>  
 		var bday = new Date("Nov 19, 1996 05:55:25").getTime();

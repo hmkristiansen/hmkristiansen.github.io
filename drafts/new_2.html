@@ -174,12 +174,12 @@
 
     <div class="nav">
         <ul id="menu">
-            <li><a href="#home" class="scrollLink">home</a></li>
-            <li><a href="#vision" class="scrollLink">vision</a></li>
-            <li><a href="#work" class="scrollLink">work</a></li>
-            <li><a href="#about" class="scrollLink">about</a></li>
-            <li><a href="#cv" class="scrollLink">cv</a></li>
-            <li><a href="#contact" class="scrollLink">contact</a></li>
+            <li><a id="#home" class="scrollLink">home</a></li>
+            <li><a id="#vision" class="scrollLink">vision</a></li>
+            <li><a id="#work" class="scrollLink">work</a></li>
+            <li><a id="#about" class="scrollLink">about</a></li>
+            <li><a id="#cv" class="scrollLink">cv</a></li>
+            <li><a id="#contact" class="scrollLink">contact</a></li>
         </ul>
     </div>
 
@@ -258,14 +258,14 @@
     <!-- end of class="content" -->
 
     <script>
-        /*
+        
         $(document).ready(function(){
             $( ".menu, a" ).click(function( event ) {
                 event.preventDefault();
-                console.log($(this).attr("href"));
-                $(".content").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+                console.log($(this).attr("id"));
+                $(".content").animate({ scrollTop: $($(this).attr("id")).offset().top }, 500);
             });
-        });*/
+        });
 
         var hashTagActive = "";
         $(".scrollLink").on("click touchstart" , function (event) {

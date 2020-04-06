@@ -1,41 +1,47 @@
-// scrolling til event og endre nav
 
-$(document).ready(function(){
-	var contentSection = $('body');
-    var navigation = $('.nav');
-    	
-	navigation.on('click', '.scrollLink', function(event){
-		event.preventDefault();
-        smoothScroll($(this.hash));
-        console.log($(this.hash));
-    });
+ const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+ const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+ 
+ /*
+ $(document).ready(function() { 
+    $('#menu').on('click','.scrollLink', function ( e ) {
+		e.preventDefault();
+		var d = event.target.id;
 
-	$(window).on('scroll', function(){
-        updateNavigation();
-    })
-    
-	updateNavigation();
-	
-	function updateNavigation(){
-		contentSection.each(function(){
-            var sectionName = $(this).attr('id');
-            var navigationMatch = $('a[href="#' + sectionName + '"]');
-			if( ($(this).offset().top - $(window).height()/2 < $(window).scrollTop()) &&
-				  ($(this).offset().top + $(this).height() - $(window).height()/9 > $(window).scrollTop()))
-				{
-					navigationMatch.addClass('current');
-				}
-			else {
-				navigationMatch.removeClass('current');
+	});
+});*/
+
+var anchors = $('.section');
+
+$(document).on("scroll", onScroll);
+	function onScroll() {
+		var currentSection = null;
+		var scrollPos = $(document).scrollTop();
+
+		$.each(anchors, function() {
+			var scrollTop = $(this).position().top;
+			if (scrollPos >= scrollTop) {
+				currentSection = $(this).attr('id');
 			}
 		});
-    }
-});
+};
 
-//funksjon for smooth scroll
-function smoothScroll(target){
-    $('html,body').animate({
-        scrollTop: target.offset().top
-    }, 1000);
-}
+/*
+$(document).ready(function(){
+    $( "a.scrollLink" ).click(function( event ) {
+		event.preventDefault();
+		var id = $(this).attr("id");
+        $("html, body").animate({ scrollTop: $(id).offset().top }, 800);
+    });
+});*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+		e.preventDefault();
+		console.log(e);
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
