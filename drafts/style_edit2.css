@@ -9,6 +9,8 @@ html{
     color: #252b33;
     transition: all 0.2;
     font-size: 16px;
+
+    scroll-behavior: smooth;
 }
 
 a{
@@ -31,6 +33,17 @@ ul{
       padding: 0;
 }
 
+.scrollLink{
+    opacity: 0.2;
+    text-decoration: none;
+}
+
+.scrollLink:hover{
+    opacity: 1;
+}
+
+
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -43,12 +56,13 @@ body {
 
 body{ 
     font-family: 'Roboto Slab', monospace;
-    display: block;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    position: relative;
+
+    height: 100vh;
+    overflow: hidden;
 }
 
 h1{
@@ -91,30 +105,19 @@ p,li,div{
     z-index: 100;
 }
 
-.content{  
-    overflow: scroll;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    scroll-snap-type: y mandatory;
-}
-
 section{
-    /*position: absolute;*/
-    top:0;
-    margin-left: 20vw;
-    height: 100vh;
-
-    opacity: 1;
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*resize: vertical;*/
     overflow: auto;
+
+    height: 100vh;
+    margin-bottom: 1px;
+    margin-left: 20vw;
+
+    opacity: 1;
 }
+
 
 /*- - - - -- - */
 
@@ -131,7 +134,25 @@ section{
 }
 
 .active{
-    color: red;
+    opacity: 1;
 }
 
 /* - - - - - - - -*/
+
+.fade{
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.snapper{
+    overflow: scroll;
+    height: 100vh;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}
+
+.snapping{
+    height: 100vh;
+    scroll-snap-align: start;
+}
