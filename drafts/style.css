@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html{
     width: 100%;
@@ -51,8 +51,11 @@ body{
     position: relative;
 
     overflow-x: hidden;
+    /*
     overflow-y: scroll;
+    
     scroll-snap-type: y mandatory;
+    */
 }
 
 h1{
@@ -92,7 +95,7 @@ p,li,div{
     overflow: auto;
 }
 
-.section{
+section{
     /*position: absolute;*/
     top:0;
     margin-left: 20vw;
@@ -100,8 +103,10 @@ p,li,div{
 
     opacity: 1;
     transition: all 0.2s;
-
+    
+	/*
     scroll-snap-align: start;
+	*/
 
     display: flex;
     flex-direction: column;

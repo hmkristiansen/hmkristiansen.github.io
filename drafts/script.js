@@ -11,6 +11,8 @@
 	});
 });*/
 
+/*
+
 var anchors = $('.section');
 
 $(document).on("scroll", onScroll);
@@ -25,6 +27,7 @@ $(document).on("scroll", onScroll);
 			}
 		});
 };
+*/
 
 /*
 $(document).ready(function(){
@@ -33,7 +36,7 @@ $(document).ready(function(){
 		var id = $(this).attr("id");
         $("html, body").animate({ scrollTop: $(id).offset().top }, 800);
     });
-});*/
+});
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -44,4 +47,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
+*/
