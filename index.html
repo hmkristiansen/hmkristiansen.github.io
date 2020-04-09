@@ -309,7 +309,13 @@
 	
 	<script>
 	
-		document.getElementById('goLight').setAttribute("class", "currentTheme");
+		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			document.getElementById('goDark').setAttribute("class", "currentTheme");
+		}else{
+			document.getElementById('goLight').setAttribute("class", "currentTheme");
+		}
+	
+		
 
 		var bday = new Date("Nov 19, 1996 05:55:25").getTime();
 		var dday = new Date("Nov 19, 2077 12:00:00").getTime();

@@ -74,7 +74,7 @@ $( 'body' ).scroll(function(e) {
     var delayInMs = e.timeStamp - lastDate;
     var offset = e.target.scrollTop - lastOffset;
     var speedInpxPerMs = offset / delayInMs;
-	console.log(speedInpxPerMs);
+	//console.log(speedInpxPerMs);
 
     lastDate = e.timeStamp;
 	lastOffset = e.target.scrollTop;
@@ -91,7 +91,8 @@ function checkPosition(speedInpxPerMs){
 	if (speedInpxPerMs < -2 || speedInpxPerMs > 2) {
 		nav.classList.add('is-visible');
 		nav.classList.remove('is-hidden');
-	} else{
+		ticker++;
+	} else if(ticker > 10){
 		setTimeout(function() {   //calls click event after a certain time
 			removeNav();
 		}, 2000);
@@ -100,6 +101,7 @@ function checkPosition(speedInpxPerMs){
 	function removeNav(){
 		nav.classList.add('is-hidden');
 		nav.classList.remove('is-visible');
+		ticker = 0;
 	}
 
 	
