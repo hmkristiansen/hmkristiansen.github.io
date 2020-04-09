@@ -24,6 +24,23 @@ a{
       cursor: pointer;
 }
 
+body{ 
+    font-family: 'Roboto Mono', monospace;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
 a:hover{
     transition: all 0.2s;
     filter: brightness(200%);
@@ -53,28 +70,7 @@ section li{
     opacity: 1;
 }
 
-
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    -ms-overflow-style: none;
-}
-
 /* - - - - - - - - */
-
-body{ 
-    font-family: 'Roboto Mono', monospace;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    /*padding: 20px;*/
-
-    height: 100vh;
-    overflow: hidden;
-}
 
 h1{
     font-weight: normal;
@@ -89,10 +85,9 @@ h2{
     font-weight: bold;
     padding: 0;
     margin: 0;
-    margin-bottom: 8px;
-    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-top: 15px;
 }
-
 
 p,li,div{
     font-weight: lighter;
@@ -108,45 +103,37 @@ nav{
     top: 0;
     left: 0;
     height: 100%;
-    width: 15vw;
-
+    width: 20vw;
     font-family: 'Inter', sans-serif;
-
-    /*background-color: lightpink;*/
-    
     text-align: right;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*resize: vertical;*/
     overflow: auto;
-    z-index: 100;
+    /*z-index: 100;*/
 }
 
 section{
     position: relative;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*overflow: auto;*/
     overflow: hidden;
 
     height: 100vh;
     width: 100vw;
-
-    /*background-color: lavender;*/
     opacity: 1;
+    z-index: 100;
 }
 
 .section_content{
     width: 80%;
-    /*background-color: lawngreen;*/
+    max-width: 400px;
     padding:0;
     margin:0;
     padding: 10%;
-    padding-left: 20vw;
+    padding-left: 25vw;
     padding-right: 10vw;
 }
 
@@ -155,7 +142,6 @@ section{
 .section_content h2,
 .section_content ul,
 .section_content p{
-    max-width: 400px;
     width: 100%;
     /*background-color: whitesmoke;*/
 }
@@ -170,8 +156,15 @@ section{
     margin: 0;
 }
 
+#menu ul{
+    display: flex; /* Puts the `li` in a row */
+    list-style: none; margin: 0; padding: 0;
+}
+
 #menu li{
     margin: 20px;
+    height: 25px;
+    align-items: center;
 }
 
 .active{
@@ -189,23 +182,33 @@ section{
     display: inline-block;
 }
 
-#scrollDownBtn{
+#greeting{
     /*margin-top: 60px;*/
     position: relative;
     /*cursor: pointer;*/
 }
 
-#scrollDownBtn:hover #scrollEmoji{
+#greeting:hover #scrollEmoji{
     top:5px;
 }
 
 
-/* - - - - - - - -*/
-
-.fade{
-    transition: all 0.2s;
-    opacity: 0;
+#greeting::after{
+    visibility: hidden;
+    position: absolute;
+    top:-150px;
+    left:150px;
+    transform: rotate(-20deg);
+    background-image: url('me.JPG');
+    background-size: 200px 234px;
+    display: inline-block;
+    width: 200px; 
+    height: 234px;
+    content:"";
 }
+
+
+/* - - - - - - - -*/
 
 .snapper{
     overflow: scroll;
@@ -220,9 +223,8 @@ section{
     scroll-snap-align: start;
 }
 
-/* - - - - - */
 
-
+/* - - EXTRA STUFF- - - */
 .column {
     float: left;
     width: 200px;
@@ -237,9 +239,62 @@ section{
     z-index: 100;
 }
 
-
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
+
+/* - - - - - -  RESPONSIVITY- - - - - - -*/
+
+@media only screen and (max-width: 800px) {
+    html{
+        font-size: 14px;
+    }
+
+    nav{
+        position: absolute;
+        left: unset;
+        top: 0;
+        right: 0;
+        height: 100%;
+        text-align: right;
+        margin-right: 5vw;
+        width: 200px;
+    }
+
+  
+
+    section{
+        width: 100vw;
+    }
+
+    .section_content{
+        width: 100vw;
+        /*background-color: lawngreen;*/
+        padding:0;
+        margin:0;
+        padding: 10%;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    
+}
+
+@media only screen and (max-width: 550px) {
+    html{
+        font-size: 11px;
+    }
+    body {
+        padding: 5%;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    
+    html{
+        font-size: 10px;
+    }
+    
+}	
