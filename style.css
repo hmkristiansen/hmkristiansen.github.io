@@ -4,8 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     /*background-color: #f7f7f7;*/
     background-color: white;
@@ -31,7 +31,7 @@ body{
     width: 100vw;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -93,8 +93,6 @@ h2{
 p,li,div{
     font-weight: lighter;
     font-size: 1rem;
-    padding: 0;
-    margin: 0;
 }
 
 /* - - - - - - - - */
@@ -113,6 +111,7 @@ nav{
     justify-content: center;
     overflow: auto;
     z-index: 100;
+    transition: transform 0.3s;
 }
 
 section{
@@ -122,14 +121,12 @@ section{
     justify-content: center;
     overflow: hidden;
 
-    height: 100vh;
-    width: 100vw;
+    height: 100vh !important;
+    width: 100vw !important;
     opacity: 1;
 }
 
 .section_content{
-    width: 80%;
-    max-width: 400px;
     padding:0;
     margin:0;
     padding: 10%;
@@ -142,7 +139,8 @@ section{
 .section_content h2,
 .section_content ul,
 .section_content p{
-    width: 100%;
+    width: 100vw;
+    max-width: 400px;
     /*background-color: whitesmoke;*/
 }
 
@@ -212,15 +210,20 @@ section{
 
 .snapper{
     overflow: scroll;
-    height: 100vh;
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
 }
 
 .snapping{
-    height: 100vh;
     scroll-snap-align: start;
+}
+
+.is-hidden {
+
+}
+.is-visible {
+
 }
 
 
@@ -250,35 +253,72 @@ section{
 @media only screen and (max-width: 800px) {
     html{
         font-size: 14px;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    body{
+        height: 100vh;
+        width: 100vw;
     }
 
     nav{
         position: absolute;
-        top: 10px;
+        top: unset;
         left: unset;
-        /*bottom: 0;*/
-        height: 100px;
+        bottom: 0;
+        right: 0;
+        height: 300px;
 
-        width: 100vh;
+        padding: 20px;
         overflow: hidden;
     
         display: block;
+
+        background-color: white;
+        border-radius: 5px;
     }
 
     nav li {
-        float: left;
         margin: 0 auto;
-        margin: 5px;
+        margin: 0px;
         height: 20px;
         align-items: center;
     }
       
     nav li a {
         display: block;
-        text-align: center;
+        text-align: right;
+        
         /*padding: 16px;*/
         text-decoration: none;
     }
+
+    .active{
+        opacity: 1 !important;
+        font-size: 1rem;
+        font-weight: 500;
+        pointer-events: none;
+    }
+
+    .section_content{    
+        padding:0;
+        margin:0;
+        padding: 20px;
+        margin: 0 auto;
+        width: 100vw;
+    }
+
+    .is-hidden {
+        transform: translateY(20%);
+        transform: translateX(100%);
+    }
+    .is-visible {
+        transform: translateY(0);
+        transform: translateY(0);
+    }
+
     /*
     nav{
         position: absolute;
@@ -306,20 +346,79 @@ section{
     
 }
 
+/*
 @media only screen and (max-width: 550px) {
     html{
-        font-size: 13px;
+        font-size: 14px;
+        height: 100%;
+        width: 100%;
     }
-    body {
-        padding: 5%;
+
+    body{
+        
+        height: 100%;
+        width: 100%;
+    }
+
+    nav{
+        position: absolute;
+        top: unset;
+        left: unset;
+        bottom: 0;
+        height: 100px;
+
+        width: 100vw;
+        overflow: hidden;
+    
+        display: block;
+
+        background-color: white;
+    }
+
+    nav li {
+        float: left;
+        margin: 0 auto;
+        margin: 0px;
+        height: 20px;
+        align-items: center;
+    }
+      
+    nav li a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .active{
+        opacity: 1 !important;
+        font-size: 1rem;
+        font-weight: 500;
+        pointer-events: none;
+    }
+
+    .section_content{    
+        padding:0;
+        margin:0;
+        padding: 20px;
+        margin: 0 auto;
+        width: 100vw;
     }
 
 }
+*/
 
 @media only screen and (max-width: 400px) {
     
     html{
+        width: 100vw;
+        height: 100vh;
         font-size: 12px;
+        overflow: hidden;
     }
     
-}	
+    .section_content div, .section_content h1, .section_content h2, .section_content ul, .section_content p {
+        width: 100vw;
+        max-width: 300px;
+        /* background-color: whitesmoke; */
+    }
+}

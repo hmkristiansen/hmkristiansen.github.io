@@ -17,16 +17,13 @@ if (ua.indexOf('safari') != -1) {
 	console.log(browser);
 }
 
-
-
 $(document).ready(function() {
 
 	var mainSections = document.querySelectorAll("section");
 
 	$('a[href*="#"]').bind('click', function(e) {
-			e.preventDefault(); // prevent hard jump, the default behavior
-
-			var target = $(this).attr("href"); // Set the target as variable
+			e.preventDefault(); 
+			var target = $(this).attr("href"); 
 			var scrollTop;
 
 			for(var i=0; i<mainSections.length; i++){
@@ -34,23 +31,13 @@ $(document).ready(function() {
 					scrollTop = mainSections[i].offsetTop;
 				}
 			}
-
-			console.log(scrollTop);
-
 			$('html, body').animate({
 					scrollTop
 			}, 300, 'swing', function() {
 					//location.hash = target; //attach the hash (#jumptarget) to the pageurl
 			});
-
 			return false;
 	});
-
-	/*
-	var width = $(window).width();
-	if (width < 800){
-		$('#menu a').html("-");
-	}*/
 });
 
 
@@ -59,9 +46,6 @@ $('html, body').scroll(function() {
 
 	var scrollPos = $('body').scrollTop();
 	var reach = window.innerHeight/4;
-	//console.log(reach);
-	//console.log(scrollPos);
-	//console.log("------");
 	var currentRange;
 
 	for(var i=0; i<mainSections.length; i++){
@@ -76,13 +60,70 @@ $('html, body').scroll(function() {
 		}
 	}
 
+	
+	//checkPosition();
+	//debounce(checkPosition);
+	//console.log( checkScrollSpeed() );
+	
 }).scroll();
 
-/*
-$(window).resize(function() {
-	var width = $(window).width();
-	if (width < 800){
-		$('#menu a').html("-");
+var lastOffset = $( 'body' ).scrollTop();
+var lastDate = new Date().getTime();
+
+$( 'body' ).scroll(function(e) {
+    var delayInMs = e.timeStamp - lastDate;
+    var offset = e.target.scrollTop - lastOffset;
+    var speedInpxPerMs = offset / delayInMs;
+	console.log(speedInpxPerMs);
+
+    lastDate = e.timeStamp;
+	lastOffset = e.target.scrollTop;
+	
+	checkPosition(speedInpxPerMs);
+	debounce(checkPosition);
+});
+
+var ticker=0;
+
+function checkPosition(speedInpxPerMs){
+
+	const nav = document.querySelector('nav');
+	if (speedInpxPerMs < -2 || speedInpxPerMs > 2) {
+		nav.classList.add('is-visible');
+		nav.classList.remove('is-hidden');
+	} else{
+		setTimeout(function() {   //calls click event after a certain time
+			removeNav();
+		}, 2000);
 	}
-  });
-*/
+
+	function removeNav(){
+		nav.classList.add('is-hidden');
+		nav.classList.remove('is-visible');
+	}
+
+	
+	/*
+	if (ticker >= 5){
+		nav.classList.add('is-hidden');
+		nav.classList.remove('is-visible');
+		ticker = 0;
+	}*/
+	
+}
+
+function debounce(func, wait = 10, immediate = true) {
+	let timeout;
+	return function() {
+	  let context = this, args = arguments;
+	  let later = function() {
+		timeout = null;
+		if (!immediate) func.apply(context, args);
+	  };
+	  let callNow = immediate && !timeout;
+	  clearTimeout(timeout);
+	  timeout = setTimeout(later, wait);
+	  if (callNow) func.apply(context, args);
+	};
+};
+
