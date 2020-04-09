@@ -254,6 +254,34 @@ section{
 
     nav{
         position: absolute;
+        top: 10px;
+        left: unset;
+        /*bottom: 0;*/
+        height: 100px;
+
+        width: 100vh;
+        overflow: hidden;
+    
+        display: block;
+    }
+
+    nav li {
+        float: left;
+        margin: 0 auto;
+        margin: 5px;
+        height: 20px;
+        align-items: center;
+    }
+      
+    nav li a {
+        display: block;
+        text-align: center;
+        /*padding: 16px;*/
+        text-decoration: none;
+    }
+    /*
+    nav{
+        position: absolute;
         left: unset;
         top: 0;
         right: 0;
@@ -263,27 +291,24 @@ section{
         width: 200px;
     }
 
-  
-
     section{
         width: 100vw;
     }
 
     .section_content{
         width: 100vw;
-        /*background-color: lawngreen;*/
         padding:0;
         margin:0;
         padding: 10%;
         padding-left: 10vw;
         padding-right: 10vw;
-    }
+    }*/
     
 }
 
 @media only screen and (max-width: 550px) {
     html{
-        font-size: 11px;
+        font-size: 13px;
     }
     body {
         padding: 5%;
@@ -294,7 +319,7 @@ section{
 @media only screen and (max-width: 400px) {
     
     html{
-        font-size: 10px;
+        font-size: 12px;
     }
     
 }	
