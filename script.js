@@ -45,6 +45,11 @@ $(document).ready(function() {
 
 			return false;
 	});
+
+	var width = $(window).width();
+	if (width < 800){
+		$('#menu a').html("-");
+	}
 });
 
 
@@ -72,3 +77,10 @@ $('html, body').scroll(function() {
 
 }).scroll();
 
+
+$(window).resize(function() {
+	var width = $(window).width();
+	if (width < 800){
+		$('#menu a').html("-");
+	}
+  });
