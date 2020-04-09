@@ -29,18 +29,27 @@ a:hover{
     filter: brightness(200%);
 }
 
-ul{
-    list-style-type: none;
-      margin: 0;
-      padding: 0;
+#location{
+    text-decoration: none;
 }
 
-.scrollLink{
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section li{
+    margin: 8px;
+    margin-left: 0;
+}
+
+#menu li a{
     opacity: 0.2;
     text-decoration: none;
 }
 
-.scrollLink:hover{
+#menu li a:hover{
     opacity: 1;
 }
 
@@ -72,6 +81,8 @@ h1{
     font-size: 2rem;
     padding: 0;
     margin: 0;
+    margin-bottom: 8px;
+    margin-top: 8px;
 }
 
 h2{
@@ -79,11 +90,12 @@ h2{
     padding: 0;
     margin: 0;
     margin-bottom: 8px;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
+
 p,li,div{
-    font-weight: normal;
+    font-weight: lighter;
     font-size: 1rem;
     padding: 0;
     margin: 0;
@@ -91,13 +103,16 @@ p,li,div{
 
 /* - - - - - - - - */
 
-.nav{
-    position: fixed;
-    padding: 20px;
-    width: 15vw;
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
+    width: 15vw;
 
     font-family: 'Inter', sans-serif;
+
+    /*background-color: lightpink;*/
     
     text-align: right;
 
@@ -110,21 +125,40 @@ p,li,div{
 }
 
 section{
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: auto;
+    /*overflow: auto;*/
     overflow: hidden;
+
     height: 100vh;
-   
-    
-    margin-left: 25vw;
+    width: 100vw;
 
-    padding: 20px;
-
+    /*background-color: lavender;*/
     opacity: 1;
 }
 
+.section_content{
+    width: 80%;
+    /*background-color: lawngreen;*/
+    padding:0;
+    margin:0;
+    padding: 10%;
+    padding-left: 20vw;
+    padding-right: 10vw;
+}
+
+.section_content div,
+.section_content h1,
+.section_content h2,
+.section_content ul,
+.section_content p{
+    max-width: 400px;
+    width: 100%;
+    /*background-color: whitesmoke;*/
+}
 
 /*- - - - -- - */
 
@@ -137,11 +171,14 @@ section{
 }
 
 #menu li{
-    margin: 5px;
+    margin: 20px;
 }
 
 .active{
-    opacity: 1;
+    opacity: 1 !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    pointer-events: none;
 }
 
 /* - - - - - - - -*/
@@ -162,4 +199,28 @@ section{
 .snapping{
     height: 100vh;
     scroll-snap-align: start;
+}
+
+/* - - - - - */
+
+
+.column {
+    float: left;
+    width: 200px;
+    margin: 20px;
+    height: 100px;
+    background-color: red;
+}
+
+.row{
+    background-color: khaki;
+    max-width: 100%;
+    z-index: 100;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }

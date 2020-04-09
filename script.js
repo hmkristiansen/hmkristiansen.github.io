@@ -19,6 +19,202 @@ if (ua.indexOf('safari') != -1) {
 
 
 
+$(document).ready(function() {
+
+	var mainSections = document.querySelectorAll("section");
+
+	$('a[href*="#"]').bind('click', function(e) {
+			e.preventDefault(); // prevent hard jump, the default behavior
+
+			var target = $(this).attr("href"); // Set the target as variable
+			var scrollTop;
+
+			for(var i=0; i<mainSections.length; i++){
+				if(('#' + mainSections[i].id) == target){
+					scrollTop = mainSections[i].offsetTop;
+				}
+			}
+
+			console.log(scrollTop);
+
+			$('html, body').animate({
+					scrollTop
+			}, 300, 'swing', function() {
+					location.hash = target; //attach the hash (#jumptarget) to the pageurl
+			});
+
+			return false;
+	});
+});
+
+
+$('html, body').scroll(function() {
+	var mainSections = document.querySelectorAll("section");
+
+	var scrollPos = $('body').scrollTop();
+	var reach = window.innerHeight/4;
+	console.log(reach);
+	//console.log(scrollPos);
+	console.log("------");
+	var currentRange;
+
+	for(var i=0; i<mainSections.length; i++){
+		currentRange = scrollPos -  mainSections[i].offsetTop;
+		console.log(currentRange);
+		var activeLinkHref = "#"+ mainSections[i].id;
+		if( (scrollPos -  mainSections[i].offsetTop) <= reach && (scrollPos -  mainSections[i].offsetTop) > -reach ){
+			console.log(mainSections[i].id + " in range");
+			$("a[href='"+activeLinkHref+"']").addClass("active");
+		}else{
+			$("a[href='"+activeLinkHref+"']").removeClass("active");
+		}
+	}
+
+}).scroll();
+
+
+
+
+
+
+/*
+let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainSections = document.querySelectorAll("section");
+
+let lastId;
+let cur = [];
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+$(document).scroll(function() {
+
+	console.log("scrolling");
+	let fromTop = window.scrollY;
+
+	mainNavLinks.forEach(link => {
+	let section = document.querySelector(link.hash);
+
+	if (
+		section.offsetTop <= fromTop &&
+		section.offsetTop + section.offsetHeight > fromTop
+	) {
+		link.classList.add("active");
+	} else {
+		link.classList.remove("active");
+	}
+	});
+});
+
+*/
+/*
+
+jQuery(document).ready(function(jQuery) {            
+	var topMenu = jQuery("#menu"),
+		offset = 40,
+		topMenuHeight = topMenu.outerHeight()+offset,
+		// All list items
+		menuItems =  topMenu.find('a[href*="#"]'),
+		// Anchors corresponding to menu items
+		scrollItems = menuItems.map(function(){
+		  var href = jQuery(this).attr("href"),
+		  id = href.substring(href.indexOf('#')),
+		  item = jQuery(id);
+		  console.log(id);
+		  console.log(item);
+		  console.log(href);
+		  if (item.length) { return item; }
+		});
+
+	// so we can get a fancy scroll animation
+	menuItems.click(function(e){
+		console.log("Clicked item") + jQuery(this).attr("href");
+	  var href = jQuery(this).attr("href"),
+		id = href.substring(href.indexOf('#'));
+		  offsetTop = href === "#" ? 0 : jQuery(id).offset().top-topMenuHeight+1;
+	  jQuery('html, body').stop().animate({ 
+		  scrollTop: offsetTop
+	  }, 300);
+	  e.preventDefault();
+	});
+
+	// Bind to scroll
+	jQuery(window).scroll(function(){
+	   // Get container scroll position
+	   var fromTop = jQuery(this).scrollTop()+topMenuHeight;
+
+	   // Get id of current scroll item
+	   var cur = scrollItems.map(function(){
+		 if (jQuery(this).offset().top < fromTop)
+		   return this;
+	   });
+
+	   // Get the id of the current element
+	   cur = cur[cur.length-1];
+	   var id = cur && cur.length ? cur[0].id : "";               
+	   
+	   menuItems.parent().removeClass("active");
+	   if(id){
+			menuItems.parent().end().filter("[href*='#"+id+"']").parent().addClass("active");
+	   }
+	   
+	})
+})
+
+
+
+*/
+
+/*
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+		$target = $(target);
+		
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#menu a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#menu ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+*/
+/*
+
 $(document).ready(function () {
 
 	$(document).on("scroll", onScroll);
@@ -85,6 +281,8 @@ $(document).ready(function () {
     
 });
 
+
+
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
     $('#menu a').each(function () {
@@ -102,7 +300,7 @@ function onScroll(event){
 
 
 
-
+*/
 
 
 
@@ -251,7 +449,7 @@ $(document).on("scroll", function () {
 
 /*http://jsfiddle.net/eLwex993/5/*/
 
-
+/*
 $(window).on("load",function() {
 
    function fade(pageLoad) {
@@ -287,7 +485,7 @@ $(window).on("load",function() {
 	   fade(false);
    }); 
 });
-
+*/
 
 
 /*
