@@ -23,6 +23,7 @@ a{
     -webkit-text-decoration-color: #C0C0C0; /* Safari */  
       text-decoration-color: #C0C0C0;
       cursor: pointer;
+    
 }
 
 body{ 
@@ -45,7 +46,7 @@ body {
 
 a:hover{
     transition: all 0.2s;
-    filter: brightness(200%);
+    filter: brightness(150%);
 }
 
 #location{
@@ -92,7 +93,7 @@ h2{
 }
 
 p,li,div{
-    font-weight: lighter;
+    font-weight: 300;
     font-size: 1rem;
 }
 
@@ -166,13 +167,6 @@ section{
     align-items: center;
 }
 
-.active{
-    opacity: 1 !important;
-    font-size: 1.5rem;
-    font-weight: 700;
-    pointer-events: none;
-}
-
 .emoji-ani {
     position: relative;
     top: 0;
@@ -218,6 +212,13 @@ section{
 
 .snapping{
     scroll-snap-align: start;
+}
+
+.active{
+    opacity: 1 !important;
+    font-size: 1.25rem;
+    font-weight: 500;
+    pointer-events: none;
 }
 
 .is-hidden {
@@ -272,14 +273,16 @@ section{
         bottom: 0;
         right: 0;
         height: 300px;
+        width: 80px;
 
-        padding: 20px;
+        padding: 10px;
         overflow: hidden;
     
         display: block;
 
         background-color: white;
         border-radius: 5px;
+
     }
 
     nav li {
@@ -304,23 +307,32 @@ section{
         pointer-events: none;
     }
 
-    .section_content{    
+    section{
         padding:0;
         margin:0;
-        padding: 20px;
-        margin: 0 auto;
-        width: 100vw;
+    }
+
+    
+    .section_content{    
+        padding:10px;
+        padding-left: 10vw;   
     }
 
     .is-hidden {
         transform: translateY(20px);
         transform: translateX(100px);
         overflow: hidden;
+        -webkit-box-shadow: 0px 0px 20px -1px rgba(247,247,247,0.1);
+        -moz-box-shadow: 0px 0px 20px -1px rgba(247,247,247,0.1);
+        box-shadow: 0px 0px 20px -1px rgba(247,247,247,0.1);
     }
     .is-visible {
         transform: translateY(0);
-        transform: translateY(0);
+        transform: translateX(0);
         overflow: hidden;
+        -webkit-box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
+        -moz-box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
+        box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
     }
 
     /*

@@ -83,12 +83,12 @@ $( 'body' ).scroll(function(e) {
 	debounce(checkPosition);
 });
 
-var ticker=0;
+var ticker = 0;
 
 function checkPosition(speedInpxPerMs){
 
 	const nav = document.querySelector('nav');
-	if (speedInpxPerMs < -2 || speedInpxPerMs > 2) {
+	if (speedInpxPerMs < - 1 || speedInpxPerMs > 1) {
 		nav.classList.add('is-visible');
 		nav.classList.remove('is-hidden');
 		ticker++;
@@ -96,12 +96,12 @@ function checkPosition(speedInpxPerMs){
 		setTimeout(function() {   //calls click event after a certain time
 			removeNav();
 		}, 2000);
+		ticker = 0;
 	}
 
 	function removeNav(){
 		nav.classList.add('is-hidden');
 		nav.classList.remove('is-visible');
-		ticker = 0;
 	}
 
 	
