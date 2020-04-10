@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html id="page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>H.M. Kristiansen | hinken</title>
+    
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+       
+    <script src="script/jquery-3.4.1.min.js"></script>
+    <style>
+    	
+    	/*
+    	@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+    	@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+		
+		@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;800&display=swap');*/
+		
+		@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+    	html{
+    		width: 100%;
+    		height: 100%;
+    		/*background-color: #fcfcfc;*/
+    		background-color: #f7f7f7;
+    		color: #252b33;
+    		font-size: 12px;
+			transition: all 0.2s;
+    	}
+    	
+    	a{
+    		color: #252b33;
+    		text-decoration: underline;
+    		/*border-bottom: 2px solid #4e5861;*/
+    		transition: all 0.2s;
+			-webkit-text-decoration-color: #C0C0C0; /* Safari */  
+  			text-decoration-color: #C0C0C0;
+    	}
+
+		#location{
+			text-decoration: none !important;
+		}
+    	
+    	body{
+    		/*width: 40%;*/
+    		max-width: 600px;
+    		/*font-family: 'Barlow Condensed', sans-serif;*/
+			/*font-family: 'Anonymous Pro', monospace;*/
+			font-family: 'Roboto Mono', monospace;
+			font-weight: 300;
+    		padding-left: 10%;
+			padding-right: 10%;
+    		padding-top: 5%;
+    		padding-bottom: 15%;
+    		font-size: 1.3rem;
+    		
+    		animation: fadeInPage ease 1s; 
+    		animation-iteration-count: 1; 
+    		animation-fill-mode: forwards;
+  	    }
+  	    
+  	    
+		@keyframes fadeInPage { 
+    		0% { 
+        		opacity: 0;
+        		transform: translateY(20px); 
+    		}40%{
+    			opacity: 0; 
+    			transform: translateY(20px); 
+    		} 
+    		100% {
+    			transform: translateY(0px); 
+        		opacity: 1; 
+     		} 
+		} 
+    	
+    	section, footer{
+    		width: 100%;
+    		clear: both;
+    		padding-bottom: 40px;
+    	}
+    	
+    	.greeting h1{
+    		font-family: 'Inter', sans-serif;
+			/*font-family: 'Roboto Slab', serif;*/
+			font-weight: 500;
+    		font-size: 2.5rem;
+    	}
+    	
+    	ul{
+    		list-style-type: none;
+  			margin: 0;
+  			padding: 0;
+    	}
+    	
+    	li{
+    		margin-bottom: 5px;
+    	}
+
+    	.column {
+			float:left;
+ 			width: 50%;
+ 			height: 100%;
+ 			padding: 0;
+ 			margin: 0;
+		}
+		
+		.column .li_header{
+			font-weight: 700;
+		}
+
+		.row{
+			padding:0;
+			margin:0;
+			height: 100%;
+			width: 100%;
+			
+			text-transform: uppercase;
+		}
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		} 
+		
+		.footer ul li{
+			display: inline;
+			margin-right: 10px;
+			font-size: 1rem;
+			
+		}
+		
+		
+		#previous ul, #mode ul{
+		
+			/*background-color: red;*/
+			margin-left: 40%;
+		}
+		
+		a:hover{
+			transition: all 0.2s;
+			filter: brightness(200%);
+		}
+
+		/*Color Modes*/		
+		.goDark{
+    		color: #fcfcfc;
+    		/*background-color: #141414;*/
+    		background-color: black;
+		}
+		.goDark a{
+			color: #fcfcfc;
+		}
+		.goDark a:hover{
+			transition: all 0.2s;
+			filter: brightness(50%);
+		}
+
+		.goContrast{
+			background-color: red;
+			color: blue;
+		}
+		
+		.goContrast body, .goContrast h1{
+			font-family: 'Gloria Hallelujah', cursive;
+		}
+
+		.goContrast a{
+			color: blue;
+			-webkit-text-decoration-color: blue; /* Safari */  
+  			text-decoration-color: yellow;
+		}
+		.goContrast a:hover{
+			transition: all 0.2s;
+			filter: brightness(50%);
+		}
+
+		.currentTheme{
+			text-decoration: none;
+			pointer-events: none;
+		}
+		/*
+		.currentTheme:hover{
+			filter: none;
+		}*/
+
+		@media only screen and (max-width: 550px) {
+			html{
+				font-size: 11px;
+			}
+  			body {
+    			padding: 5%;
+  			}
+
+			#previous ul, #mode ul{
+				/*background-color: red;*/
+				margin-left: 20%;
+			}
+		}
+
+		@media only screen and (max-width: 400px) {
+			
+			html{
+				font-size: 10px;
+			}
+			
+			body{
+				font-size: 1.5rem;
+			}
+			
+			.column{
+				width: 100%;
+				margin-bottom: 10px ;			
+			}
+			#previous ul, #mode ul{
+				/*background-color: red;*/
+				margin: 0;
+				padding: 0;
+			}
+			.footer ul li{
+				display: inline;
+				margin-right: 10px;
+				font-size: 1.5rem;
+			}
+		}		   	
+    </style>
+</head>
+
+<body>
+	
+    <header></header>
+    
+	<section class="greeting">
+		<h1>Life is a timeline of problems.</h1>
+		<h1>Day-to-day decisions are sources of stress and anxiety.</h1>
+		<h1>I aim to create solutions that make daily issues less draining.<h1>
+		<h1>Whether it is 
+			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">buying 2nd hand cars safely</a>, 
+			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">tracking family expences</a>, 
+			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">helping kids with anxiety around school</a>, or 
+			<a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" traget="_blank">making sustainable shopping simpler</a>.
+		<h1>
+		<h1>-</h1>
+		<h1>I'm also unreasonably enthusiastic about beagles.</h1>
+	</section>
+		
+	<section class="bio">
+		
+		<div>
+			<div id="age"></div>
+			<div id="dead"></div>
+			<div ><a id="location" href="https://www.google.com/search?sxsrf=ALeKk03TiEpXeV0y2tWUjZveuUO78a7f0g%3A1585151572007&source=hp&ei=U357XpvQO4OJlwSG2LaoAQ&q=38.703321%2C+-9.179565&oq=38.703321%2C+-9.179565&gs_l=psy-ab.3...397.397..927...1.0..0.69.69.1......0....2j1..gws-wiz.QGB--Smm6-0&ved=0ahUKEwjbxfPi_bXoAhWDxIUKHQasDRUQ4dUDCAU&uact=5" target="_blank">📍 : 38.703321, -9.179565</a></div>
+			<div id="interest">👍 : 🐶☕️🍂<br>👎 : 🐱🥵🍓</div>
+		</div>
+	</section>
+	
+	<section class="cv">
+		<div class="row">	
+			<div class="column" id="currently">
+				<ul>
+					<li class="li_header">Currently<li>
+					<li>
+						Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, doing a MS.c in Industrial Design from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a>.
+					</li>
+					<li>
+						Upcoming summer intern at <a href="https://www.iterate.no/" target="_blank">Iterate</a>  
+					</li>
+				
+				</ul>
+			</div>
+			<div class="column" id="previous">
+				<ul>
+					<li class="li_header">Previous</li>
+					<li><a href="https://www.itera.no/en/" target="_blank">Itera - summer intern</li>
+					<li><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</li>
+					<li><a href="https://www.samfundet.no" target="_blank">Studentersamfundet</li>
+				<ul>
+			</div>
+		</div>
+	</section>
+	
+	<section class="footer">
+		<div class="row">
+			<div class="column" id="links">
+				<ul>
+					<li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">instagram</a></li>
+					<li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedIn</a></li>
+					<li><a href="mailto:hei@hinken.no" target="_blank">hei@hinken.no</a></li>
+					<li><a href="new.html" target="_blank">new</a></li>
+				</ul>
+			</div>
+			<div class="column" id="mode">
+				<ul>
+					<li><a href="#" onclick="changeTheme();return false;" id="goLight" class="">light</a></li>
+					<li><a href="#" onclick="changeTheme();return false;" id="goDark" class="">dark</a></li>
+					<li><a href="#" onclick="changeTheme();return false;" id="goContrast" class="">bad</a></li>
+				</ul>
+			</div>	
+		</div>
+	</section>
+	
+		
+	<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script> 
+	<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+	
+	<script>
+	
+		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			document.getElementById('goDark').setAttribute("class", "currentTheme");
+		}else{
+			document.getElementById('goLight').setAttribute("class", "currentTheme");
+		}
+	
+		
+
+		var bday = new Date("Nov 19, 1996 05:55:25").getTime();
+		var dday = new Date("Nov 19, 2077 12:00:00").getTime();
+		
+		var update = setInterval(function() {
+		  var now = new Date().getTime(); 
+		  var diffTime1 = Math.abs(now - bday);
+		  var diffTime2 = Math.abs(dday - now);
+		  document.getElementById("age").innerHTML ="👶 : " + (diffTime1/31557600000);
+		  //document.getElementById("dead").innerHTML ="💀 : " + (diffTime2/31557600000);
+		}, 10);
+
+		function changeTheme(){
+			var target = event.target || event.srcElement;
+			var id = target.id;
+			document.getElementById('page').setAttribute("class", "");
+			document.getElementById('page').setAttribute("class", id);
+
+			document.getElementById('goLight').classList.remove("currentTheme");
+			document.getElementById('goDark').classList.remove("currentTheme");
+			document.getElementById('goContrast').classList.remove("currentTheme");
+
+			document.getElementById(id).setAttribute("class", "currentTheme");
+		}	      
+	</script>
+	
+	<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script> 
+	<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+</body>
+
+</html>

@@ -192,7 +192,7 @@ section{
     top:-150px;
     left:150px;
     transform: rotate(-20deg);
-    background-image: url('me.JPG');
+    /*background-image: url('me.JPG');*/
     background-size: 200px 234px;
     display: inline-block;
     width: 200px; 
