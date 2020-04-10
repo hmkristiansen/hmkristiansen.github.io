@@ -1,0 +1,29 @@
+.darkmode {
+  -webkit-transition-duration: 0.8s;
+  background-color: black;
+}
+
+.darkmode p {
+  color: dimgray;
+}
+
+.darkmode h1 {
+  color: dimgray;
+}
+
+.darkmode h3 {
+  color: gray;
+}
+
+.darkmode header {
+  background-color: black;
+}
+
+.darkmode .arrow-icon {
+  background-color: black;
+}
+
+.darkmode u {
+  color: dimgray;
+}
+/*# sourceMappingURL=dark.css.map */

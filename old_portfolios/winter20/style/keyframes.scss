@@ -1,0 +1,63 @@
+//for waving hand
+@keyframes shake {
+    0% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+}
+
+@keyframes dance{    
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.pulsate {
+    animation: pulsate 3s ease-out;
+    animation-iteration-count: infinite; 
+    opacity: 0.6;
+}
+
+@keyframes pulsate {
+    0% { 
+        opacity: 0.6;
+        
+    }
+    50% { 
+        opacity: 1;
+        
+    }
+    100% { 
+        opacity: 0.6;
+        
+    }
+}
+
+@keyframes spin { 
+    0%{
+      transform: rotate(0deg) scale(1);
+      opacity: 0.3;
+      
+    }50%{
+      transform: rotate(360deg) scale(1.8);
+      opacity: 1;
+    }67%{
+      transform: rotate(50deg) scale(1);
+      opacity: 0.5;
+    }
+    80%{
+      transform: rotate(10deg) scale(1.1);
+      opacity: 0.5;
+    }
+    90%{
+      transform: rotate(5deg) scale(0.9);
+      opacity: 0.3;
+    }
+    95%{
+      transform: rotate(2deg) scale(1.05);
+      opacity: 0.3;
+    }
+    100%{
+      transform: rotate(0deg) scale(1);
+      opacity: 0.3;
+    }
+}

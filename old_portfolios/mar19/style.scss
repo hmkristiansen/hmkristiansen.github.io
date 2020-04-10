@@ -1,0 +1,195 @@
+
+*{
+    a{
+        text-decoration: none;
+    }
+}
+
+html{
+    font-family: Kefa, 'Times New Roman', Times, serif;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #f8f8f8;
+    color: black;
+    transition: 0.3 all;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: 100px;
+    color: black;
+    opacity: .6;
+}
+
+.gradient{
+    background: linear-gradient(-60deg, rgba(91, 209, 215, 0.5), rgba(248, 131, 121, 0.5), #f8f8f8, aliceblue);
+    background-size: 400% 400%;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: none;
+    overflow: visible;
+    overflow-x: hidden;
+    -webkit-animation: Gradient 30s ease infinite;
+    animation: Gradient 30s ease infinite;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+}
+
+.greeting{
+    margin: 0;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    //transform: translateY(-50%) ;
+    transition: all 0.3s;
+
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    
+
+    .logo{
+        font-size: 100px;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.2s;
+        #sub1{
+            transition: all 0.2s ease-in-out;
+        }
+        #sub2{
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    .menu{
+        align-content: center;
+        margin: 0 auto;
+        text-align: center;
+        display: inline;
+        z-index: 100;
+        a{
+            padding: 20px;
+            font-size: 25px;
+            font-weight: 200;
+            opacity: 0.5;
+            transition: all 0.3s;
+            color: black;
+        }
+        a:hover{
+            opacity: 1;
+        }
+    }
+    .show{
+        opacity: 1;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .hide{
+        opacity: 0;
+        cursor: default;
+        z-index: -100;
+        transition: all 0.3s;
+    }
+    .logo.ani{
+        transition: all 0.2s ease-in-out;
+        transform: translateX(100px);
+        #sub1{
+            color: coral;
+        }
+        #sub2{
+            color: black;
+            opacity: 0;   
+        }
+    }
+}
+
+.content_super{
+    display: none;
+    position: absolute;
+    top:100vh;
+    width: 100%;
+}
+
+.disp{
+    display: inline;
+}
+
+.content{
+    transition: all 0.3s;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#about{
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    img{
+        max-width: 300px;
+    }
+    p{
+        max-width: 300px;
+    }
+}
+
+
+
+#contact{
+}
+
+.whitespace{
+    height: 100px;
+}
+
+.grid-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". .";
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+  }
+
+@-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    
+  }
