@@ -71,6 +71,7 @@ function createAnchorLinks(){
 		}, 300, 'swing', function() {
 			//location.hash = target; //attach the hash (#jumptarget) to the pageurl
 		});
+		removeNav();
 		return false;
 	});
 
