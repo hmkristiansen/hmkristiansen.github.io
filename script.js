@@ -2,7 +2,7 @@
 // const scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
 
 // Global variables
-var browser; // 1 = Chrome, 2 = Safari
+var browser; // 1 = Chromium, 2 = Webkit
 var isMobile = false;
 
 /* Page startup and variable events */
@@ -15,6 +15,7 @@ $(document).ready(function() {
 
 	$(window).resize(function() {
 		updateContainer();
+		reloadPageOnResize();
 	});
 
 	if(isMobile){
@@ -24,15 +25,11 @@ $(document).ready(function() {
 });
 
 $('html, body').scroll(function(e) {
-
 	updateAnchors(e);
-
 	if(isMobile){
 		useScrollSpeed(e);
 	}
-	
 }).scroll();
-
 
 /* Supporting Functions */
 
@@ -51,11 +48,13 @@ function startup(){
 			browser = 2;
 		}
 	}
+
 }
 
 /* - - - */ 
 
 function createAnchorLinks(){
+
 	var mainSections = document.querySelectorAll("section");
 	$('a[href*="#"]').bind('click', function(e) {
 		e.preventDefault(); 
@@ -70,10 +69,11 @@ function createAnchorLinks(){
 		$('html, body').animate({
 				scrollTop
 		}, 300, 'swing', function() {
-				//location.hash = target; //attach the hash (#jumptarget) to the pageurl
+			//location.hash = target; //attach the hash (#jumptarget) to the pageurl
 		});
 		return false;
 	});
+
 }
 
 /* - - - */ 
@@ -81,7 +81,6 @@ function createAnchorLinks(){
 function updateAnchors(e){
 
 	var mainSections = document.querySelectorAll("section");
-
 	var scrollPos = $('body').scrollTop();
 	var reach = window.innerHeight/4;
 	var currentRange;
@@ -97,19 +96,29 @@ function updateAnchors(e){
 			$("a[href='"+activeLinkHref+"']").removeClass("active");
 		}
 	}
+
 }
 
 /* - - - */ 
 
 function updateContainer() {
+
 	var $width = $(window).width();
-	console.log()
     if ($width <= 800) {
-        isMobile = true;
-    }
-    if ($width > 800) {
+		isMobile = true;
+    }else {
         isMobile = false;
 	}
+
+}
+
+var resizeId;
+function reloadPageOnResize(){
+	clearTimeout(resizeId);
+    resizeId = setTimeout(doneResizing, 500);
+}
+function doneResizing(){
+	location.reload();
 }
 
 /* - - - */ 
@@ -123,7 +132,6 @@ function useScrollSpeed(e){
 	var delayInMs = e.timeStamp - lastDate;
 	var offset = e.target.scrollTop - lastOffset;
 	var speedInpxPerMs = offset / delayInMs;
-	//console.log(speedInpxPerMs);
 
 	lastDate = e.timeStamp;
 	lastOffset = e.target.scrollTop;
@@ -134,18 +142,21 @@ function useScrollSpeed(e){
 }
 
 function checkPosition(speedInpxPerMs){
+
 	const nav = document.querySelector('nav');
 	if (speedInpxPerMs < - 1 || speedInpxPerMs > 1) {
 		nav.classList.add('is-visible');
 		nav.classList.remove('is-hidden');
 		ticker++;
-	} else if(ticker > 10){
+	} else if(ticker > 5){
 		removeNav();
 		ticker = 0;
 	}
+	
 }
 
 function debounce(func, wait = 10, immediate = true) {
+	
 	let timeout;
 	return function() {
 	  let context = this, args = arguments;
@@ -158,29 +169,15 @@ function debounce(func, wait = 10, immediate = true) {
 	  timeout = setTimeout(later, wait);
 	  if (callNow) func.apply(context, args);
 	};
+
 };
 
 /* - - - */ 
 
 function removeNav(){
 	const nav = document.querySelector('nav');
-	setTimeout(function() {   //calls click event after a certain time
+	setTimeout(function() { 
 		nav.classList.add('is-hidden');
 		nav.classList.remove('is-visible');
 	}, 1000);
 }
-
-
-/*
-$('body').scroll(function(e) {
-    var delayInMs = e.timeStamp - lastDate;
-    var offset = e.target.scrollTop - lastOffset;
-    var speedInpxPerMs = offset / delayInMs;
-	//console.log(speedInpxPerMs);
-
-    lastDate = e.timeStamp;
-	lastOffset = e.target.scrollTop;
-	
-	checkPosition(speedInpxPerMs);
-	debounce(checkPosition);
-});*/
