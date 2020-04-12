@@ -287,6 +287,52 @@ section{
 } 
 */
 
+/*Color Modes*/	
+
+.goDark{
+    color: #fcfcfc;
+    /*background-color: #141414;*/
+    background-color: black;
+}
+.goDark a{
+    color: #fcfcfc;
+}
+.goDark a:hover{
+    transition: all 0.2s;
+    filter: brightness(50%);
+}
+
+.goDark nav{
+    background-color: rgb(54, 54, 54);
+    -webkit-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
+    box-shadow: 0px 0px 20px -1px rgb(22, 22, 22, 0.5);
+}
+
+.goContrast{
+    background-color: red;
+    color: blue;
+}
+
+.goContrast body, .goContrast h1{
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.goContrast a{
+    color: blue;
+    -webkit-text-decoration-color: yellow;
+    text-decoration-color: yellow;
+}
+.goContrast a:hover{
+    transition: all 0.2s;
+    filter: brightness(50%);
+}
+
+.currentTheme{
+    text-decoration: none;
+    pointer-events: none;
+}
+
 /* - - - - - -  RESPONSIVITY- - - - - - -*/
 
 @media only screen and (max-width: 800px) {
@@ -501,3 +547,4 @@ section{
 
 }
 */
+
