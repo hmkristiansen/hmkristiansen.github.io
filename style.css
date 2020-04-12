@@ -49,6 +49,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+::selection {
+    background-color: #f88379;
+    color: white;
+}
+
 
 a:hover{
     transition: all 0.2s;
