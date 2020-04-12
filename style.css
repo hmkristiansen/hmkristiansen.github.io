@@ -305,39 +305,45 @@ section{
 
     nav{
         position: absolute;
-        top: unset;
-        left: unset;
-        bottom: 0;
-        left: 0;
+        
+        top: -10px;
+        left:0;
         height: 60px;
-        width: 100vw;
+        width: 100%;
 
-        padding: 10px;
-        overflow: hidden;
+        /*padding: 10px;*/
+        padding-top: 15px;
+        padding-bottom: 10px;
+        /*overflow: hidden;*/
+        overflow-y: hidden;
+        overflow-x: scroll;
     
-        display: block;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+    }
 
-        background-color: white;
-        border-radius: 5px;
+    nav::-webkit-scrollbar {
+        display: none;
     }
 
     #menu{
         overflow-x: scroll;
+        overflow-y: hidden;
+        width: 250vw;
+        padding-left: 5vw;
     }
 
     nav li {
         margin: 0 auto;
-        margin: 0px;
+        margin: 0;
         float: left;
         align-items: center;
         display: inline-block;
     }
       
     nav li a {
-        /*display: block;*/
-        /*text-align: right;*/
-        
-        /*padding: 16px;*/
+        margin: 0;
+        padding: 0;
         text-decoration: none;
     }
 
@@ -369,7 +375,7 @@ section{
     }
 
     .is-hidden {
-        transform: translateY(100px) !important;
+        transform: translateY(-100px) !important;
         transform: translateX(0);
         /*overflow: hidden;*/
         -webkit-box-shadow: 0px 0px 20px -1px rgba(247,247,247,0.1);
@@ -411,6 +417,25 @@ section{
         width: 100%;
         max-width: 300px;
         /* background-color: whitesmoke; */
+    }
+
+    nav{
+        position: absolute;
+        
+        top: -10px;
+        left:0;
+        height: 40px;
+        width: 100%;
+
+        /*padding: 10px;*/
+        padding-top: 5px;
+        padding-bottom: 10px;
+        /*overflow: hidden;*/
+        overflow-y: hidden;
+        overflow-x: scroll;
+    
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
     }
 }
 
