@@ -173,7 +173,7 @@ function useScrollSpeed(e){
 
 function checkPosition(speedInpxPerMs){
 
-	console.log(speedInpxPerMs);
+	//console.log(speedInpxPerMs);
 
 	const nav = document.querySelector('nav');
 	if (speedInpxPerMs < 0) {
