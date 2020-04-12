@@ -53,6 +53,11 @@ body::-webkit-scrollbar {
 a:hover{
     transition: all 0.2s;
     filter: brightness(150%);
+    cursor: ne-resize;
+}
+
+nav a:hover{
+    cursor: pointer;
 }
 
 
