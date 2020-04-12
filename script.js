@@ -180,11 +180,9 @@ function checkPosition(speedInpxPerMs){
 		nav.classList.add('is-visible');
 		nav.classList.remove('is-hidden');
 		ticker++;
-	} /*else if(ticker > 15){
+	}else if(ticker > 10){
 		removeNav();
 		ticker = 0;
-	}*/else{
-		removeNav();
 	}
 	
 }
