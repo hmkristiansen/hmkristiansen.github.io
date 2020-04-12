@@ -313,7 +313,7 @@ section{
 
         /*padding: 10px;*/
         padding-top: 15px;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
         /*overflow: hidden;*/
         overflow-y: hidden;
         overflow-x: scroll;
@@ -331,19 +331,21 @@ section{
         overflow-y: hidden;
         width: 250vw;
         padding-left: 5vw;
+        padding-top: 20px;
     }
 
-    nav li {
+    #menu li {
         margin: 0 auto;
         margin: 0;
         float: left;
+        
         align-items: center;
         display: inline-block;
     }
       
-    nav li a {
+    #menu li a {
         margin: 0;
-        padding: 0;
+        padding: 10px;
         text-decoration: none;
     }
 
