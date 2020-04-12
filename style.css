@@ -123,7 +123,7 @@ nav{
     top: 0;
     left: 0;
     height: 100vh;
-    width: 20vw;
+    width: 25vw;
     font-family: 'Inter', sans-serif;
     text-align: right;
 
@@ -151,7 +151,7 @@ section{
     padding:0;
     margin:0;
     padding: 10%;
-    padding-left: 25vw;
+    padding-left: 30vw;
     padding-right: 10vw;
 }
 
@@ -161,7 +161,7 @@ section{
 .section_content ul,
 .section_content p{
     width: 100vw;
-    max-width: 400px;
+    max-width: 450px;
     /*background-color: whitesmoke;*/
 }
 
@@ -179,6 +179,7 @@ section{
 
 #menu{
     margin: 0;
+    padding: 10px;
 }
 
 #menu ul{
@@ -200,30 +201,6 @@ section{
     display: inline-block;
 }
 
-#greeting{
-    /*margin-top: 60px;*/
-    /*position: relative;*/
-    /*cursor: pointer;*/
-}
-
-#greeting:hover #scrollEmoji{
-    top:5px;
-}
-
-
-#greeting::after{
-    visibility: hidden;
-    position: absolute;
-    top:-150px;
-    left:150px;
-    transform: rotate(-20deg);
-    /*background-image: url('me.JPG');*/
-    background-size: 200px 234px;
-    display: inline-block;
-    width: 200px; 
-    height: 234px;
-    content:"";
-}
 
 /* - - - - - - - -*/
 
@@ -347,7 +324,7 @@ section{
 
 @media only screen and (max-width: 800px) {
     html{
-        font-size: 14px;
+        font-size: 18px;
         height: 100%;
         width: 100%;
         overflow: hidden;
@@ -402,7 +379,9 @@ section{
     #menu li a {
         margin: 0;
         padding: 10px;
+        padding-right: 35px;
         text-decoration: none;
+        font-size: 1rem;
     }
 
     .active{
@@ -418,7 +397,7 @@ section{
     }
 
     .section_content{    
-        padding:10px;
+        padding:20px;
         padding-left: 10vw;   
     }
 

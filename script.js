@@ -173,14 +173,18 @@ function useScrollSpeed(e){
 
 function checkPosition(speedInpxPerMs){
 
+	console.log(speedInpxPerMs);
+
 	const nav = document.querySelector('nav');
-	if (speedInpxPerMs < - 1 || speedInpxPerMs > 1) {
+	if (speedInpxPerMs < 0) {
 		nav.classList.add('is-visible');
 		nav.classList.remove('is-hidden');
 		ticker++;
-	} else if(ticker > 15){
+	} /*else if(ticker > 15){
 		removeNav();
 		ticker = 0;
+	}*/else{
+		removeNav();
 	}
 	
 }
