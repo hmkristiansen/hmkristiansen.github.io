@@ -8,7 +8,6 @@ html{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    /*background-color: #f7f7f7;*/
     background-color: white;
     color: #252b33;
     transition: all 0.2;
@@ -37,12 +36,6 @@ body{
     overflow-y: hidden;
 
     -ms-overflow-style: none;
-    
-    /*
-    animation: fadeInPage ease 0.4s; 
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards;
-    */ 
 }
 
 body{ 
@@ -71,30 +64,12 @@ a:hover{
     cursor: ne-resize;
 }
 
-nav a:hover{
-    cursor: pointer;
-}
-
-
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-section li{
-    margin: 8px;
-    margin-left: 0;
-}
-
-#menu li a{
-    opacity: 0.2;
-    text-decoration: none;
-}
-
-#menu li a:hover{
-    opacity: 1;
-}
 
 /* - - - - - - - - */
 
@@ -111,8 +86,6 @@ h2{
     font-weight: bold;
     padding: 0;
     margin: 0;
-    /*margin-bottom: 12px;*/
-    
     padding-top: 10px;
     padding-bottom: 0px;
     margin-bottom: 10px;
@@ -148,15 +121,42 @@ nav{
 
 nav::after {
     content: '';
-    height: 50vh; /*You can change this if you want smaller/bigger borders*/
+    height: 50vh; 
     width: 1px;
-  
     position: absolute;
     right: 0;
-    top: 25vh; /*If you want to set a smaller height and center it, change this value*/
-  
-    background-color: #ececec; /*The color of your border*/
+    top: 25vh; 
+    background-color: #ececec; 
 }
+
+#menu li a{
+    opacity: 0.2;
+    text-decoration: none;
+}
+
+#menu li a:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+#menu{
+    margin: 0;
+    padding: 10px;
+    padding-right: 25px;
+}
+
+#menu ul{
+    display: flex;
+    list-style: none; margin: 0; padding: 0;
+}
+
+#menu li{
+    margin: 20px;
+    height: 25px;
+    align-items: center;
+}
+
+/* - - - - - - - */
 
 section{
     position: relative;
@@ -178,6 +178,11 @@ section{
     padding-right: 10vw;
 }
 
+section li{
+    margin: 8px;
+    margin-left: 0;
+}
+
 .section_content div,
 .section_content h1,
 .section_content h2,
@@ -185,8 +190,9 @@ section{
 .section_content p{
     width: 100vw;
     max-width: 450px;
-    /*background-color: whitesmoke;*/
 }
+
+/* - - - - - - */
 
 .settings{
     position: absolute;
@@ -236,36 +242,6 @@ section{
     opacity: 1;
 }
 
-
-/*- - - - -- - */
-
-#logo{
-    font-weight: 500;
-    font-size: 1.25rem;
-    text-align: right;
-    margin: 20px;
-    padding: 0;
-    margin-bottom: 0;
-    cursor: default;
-}
-
-#menu{
-    margin: 0;
-    padding: 10px;
-    padding-right: 25px;
-}
-
-#menu ul{
-    display: flex;
-    list-style: none; margin: 0; padding: 0;
-}
-
-#menu li{
-    margin: 20px;
-    height: 25px;
-    align-items: center;
-}
-
 .emoji-ani {
     position: relative;
     top: 0;
@@ -295,49 +271,11 @@ section{
     pointer-events: none;
 }
 
-.tempRemove{
-    display: none;
-}
-
-.mobile_nav{
-
-}
-
-.is-hidden {
-	
-}
-.is-visible {
-
-}
-
-
-/* - - EXTRA STUFF- - - */
-.column {
-    float: left;
-    width: 200px;
-    margin: 20px;
-    height: 100px;
-    background-color: red;
-}
-
-.row{
-    background-color: khaki;
-    max-width: 100%;
-    z-index: 100;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 
 /*Color Modes*/	
 
 .goDark{
     color: #fcfcfc;
-    /*background-color: #141414;*/
     background-color: black;
 }
 .goDark a{
@@ -346,10 +284,6 @@ section{
 .goDark a:hover{
     transition: all 0.2s;
     filter: brightness(50%);
-}
-
-.goDark nav{
-
 }
 
 .goDark nav::after{
@@ -409,17 +343,11 @@ section{
     }
 
     nav{
-        position: absolute;
-        
+        position: absolute; 
         top: 0px;
         left:0;
         height: 40px;
         width: 100%;
-
-        /*padding: 10px;/*
-        /*padding-top: 15px;
-        padding-bottom: 15px;*/
-        /*overflow: hidden;*/
         overflow-y: hidden;
         overflow-x: scroll;
         padding: 10px;
@@ -441,7 +369,6 @@ section{
         width: 250vw;
         padding: 0;
         padding-left: 5vw;
-        /*padding-top: 20px;*/
     }
 
     #menu li {
@@ -454,7 +381,6 @@ section{
       
     #menu li a {
         margin: 0;
-        /*padding: 10px;*/
         padding-right: 35px;
         text-decoration: none;
         font-size: 0.75rem;
@@ -484,49 +410,23 @@ section{
     .section_content p{
         width: 100% !important;
         max-width: 400px;
-        /*background-color: whitesmoke;*/
     }
 
     .is-hidden {
         transform: translateY(-100px) !important;
-        /*overflow: hidden;*/
-        /*
-        -webkit-box-shadow: 0px 0px 20px -1px rgba(247,247,247,0.1);
-        -moz-box-shadow: 0px 0px 20px -1px rgba(247,247,247,0.1);
-        box-shadow: 0px 0px 20px -1px rgba(247,247,247,0.1);*/
     }
     .is-visible {
         transform: translateY(0px) !important;
-        /*overflow: hidden;*/
-        /*
-        -webkit-box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
-        -moz-box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
-        box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);*/
     }
 
-    .mobile_nav{
-        /*
-        -webkit-box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
-        -moz-box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
-        box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);*/
-    }
     .goDark nav{
         background-color:black;
         border-bottom: 1px solid rgb(61, 61, 61);
-        
-        /*
-        -webkit-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
-        -moz-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
-        box-shadow: 0px 0px 20px -1px rgb(22, 22, 22, 0.5);*/
     }
 
     .goContrast nav{
         background-color: aqua;
         border-bottom: 1px solid greenyellow;
-        /*
-        -webkit-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
-        -moz-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
-        box-shadow: 0px 0px 20px -1px rgb(22, 22, 22, 0.5);*/
     }
 
     .settings{
@@ -552,7 +452,6 @@ section{
     .section_content div, .section_content h1, .section_content h2, .section_content ul, .section_content p {
         width: 100%;
         max-width: 300px;
-        /* background-color: whitesmoke; */
     }
 
     nav{
@@ -567,65 +466,3 @@ section{
         padding-bottom: 15px;
     }
 }
-
-/*
-@media only screen and (max-width: 550px) {
-    html{
-        font-size: 14px;
-        height: 100%;
-        width: 100%;
-    }
-
-    body{
-        
-        height: 100%;
-        width: 100%;
-    }
-
-    nav{
-        position: absolute;
-        top: unset;
-        left: unset;
-        bottom: 0;
-        height: 100px;
-
-        width: 100vw;
-        overflow: hidden;
-    
-        display: block;
-
-        background-color: white;
-    }
-
-    nav li {
-        float: left;
-        margin: 0 auto;
-        margin: 0px;
-        height: 20px;
-        align-items: center;
-    }
-      
-    nav li a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-    }
-
-    .active{
-        opacity: 1 !important;
-        font-size: 1rem;
-        font-weight: 500;
-        pointer-events: none;
-    }
-
-    .section_content{    
-        padding:0;
-        margin:0;
-        padding: 20px;
-        margin: 0 auto;
-        width: 100vw;
-    }
-
-}
-*/
-
