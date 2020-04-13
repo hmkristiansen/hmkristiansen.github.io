@@ -511,7 +511,9 @@ section{
         box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);*/
     }
     .goDark nav{
-        background-color: rgb(54, 54, 54);
+        background-color:black;
+        border-bottom: 1px solid rgb(61, 61, 61);
+        
         /*
         -webkit-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
         -moz-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
@@ -520,10 +522,15 @@ section{
 
     .goContrast nav{
         background-color: aqua;
+        border-bottom: 1px solid greenyellow;
         /*
         -webkit-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
         -moz-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
         box-shadow: 0px 0px 20px -1px rgb(22, 22, 22, 0.5);*/
+    }
+
+    .settings{
+        padding: 15px;
     }
     
 }
@@ -553,6 +560,11 @@ section{
         padding: 5px;
         height: 30px;
         padding-top: 10px;
+    }
+    
+    .settings{
+        padding: 15px;
+        padding-bottom: 20px;
     }
 }
 
