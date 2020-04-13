@@ -54,13 +54,13 @@ function startup(){
 		}
 	}
 
-	
 	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 		document.getElementById('page').setAttribute("class", "goDark");
+		document.getElementById('goDark').classList.add("currentTheme");
 	}else{
 		document.getElementById('page').setAttribute("class", "goLight");
+		document.getElementById('goLight').classList.add("currentTheme");
 	}
-	
 }
 
 /* - - - */ 
@@ -228,3 +228,18 @@ function changeTheme(){
 
 	document.getElementById(id).setAttribute("class", "currentTheme");
 }	
+
+/* - - - - */
+
+$("#settingsIcon").click(function(){
+	console.log("clickin'")
+	$("#settingsList").toggleClass("showSettings");
+	$("#settingsList").toggleClass("hideSettings");
+
+	$("#settingsIcon").toggleClass("activeSettings");
+	$("#settingsIcon").toggleClass("inactiveSettings");
+});
+
+function loadIn(){
+	$('body').addClass('loadBody');
+}

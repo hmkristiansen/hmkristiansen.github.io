@@ -2,6 +2,7 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 
 html{
     width: 100vw;
@@ -41,8 +42,17 @@ body{
     animation: fadeInPage ease 0.4s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
-    */
-    
+    */ 
+}
+
+body{ 
+    opacity: 0;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s; /* Safari */
+}
+
+.loadBody{
+    opacity: 1;
 }
 
 body::-webkit-scrollbar {
@@ -135,6 +145,18 @@ nav{
     transition: transform 0.3s;
 }
 
+nav::after {
+    content: '';
+    height: 50vh; /*You can change this if you want smaller/bigger borders*/
+    width: 1px;
+  
+    position: absolute;
+    right: 0;
+    top: 25vh; /*If you want to set a smaller height and center it, change this value*/
+  
+    background-color: #ececec; /*The color of your border*/
+}
+
 section{
     position: relative;
     display: flex;
@@ -165,6 +187,55 @@ section{
     /*background-color: whitesmoke;*/
 }
 
+.settings{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 10px;
+    display: inline;
+    z-index: 100;
+}
+
+.settings #settingsIcon{
+    display: inline;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.settings #settingsList{
+    display: inline;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.settings #settingsList li{
+    display: inline;
+    font-size: 0.75rem;
+}
+.settings #settingsList a{
+    cursor: pointer;
+}
+
+.showSettings{
+    opacity: 1;
+    left: 0;
+}
+.hideSettings{
+    pointer-events: none;
+    opacity: 0;
+    left: -5px;
+}
+.inactiveSettings{
+    opacity: 0.5;
+}
+.inactiveSettings:hover{
+    opacity: 1;
+}
+.activeSettings{
+    opacity: 1;
+}
+
+
 /*- - - - -- - */
 
 #logo{
@@ -180,6 +251,7 @@ section{
 #menu{
     margin: 0;
     padding: 10px;
+    padding-right: 25px;
 }
 
 #menu ul{
@@ -259,20 +331,6 @@ section{
     clear: both;
 }
 
-/* KEYFRAMES */
-
-/*
-@keyframes fadeInPage { 
-    0% { 
-        opacity: 0;
-    }40%{
-        opacity: 0.5; 
-    } 
-    100% {
-        opacity: 1; 
-     } 
-} 
-*/
 
 /*Color Modes*/	
 
@@ -290,10 +348,11 @@ section{
 }
 
 .goDark nav{
-    background-color: rgb(54, 54, 54);
-    -webkit-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
-    -moz-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
-    box-shadow: 0px 0px 20px -1px rgb(22, 22, 22, 0.5);
+
+}
+
+.goDark nav::after{
+    background-color: rgb(61, 61, 61);
 }
 
 .goContrast{
@@ -310,6 +369,18 @@ section{
     -webkit-text-decoration-color: yellow;
     text-decoration-color: yellow;
 }
+
+.goContrast nav{
+    font-family: 'Comic Neue', cursive;
+}
+.goContrast nav::after{
+    background-color: green;
+}
+
+.goContrast #menu a{
+    color: orange;
+}
+
 .goContrast a:hover{
     transition: all 0.2s;
     filter: brightness(50%);
@@ -353,6 +424,9 @@ section{
     
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 10px;
+    }
+    nav::after {
+        content: '';
     }
 
     nav::-webkit-scrollbar {
@@ -431,6 +505,20 @@ section{
         -webkit-box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
         -moz-box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
         box-shadow: 0px 0px 20px -1px rgba(222,222,222,1);
+    }
+
+    .goDark nav{
+        background-color: rgb(54, 54, 54);
+        -webkit-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
+        -moz-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
+        box-shadow: 0px 0px 20px -1px rgb(22, 22, 22, 0.5);
+    }
+
+    .goContrast nav{
+        background-color: aqua;
+        -webkit-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
+        -moz-box-shadow: 0px 0px 20px -1px rgba(22,22,22,0.5);
+        box-shadow: 0px 0px 20px -1px rgb(22, 22, 22, 0.5);
     }
     
 }
