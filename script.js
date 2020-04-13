@@ -14,6 +14,7 @@ $(document).ready(function() {
 	createAnchorLinks();
 	startup();
 	updateContainer();
+	checkIfTouch();
 
 	$(window).resize(function() {
 		updateContainer();
@@ -240,6 +241,20 @@ $("#settingsIcon").click(function(){
 	$("#settingsIcon").toggleClass("inactiveSettings");
 });
 
+/* - - - - */
+
 function loadIn(){
-	$('body').addClass('loadBody');
+	$('body').addClass(' loadBody');
+}
+
+/* - - - -  -*/
+
+function checkIfTouch(){
+	var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
+	if (!touchsupport){ // browser doesn't support touch
+		$('html').addClass(' non-touch');
+		console.log("Not a touch device");
+	}else{
+		console.log("touch device");
+	}
 }
