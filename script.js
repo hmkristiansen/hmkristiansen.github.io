@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 	$(window).resize(function() {
 		updateContainer();
-		reloadPageOnResize();
+		//reloadPageOnResize();
 	});
 
 	if(isMobile){
@@ -121,7 +121,6 @@ function mobileNavUpdate(){
 	$('#menu a').each(function(i, li) {
 		var $navEl = $(li);  
 		mobileNavElements[i] = $navEl;
-
 		var distance = mobileNavElements[i].offset().left;
 		distances[i] = distance;
 	});	
@@ -143,14 +142,16 @@ function updateContainer() {
 	}
 }
 
+/*
 var resizeId;
 function reloadPageOnResize(){
 	clearTimeout(resizeId);
     resizeId = setTimeout(doneResizing, 500);
 }
 function doneResizing(){
-	location.reload();
+	//location.reload();
 }
+*/
 
 /* - - - */ 
 
