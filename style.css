@@ -121,11 +121,11 @@ nav{
 
 nav::after {
     content: '';
-    height: 50vh; 
+    height: 45vh; 
     width: 1px;
     position: absolute;
     right: 0;
-    top: 25vh; 
+    top: 27.5vh; 
     background-color: #ececec; 
 }
 
