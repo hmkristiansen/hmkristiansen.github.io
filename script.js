@@ -75,6 +75,7 @@ function updateAnchors(e){
 		var activeLinkHref = "#"+ mainSections[i].id;
 		if( (scrollPos -  mainSections[i].offsetTop) <= reach && (scrollPos -  mainSections[i].offsetTop) > -reach ){
 			$("a[href='"+activeLinkHref+"']").addClass("active");
+			//location.hash = activeLinkHref; //attach the hash (#jumptarget) to the pageurl
 			if(isMobile){
 				scrollMobileNav(i);
 				debounce(scrollMobileNav);
