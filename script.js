@@ -3,6 +3,18 @@ var browser; // 1 = Chromium, 2 = Webkit
 var isMobile = false;
 var isTouch = false;
 
+var shake = ["https://i.pinimg.com/originals/9d/34/e8/9d34e89188d5ee22ea443c61e7162437.jpg", "SHAKE","Text goes here"];
+var ctrl = ["https://ak5.picdn.net/shutterstock/videos/34615045/thumb/12.jpg", "CTRL","Text goes here"];
+var nn = ["https://upload.wikimedia.org/wikipedia/commons/6/65/Cute_beagle_puppy_lilly.jpg","Nevrotiske Neuroner","During the spring of 2019, I was tasked with my hardest problem to date; making a game aimed at kids with school refusal. 'What is school refusal?' you ask. It's very complicated, and my solution revolved around Cognitive Behavioural Therapy and responding to possible scenarios."];
+var sustain = ["https://trudog.com/wp-content/uploads/2019/07/beagle-puppy.jpg", "Sustainable Shopping","Text goes here"];
+
+var projects = [
+	["shake", shake],
+	["ctrl", ctrl],
+	["nn", nn],
+	["sustain",sustain]
+];
+
 /* Page startup and variable events */
 
 $(document).ready(function() {
@@ -225,5 +237,72 @@ function checkBrowser(){
 		} else {
 			browser = 2;
 		}
+	}
+}
+
+/* - - - - - - Port Qucik view */
+
+$(".port_quick_view").click(function(event) {
+	var target = event.target;
+	togglePortCard();
+	changePortCard(target.id);
+});
+
+$("#close_port_btn").click(function(event) {
+	togglePortCard();
+});
+
+var currentProject; 
+var updateComplete;
+var checked = false;
+
+function changePortCard(id){
+
+	if($("#port_view").hasClass("show_port")){
+		togglePortCard();
+		check();
+	}
+	else{
+		
+	}
+
+	if(updateComplete){
+		for(var i = 0; i<projects.length; i++){
+			if(projects[i][0] == id){
+				currentProject = projects[i][1];
+			}
+		}
+		
+		var img = $('.port_cont img');
+		var header = $('.port_cont h1');
+		var text = $('.port_cont p');
+		img.attr('src',currentProject[0]);
+		header.html(currentProject[1]);
+		text.html(currentProject[2]);
+
+		togglePortCard();
+	}
+}
+
+
+var check = function(){
+    if(checked){
+        updateComplete = true;
+    }
+    else {
+		setTimeout(check, 1000); // check again in a second
+		checked = true;
+    }
+}
+check();
+
+
+function togglePortCard(){
+	if($("#port_view").hasClass("show_port")){
+		$("#port_view").removeClass("show_port");
+		$("#port_view").addClass("hide_port");
+	}else{
+		$("#port_view").removeClass("hide_port");
+		$("#port_view").addClass("show_port");
 	}
 }
