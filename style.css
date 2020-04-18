@@ -501,9 +501,11 @@ section li{
 }
 
 .goDark .port_view img{
-    -webkit-box-shadow: 0px 0px 39px 0px rgba(235,235,235,0);
-    -moz-box-shadow: 0px 0px 39px 0px rgba(235,235,235,0);
-    box-shadow: 0px 0px 39px 0px rgba(235,235,235,0);
+    
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(235,235,235,0);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(235,235,235,0);
+    box-shadow: 0px 0px 20px 0px rgba(235,235,235,0);
+    
 }
 
 .port_cont{
@@ -520,9 +522,11 @@ section li{
     object-fit: cover;
     margin-top: 40px;
 
-    -webkit-box-shadow: 0px 0px 39px 0px rgba(235,235,235,1);
-    -moz-box-shadow: 0px 0px 39px 0px rgba(235,235,235,1);
-    box-shadow: 0px 0px 39px 0px rgba(235,235,235,1);
+    
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(235,235,235,1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(235,235,235,1);
+    box-shadow: 0px 0px 20px 0px rgba(235,235,235,1);
+    
 }
 
 .port_cont h1{
