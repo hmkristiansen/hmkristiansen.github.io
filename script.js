@@ -255,10 +255,9 @@ $(".port_quick_view").click(function(event) {
 			$("#"+target.id).removeClass("activePortItem");
 		}else{
 			togglePortCard();
-
 			setTimeout(function() {
 				changePortCard(target.id);
-			}, 100);
+			}, 350);
 		}
 	}else{
 		console.log("it's hidden, but I'll get it");
