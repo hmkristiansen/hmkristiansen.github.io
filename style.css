@@ -488,10 +488,6 @@ section li{
     max-height: 80vh;
 
     padding: 60px;
-
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     transition: all 0.3s;
     z-index: 1000;
 }
@@ -594,19 +590,29 @@ section li{
 }
 
 .show_port {
-    -webkit-animation: popIn 0.5s;
-            animation: popIn 0.5s;
+    -webkit-animation: popIn 0.2s;
+            animation: popIn 0.2s;
+            
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
             
     right: 3%;
     opacity: 1 !important;
     transform: translateY(0);
+
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .hide_port{
-    -webkit-animation: popOut 0.3s;
-    animation: popOut 0.3s;
+    -webkit-animation: popOut 0.2s;
+            animation: popOut 0.2s;
 
-    right: -2000px;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+
+    right: -1000px;
     opacity: 0;
     transform: translateY(0);
 }
@@ -651,9 +657,6 @@ section li{
     0% {
         -webkit-transform: translate(1000px,0);
                 transform: translate(1000px,0);
-    }60%{
-        -webkit-transform: translate(-20px,0);
-        transform: translate(-20px,0);
     }
     100% {
         -webkit-transform: translate(0,0);
@@ -664,9 +667,6 @@ section li{
     0% {
         -webkit-transform: translate(1000px),0;
                 transform: translate(1000px,0);
-    }60%{
-        -webkit-transform: translate(-20px,0);
-        transform: translate(-20px,0);
     }
     100% {
         -webkit-transform: translate(0,0);
@@ -679,10 +679,6 @@ section li{
         -webkit-transform: translate(0,0);
                 transform: translate(0,0);
     }
-    50%{
-        -webkit-transform: translate(-20px,0);
-        transform: translate(-20px,0);
-    }
     100% {
         -webkit-transform: translate(1000px,0);
                 transform: translate(1000px,0);
@@ -692,10 +688,6 @@ section li{
     0% {
         -webkit-transform: translate(0,0);
                 transform: translate(0,0);
-    }
-    50%{
-        -webkit-transform: translate(-20px,0);
-        transform: translate(-20px,0);
     }
     100% {
         -webkit-transform: translate(1000px,0);

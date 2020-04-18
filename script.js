@@ -257,7 +257,7 @@ $(".port_quick_view").click(function(event) {
 			togglePortCard();
 			setTimeout(function() {
 				changePortCard(target.id);
-			}, 350);
+			}, 250);
 		}
 	}else{
 		console.log("it's hidden, but I'll get it");
