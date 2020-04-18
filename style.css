@@ -592,12 +592,14 @@ section li{
 .show_port {
     -webkit-animation: popIn 0.2s;
             animation: popIn 0.2s;
-            
+            /*
     -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
+            animation-timing-function: ease;*/
+    -webkit-animation-timing-function: cubic-bezier(0.1, 0.2, -0.2, 0);
+            animation-timing-function: cubic-bezier(0.1, 0.2, -0.2, 0);
             
     right: 3%;
-    opacity: 1 !important;
+    /*opacity: 1 !important;*/
     transform: translateY(0);
 
     background-color: rgba(255, 255, 255, 0.8);
@@ -609,11 +611,15 @@ section li{
     -webkit-animation: popOut 0.2s;
             animation: popOut 0.2s;
 
+            /*
     -webkit-animation-timing-function: ease;
             animation-timing-function: ease;
+            */
+    -webkit-animation-timing-function: cubic-bezier(0.1, -0.1, 0.2, 0);
+            animation-timing-function: cubic-bezier(0.1, -0.1, 0.2, 0);
 
     right: -1000px;
-    opacity: 0;
+    /*opacity: 0;*/
     transform: translateY(0);
 }
 

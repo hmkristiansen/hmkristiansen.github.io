@@ -244,12 +244,12 @@ function checkBrowser(){
 
 /* - - - - - - Port Qucik view */
 
+var portElement = $(".port_view");
 var prevtarget;
 
 $(".port_quick_view").click(function(event) {
 	var target = event.target;
-
-	if($(".port_view").hasClass("show_port")){
+	if($(portElement).hasClass("show_port")){
 		if(prevtarget == target){
 			togglePortCard();
 			$("#"+target.id).removeClass("activePortItem");
@@ -260,7 +260,6 @@ $(".port_quick_view").click(function(event) {
 			}, 250);
 		}
 	}else{
-		console.log("it's hidden, but I'll get it");
 		changePortCard(target.id);
 	}
 	prevtarget = target;
@@ -272,7 +271,13 @@ $("#close_port_btn").click(function(event) {
 });
 
 var currentProject; 
+var img = $('.port_cont img');
+var header = $('.port_cont h1');
+var text = $('.port_cont p');
+var notionLink = $('.port_cont a');
+
 function changePortCard(id){
+
 	for(var i = 0; i<projects.length; i++){
 		if(projects[i][0] == id){
 			currentProject = projects[i][1];
@@ -282,10 +287,6 @@ function changePortCard(id){
 		}
 	}
 	
-	var img = $('.port_cont img');
-	var header = $('.port_cont h1');
-	var text = $('.port_cont p');
-	var notionLink = $('.port_cont a')
 	img.attr('src',currentProject[0]);
 	header.html(currentProject[1]);
 	text.html(currentProject[2]);
@@ -296,12 +297,12 @@ function changePortCard(id){
 }
 
 function togglePortCard(){
-	if($(".port_view").hasClass("show_port")){
-		$(".port_view").removeClass("show_port");
-		$(".port_view").addClass("hide_port");
+	if($(portElement).hasClass("show_port")){
+		$(portElement).removeClass("show_port");
+		$(portElement).addClass("hide_port");
 	}else{
-		$(".port_view").removeClass("hide_port");
-		$(".port_view").addClass("show_port");
+		$(portElement).removeClass("hide_port");
+		$(portElement).addClass("show_port");
 	}
 }
 
