@@ -595,6 +595,7 @@ section li{
             
     right: 3%;
     opacity: 1 !important;
+    transform: translateY(0);
 }
 
 .hide_port{
@@ -603,6 +604,7 @@ section li{
 
     right: -2000px;
     opacity: 0;
+    transform: translateY(0);
 }
 
 @media only screen and (max-width: 850px){
@@ -612,8 +614,6 @@ section li{
         padding: 0;
         margin:0;
         min-width: 0px;
-        padding-top: 10px;
-        padding-bottom: 60px;
     }
     .port_cont{
         position: relative;
@@ -624,6 +624,11 @@ section li{
     .show_port {    
         left: 0;
         margin: 0 auto;
+        top: 5vh;
+    }
+
+    .hide_port{
+        top: 5vh;
     }
 
     .port_cont a{
@@ -640,57 +645,57 @@ section li{
 
 @-webkit-keyframes popIn {
     0% {
-        -webkit-transform: translateX(1000px);
-                transform: translateX(1000px);
+        -webkit-transform: translate(1000px,0);
+                transform: translate(1000px,0);
     }60%{
-        -webkit-transform: translateX(-20px);
-        transform: translateX(-20px);
+        -webkit-transform: translate(-20px,0);
+        transform: translate(-20px,0);
     }
     100% {
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
+        -webkit-transform: translate(0,0);
+                transform: translate(0,0);
     }
 }
 @keyframes popIn {
     0% {
-        -webkit-transform: translateX(1000px);
-                transform: translateX(1000px);
+        -webkit-transform: translate(1000px),0;
+                transform: translate(1000px,0);
     }60%{
-        -webkit-transform: translateX(-20px);
-        transform: translateX(-20px);
+        -webkit-transform: translate(-20px,0);
+        transform: translate(-20px,0);
     }
     100% {
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
+        -webkit-transform: translate(0,0);
+                transform: translate(0,0);
     }
 }
 
 @-webkit-keyframes popOut {
     0% {
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
+        -webkit-transform: translate(0,0);
+                transform: translate(0,0);
     }
     50%{
-        -webkit-transform: translateX(-20px);
-        transform: translateX(-20px);
+        -webkit-transform: translate(-20px,0);
+        transform: translate(-20px,0);
     }
     100% {
-        -webkit-transform: translateX(1000px);
-                transform: translateX(1000px);
+        -webkit-transform: translate(1000px,0);
+                transform: translate(1000px,0);
     }
 }
 @keyframes popOut {
     0% {
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
+        -webkit-transform: translate(0,0);
+                transform: translate(0,0);
     }
     50%{
-        -webkit-transform: translateX(-20px);
-        transform: translateX(-20px);
+        -webkit-transform: translate(-20px,0);
+        transform: translate(-20px,0);
     }
     100% {
-        -webkit-transform: translateX(1000px);
-                transform: translateX(1000px);
+        -webkit-transform: translate(1000px,0);
+                transform: translate(1000px,0);
     }
 }
   
