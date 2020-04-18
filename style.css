@@ -483,7 +483,7 @@ section li{
     height: auto;
  
     width: 40vw;
-    min-width: 700px;
+    min-width: 400px;
 
     max-height: 80vh;
 
@@ -552,7 +552,15 @@ section li{
 
 .port_cont h1, .port_cont p{
     padding-left: 10px;
-    width: 60%;
+    width: 80%;
+}
+
+.port_cont h1{
+    font-size: 1.5rem;
+}
+
+.port_cont p{
+    font-size: 1rem;
 }
 
 .port_cont a{
@@ -581,7 +589,6 @@ section li{
     cursor: w-resize;
 }
 
-
 .show_port {
     -webkit-animation: popIn 0.5s;
             animation: popIn 0.5s;
@@ -601,10 +608,12 @@ section li{
 @media only screen and (max-width: 850px){
     .port_view{    
         width: 100vw;
-        max-height: 90vh;
+        max-height: 80vh;
         padding: 0;
         margin:0;
         min-width: 0px;
+        padding-top: 10px;
+        padding-bottom: 60px;
     }
     .port_cont{
         position: relative;
