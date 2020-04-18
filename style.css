@@ -107,7 +107,7 @@ nav{
     top: 0;
     left: 0;
     height: 100vh;
-    width: 25vw;
+    width: 20vw;
     font-family: 'Inter', sans-serif;
     text-align: right;
 
@@ -174,7 +174,7 @@ section{
     padding:0;
     margin:0;
     padding: 10%;
-    padding-left: 30vw;
+    padding-left: 25vw;
     padding-right: 10vw;
 }
 
@@ -328,7 +328,7 @@ section li{
 
 /* - - - - - -  RESPONSIVITY- - - - - - -*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     html{
         font-size: 18px;
         height: 100%;
@@ -352,7 +352,9 @@ section li{
         overflow-x: scroll;
         padding: 10px;
     
-        background-color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         border-bottom: 1px solid #ececec;
     }
     nav::after {
@@ -420,7 +422,9 @@ section li{
     }
 
     .goDark nav{
-        background-color:black;
+        background-color:rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         border-bottom: 1px solid rgb(61, 61, 61);
     }
 
@@ -466,3 +470,217 @@ section li{
         padding-bottom: 15px;
     }
 }
+
+
+/* - - - - */
+
+.port_quick_view:hover{
+    cursor: e-resize;
+}
+
+.port_view{
+    position: absolute;
+    height: auto;
+ 
+    width: 40vw;
+    min-width: 700px;
+
+    max-height: 80vh;
+
+    padding: 60px;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.goDark .port_view{
+    background-color: rgba(0,0,0,0.5);
+}
+
+.goDark .port_view img{
+    -webkit-box-shadow: 0px 0px 39px 0px rgba(235,235,235,0);
+    -moz-box-shadow: 0px 0px 39px 0px rgba(235,235,235,0);
+    box-shadow: 0px 0px 39px 0px rgba(235,235,235,0);
+}
+
+.port_cont{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.port_cont img{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    margin-top: 40px;
+
+    -webkit-box-shadow: 0px 0px 39px 0px rgba(235,235,235,1);
+    -moz-box-shadow: 0px 0px 39px 0px rgba(235,235,235,1);
+    box-shadow: 0px 0px 39px 0px rgba(235,235,235,1);
+}
+
+.port_cont h1{
+    margin:0;
+    padding:0;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.port_cont p{
+    margin:0;
+    padding:0;
+}
+
+.port_cont #close_port_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#close_port_btn:hover{
+    filter: brightness(200%);
+    cursor: e-resize;
+}
+
+.port_cont h1, .port_cont p{
+    padding-left: 10px;
+    width: 60%;
+}
+
+.port_cont a{
+    position: relative;
+    float: right;
+    margin-top: 40px;
+    opacity: 0.4;
+}
+
+.port_cont a:hover{
+    opacity: 1;
+}
+
+.activePortItem{
+    transition: all 0.2s;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: w-resize;
+}
+.activePortItem::after{
+    content:" >";
+}
+
+.activePortItem:hover{
+    filter: brightness(200%);
+    cursor: w-resize;
+}
+
+
+.show_port {
+    -webkit-animation: popIn 0.5s;
+            animation: popIn 0.5s;
+            
+    right: 3%;
+    opacity: 1 !important;
+}
+
+.hide_port{
+    -webkit-animation: popOut 0.3s;
+    animation: popOut 0.3s;
+
+    right: -2000px;
+    opacity: 0;
+}
+
+@media only screen and (max-width: 850px){
+    .port_view{    
+        width: 100vw;
+        max-height: 90vh;
+        padding: 0;
+        margin:0;
+        min-width: 0px;
+    }
+    .port_cont{
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .show_port {    
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .port_cont a{
+        position: relative;
+        margin-top: 30px;
+    }
+
+    .port_cont h1, .port_cont p{
+        padding: 0;
+        width: 100%;
+    }
+}
+
+
+@-webkit-keyframes popIn {
+    0% {
+        -webkit-transform: translateX(1000px);
+                transform: translateX(1000px);
+    }60%{
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+@keyframes popIn {
+    0% {
+        -webkit-transform: translateX(1000px);
+                transform: translateX(1000px);
+    }60%{
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes popOut {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    50%{
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    100% {
+        -webkit-transform: translateX(1000px);
+                transform: translateX(1000px);
+    }
+}
+@keyframes popOut {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    50%{
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    100% {
+        -webkit-transform: translateX(1000px);
+                transform: translateX(1000px);
+    }
+}
+  

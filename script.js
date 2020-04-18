@@ -3,6 +3,20 @@ var browser; // 1 = Chromium, 2 = Webkit
 var isMobile = false;
 var isTouch = false;
 
+var shake = ["assets/img/shake.jpg", "SHAKE from Santander Consumer Bank","UX design for the service SHAKE. The project is still in developemnt, so I can not disclose too much information publicly.","https://www.notion.so/SHAKE-by-Santander-Consumer-Bank-f45ce3ed5e444c4d86f5abaeac3da1e0"];
+var ctrl = ["assets/img/ctrl.jpg", "CTRL frame","Concept of a IOT-device made in the course Trend Driven Design.","https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf"];
+var nn = ["assets/img/nn.jpg","Nevrotiske Neuroner","Concept board game for kids made for the start-up TACKL.","https://www.notion.so/Nevrotiske-Nevroner-d51ad60ec63b4968b0d7c24f8fe6eee2"];
+var sustain = ["assets/img/sustain.png", "Sustainability Index","Research project in the course Sustainable Design","https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf"];
+
+var projects = [
+	["shake", shake],
+	["ctrl", ctrl],
+	["nn", nn],
+	["sustain",sustain]
+];
+
+var mainSections = [];
+
 /* Page startup and variable events */
 
 $(document).ready(function() {
@@ -36,6 +50,8 @@ function startup(){
 	checkIfTouch();
 	checkBrowser();
 
+	this.mainSections = document.querySelectorAll("section");
+
 	/*Setting setting some states*/ 
 	$('body').addClass('snapper');
 	$('section').each(function () {
@@ -46,7 +62,6 @@ function startup(){
 /* - - - */ 
 
 function createAnchorLinks(){
-	var mainSections = document.querySelectorAll("section");
 	$('a[href*="#"]').bind('click', function(e) {
 		e.preventDefault(); 
 		var target = $(this).attr("href"); 
@@ -68,7 +83,6 @@ function createAnchorLinks(){
 /* - - - */ 
 
 function updateAnchors(e){
-	var mainSections = document.querySelectorAll("section");
 	var scrollPos = $('body').scrollTop();
 	var reach = window.innerHeight/2;
 	for(var i=0; i<mainSections.length; i++){
@@ -227,3 +241,68 @@ function checkBrowser(){
 		}
 	}
 }
+
+/* - - - - - - Port Qucik view */
+
+var prevtarget;
+
+$(".port_quick_view").click(function(event) {
+	var target = event.target;
+
+	if($(".port_view").hasClass("show_port")){
+		if(prevtarget == target){
+			togglePortCard();
+			$("#"+target.id).removeClass("activePortItem");
+		}else{
+			togglePortCard();
+
+			setTimeout(function() {
+				changePortCard(target.id);
+			}, 100);
+		}
+	}else{
+		console.log("it's hidden, but I'll get it");
+		changePortCard(target.id);
+	}
+	prevtarget = target;
+});
+
+$("#close_port_btn").click(function(event) {
+	togglePortCard();
+	$("#"+prevtarget.id).removeClass("activePortItem");
+});
+
+var currentProject; 
+function changePortCard(id){
+	for(var i = 0; i<projects.length; i++){
+		if(projects[i][0] == id){
+			currentProject = projects[i][1];
+			$("#"+projects[i][0]).addClass("activePortItem");
+		}else{
+			$("#"+projects[i][0]).removeClass("activePortItem");
+		}
+	}
+	
+	var img = $('.port_cont img');
+	var header = $('.port_cont h1');
+	var text = $('.port_cont p');
+	var notionLink = $('.port_cont a')
+	img.attr('src',currentProject[0]);
+	header.html(currentProject[1]);
+	text.html(currentProject[2]);
+	notionLink.attr('href',currentProject[3]);
+	notionLink.attr('target',"_blank");	
+
+	togglePortCard();
+}
+
+function togglePortCard(){
+	if($(".port_view").hasClass("show_port")){
+		$(".port_view").removeClass("show_port");
+		$(".port_view").addClass("hide_port");
+	}else{
+		$(".port_view").removeClass("hide_port");
+		$(".port_view").addClass("show_port");
+	}
+}
+
