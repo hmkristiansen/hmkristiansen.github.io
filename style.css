@@ -14,6 +14,7 @@ html{
     font-size: 16px;
 
     scroll-behavior: smooth;
+    will-change: transform;
 }
 
 a{
@@ -481,15 +482,30 @@ section li{
 .port_view{
     position: absolute;
     height: auto;
- 
     width: 40vw;
     min-width: 400px;
-
     max-height: 80vh;
-
     padding: 60px;
-    transition: all 0.3s;
+    /*transition: all 0.3s;*/
     z-index: 1000;
+
+    right: 3%;
+
+    will-change: transform;
+    -webkit-transform: translateX(80vw);
+    transform: translateX(80vw);
+    transition: transform 100ms ease-in;
+}
+
+.show_port {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    will-change: transform;
+    -webkit-transform: none;
+    transform: none;
+    transition: transform 100ms ease-out;
 }
 
 .goDark .port_view{
@@ -497,11 +513,9 @@ section li{
 }
 
 .goDark .port_view img{
-    
     -webkit-box-shadow: 0px 0px 20px 0px rgba(235,235,235,0);
     -moz-box-shadow: 0px 0px 20px 0px rgba(235,235,235,0);
-    box-shadow: 0px 0px 20px 0px rgba(235,235,235,0);
-    
+    box-shadow: 0px 0px 20px 0px rgba(235,235,235,0);   
 }
 
 .port_cont{
@@ -589,39 +603,16 @@ section li{
     cursor: w-resize;
 }
 
-.show_port {
-    -webkit-animation: popIn 0.2s;
-            animation: popIn 0.2s;
-            /*
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;*/
-    -webkit-animation-timing-function: cubic-bezier(0.1, 0.2, -0.2, 0);
-            animation-timing-function: cubic-bezier(0.1, 0.2, -0.2, 0);
-            
-    right: 3%;
-    /*opacity: 1 !important;*/
-    transform: translateY(0);
 
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-}
-
+/*
 .hide_port{
-    -webkit-animation: popOut 0.2s;
-            animation: popOut 0.2s;
-
-            /*
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
-            */
-    -webkit-animation-timing-function: cubic-bezier(0.1, -0.1, 0.2, 0);
-            animation-timing-function: cubic-bezier(0.1, -0.1, 0.2, 0);
-
-    right: -1000px;
-    /*opacity: 0;*/
+    transform: translateZ(0);
     transform: translateY(0);
-}
+
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    transition: transform 300ms linear;
+}*/
 
 @media only screen and (max-width: 850px){
     .port_view{    
@@ -630,6 +621,10 @@ section li{
         padding: 0;
         margin:0;
         min-width: 0px;
+
+        top: 3vh;
+        -webkit-transform: translateX(100vw);
+        transform: translateX(100vw);
     }
     .port_cont{
         position: relative;
@@ -640,11 +635,9 @@ section li{
     .show_port {    
         left: 0;
         margin: 0 auto;
-        top: 5vh;
-    }
-
-    .hide_port{
-        top: 5vh;
+        top: 3vh;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 
     .port_cont a{
@@ -658,7 +651,34 @@ section li{
     }
 }
 
+/*
+.show_port {
+    will-change: transform;
+    transform: translateZ(0);
 
+    -webkit-animation: popIn 0.2s ease;
+            animation: popIn 0.2s ease;
+
+    right: 3%;
+   
+    transform: translateY(0);
+
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.hide_port{
+    will-change: transform;
+    transform: translateZ(0);
+
+    -webkit-animation: popOut 0.2s ease;
+            animation: popOut 0.2s ease;
+
+    right: -1000px;
+    transform: translateY(0);
+}*/
+/*
 @-webkit-keyframes popIn {
     0% {
         -webkit-transform: translate(1000px,0);
@@ -701,3 +721,4 @@ section li{
     }
 }
   
+*/

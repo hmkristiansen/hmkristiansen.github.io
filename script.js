@@ -254,8 +254,10 @@ var img = $('.port_cont img');
 var header = $('.port_cont h1');
 var text = $('.port_cont p');
 var notionLink = $('.port_cont a');
+var parentNode = document.getElementById("close_port_btn");
 
 $(".port_quick_view").click(function(event) {
+
 	var target = event.target;
 	if($(portElement).hasClass("show_port")){
 		if(prevtarget == target){
@@ -265,28 +267,19 @@ $(".port_quick_view").click(function(event) {
 			togglePortCard();
 			setTimeout(function() {
 				changePortCard(target.id);
-			}, 250);
+			}, 200);
 		}
 	}else{
 		changePortCard(target.id);
 	}
 	prevtarget = target;
+
 });
 
 $("#close_port_btn").click(function(event) {
 	togglePortCard();
 	$("#"+prevtarget.id).removeClass("activePortItem");
 });
-
-
-var currentProject;
-var currentImgIndex; 
-var img = $('.port_cont img');
-var header = $('.port_cont h1');
-var text = $('.port_cont p');
-var notionLink = $('.port_cont a');
-
-var parentNode = document.getElementById("close_port_btn");
 
 function changePortCard(id){
 	
@@ -318,9 +311,9 @@ function changePortCard(id){
 function togglePortCard(){
 	if($(portElement).hasClass("show_port")){
 		$(portElement).removeClass("show_port");
-		$(portElement).addClass("hide_port");
+		//$(portElement).addClass("hide_port");
 	}else{
-		$(portElement).removeClass("hide_port");
+		//$(portElement).removeClass("hide_port");
 		$(portElement).addClass("show_port");
 	}
 }
