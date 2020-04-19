@@ -16,6 +16,7 @@ var projects = [
 ];
 
 var mainSections = [];
+var images=[];
 
 /* Page startup and variable events */
 
@@ -49,6 +50,7 @@ $('html, body').scroll(function(e) {
 function startup(){
 	checkIfTouch();
 	checkBrowser();
+	preload();
 
 	this.mainSections = document.querySelectorAll("section");
 
@@ -270,24 +272,34 @@ $("#close_port_btn").click(function(event) {
 	$("#"+prevtarget.id).removeClass("activePortItem");
 });
 
-var currentProject; 
+var currentProject;
+var currentImgIndex; 
 var img = $('.port_cont img');
 var header = $('.port_cont h1');
 var text = $('.port_cont p');
 var notionLink = $('.port_cont a');
 
+var parentNode = document.getElementById("close_port_btn");
+
 function changePortCard(id){
+	
+	$('.port_img').remove();
 
 	for(var i = 0; i<projects.length; i++){
 		if(projects[i][0] == id){
 			currentProject = projects[i][1];
+			currentImgIndex = i;
 			$("#"+projects[i][0]).addClass("activePortItem");
 		}else{
 			$("#"+projects[i][0]).removeClass("activePortItem");
 		}
 	}
 	
-	img.attr('src',currentProject[0]);
+	//img.attr('src',currentProject[0]);
+	//img = images[currentImgIndex];
+	
+	insertAfter(parentNode,images[currentImgIndex]);
+	
 	header.html(currentProject[1]);
 	text.html(currentProject[2]);
 	notionLink.attr('href',currentProject[3]);
@@ -306,3 +318,23 @@ function togglePortCard(){
 	}
 }
 
+
+/*PRELOADING IMAGES*/
+
+function preload(){
+	for(var i=0; i<projects.length; i++){
+		preloadImage(projects[i][1][0]);
+	}
+}
+
+function preloadImage(url){
+    var img = new Image();
+    img.src = url;
+    img.className = "port_img";
+    /*imd.id = "port_img";*/
+    images.push(img);
+}
+
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
