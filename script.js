@@ -278,8 +278,7 @@ $("#close_port_btn").click(function(event) {
 	$("#"+prevtarget.id).removeClass("activePortItem");
 });
 
-<<<<<<< HEAD
-=======
+
 var currentProject;
 var currentImgIndex; 
 var img = $('.port_cont img');
@@ -289,7 +288,6 @@ var notionLink = $('.port_cont a');
 
 var parentNode = document.getElementById("close_port_btn");
 
->>>>>>> 1047694a934fc59dfbb47675aa4aef4b5aa63991
 function changePortCard(id){
 	
 	$('.port_img').remove();
