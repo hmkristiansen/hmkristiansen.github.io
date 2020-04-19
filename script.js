@@ -247,6 +247,12 @@ function checkBrowser(){
 var portElement = $(".port_view");
 var prevtarget;
 
+var currentProject; 
+var img = $('.port_cont img');
+var header = $('.port_cont h1');
+var text = $('.port_cont p');
+var notionLink = $('.port_cont a');
+
 $(".port_quick_view").click(function(event) {
 	var target = event.target;
 	if($(portElement).hasClass("show_port")){
@@ -269,12 +275,6 @@ $("#close_port_btn").click(function(event) {
 	togglePortCard();
 	$("#"+prevtarget.id).removeClass("activePortItem");
 });
-
-var currentProject; 
-var img = $('.port_cont img');
-var header = $('.port_cont h1');
-var text = $('.port_cont p');
-var notionLink = $('.port_cont a');
 
 function changePortCard(id){
 
