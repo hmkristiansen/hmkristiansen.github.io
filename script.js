@@ -2,35 +2,34 @@
 var browser; // 1 = Chromium, 2 = Webkit
 var isMobile = false;
 var isTouch = false;
+var inPortOverlay = false;
 
 var shake = ["assets/img/shake.jpg", "SHAKE from Santander Consumer Bank","UX design for the service SHAKE. The project is still in developemnt and kinda secret.","https://www.notion.so/SHAKE-by-Santander-Consumer-Bank-f45ce3ed5e444c4d86f5abaeac3da1e0"];
 var ctrl = ["assets/img/ctrl.jpg", "CTRL frame","Concept of a IOT-device made in the course Trend Driven Design.","https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf"];
 var nn = ["assets/img/nn.jpg","Nevrotiske Neuroner","Concept board game for kids made for the start-up TACKL.","https://www.notion.so/Nevrotiske-Nevroner-d51ad60ec63b4968b0d7c24f8fe6eee2"];
-var sustain = ["assets/img/sustain.png", "Sustainability Index","Research project in the course Sustainable Design","https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf"];
+var pb = ["assets/img/sustain.png", "Sustainability Index","Research project in the course Sustainable Design","https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf"];
 
 var projects = [
 	["shake", shake],
 	["ctrl", ctrl],
 	["nn", nn],
-	["sustain",sustain]
+	["pb",pb]
 ];
 
 var mainSections = [];
+var sectionOffsets = [];
 var images=[];
 
 /* Page startup and variable events */
 
 $(document).ready(function() {
-	$('body').addClass(' loadBody');
-	checkIfDarkmode();
-
 	startup();
 	createAnchorLinks();
 	updateContainer();
 
 	if(isMobile){
 		mobileNavUpdate();
-		removeNav();
+		//removeNav();
 	}
 });
 
@@ -39,26 +38,31 @@ $(window).resize(function() {
 });
 
 $('html, body').scroll(function(e) {
-	updateAnchors(e);
-	if(isMobile){
-		useScrollSpeed(e);
+	if(!inPortOverlay){
+		updateAnchors(e);
 	}
-}).scroll();
+	if(isMobile){
+		//useScrollSpeed(e);
+	}
+});
 
 /* Supporting Functions */
 
 function startup(){
-	checkIfTouch();
-	checkBrowser();
+	//checkIfTouch();
+	//checkBrowser();
+
+	$('body').addClass(' loadBody');
+	checkIfDarkmode();
 	preload();
-
-	this.mainSections = document.querySelectorAll("section");
-
+	setSectionHeights();
 	/*Setting setting some states*/ 
 	$('body').addClass('snapper');
 	$('section').each(function () {
 		$(this).addClass('snapping');
-	})
+	});
+
+	this.mainSections = document.querySelectorAll("section");
 }
 
 /* - - - */ 
@@ -87,49 +91,111 @@ function createAnchorLinks(){
 function updateAnchors(e){
 	var scrollPos = $('body').scrollTop();
 	var reach = window.innerHeight/2;
+	var $currentSection;
 	for(var i=0; i<mainSections.length; i++){
+		var id = mainSections[i].id;
+		$currentSection = $("#"+id);
 		var activeLinkHref = "#"+ mainSections[i].id;
 		if( (scrollPos -  mainSections[i].offsetTop) <= reach && (scrollPos -  mainSections[i].offsetTop) > -reach ){
 			$("a[href='"+activeLinkHref+"']").addClass("active");
 			//location.hash = activeLinkHref; //attach the hash (#jumptarget) to the pageurl
 			if(isMobile){
 				scrollMobileNav(i);
-				debounce(scrollMobileNav);
+				//debounce(scrollMobileNav);
 			}
+			setSectionHeights();
 		}else{
 			$("a[href='"+activeLinkHref+"']").removeClass("active");
 		}
+		//fadeOnScroll(i);
 	}
+	//console.log(sectionOffsets);
 }
 
 var mobileNavElements = [];
-var distances = [];
+var distancesNav = [];
 function mobileNavUpdate(){
 	$('#menu a').each(function(i, li) {
 		var $navEl = $(li);  
 		mobileNavElements[i] = $navEl;
 		var distance = mobileNavElements[i].offset().left;
-		distances[i] = distance;
+		distancesNav[i] = distance;
 	});	
 }
 function scrollMobileNav(i){
 	var $width = $(window).width()
-	$('nav').scrollLeft(distances[i] - ($width*0.05));
+	$('nav').scrollLeft(distancesNav[i] - ($width*0.05));
 }
 
 /* - - - */ 
 
 function updateContainer() {
 	var $width = $(window).width();
-    if ($width <= 800) {
+    if ($width <= 850) {
 		isMobile = true;
     }else {
         isMobile = false;
 	}
 }
 
+function setSectionHeights(){
+	$('section').each(function(i, s) {
+		sectionOffsets[i] =  $(s).offset().top;
+	});
+}
+
 /* - - - */ 
 
+function fadeOnScroll(currentIndex){
+
+	/*
+	if(sectionOffsets[currentIndex] < mainSections[currentIndex].innerHeight){
+	}
+	var id = mainSections[currentIndex].id;
+	//console.log(id);
+
+	var $section = $("#"+id);
+*/
+
+	/*
+	var top = $('body').scrollTop();
+	var sectionOffset = sectionOffsets[currentIndex];
+	console.log((sectionOffset*1.5 / (top +sectionOffset)));*/
+	/*
+	//console.log(currentIndex);
+	var id = mainSections[currentIndex].id;
+	console.log(id);
+
+	var $section = $("#"+id);
+	if($('body').scrollTop() == sectionOffsets[currentIndex]){
+		//console.log("true");
+	}
+
+	if(sectionOffsets[currentIndex] < $('body').scrollTop()){
+		console.log(id+" is on top you");
+	}else if(sectionOffsets[currentIndex] > $('body').scrollTop()){
+		console.log(id+" is under you");
+	}*/
+	
+
+	/*
+	if(sectionOffsets[index] > window.innerHeight){
+		console.log("element is view")
+	}
+
+	if((sectionOffsets[index] < -400) || sectionOffsets[index] > 400 ){
+		console.log(mainSections[index] + " is out of bonds");
+	}else{
+		console.log(mainSections[index] + " is in view");
+	}
+	*/
+
+	//$("#"+id).css("opacity", 1 - $('body').scrollTop() / ($('#'+id).height()/2));
+}
+
+/* - - -  - -*/
+
+/*
 var lastOffset = $('body').scrollTop();
 var lastDate = new Date().getTime();
 var ticker = 0;
@@ -172,16 +238,17 @@ function debounce(func, wait = 10, immediate = true) {
 	  if (callNow) func.apply(context, args);
 	};
 };
-
+*/
 /* - - - */ 
 
+/*
 function removeNav(){
 	const nav = document.querySelector('nav');
 	setTimeout(function() { 
 		nav.classList.add('is-hidden');
 		nav.classList.remove('is-visible');
 	}, 1500);
-}
+}*/
 
 /* - - - - - */
 
@@ -226,10 +293,8 @@ function checkIfTouch(){
 	if (!touchsupport){ // browser doesn't support touch
 		isTouch = false;
 		//$('html').addClass(' non-touch');
-		//console.log("Not a touch device");
 	}else{
 		isTouch = true;
-		//console.log("touch device");
 	}
 }
 
@@ -245,6 +310,25 @@ function checkBrowser(){
 }
 
 /* - - - - - - Port Qucik view */
+
+
+$(".port_quick_view").click(function(event) {
+	inPortOverlay = true;
+	$(".faderTop").toggleClass("removeElement");
+	$(".faderBottom").toggleClass("removeElement");
+	$(".port_overlay").toggleClass("show_overlay");
+});
+
+$("#close_port_btn").click(function(event) {
+	inPortOverlay = false;
+	$(".faderTop").toggleClass("removeElement");
+	$(".faderBottom").toggleClass("removeElement");
+	$(".port_overlay").toggleClass("show_overlay");
+});
+
+
+
+/*
 
 var portElement = $(".port_view");
 var prevtarget;
@@ -317,7 +401,7 @@ function togglePortCard(){
 		$(portElement).addClass("show_port");
 	}
 }
-
+*/
 
 /*PRELOADING IMAGES*/
 

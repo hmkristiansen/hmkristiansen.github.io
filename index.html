@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>H.M. Kristiansen | hinken</title>
+    <title>hinken | hmkristiansen</title>
     
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel = "stylesheet"type = "text/css" href ="style.css"/>
@@ -17,14 +18,18 @@
 </head>
 
 <body>
+    <div class="faderTop"></div>
+    <div class="faderBottom"></div>
     <!-- NAV  -->
     <nav class="mobile_nav">
         <ul id="menu">
             <li><a href="#home" class="active">hmkristiansen</a></li>
+            <!--
             <li><a href="#vision">_vision</a></li>
+            -->
             <li><a href="#work">_portfolio</a></li>
             <li><a href="#resume">_resume</a></li>
-            <li><a href="#about">_about</a></li>
+            <li><a href="#about">_stats</a></li>
             <li><a href="#contact">_contact</a></li>
         </ul>
     </nav>
@@ -44,15 +49,16 @@
 
     <section id="home">
         <div class="section_content">
-            <h2>Hi <span class="emoji-ani" id="waveEmoji"> 👋</span></h2>
+            <h2>Heisann! I'm Henrik. <span class="emoji-ani" id="waveEmoji"></span></h2>
             <p id="greeting">
-                My name is <span class="emoji-ani" id="me">Henrik</span>, but I often go by "hinken".<br>
-                I'm a design student from Oppegård, currently living in Lisbon.<br><br>
-                Scroll down to see what I'm all about <span class="emoji-ani" id="scrollEmoji"> 👇</span>
+                I'm an interaction design student from Oppegård, currently living in Lisbon.<br><br>
+                I aim to create simple tools and experiences with the induvidual in mind.<br><br>
+                Scroll down for more me <span class="emoji-ani" id="scrollEmoji">👇</span>
             </p>    
         </div>
     </section>
 
+    <!--
     <section id="vision">
         <div class="section_content">
             <h2>Life is a timeline of everyday problems.</h2>
@@ -60,21 +66,21 @@
             I aim to create simple tools and thoughtful experiences that can help.</p>
         </div>
     </section>
+    -->
 
     <section id="work">
-
         <div class="section_content">
             <h2>Recent projects;</h2>
             <ul>
                 <li><a class="port_quick_view" id="shake" href="#" onclick="return false;">Safer 2nd hand purchase of cars</a></li>
                 <li><a class="port_quick_view" id="ctrl" href="#" onclick="return false;">Tracking family expences</a></li>
                 <li><a class="port_quick_view" id="nn" href="#" onclick="return false;">Game for kids with school anxiety</a></li>
-                <li><a class="port_quick_view" id="sustain" href="#" onclick="return false;">Sustainable online shopping</a></li>
+                <li><a class="port_quick_view" id="pb" href="#" onclick="return false;">Reducing fear with stories</a></li>
                 <li>⠀</li>
                 <li><a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">My project archive</a> in Notion</li>
             </ul>
         </div>
-
+        <!--
         <div class="port_view hide_port">
             <div class="port_cont">
                 <div id="close_port_btn">Close X</div>
@@ -83,8 +89,41 @@
                 <a>More about this project</a>
             </div>
         </div>
-
+        -->
     </section>
+
+    <div class="port_overlay">
+        
+        <div class="port_cont">
+            <img src="assets/img/pb/pb.jpg">
+            <div class="cont_desc">
+                <h1>Beate og Skikkelsene</h1>
+                <div id="item_info">
+                    <ul>
+                        <li id="client">Course; Illustration & Comics - IADE</li>
+                        <li id="role">Role; Storyteller & illustrator</li>
+                        <li id="period">Period; Spring '20</li>
+                    </ul>
+                </div>
+                <div class="cont_wrapper">
+                    <p id="cont_ing">The class Illustration & Comics challenged me to get comfortable with illustrating and using it more as a tool of communication.</p>
+                </div>
+
+                <div class="cont_wrapper">
+                    <img class="" src="assets/img/pb/pb_01.jpg">
+                </div>                
+                <div class="cont_wrapper">
+                    <p class="go_left">The picture book is based on the original story about Beauty and The Beast, but retold to tell the story of Beate and how she overcame hear anxiety when moving across the country and chaning schools.</p>
+                </div>
+                <div class="cont_wrapper">
+                    <img class="" src="assets/img/pb/pb_02.jpg">
+                </div>
+                <div class="bottom_whitespace"></div>
+            </div>
+        </div>
+        <div id="close_port_btn">Close X</div>
+    </div>
+    
 
     <section id="resume">
         <div class="section_content">
@@ -114,6 +153,7 @@
                         <span id="age"></span><span id="dead"></span>
                     </div>
                 </li>
+                <li>🙋‍♂️ : "hinken"</li>
                 <li>🌍 : LYR, OSL, TRD, LIS</li>
                 <li><a id="location" href="https://www.google.com/search?sxsrf=ALeKk03TiEpXeV0y2tWUjZveuUO78a7f0g%3A1585151572007&source=hp&ei=U357XpvQO4OJlwSG2LaoAQ&q=38.703321%2C+-9.179565&oq=38.703321%2C+-9.179565&gs_l=psy-ab.3...397.397..927...1.0..0.69.69.1......0....2j1..gws-wiz.QGB--Smm6-0&ved=0ahUKEwjbxfPi_bXoAhWDxIUKHQasDRUQ4dUDCAU&uact=5" target="_blank">📍 : 38.703321, -9.179565</a></li>
                 <li>👍 : 🐶 ☕️ 🍂</li>
@@ -124,18 +164,18 @@
 
     <section id="contact">
         <div class="section_content">
-            <h2>Want to say hi?</h2>
+            <h2>Direct;</h2>
             <ul>
                 <li><a href="mailto:hei@hinken.no" target="_blank">hei@hinken.no</a></li>
             </ul>
-            <h2>Find me elsewhere;</h2>
+            <h2>Elsewhere;</h2>
             <ul>
                 <!--
                 <li><a href="https://dribbble.com/hmkristiansen" target="_blank">Dribbble</a></li>
                 -->
-                <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">Instagram</a></li>
-                <li><a href="https://twitter.com/hmkristiansen_" target="_blank">Twitter</a></li>
+                <li>💼 <a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">LinkedIn</a></li>
+                <li>📷 <a href="https://www.instagram.com/hmkristiansen/" target="_blank">Instagram</a></li>
+                <li>🐦 <a href="https://twitter.com/hmkristiansen_" target="_blank">Twitter</a></li>
             </ul>
         </div>
     </section>
