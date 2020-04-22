@@ -4,17 +4,18 @@ var isMobile = false;
 var isTouch = false;
 var inPortOverlay = false;
 
-var shake = ["assets/img/shake.jpg", "SHAKE from Santander Consumer Bank","UX design for the service SHAKE. The project is still in developemnt and kinda secret.","https://www.notion.so/SHAKE-by-Santander-Consumer-Bank-f45ce3ed5e444c4d86f5abaeac3da1e0"];
-var ctrl = ["assets/img/ctrl.jpg", "CTRL frame","Concept of a IOT-device made in the course Trend Driven Design.","https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf"];
-var nn = ["assets/img/nn.jpg","Nevrotiske Neuroner","Concept board game for kids made for the start-up TACKL.","https://www.notion.so/Nevrotiske-Nevroner-d51ad60ec63b4968b0d7c24f8fe6eee2"];
-var pb = ["assets/img/sustain.png", "Sustainability Index","Research project in the course Sustainable Design","https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf"];
+var shake1 = ["assets/shake/shake.jpg", "SHAKE from Santander Consumer Bank","UX design for the service SHAKE. The project is still in developemnt and kinda secret.","https://www.notion.so/SHAKE-by-Santander-Consumer-Bank-f45ce3ed5e444c4d86f5abaeac3da1e0"];
+var ctrl1 = ["assets//ctrl/ctrl.jpg", "CTRL frame","Concept of a IOT-device made in the course Trend Driven Design.","https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf"];
+var nn1 = ["assets/nn/nn.jpg","Nevrotiske Neuroner","Concept board game for kids made for the start-up TACKL.","https://www.notion.so/Nevrotiske-Nevroner-d51ad60ec63b4968b0d7c24f8fe6eee2"];
+var pb1 = ["assets/pb/pb.jpg", "Sustainability Index","Research project in the course Sustainable Design","https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf"];
 
 var projects = [
-	["shake", shake],
-	["ctrl", ctrl],
-	["nn", nn],
+	["shake",shake],
+	["ctrl",ctrl],
+	["nn",nn],
 	["pb",pb]
 ];
+
 
 var mainSections = [];
 var sectionOffsets = [];
@@ -26,6 +27,7 @@ $(document).ready(function() {
 	startup();
 	createAnchorLinks();
 	updateContainer();
+	getProjects();
 
 	if(isMobile){
 		mobileNavUpdate();
@@ -54,8 +56,9 @@ function startup(){
 
 	$('body').addClass(' loadBody');
 	checkIfDarkmode();
-	preload();
+	//preload();
 	setSectionHeights();
+
 	/*Setting setting some states*/ 
 	$('body').addClass('snapper');
 	$('section').each(function () {
@@ -63,6 +66,27 @@ function startup(){
 	});
 
 	this.mainSections = document.querySelectorAll("section");
+}
+
+/* - - - */
+
+function getProjects(){
+	for(var i = 0; i<projects.length; i++){
+		var json = (function () {
+			var json = null;
+			$.ajax({
+				'async': false,
+				'global': false,
+				'url': "assets/"+projects[i][0]+"/"+projects[i][0]+".json",
+				'dataType': "json",
+				'success': function (data) {
+					json = data;
+				}
+			});
+			return json;
+		})(); 
+		projects[i][1] = json;
+	}
 }
 
 /* - - - */ 
@@ -314,9 +338,16 @@ function checkBrowser(){
 
 $(".port_quick_view").click(function(event) {
 	inPortOverlay = true;
+
+	renderProject(event);
+
 	$(".faderTop").toggleClass("removeElement");
 	$(".faderBottom").toggleClass("removeElement");
 	$(".port_overlay").toggleClass("show_overlay");
+
+	$('#work').toggleClass('blur');
+	$('nav').toggleClass('blur');
+	$('.settings').toggleClass('blur');
 });
 
 $("#close_port_btn").click(function(event) {
@@ -324,7 +355,31 @@ $("#close_port_btn").click(function(event) {
 	$(".faderTop").toggleClass("removeElement");
 	$(".faderBottom").toggleClass("removeElement");
 	$(".port_overlay").toggleClass("show_overlay");
+
+	$('#work').toggleClass('blur');
+	$('nav').toggleClass('blur');
+	$('.settings').toggleClass('blur');
 });
+
+
+function renderProject(event){
+	var targetId = event.target.id;
+	var targetObj;
+	
+	for(var i = 0; i<projects.length; i++){
+		if(targetId == projects[i][0]){
+			targetObj = projects[i][1];
+		}
+	}
+
+	$(".port_cont img").attr("src",targetObj.header_img);
+	$(".port_cont h1").html(targetObj.cont_ing);
+	$(".port_cont #client").html(targetObj.item_info.client);
+	$(".port_cont #role").html(targetObj.item_info.role);
+	$(".port_cont #period").html(targetObj.item_info.period);
+	$(".port_cont #cont_ing").html(targetObj.text.text0);
+
+}
 
 
 
@@ -405,20 +460,21 @@ function togglePortCard(){
 
 /*PRELOADING IMAGES*/
 
+/*
 function preload(){
 	for(var i=0; i<projects.length; i++){
 		preloadImage(projects[i][1][0]);
 	}
 }
 
+
 function preloadImage(url){
     var img = new Image();
     img.src = url;
-    img.className = "port_img";
-    /*imd.id = "port_img";*/
+    imd.id = "port_img";
     images.push(img);
 }
 
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-}
+}*/
