@@ -67,8 +67,8 @@ body::-webkit-scrollbar {
     position: fixed;
     content: '';
     top: 0;
-    left: 25vw;
-    width: 450px;
+    left: 24%;
+    width: 500px;
     height: 200px;
     background: -webkit-linear-gradient(bottom, rgba(245,245,245,0), rgba(245,245,245,1));
     z-index: 100;
@@ -78,8 +78,8 @@ body::-webkit-scrollbar {
     position: fixed;
     content: '';
     bottom: 0;
-    left: 25vw;
-    width: 450px;
+    left: 24%;
+    width: 500px;
     height: 200px;
     background: -webkit-linear-gradient(top, rgba(245,245,245,0), rgba(245,245,245,1));
     z-index: 100;
@@ -231,8 +231,8 @@ section{
     margin:0;
     
     padding: 10%;
-    padding-left: 25vw;
-    padding-right: 10vw;
+    padding-left: 25%;
+    padding-right: 10%;
 
     z-index: 0;
 }
@@ -538,13 +538,13 @@ section{
         overflow: hidden;
     }
     .faderTop{
-        left: 10vw;
-        width: 400px;
+        left: 7%;
+        width: 450px;
         height: 100px;
     }
     .faderBottom{
-        left: 10vw;
-        width: 400px;
+        left: 7%;
+        width: 450px;
         height: 100px;
     }
     
@@ -612,7 +612,7 @@ section{
     }
     .section_content{    
         padding:20px;
-        padding-left: 10vw;   
+        padding-left: 8%;   
     }
     .section_content div,
     .section_content h1,
@@ -699,13 +699,13 @@ section{
         overflow: hidden;
     }
     .faderTop{
-        left: 25px;
-        width: 280px;
+        left: 20px;
+        width: 300px;
         height: 50px;
     }
     .faderBottom{
-        left: 25px;
-        width: 280px;
+        left: 20px;
+        width: 300px;
         height: 50px;
     }
 
