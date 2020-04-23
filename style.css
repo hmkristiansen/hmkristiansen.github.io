@@ -287,7 +287,7 @@ section{
     -webkit-animation-duration: 0.2s;
     animation-name: fadeIn;
     animation-duration: 0.2s;
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .port_overlay .port_cont{
@@ -295,6 +295,7 @@ section{
     margin: 0;
     padding: 0;
     width: 100%;
+    opacity: 1;
     /*
     padding-top: 100px;
     will-change: padding;
@@ -309,12 +310,22 @@ section{
 
 @keyframes fadeIn{
     0%{
-        opacity: 0;
+        opacity: 0!important;
         transform: translateY(100px);
     }
     100%{
-        opacity:1;
+        opacity:1 !important;
         transform: translateY(0);
+    }
+}
+@-webkit-keyframes fadeIn{
+    0%{
+        -webkit-opacity: 0 !important;
+        -webkit-transform: translateY(100px);
+    }
+    100%{
+        -webkit-opacity:1 !important;
+        -webkit-transform: translateY(0);
     }
 }
 
