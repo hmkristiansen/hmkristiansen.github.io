@@ -21,17 +21,19 @@ var mainSections = [];
 var sectionOffsets = [];
 var images=[];
 
+/* Loading content */ 
+getProjects();
+preload();
+
 /* Page startup and variable events */
 
 $(document).ready(function() {
 	startup();
 	createAnchorLinks();
 	updateContainer();
-	getProjects();
 
 	if(isMobile){
 		mobileNavUpdate();
-		//removeNav();
 	}
 });
 
@@ -43,15 +45,12 @@ $('html, body').scroll(function(e) {
 	if(!inPortOverlay){
 		updateAnchors(e);
 	}
-	if(isMobile){
-		//useScrollSpeed(e);
-	}
 });
 
 /* Supporting Functions */
 
 function startup(){
-	//checkIfTouch();
+	checkIfTouch();
 	//checkBrowser();
 
 	$('body').addClass(' loadBody');
@@ -122,18 +121,14 @@ function updateAnchors(e){
 		var activeLinkHref = "#"+ mainSections[i].id;
 		if( (scrollPos -  mainSections[i].offsetTop) <= reach && (scrollPos -  mainSections[i].offsetTop) > -reach ){
 			$("a[href='"+activeLinkHref+"']").addClass("active");
-			//location.hash = activeLinkHref; //attach the hash (#jumptarget) to the pageurl
 			if(isMobile){
 				scrollMobileNav(i);
-				//debounce(scrollMobileNav);
 			}
 			setSectionHeights();
 		}else{
 			$("a[href='"+activeLinkHref+"']").removeClass("active");
 		}
-		//fadeOnScroll(i);
 	}
-	//console.log(sectionOffsets);
 }
 
 var mobileNavElements = [];
@@ -168,55 +163,144 @@ function setSectionHeights(){
 	});
 }
 
-/* - - - */ 
+/* - - - - - */
 
-function fadeOnScroll(currentIndex){
-
-	/*
-	if(sectionOffsets[currentIndex] < mainSections[currentIndex].innerHeight){
-	}
-	var id = mainSections[currentIndex].id;
-	//console.log(id);
-
-	var $section = $("#"+id);
-*/
-
-	/*
-	var top = $('body').scrollTop();
-	var sectionOffset = sectionOffsets[currentIndex];
-	console.log((sectionOffset*1.5 / (top +sectionOffset)));*/
-	/*
-	//console.log(currentIndex);
-	var id = mainSections[currentIndex].id;
-	console.log(id);
-
-	var $section = $("#"+id);
-	if($('body').scrollTop() == sectionOffsets[currentIndex]){
-		//console.log("true");
-	}
-
-	if(sectionOffsets[currentIndex] < $('body').scrollTop()){
-		console.log(id+" is on top you");
-	}else if(sectionOffsets[currentIndex] > $('body').scrollTop()){
-		console.log(id+" is under you");
-	}*/
-	
-
-	/*
-	if(sectionOffsets[index] > window.innerHeight){
-		console.log("element is view")
-	}
-
-	if((sectionOffsets[index] < -400) || sectionOffsets[index] > 400 ){
-		console.log(mainSections[index] + " is out of bonds");
+function checkIfDarkmode(){
+	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		document.getElementById('page').setAttribute("class", "goDark");
+		document.getElementById('goDark').classList.add("currentTheme");
 	}else{
-		console.log(mainSections[index] + " is in view");
+		document.getElementById('page').setAttribute("class", "goLight");
+		document.getElementById('goLight').classList.add("currentTheme");
 	}
-	*/
-
-	//$("#"+id).css("opacity", 1 - $('body').scrollTop() / ($('#'+id).height()/2));
 }
 
+function changeTheme(){
+	var target = event.target || event.srcElement;
+	var id = target.id;
+	document.getElementById('page').setAttribute("class", "");
+	document.getElementById('page').setAttribute("class", id);
+
+	document.getElementById('goLight').classList.remove("currentTheme");
+	document.getElementById('goDark').classList.remove("currentTheme");
+	document.getElementById('goContrast').classList.remove("currentTheme");
+
+	document.getElementById(id).setAttribute("class", "currentTheme");
+}	
+
+/* - - - - */
+
+$("#settingsIcon").click(function(){
+	$("#settingsList").toggleClass("showSettings");
+	$("#settingsList").toggleClass("hideSettings");
+	$("#settingsIcon").toggleClass("activeSettings");
+	$("#settingsIcon").toggleClass("inactiveSettings");
+});
+
+/* - - - -  -*/
+
+function checkIfTouch(){
+	var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
+	if (!touchsupport){ // browser doesn't support touch
+		isTouch = false;
+		$('body').addClass('non-touch');
+	}else{
+		isTouch = true;
+	}
+}
+
+function checkBrowser(){
+	var ua = navigator.userAgent.toLowerCase(); 
+	if (ua.indexOf('safari') != -1) { 
+		if (ua.indexOf('chrome') > -1) {
+			browser = 1;
+		} else {
+			browser = 2;
+		}
+	}
+}
+
+/* - - - - - - Port Qucik view */
+
+
+$(".port_quick_view").click(function(event) {
+	inPortOverlay = true;
+
+	renderProject(event);
+
+	$(".faderTop").toggleClass("removeElement");
+	$(".faderBottom").toggleClass("removeElement");
+	$(".port_overlay").toggleClass("show_overlay");
+
+	setTimeout(function() {
+		$('#work').toggleClass('blur');
+		$('nav').toggleClass('blur');
+		$('.settings').toggleClass('blur');
+	}, 200);
+
+});
+
+$("#close_port_btn").click(function(event) {
+	inPortOverlay = false;
+
+	$(".faderTop").toggleClass("removeElement");
+	$(".faderBottom").toggleClass("removeElement");
+	$(".port_overlay").toggleClass("show_overlay");
+
+	$('#work').toggleClass('blur');
+	$('nav').toggleClass('blur');
+	$('.settings').toggleClass('blur');
+
+	setTimeout(function() {
+		document.getElementById("port_img").remove();
+	}, 200);
+});
+
+
+function renderProject(event){
+	var targetId = event.target.id;
+	var targetObj;
+	var currentIndex;
+	
+	for(var i = 0; i<projects.length; i++){
+		if(targetId == projects[i][0]){
+			currentIndex = i;
+			targetObj = projects[i][1];
+		}
+	}
+
+	let img = images[currentIndex];
+	let ref = document.getElementById("imageSelector");
+	let parentDiv = ref.parentNode;
+	parentDiv.insertBefore(img, ref)
+
+	$(".port_cont h1").html(targetObj.cont_ing);
+	$(".port_cont #client").html(targetObj.item_info.client);
+	$(".port_cont #role").html(targetObj.item_info.role);
+	$(".port_cont #period").html(targetObj.item_info.period);
+	$(".port_cont #cont_ing").html(targetObj.text.text0);
+}
+
+/*PRELOADING IMAGES*/
+
+
+function preload(){
+	for(var i=0; i<projects.length; i++){
+		preloadImage(projects[i][1].header_img);
+	}
+}
+
+function preloadImage(url){
+    var img = new Image();
+    img.src = url;
+    img.id = "port_img";
+    images.push(img);
+}
+
+
+
+/* - - - */ 
+// OLD STUFF
 /* - - -  - -*/
 
 /*
@@ -272,209 +356,4 @@ function removeNav(){
 		nav.classList.add('is-hidden');
 		nav.classList.remove('is-visible');
 	}, 1500);
-}*/
-
-/* - - - - - */
-
-function checkIfDarkmode(){
-	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		document.getElementById('page').setAttribute("class", "goDark");
-		document.getElementById('goDark').classList.add("currentTheme");
-	}else{
-		document.getElementById('page').setAttribute("class", "goLight");
-		document.getElementById('goLight').classList.add("currentTheme");
-	}
-}
-
-function changeTheme(){
-	var target = event.target || event.srcElement;
-	var id = target.id;
-	document.getElementById('page').setAttribute("class", "");
-	document.getElementById('page').setAttribute("class", id);
-
-	document.getElementById('goLight').classList.remove("currentTheme");
-	document.getElementById('goDark').classList.remove("currentTheme");
-	document.getElementById('goContrast').classList.remove("currentTheme");
-
-	document.getElementById(id).setAttribute("class", "currentTheme");
-}	
-
-/* - - - - */
-
-$("#settingsIcon").click(function(){
-	console.log("clickin'")
-	$("#settingsList").toggleClass("showSettings");
-	$("#settingsList").toggleClass("hideSettings");
-
-	$("#settingsIcon").toggleClass("activeSettings");
-	$("#settingsIcon").toggleClass("inactiveSettings");
-});
-
-/* - - - -  -*/
-
-function checkIfTouch(){
-	var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
-	if (!touchsupport){ // browser doesn't support touch
-		isTouch = false;
-		//$('html').addClass(' non-touch');
-	}else{
-		isTouch = true;
-	}
-}
-
-function checkBrowser(){
-	var ua = navigator.userAgent.toLowerCase(); 
-	if (ua.indexOf('safari') != -1) { 
-		if (ua.indexOf('chrome') > -1) {
-			browser = 1;
-		} else {
-			browser = 2;
-		}
-	}
-}
-
-/* - - - - - - Port Qucik view */
-
-
-$(".port_quick_view").click(function(event) {
-	inPortOverlay = true;
-
-	renderProject(event);
-
-	$(".faderTop").toggleClass("removeElement");
-	$(".faderBottom").toggleClass("removeElement");
-	$(".port_overlay").toggleClass("show_overlay");
-
-	$('#work').toggleClass('blur');
-	$('nav').toggleClass('blur');
-	$('.settings').toggleClass('blur');
-});
-
-$("#close_port_btn").click(function(event) {
-	inPortOverlay = false;
-	$(".faderTop").toggleClass("removeElement");
-	$(".faderBottom").toggleClass("removeElement");
-	$(".port_overlay").toggleClass("show_overlay");
-
-	$('#work').toggleClass('blur');
-	$('nav').toggleClass('blur');
-	$('.settings').toggleClass('blur');
-});
-
-
-function renderProject(event){
-	var targetId = event.target.id;
-	var targetObj;
-	
-	for(var i = 0; i<projects.length; i++){
-		if(targetId == projects[i][0]){
-			targetObj = projects[i][1];
-		}
-	}
-
-	$(".port_cont img").attr("src",targetObj.header_img);
-	$(".port_cont h1").html(targetObj.cont_ing);
-	$(".port_cont #client").html(targetObj.item_info.client);
-	$(".port_cont #role").html(targetObj.item_info.role);
-	$(".port_cont #period").html(targetObj.item_info.period);
-	$(".port_cont #cont_ing").html(targetObj.text.text0);
-
-}
-
-
-
-/*
-
-var portElement = $(".port_view");
-var prevtarget;
-
-var currentProject; 
-var img = $('.port_cont img');
-var header = $('.port_cont h1');
-var text = $('.port_cont p');
-var notionLink = $('.port_cont a');
-var parentNode = document.getElementById("close_port_btn");
-
-$(".port_quick_view").click(function(event) {
-
-	var target = event.target;
-	if($(portElement).hasClass("show_port")){
-		if(prevtarget == target){
-			togglePortCard();
-			$("#"+target.id).removeClass("activePortItem");
-		}else{
-			togglePortCard();
-			setTimeout(function() {
-				changePortCard(target.id);
-			}, 200);
-		}
-	}else{
-		changePortCard(target.id);
-	}
-	prevtarget = target;
-
-});
-
-$("#close_port_btn").click(function(event) {
-	togglePortCard();
-	$("#"+prevtarget.id).removeClass("activePortItem");
-});
-
-function changePortCard(id){
-	
-	$('.port_img').remove();
-
-	for(var i = 0; i<projects.length; i++){
-		if(projects[i][0] == id){
-			currentProject = projects[i][1];
-			currentImgIndex = i;
-			$("#"+projects[i][0]).addClass("activePortItem");
-		}else{
-			$("#"+projects[i][0]).removeClass("activePortItem");
-		}
-	}
-	
-	//img.attr('src',currentProject[0]);
-	//img = images[currentImgIndex];
-	
-	insertAfter(parentNode,images[currentImgIndex]);
-	
-	header.html(currentProject[1]);
-	text.html(currentProject[2]);
-	notionLink.attr('href',currentProject[3]);
-	notionLink.attr('target',"_blank");	
-
-	togglePortCard();
-}
-
-function togglePortCard(){
-	if($(portElement).hasClass("show_port")){
-		$(portElement).removeClass("show_port");
-		//$(portElement).addClass("hide_port");
-	}else{
-		//$(portElement).removeClass("hide_port");
-		$(portElement).addClass("show_port");
-	}
-}
-*/
-
-/*PRELOADING IMAGES*/
-
-/*
-function preload(){
-	for(var i=0; i<projects.length; i++){
-		preloadImage(projects[i][1][0]);
-	}
-}
-
-
-function preloadImage(url){
-    var img = new Image();
-    img.src = url;
-    imd.id = "port_img";
-    images.push(img);
-}
-
-function insertAfter(referenceNode, newNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }*/

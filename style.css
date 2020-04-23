@@ -51,8 +51,8 @@ body{
     width: 100%;
 
     opacity: 0;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s; /* Safari */
+    transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s; /* Safari */
 }
 
 body::-webkit-scrollbar {
@@ -111,7 +111,7 @@ a{
     
 }
 
-a:hover{
+body.non-touch a:hover{
     transition: all 0.2s;
     /*filter: brightness(150%);*/
     color: black;
@@ -180,7 +180,7 @@ nav::after {
     text-decoration: none;
 }
 
-#menu li a:hover{
+body.non-touch #menu li a:hover{
     opacity: 1;
     cursor: pointer;
 }
@@ -273,16 +273,21 @@ section{
     pointer-events: none;
 
     will-change: opacity;
-    will-change: padding;
-    transition: all 0.3s;
+    transition: opacity 0.2s;
 }
 
 .show_overlay{
     overflow-y: scroll;
     z-index: 1000;
-    opacity: 1;
+    /*opacity: 1;*/
     pointer-events: all;
     background-color: rgba(255, 255, 255, 0.8);
+    
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.2s;
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+    opacity: 1;
 }
 
 .port_overlay .port_cont{
@@ -290,16 +295,30 @@ section{
     margin: 0;
     padding: 0;
     width: 100%;
+    /*
     padding-top: 100px;
     will-change: padding;
-    transition: all 0.1s;
+    transition: all 0.05s ease-in;
+    */
 }
 
 .show_overlay .port_cont{
-    padding-top: 0px;
+    /*
+    padding-top: 0px;*/
 }
 
-.port_quick_view:hover{
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+body.non-touch .port_quick_view:hover{
     cursor: n-resize;
 }
 
@@ -330,7 +349,7 @@ section{
     transition: all 0.1s;
 }
 
-#close_port_btn:hover{
+body.non-touch #close_port_btn:hover{
     color: #fcfcfc;
     background-color: #252b33;
     cursor: s-resize;
@@ -455,7 +474,7 @@ section{
 .goDark h1{
     color:rgba(250,250,250,1);
 }
-.goDark a:hover{
+body.non-touch .goDark a:hover{
     transition: all 0.2s;
     filter: brightness(50%);
 }
@@ -489,7 +508,7 @@ section{
 .goContrast #menu a{
     color: orange;
 }
-.goContrast a:hover{
+body.non-touch .goContrast a:hover{
     transition: all 0.2s;
     filter: brightness(50%);
 }
@@ -501,7 +520,7 @@ section{
     background-color: black;
     border-left: 2px solid #fcfcfc;
 }
-.goDark #close_port_btn:hover{
+body.non-touch .goDark #close_port_btn:hover{
     color: black;
     background-color: #fcfcfc;
     border-left: 0px solid #fcfcfc;
