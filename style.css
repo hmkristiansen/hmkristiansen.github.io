@@ -9,8 +9,8 @@
 /* GLOBAL STYLING */
 
 html{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     background-color: rgb(245, 245, 245);
     color: #353638;
@@ -47,8 +47,8 @@ body{
     -ms-overflow-style: none;
 
     font-weight: 400;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 
     opacity: 0;
     transition: opacity 1s;
@@ -88,11 +88,11 @@ body::-webkit-scrollbar {
 .snapper{
     overflow: scroll;
     scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-points-y: repeat(100%);
     scroll-snap-type: y mandatory;
 
     -webkit-scroll-snap-type: mandatory;
-    -webkit-scroll-snap-points-y: repeat(100vh);
+    -webkit-scroll-snap-points-y: repeat(100%);
     -webkit-scroll-snap-type: y mandatory;
 }
 
@@ -136,7 +136,7 @@ h2{
     font-weight: 700;
     font-size: 1.5rem;
     padding-top: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
 
 #location{
@@ -237,7 +237,12 @@ section{
     z-index: 0;
 }
 
-section li{
+.section_content ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section_content li{
     margin: 8px;
     margin-left: 0;
 }
@@ -254,8 +259,8 @@ section li{
 /*PORTFOLIO OVERLAY*/
 
 .port_overlay{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     position: fixed; 
     top: 0; left: 0; top: 0; bottom: 0;
@@ -524,8 +529,8 @@ section li{
         overflow: hidden;
     }
     body{
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         overflow: hidden;
     }
     .faderTop{
@@ -611,9 +616,19 @@ section li{
         width: 100% !important;
         max-width: 400px;
     }
-    .section_content li{
+    .section_content h2{
         margin-bottom: 15px;
         margin-top: 15px;
+    }
+    .section_content li{
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+     }
+    .section_content a{
+        padding-top: 8px;
+        padding-bottom: 8px;
     }
 
     /* PORT OVERLAY */
@@ -659,7 +674,7 @@ section li{
 
     /*SETTINGS*/
     .settings{
-        padding: 15px;
+        padding: 10px;
     }
     .settings li{
         padding: 5px;
