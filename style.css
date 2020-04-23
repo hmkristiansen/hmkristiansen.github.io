@@ -113,8 +113,7 @@ a{
 
 body.non-touch a:hover{
     transition: all 0.2s;
-    /*filter: brightness(150%);*/
-    color: black;
+    opacity: 0.6;
     text-decoration: none;
     cursor: ne-resize;
 }
@@ -183,6 +182,7 @@ nav::after {
 body.non-touch #menu li a:hover{
     opacity: 1;
     cursor: pointer;
+    filter: brightness(100%);
 }
 
 #menu{
@@ -476,7 +476,7 @@ body.non-touch .inactiveSettings:hover{
 }
 body.non-touch .goDark a:hover{
     transition: all 0.2s;
-    filter: brightness(50%);
+    filter: brightness(80%);
 }
 .goDark nav::after{
     background-color: rgb(61, 61, 61);
