@@ -167,7 +167,7 @@ nav{
 
 nav::after {
     content: '';
-    height: 45vh; 
+    height: 45%; 
     width: 1px;
     position: absolute;
     right: 0;
