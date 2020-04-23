@@ -394,7 +394,7 @@ section{
 /* SETTINGS BTN */
 
 .settings{
-    position: absolute;
+    position: fixed;
     left: 10px;
     bottom: 10px;
     padding: 10px;
@@ -566,6 +566,7 @@ section{
     }
     nav::after {
         content: '';
+        display: none;
     }
     nav::-webkit-scrollbar {
         display: none;
@@ -575,7 +576,7 @@ section{
         overflow-y: hidden;
         width: 250%;
         padding: 0;
-        padding-left: 5vw;
+        padding-left: 5%;
     }
     #menu li {
         margin: 0 auto;
