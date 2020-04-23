@@ -573,7 +573,7 @@ section{
     #menu{
         overflow-x: scroll;
         overflow-y: hidden;
-        width: 250vw;
+        width: 250%;
         padding: 0;
         padding-left: 5vw;
     }
