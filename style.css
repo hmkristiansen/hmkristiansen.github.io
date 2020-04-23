@@ -12,7 +12,7 @@ html{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(250, 250, 250);
     color: #353638;
     transition: all 0.2;
     font-size: 16px;
@@ -70,7 +70,7 @@ body::-webkit-scrollbar {
     left: 24%;
     width: 500px;
     height: 200px;
-    background: -webkit-linear-gradient(bottom, rgba(245,245,245,0), rgba(245,245,245,1));
+    background: -webkit-linear-gradient(bottom, rgba(250,250,250,0), rgba(250,250,250,1));
     z-index: 100;
 }
 
@@ -81,7 +81,7 @@ body::-webkit-scrollbar {
     left: 24%;
     width: 500px;
     height: 200px;
-    background: -webkit-linear-gradient(top, rgba(245,245,245,0), rgba(245,245,245,1));
+    background: -webkit-linear-gradient(top, rgba(250,250,250,0), rgba(250,250,250,1));
     z-index: 100;
 }
 
@@ -409,6 +409,7 @@ section{
 }
 .settings #settingsList{
     display: inline;
+    margin-left: 10px;
     transition: all 0.2s;
     position: relative;
 }
@@ -442,17 +443,17 @@ section{
 /* COLOR MODES */	
 
 .goDark{
-    color: rgba(245,245,245,1);
+    color: rgba(250,250,250,1);
     background-color: black;
 }
 .goDark a{
-    color: rgba(245,245,245,1);
+    color: rgba(250,250,250,1);
 }
 .goDark h2{
-    color:rgba(245,245,245,1);
+    color:rgba(250,250,250,1);
 }
 .goDark h1{
-    color:rgba(245,245,245,1);
+    color:rgba(250,250,250,1);
 }
 .goDark a:hover{
     transition: all 0.2s;
@@ -559,7 +560,7 @@ section{
         overflow-x: scroll;
         padding: 10px;
     
-        background-color: rgba(245, 245, 245, 0.8);
+        background-color: rgba(250, 250, 250, 0.8);
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
         border-bottom: 1px solid rgba(200,200,200,1);
