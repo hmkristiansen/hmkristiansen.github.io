@@ -574,7 +574,8 @@ section{
     #menu{
         overflow-x: scroll;
         overflow-y: hidden;
-        width: 250%;
+        width: 200%;
+        border: none;
         padding: 0;
         padding-left: 5%;
     }
