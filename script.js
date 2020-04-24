@@ -110,17 +110,19 @@ function createAnchorLinks(){
 }
 
 /* - - - */ 
+var $currentSection;
+var currentId;
 
 function updateAnchors(e){
 	var scrollPos = $('body').scrollTop();
 	var reach = window.innerHeight/2;
-	var $currentSection;
 	for(var i=0; i<mainSections.length; i++){
 		var id = mainSections[i].id;
 		$currentSection = $("#"+id);
 		var activeLinkHref = "#"+ mainSections[i].id;
 		if( (scrollPos -  mainSections[i].offsetTop) <= reach && (scrollPos -  mainSections[i].offsetTop) > -reach ){
 			$("a[href='"+activeLinkHref+"']").addClass("active");
+			currentId = $currentSection.attr("id")			
 			if(isMobile){
 				scrollMobileNav(i);
 			}
@@ -296,6 +298,27 @@ function preloadImage(url){
     img.id = "port_img";
     images.push(img);
 }
+
+/* UPDATE AGE */
+
+var bday = new Date("Nov 19, 1996 05:55:25").getTime();
+var dday = new Date("Nov 19, 2077 12:00:00").getTime();
+
+var update = setInterval(function() {
+	if(currentId == "about"){
+		updateAge();
+	}
+}, 10);
+
+function updateAge(){
+	var now = new Date().getTime(); 
+	var diffTime1 = Math.abs(now - bday);
+	var diffTime2 = Math.abs(dday - now);
+	document.getElementById("age").innerHTML =(diffTime1/31557600000);
+	//document.getElementById("dead").innerHTML ="💀 : " + (diffTime2/31557600000);
+}
+
+
 
 
 
