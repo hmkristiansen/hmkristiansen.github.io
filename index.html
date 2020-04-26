@@ -21,13 +21,11 @@
 <body>
     <div class="faderTop"></div>
     <div class="faderBottom"></div>
+    
     <!-- NAV  -->
     <nav>
         <ul id="menu">
             <li><a href="#home" class="active">hmkristiansen</a></li>
-            <!--
-            <li><a href="#vision">_vision</a></li>
-            -->
             <li><a href="#work">_portfolio</a></li>
             <li><a href="#resume">_resume</a></li>
             <li><a href="#about">_stats</a></li>
@@ -39,150 +37,123 @@
         <div id="settingsIcon" class="inactiveSettings">⚙️</div>
         <ul id="settingsList" class="hideSettings">
             <li><a href="#" onclick="changeTheme();return false;" id="goLight" class="">light</a></li>
+            <li><a href="#" onclick="changeTheme();return false;" id="goGray" class="">dark</a></li>
             <li><a href="#" onclick="changeTheme();return false;" id="goDark" class="">black</a></li>
             <li><a href="#" onclick="changeTheme();return false;" id="goContrast" class="">bad</a></li>
+            <li>|</li>
             <li><a href="https://github.com/henkrist/henkrist.github.io" target="_blank" class="githubLink">Code on GitHub</a></li>
         </ul>
     </div>
 
     <!-- NAV STOP  -->
 
-    <section id="home">
-        <div class="section_content">
-            <h2>Heisann! I'm Henrik.</h2>
-            <p>
-                I'm an interaction design student from Oppegård, currently living in Lisbon.<br><br>
-                I aim to create simple tools and effective experiences with the induvidual in mind.<br><br>
-                Scroll down for more me 👇
-            </p>    
-        </div>
-    </section>
+    <div class="faderTop"></div>
+    <div class="faderBottom"></div>
 
-    <!--
-    <section id="vision">
-        <div class="section_content">
-            <h2>Life is a timeline of everyday problems.</h2>
-            <p>In the long run these problems can develop to become sources of stress and anxiety.<br>
-            I aim to create simple tools and thoughtful experiences that can help.</p>
-        </div>
-    </section>
-    -->
+    <div class="section_wrapper">
 
-    <section id="work">
-        <div class="section_content">
-            <h2>Recent projects;</h2>
-            <ul>
-                <li><a class="port_quick_view" id="shake" href="#" onclick="return false;">Safer 2nd hand purchase of cars</a></li>
-                <li><a class="port_quick_view" id="ctrl" href="#" onclick="return false;">Making household budgeting more visible</a></li>
-                <li><a class="port_quick_view" id="nn" href="#" onclick="return false;">Using game design to tackle anxiety</a></li>
-                <li><a class="port_quick_view" id="pb" href="#" onclick="return false;">Precaution through picture books</a></li>
-            </ul>
-            <h2>More;</h2>
-            <p><a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">Project archive</a> in Notion.</p>
-        </div>
-        <!--
-        <div class="port_view hide_port">
+        <section id="home">
+            <div class="section_content">
+                <h2>Heisann! I'm Henrik.</h2>
+                <p>
+                    I'm an interaction design student from Oppegård, currently living in Lisbon.<br><br>
+                    I aim to create simple tools and effective experiences with the induvidual in mind.<br><br>
+                    Scroll down for more me 👇
+                </p>    
+            </div>
+        </section>
+
+        <section id="work">
+            <div class="section_content">
+                <h2>Recent projects;</h2>
+                <ul>
+                    <li><a class="port_quick_view" id="shake" href="#" onclick="return false;">Safer 2nd hand purchase of cars</a></li>
+                    <li><a class="port_quick_view" id="ctrl" href="#" onclick="return false;">Making household budgeting more visible</a></li>
+                    <li><a class="port_quick_view" id="nn" href="#" onclick="return false;">Using game design to tackle anxiety</a></li>
+                    <li><a class="port_quick_view" id="pb" href="#" onclick="return false;">Precaution through picture books</a></li>
+                </ul>
+                <h2>More;</h2>
+                <p><a href="https://www.notion.so/0ae5510a0e224f4c8a6936045fe51e06?v=f3f088ddad664c0fab1b2af3fab3c2bf" target="_blank">Project archive</a> in Notion.</p>
+            </div>
+        </section>
+
+        <div class="port_overlay">
+            
             <div class="port_cont">
-                <div id="close_port_btn">Close X</div>
-                <h1></h1>
-                <p></p>
-                <a>More about this project</a>
-            </div>
-        </div>
-        -->
-    </section>
-
-    <div class="port_overlay">
-        
-        <div class="port_cont">
-            <!--
-            <img src="">
-            -->
-            <div class="cont_desc" id="imageSelector">
-                <h1>Beate og Skikkelsene</h1>
-                <div id="item_info">
-                    <ul>
-                        <li id="client"></li>
-                        <li id="role"></li>
-                        <li id="period"></li>
-                    </ul>
-                </div>
-                
-                <div class="cont_wrapper">
-                    <p id="cont_ing">The class Illustration & Comics challenged me to get comfortable with illustrating and using it more as a tool of communication.</p>
-                </div>
-                <!--
-                <div class="cont_wrapper">
-                    <img class="" src="assets/pb/pb_01.jpg">
-                </div>                
-                <div class="cont_wrapper">
-                    <p class="go_left">The picture book is based on the original story about Beauty and The Beast, but retold to tell the story of Beate and how she overcame hear anxiety when moving across the country and chaning schools.</p>
-                </div>
-                <div class="cont_wrapper">
-                    <img class="" src="assets/pb/pb_02.jpg">
-                </div>
-                <div class="bottom_whitespace"></div>
-                -->
-            </div>
-        </div>
-        <div id="close_port_btn">close</div>
-    </div>
-    
-
-    <section id="resume">
-        <div class="section_content">
-            <h2>Currently;</h2>
-            <ul>
-                <li>Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, doing a MS.c in Industrial Design from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a>.</li>
-                <li>Upcoming summer intern at <a href="https://www.iterate.no/" target="_blank">Iterate</a>.  </li>
-            </ul>
-            <h2>Recently;</h2>
-            <ul>
-                <li><a href="https://www.itera.no/en/" target="_blank">Itera</a> - UX design summer intern</li>
-            </ul>
-            <h2>Previously;</h2>
-            <ul>
-                <li><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - project manager</li>
-                <li><a onclick="window.open(this.href,'_blank');return false;" href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - volunteer</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="section_content">
-            <h2>Facts & Figures;</h2>
-            <ul>
-                <li>"Hinken"</li>
-                <li id="life_counter">
-                    <div id="life_wrapper">
-                        <span id="age">23.123456789123456789</span><span id="dead"></span>
+                <div class="cont_desc" id="imageSelector">
+                    <h1>Beate og Skikkelsene</h1>
+                    <div id="item_info">
+                        <ul>
+                            <li id="client"></li>
+                            <li id="role"></li>
+                            <li id="period"></li>
+                        </ul>
                     </div>
-                </li>
-                <li>LYR → OSL → TRD → LIS</li>
-                <li><a id="location" href="https://www.google.com/search?sxsrf=ALeKk03TiEpXeV0y2tWUjZveuUO78a7f0g%3A1585151572007&source=hp&ei=U357XpvQO4OJlwSG2LaoAQ&q=38.703321%2C+-9.179565&oq=38.703321%2C+-9.179565&gs_l=psy-ab.3...397.397..927...1.0..0.69.69.1......0....2j1..gws-wiz.QGB--Smm6-0&ved=0ahUKEwjbxfPi_bXoAhWDxIUKHQasDRUQ4dUDCAU&uact=5" target="_blank">@ 38.703321, -9.179565</a></li>
-                <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🍂}</li>
-            </ul>
+                    
+                    <div class="cont_wrapper">
+                        <p id="cont_ing">The class Illustration & Comics challenged me to get comfortable with illustrating and using it more as a tool of communication.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="close_port_btn">close</div>
         </div>
-    </section>
+        
 
-    <section id="contact">
-        <div class="section_content">
-            <h2>Epost;</h2>
-            <ul>
-                <li><a href="mailto:hei@hinken.no" target="_blank">hei@hinken.no</a></li>
-            </ul>
-            <h2>Elsewhere;</h2>
-            <ul>
-                <!--
-                <li><a href="https://dribbble.com/hmkristiansen" target="_blank">Dribbble</a></li>
-                -->
-                <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">Instagram</a></li>
-                <li><a href="https://twitter.com/hmkristiansen_" target="_blank">Twitter</a></li>
-            </ul>
-        </div>
-    </section>
+        <section id="resume">
+            <div class="section_content">
+                <h2>Currently;</h2>
+                <ul>
+                    <li>Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, doing a MS.c in Industrial Design from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a>.</li>
+                    <li>Upcoming summer intern at <a href="https://www.iterate.no/" target="_blank">Iterate</a>.  </li>
+                </ul>
+                <h2>Recently;</h2>
+                <ul>
+                    <li><a href="https://www.itera.no/en/" target="_blank">Itera</a> - UX design summer intern</li>
+                </ul>
+                <h2>Previously;</h2>
+                <ul>
+                    <li><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - project manager</li>
+                    <li><a onclick="window.open(this.href,'_blank');return false;" href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - volunteer</li>
+                </ul>
+            </div>
+        </section>
 
+        <section id="about">
+            <div class="section_content">
+                <h2>Facts & Figures;</h2>
+                <ul>
+                    <li>"Hinken"</li>
+                    <li id="life_counter">
+                        <div id="life_wrapper">
+                            <span id="age">23.123456789123456789</span><span id="dead"></span>
+                        </div>
+                    </li>
+                    <li>LYR → OSL → TRD → LIS</li>
+                    <li><a id="location" href="https://www.google.com/search?sxsrf=ALeKk03TiEpXeV0y2tWUjZveuUO78a7f0g%3A1585151572007&source=hp&ei=U357XpvQO4OJlwSG2LaoAQ&q=38.703321%2C+-9.179565&oq=38.703321%2C+-9.179565&gs_l=psy-ab.3...397.397..927...1.0..0.69.69.1......0....2j1..gws-wiz.QGB--Smm6-0&ved=0ahUKEwjbxfPi_bXoAhWDxIUKHQasDRUQ4dUDCAU&uact=5" target="_blank">@ 38.703321, -9.179565</a></li>
+                    <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🍂}</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section_content">
+                <h2>Epost;</h2>
+                <ul>
+                    <li><a href="mailto:hei@hinken.no" target="_blank">hei@hinken.no</a></li>
+                </ul>
+                <h2>Elsewhere;</h2>
+                <ul>
+                    <!--
+                    <li><a href="https://dribbble.com/hmkristiansen" target="_blank">Dribbble</a></li>
+                    -->
+                    <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/hmkristiansen_" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
     <script src="script.js"></script>
     <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script> 
     <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>    

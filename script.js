@@ -29,7 +29,6 @@ preload();
 
 $(document).ready(function() {
 	startup();
-	createAnchorLinks();
 	updateContainer();
 
 	if(isMobile){
@@ -41,7 +40,7 @@ $(window).resize(function() {
 	updateContainer();
 });
 
-$('html, body').scroll(function(e) {
+$('.section_wrapper').scroll(function(e) {
 	if(!inPortOverlay){
 		updateAnchors(e);
 	}
@@ -51,15 +50,13 @@ $('html, body').scroll(function(e) {
 
 function startup(){
 	checkIfTouch();
-	//checkBrowser();
 
 	$('body').addClass(' loadBody');
 	checkIfDarkmode();
-	//preload();
 	setSectionHeights();
 
 	/*Setting setting some states*/ 
-	$('body').addClass('snapper');
+	$('.section_wrapper').addClass('snapper');
 	$('section').each(function () {
 		$(this).addClass('snapping');
 	});
@@ -90,31 +87,26 @@ function getProjects(){
 
 /* - - - */ 
 
-function createAnchorLinks(){
-	$('a[href*="#"]').bind('click', function(e) {
-		e.preventDefault(); 
-		var target = $(this).attr("href"); 
-		var scrollTop;
-		for(var i=0; i<mainSections.length; i++){
-			if(('#' + mainSections[i].id) == target){
-				scrollTop = mainSections[i].offsetTop;
-			}
+$('#menu a').click(function(event) {
+	event.preventDefault(); 
+	var target = $(this).attr("href"); 
+	var scrollTop;
+	for(var i=0; i<mainSections.length; i++){
+		if(('#' + mainSections[i].id) == target){
+			scrollTop = mainSections[i].offsetTop;
 		}
-		$('html, body').animate({
-				scrollTop
-		}, 300, 'swing', function() {
-			//location.hash = target; //attach the hash (#jumptarget) to the pageurl
-		});
-		return false;
-	});
-}
+	}
+	$('.section_wrapper').animate({
+		scrollTop
+	}, 200);	
+});
 
 /* - - - */ 
 var $currentSection;
 var currentId;
 
 function updateAnchors(e){
-	var scrollPos = $('body').scrollTop();
+	var scrollPos = $('.section_wrapper').scrollTop();
 	var reach = window.innerHeight/2;
 	for(var i=0; i<mainSections.length; i++){
 		var id = mainSections[i].id;
@@ -169,8 +161,8 @@ function setSectionHeights(){
 
 function checkIfDarkmode(){
 	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		document.getElementById('page').setAttribute("class", "goDark");
-		document.getElementById('goDark').classList.add("currentTheme");
+		document.getElementById('page').setAttribute("class", "goGray");
+		document.getElementById('goGray').classList.add("currentTheme");
 	}else{
 		document.getElementById('page').setAttribute("class", "goLight");
 		document.getElementById('goLight').classList.add("currentTheme");
@@ -184,6 +176,7 @@ function changeTheme(){
 	document.getElementById('page').setAttribute("class", id);
 
 	document.getElementById('goLight').classList.remove("currentTheme");
+	document.getElementById('goGray').classList.remove("currentTheme");
 	document.getElementById('goDark').classList.remove("currentTheme");
 	document.getElementById('goContrast').classList.remove("currentTheme");
 
@@ -245,8 +238,6 @@ $(".port_quick_view").click(function(event) {
 $("#close_port_btn").click(function(event) {
 	inPortOverlay = false;
 
-	$(".faderTop").toggleClass("removeElement");
-	$(".faderBottom").toggleClass("removeElement");
 	$(".port_overlay").toggleClass("show_overlay");
 
 	$('#work').toggleClass('blur');
@@ -255,6 +246,8 @@ $("#close_port_btn").click(function(event) {
 
 	setTimeout(function() {
 		document.getElementById("port_img").remove();
+		$(".faderTop").toggleClass("removeElement");
+		$(".faderBottom").toggleClass("removeElement");
 	}, 200);
 });
 
@@ -304,11 +297,13 @@ function preloadImage(url){
 var bday = new Date("Nov 19, 1996 05:55:25").getTime();
 var dday = new Date("Nov 19, 2077 12:00:00").getTime();
 
+
 var update = setInterval(function() {
 	if(currentId == "about"){
 		updateAge();
 	}
-}, 10);
+}, 1000);
+
 
 function updateAge(){
 	var now = new Date().getTime(); 
@@ -317,66 +312,3 @@ function updateAge(){
 	document.getElementById("age").innerHTML =(diffTime1/31557600000);
 	//document.getElementById("dead").innerHTML ="💀 : " + (diffTime2/31557600000);
 }
-
-
-
-
-
-/* - - - */ 
-// OLD STUFF
-/* - - -  - -*/
-
-/*
-var lastOffset = $('body').scrollTop();
-var lastDate = new Date().getTime();
-var ticker = 0;
-
-function useScrollSpeed(e){
-	var delayInMs = e.timeStamp - lastDate;
-	var offset = e.target.scrollTop - lastOffset;
-	var speedInpxPerMs = offset / delayInMs;
-
-	lastDate = e.timeStamp;
-	lastOffset = e.target.scrollTop;
-	
-	checkPosition(speedInpxPerMs);
-	debounce(checkPosition);
-}
-
-function checkPosition(speedInpxPerMs){
-	const nav = document.querySelector('nav');
-	if (speedInpxPerMs < -1) {
-		nav.classList.add('is-visible');
-		nav.classList.remove('is-hidden');
-		ticker++;
-	}else if(ticker > 10){
-		removeNav();
-		ticker = 0;
-	}
-}
-
-function debounce(func, wait = 10, immediate = true) {
-	let timeout;
-	return function() {
-	  let context = this, args = arguments;
-	  let later = function() {
-		timeout = null;
-		if (!immediate) func.apply(context, args);
-	  };
-	  let callNow = immediate && !timeout;
-	  clearTimeout(timeout);
-	  timeout = setTimeout(later, wait);
-	  if (callNow) func.apply(context, args);
-	};
-};
-*/
-/* - - - */ 
-
-/*
-function removeNav(){
-	const nav = document.querySelector('nav');
-	setTimeout(function() { 
-		nav.classList.add('is-hidden');
-		nav.classList.remove('is-visible');
-	}, 1500);
-}*/
