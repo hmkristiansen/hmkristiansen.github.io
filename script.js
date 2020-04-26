@@ -302,7 +302,7 @@ var update = setInterval(function() {
 	if(currentId == "about"){
 		updateAge();
 	}
-}, 1000);
+}, 10);
 
 
 function updateAge(){
