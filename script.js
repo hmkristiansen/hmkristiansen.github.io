@@ -262,7 +262,7 @@ var update = setInterval(function() {
 	if(scrollPos > upperBound && scrollPos < lowerBound){
 		updateAge();
 	}
-}, 10);
+}, 500);
 
 var bday = new Date("Nov 19, 1996 05:55:25").getTime();
 var dday = new Date("Nov 19, 2077 12:00:00").getTime();
