@@ -21,9 +21,6 @@ html{
     overflow: hidden;
 }
 
-.noscroll { overflow: hidden; }
-.removeElement{ display: none; }
-
 .blur{
     transition: all 0.2s;
     -moz-filter:blur(50px);
@@ -95,6 +92,18 @@ body{
     background: -webkit-linear-gradient(top, rgba(250,250,250,0), rgba(250,250,250,1));
     z-index: 100;
 }
+
+.header{
+    display:none;
+}
+
+.progress-container {
+    background: rgb(250, 250, 250);
+}
+.progress-bar {
+    background: #353638;
+}
+
 
 .snapper{
     overflow: scroll;
@@ -517,6 +526,13 @@ body.non-touch .goDark #close_port_btn:hover{
     border-left: 0px solid #fcfcfc;
 }
 
+.goDark .progress-container {
+    background: black;
+}
+.goDark .progress-bar {
+    background: rgb(250,250,250);
+}
+
 /* - - - - */
 
 .goGray {
@@ -559,6 +575,13 @@ body.non-touch .goGray #close_port_btn:hover{
     border-left: 0px solid #fcfcfc;
 }
 
+.goGray .progress-container {
+    background: rgb(14, 14, 14);
+}
+.goGray .progress-bar {
+    background: rgb(236,236,236);
+}
+
 /* - - - - */
 
 .goContrast{
@@ -587,12 +610,14 @@ body.non-touch .goContrast a:hover{
     filter: brightness(50%);
 }
 
-
-
 .currentTheme{
     text-decoration: none;
     pointer-events: none;
 }
+
+/* - - - - - OVERRIDES - - - - - -*/
+.noscroll { overflow: hidden; }
+.removeElement{ display: none; }
 
 /* - - - - - -  RESPONSIVITY- - - - - - -*/
 
@@ -646,9 +671,29 @@ body.non-touch .goContrast a:hover{
         width: 450px;
         height: 100px;
     }
+
+    /* Scoll indicator */
+
+    .header {
+        display:block;
+        position: fixed;
+        top: 0;
+        z-index: 101;
+        width: 100%;
+    }
+    .progress-container {
+        width: 100%;
+        height: 3px;
+    }
+    .progress-bar {
+        height: 3px;
+        width: 0%;
+    }
     
     /*NAV*/
     nav{
+        display:none;
+
         position: absolute; 
         top: 0px;
         left:0;
