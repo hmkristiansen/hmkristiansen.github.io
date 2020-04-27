@@ -171,7 +171,7 @@ nav{
     flex: 1 1 auto;
     align-self: auto;
     width: 10%;
-    padding-right: 5%;
+    padding-right: 80px;
 
     position: relative;
 
@@ -181,11 +181,11 @@ nav{
 
 nav::after {
     content: '';
-    height:150%; 
+    height:130%; 
     position: absolute;
     width: 1px;
-    right: 15%;
-    top: -25%;
+    right: 40px;
+    top: -15%;
     background-color: rgba(200,200,200,1); 
     z-index: 1000;
 }
@@ -204,6 +204,7 @@ body.non-touch #menu li a:hover{
 #menu{
     margin: 0;
     padding: 10px;
+    padding-right: 0;
 }
 
 #menu ul{
@@ -213,6 +214,7 @@ body.non-touch #menu li a:hover{
 
 #menu li{
     margin: 20px;
+    margin-right: 0;
     height: 25px;
     align-items: center;
 }
@@ -625,15 +627,12 @@ body.non-touch .goContrast a:hover{
 @media only screen and (max-width: 1100px) {
     nav{
         font-size: 0.7rem;
-        width: 10%;
-        padding-right: 2%;
     }
     nav::after{
         content: '';
         height:120%; 
         position: absolute;
         width: 1px;
-        right: 8%;
         top: -10%;
         background-color: rgba(200,200,200,1); 
         z-index: 1000;
@@ -643,7 +642,7 @@ body.non-touch .goContrast a:hover{
     }
 
     .section_wrapper{
-        padding-left: 5%;
+       
     }
 }
 
