@@ -771,8 +771,8 @@ body.non-touch .goContrast a:hover{
         max-width: 400px;
     }
     .section_content h2{
-        
-        margin-top: 15px;
+        /*
+        margin-top: 15px;*/
     }
     .section_content li{
         padding: 0;
