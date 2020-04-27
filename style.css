@@ -529,6 +529,14 @@ body.non-touch .goDark #close_port_btn:hover{
     border-left: 0px solid #fcfcfc;
 }
 
+
+.goDark .progress-container {
+    background-color: black;
+}
+.goDark .progress-bar {
+    color: rgba(250,250,250,1);
+}
+
 /* - - - - */
 
 .goGray {
