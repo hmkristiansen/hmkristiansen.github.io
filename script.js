@@ -41,6 +41,7 @@ $(window).resize(function() {
 });
 
 $('.section_wrapper').scroll(function(e) {
+	scrollBar();
 	if(!inPortOverlay){
 		updateAnchors(e);
 	}
@@ -311,4 +312,19 @@ function updateAge(){
 	var diffTime2 = Math.abs(dday - now);
 	document.getElementById("age").innerHTML =(diffTime1/31557600000);
 	//document.getElementById("dead").innerHTML ="💀 : " + (diffTime2/31557600000);
+}
+
+
+// When the user scrolls the page, execute myFunction 
+
+function scrollBar() {
+	/*
+	var winScroll = document.querySelector(".section_wrapper").scrollTop || document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	var scrolled = (winScroll / height) * 100;*/
+
+	var height = $('.section_wrapper').height()*(mainSections.length-1);
+	var scrollPos = $('.section_wrapper').scrollTop();
+	var scrolled = (scrollPos / height) * 100;
+	document.getElementById("bar").style.width = scrolled + "%";
 }

@@ -96,6 +96,18 @@ body{
     z-index: 100;
 }
 
+.header{
+    display:none;
+}
+
+.progress-container {
+    background: rgb(250, 250, 250);
+}
+.progress-bar {
+    background: #353638;
+}
+
+
 .snapper{
     overflow: scroll;
     scroll-snap-type: y mandatory;
@@ -646,9 +658,29 @@ body.non-touch .goContrast a:hover{
         width: 450px;
         height: 100px;
     }
+
+    /* Scoll indicator */
+
+    .header {
+        display:block;
+        position: fixed;
+        top: 0;
+        z-index: 2000;
+        width: 100%;
+    }
+    .progress-container {
+        width: 100%;
+        height: 3px;
+    }
+    .progress-bar {
+        height: 3px;
+        width: 0%;
+    }
     
     /*NAV*/
     nav{
+        display:none;
+
         position: absolute; 
         top: 0px;
         left:0;
