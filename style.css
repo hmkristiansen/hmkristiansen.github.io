@@ -21,9 +21,6 @@ html{
     overflow: hidden;
 }
 
-.noscroll { overflow: hidden; }
-.removeElement{ display: none; }
-
 .blur{
     transition: all 0.2s;
     -moz-filter:blur(50px);
@@ -529,12 +526,11 @@ body.non-touch .goDark #close_port_btn:hover{
     border-left: 0px solid #fcfcfc;
 }
 
-
 .goDark .progress-container {
-    background-color: black;
+    background: black;
 }
 .goDark .progress-bar {
-    color: rgba(250,250,250,1);
+    background: rgb(250,250,250);
 }
 
 /* - - - - */
@@ -579,6 +575,13 @@ body.non-touch .goGray #close_port_btn:hover{
     border-left: 0px solid #fcfcfc;
 }
 
+.goGray .progress-container {
+    background: rgb(14, 14, 14);
+}
+.goGray .progress-bar {
+    background: rgb(236,236,236);
+}
+
 /* - - - - */
 
 .goContrast{
@@ -607,12 +610,14 @@ body.non-touch .goContrast a:hover{
     filter: brightness(50%);
 }
 
-
-
 .currentTheme{
     text-decoration: none;
     pointer-events: none;
 }
+
+/* - - - - - OVERRIDES - - - - - -*/
+.noscroll { overflow: hidden; }
+.removeElement{ display: none; }
 
 /* - - - - - -  RESPONSIVITY- - - - - - -*/
 
@@ -673,7 +678,7 @@ body.non-touch .goContrast a:hover{
         display:block;
         position: fixed;
         top: 0;
-        z-index: 2000;
+        z-index: 101;
         width: 100%;
     }
     .progress-container {
