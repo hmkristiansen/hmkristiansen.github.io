@@ -1,0 +1,19 @@
+
+{
+    "header_img": "assets/shake/shake.jpg",
+    "cont_ing": "SHAKE",
+    "item_info": {
+        "client": "Client; Santander Consumer Bank",
+        "role": "Role; UX Designer",
+        "period": "Period; Summer '19"
+    },
+    "images": {
+        "image1": "assets/img/pb/pb_01.jpg",
+        "image2": "assets/img/pb/pb_02.jpg"
+    },
+    "text":{
+        "text0":"Content under development",
+        "text1": "The class Illustration & Comics challenged me to get comfortable with illustrating and using it more as a tool of communication.",
+        "text2": "The picture book is based on the original story about Beauty and The Beast, but retold to tell the story of Beate and how she overcame hear anxiety when moving across the country and chaning schools."
+    }
+}

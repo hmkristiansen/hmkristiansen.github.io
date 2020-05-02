@@ -24,43 +24,51 @@
 
     <header>
         <div class="row">
-            <div class="column" id="logo">
-                <p>hmkristiansen</p>
-            </div>
+            
             <div class="column" id="nav">
                 <ul>
-                    <li>about</li>
-                    <li onclick="togglePort();">work</li>
+                    <li>greeting</li>
+                    <li>work</li>
+                    <li>resume</li>
                     <li>contact</li>
                 </ul>
+            </div>
+            <div class="column" id="logo">
+                <p>hmkristiansen</p>
             </div>
         </div>
     </header>
 
     <section id="about">
+            <h1>Heisann!</h1>
+            <p>I'm an interaction design student from Oppegård, currently living in Lisbon.<br>
+                I aim to create simple tools and effective experiences with the induvidual in mind.<br>
+                Scroll down for more me 👇</p>
+            <!--
             <div class="row">
                 <div class="column" id="greeting">
+                    <h1>Heisann!</h1>
                     <p>I'm an interaction design student from Oppegård, currently living in Lisbon.<br><br>
                         I aim to create simple tools and effective experiences with the induvidual in mind.<br><br>
                         Scroll down for more me 👇</p>
                 </div>
+               
                 <div class="column" id="img_me">
                     <img src="../assets/me.png">
                 </div>
+                -->
             </div>
     </section>
 
-    <section id="photogrid" class="inactive">
+    <section id="work" class="inactive">
         <div class="row"> 
             <div class="column">
-              <img src="../assets/ctrl/ctrl.jpg" style="width:100%">
-              <img src="../assets/nn/nn.jpg" style="width:100%">
-              <img src="../assets/pb/pb.jpg" style="width:100%">
+              <img src="assets/ctrl/ctrl.jpg" style="width:100%">
+              <img src="assets/nn/nn.jpg" style="width:100%">
             </div>
             <div class="column">
-                <img src="../assets/pb/pb.jpg" style="width:100%">
-                <img src="../assets/ctrl/ctrl.jpg" style="width:100%">
-                <img src="../assets/nn/nn.jpg" style="width:100%">
+                <img src="assets/pb/pb.jpg" style="width:100%">
+                <img src="assets/shake/shake.jpg" style="width: 100%;">
             </div> 
             <!--
             <div class="column">
@@ -69,6 +77,47 @@
                 <img src="../assets/ctrl/ctrl.jpg" style="width:100%">
             </div>-->
           </div>
+    </section>
+    <section id="resume" class="">
+        
+        <ul>
+
+            <li>
+                <h1>Currently</h1>
+                <p>Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, doing a MS.c in Industrial Design from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a></p>
+                <p>Upcoming summer intern at <a href="https://www.iterate.no/" target="_blank">Iterate</a></p>
+            </li>
+            <li>
+                <h1>Recently</h1>
+                <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - UX design summer intern</p>
+            </li>
+            <li>
+                <h1>Previosly</h1>
+                <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - project manager</p>
+                <p><a onclick="window.open(this.href,'_blank');return false;" href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - volunteer</p>
+            </li>
+
+        </ul>
+        
+    </section>
+
+    <section id="contact" class="">
+
+        <h2>Get in touch</h2>
+                <ul>
+                    <li><a href="mailto:hei@hinken.no" target="_blank">hei@hinken.no</a></li>
+                </ul>
+                <h2>Even more me</h2>
+        <ul>
+            <!--
+            <li><a href="https://dribbble.com/hmkristiansen" target="_blank">Dribbble</a></li>
+            -->
+            <li><a href="http://resume.hinken.no/" target="_blank">Resume</a> in Notion</li>
+            <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com/hmkristiansen_" target="_blank">Twitter</a></li>
+        </ul>
+        
     </section>
 
     <script src="script/script.js"></script>
