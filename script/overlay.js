@@ -17,7 +17,20 @@ $( "#close_btn" ).click(function() {
 		$('#close_btn').addClass('hideCloseBtn');
 		document.getElementById("port_img").remove();	
 	}, 300);
+});
 
+$('#overlay').on('click', function(e) {
+	if (e.target !== this){
+		return;
+	}
+	$('#overlay').addClass('hidden');
+    $('#overlay').removeClass('visible');
+    $('body').removeClass('noScroll');
+    $('#work, header ,footer').removeClass('blur');
+    setTimeout(function() {
+		$('#close_btn').addClass('hideCloseBtn');
+		document.getElementById("port_img").remove();	
+	}, 300);
 });
 
 function renderProject(event){
