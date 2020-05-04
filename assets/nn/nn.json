@@ -1,10 +1,10 @@
 
 {
     "header_img": "assets/nn/nn.jpg",
-    "cont_ing": "Neurotiske Nevroner",
+    "h1": "Neurotiske Nevroner",
     "item_info": {
-        "client": "Client; TACKL",
-        "role": "Role; Game- & UX Designer",
+        "client": "Client: TACKL",
+        "role": "Role: Game- & UX Designer",
         "period": "Period; Spring '19"
     },
     "images": {
