@@ -23,7 +23,7 @@ html{
 
 .blur{
     transition: all 0.2s;
-    -moz-filter:blur(50px);
+    -moz-filter:blur(5px);
     -o-filter:blur(5px);
     -webkit-filter:blur(5px);
     filter:blur(5px);

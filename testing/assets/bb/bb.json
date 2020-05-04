@@ -1,11 +1,11 @@
 
 {
-    "header_img": "assets/shake/shake.jpg",
-    "h1": "SHAKE",
+    "header_img": "assets/bb/bb.jpg",
+    "h1": "BlackBoard 2.0",
     "item_info": {
-        "client": "Client; Santander Consumer Bank",
-        "role": "Role; UX Designer",
-        "period": "Period; Summer '19"
+        "client": "Course: Design 3",
+        "role": "Role: UX designer",
+        "period": "Period: Fall '18"
     },
     "images": {
         "image1": "assets/img/pb/pb_01.jpg",

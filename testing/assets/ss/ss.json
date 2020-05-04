@@ -1,11 +1,11 @@
 
 {
-    "header_img": "assets/shake/shake.jpg",
-    "h1": "SHAKE",
+    "header_img": "assets/ss/ss.jpg",
+    "h1": "Sustainable Shopping",
     "item_info": {
-        "client": "Client; Santander Consumer Bank",
-        "role": "Role; UX Designer",
-        "period": "Period; Summer '19"
+        "client": "Course: Sustainable Design",
+        "role": "Role: Researcher",
+        "period": "Period: Spring '19"
     },
     "images": {
         "image1": "assets/img/pb/pb_01.jpg",

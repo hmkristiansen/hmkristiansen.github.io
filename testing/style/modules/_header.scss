@@ -6,8 +6,6 @@ header{
 
     z-index: 100;
 
-    font-weight: 400;
-    font-size: 1rem;
 
     .row {
         display: -ms-flexbox; 
@@ -26,17 +24,35 @@ header{
 
     #logo{
         text-align: right;
+        p{
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom:10px;
+        }
+        a{
+            font-size: 1rem;
+            font-weight: 200;
+        }
     }
       
 }
 
-@media screen and (max-width: 600px) {
-    header{
-        /*
-        .column {
-            -ms-flex: 100%;
-            flex: 100%;
-            max-width: 100%;
-        }*/
+footer{
+    padding: 0;
+    margin: 0;
+    padding: 30px;
+    padding-top: 25vh;
+    #contact{
+        text-align: right;
+
+        li{
+            float: right;
+            margin-left: 10px;
+        }
     }
+
+}
+
+@media screen and (max-width: 600px) {
+  
 }

@@ -20,107 +20,156 @@
     </style>
 </head>
 
-<body>
+<body class="loadHide" onload="fadeInPage();">
 
     <header>
         <div class="row">
-            
+
             <div class="column" id="nav">
-                <ul>
-                    <li>greeting</li>
-                    <li>work</li>
-                    <li>resume</li>
-                    <li>contact</li>
-                </ul>
             </div>
             <div class="column" id="logo">
                 <p>hmkristiansen</p>
+                <!--<a href="mailto:hei@hinken.no" target="_blank">hei@hinken.no</a>-->
             </div>
+            
         </div>
     </header>
 
-    <section id="about">
-            <h1>Heisann!</h1>
+    <section id="greeting">
+            <h2>01_greeting</h2>
+            <h1>Heisann! I'm Henrik.</h1>
             <p>I'm an interaction design student from Oppegård, currently living in Lisbon.<br>
                 I aim to create simple tools and effective experiences with the induvidual in mind.<br>
-                Scroll down for more me 👇</p>
-            <!--
-            <div class="row">
-                <div class="column" id="greeting">
-                    <h1>Heisann!</h1>
-                    <p>I'm an interaction design student from Oppegård, currently living in Lisbon.<br><br>
-                        I aim to create simple tools and effective experiences with the induvidual in mind.<br><br>
-                        Scroll down for more me 👇</p>
-                </div>
-               
-                <div class="column" id="img_me">
-                    <img src="../assets/me.png">
-                </div>
-                -->
+            </p>
             </div>
     </section>
+
+    <div id="overlay" class="hidden">
+        <!--
+        <div id="content">
+            <div id="close_btn">close</div>
+            <img src="assets/bb/bb.jpg">
+            <h1>CTRLframe</h1>
+            <p>'m an interaction design student from Oppegård, currently living in Lisbon.<br>
+                I aim to create simple tools and effective experiences with the induvidual in mind.<br></p>
+            <div id="more_link">
+                <a id="notion_link">Read more on Notion</a>
+            </div>
+        </div>
+        -->
+        <div id="close_btn" class="hideCloseBtn"><img src="assets/exit.svg"></div>
+        <div id="content">
+            <div id="imageSelector"></div>
+            <h1></h1>
+            <div id="item_info">
+                <ul>
+                    <li id="client"></li>
+                    <li id="role"></li>
+                    <li id="period"></li>
+                </ul>
+            </div>
+            <p id="cont_ing"></p>
+            <!--
+            <hr>
+
+            <div id="more_link">
+                <a id="notion_link">Read more on Notion</a>
+            </div>
+            -->
+        </div>
+    </div>
 
     <section id="work" class="inactive">
         <div class="row"> 
             <div class="column">
-              <img src="assets/ctrl/ctrl.jpg" style="width:100%">
-              <img src="assets/nn/nn.jpg" style="width:100%">
+              <img src="assets/ctrl/ctrl.jpg" id="ctrl" style="width:100%">
+              <img src="assets/nn/nn.jpg" id="nn" style="width:100%">
+              <img src="assets/boo/boo.jpg" id="boo" style="width:100%">
             </div>
             <div class="column">
-                <img src="assets/pb/pb.jpg" style="width:100%">
-                <img src="assets/shake/shake.jpg" style="width: 100%;">
+                <img src="assets/pb/pb.jpg" id="pb" style="width:100%">
+                <img src="assets/shake/shake.jpg" id="shake" style="width: 100%;">
+                <img src="assets/bb/bb.jpg" id="bb" style="width: 100%;">
+                <img src="assets/ss/ss.jpg" id="ss" style="width: 100%;">
             </div> 
-            <!--
-            <div class="column">
-                <img src="../assets/nn/nn.jpg" style="width:100%">
-                <img src="../assets/pb/pb.jpg" style="width:100%">
-                <img src="../assets/ctrl/ctrl.jpg" style="width:100%">
-            </div>-->
           </div>
     </section>
-    <section id="resume" class="">
-        
-        <ul>
+    
+    <section id="about" class="inactive">
+        <div class="row">
+            <div class="column">
+                <h2>02_resume</h2>
 
-            <li>
-                <h1>Currently</h1>
-                <p>Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, doing a MS.c in Industrial Design from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a></p>
-                <p>Upcoming summer intern at <a href="https://www.iterate.no/" target="_blank">Iterate</a></p>
-            </li>
-            <li>
-                <h1>Recently</h1>
-                <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - UX design summer intern</p>
-            </li>
-            <li>
-                <h1>Previosly</h1>
-                <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - project manager</p>
-                <p><a onclick="window.open(this.href,'_blank');return false;" href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - volunteer</p>
-            </li>
+                    <ul>
 
-        </ul>
-        
-    </section>
+                        <li>
+                            <h1>Currently</h1>
+                            <p>Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, doing a MS.c in Industrial Design from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a></p>
+                            <p>Upcoming summer intern at <a href="https://www.iterate.no/" target="_blank">Iterate</a></p>
+                        </li>
+                        <li>
+                            <h1>Recently</h1>
+                            <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - UX design summer intern</p>
+                        </li>
+                        <li>
+                            <h1>Previosly</h1>
+                            <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - project manager</p>
+                            <p><a onclick="window.open(this.href,'_blank');return false;" href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - volunteer</p>
+                        </li>
 
-    <section id="contact" class="">
-
-        <h2>Get in touch</h2>
+                    </ul>
+            </div>
+            <div class="column">
+                <h2>03_about</h2>
+                <h1>Facts & Figures</h1>
                 <ul>
-                    <li><a href="mailto:hei@hinken.no" target="_blank">hei@hinken.no</a></li>
+                    <li>"Hinken"</li>
+                    <li id="life_counter">
+                        <div id="life_wrapper">
+                            <span id="age">23.123456789123456789</span><span id="dead"></span>
+                        </div>
+                    </li>
+                    <li>LYR → OSL → TRD → LIS</li>
+                    <li><a id="location" href="https://www.google.com/search?sxsrf=ALeKk03TiEpXeV0y2tWUjZveuUO78a7f0g%3A1585151572007&source=hp&ei=U357XpvQO4OJlwSG2LaoAQ&q=38.703321%2C+-9.179565&oq=38.703321%2C+-9.179565&gs_l=psy-ab.3...397.397..927...1.0..0.69.69.1......0....2j1..gws-wiz.QGB--Smm6-0&ved=0ahUKEwjbxfPi_bXoAhWDxIUKHQasDRUQ4dUDCAU&uact=5" target="_blank">@ 38.703321, -9.179565</a></li>
+                    <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🍂}</li>
                 </ul>
-                <h2>Even more me</h2>
-        <ul>
-            <!--
-            <li><a href="https://dribbble.com/hmkristiansen" target="_blank">Dribbble</a></li>
-            -->
-            <li><a href="http://resume.hinken.no/" target="_blank">Resume</a> in Notion</li>
-            <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">Instagram</a></li>
-            <li><a href="https://twitter.com/hmkristiansen_" target="_blank">Twitter</a></li>
-        </ul>
-        
+            </div>
+        </div>
+          
     </section>
 
+    <footer>
+        <div class="row">
+            <div class="column" id="nav">
+                    
+                <ul>
+                    <!--
+                    <li>greeting</li>
+                    <li>work</li>
+                    <li>resume</li>
+                    <li>contact</li>
+                    -->
+                </ul>
+            </div>
+        
+            <div class="column" id="contact">
+                <ul>
+                    <!--
+                    <li><a href="https://dribbble.com/hmkristiansen" target="_blank">Dribbble</a></li>
+                    -->
+                    <li><a href="http://work.hinken.no/" target="_blank">More work</a></li>
+                    <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/hmkristiansen_" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/preload.js"></script>
+    <script src="script/age.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/overlay.js"></script>
     <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script> 
     <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>    
 </body>
