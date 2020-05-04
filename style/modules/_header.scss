@@ -19,6 +19,8 @@ header{
         -ms-flex: 50%; 
         flex: 50%;
         max-width: 50%;
+        margin-right: 0;
+        padding-right: 0;
         //padding: 0 4px;
     }
 
@@ -38,21 +40,27 @@ header{
 }
 
 footer{
+    width: 100%;
     padding: 0;
     margin: 0;
     padding: 30px;
     padding-top: 25vh;
-    #contact{
-        text-align: right;
+    
+    text-align: right;
 
-        li{
-            float: right;
-            margin-left: 10px;
-        }
+    li{
+        display: inline-block;
+        float: right;
+        margin-left: 12px;
     }
-
 }
 
 @media screen and (max-width: 600px) {
-  
-}
+    footer{
+        padding: 10px;
+    }
+    li{
+        font-size: 1rem;
+        margin-left: 12px;
+    }
+}   

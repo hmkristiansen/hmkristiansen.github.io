@@ -127,7 +127,7 @@ section {
   html {
     font-size: 12px;
   }
-  header, footer, section {
+  header, section {
     padding: 10px !important;
   }
   section {
@@ -173,6 +173,8 @@ header .column {
   -webkit-box-flex: 50%;
           flex: 50%;
   max-width: 50%;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 header #logo {
@@ -191,19 +193,28 @@ header #logo a {
 }
 
 footer {
+  width: 100%;
   padding: 0;
   margin: 0;
   padding: 30px;
   padding-top: 25vh;
-}
-
-footer #contact {
   text-align: right;
 }
 
-footer #contact li {
+footer li {
+  display: inline-block;
   float: right;
-  margin-left: 10px;
+  margin-left: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 10px;
+  }
+  li {
+    font-size: 1rem;
+    margin-left: 12px;
+  }
 }
 
 #work {
