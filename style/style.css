@@ -179,7 +179,10 @@ header .column {
 }
 
 header #logo {
+  position: relative;
   text-align: right;
+  clear: both;
+  padding-bottom: 20px;
 }
 
 header #logo p {
@@ -188,9 +191,27 @@ header #logo p {
   margin-bottom: 10px;
 }
 
-header #logo a {
-  font-size: 1rem;
-  font-weight: 200;
+header #logo span {
+  position: absolute;
+  font-size: 0.6rem;
+  opacity: 0;
+  top: 40px;
+  right: 0;
+  content: "hi@hinken.no";
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+body.non-touch #logo:hover a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+body.non-touch #logo:hover span {
+  opacity: 0.7;
+  top: 25px;
 }
 
 footer {

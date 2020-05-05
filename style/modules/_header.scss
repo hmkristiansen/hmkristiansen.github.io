@@ -25,18 +25,41 @@ header{
     }
 
     #logo{
+        position: relative;
         text-align: right;
+        clear: both;
+        padding-bottom: 20px;
+
         p{
             font-weight: 600;
             font-size: 1.2rem;
             margin-bottom:10px;
         }
-        a{
-            font-size: 1rem;
-            font-weight: 200;
+    
+        span{
+            position: absolute;
+            font-size: 0.6rem;
+            opacity: 0;
+            top: 40px;
+            right: 0;
+            content: "hi@hinken.no";
+            transition: all 0.2s;
+            pointer-events: none;
+            z-index: 1000;
         }
     }
-      
+     
+}
+
+body.non-touch #logo:hover{
+    a{
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+    span{
+        opacity: 0.7;
+        top: 25px;
+    }
 }
 
 footer{
