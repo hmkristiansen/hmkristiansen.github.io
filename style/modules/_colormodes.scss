@@ -1,0 +1,46 @@
+
+#page.darkmode{
+
+    body{
+        background-color: $bg-dark;
+        color: $text-color-dark;
+    }
+
+    .column img {
+        -webkit-box-shadow: 0px 0px 10px 0px rgb(36, 36, 36);
+        -moz-box-shadow: 0px 0px 10px 0px rgb(36, 36, 36);
+        box-shadow: 0px 0px 10px 0px rgb(36, 36, 36);  
+    }
+
+    body.non-touch .column img:hover{
+        -webkit-box-shadow: 0px 0px 6px 0px rgb(36, 36, 36);
+        -moz-box-shadow: 0px 0px 6px 0px rgb(36, 36, 36);
+        box-shadow: 0px 0px 6px 0px rgb(36, 36, 36); 
+    }
+
+    #content{
+        background-color: $bg-dark;
+        -webkit-box-shadow: 0px 0px 20px 0px rgb(36, 36, 36); 
+        -moz-box-shadow: 0px 0px 20px 0px rgb(36, 36, 36); 
+        box-shadow: 0px 0px 20px 0px rgb(36, 36, 36); 
+    }
+
+    #close_btn{
+        background-color: $bg-ligth-btn;
+    }
+    body.non-touch #close_btn:hover{
+        background-color: $text-color-light;
+    }
+
+    a{
+        color: $link-color-dark;
+    }
+    
+    body.non-touch a:hover{
+        color: $hover-link-color-dark;
+        text-decoration: underline;
+        -webkit-text-decoration-color: $hover-link-color-dark; /* Safari */  
+          text-decoration-color: $hover-link-color-dark;
+    }
+}
+

@@ -1,11 +1,17 @@
 
 $( "#work img" ).click(function() {
+
+	if(currentBrowser == "firefox"){
+		alert("I'm using an overlay to display the projects, and it is simply broken on Firefox 😔\nPlease try Safari, Opera or Chrome! 🥳");
+		return;
+	}
+
     $('#overlay').removeClass('hidden');
     $('#overlay').addClass('visible');
     $('body').addClass('noScroll');
 	$('#work, header ,footer').addClass('blur');
 	$('#close_btn').removeClass('hideCloseBtn');
-    renderProject(this);
+	renderProject(this);
 });
 
 $( "#close_btn" ).click(function() {

@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 html{
@@ -19,7 +21,7 @@ body {
     max-width: 1600px;
     margin: 0 auto !important;
 
-    transition: all 1s;
+    transition: all 0.6s;
     opacity: 1;
 }
 
@@ -28,7 +30,7 @@ body {
 }
 
 .loadHide{
-    transition: all 1s;
+    transition: all 0.6s;
     opacity: 0;
 }
 
