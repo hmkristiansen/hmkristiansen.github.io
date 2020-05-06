@@ -100,13 +100,15 @@ body.non-touch .column img:hover{
   
 @media screen and (max-width: 600px) {
 
-
-
     #work{
         .column {
             -ms-flex: 100%;
             flex: 100%;
             max-width: 100%;
+            padding: 0;
+        }
+
+        .row{
             padding: 0;
         }
     }
