@@ -468,14 +468,16 @@ body.non-touch #close_btn:hover {
   z-index: -1000 !important;
   pointer-events: none !important;
   opacity: 0 !important;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(0.9) !important;
+          transform: scale(0.9) !important;
 }
 
 .visible {
   z-index: 1000 !important;
   pointer-events: all !important;
   opacity: 1 !important;
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
 }
 
 .noScroll {
@@ -483,8 +485,13 @@ body.non-touch #close_btn:hover {
 }
 
 .hideCloseBtn {
-  -webkit-transform: rotate(180deg) scale(0.8);
-  transform: rotate(180deg) scale(0.8);
+  /*
+    -moz-transform: rotate(180deg) scale(0.8);
+    -webkit-transform: rotate(180deg) scale(0.8);
+    -o-transform: rotate(180deg) scale(0.8);
+    -ms-transform: rotate(180deg) scale(0.8);
+    transform: rotate(180deg) scale(0.8);
+    */
 }
 
 .blur {
