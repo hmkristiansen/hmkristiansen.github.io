@@ -38,6 +38,7 @@ h1{
     font-size: 1.2rem;
     font-weight: 600;
     text-align: left;
+    padding-top: 10px;
     margin-bottom: 10px;    
 }
 
@@ -45,12 +46,14 @@ h2{
     font-size: 1rem;
     font-weight: 400;
     color: $text-color-light-fade;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 p{
     line-height: normal;
     font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 a{
@@ -94,6 +97,9 @@ section{
 
 #greeting{
     padding-top: 20vh !important;
+    p{
+        max-width: 600px;
+    }
 }
 
 #about{
@@ -138,7 +144,19 @@ section{
         font-size: 1rem;
         font-weight: 400;
         color: $text-color-light-fade;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+    }
+
+    ul{
+        li{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    p{
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
     #greeting{

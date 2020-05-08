@@ -5,12 +5,10 @@ $( "#work img" ).click(function() {
 		alert("I'm using an overlay to display the projects, and it is simply broken on Firefox 😔\nPlease try Safari, Opera or Chrome! 🥳");
 		return;
 	}
-
     $('#overlay').removeClass('hidden');
     $('#overlay').addClass('visible');
     $('body').addClass('noScroll');
 	$('#work, header ,footer').addClass('blur');
-	$('#close_btn').removeClass('hideCloseBtn');
 	renderProject(this);
 });
 
@@ -20,7 +18,6 @@ $( "#close_btn" ).click(function() {
     $('body').removeClass('noScroll');
     $('#work, header ,footer').removeClass('blur');
     setTimeout(function() {
-		$('#close_btn').addClass('hideCloseBtn');
 		document.getElementById("port_img").remove();	
 	}, 300);
 });
@@ -34,7 +31,6 @@ $('#overlay').on('click', function(e) {
     $('body').removeClass('noScroll');
     $('#work, header ,footer').removeClass('blur');
     setTimeout(function() {
-		$('#close_btn').addClass('hideCloseBtn');
 		document.getElementById("port_img").remove();	
 	}, 300);
 });
