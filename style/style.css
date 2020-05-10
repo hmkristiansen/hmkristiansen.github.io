@@ -208,9 +208,9 @@ header #logo p {
 
 header #logo span {
   position: absolute;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   opacity: 0;
-  top: 40px;
+  top: 50px;
   right: 0;
   content: "hi@hinken.no";
   -webkit-transition: all 0.2s;
@@ -225,8 +225,8 @@ body.non-touch #logo:hover a {
 }
 
 body.non-touch #logo:hover span {
-  opacity: 0.7;
-  top: 25px;
+  opacity: 0.5;
+  top: 40px;
 }
 
 footer {
@@ -251,6 +251,14 @@ footer li {
   footer li {
     font-size: 1rem;
     margin-left: 12px;
+  }
+  body.non-touch #logo:hover a {
+    text-decoration: none !important;
+    cursor: pointer;
+  }
+  body.non-touch #logo:hover span {
+    opacity: 0.5;
+    top: 25px;
   }
 }
 
@@ -402,10 +410,19 @@ body.non-touch .column img:hover {
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(122, 122, 122, 0.2);
   box-shadow: 0px 0px 20px 0px rgba(122, 122, 122, 0.2);
+  /*
+        p::before{
+            content:'🚧 ';
+        }
+        p::after{
+            content:' 🚧';
+        }*/
 }
 
 #overlay #content h1, #overlay #content p, #overlay #content ul {
-  width: 80%;
+  margin: 0;
+  padding: 0;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -424,17 +441,11 @@ body.non-touch .column img:hover {
 }
 
 #overlay #content p {
-  margin-top: 15px;
+  margin-top: 40px;
   text-align: right;
-  font-size: 1.2rem;
-}
-
-#overlay #content p::before {
-  content: '🚧 ';
-}
-
-#overlay #content p::after {
-  content: ' 🚧';
+  font-size: 1rem;
+  margin-bottom: 40px;
+  font-weight: bold;
 }
 
 #overlay #content ul {
@@ -442,16 +453,45 @@ body.non-touch .column img:hover {
   font-weight: 100;
 }
 
+#overlay #content .extraImage {
+  width: 100%;
+  height: auto;
+  padding: 5%;
+  padding-top: 0;
+}
+
 #overlay #content hr {
   width: 80%;
   margin: 0 auto;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: 0.5px solid #cacaca;
+}
+
+#overlay #content #more_link {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 50px;
+}
+
+#overlay #content #more_link a {
+  padding: 10px;
+  color: #181818;
+  border-radius: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 2px solid #eeeeee;
 }
 
 body.non-touch #close_btn:hover {
   background-color: #e4e4e4;
+}
+
+body.non-touch #more_link a:hover {
+  text-decoration: none;
+  background-color: #eeeeee !important;
 }
 
 .hidden {

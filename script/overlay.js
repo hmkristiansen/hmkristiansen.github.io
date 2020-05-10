@@ -18,7 +18,8 @@ $( "#close_btn" ).click(function() {
     $('body').removeClass('noScroll');
     $('#work, header ,footer').removeClass('blur');
     setTimeout(function() {
-		document.getElementById("port_img").remove();	
+		$("#port_img").remove();
+		$('.extraImage').remove();
 	}, 300);
 });
 
@@ -31,7 +32,8 @@ $('#overlay').on('click', function(e) {
     $('body').removeClass('noScroll');
     $('#work, header ,footer').removeClass('blur');
     setTimeout(function() {
-		document.getElementById("port_img").remove();	
+		$("#port_img").remove();
+		$('.extraImage').remove();
 	}, 300);
 });
 
@@ -49,11 +51,24 @@ function renderProject(event){
 	let img = images[currentIndex];
 	let ref = document.getElementById("imageSelector");
 	let parentDiv = ref.parentNode;
-	parentDiv.insertBefore(img, ref)
+	parentDiv.insertBefore(img, ref);
+
+	$currentImages = targetObj.images;
 
 	$("#content h1").html(targetObj.h1);
 	$("#content #client").html(targetObj.item_info.client);
 	$("#content #role").html(targetObj.item_info.role);
 	$("#content #period").html(targetObj.item_info.period);
 	$("#content #cont_ing").html(targetObj.text.text0);
+
+	for (var image in $currentImages) {
+		if ($currentImages.hasOwnProperty(image)) {
+			let img = document.createElement('img');
+			img.className = "extraImage";
+			img.src = $currentImages[image];
+
+			var overlay = document.getElementById("extraImages");
+			overlay.appendChild(img);
+		}
+	}
 }

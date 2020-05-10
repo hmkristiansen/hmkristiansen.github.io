@@ -8,8 +8,9 @@
         "period": "Period: Spring '19"
     },
     "images": {
-        "image1": "assets/img/pb/pb_01.jpg",
-        "image2": "assets/img/pb/pb_02.jpg"
+        "image1": "assets/boo/01.png",
+        "image2": "assets/boo/02.png",
+        "image3": "assets/boo/03.jpg"
     },
     "text":{
         "text0":"Content under development",

@@ -8,8 +8,8 @@
         "period": "Period; Fall '19"
     },
     "images": {
-        "image1": "assets/img/pb/pb_01.jpg",
-        "image2": "assets/img/pb/pb_02.jpg"
+        "image1": "assets/ctrl/01.png",
+        "image2": "assets/ctrl/02.png"
     },
     "text":{
         "text0":"Content under development",

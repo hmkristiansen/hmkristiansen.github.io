@@ -3,16 +3,17 @@
     "header_img": "assets/shake/shake.jpg",
     "h1": "SHAKE",
     "item_info": {
-        "client": "Client; Santander Consumer Bank",
-        "role": "Role; UX Designer",
+        "client": "<i>Client;</i> Santander Consumer Bank",
+        "role": "Role; UX & Service Designer",
         "period": "Period; Summer '19"
     },
     "images": {
-        "image1": "assets/img/pb/pb_01.jpg",
-        "image2": "assets/img/pb/pb_02.jpg"
+        "image1": "assets/shake/01.jpg",
+        "image2": "assets/shake/02.jpg",
+        "image3": "assets/shake/03.jpg"
     },
     "text":{
-        "text0":"Content under development",
+        "text0":"During an internship at Itera in the summer of 2019, I worked in a multidisciplinary team at Santander with the service SHAKE.",
         "text1": "The class Illustration & Comics challenged me to get comfortable with illustrating and using it more as a tool of communication.",
         "text2": "The picture book is based on the original story about Beauty and The Beast, but retold to tell the story of Beate and how she overcame hear anxiety when moving across the country and chaning schools."
     }
