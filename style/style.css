@@ -512,6 +512,8 @@ body.non-touch #more_link a:hover {
 
 .noScroll {
   overflow: hidden !important;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .blur {
