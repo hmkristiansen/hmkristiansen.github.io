@@ -9,6 +9,7 @@ $( "#work img" ).click(function() {
     $('#overlay').addClass('visible');
     $('body').addClass('noScroll');
 	$('#work, header ,footer').addClass('blur');
+	
 	renderProject(this);
 });
 

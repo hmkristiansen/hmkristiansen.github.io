@@ -114,6 +114,10 @@ section {
   padding-right: 40px;
 }
 
+#about li {
+  max-width: 75%;
+}
+
 .row {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -165,6 +169,9 @@ section {
             flex: 100%;
     max-width: 100%;
     padding: 0 10px;
+  }
+  #about li {
+    max-width: 80%;
   }
 }
 
@@ -573,8 +580,22 @@ body.non-touch #more_link a:hover {
   background-color: #eeeeee;
 }
 
+#page.darkmode #more_link a {
+  padding: 10px;
+  color: #ffffff !important;
+  border-radius: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 2px solid #eeeeee;
+}
+
 #page.darkmode body.non-touch #close_btn:hover {
   background-color: #353638;
+}
+
+#page.darkmode body.non-touch #more_link a:hover {
+  color: #181818 !important;
+  text-decoration: none;
 }
 
 #page.darkmode a {
