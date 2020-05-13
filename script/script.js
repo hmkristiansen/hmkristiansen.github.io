@@ -1,12 +1,16 @@
 var currentBrowser;
 
 function fadeInPage(){
+    checkIfDarkmode();
+    checkIfTouch();
+    checkBrowser();
     setTimeout(function() {
-        checkIfDarkmode();
-        checkIfTouch();
-        checkBrowser();
-    }, 300);
-    $('body').removeClass('loadHide');
+        $('header').removeClass('onLoadHeader');
+    }, 500);
+    setTimeout(function(){
+        $('#greeting').removeClass('onLoadGreeting');
+        $('#work').removeClass('onLoadPort');
+    },1500);
 }
 
 

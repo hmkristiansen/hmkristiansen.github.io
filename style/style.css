@@ -31,10 +31,12 @@ body {
   display: none;
 }
 
-.loadHide {
+.onLoadBody, .onLoadHeader, .onLoadGreeting, .onLoadPort {
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
   opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 h1 {
@@ -100,6 +102,8 @@ section {
 
 #greeting {
   padding-top: 20vh !important;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 #greeting p {
@@ -181,6 +185,8 @@ header {
   top: 10px;
   width: inherit;
   z-index: 100;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 header .row {
@@ -272,6 +278,8 @@ footer li {
 #work {
   padding: 0;
   width: 100%;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 #work .row {
@@ -296,10 +304,6 @@ footer li {
   vertical-align: middle;
   width: 100%;
   border-radius: 10px;
-  /*
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(122,122,122,0.05);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(122,122,122,0.05);
-        box-shadow: 0px 0px 5px 0px rgba(122,122,122,0.05);  */
   -webkit-box-shadow: 0px 0px 10px 0px #e0e0e0;
   box-shadow: 0px 0px 10px 0px #e0e0e0;
   cursor: pointer;
@@ -342,6 +346,12 @@ body.non-touch .column img:hover {
   opacity: 0.2;
   -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.onLoadPort {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  opacity: 0;
 }
 
 @media screen and (max-width: 1000px) {
