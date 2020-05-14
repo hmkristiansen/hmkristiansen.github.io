@@ -133,21 +133,21 @@ body.non-touch #more_link a:hover{
 
 .hidden{
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform: translateY(20px) !important;
+    //transform: translateY(20px) !important;
     //z-index: -1000 !important;
     pointer-events: none !important;
     opacity: 0 !important;
-    //transform: scale(0.9) !important;
+    transform: scale(0.9) !important;
 }
 
 .visible{
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform: translateY(0px) !important;
+    //transform: translateY(0px) !important;
     z-index: 1000 !important;
     pointer-events: all !important;
     opacity: 1 !important;
     //display: block !important;
-    //transform: scale(1) !important;
+    transform: scale(1) !important;
 }
 
 .remove{
@@ -160,8 +160,8 @@ body.non-touch #more_link a:hover{
 }
 
 .blur{
-    transition: all 0.2s;
-    opacity: 0.1;
+    transition: all 0.1s !important;
+    opacity: 0.1 !important;
 }
 
 .darken{

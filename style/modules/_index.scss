@@ -104,6 +104,25 @@ section{
     }
 }
 
+#hand-wave{
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    display: inline-block;
+}
+body.non-touch #greeting:hover{
+    #hand-wave{
+        animation: shake 90ms ease;
+        animation-iteration-count: 8; 
+    }
+}
+
+@keyframes shake {
+    0% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+}
+
 #about{
     .column {
         padding-right: 40px;

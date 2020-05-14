@@ -110,6 +110,51 @@ section {
   max-width: 600px;
 }
 
+#hand-wave {
+  position: relative;
+  top: 0;
+  -webkit-transition: top ease 0.5s;
+  transition: top ease 0.5s;
+  display: inline-block;
+}
+
+body.non-touch #greeting:hover #hand-wave {
+  -webkit-animation: shake 90ms ease;
+          animation: shake 90ms ease;
+  -webkit-animation-iteration-count: 8;
+          animation-iteration-count: 8;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
 #about {
   padding-bottom: 15vh !important;
 }
@@ -518,10 +563,10 @@ body.non-touch #more_link a:hover {
   transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-transform: translateY(20px) !important;
-          transform: translateY(20px) !important;
   pointer-events: none !important;
   opacity: 0 !important;
+  -webkit-transform: scale(0.9) !important;
+          transform: scale(0.9) !important;
 }
 
 .visible {
@@ -529,11 +574,11 @@ body.non-touch #more_link a:hover {
   transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -webkit-transform: translateY(0px) !important;
-          transform: translateY(0px) !important;
   z-index: 1000 !important;
   pointer-events: all !important;
   opacity: 1 !important;
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
 }
 
 .remove {
@@ -547,9 +592,9 @@ body.non-touch #more_link a:hover {
 }
 
 .blur {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  opacity: 0.1;
+  -webkit-transition: all 0.1s !important;
+  transition: all 0.1s !important;
+  opacity: 0.1 !important;
 }
 
 .darken {

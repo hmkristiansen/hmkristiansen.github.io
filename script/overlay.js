@@ -28,10 +28,10 @@ $('#overlay').on('click', function(e) {
 	if (e.target !== this){
 		return;
 	}
-	$('#overlay').addClass('hidden');
+    $('#overlay').addClass('hidden');
     $('#overlay').removeClass('visible');
     $('body').removeClass('noScroll');
-    $('#work, header ,footer').removeClass('blur');
+    $('section, header ,footer').removeClass('blur');
     setTimeout(function() {
 		$("#port_img").remove();
 		$('.extraImage').remove();

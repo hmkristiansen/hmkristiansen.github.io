@@ -9,8 +9,10 @@ function fadeInPage(){
     }, 500);
     setTimeout(function(){
         $('#greeting').removeClass('onLoadGreeting');
-        $('#work').removeClass('onLoadPort');
     },1500);
+    setTimeout(function(){
+        $('#work').removeClass('onLoadPort');
+    },2500);
 }
 
 
