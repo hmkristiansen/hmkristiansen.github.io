@@ -8,7 +8,7 @@ $( "#work img" ).click(function() {
     $('#overlay').removeClass('hidden');
     $('#overlay').addClass('visible');
     $('body').addClass('noScroll');
-	$('#work, header ,footer').addClass('blur');
+	$('section, header,footer').addClass('blur');
 	
 	renderProject(this);
 });
@@ -17,7 +17,7 @@ $( "#close_btn" ).click(function() {
     $('#overlay').addClass('hidden');
     $('#overlay').removeClass('visible');
     $('body').removeClass('noScroll');
-    $('#work, header ,footer').removeClass('blur');
+    $('section, header ,footer').removeClass('blur');
     setTimeout(function() {
 		$("#port_img").remove();
 		$('.extraImage').remove();

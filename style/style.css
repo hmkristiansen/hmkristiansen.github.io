@@ -318,6 +318,7 @@ body.non-touch .column img:hover {
   transition: all 0.2s;
   -webkit-box-shadow: 0px 0px 6px 0px #c7c7c7;
   box-shadow: 0px 0px 6px 0px #c7c7c7;
+  cursor: n-resize !important;
   /*
     -webkit-box-shadow: 0px 0px 10px 0px rgba(224, 224, 224,1);
     -moz-box-shadow: 0px 0px 10px 0px rgba(224, 224, 224,1);
@@ -408,9 +409,10 @@ body.non-touch .column img:hover {
   opacity: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  cursor: pointer !important;
+  transform: translateZ(0);
   -webkit-transform: translateZ(0);
   z-index: 1001;
+  cursor: s-resize !important;
 }
 
 #overlay #content {
@@ -512,19 +514,30 @@ body.non-touch #more_link a:hover {
 }
 
 .hidden {
-  z-index: -1000 !important;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transform: translateY(20px) !important;
+          transform: translateY(20px) !important;
   pointer-events: none !important;
   opacity: 0 !important;
-  -webkit-transform: scale(0.9) !important;
-          transform: scale(0.9) !important;
 }
 
 .visible {
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
   z-index: 1000 !important;
   pointer-events: all !important;
   opacity: 1 !important;
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
+}
+
+.remove {
+  display: none;
 }
 
 .noScroll {
