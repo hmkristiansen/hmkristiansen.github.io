@@ -376,6 +376,7 @@ body.non-touch .column img:hover {
   opacity: 0.2;
   -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
 }
 
 .active {
@@ -384,6 +385,7 @@ body.non-touch .column img:hover {
   opacity: 1;
   -webkit-transition: all 0.5s cubic-bezier(0.7, 0.8, 0.4, 1.3);
   transition: all 0.5s cubic-bezier(0.7, 0.8, 0.4, 1.3);
+  pointer-events: all;
 }
 
 .inactive2 {
@@ -392,6 +394,7 @@ body.non-touch .column img:hover {
   opacity: 0.2;
   -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
 }
 
 .onLoadPort {

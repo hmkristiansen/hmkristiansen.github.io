@@ -58,18 +58,21 @@ body.non-touch .column img:hover{
     transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px);
     opacity: 0.2;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
 }
 
 .active{
     transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
     opacity: 1;
     transition: all 0.5s cubic-bezier(.70,0.8,.40,1.30);
+    pointer-events: all;
 }
 
 .inactive2{
     transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, -50px, 0px);
     opacity: 0.2;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
 }
 
 .onLoadPort{
