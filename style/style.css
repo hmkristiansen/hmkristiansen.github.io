@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   box-sizing: border-box;
@@ -104,6 +103,8 @@ section {
   padding-top: 20vh !important;
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
+  -webkit-transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
+  transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
 }
 
 #greeting p {
@@ -157,6 +158,8 @@ body.non-touch #greeting:hover #hand-wave {
 
 #about {
   padding-bottom: 15vh !important;
+  -webkit-transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
+  transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
 }
 
 #about .column {
@@ -268,7 +271,7 @@ header #logo span {
   position: absolute;
   font-size: 0.8rem;
   opacity: 0;
-  top: 50px;
+  top: 45px;
   right: 0;
   content: "hi@hinken.no";
   -webkit-transition: all 0.2s;
@@ -292,14 +295,28 @@ footer {
   padding: 0;
   margin: 0;
   padding: 30px;
-  padding-top: 25vh;
+  padding-top: 10vh;
+  position: relative;
   text-align: right;
+  opacity: 1;
+}
+
+footer ul {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 footer li {
-  display: inline-block;
   float: right;
   margin-left: 12px;
+}
+
+.hideFooter {
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 @media screen and (max-width: 600px) {
@@ -323,8 +340,8 @@ footer li {
 #work {
   padding: 0;
   width: 100%;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
+  transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
 }
 
 #work .row {
@@ -348,9 +365,10 @@ footer li {
   margin-top: 20px;
   vertical-align: middle;
   width: 100%;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px 0px #e0e0e0;
-  box-shadow: 0px 0px 10px 0px #e0e0e0;
+  border-radius: 30px;
+  z-index: 200;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -361,21 +379,16 @@ body.non-touch .column img:hover {
           transform: scale(0.98);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-box-shadow: 0px 0px 6px 0px #c7c7c7;
-  box-shadow: 0px 0px 6px 0px #c7c7c7;
+  z-index: 1 !important;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   cursor: n-resize !important;
-  /*
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(224, 224, 224,1);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(224, 224, 224,1);
-    box-shadow: 0px 0px 10px 0px rgba(224, 224, 224,1);   */
 }
 
 .inactive {
   -webkit-transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px);
           transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px);
   opacity: 0.2;
-  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   pointer-events: none;
 }
 
@@ -383,8 +396,6 @@ body.non-touch .column img:hover {
   -webkit-transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
           transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
   opacity: 1;
-  -webkit-transition: all 0.5s cubic-bezier(0.7, 0.8, 0.4, 1.3);
-  transition: all 0.5s cubic-bezier(0.7, 0.8, 0.4, 1.3);
   pointer-events: all;
 }
 
@@ -392,8 +403,6 @@ body.non-touch .column img:hover {
   -webkit-transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, -50px, 0px);
           transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, -50px, 0px);
   opacity: 0.2;
-  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   pointer-events: none;
 }
 
@@ -426,6 +435,9 @@ body.non-touch .column img:hover {
     max-width: 100%;
     padding: 0;
   }
+  #work .column img {
+    border-radius: 20px;
+  }
   #work .row {
     padding: 0;
   }
@@ -441,8 +453,8 @@ body.non-touch .column img:hover {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
-  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.2s cubic-bezier(0.9, 0, 0.4, 1.5);
+  transition: all 0.2s cubic-bezier(0.9, 0, 0.4, 1.5);
 }
 
 #overlay #close_btn {
@@ -468,28 +480,21 @@ body.non-touch .column img:hover {
   margin: 0 auto;
   width: 80%;
   max-width: 800px;
-  height: 90vh;
+  height: 90%;
   overflow-y: scroll;
   margin-top: 5vh;
-  padding: 0;
   opacity: 1 !important;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 20px;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(122, 122, 122, 0.2);
   box-shadow: 0px 0px 20px 0px rgba(122, 122, 122, 0.2);
-  /*
-        p::before{
-            content:'🚧 ';
-        }
-        p::after{
-            content:' 🚧';
-        }*/
 }
 
 #overlay #content h1, #overlay #content p, #overlay #content ul {
   margin: 0;
   padding: 0;
-  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
   margin: 0 auto;
 }
 
@@ -510,9 +515,11 @@ body.non-touch .column img:hover {
 #overlay #content p {
   margin-top: 40px;
   text-align: right;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 40px;
-  font-weight: bold;
+  width: 70%;
+  float: right;
+  clear: both;
 }
 
 #overlay #content ul {
@@ -525,14 +532,6 @@ body.non-touch .column img:hover {
   height: auto;
   padding: 5%;
   padding-top: 0;
-}
-
-#overlay #content hr {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  border: 0.5px solid #cacaca;
 }
 
 #overlay #content #more_link {
@@ -562,10 +561,6 @@ body.non-touch #more_link a:hover {
 }
 
 .hidden {
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   pointer-events: none !important;
   opacity: 0 !important;
   -webkit-transform: scale(0.9) !important;
@@ -573,10 +568,6 @@ body.non-touch #more_link a:hover {
 }
 
 .visible {
-  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 1000 !important;
   pointer-events: all !important;
   opacity: 1 !important;
@@ -616,13 +607,21 @@ body.non-touch #more_link a:hover {
 
 @media screen and (max-width: 600px) {
   #overlay #content {
-    width: 90%;
-    height: 95%;
-    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    border-radius: 0;
   }
   #overlay #close_btn {
-    top: 30px;
-    left: 30px;
+    top: 15px;
+    left: 15px;
+    background-color: #e4e4e4;
+  }
+  .blur {
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
   }
 }
 

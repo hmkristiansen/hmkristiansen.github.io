@@ -102,6 +102,7 @@ section{
     p{
         max-width: 600px;
     }
+    transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
 }
 
 #hand-wave{
@@ -131,6 +132,7 @@ body.non-touch #greeting:hover{
         max-width: 75%;
     }
     padding-bottom: 15vh !important;
+    transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
 }
 
 

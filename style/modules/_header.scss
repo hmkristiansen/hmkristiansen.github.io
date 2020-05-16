@@ -12,7 +12,6 @@ header{
         display: flex;
         -ms-flex-wrap: wrap; 
         flex-wrap: wrap;
-        //padding: 0 4px;
     }
       
     .column {
@@ -21,7 +20,6 @@ header{
         max-width: 50%;
         margin-right: 0;
         padding-right: 0;
-        //padding: 0 4px;
     }
 
     #logo{
@@ -39,7 +37,7 @@ header{
             position: absolute;
             font-size: 0.8rem;
             opacity: 0;
-            top: 50px;
+            top: 45px;
             right: 0;
             content: "hi@hinken.no";
             transition: all 0.2s;
@@ -66,15 +64,26 @@ footer{
     padding: 0;
     margin: 0;
     padding: 30px;
-    padding-top: 25vh;
+    padding-top: 10vh;
+    position: relative;
     
     text-align: right;
+    opacity: 1;
+
+    ul{
+        transform: translateY(0);
+        transition: all 0.2s;
+    }
 
     li{
-        display: inline-block;
         float: right;
         margin-left: 12px;
     }
+}
+
+.hideFooter{
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 @media screen and (max-width: 600px) {

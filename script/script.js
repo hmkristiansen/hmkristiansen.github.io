@@ -9,10 +9,10 @@ function fadeInPage(){
     }, 500);
     setTimeout(function(){
         $('#greeting').removeClass('onLoadGreeting');
-    },1500);
+    },1000);
     setTimeout(function(){
         $('#work').removeClass('onLoadPort');
-    },2500);
+    },1500);
 }
 
 
@@ -51,6 +51,7 @@ window.addEventListener("scroll", function (event) {
         workHeight = document.getElementById("work").clientHeight;
         workDistanceTop = document.getElementById("work").offsetTop;
         delta = workDistanceTop - scroll;
+        leway = 15;
 
     if(delta > 0){
         if( (delta < (windowHeight/2.5)) && !showWork){
@@ -67,6 +68,14 @@ window.addEventListener("scroll", function (event) {
         }else if( ( newDelta < (windowHeight/2.5)) && showWork){
             hidePort(delta);
         }
+    }
+
+    if ((windowHeight + scroll + leway) >= document.body.offsetHeight) {
+        setTimeout(function() {
+            $('footer ul').removeClass('hideFooter');
+        }, 700);
+    }else{
+        $('footer ul').addClass('hideFooter');
     }
 
 });

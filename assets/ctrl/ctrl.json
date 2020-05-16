@@ -8,12 +8,10 @@
         "period": "Period; Fall '19"
     },
     "images": {
-        "image1": "assets/ctrl/01.png",
-        "image2": "assets/ctrl/02.png"
+        "image1": "assets/ctrl/01.jpg",
+        "image2": "assets/ctrl/02.jpg"
     },
     "text":{
-        "text0":"Content under development",
-        "text1": "The class Illustration & Comics challenged me to get comfortable with illustrating and using it more as a tool of communication.",
-        "text2": "The picture book is based on the original story about Beauty and The Beast, but retold to tell the story of Beate and how she overcame hear anxiety when moving across the country and chaning schools."
+        "text0":"This course taught me to look beyond the ideal micro user-demographic and create something that responds to the current trends. The result was an IOT-device that makes tracking of family expences visible for all members of the family."
     }
 }

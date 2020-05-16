@@ -4,15 +4,13 @@
     "h1": "BlackBoard 2.0",
     "item_info": {
         "client": "Course: Design 3",
-        "role": "Role: UX designer",
+        "role": "Role: UX researcher",
         "period": "Period: Fall '18"
     },
     "images": {
         "image1" : "assets/bb/01.jpg"
     },
     "text":{
-        "text0":"Content under development",
-        "text1": "The class Illustration & Comics challenged me to get comfortable with illustrating and using it more as a tool of communication.",
-        "text2": "The picture book is based on the original story about Beauty and The Beast, but retold to tell the story of Beate and how she overcame hear anxiety when moving across the country and chaning schools."
+        "text0":"The class Design 3 was my introduction to propper user research and evaluating needs and problems. The end result was a team project where we redesigned the school's learning platform, BlackBoard."
     }
 }

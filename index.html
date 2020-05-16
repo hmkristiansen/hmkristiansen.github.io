@@ -38,12 +38,8 @@
     <section id="greeting" class="onLoadGreeting">
             <h2>greeting</h2>
             <h1>Heisann! I'm Henrik <span id="hand-wave">👋</span></h1>
-            <p>I mostly design experiences - the scenarios that describe them, the journeys that define them, and the testing that improves them.</p>
-            <!--
-            <p>I'm an interaction design student from Oppegård, currently living in Lisbon.<br>
-                I aim to create simple tools and effective experiences with the induvidual in mind.<br>
+            <p>I study the design of experiences - the scenarios that describe them, the journeys that define them, and the testing that improves them.
             </p>
-            -->
             </div>
     </section>
 
@@ -59,7 +55,9 @@
                     <li id="period"></li>
                 </ul>
             </div>
-            <p id="cont_ing"></p>
+            <div id="cont_ing_container">
+                <p id="cont_ing"></p>
+            </div>
             <div id="extraImages"></div>
             
             <div id="more_link">
@@ -74,20 +72,12 @@
             <div class="column">
                 <img src="assets/shake/shake.jpg" id="shake" style="width: 100%;">
                 <img src="assets/pb/pb.jpg" id="pb" style="width:100%">
-                <!--
-                <img src="assets/ss/ss.jpg" id="ss" style="width: 100%;">
-                -->
+                <img src="assets/boo/boo.jpg" id="boo" style="width:100%">
             </div>
             <div class="column">
-                <!--
                 <img src="assets/bb/bb.jpg" id="bb" style="width: 100%;">
-                -->
                 <img src="assets/nn/nn.jpg" id="nn" style="width:100%">
-                <!--
-                <img src="assets/boo/boo.jpg" id="boo" style="width:100%">
-                -->
                 <img src="assets/ctrl/ctrl.jpg" id="ctrl" style="width:100%">
-                
             </div> 
           </div>
     </section>
@@ -96,26 +86,22 @@
         <div class="row">
             <div class="column">
                 <h2>resume</h2>
-
-                    <ul>
-
-                        <li>
-                            <h1>Currently</h1>
-                            <p>Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, doing a MS.c in Industrial Design from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a></p>
-                            <p>Upcoming summer intern at <a href="https://www.iterate.no/" target="_blank">Iterate</a></p>
-                        </li>
-                        <li>
-                            <h1>Recently</h1>
-                            <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - UX design summer intern</p>
-                        </li>
-                        <li>
-                            <h1>Previosly</h1>
-                            <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - project manager</p>
-                            <p><a onclick="window.open(this.href,'_blank');return false;" href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - volunteer</p>
-                        </li>
-                        
-                        
-                    </ul>
+                <ul>
+                    <li>
+                        <h1>Currently</h1>
+                        <p>Exchange student at <a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a>, doing a MS.c in Industrial Design from <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a></p>
+                        <p>Upcoming summer intern at <a href="https://www.iterate.no/" target="_blank">Iterate</a></p>
+                    </li>
+                    <li>
+                        <h1>Recently</h1>
+                        <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - UX design summer intern</p>
+                    </li>
+                    <li>
+                        <h1>Previosly</h1>
+                        <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - project manager</p>
+                        <p><a onclick="window.open(this.href,'_blank');return false;" href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - volunteer</p>
+                    </li>
+                </ul>
             </div>
             <div class="column">
                 <h2>about</h2>
@@ -138,7 +124,7 @@
 
     <footer>
 
-        <ul>
+        <ul class="hideFooter">
             <li><a href="http://notion.hinken.no/" target="_blank">more work</a></li>
             <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedIn</a></li>
             <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">instagram</a></li>
