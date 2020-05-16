@@ -73,7 +73,7 @@ window.addEventListener("scroll", function (event) {
     if ((windowHeight + scroll + leway) >= document.body.offsetHeight) {
         setTimeout(function() {
             $('footer ul').removeClass('hideFooter');
-        }, 700);
+        }, 400);
     }else{
         $('footer ul').addClass('hideFooter');
     }

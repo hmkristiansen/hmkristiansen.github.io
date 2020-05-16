@@ -88,6 +88,7 @@ section{
     position: relative;
     margin: 0 auto;
     clear:both;
+    transition: $snap-in;
 }
 
 #greeting{
@@ -95,7 +96,7 @@ section{
     p{
         max-width: 600px;
     }
-    transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
+    transition: all 0.6s;
 }
 
 #hand-wave{
@@ -104,6 +105,7 @@ section{
     transition: top ease 0.5s;
     display: inline-block;
 }
+
 body.non-touch #greeting:hover{
     #hand-wave{
         animation: shake 90ms ease;
@@ -125,7 +127,6 @@ body.non-touch #greeting:hover{
         max-width: 75%;
     }
     padding-bottom: 15vh !important;
-    transition: all 0.6s cubic-bezier(0.8, 0.3, 0.1, 1.4);
 }
 
 

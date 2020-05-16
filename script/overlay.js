@@ -7,9 +7,10 @@ $( "#work img" ).click(function() {
 	}
     $('#overlay').removeClass('hidden');
     $('#overlay').addClass('visible');
-    $('body').addClass('noScroll');
-	$('section, header,footer').addClass('blur');
-	
+	$('body').addClass('noScroll');
+	setTimeout(function() {
+		$('section, header,footer').addClass('blur');
+	}, 50);
 	renderProject(this);
 });
 
