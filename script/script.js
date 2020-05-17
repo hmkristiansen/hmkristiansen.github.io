@@ -115,3 +115,11 @@ function hidePort(delta){
     showWork = false;
 }
 
+/*
+let path = document.querySelector(".path");
+let length = path.getTotalLength();
+// console.log(length);
+
+path.style.strokeDasharray = length + ' ' + length;
+path.style.strokeDashoffset = length;
+*/
