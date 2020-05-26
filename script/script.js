@@ -70,6 +70,7 @@ window.addEventListener("scroll", function (event) {
         }
     }
 
+    
     if ((windowHeight + scroll + leway) >= document.body.offsetHeight) {
         setTimeout(function() {
             $('footer ul').removeClass('hideFooter');
@@ -93,7 +94,6 @@ function showPort(delta){
 
         $('#about').removeClass('active');
         $('#about').addClass('inactive');
-
     }
     showWork = true;
 }
