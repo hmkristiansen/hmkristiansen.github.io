@@ -26,7 +26,8 @@
     }
 
     #close_btn{
-        background-color: $bg-ligth-btn;
+        //border: 2px solid $bg-ligth-btn;
+        background-color: $bg-ligth-btn !important;
     }
 
     #more_link{
@@ -35,15 +36,11 @@
             padding: 10px;
             //background-color: $text-color-dark;
             color: $bg-ligth !important;
-            border-radius: 20px;
+            //border-radius: 20px;
             transition: all 0.2s;
             border: 2px solid $bg-ligth-btn;
         }
         
-    }
-
-    body.non-touch #close_btn:hover{
-        background-color: $text-color-light;
     }
 
     body.non-touch #more_link a:hover{

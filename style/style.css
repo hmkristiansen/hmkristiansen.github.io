@@ -563,14 +563,16 @@ body.non-touch .column img:hover {
 #overlay #content #more_link a {
   padding: 10px;
   color: #181818;
-  border-radius: 20px;
+  border-radius: 10px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: 2px solid #eeeeee;
 }
 
 body.non-touch #close_btn:hover {
-  background-color: #e4e4e4;
+  background-color: #eeeeee;
+  -webkit-transform: scale(0.9) !important;
+          transform: scale(0.9) !important;
 }
 
 body.non-touch #more_link a:hover {
@@ -633,7 +635,7 @@ body.non-touch #more_link a:hover {
   #overlay #close_btn {
     top: 15px;
     left: 15px;
-    background-color: #e4e4e4;
+    background-color: #eeeeee;
   }
   .blur {
     -moz-filter: blur(0px);
@@ -665,20 +667,15 @@ body.non-touch #more_link a:hover {
 }
 
 #page.darkmode #close_btn {
-  background-color: #eeeeee;
+  background-color: #eeeeee !important;
 }
 
 #page.darkmode #more_link a {
   padding: 10px;
   color: #ffffff !important;
-  border-radius: 20px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: 2px solid #eeeeee;
-}
-
-#page.darkmode body.non-touch #close_btn:hover {
-  background-color: #353638;
 }
 
 #page.darkmode body.non-touch #more_link a:hover {
