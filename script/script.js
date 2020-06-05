@@ -51,7 +51,7 @@ window.addEventListener("scroll", function (event) {
         workHeight = document.getElementById("work").clientHeight;
         workDistanceTop = document.getElementById("work").offsetTop;
         delta = workDistanceTop - scroll;
-        leway = 15;
+        leway = 40;
 
     if(delta > 0){
         if( (delta < (windowHeight/2.5)) && !showWork){
