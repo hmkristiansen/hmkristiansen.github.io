@@ -64,7 +64,7 @@ footer{
     padding: 0;
     margin: 0;
     padding: 30px;
-    padding-top: 20vh;
+    padding-top: 15vh;
     position: relative;
     
     text-align: right;
@@ -105,6 +105,7 @@ footer{
 @media screen and (max-width: 600px) {
     footer{
         padding: 10px;
+        padding-top: 10vh;
         li{
             font-size: 1rem;
             margin-left: 12px;
