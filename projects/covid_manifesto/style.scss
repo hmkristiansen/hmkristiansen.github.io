@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    background: rgb(255,235,244);
+    background: linear-gradient(0deg, rgba(255,235,244,1) 0%, rgba(226,240,255,1) 100%);
+    transition: all 0.2s;
+}
+
+.blur{
+    -moz-filter:blur(5px);
+    -o-filter:blur(5px);
+    -webkit-filter:blur(5px);
+    filter:blur(5px);
+}
+
+.stop_scroll{
+    overflow: hidden;
+}
+
+#overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    transition: all 0.2s;
+
+    #overlayContent{
+        position: absolute;
+        width: 600px;
+        height: 500px;
+        padding: 30px;
+        background-color: white;
+        font-size: 1rem;
+
+        z-index: 100;
+        border-radius: 20px;
+
+        left: calc(50% - 300px);
+        top: calc(50% - 250px);
+
+        #close_overlay_btn{
+            position: absolute;
+            cursor: pointer;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 10px;
+            background-color: #ff7f50;
+            padding: 10px 15px;
+            transition: all 0.2s;
+        }
+        #close_overlay_btn:hover{
+            background-color: #dd7048;
+        }
+    }
+    a{
+        color: dimgray;
+        transition: all 0.2s;
+    }
+    a:hover{
+        color: black;
+    }
+}
+
+
+.hideOverlay{
+    opacity: 0;
+    cursor: default;
+    pointer-events: none;
+    z-index: -100;
+}
+
+#whitespace2{
+    //background-color: white;
+}
+
+#greeting{
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+
+    font-family: 'Patrick Hand', cursive;
+    color: #2c2c2c;
+    font-size: 1.5rem;
+
+    position: fixed;
+
+    .svgArrow{
+        width: 200px;
+        height: 30px;
+        position: relative;
+        svg{
+            width: inherit;
+            height: inherit;
+        }
+        p{
+            text-align: left;
+        }
+    }
+
+    #datePickerArrow{
+        left: 40%;
+        top: 100px;
+    }
+
+    #arrowC{
+        left: calc(50% - 400px);
+        top: calc(50% - 100px);
+        p{
+            position: absolute;
+            left: -20px;
+            top: -50px;
+        }
+    }
+
+    #arrowH{
+        left: calc(50% + 150px);
+        top: calc(50% + 50px);
+        p{
+            position: absolute;
+            left: 150px;
+            top: 0px;
+        }
+    }
+
+    #timeline{
+        position: absolute;
+        width: 50%;
+        left: 25%;
+        bottom: 20%;
+
+        p{
+            width: 30%;
+            position: absolute;
+        }
+
+        #timeline0{
+            left: -10%;
+        }
+        #timeline1{
+            right: -15%;
+        }
+
+    }
+    #split{
+        width: 15px;
+        position: absolute;
+        bottom: 10%;
+        left: calc(50% - 7.5px);
+    }
+    #scroll{
+        text-align: center;
+        width: 200px;
+        padding: 10px;
+        position: absolute;
+        bottom: 10px;
+        left: calc(50% - 100px);
+    }
+}
+
+.hideGreeting{
+    opacity: 0;
+    cursor: default;
+}
+
+#dateTicker{
+    width: 200px;
+    font-size: 2rem;
+    position: fixed;
+    text-align: center;
+    top: 40px;
+    left: calc(50% - 100px);
+}
+
+.blob{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 500ms ease-in-out;
+    z-index: 0;
+}
+
+#blobH{
+    transform: translateX(200px);
+    width: 100px;
+    height: 100px;
+    //border: 1px solid gray;
+}
+
+#blobC{
+    transform: translateX(-300px);
+    width: 100px;
+    height: 100px;
+    //border: 1px solid gray;
+}
+
+
+.blob svg{
+    position: absolute;
+    transition: all 0.8s;
+}
+
+.dayEvent{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.pers{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    bottom: 40%;
+    right: 10%;
+    padding: 10px 25px;
+    border-radius: 20px;
+
+    z-index: 1;
+    background-color: #F5F5F5;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+}
+
+.ext{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    padding: 10px 25px;
+    border-radius: 20px;
+
+    z-index: 1;
+    background-color: #FFFAFF;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+}
+
+#outro{
+    height: 100%;
+    width: 100%;
+}
+
+
+/*
+.mode1{
+    #blob1{
+        background-color: red;
+        left: 30%;
+        transform: translateY(-10vh);
+    }
+    #blob2{
+        left: 70%;
+        transform: translateY(15vh);
+        background-color: blue;
+    }
+}
+
+.mode2{
+    #blob1{
+        background-color: yellow;
+        left: 70%;
+    }
+    #blob2{
+        left: 30%;
+        background-color: green;
+    }
+}
+
+.mode3{
+    #blob1{
+        background-color: peachpuff;
+        left: 10%;
+    }
+    #blob2{
+        left: 40%;
+        background-color: brown;
+    }
+}
+*/
