@@ -15,6 +15,11 @@ function fadeInPage(){
     },1500);
 }
 
+$( "#logo" ).click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "fast");
+    return false;
+});
+
 
 function checkIfTouch(){
 	var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)

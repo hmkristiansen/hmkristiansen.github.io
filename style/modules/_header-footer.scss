@@ -27,11 +27,14 @@ header{
         text-align: right;
         clear: both;
         padding-bottom: 20px;
+        cursor: pointer;
 
         p{
             font-weight: 600;
             font-size: 1.2rem;
             margin-bottom:10px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
         }
         span{
             position: absolute;
@@ -49,9 +52,8 @@ header{
 }
 
 body.non-touch #logo:hover{
-    a{
-        text-decoration: none !important;
-        cursor: pointer;
+    p{
+        opacity: 1;
     }
     span{
         opacity: 0.5;

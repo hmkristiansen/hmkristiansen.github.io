@@ -127,6 +127,11 @@ body.non-touch #greeting:hover{
         max-width: 75%;
     }
     padding-bottom: 15vh !important;
+    #life_wrapper{
+        span{
+            cursor: pointer;
+        }
+    }
 }
 
 

@@ -160,6 +160,10 @@ body.non-touch #greeting:hover #hand-wave {
   max-width: 75%;
 }
 
+#about #life_wrapper span {
+  cursor: pointer;
+}
+
 .row {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -271,12 +275,16 @@ header #logo {
   text-align: right;
   clear: both;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 
 header #logo p {
   font-weight: 600;
   font-size: 1.2rem;
   margin-bottom: 10px;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 header #logo span {
@@ -292,9 +300,8 @@ header #logo span {
   z-index: 1000;
 }
 
-body.non-touch #logo:hover a {
-  text-decoration: none !important;
-  cursor: pointer;
+body.non-touch #logo:hover p {
+  opacity: 1;
 }
 
 body.non-touch #logo:hover span {
