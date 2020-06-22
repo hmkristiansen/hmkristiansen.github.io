@@ -305,7 +305,8 @@ body.non-touch #logo:hover p {
 }
 
 body.non-touch #logo:hover span {
-  opacity: 0.5;
+  opacity: 1;
+  color: dimgray;
   top: 40px;
 }
 
