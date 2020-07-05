@@ -22,7 +22,27 @@ $( "#close_btn" ).click(function() {
     setTimeout(function() {
 		$("#port_img").remove();
 		$('.extraImage').remove();
+		$('#content').removeClass('exp_overlay');
 	}, 300);
+});
+
+$( "#exp_btn" ).click(function() {
+
+	if( $('#content').hasClass('exp_overlay')){
+		$('#content').removeClass('exp_overlay');
+		$('#content').addClass('dexp_overlay');
+		$("#exp_btn img").attr("src","assets/max.svg");
+	}else{
+		$('#content').removeClass('dexp_overlay');
+		$('#content').addClass('exp_overlay');
+		$("#exp_btn img").attr("src","assets/min.svg");
+	}
+
+	/*
+    setTimeout(function() {
+		$("#port_img").remove();
+		$('.extraImage').remove();
+	}, 300);*/
 });
 
 $('#overlay').on('click', function(e) {

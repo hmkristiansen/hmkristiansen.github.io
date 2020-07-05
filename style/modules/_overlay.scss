@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    transition: all 0.3s;
 
     z-index: 1000;
     opacity: 1;
@@ -27,6 +28,26 @@
         -webkit-transform: translateZ(0);
         z-index: 1001;
         cursor: s-resize !important;
+    }
+
+    #exp_btn{
+        position: absolute;
+        top:20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+
+        border-radius: 20px;
+      
+        //border: 2px solid $bg-ligth-btn;
+        opacity: 1;
+        transition: all 0.2s;
+
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        z-index: 1001;
+        cursor: nesw-resize !important;
     }
 
     #content{
@@ -129,6 +150,11 @@ body.non-touch #close_btn:hover{
     transform: scale(0.9) !important;
 }
 
+body.non-touch #exp_btn:hover{
+    background-color:$bg-ligth-btn;
+    transform: scale(1.1) !important;
+}
+
 body.non-touch #more_link a:hover{ 
     text-decoration: none;
     background-color: $bg-ligth-btn !important;
@@ -165,6 +191,52 @@ body.non-touch #more_link a:hover{
     filter: brightness(50%);
 }
 
+.exp_overlay{
+    transition: all 0.3s;
+    width: 100% !important; 
+    height: 100% !important;
+    margin-top: 0px !important;
+    border-radius: 0 !important;
+    max-width: 1600px !important;
+    #port_img{
+        height: 80vh !important; 
+    }
+}
+
+.dexp_overlay{
+
+    transition: all 0.3s;
+    width: 80% !important; 
+    height: 90% !important;
+    margin-top: 0px !important;
+    border-radius: 20px !important;
+    max-width: 800px !important;
+    margin-top: 5vh !important;
+
+    #port_img{
+        height: 60vh !important; 
+    }
+
+    /*
+    position: relative;
+    margin: 0; 
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
+    height: 90%;
+    overflow-y: scroll;
+    margin-top: 5vh;
+    opacity: 1 !important;
+    background-color: $bg-ligth;
+    border-radius: 20px;
+
+    img{
+        height: 60vh !important; 
+    }*/
+
+}
+
 @media screen and (max-width: 1000px){
 
     .blur{
@@ -192,6 +264,10 @@ body.non-touch #more_link a:hover{
             top: 15px;
             left: 15px;
             background-color: $bg-ligth-btn;
+        }
+
+        #exp_btn{
+            display: none;
         }
     }
     .blur{

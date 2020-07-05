@@ -1,0 +1,84 @@
+#settings{
+
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2000;
+    opacity: 1;
+
+    #settings_btn{
+        opacity: 0.3;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    #settings_panel{
+
+        transition: $snap-in;
+
+        background-color:$bg-ligth;
+        color: $text-color-light;
+        padding: 10px 20px;
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(122,122,122,0.2);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(122,122,122,0.2);
+        box-shadow: 0px 0px 20px 0px rgba(122,122,122,0.2);
+        margin: 10px 15px;
+
+        h1{
+            margin-top: 8px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        #color_theme{
+            label{
+                margin: 5px;
+                input{
+                    position: relative;
+                    margin-right: 5px;
+                    top: 1px;
+                }
+            }
+        }
+
+        #border_radius{
+
+            .slider {
+                width: 100%;
+                //margin: 50px auto;
+                -webkit-appearance: none;
+                height: 8px;
+                border-radius: 4px;
+                margin-bottom: 15px;
+                background-color: rgb(200, 200, 200);
+            }
+            
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 18px;
+                height: 18px;
+                border-radius: 10px;
+                background-color: $link-color-light;
+                overflow: visible;
+                cursor: pointer;
+            
+                -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+                -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+                box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+            
+            }
+            
+            .slidecontainer {
+                transform: translateY(-10px);
+            }
+        }
+    }
+}
+
+
+.hideSettings{
+    transition: $snap-in-fast;
+    opacity: 0;
+    z-index: -100;
+    transform: translateY(10px);
+}
