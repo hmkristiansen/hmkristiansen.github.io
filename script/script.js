@@ -15,7 +15,7 @@ function fadeInPage(){
     },1500);
 }
 
-$( "#logo" ).click(function() {
+$( "#logo p" ).click(function() {
     $("html, body").animate({ scrollTop: 0 }, "fast");
     return false;
 });

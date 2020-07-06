@@ -63,6 +63,21 @@
         -webkit-text-decoration-color: $hover-link-color-dark; /* Safari */  
           text-decoration-color: $hover-link-color-dark;
     }
+
+    #settings{
+
+        #settings_panel{
+
+            transition: $snap-in;
+    
+            background-color:$bg-dark;
+            color: $text-color-dark;
+
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(122,122,122,0.1);
+            -moz-box-shadow: 0px 0px 20px 0px rgba(122,122,122,0.1);
+            box-shadow: 0px 0px 20px 0px rgba(122,122,122,0.1);
+        }
+    }
 }
 
 #page.terribleMode{
