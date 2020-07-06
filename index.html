@@ -21,6 +21,29 @@
 
 <body class="" onload="fadeInPage();">
 
+    <div id="settings">
+        <div id="settings_panel" class="hideSettings">
+            <div class="panel_item" id="color_theme">
+                <h1>Theme</h1>
+                <label>
+                    <input type="radio" name="themeList" value="light" checked="checked"/>Light
+                </label>
+                <label>
+                    <input type="radio" name="themeList" value="dark"/>Dark
+                </label>
+                <label>
+                    <input type="radio" name="themeList" value="terrible"/>Terrible
+                </label>
+            </div>
+            <div class="panel_item" id="border_radius">
+                <h1>Border radius</h1>
+                <input id="itr" type="range" min="0" max="60" value="30" class="slider" name="rangeInput">
+            </div>
+        </div>
+        <div id="settings_btn">⚙️</div>
+    </div>
+    
+
     <!--
     <div id="hero_graphic">
         <img src="assets/hero.svg">    
@@ -50,6 +73,7 @@
 
     <div id="overlay" class="hidden">
         <div id="close_btn" class="hideCloseBtn"><img src="assets/exit.svg"></div>
+        <div id="exp_btn"><img src="assets/max.svg"></div>
         <div id="content">
             <div id="imageSelector"></div>
             <h1></h1>
@@ -152,6 +176,7 @@
     <script src="script/age.js"></script>
     <script src="script/script.js"></script>
     <script src="script/overlay.js"></script>
+    <script src="script/settings.js"></script>
     <script src="script/colormodes.js"></script>
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript>  
