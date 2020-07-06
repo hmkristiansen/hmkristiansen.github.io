@@ -197,9 +197,9 @@ body.non-touch #more_link a:hover{
     height: 100% !important;
     margin-top: 0px !important;
     border-radius: 0 !important;
-    max-width: 1600px !important;
+    max-width: 1800px !important;
     #port_img{
-        height: 80vh !important; 
+        height: 95vh !important; 
     }
 }
 
@@ -216,25 +216,6 @@ body.non-touch #more_link a:hover{
     #port_img{
         height: 60vh !important; 
     }
-
-    /*
-    position: relative;
-    margin: 0; 
-    padding: 0;
-    margin: 0 auto;
-    width: 80%;
-    max-width: 800px;
-    height: 90%;
-    overflow-y: scroll;
-    margin-top: 5vh;
-    opacity: 1 !important;
-    background-color: $bg-ligth;
-    border-radius: 20px;
-
-    img{
-        height: 60vh !important; 
-    }*/
-
 }
 
 @media screen and (max-width: 1000px){
