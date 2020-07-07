@@ -122,10 +122,27 @@ body.non-touch #greeting:hover{
 
 #about{
     .column {
-        padding-right: 40px;
+        //padding-right: 20px;
     }
     li{
         max-width: 75%;
+    }
+    #profile_img{
+        object-fit: cover;
+        max-height:180px;
+        border-radius: 15px;
+        //float: left;
+        margin: 10px;
+        margin-left: 0;
+        pointer-events: none;
+    }
+
+    #about_container{
+        margin-left: 5%;
+        margin-top: 10px;
+        ul{
+            margin-left: 5px;
+        }
     }
     padding-bottom: 15vh !important;
     #life_wrapper{
@@ -149,6 +166,18 @@ body.non-touch #greeting:hover{
     flex: 50%;
     max-width: 50%;
     padding: 0;
+}
+
+#about_col{
+    -ms-flex: 40%; 
+    flex: 40%;
+    max-width: 40%;
+}
+
+#cv_col{
+    -ms-flex: 60%; 
+    flex: 60%;
+    max-width: 60%;
 }
 
 
@@ -208,6 +237,26 @@ body.non-touch #greeting:hover{
         flex: 100%;
         max-width: 100%;
         padding: 0 10px;
+    }
+
+    #about_container{
+        margin-left: 0 !important;
+        margin-top: 10px;
+        ul{
+            margin-left: 0px !important;
+        }
+    }
+
+    #about_col{
+        -ms-flex: 100%; 
+        flex: 100%;
+        max-width: 100%;
+    }
+    
+    #cv_col{
+        -ms-flex: 100%; 
+        flex: 100%;
+        max-width: 100%;
     }
 
     #about{
