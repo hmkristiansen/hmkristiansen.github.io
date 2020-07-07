@@ -75,14 +75,13 @@ function renderProject(event){
 	let parentDiv = ref.parentNode;
 	parentDiv.insertBefore(img, ref);
 
-	$currentImages = targetObj.images;
-
 	$("#content h1").html(targetObj.h1);
 	$("#content #client").html(targetObj.item_info.client);
 	$("#content #role").html(targetObj.item_info.role);
 	$("#content #period").html(targetObj.item_info.period);
 	$("#content #cont_ing").html(targetObj.text.text0);
 
+	$currentImages = targetObj.images;
 	for (var image in $currentImages) {
 		if ($currentImages.hasOwnProperty(image)) {
 			let img = document.createElement('img');
@@ -91,6 +90,20 @@ function renderProject(event){
 
 			var overlay = document.getElementById("extraImages");
 			overlay.appendChild(img);
+		}
+	}
+
+	$video = targetObj.video;
+	for (var video in $video) {
+		if ($video.hasOwnProperty(video)) {
+			let vid = document.createElement('video');
+			vid.className = "projectVideo";
+			vid.src = $video[video];
+			vid.type = "video/mp4";
+			//vid.width = "400";
+			vid.controls = true;
+			var overlay = document.getElementById("endVideo");
+			overlay.appendChild(vid);
 		}
 	}
 }

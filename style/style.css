@@ -587,6 +587,10 @@ body.non-touch .column img:hover {
   padding-top: 0;
 }
 
+#overlay #content #endVideo {
+  padding: 10px;
+}
+
 #overlay #content #more_link {
   margin: 0 auto;
   width: 100%;

@@ -2,15 +2,15 @@
 var projects = [
 	["shake",shake],
 	["ctrl",ctrl],
+	["futura",futura],
 	["nn",nn],
     ["pb",pb],
-	["bb",bb],
-	["boo",boo]
+	["bb",bb]
+	//["boo",boo]
 	//["ss",ss]
 ];
 
 var images=[];
-
 
 getProjects();
 preload();
