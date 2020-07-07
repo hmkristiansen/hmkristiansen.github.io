@@ -22,6 +22,7 @@ $( "#close_btn" ).click(function() {
     setTimeout(function() {
 		$("#port_img").remove();
 		$('.extraImage').remove();
+		$('.extraVideo').remove();
 		$('#content').removeClass('exp_overlay');
 	}, 300);
 });
@@ -56,6 +57,7 @@ $('#overlay').on('click', function(e) {
     setTimeout(function() {
 		$("#port_img").remove();
 		$('.extraImage').remove();
+		$('.extraVideo').remove();
 	}, 300);
 });
 
@@ -100,6 +102,7 @@ function renderProject(event){
 			vid.className = "projectVideo";
 			vid.src = $video[video];
 			vid.type = "video/mp4";
+			vid.className="extraVideo";
 			//vid.width = "400";
 			vid.controls = true;
 			var overlay = document.getElementById("endVideo");
