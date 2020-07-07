@@ -112,3 +112,11 @@
     }
 
 }
+
+@media screen and (max-width: 400px) {
+
+    #settings, #settings_btn{
+        display:none;
+    }
+
+}

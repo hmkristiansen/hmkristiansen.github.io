@@ -935,4 +935,10 @@ body.non-touch #more_link a:hover {
     padding: 10px 20px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  #settings, #settings_btn {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
