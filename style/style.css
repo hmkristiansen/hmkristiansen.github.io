@@ -149,6 +149,8 @@ body.non-touch #greeting:hover #hand-wave {
 }
 
 #about {
+  max-width: 1000px;
+  margin: 0;
   padding-bottom: 15vh !important;
 }
 
@@ -164,6 +166,12 @@ body.non-touch #greeting:hover #hand-wave {
   margin: 10px;
   margin-left: 0;
   pointer-events: none;
+}
+
+#about #about_header {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  opacity: 0.7;
 }
 
 #about #about_container {
@@ -197,17 +205,17 @@ body.non-touch #greeting:hover #hand-wave {
 }
 
 #about_col {
-  -ms-flex: 40%;
-  -webkit-box-flex: 40%;
-          flex: 40%;
-  max-width: 40%;
+  -ms-flex: 50%;
+  -webkit-box-flex: 50%;
+          flex: 50%;
+  max-width: 50%;
 }
 
 #cv_col {
-  -ms-flex: 60%;
-  -webkit-box-flex: 60%;
-          flex: 60%;
-  max-width: 60%;
+  -ms-flex: 50%;
+  -webkit-box-flex: 50%;
+          flex: 50%;
+  max-width: 50%;
 }
 
 /*

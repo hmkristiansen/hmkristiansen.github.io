@@ -121,6 +121,9 @@ body.non-touch #greeting:hover{
 }
 
 #about{
+
+    max-width: 1000px;
+    margin: 0;
     .column {
         //padding-right: 20px;
     }
@@ -135,6 +138,13 @@ body.non-touch #greeting:hover{
         margin: 10px;
         margin-left: 0;
         pointer-events: none;
+    }
+
+    #about_header{
+        font-size: 1.5rem;
+        //margin-left: 5%;
+        margin-bottom: 20px;
+        opacity: 0.7;
     }
 
     #about_container{
@@ -169,15 +179,15 @@ body.non-touch #greeting:hover{
 }
 
 #about_col{
-    -ms-flex: 40%; 
-    flex: 40%;
-    max-width: 40%;
+    -ms-flex: 50%; 
+    flex: 50%;
+    max-width: 50%;
 }
 
 #cv_col{
-    -ms-flex: 60%; 
-    flex: 60%;
-    max-width: 60%;
+    -ms-flex: 50%; 
+    flex: 50%;
+    max-width: 50%;
 }
 
 
