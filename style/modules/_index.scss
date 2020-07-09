@@ -7,6 +7,7 @@
 html{
     font-size: 16px;
     scroll-behavior: smooth;
+    //overflow: hidden;
 }
   
 body {
@@ -26,8 +27,13 @@ body {
 }
 
 .body::-webkit-scrollbar {
+    display: none !important;
+}
+
+#greeting::-webkit-scrollbar {
     display: none;
 }
+
 
 h1{
     font-size: 1.2rem;
@@ -78,14 +84,14 @@ ul{
 }
 
 header, section{
-    padding: 30px;
+    //padding: 30px;
 }
 
 
 section{
-    padding-top: 10vh !important;
-    padding-bottom: 10vh !important;
-    padding: 30px;
+    //margin-top: 10vh !important;
+    //margin-bottom: 10vh !important;
+    //padding: 30px;
     position: relative;
     margin: 0 auto;
     clear:both;
@@ -93,11 +99,98 @@ section{
 }
 
 #greeting{
-    padding-top: 30vh !important;
-    p{
-        max-width: 600px;
+    padding-top: 2vh !important;
+    padding-bottom: 2vh !important;
+
+    width: auto;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    //background-color: #ededed;
+
+    scroll-snap-type: x mandatory;
+
+    //scroll-snap-points-x: repeat(50vw);
+   
+    .col{
+        white-space : normal;
+        //min-width: 400px;
+        height: 20vh;
+        float: none;
+        display: inline-block;
+        zoom: 1;
+        vertical-align: top;
+
+        //padding: 24px;
+
+        scroll-snap-align: start;
+        //padding-left: 3vw;
+
+        padding-left: 20px;
     }
-    transition: all 0.6s;
+
+    #hello{
+        width: 100%;
+        position: relative;
+        p{
+            width: 40%;
+        }
+        #scrollme{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+
+    #aboutme{
+
+        width: 40%;
+        
+        img{
+            object-fit: cover;
+            width: auto;
+            height: 100%;
+            vertical-align: center;
+            //border-radius: 15px;
+            pointer-events: none;
+            float: left;
+        }
+
+        ul{
+            float: left;
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+        }
+
+        #life_wrapper{
+            span{
+                cursor: pointer;
+            }
+        }
+    }
+
+    #resume{
+        width: 60%;
+        scroll-snap-align: none;
+
+        ul{
+            li{
+                width: 20%;
+                margin: 0 3%;
+                display: block;
+                float: left;
+            }
+        }
+    }
+
+    #contact{
+        width: 100%;
+        scroll-snap-align: start;
+    }
 }
 
 #hand-wave{
@@ -118,49 +211,6 @@ body.non-touch #greeting:hover{
     0% { transform: rotate(10deg); }
     50% { transform: rotate(-10deg); }
     100% { transform: rotate(10deg); }
-}
-
-#about{
-
-    max-width: 1000px;
-    margin: 0;
-    .column {
-        //padding-right: 20px;
-    }
-    li{
-        max-width: 75%;
-    }
-    #profile_img{
-        object-fit: cover;
-        max-height:180px;
-        border-radius: 15px;
-        //float: left;
-        margin: 10px;
-        margin-left: 0;
-        pointer-events: none;
-    }
-
-    /*
-    #about_header{
-        font-size: 1.5rem;
-        //margin-left: 5%;
-        margin-bottom: 20px;
-        opacity: 0.7;
-    }*/
-
-    #about_container{
-        margin-left: 5%;
-        margin-top: 10px;
-        ul{
-            margin-left: 5px;
-        }
-    }
-    padding-bottom: 15vh !important;
-    #life_wrapper{
-        span{
-            cursor: pointer;
-        }
-    }
 }
 
 .section_header{
@@ -216,6 +266,50 @@ body.non-touch #greeting:hover{
 }
 */
 
+@media screen and (max-width: 1050px){
+    #greeting{
+
+        .col{
+            height: 25vh;
+        }
+
+        #hello{
+            p{
+                width: 70%;
+            }
+            #scrollme{
+                position: absolute;
+                right: 5px;
+                top: 5px;
+            }
+        }
+
+        #aboutme{
+
+            width: 100%;
+
+            img{
+                //max-height: 400px;
+                width: auto;
+                height: 50%;
+            }
+    
+        }
+    
+        #resume{
+            width: 100%;
+            scroll-snap-align: start;
+    
+            ul{
+                li{
+                    width: 25%;
+                }
+            }
+        }
+
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     html{
@@ -249,9 +343,6 @@ body.non-touch #greeting:hover{
         margin-bottom: 5px;
     }
 
-    #greeting{
-        padding-top: 30vh !important;
-    }
     .column {
         -ms-flex: 100%; 
         flex: 100%;
@@ -259,30 +350,36 @@ body.non-touch #greeting:hover{
         padding: 0 10px;
     }
 
-    #about_container{
-        margin-left: 0 !important;
-        margin-top: 10px;
-        ul{
-            margin-left: 0px !important;
-        }
-    }
+    #greeting{
 
-    #about_col{
-        -ms-flex: 100%; 
-        flex: 100%;
-        max-width: 100%;
-    }
+        .col{
+            height: 30vh;
+            
+        }
+
+        #aboutme{
+            img{
+                height: 50%;
+            }
+        }
     
-    #cv_col{
-        -ms-flex: 100%; 
-        flex: 100%;
-        max-width: 100%;
-    }
-
-    #about{
-        li{
-            max-width: 80%;
+        #resume{
+            ul{
+                li{
+                    width: 100%;
+                }
+            }
         }
+
+        #contact{
+            ul{
+                li{
+                    margin: 10px;
+                    margin-left: 0;
+                }
+            }
+        }
+
     }
 }
 

@@ -27,6 +27,10 @@ body {
 }
 
 .body::-webkit-scrollbar {
+  display: none !important;
+}
+
+#greeting::-webkit-scrollbar {
   display: none;
 }
 
@@ -78,14 +82,7 @@ ul li {
   margin-bottom: 10px;
 }
 
-header, section {
-  padding: 30px;
-}
-
 section {
-  padding-top: 10vh !important;
-  padding-bottom: 10vh !important;
-  padding: 30px;
   position: relative;
   margin: 0 auto;
   clear: both;
@@ -94,13 +91,84 @@ section {
 }
 
 #greeting {
-  padding-top: 30vh !important;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  padding-top: 2vh !important;
+  padding-bottom: 2vh !important;
+  width: auto;
+  white-space: nowrap;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 
-#greeting p {
-  max-width: 600px;
+#greeting .col {
+  white-space: normal;
+  height: 20vh;
+  float: none;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: top;
+  scroll-snap-align: start;
+  padding-left: 20px;
+}
+
+#greeting #hello {
+  width: 100%;
+  position: relative;
+}
+
+#greeting #hello p {
+  width: 40%;
+}
+
+#greeting #hello #scrollme {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#greeting #aboutme {
+  width: 40%;
+}
+
+#greeting #aboutme img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: auto;
+  height: 100%;
+  vertical-align: center;
+  pointer-events: none;
+  float: left;
+}
+
+#greeting #aboutme ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+}
+
+#greeting #aboutme #life_wrapper span {
+  cursor: pointer;
+}
+
+#greeting #resume {
+  width: 60%;
+  scroll-snap-align: none;
+}
+
+#greeting #resume ul li {
+  width: 20%;
+  margin: 0 3%;
+  display: block;
+  float: left;
+}
+
+#greeting #contact {
+  width: 100%;
+  scroll-snap-align: start;
 }
 
 #hand-wave {
@@ -146,46 +214,6 @@ body.non-touch #greeting:hover #hand-wave {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
   }
-}
-
-#about {
-  max-width: 1000px;
-  margin: 0;
-  /*
-    #about_header{
-        font-size: 1.5rem;
-        //margin-left: 5%;
-        margin-bottom: 20px;
-        opacity: 0.7;
-    }*/
-  padding-bottom: 15vh !important;
-}
-
-#about li {
-  max-width: 75%;
-}
-
-#about #profile_img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-height: 180px;
-  border-radius: 15px;
-  margin: 10px;
-  margin-left: 0;
-  pointer-events: none;
-}
-
-#about #about_container {
-  margin-left: 5%;
-  margin-top: 10px;
-}
-
-#about #about_container ul {
-  margin-left: 5px;
-}
-
-#about #life_wrapper span {
-  cursor: pointer;
 }
 
 .section_header {
@@ -240,6 +268,34 @@ body.non-touch #greeting:hover #hand-wave {
     transform: rotate(180deg);
 }
 */
+@media screen and (max-width: 1050px) {
+  #greeting .col {
+    height: 25vh;
+  }
+  #greeting #hello p {
+    width: 70%;
+  }
+  #greeting #hello #scrollme {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+  #greeting #aboutme {
+    width: 100%;
+  }
+  #greeting #aboutme img {
+    width: auto;
+    height: 50%;
+  }
+  #greeting #resume {
+    width: 100%;
+    scroll-snap-align: start;
+  }
+  #greeting #resume ul li {
+    width: 25%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   html {
     font-size: 12px;
@@ -265,9 +321,6 @@ body.non-touch #greeting:hover #hand-wave {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  #greeting {
-    padding-top: 30vh !important;
-  }
   .column {
     -ms-flex: 100%;
     -webkit-box-flex: 100%;
@@ -275,27 +328,18 @@ body.non-touch #greeting:hover #hand-wave {
     max-width: 100%;
     padding: 0 10px;
   }
-  #about_container {
-    margin-left: 0 !important;
-    margin-top: 10px;
+  #greeting .col {
+    height: 30vh;
   }
-  #about_container ul {
-    margin-left: 0px !important;
+  #greeting #aboutme img {
+    height: 50%;
   }
-  #about_col {
-    -ms-flex: 100%;
-    -webkit-box-flex: 100%;
-            flex: 100%;
-    max-width: 100%;
+  #greeting #resume ul li {
+    width: 100%;
   }
-  #cv_col {
-    -ms-flex: 100%;
-    -webkit-box-flex: 100%;
-            flex: 100%;
-    max-width: 100%;
-  }
-  #about li {
-    max-width: 80%;
+  #greeting #contact ul li {
+    margin: 10px;
+    margin-left: 0;
   }
 }
 
@@ -504,6 +548,20 @@ body.non-touch .column img:hover {
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
   opacity: 0;
+}
+
+.inactive {
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+}
+
+.inactive2 {
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
 }
 
 @media screen and (max-width: 1000px) {

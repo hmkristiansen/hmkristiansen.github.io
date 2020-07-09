@@ -59,9 +59,9 @@ window.addEventListener("scroll", function (event) {
         leway = 40;
 
     if(delta > 0){
-        if( (delta < (windowHeight/2.5)) && !showWork){
+        if( (delta < (windowHeight/6)) && !showWork){
             showPort(delta);
-        }else if( ( delta > (windowHeight/2.5)) && showWork){
+        }else if( ( delta > (windowHeight/6)) && showWork){
             hidePort(delta);
         }
     }else if(delta < 0){
@@ -97,8 +97,8 @@ function showPort(delta){
         $('#work').removeClass('inactive2');
         $('#work').addClass('active');
 
-        $('#about').removeClass('active');
-        $('#about').addClass('inactive');
+        //$('#about').removeClass('active');
+        //$('#about').addClass('inactive');
     }
     showWork = true;
 }
@@ -114,8 +114,8 @@ function hidePort(delta){
         $('#work').removeClass('active');
         $('#work').addClass('inactive2');
 
-        $('#about').removeClass('inactive');
-        $('#about').addClass('active');
+        //$('#about').removeClass('inactive');
+        //$('#about').addClass('active');
     }
     showWork = false;
 }

@@ -71,6 +71,21 @@ body.non-touch .column img:hover{
     opacity: 0;
 }
 
+.inactive{
+    -moz-filter:blur(8px);
+    -o-filter:blur(8px);
+    -webkit-filter:blur(8px);
+    filter:blur(8px);
+}
+  
+.inactive2{
+    
+    -moz-filter:blur(8px);
+    -o-filter:blur(8px);
+    -webkit-filter:blur(8px);
+    filter:blur(8px);
+}
+
 
 @media screen and (max-width: 1000px){
 
