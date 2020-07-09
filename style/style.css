@@ -151,6 +151,13 @@ body.non-touch #greeting:hover #hand-wave {
 #about {
   max-width: 1000px;
   margin: 0;
+  /*
+    #about_header{
+        font-size: 1.5rem;
+        //margin-left: 5%;
+        margin-bottom: 20px;
+        opacity: 0.7;
+    }*/
   padding-bottom: 15vh !important;
 }
 
@@ -168,12 +175,6 @@ body.non-touch #greeting:hover #hand-wave {
   pointer-events: none;
 }
 
-#about #about_header {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  opacity: 0.7;
-}
-
 #about #about_container {
   margin-left: 5%;
   margin-top: 10px;
@@ -185,6 +186,13 @@ body.non-touch #greeting:hover #hand-wave {
 
 #about #life_wrapper span {
   cursor: pointer;
+}
+
+.section_header {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  width: 100%;
+  opacity: 0.7;
 }
 
 .row {
