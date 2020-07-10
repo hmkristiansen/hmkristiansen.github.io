@@ -171,7 +171,7 @@ body.non-touch #more_link a:hover{
 }
 
 .visible{
-    z-index: 1000 !important;
+    z-index: 10000 !important;
     pointer-events: all !important;
     opacity: 1 !important;
     transform: scale(1) !important;

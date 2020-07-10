@@ -12,7 +12,7 @@ html{
   
 body {
     margin: 0;
-    font-family: $body-font;
+    font-family: $mono-font;
     color: $text-color-light;
     background-color: $bg-ligth;
     //padding: 10px;
@@ -92,71 +92,71 @@ section{
 }
 
 #greeting{
+
+    top:-20px;
     width: auto;
+    height: auto;
     white-space: nowrap;
     position: relative;
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 
-    background-color: #ededed;
-
     scroll-snap-type: x mandatory;
-
-    //scroll-snap-points-x: repeat(50vw);
+    //padding: 20px 0;
    
     .col{
         white-space : normal;
-        //min-width: 400px;
-        height: 50vh;
-        float: none;
         display: inline-block;
-        zoom: 1;
-        //text-align: center;
-
         margin: 0 auto;
-
-        //padding: 24px;
-
         scroll-snap-align: start;
-        //padding-left: 3vw;
-
-        //padding-left: 20px;
+        position: absolute;
     }
 
     #hello{
         width: 100%;
         position: relative;
-        //vertical-align: middle;
+        vertical-align: top;
+        padding: 40px;
         p{
-            width: 40%;
+            width: 100%;
+            max-width: 1000px;
+            font-size: 2rem;
+            span{
+                font-weight: bold;
+            }
         }
         #scrollme{
             position: absolute;
             right: 10px;
-            top: 10px;
+            bottom: 10px;
         }
     }
 
     #aboutme{
 
-        width: 40%;
+        width: 100%;
+        position: relative;
+        vertical-align: top;
         
         img{
             object-fit: cover;
             width: auto;
-            max-height: 50%;
+            height: 200px;
             //vertical-align: center;
             //border-radius: 15px;
             pointer-events: none;
             float: left;
+            padding: 10px;
+            width: auto;
         }
 
         ul{
             float: left;
             margin: 0;
             padding: 0;
-            margin-left: 20px;
+            margin-left: 5%;
+            width: 30%;
         }
 
         #life_wrapper{
@@ -167,9 +167,8 @@ section{
     }
 
     #resume{
-        width: 60%;
-        scroll-snap-align: none;
-
+        width: 100%;
+        scroll-snap-align: start;
         ul{
             li{
                 width: 20%;
@@ -178,11 +177,6 @@ section{
                 float: left;
             }
         }
-    }
-
-    #contact{
-        width: 100%;
-        scroll-snap-align: start;
     }
 }
 
@@ -259,49 +253,6 @@ body.non-touch #greeting:hover{
 }
 */
 
-@media screen and (max-width: 1050px){
-    #greeting{
-
-        .col{
-            height: 25vh;
-        }
-
-        #hello{
-            p{
-                width: 70%;
-            }
-            #scrollme{
-                position: absolute;
-                right: 5px;
-                top: 5px;
-            }
-        }
-
-        #aboutme{
-
-            width: 100%;
-
-            img{
-                //max-height: 400px;
-                width: auto;
-                height: 50%;
-            }
-    
-        }
-    
-        #resume{
-            width: 100%;
-            scroll-snap-align: start;
-    
-            ul{
-                li{
-                    width: 25%;
-                }
-            }
-        }
-
-    }
-}
 
 @media screen and (max-width: 600px) {
 
@@ -343,42 +294,11 @@ body.non-touch #greeting:hover{
         padding: 0 10px;
     }
 
-    #greeting{
-
-        .col{
-            height: 30vh;
-            
-        }
-
-        #aboutme{
-            img{
-                height: 50%;
-            }
-        }
-    
-        #resume{
-            ul{
-                li{
-                    width: 100%;
-                }
-            }
-        }
-
-        #contact{
-            ul{
-                li{
-                    margin: 10px;
-                    margin-left: 0;
-                }
-            }
-        }
-
-    }
 }
 
 
 .onLoadBody, .onLoadHeader, .onLoadGreeting, .onLoadPort{
-	transition: all 0.6s ease !important;
+	transition: $snap-in;
     opacity: 0;
-    transform: translateY(20px);
+    transform: scale3d(0.95, 0.95, 0.95);
 }
