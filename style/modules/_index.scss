@@ -7,14 +7,15 @@
 html{
     font-size: 16px;
     scroll-behavior: smooth;
+    //overflow: hidden;
 }
   
 body {
     margin: 0;
-    font-family: $body-font;
+    font-family: $mono-font;
     color: $text-color-light;
     background-color: $bg-ligth;
-    padding: 10px;
+    //padding: 10px;
     scrollbar-width: none;
     will-change: filter;
     overflow-x: hidden;
@@ -26,8 +27,13 @@ body {
 }
 
 .body::-webkit-scrollbar {
+    display: none !important;
+}
+
+#greeting::-webkit-scrollbar {
     display: none;
 }
+
 
 h1{
     font-size: 1.2rem;
@@ -77,15 +83,8 @@ ul{
     }
 }
 
-header, section{
-    padding: 30px;
-}
-
 
 section{
-    padding-top: 10vh !important;
-    padding-bottom: 10vh !important;
-    padding: 30px;
     position: relative;
     margin: 0 auto;
     clear:both;
@@ -93,11 +92,92 @@ section{
 }
 
 #greeting{
-    padding-top: 30vh !important;
-    p{
-        max-width: 600px;
+
+    top:-20px;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    scroll-snap-type: x mandatory;
+    //padding: 20px 0;
+   
+    .col{
+        white-space : normal;
+        display: inline-block;
+        margin: 0 auto;
+        scroll-snap-align: start;
+        position: absolute;
     }
-    transition: all 0.6s;
+
+    #hello{
+        width: 100%;
+        position: relative;
+        vertical-align: top;
+        padding: 40px;
+        p{
+            width: 100%;
+            max-width: 1000px;
+            font-size: 2rem;
+            span{
+                font-weight: bold;
+            }
+        }
+        #scrollme{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+
+    #aboutme{
+
+        width: 100%;
+        position: relative;
+        vertical-align: top;
+        
+        img{
+            object-fit: cover;
+            width: auto;
+            height: 200px;
+            //vertical-align: center;
+            //border-radius: 15px;
+            pointer-events: none;
+            float: left;
+            padding: 10px;
+            width: auto;
+        }
+
+        ul{
+            float: left;
+            margin: 0;
+            padding: 0;
+            margin-left: 5%;
+            width: 30%;
+        }
+
+        #life_wrapper{
+            span{
+                cursor: pointer;
+            }
+        }
+    }
+
+    #resume{
+        width: 100%;
+        scroll-snap-align: start;
+        ul{
+            li{
+                width: 20%;
+                margin: 0 3%;
+                display: block;
+                float: left;
+            }
+        }
+    }
 }
 
 #hand-wave{
@@ -118,49 +198,6 @@ body.non-touch #greeting:hover{
     0% { transform: rotate(10deg); }
     50% { transform: rotate(-10deg); }
     100% { transform: rotate(10deg); }
-}
-
-#about{
-
-    max-width: 1000px;
-    margin: 0;
-    .column {
-        //padding-right: 20px;
-    }
-    li{
-        max-width: 75%;
-    }
-    #profile_img{
-        object-fit: cover;
-        max-height:180px;
-        border-radius: 15px;
-        //float: left;
-        margin: 10px;
-        margin-left: 0;
-        pointer-events: none;
-    }
-
-    /*
-    #about_header{
-        font-size: 1.5rem;
-        //margin-left: 5%;
-        margin-bottom: 20px;
-        opacity: 0.7;
-    }*/
-
-    #about_container{
-        margin-left: 5%;
-        margin-top: 10px;
-        ul{
-            margin-left: 5px;
-        }
-    }
-    padding-bottom: 15vh !important;
-    #life_wrapper{
-        span{
-            cursor: pointer;
-        }
-    }
 }
 
 .section_header{
@@ -216,6 +253,7 @@ body.non-touch #greeting:hover{
 }
 */
 
+
 @media screen and (max-width: 600px) {
 
     html{
@@ -227,7 +265,15 @@ body.non-touch #greeting:hover{
     }
     section{
         width: 100%;
-        padding-bottom: 10vh !important;
+        //padding-bottom: 10vh !important;
+    }
+
+    #hello{
+        padding: 20px !important;
+        padding-bottom: 0;
+        p{
+            font-size: 1.5rem;
+        }
     }
 
     h2{
@@ -249,9 +295,6 @@ body.non-touch #greeting:hover{
         margin-bottom: 5px;
     }
 
-    #greeting{
-        padding-top: 30vh !important;
-    }
     .column {
         -ms-flex: 100%; 
         flex: 100%;
@@ -259,36 +302,11 @@ body.non-touch #greeting:hover{
         padding: 0 10px;
     }
 
-    #about_container{
-        margin-left: 0 !important;
-        margin-top: 10px;
-        ul{
-            margin-left: 0px !important;
-        }
-    }
-
-    #about_col{
-        -ms-flex: 100%; 
-        flex: 100%;
-        max-width: 100%;
-    }
-    
-    #cv_col{
-        -ms-flex: 100%; 
-        flex: 100%;
-        max-width: 100%;
-    }
-
-    #about{
-        li{
-            max-width: 80%;
-        }
-    }
 }
 
 
 .onLoadBody, .onLoadHeader, .onLoadGreeting, .onLoadPort{
-	transition: all 0.6s ease !important;
+	transition: $snap-in;
     opacity: 0;
-    transform: translateY(20px);
+    transform: scale3d(0.95, 0.95, 0.95);
 }

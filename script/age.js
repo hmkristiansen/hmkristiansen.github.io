@@ -1,6 +1,6 @@
 
 var update = setInterval(function() {
-	updateAge();
+	//updateAge();
 }, 500);
 
 var bday = new Date("Nov 19, 1996 05:55:25").getTime();

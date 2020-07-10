@@ -66,68 +66,79 @@ body.non-touch #logo:hover{
 }
 
 footer{
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    padding: 30px;
-    padding-top: 15vh;
+    width: 100vw;
+    height: 300px;
+    z-index: 1;
     position: relative;
-    
-    text-align: right;
-    opacity: 1;
+    //background-color: #e1e1e1;
+    //padding: 100px 0;
 
-    
+    #info{
+        top: 20px;
+        left: 5vw;
+        position: absolute;
+    }
+
+    #links{
+        top: 20px;
+        right: 5vw;
+        position: absolute;
+    }
 
     ul{
-        transform: translateY(0);
-        transition: all 0.6s;
-    }
-
-    li{
-        float: right;
-        margin-left: 12px;
-    }
-
-    /*
-    #footer_graphic{
-        position: absolute;
-        bottom:25px;
-        right: 0;
-        width: 100%;
+        //padding-top: 30px;
         //height: 100%;
-        z-index: 0;
-        img{
-            text-align: center;
-        }
+        //width: 200px;
+        float: right;
+        margin-left: 50px;
     }
-    */
+
+    hr{
+        border: 0.5px solid rgb(230, 230, 230);
+        width: 90vw;
+        margin: 0 auto;
+    }
 }
 
 
-
+/*
 .hideFooter{
     opacity: 0;
     //transform: translateY(10px);
-}
+}*/
 
 @media screen and (max-width: 600px) {
+   
     footer{
-        padding: 10px;
-        padding-top: 10vh;
-        li{
-            font-size: 1rem;
-            margin-left: 12px;
+        width: 100vw;
+        height: 300px;
+        z-index: 1;
+        position: relative;
+        //background-color: #e1e1e1;
+        //padding: 100px 0;
+    
+        #info{
+            position: relative;
+            left: 5vw;
         }
-    }
-
-    body.non-touch #logo:hover{
-        a{
-            text-decoration: none !important;
-            cursor: pointer;
+    
+        #links{
+            margin-top: 20px;
+            left: 5vw;
+            position: relative;
         }
-        span{
-            opacity: 0.5;
-            top: 25px;
+    
+        ul{
+            //padding-top: 30px;
+            margin-bottom: 0;
+            height: 50px;
+            width: 100%;
+            float: left;
+            margin-left: 0px;
+        }
+    
+        hr{
+            width: 95vw;
         }
     }
 }   

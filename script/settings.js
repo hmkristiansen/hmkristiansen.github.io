@@ -7,12 +7,11 @@ itr.addEventListener("input", () => {
     let editInput = regInput - 10;
     s.textContent = "#work .column img {border-radius:" + regInput +"px !important;}" +
     "#overlay #content {border-radius:" + editInput +"px !important;}"+
-    "#settings #settings_panel {border-radius:" + editInput +"px !important;}"+
-    "#profile_img {border-radius:" + editInput +"px !important;}";
+    "#settings #settings_panel {border-radius:" + editInput +"px !important;}";
 })
 
 $( "#settings_btn" ).click(function() {
-    $('#settings_panel').toggleClass('hideSettings');
+    $('#settings').toggleClass('hideSettings');
     $('#settings_btn').toggleClass('activeSettingsIcon');
 });
 
