@@ -15,7 +15,6 @@ body {
   font-family: "Karla", sans-serif;
   color: #353638;
   background-color: #ffffff;
-  padding: 10px;
   scrollbar-width: none;
   will-change: filter;
   overflow-x: hidden;
@@ -91,27 +90,25 @@ section {
 }
 
 #greeting {
-  padding-top: 2vh !important;
-  padding-bottom: 2vh !important;
   width: auto;
   white-space: nowrap;
   position: relative;
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  background-color: #ededed;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
 }
 
 #greeting .col {
   white-space: normal;
-  height: 20vh;
+  height: 50vh;
   float: none;
   display: inline-block;
   zoom: 1;
-  vertical-align: top;
+  margin: 0 auto;
   scroll-snap-align: start;
-  padding-left: 20px;
 }
 
 #greeting #hello {
@@ -137,8 +134,7 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   width: auto;
-  height: 100%;
-  vertical-align: center;
+  max-height: 50%;
   pointer-events: none;
   float: left;
 }

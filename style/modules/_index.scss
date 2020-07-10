@@ -15,7 +15,7 @@ body {
     font-family: $body-font;
     color: $text-color-light;
     background-color: $bg-ligth;
-    padding: 10px;
+    //padding: 10px;
     scrollbar-width: none;
     will-change: filter;
     overflow-x: hidden;
@@ -89,9 +89,6 @@ header, section{
 
 
 section{
-    //margin-top: 10vh !important;
-    //margin-bottom: 10vh !important;
-    //padding: 30px;
     position: relative;
     margin: 0 auto;
     clear:both;
@@ -99,9 +96,6 @@ section{
 }
 
 #greeting{
-    padding-top: 2vh !important;
-    padding-bottom: 2vh !important;
-
     width: auto;
     white-space: nowrap;
     position: relative;
@@ -109,7 +103,7 @@ section{
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 
-    //background-color: #ededed;
+    background-color: #ededed;
 
     scroll-snap-type: x mandatory;
 
@@ -118,23 +112,26 @@ section{
     .col{
         white-space : normal;
         //min-width: 400px;
-        height: 20vh;
+        height: 50vh;
         float: none;
         display: inline-block;
         zoom: 1;
-        vertical-align: top;
+        //text-align: center;
+
+        margin: 0 auto;
 
         //padding: 24px;
 
         scroll-snap-align: start;
         //padding-left: 3vw;
 
-        padding-left: 20px;
+        //padding-left: 20px;
     }
 
     #hello{
         width: 100%;
         position: relative;
+        //vertical-align: middle;
         p{
             width: 40%;
         }
@@ -152,8 +149,8 @@ section{
         img{
             object-fit: cover;
             width: auto;
-            height: 100%;
-            vertical-align: center;
+            max-height: 50%;
+            //vertical-align: center;
             //border-radius: 15px;
             pointer-events: none;
             float: left;
