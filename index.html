@@ -22,33 +22,43 @@
 
 <body class="" onload="fadeInPage();">
 
-    <div id="settings">
-        <div id="settings_panel" class="hideSettings">
-            <div class="panel_item" id="color_theme">
-                <h1>Theme</h1>
-                <label>
-                    <input type="radio" name="themeList" value="light" checked="checked"/>Light
-                </label>
-                <label>
-                    <input type="radio" name="themeList" value="dark"/>Dark
-                </label>
-                <label>
-                    <input type="radio" name="themeList" value="terrible"/>Terrible
-                </label>
-            </div>
-            <div class="panel_item" id="border_radius">
-                <h1>Border radius</h1>
-                <input id="itr" type="range" min="0" max="60" value="30" class="slider" name="rangeInput">
-            </div>
+    <!--
+    <div id="settings" class="hideSettings">
+        <div class="panel_item" id="font_select">
+            <h1>Font</h1>
+            <label>
+                <input type="radio" name="fontList" value="sans" checked="checked"/>Sans
+            </label>
+            <label>
+                <input type="radio" name="fontList" value="mono"/>Mono
+            </label>
+        </div>
+        <div class="panel_item" id="color_theme">
+            <h1>Theme</h1>
+            <label>
+                <input type="radio" name="themeList" value="light" checked="checked"/>Light
+            </label>
+            <label>
+                <input type="radio" name="themeList" value="dark"/>Dark
+            </label>
+            <label>
+                <input type="radio" name="themeList" value="terrible"/>Terrible
+            </label>
+        </div>
+        <div class="panel_item" id="border_radius">
+            <h1>Border radius</h1>
+            <input id="itr" type="range" min="0" max="60" value="30" class="slider" name="rangeInput">
         </div>
     </div>
 
     <div id="settings_btn">⚙️</div>
+
+    -->
     
     <section id="greeting" class="onLoadGreeting">
 
         <div class="col" id="hello" >
-            <p><span>Hei, I'm Henrik! 👋</span> I'm studying how to design good experiences; the scenarios that describe them, the journeys that define them and the testing that improves them.
+            <p><span>Hei, I'm Henrik! </span><span id="hand-wave">👋</span> I'm studying how to design good and valuable experiences using the scenarios that describe them, the journeys that define them and the testing that improves them.
             </p>
             <!--
             <div id="scrollme">

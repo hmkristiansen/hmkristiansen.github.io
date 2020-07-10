@@ -68,7 +68,7 @@ body.non-touch #logo:hover{
 footer{
     width: 100vw;
     height: 300px;
-    z-index: 1001;
+    z-index: 1;
     position: relative;
     //background-color: #e1e1e1;
     //padding: 100px 0;
@@ -108,23 +108,37 @@ footer{
 }*/
 
 @media screen and (max-width: 600px) {
+   
     footer{
-        padding: 10px;
-        padding-top: 10vh;
-        li{
-            font-size: 1rem;
-            margin-left: 12px;
+        width: 100vw;
+        height: 300px;
+        z-index: 1;
+        position: relative;
+        //background-color: #e1e1e1;
+        //padding: 100px 0;
+    
+        #info{
+            position: relative;
+            left: 5vw;
         }
-    }
-
-    body.non-touch #logo:hover{
-        a{
-            text-decoration: none !important;
-            cursor: pointer;
+    
+        #links{
+            margin-top: 20px;
+            left: 5vw;
+            position: relative;
         }
-        span{
-            opacity: 0.5;
-            top: 25px;
+    
+        ul{
+            //padding-top: 30px;
+            margin-bottom: 0;
+            height: 50px;
+            width: 100%;
+            float: left;
+            margin-left: 0px;
+        }
+    
+        hr{
+            width: 95vw;
         }
     }
 }   
