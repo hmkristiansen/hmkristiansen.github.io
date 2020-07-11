@@ -60,7 +60,7 @@ p{
 a{
     text-decoration: none;
     color: $link-color-light;
-    cursor: ne-resize;
+    cursor: alias;
     transition: all 0.1s;
 }
 
@@ -91,6 +91,7 @@ section{
     transition: $snap-in;
 }
 
+/*
 #greeting{
 
     top:-20px;
@@ -114,7 +115,7 @@ section{
     }
 
     #hello{
-        width: 100%;
+        width: 100vw;
         position: relative;
         vertical-align: top;
         padding: 40px;
@@ -179,6 +180,22 @@ section{
         }
     }
 }
+*/
+
+#greeting{
+    top:-20px;
+    width: 100vw;
+    padding: 40px !important;
+
+    p{
+        width: 100%;
+        max-width: 1000px;
+        font-size: 2rem;
+        span{
+            font-weight: bold;
+        }
+    }
+}
 
 #hand-wave{
     position: relative;
@@ -225,19 +242,6 @@ body.non-touch #greeting:hover{
     padding: 0;
 }
 
-#about_col{
-    -ms-flex: 50%; 
-    flex: 50%;
-    max-width: 50%;
-}
-
-#cv_col{
-    -ms-flex: 50%; 
-    flex: 50%;
-    max-width: 50%;
-}
-
-
 /*
 #hero_graphic{
     position: absolute;
@@ -268,7 +272,7 @@ body.non-touch #greeting:hover{
         //padding-bottom: 10vh !important;
     }
 
-    #hello{
+    #greeting{
         padding: 20px !important;
         padding-bottom: 0;
         p{
