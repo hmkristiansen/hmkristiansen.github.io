@@ -106,13 +106,16 @@ section {
 }
 
 #greeting .greeting_page {
-  width: 100vw;
   height: auto;
   padding: 40px !important;
   display: inline-block;
   zoom: 1;
   white-space: normal;
   vertical-align: text-top;
+}
+
+#greeting #intro {
+  width: 100vw;
 }
 
 #greeting #intro p {
@@ -123,10 +126,14 @@ section {
   font-weight: bold;
 }
 
+#greeting #more {
+  width: 50vw;
+}
+
 #greeting #more img {
   height: 200px;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+  position: relative;
+  padding: 20px;
 }
 
 #hand-wave {
