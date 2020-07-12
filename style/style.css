@@ -127,11 +127,11 @@ section {
 }
 
 #greeting #more {
-  width: 50vw;
+  width: 70vw;
 }
 
 #greeting #more img {
-  height: 200px;
+  height: 30vh;
   position: relative;
   padding: 20px;
 }
@@ -209,7 +209,7 @@ body.non-touch #greeting:hover #hand-wave {
     padding: 0 !important;
   }
   #greeting .greeting_page {
-    padding: 0;
+    padding: 20px !important;
   }
   #greeting #intro p {
     font-size: 1.5rem;

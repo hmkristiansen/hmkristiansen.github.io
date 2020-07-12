@@ -127,9 +127,9 @@ section{
     }
 
     #more{
-        width: 50vw;
+        width: 70vw;
         img{
-            height: 200px;
+            height: 30vh;
             position: relative;
             //left: 100px;
             padding: 20px;
@@ -189,7 +189,7 @@ body.non-touch #greeting:hover{
     #greeting{
         padding: 0 !important;
         .greeting_page{
-            padding: 0;
+            padding: 20px !important;
         }
 
         #intro{
