@@ -1,7 +1,7 @@
 function checkIfDarkmode(){
 	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 		document.getElementById('page').setAttribute("class", "darkmode");
-		radios[1].checked = true;
+		//radios[1].checked = true;
 		//document.getElementById('darkmode').classList.add("currentTheme");
 	}
 }

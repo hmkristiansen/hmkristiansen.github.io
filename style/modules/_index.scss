@@ -127,9 +127,9 @@ section{
     }
 
     #more{
-        width: 70vw;
+        width: 500px;
         img{
-            height: 30vh;
+            width: 300px;
             position: relative;
             //left: 100px;
             padding: 20px;
@@ -175,6 +175,17 @@ body.non-touch #greeting:hover{
     padding: 0;
 }
 
+@media screen and (max-width: 1000px) {
+
+    #greeting{
+        #intro{
+            p{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width: 600px) {
 
@@ -197,8 +208,16 @@ body.non-touch #greeting:hover{
                 font-size: 1.5rem;
             }
         }
-        p{
-            font-size: 1.5rem;
+        #more{
+            width: 200px;
+            img{
+                width: 150px;
+                position: relative;
+                //left: 100px;
+                padding: 20px;
+                //-webkit-transform: scaleX(-1);
+                //transform: scaleX(-1);
+            }
         }
     }
 
