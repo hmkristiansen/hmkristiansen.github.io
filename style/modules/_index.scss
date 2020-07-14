@@ -303,6 +303,7 @@ body.non-touch #greeting:hover{
         .greeting_page{
             padding: 20px !important;
             font-size: 1.5rem;
+            scroll-snap-align: none;
         }
 
         #greets{
