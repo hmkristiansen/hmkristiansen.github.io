@@ -300,6 +300,8 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting {
     padding: 0 !important;
+    -ms-scroll-snap-points-x: none;
+        scroll-snap-points-x: none;
   }
   #greeting .greeting_page {
     padding: 20px !important;
