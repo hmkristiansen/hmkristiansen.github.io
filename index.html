@@ -56,18 +56,71 @@
 
     <section id="greeting" class="onLoadGreeting">
 
+        <div class="greeting_page" id="greets">
+            Heisann, I'm Henrik! <span id="hand-wave">👋</span>
+            <scroller>scroll me →</scroller>
+        </div>
+
         <div class="greeting_page" id="intro">
-            <p><span>Heisann, I'm Henrik! </span><span id="hand-wave">👋</span> 
+            <p>
                 I’m an ever-curious industrial design student with a passion of creating desirable experiences using determination and childishness.
-                Check out how I've used various methods to solve both big and small problems.
+                Scroll down to check out how I've used various methods to solve both big and small problems.
             </p>
         </div>
-        
+
+        <!--
         <div class="greeting_page" id="more">
             <p>Oh, hi there! 🥳</p>
             <img src="assets/me.png">
         </div>
+-->
 
+        <div class="greeting_page" id="me">
+            <img src="assets/me.png">
+        </div>
+        <div class="greeting_page" id="bio">
+            <ul>
+                <li>Henrik M. Kristiansen</li>
+                <li id="life_counter">
+                    <div id="life_wrapper">
+                        <span id="age">23.123456789123456789</span>
+                    </div>
+                </li>
+                <li><a id="location" href="https://www.google.com/maps/place/59%C2%B055'43.9%22N+10%C2%B043'50.8%22E/@59.928873,10.7285773,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d59.9288733!4d10.730766" target="_blank">@ 59.928873, 10.730766</a></li>
+                <li>LYR → OSL → TRD → LIS</li>
+                <li style="color:rgba(200,200,200,1);">👍 { 🐶 , ☕️ , 🏃‍♂️ }</li>
+            </ul>
+        </div>
+
+        <div class="greeting_page" id="cv">
+            <ul>
+                <li>
+                    <h1>currently</h1>
+                    <p><a href="https://www.iterate.no/" target="_blank">Iterate</a> - summer intern</p>
+                    <p><a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - MS.c Industrial Design student</p>
+                </li>
+                <li>
+                    <h1>recently</h1>
+                    <p><a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a> - ERASMUS exchange student</p>
+                </li>
+                <li>
+                    <h1>previosly</h1>
+                    <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - summer intern</p>
+                    <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - project manager &#38 workshop organizer</p>
+                    <p><a onclick="window.open(this.href,'_blank');return false;" href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - lighting technician volunteer</p>
+                </li>
+            </ul>
+        </div>
+<!--
+        <div class="greeting_page" id="contact">
+            <h1>contact</h1>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedin</a></li>
+                <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">instagram</a></li>
+                <li><a href="mailto:heisann@hmkristiansen.no" target="_blank">epost</a></li>
+            </ul>
+        </div>
+-->
     </section>
 
     <div id="overlay" class="hidden">
@@ -120,15 +173,14 @@
             <p><a href="https://www.iterate.no/" target="_blank">Iterate</a> - summer intern <br>
                 <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - industrial design student</p>
         </div>
+
+        <a id="more_work" href="http://notion.hmkristiansen.no/" target="_blank">more work</a>
         
         <div id="links">
             <ul>
-                <li><a href="http://notion.hmkristiansen.no/" target="_blank">more work</a></li>
-                <li><a href="mailto:heisann@hmkristiansen.no" target="_blank">epost</a></li>
-            </ul>
-            <ul>
                 <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedin</a></li>
                 <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">instagram</a></li>
+                <li><a href="mailto:heisann@hmkristiansen.no" target="_blank">epost</a></li>
             </ul>
         </div>
 

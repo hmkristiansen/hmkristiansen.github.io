@@ -96,6 +96,7 @@ section {
 }
 
 #greeting {
+  position: relative;
   top: 0px;
   height: auto;
   white-space: nowrap;
@@ -103,6 +104,12 @@ section {
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+  -ms-scroll-snap-points-x: repeat(300px);
+      scroll-snap-points-x: repeat(300px);
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 
 #greeting .greeting_page {
@@ -110,30 +117,82 @@ section {
   padding: 40px !important;
   display: inline-block;
   zoom: 1;
+  font-size: 1rem;
   white-space: normal;
   vertical-align: text-top;
+  vertical-align: middle;
+  scroll-snap-align: start;
+}
+
+#greeting #greets {
+  width: 100vw !important;
+  font-size: 2rem;
+}
+
+#greeting #greets scroller {
+  font-size: 0.8rem;
+  position: absolute;
+  right: 40px;
+  bottom: 30%;
+  font-weight: normal;
+  opacity: 0.5;
 }
 
 #greeting #intro {
-  width: 100vw;
+  width: 60vw !important;
 }
 
 #greeting #intro p {
-  font-size: 2rem;
+  max-width: 500px;
+  font-size: 1rem;
 }
 
 #greeting #intro p span {
   font-weight: bold;
 }
 
-#greeting #more {
-  width: 500px;
+#greeting #me {
+  width: 300px !important;
 }
 
-#greeting #more img {
-  height: 150px;
-  position: relative;
+#greeting #me img {
   padding: 20px;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+
+#greeting #bio {
+  width: 50vw !important;
+  scroll-snap-align: none;
+}
+
+#greeting #cv {
+  width: 80vw !important;
+}
+
+#greeting #cv ul li {
+  float: left;
+  max-width: 350px;
+  margin-right: 40px;
+}
+
+#greeting #cv ul li h1 {
+  font-size: 1rem;
+}
+
+#greeting #cv ul li p {
+  font-size: 0.8rem;
+}
+
+#greeting #contact {
+  width: 60vw !important;
+}
+
+#greeting #contact ul li {
+  margin: 10px;
+  margin-left: 0;
+  font-size: 0.8rem;
 }
 
 #hand-wave {
@@ -199,8 +258,36 @@ body.non-touch #greeting:hover #hand-wave {
 }
 
 @media screen and (max-width: 1000px) {
+  #greeting .greeting_page {
+    font-size: 1rem;
+  }
+  #greeting #intro {
+    width: 100vw !important;
+  }
   #greeting #intro p {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  #greeting #greets {
+    width: 100vw !important;
+  }
+  #greeting #me {
+    width: 40vw !important;
+  }
+  #greeting #me img {
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    float: left;
+  }
+  #greeting #bio {
+    width: 60vw !important;
+    scroll-snap-align: none;
+  }
+  #greeting #cv {
+    width: 100vw !important;
+  }
+  #greeting #cv ul li {
+    float: none;
   }
 }
 
@@ -216,6 +303,24 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting .greeting_page {
     padding: 20px !important;
+    font-size: 1.5rem;
+  }
+  #greeting #greets scroller {
+    right: 20px;
+  }
+  #greeting #me {
+    width: 150px !important;
+  }
+  #greeting #me img {
+    width: 100%;
+    position: relative;
+    float: left;
+  }
+  #greeting #bio {
+    width: 60vw !important;
+    scroll-snap-align: none;
+    font-size: 1rem;
+    padding: 0 !important;
   }
   #greeting #intro p {
     font-size: 1.5rem;
@@ -259,73 +364,6 @@ body.non-touch #greeting:hover #hand-wave {
           transform: scale3d(0.95, 0.95, 0.95);
 }
 
-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10px;
-  width: inherit;
-  z-index: 100;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
-}
-
-header .row {
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-header .column {
-  -ms-flex: 50%;
-  -webkit-box-flex: 50%;
-          flex: 50%;
-  max-width: 50%;
-  margin-right: 0;
-  padding-right: 0;
-}
-
-header #logo {
-  position: relative;
-  text-align: right;
-  clear: both;
-  padding-bottom: 20px;
-  cursor: pointer;
-}
-
-header #logo p {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
-
-header #logo span {
-  position: absolute;
-  font-size: 0.8rem;
-  opacity: 0;
-  top: 45px;
-  right: 0;
-  content: "hi@hinken.no";
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  pointer-events: none;
-  z-index: 1000;
-}
-
-body.non-touch #logo:hover p {
-  opacity: 1;
-}
-
-body.non-touch #logo:hover span {
-  opacity: 1;
-  color: dimgray;
-  top: 40px;
-}
-
 footer {
   width: 100vw;
   height: 300px;
@@ -339,15 +377,18 @@ footer #info {
   position: absolute;
 }
 
-footer #links {
-  top: 20px;
+footer #more_work {
+  top: 30px;
   right: 5vw;
   position: absolute;
+  text-align: right;
 }
 
-footer ul {
-  float: right;
-  margin-left: 50px;
+footer #links {
+  top: 60px;
+  right: 5vw;
+  position: absolute;
+  text-align: right;
 }
 
 footer hr {
@@ -371,13 +412,15 @@ footer hr {
   footer #info {
     position: relative !important;
     left: 5vw;
-    width: 50vw;
+    width: 70vw;
   }
   footer #links {
     position: relative !important;
     margin-top: 20px;
+    top: 20px;
     left: 5vw;
     width: 50vw;
+    text-align: left;
   }
   footer ul {
     margin-bottom: 0;

@@ -97,6 +97,8 @@ section{
 
 #greeting{
 
+    position: relative;
+
     top: 0px;    
     //width: 100%;
     height: auto;
@@ -105,6 +107,12 @@ section{
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+
+    scroll-snap-type: mandatory;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: x mandatory;
+
+   
     
 
     .greeting_page{
@@ -112,31 +120,85 @@ section{
         padding: 40px !important;
         display: inline-block;
         zoom: 1;
+        font-size: 1rem;
         white-space:normal;
         vertical-align: text-top;
+
+        vertical-align: middle;
+        scroll-snap-align: start;
+    }
+
+    #greets{
+        width: 100vw !important;
+        font-size: 2rem;
+        //font-weight: bold;
+
+        scroller{
+            font-size: 0.8rem;
+            position: absolute;
+            right: 40px;
+            bottom: 30%;
+            font-weight: normal;
+            opacity: 0.5;
+        }
     }
 
     #intro{
-        width: 100vw;
+        width: 60vw !important;
         p{
-            font-size: 2rem;
+            max-width: 500px;
+            font-size: 1rem;
             span{
                 font-weight: bold;
             }
         }
     }
 
-    #more{
-        width: 500px;
+    #me{
+        width: 300px !important;
         img{
-            height: 150px;
-            position: relative;
-            //left: 100px;
             padding: 20px;
-            //-webkit-transform: scaleX(-1);
-            //transform: scaleX(-1);
+            width: 100%;
+            position: relative;
+            float: left;
         }
     }
+
+    #bio{
+        width: 50vw !important;
+        scroll-snap-align: none;
+    }
+
+    #cv{
+        width: 80vw !important;
+        ul{
+            li{
+                float: left;
+                max-width: 350px;
+                margin-right: 40px;
+
+                h1{
+                    font-size: 1rem;
+                }
+
+                p{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    #contact{
+        width: 60vw !important;
+        ul{
+            li{
+                margin: 10px;
+                margin-left: 0;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
 }
 
 
@@ -178,12 +240,48 @@ body.non-touch #greeting:hover{
 @media screen and (max-width: 1000px) {
 
     #greeting{
+
+        .greeting_page{
+            font-size: 1rem;
+        }
+
         #intro{
+            width: 100vw !important;
             p{
-                font-size: 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        #greets{
+            width: 100vw !important;
+        }
+
+        #me{
+            width: 40vw !important;
+            img{
+                padding: 20px;
+                width: 100%;
+                position: relative;
+                float: left;
+            }
+        }
+    
+        #bio{
+            width: 60vw !important;
+            scroll-snap-align: none;
+        }
+    
+        #cv{
+            width: 100vw !important;
+    
+            ul{
+                li{
+                    float: none;
+                }
             }
         }
     }
+
 }
 
 
@@ -201,7 +299,32 @@ body.non-touch #greeting:hover{
         padding: 0 !important;
         .greeting_page{
             padding: 20px !important;
+            font-size: 1.5rem;
         }
+
+        #greets{
+            scroller{
+                right: 20px;
+            }
+        }
+
+        #me{
+            width: 150px !important;
+            img{
+                //padding: 5px;
+                width: 100%;
+                position: relative;
+                float: left;
+            }
+        }
+    
+        #bio{
+            width: 60vw !important;
+            scroll-snap-align: none;
+            font-size: 1rem;
+            padding: 0 !important;
+        }
+        
 
         #intro{
             p{
