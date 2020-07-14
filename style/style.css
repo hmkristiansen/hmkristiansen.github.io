@@ -119,7 +119,7 @@ section {
 }
 
 #greeting #intro p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 #greeting #intro p span {
@@ -131,7 +131,7 @@ section {
 }
 
 #greeting #more img {
-  width: 300px;
+  height: 150px;
   position: relative;
   padding: 20px;
 }
@@ -200,7 +200,7 @@ body.non-touch #greeting:hover #hand-wave {
 
 @media screen and (max-width: 1000px) {
   #greeting #intro p {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
