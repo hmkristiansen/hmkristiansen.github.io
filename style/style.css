@@ -110,6 +110,7 @@ section {
       scroll-snap-points-x: repeat(300px);
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
+  /* - - - - - - */
 }
 
 #greeting .greeting_page {
@@ -139,7 +140,7 @@ section {
 }
 
 #greeting #intro {
-  width: 60vw !important;
+  width: 80vw !important;
 }
 
 #greeting #intro p {
@@ -157,18 +158,21 @@ section {
 
 #greeting #me img {
   padding: 20px;
+  padding-right: 0;
+  padding-top: 0;
   width: 100%;
   position: relative;
-  float: left;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 #greeting #bio {
-  width: 50vw !important;
+  width: 60vw !important;
   scroll-snap-align: none;
 }
 
 #greeting #cv {
-  width: 80vw !important;
+  width: 100vw !important;
 }
 
 #greeting #cv ul li {
@@ -193,6 +197,25 @@ section {
   margin: 10px;
   margin-left: 0;
   font-size: 0.8rem;
+}
+
+#greeting .progress-container {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #ffffff;
+}
+
+#greeting .progress-bar {
+  height: 4px;
+  background: #e6e6e6;
+  width: 0%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 #hand-wave {
@@ -272,9 +295,11 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting #me {
     width: 40vw !important;
+    padding-top: 0 !important;
   }
   #greeting #me img {
-    padding: 20px;
+    padding: 0px;
+    padding-top: 0;
     width: 100%;
     position: relative;
     float: left;
@@ -326,7 +351,7 @@ body.non-touch #greeting:hover #hand-wave {
     padding: 0 !important;
   }
   #greeting #intro p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   #greeting #more {
     width: 200px;
@@ -400,11 +425,6 @@ footer hr {
   margin: 0 auto;
 }
 
-/*
-.hideFooter{
-    opacity: 0;
-    //transform: translateY(10px);
-}*/
 @media screen and (max-width: 600px) {
   footer {
     width: 100%;
@@ -882,6 +902,10 @@ body.non-touch #more_link a:hover {
   color: #ebebeb;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(122, 122, 122, 0.1);
   box-shadow: 0px 0px 20px 0px rgba(122, 122, 122, 0.1);
+}
+
+#page.darkmode .progress-container {
+  background: black;
 }
 
 #page.terribleMode body {

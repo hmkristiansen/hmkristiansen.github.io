@@ -112,9 +112,6 @@ section{
     scroll-snap-points-x: repeat(300px);
     scroll-snap-type: x mandatory;
 
-   
-    
-
     .greeting_page{
         height: auto;
         padding: 40px !important;
@@ -144,7 +141,7 @@ section{
     }
 
     #intro{
-        width: 60vw !important;
+        width: 80vw !important;
         p{
             max-width: 500px;
             font-size: 1rem;
@@ -158,19 +155,22 @@ section{
         width: 300px !important;
         img{
             padding: 20px;
+            padding-right: 0;
+            padding-top: 0;
             width: 100%;
             position: relative;
-            float: left;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
         }
     }
 
     #bio{
-        width: 50vw !important;
+        width: 60vw !important;
         scroll-snap-align: none;
     }
 
     #cv{
-        width: 80vw !important;
+        width: 100vw !important;
         ul{
             li{
                 float: left;
@@ -199,6 +199,24 @@ section{
         }
     }
 
+    /* - - - - - - */
+
+    .progress-container {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: $bg-ligth;
+    }
+    
+    .progress-bar {
+        height: 4px;
+        background: rgb(230, 230, 230);
+        width: 0%;
+        transition: all 0.2s;
+    }
 }
 
 
@@ -258,8 +276,10 @@ body.non-touch #greeting:hover{
 
         #me{
             width: 40vw !important;
+            padding-top: 0 !important;
             img{
-                padding: 20px;
+                padding: 0px;
+                padding-top: 0;
                 width: 100%;
                 position: relative;
                 float: left;
@@ -332,7 +352,7 @@ body.non-touch #greeting:hover{
 
         #intro{
             p{
-                font-size: 1.5rem;
+                font-size: 1rem;
             }
         }
         #more{
@@ -340,10 +360,7 @@ body.non-touch #greeting:hover{
             img{
                 width: 150px;
                 position: relative;
-                //left: 100px;
                 padding: 20px;
-                //-webkit-transform: scaleX(-1);
-                //transform: scaleX(-1);
             }
         }
     }
@@ -375,7 +392,6 @@ body.non-touch #greeting:hover{
     }
 
 }
-
 
 .onLoadBody, .onLoadHeader, .onLoadGreeting, .onLoadPort{
 	transition: $snap-in-fast;

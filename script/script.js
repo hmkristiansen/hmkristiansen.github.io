@@ -58,4 +58,19 @@ window.addEventListener("scroll", function (event) {
         $('#greeting').removeClass('active');
         $('#greeting').addClass('inactive2');
     }
+
 });
+
+$("#greeting").scroll(function () {
+    let scrollLeft = $(this).scrollLeft();
+    let scrollWidth = $('#greeting')[0].scrollWidth;
+    let vw = $( window ).width();
+    let diff = scrollLeft + vw;
+    
+    if(scrollLeft > 0){
+        let scrolled = (diff/scrollWidth) * 100;
+        document.getElementById("bar").style.width = scrolled + "%";
+    }else{
+        document.getElementById("bar").style.width = 0 + "%";
+    }
+})
