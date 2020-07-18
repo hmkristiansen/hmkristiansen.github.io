@@ -110,6 +110,19 @@ section {
       scroll-snap-points-x: repeat(300px);
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
+  /*
+    #me{
+        width: 300px !important;
+        img{
+            padding: 20px;
+            padding-right: 0;
+            padding-top: 0;
+            width: 100%;
+            position: relative;
+            //-webkit-transform: scaleX(-1);
+            //transform: scaleX(-1);
+        }
+    }*/
   /* - - - - - - */
 }
 
@@ -134,13 +147,13 @@ section {
   font-size: 0.8rem;
   position: absolute;
   right: 40px;
-  bottom: 30%;
+  bottom: 35%;
   font-weight: normal;
   opacity: 0.5;
 }
 
 #greeting #intro {
-  width: 80vw !important;
+  width: 100vw !important;
 }
 
 #greeting #intro p {
@@ -152,23 +165,23 @@ section {
   font-weight: bold;
 }
 
-#greeting #me {
-  width: 300px !important;
+#greeting #bio {
+  width: 100vw !important;
 }
 
-#greeting #me img {
-  padding: 20px;
+#greeting #bio img {
+  float: left;
+  max-width: 200px !important;
   padding-right: 0;
   padding-top: 0;
   width: 100%;
   position: relative;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
 }
 
-#greeting #bio {
-  width: 60vw !important;
-  scroll-snap-align: none;
+#greeting #bio ul {
+  float: left;
+  margin: 0;
+  padding: 40px;
 }
 
 #greeting #cv {
@@ -212,7 +225,7 @@ section {
 
 #greeting .progress-bar {
   height: 4px;
-  background: #e6e6e6;
+  background-color: #ffe2d1;
   width: 0%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -281,6 +294,21 @@ body.non-touch #greeting:hover #hand-wave {
 }
 
 @media screen and (max-width: 1000px) {
+  #greeting {
+    /*
+        #me{
+            width: 40vw !important;
+            padding-top: 0 !important;
+            img{
+                padding: 0px;
+                padding-top: 0;
+                width: 100%;
+                position: relative;
+                float: left;
+            }
+        }
+        */
+  }
   #greeting .greeting_page {
     font-size: 1rem;
   }
@@ -293,20 +321,8 @@ body.non-touch #greeting:hover #hand-wave {
   #greeting #greets {
     width: 100vw !important;
   }
-  #greeting #me {
-    width: 40vw !important;
-    padding-top: 0 !important;
-  }
-  #greeting #me img {
-    padding: 0px;
-    padding-top: 0;
-    width: 100%;
-    position: relative;
-    float: left;
-  }
   #greeting #bio {
-    width: 60vw !important;
-    scroll-snap-align: none;
+    width: 100vw !important;
   }
   #greeting #cv {
     width: 100vw !important;
@@ -325,30 +341,35 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting {
     padding: 0 !important;
-    -ms-scroll-snap-points-x: none;
-        scroll-snap-points-x: none;
+    /*
+        #me{
+            width: 150px !important;
+            img{
+                //padding: 5px;
+                width: 100%;
+                position: relative;
+                float: left;
+            }
+        }*/
   }
   #greeting .greeting_page {
     padding: 20px !important;
     font-size: 1.5rem;
-    scroll-snap-align: none;
   }
   #greeting #greets scroller {
     right: 20px;
   }
-  #greeting #me {
-    width: 150px !important;
-  }
-  #greeting #me img {
-    width: 100%;
-    position: relative;
-    float: left;
-  }
   #greeting #bio {
-    width: 60vw !important;
-    scroll-snap-align: none;
+    width: 100vw !important;
     font-size: 1rem;
     padding: 0 !important;
+  }
+  #greeting #bio img {
+    max-width: 150px !important;
+    padding: 10px;
+  }
+  #greeting #bio ul {
+    padding: 10px;
   }
   #greeting #intro p {
     font-size: 1rem;
@@ -394,7 +415,7 @@ body.non-touch #greeting:hover #hand-wave {
 
 footer {
   width: 100vw;
-  height: 300px;
+  margin: 200px 0;
   z-index: 1;
   position: relative;
 }
@@ -428,7 +449,6 @@ footer hr {
 @media screen and (max-width: 600px) {
   footer {
     width: 100%;
-    height: 300px;
     z-index: 1;
     position: relative;
   }
@@ -470,7 +490,7 @@ footer hr {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
 #work .column {
@@ -478,14 +498,13 @@ footer hr {
   -webkit-box-flex: 50%;
           flex: 50%;
   max-width: 50%;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
 #work .column img {
   margin-top: 20px;
   vertical-align: middle;
   width: 100%;
-  border-radius: 30px;
   z-index: 200;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
@@ -495,8 +514,8 @@ footer hr {
 }
 
 body.non-touch .column img:hover {
-  -webkit-transform: scale(0.98) rotate(-1deg);
-          transform: scale(0.98) rotate(-1deg);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   z-index: 1 !important;

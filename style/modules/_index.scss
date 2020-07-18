@@ -134,14 +134,14 @@ section{
             font-size: 0.8rem;
             position: absolute;
             right: 40px;
-            bottom: 30%;
+            bottom: 35%;
             font-weight: normal;
             opacity: 0.5;
         }
     }
 
     #intro{
-        width: 80vw !important;
+        width: 100vw !important;
         p{
             max-width: 500px;
             font-size: 1rem;
@@ -151,6 +151,7 @@ section{
         }
     }
 
+    /*
     #me{
         width: 300px !important;
         img{
@@ -159,14 +160,30 @@ section{
             padding-top: 0;
             width: 100%;
             position: relative;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
+            //-webkit-transform: scaleX(-1);
+            //transform: scaleX(-1);
         }
-    }
+    }*/
 
     #bio{
-        width: 60vw !important;
-        scroll-snap-align: none;
+        width: 100vw !important;
+        //scroll-snap-align: none;
+        img{
+            float: left;
+            max-width: 200px !important;
+            //padding: 20px;
+            padding-right: 0;
+            padding-top: 0;
+            width: 100%;
+            position: relative;
+            //-webkit-transform: scaleX(-1);
+            //transform: scaleX(-1);
+        }
+        ul{
+            float: left;
+            margin:0;
+            padding: 40px;
+        }
     }
 
     #cv{
@@ -213,7 +230,7 @@ section{
     
     .progress-bar {
         height: 4px;
-        background: rgb(230, 230, 230);
+        background-color: rgb(255, 226, 209);
         width: 0%;
         transition: all 0.2s;
     }
@@ -274,6 +291,7 @@ body.non-touch #greeting:hover{
             width: 100vw !important;
         }
 
+        /*
         #me{
             width: 40vw !important;
             padding-top: 0 !important;
@@ -285,10 +303,11 @@ body.non-touch #greeting:hover{
                 float: left;
             }
         }
+        */
     
         #bio{
-            width: 60vw !important;
-            scroll-snap-align: none;
+            width: 100vw !important;
+            
         }
     
         #cv{
@@ -318,12 +337,12 @@ body.non-touch #greeting:hover{
     #greeting{
         padding: 0 !important;
 
-        scroll-snap-points-x: none;
+        //scroll-snap-points-x: none;
         
         .greeting_page{
             padding: 20px !important;
             font-size: 1.5rem;
-            scroll-snap-align: none;
+            //scroll-snap-align: none;
         }
 
         #greets{
@@ -331,7 +350,7 @@ body.non-touch #greeting:hover{
                 right: 20px;
             }
         }
-
+        /*
         #me{
             width: 150px !important;
             img{
@@ -340,13 +359,22 @@ body.non-touch #greeting:hover{
                 position: relative;
                 float: left;
             }
-        }
+        }*/
     
         #bio{
-            width: 60vw !important;
-            scroll-snap-align: none;
+            width: 100vw !important;
+            //scroll-snap-align: none;
             font-size: 1rem;
             padding: 0 !important;
+
+
+            img{
+                max-width: 150px !important;
+                padding: 10px;
+            }
+            ul{
+                padding: 10px;
+            }
         }
         
 
@@ -355,6 +383,7 @@ body.non-touch #greeting:hover{
                 font-size: 1rem;
             }
         }
+
         #more{
             width: 200px;
             img{
