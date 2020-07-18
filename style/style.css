@@ -502,6 +502,7 @@ footer hr {
 }
 
 #work .column img {
+  position: relative;
   margin-top: 20px;
   vertical-align: middle;
   width: 100%;
