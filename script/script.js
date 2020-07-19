@@ -61,6 +61,7 @@ window.addEventListener("scroll", function (event) {
 
 });
 
+/*
 $("#greeting").scroll(function () {
     let scrollLeft = $(this).scrollLeft();
     let scrollWidth = $('#greeting')[0].scrollWidth;
@@ -73,4 +74,4 @@ $("#greeting").scroll(function () {
     }else{
         document.getElementById("bar").style.width = 0 + "%";
     }
-})
+})*/

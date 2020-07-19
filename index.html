@@ -56,16 +56,26 @@
 
     <section id="greeting" class="onLoadGreeting">
 
+        <!--
         <div class="progress-container">
             <div class="progress-bar" id="bar"></div>
         </div> 
+        -->
+
+        <img id="greeting_line" src="assets/greeting2.svg">
+
+        <!--
+        <div id="sketch">
+            <canvas id="paint"></canvas>
+        </div>
+        -->
 
         <div class="greeting_page" id="greets">
-            Heisann, I'm Henrik! <span id="hand-wave">👋</span>
-            <scroller>scroll →</scroller>
+            <p>Heisann, I'm Henrik! <span id="hand-wave">👋</span></p>
         </div>
 
         <div class="greeting_page" id="intro">
+            
             <p>
                 I’m an ever-curious industrial design student with a passion of creating desirable experiences using determination and childishness.
                 Take a look how I've used various tools and methods to solve both challenging and exciting problems 😇
@@ -77,18 +87,20 @@
         </div>
         -->
         <div class="greeting_page" id="bio">
-            <img src="assets/profile.jpg">
-            <ul>
-                <li>Henrik M. Kristiansen</li>
-                <li id="life_counter">
-                    <div id="life_wrapper">
-                        <span id="age">23.123456789123456789</span>
-                    </div>
-                </li>
-                <li><a id="location" href="https://www.google.com/maps/place/59%C2%B055'43.9%22N+10%C2%B043'50.8%22E/@59.928873,10.7285773,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d59.9288733!4d10.730766" target="_blank">@ 59.928873, 10.730766</a></li>
-                <li>LYR → OSL → TRD → LIS</li>
-                <li style="color:rgba(200,200,200,1);">👍 { 🐶 , ☕️ , 🏃‍♂️ }</li>
-            </ul>
+            <div id="bio_container">
+                <img src="assets/profile.jpg">
+                <ul>
+                    <li>Henrik M. Kristiansen</li>
+                    <li id="life_counter">
+                        <div id="life_wrapper">
+                            <span id="age">23.123456789123456789</span>
+                        </div>
+                    </li>
+                    <li><a id="location" href="https://www.google.com/maps/place/59%C2%B055'43.9%22N+10%C2%B043'50.8%22E/@59.928873,10.7285773,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d59.9288733!4d10.730766" target="_blank">@ 59.928873, 10.730766</a></li>
+                    <li>LYR → OSL → TRD → LIS</li>
+                    <li style="color:rgba(200,200,200,1);">👍 { 🐶 , ☕️ , 🏃‍♂️ }</li>
+                </ul>
+            </div>
         </div>
 
         <div class="greeting_page" id="cv">
@@ -109,6 +121,7 @@
                     <p><a onclick="window.open(this.href,'_blank');return false;" href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - lighting technician volunteer</p>
                 </li>
             </ul>
+            
         </div>
     </section>
 
@@ -155,10 +168,12 @@
     </section>
 
     <footer>
-        <hr>
+        <!--<hr>-->
+
+        <img id="footer_hr" src="assets/footer.svg">
 
         <div id="info">
-            <h1>Henrik M. Kristiansen</h1>
+            <p>Henrik M. Kristiansen</p>
             <p><a href="https://www.iterate.no/" target="_blank">Iterate</a> - summer intern <br>
                 <a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - 4th year design student</p>
         </div>
@@ -176,6 +191,9 @@
     </footer>
 
     <script src="script/preload.js"></script>
+    <!--
+    <script src="script/canvas.js"></script>
+    -->
     <script src="script/age.js"></script>
     <script src="script/script.js"></script>
     <script src="script/overlay.js"></script>

@@ -26,10 +26,12 @@ footer{
         text-align: right;
     }
 
-    hr{
-        border: 0.5px solid rgb(230, 230, 230);
+    #footer_hr{
+        //border: 0.5px solid rgb(230, 230, 230);
+        position: absolute;
         width: 90vw;
-        margin: 0 auto;
+        margin-left: 5vw;
+        top:-50px;
     }
 }
 

@@ -91,6 +91,7 @@ ul{
 section{
     position: relative;
     margin: 0 auto;
+    padding: 0;
     clear:both;
     transition: $snap-in;
 }
@@ -101,7 +102,8 @@ section{
 
     top: 0px;    
     //width: 100%;
-    height: auto;
+    height: 90vh;
+    //width: auto;
     white-space: nowrap;
     position: relative;
     overflow-x: scroll;
@@ -113,7 +115,9 @@ section{
     scroll-snap-type: x mandatory;
 
     .greeting_page{
-        height: auto;
+        position: relative;
+        height: 100%;
+        width: 100%;
         padding: 40px !important;
         display: inline-block;
         zoom: 1;
@@ -123,26 +127,38 @@ section{
 
         vertical-align: middle;
         scroll-snap-align: start;
+
+        z-index: 1;
+    }
+
+    #greeting_line{
+        position: absolute;
+        bottom: 0;
+        //left: -10%;
+        width: 400%;
+        height: 100%;
+        vertical-align: middle;
     }
 
     #greets{
         width: 100vw !important;
-        font-size: 2rem;
-        //font-weight: bold;
 
-        scroller{
-            font-size: 0.8rem;
+        p{
             position: absolute;
-            right: 40px;
-            bottom: 35%;
-            font-weight: normal;
-            opacity: 0.5;
+            top: 40%;
+            left: 10%;
+            font-size: 5rem;
+            
         }
     }
 
     #intro{
         width: 100vw !important;
         p{
+            position: absolute;
+            top: 20%;
+            right: 30%;
+            text-align: right;
             max-width: 500px;
             font-size: 1rem;
             span{
@@ -168,29 +184,33 @@ section{
     #bio{
         width: 100vw !important;
         //scroll-snap-align: none;
+
+        #bio_container{
+            position: absolute;
+            bottom: 40%;
+            right: 20%;
+        }
         img{
-            float: left;
-            max-width: 200px !important;
-            //padding: 20px;
-            padding-right: 0;
-            padding-top: 0;
-            width: 100%;
             position: relative;
-            //-webkit-transform: scaleX(-1);
-            //transform: scaleX(-1);
+            float: left;
+            padding: 20px;
+            padding-top: 0;
+            max-width: 300px !important;
         }
         ul{
             float: left;
-            margin:0;
-            padding: 40px;
+            position: relative;
         }
     }
 
     #cv{
         width: 100vw !important;
         ul{
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
             li{
-                float: left;
+                float: none;
                 max-width: 350px;
                 margin-right: 40px;
 
@@ -216,6 +236,20 @@ section{
         }
     }
 
+    /*
+    .greeting_h1{
+        font-family: serif;
+        position: absolute;
+        font-size: 6rem;
+        opacity: 1;
+        right: 30vw;
+        top: 0;
+        color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgb(223, 223, 223);
+        z-index: -10;
+    }*/
+
     /* - - - - - - */
 
     .progress-container {
@@ -233,6 +267,26 @@ section{
         background-color: rgb(255, 226, 209);
         width: 0%;
         transition: all 0.2s;
+    }
+
+    /* - - - - - - - */
+
+    #sketch {
+        //border: 10px solid gray;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    #tmp_canvas {
+        position: absolute;
+        left: 0px; right: 0;
+        bottom: 0; top: 0;
+        cursor: crosshair;
+        z-index: 100;
     }
 }
 
@@ -276,6 +330,8 @@ body.non-touch #greeting:hover{
 
     #greeting{
 
+        height: 50vh;
+
         .greeting_page{
             font-size: 1rem;
         }
@@ -283,12 +339,15 @@ body.non-touch #greeting:hover{
         #intro{
             width: 100vw !important;
             p{
+                position: absolute;
+                right: 10%;
                 font-size: 1rem;
             }
         }
 
         #greets{
             width: 100vw !important;
+
         }
 
         /*
@@ -307,7 +366,9 @@ body.non-touch #greeting:hover{
     
         #bio{
             width: 100vw !important;
-            
+            #bio_container{
+                bottom: 10%;
+            }
         }
     
         #cv{
@@ -346,6 +407,12 @@ body.non-touch #greeting:hover{
         }
 
         #greets{
+            p{
+                position: absolute;
+                top: 20%;
+                left: 5%;
+                font-size: 3rem;
+            }
             scroller{
                 right: 20px;
             }
@@ -367,6 +434,12 @@ body.non-touch #greeting:hover{
             font-size: 1rem;
             padding: 0 !important;
 
+            #bio_container{
+                padding: 20px;
+                bottom: 0;
+                right: 0;
+            }
+
 
             img{
                 max-width: 150px !important;
@@ -376,11 +449,19 @@ body.non-touch #greeting:hover{
                 padding: 10px;
             }
         }
+
+        #cv{
+            ul{
+                top:0;
+            }
+        }
         
 
         #intro{
             p{
                 font-size: 1rem;
+                top: 10%;
+                right: 5%;
             }
         }
 
