@@ -45,7 +45,7 @@ window.addEventListener("scroll", function (event) {
 
     let scroll = this.scrollY;
 
-    if(scroll < 1){
+    if(scroll < 40){
         $('#work').removeClass('active');
         $('#work').addClass('inactive');
 
@@ -61,17 +61,3 @@ window.addEventListener("scroll", function (event) {
 
 });
 
-/*
-$("#greeting").scroll(function () {
-    let scrollLeft = $(this).scrollLeft();
-    let scrollWidth = $('#greeting')[0].scrollWidth;
-    let vw = $( window ).width();
-    let diff = scrollLeft + vw;
-    
-    if(scrollLeft > 0){
-        let scrolled = (diff/scrollWidth) * 100;
-        document.getElementById("bar").style.width = scrolled + "%";
-    }else{
-        document.getElementById("bar").style.width = 0 + "%";
-    }
-})*/
