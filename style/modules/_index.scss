@@ -145,7 +145,7 @@ section{
     .greeting_pil{
         position: absolute;
         bottom: 20px;
-        right: 20%;
+        right: 10%;
         width: 150px;
         height: auto;
         transform-origin: right bottom !important;
@@ -183,19 +183,18 @@ section{
         //position: relative;
         #bio_container{
             position: absolute;
-            bottom: 30%;
+            bottom: 20%;
             right: 30%;
             img{
                 position: relative;
                 float: left;
                 margin: 20px;
-                margin-top: 0;
-                max-width: 300px !important;
+                max-width: 250px !important;
             }
             ul{
+                position: relative;
                 margin: 20px;
                 float: left;
-                position: relative;
             }
         }
     }
@@ -205,7 +204,7 @@ section{
         ul{
             position: absolute;
             bottom: 10%;
-            left: 5%;
+            left: 10%;
             li{
                 float: none;
                 max-width: 350px;
@@ -310,10 +309,16 @@ body.non-touch #greeting:hover{
         #bio{
             //width: 100vw !important;
             #bio_container{
-                bottom: 10%;
+                //bottom: 10%;
+                right: 15%;
+
                 img{
-                    margin: 20px;
-                    margin-top: 0;
+                    margin: 15px;
+                    //margin-top: 0;
+                    max-width: 200px !important;
+                }
+                ul{
+                    margin: 15px;
                 }
             }
         }
@@ -354,7 +359,7 @@ body.non-touch #greeting:hover{
         .greeting_pil{
             position: absolute;
             bottom: 15px;
-            right: 15px;
+            right: 5%;
             width: 100px;
             height: auto;
             transform-origin: right bottom !important;
@@ -384,8 +389,8 @@ body.non-touch #greeting:hover{
 
             #bio_container{
                 padding: 20px;
-                bottom: 0;
-                right: 0;
+                bottom: 5%;
+                right: 10%;
 
                 img{
                     max-width: 150px !important;
@@ -399,7 +404,7 @@ body.non-touch #greeting:hover{
 
         #cv{
             ul{
-                bottom:20px;
+                top:20px;
             }
         }
         

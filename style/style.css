@@ -140,7 +140,7 @@ section {
 #greeting .greeting_pil {
   position: absolute;
   bottom: 20px;
-  right: 20%;
+  right: 10%;
   width: 150px;
   height: auto;
   -webkit-transform-origin: right bottom !important;
@@ -170,7 +170,7 @@ section {
 
 #greeting #bio #bio_container {
   position: absolute;
-  bottom: 30%;
+  bottom: 20%;
   right: 30%;
 }
 
@@ -178,20 +178,19 @@ section {
   position: relative;
   float: left;
   margin: 20px;
-  margin-top: 0;
-  max-width: 300px !important;
+  max-width: 250px !important;
 }
 
 #greeting #bio #bio_container ul {
+  position: relative;
   margin: 20px;
   float: left;
-  position: relative;
 }
 
 #greeting #cv ul {
   position: absolute;
   bottom: 10%;
-  left: 5%;
+  left: 10%;
 }
 
 #greeting #cv ul li {
@@ -305,11 +304,14 @@ body.non-touch #greeting:hover #hand-wave {
     font-size: 1rem;
   }
   #greeting #bio #bio_container {
-    bottom: 10%;
+    right: 15%;
   }
   #greeting #bio #bio_container img {
-    margin: 20px;
-    margin-top: 0;
+    margin: 15px;
+    max-width: 200px !important;
+  }
+  #greeting #bio #bio_container ul {
+    margin: 15px;
   }
   #greeting #cv ul li {
     float: none;
@@ -332,7 +334,7 @@ body.non-touch #greeting:hover #hand-wave {
   #greeting .greeting_pil {
     position: absolute;
     bottom: 15px;
-    right: 15px;
+    right: 5%;
     width: 100px;
     height: auto;
     -webkit-transform-origin: right bottom !important;
@@ -354,8 +356,8 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting #bio #bio_container {
     padding: 20px;
-    bottom: 0;
-    right: 0;
+    bottom: 5%;
+    right: 10%;
   }
   #greeting #bio #bio_container img {
     max-width: 150px !important;
@@ -365,7 +367,7 @@ body.non-touch #greeting:hover #hand-wave {
     margin: 10px;
   }
   #greeting #cv ul {
-    bottom: 20px;
+    top: 20px;
   }
   #greeting #intro p {
     font-size: 1rem;
@@ -452,7 +454,7 @@ footer #footer_hr {
   footer #links {
     position: relative !important;
     margin-top: 20px;
-    top: 50px;
+    top: 30px;
     left: 5vw;
     width: 50vw;
     text-align: left;
