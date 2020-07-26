@@ -109,8 +109,6 @@ section{
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 
-    scroll-snap-type: mandatory;
-    scroll-snap-points-x: repeat(300px);
     scroll-snap-type: x mandatory;
 
     .greeting_page{
@@ -294,7 +292,6 @@ body.non-touch #greeting:hover{
 @media screen and (max-width: 1000px) {
 
     #greeting{
-
         //height: 70vh;
 
         .greeting_page{
@@ -356,8 +353,8 @@ body.non-touch #greeting:hover{
 
         .greeting_pil{
             position: absolute;
-            bottom: 10px;
-            right: 10px;
+            bottom: 15px;
+            right: 15px;
             width: 100px;
             height: auto;
             transform-origin: right bottom !important;

@@ -7,7 +7,7 @@ footer{
     position: relative;
 
     #info{
-        top: 20px;
+        top: 30px;
         left: 5vw;
         position: absolute;
     }
@@ -51,7 +51,8 @@ footer{
         #links{
             position: relative !important;
             margin-top: 20px;
-            top: 20px;
+            top: 50px;
+            //transform: translateY();
             left: 5vw;
             width: 50vw;
             text-align: left;
