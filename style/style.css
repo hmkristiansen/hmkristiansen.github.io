@@ -21,8 +21,6 @@ body {
   overflow-x: hidden;
   max-width: 1600px;
   margin: 0 auto !important;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
   opacity: 1;
 }
 
