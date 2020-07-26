@@ -69,7 +69,6 @@ a {
 
 body.non-touch a:hover {
   color: #9193a5;
-  text-decoration: underline;
   -webkit-text-decoration-color: #9193a5;
   /* Safari */
   text-decoration-color: #9193a5;

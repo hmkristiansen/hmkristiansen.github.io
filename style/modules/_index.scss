@@ -70,7 +70,7 @@ a{
 
 body.non-touch a:hover {
     color: $hover-link-color-light;
-    text-decoration: underline;
+    //text-decoration: underline;
     -webkit-text-decoration-color: $hover-link-color-light; /* Safari */  
       text-decoration-color: $hover-link-color-light;
 }
