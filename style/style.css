@@ -177,7 +177,10 @@ section {
   position: relative;
   float: left;
   margin: 20px;
-  max-width: 250px !important;
+  max-width: 350px !important;
+  max-height: 300px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #greeting #bio #bio_container ul {
