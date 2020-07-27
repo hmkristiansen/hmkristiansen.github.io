@@ -1,8 +1,8 @@
 
 $( "#work img" ).click(function() {
 
-	if(currentBrowser == "firefox"){
-		alert("I'm using an overlay to display the projects, and it is simply broken on Firefox 😔\nPlease try Safari, Opera or Chrome! 🥳");
+	if(currentBrowser == "firefox" || currentBrowser == "chrome"){
+		alert("I'm using an overlay to display the projects, and it is simply broken when using Firefox and Google Chrome 😔\nPlease try Safari, Opera or Microsoft Edge! 🥳");
 		return;
 	}
     $('#overlay').removeClass('hidden');
