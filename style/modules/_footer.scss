@@ -19,13 +19,6 @@ footer{
         text-align: right;
     }
 
-    #links{
-        top: 30px;
-        right: 5vw;
-        position: absolute;
-        text-align: right;
-    }
-
     #footer_hr{
         position: absolute;
         width: 90vw;
@@ -46,8 +39,12 @@ footer{
             position: relative !important;
             left: 5vw;
             width: 70vw;
+            #info_link{
+                margin-bottom: 15px;
+                //font-size: 1.2rem;
+            }
         }
-    
+    /*
         #links{
             position: relative !important;
             margin-top: 20px;
@@ -57,7 +54,7 @@ footer{
             width: 50vw;
             text-align: left;
         }
-    
+    */
         ul{
             margin-bottom: 0;
             height: 50px;

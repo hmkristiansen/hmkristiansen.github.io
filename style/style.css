@@ -425,13 +425,6 @@ footer #more_work {
   text-align: right;
 }
 
-footer #links {
-  top: 30px;
-  right: 5vw;
-  position: absolute;
-  text-align: right;
-}
-
 footer #footer_hr {
   position: absolute;
   width: 90vw;
@@ -444,19 +437,25 @@ footer #footer_hr {
     width: 100%;
     z-index: 1;
     position: relative;
+    /*
+        #links{
+            position: relative !important;
+            margin-top: 20px;
+            top: 30px;
+            //transform: translateY();
+            left: 5vw;
+            width: 50vw;
+            text-align: left;
+        }
+    */
   }
   footer #info {
     position: relative !important;
     left: 5vw;
     width: 70vw;
   }
-  footer #links {
-    position: relative !important;
-    margin-top: 20px;
-    top: 30px;
-    left: 5vw;
-    width: 50vw;
-    text-align: left;
+  footer #info #info_link {
+    margin-bottom: 15px;
   }
   footer ul {
     margin-bottom: 0;
