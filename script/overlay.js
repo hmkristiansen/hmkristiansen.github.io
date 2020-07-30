@@ -32,11 +32,11 @@ $( "#exp_btn" ).click(function() {
 	if( $('#content').hasClass('exp_overlay')){
 		$('#content').removeClass('exp_overlay');
 		$('#content').addClass('dexp_overlay');
-		$("#exp_btn img").attr("src","assets/max.svg");
+		$("#exp_btn img").attr("src","assets/svg/max.svg");
 	}else{
 		$('#content').removeClass('dexp_overlay');
 		$('#content').addClass('exp_overlay');
-		$("#exp_btn img").attr("src","assets/min.svg");
+		$("#exp_btn img").attr("src","assets/svg/min.svg");
 	}
 
 	/*

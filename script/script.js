@@ -15,7 +15,7 @@ function fadeInPage(){
 
 function checkIfTouch(){
 	var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
-	if (!touchsupport){ // browser doesn't support touch
+	if (!touchsupport){
 		$('body').addClass('non-touch');
 	}
 }
@@ -61,3 +61,14 @@ window.addEventListener("scroll", function (event) {
 
 });
 
+$('.greeting_pil').click(function(){
+    if(this.id!="pil4"){  
+        let vw  = $(window).width();
+        var leftPos = $('#greeting').scrollLeft();
+        $('#greeting').animate({
+            scrollLeft: leftPos + vw
+        }, 'slow');
+    }else{
+        $('html, body').animate({scrollTop: '+=150px'}, 200);
+    }
+});

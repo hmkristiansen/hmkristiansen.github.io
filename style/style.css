@@ -96,7 +96,7 @@ section {
 #greeting {
   position: relative;
   top: 0px;
-  height: 70vh;
+  height: 75vh;
   width: auto;
   white-space: nowrap;
   position: relative;
@@ -140,10 +140,11 @@ section {
   position: absolute;
   bottom: 20px;
   right: 10%;
-  width: 150px;
+  width: 100px;
   height: auto;
   -webkit-transform-origin: right bottom !important;
           transform-origin: right bottom !important;
+  cursor: pointer;
 }
 
 #greeting #greets p {
@@ -152,6 +153,14 @@ section {
   top: 40%;
   left: 15%;
   font-size: 2rem;
+}
+
+#greeting #greets h5 {
+  position: absolute;
+  bottom: 0px;
+  right: 12%;
+  font-size: 0.5rem;
+  opacity: 0.7;
 }
 
 #greeting #intro p {
@@ -335,9 +344,9 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting .greeting_pil {
     position: absolute;
-    bottom: 15px;
+    bottom: 20px;
     right: 5%;
-    width: 100px;
+    width: 50px;
     height: auto;
     -webkit-transform-origin: right bottom !important;
             transform-origin: right bottom !important;
@@ -346,7 +355,13 @@ body.non-touch #greeting:hover #hand-wave {
     position: absolute;
     top: 20%;
     left: 5%;
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  #greeting #greets h5 {
+    position: absolute;
+    bottom: 10px;
+    right: 7%;
+    opacity: 0.7;
   }
   #greeting #intro p {
     width: 80vw;
@@ -370,6 +385,7 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting #cv ul {
     top: 20px;
+    left: 5%;
   }
   #greeting #intro p {
     font-size: 1rem;
@@ -430,8 +446,8 @@ footer #more_work {
 
 footer #footer_hr {
   position: absolute;
-  width: 90vw;
-  margin-left: 5vw;
+  width: 200px;
+  margin-left: calc(50vw - 100px);
   top: -50px;
 }
 
@@ -467,8 +483,9 @@ footer #footer_hr {
     float: left;
     margin-left: 0px;
   }
-  footer hr {
-    width: 95vw;
+  footer #footer_hr {
+    width: 100px;
+    margin-left: calc(50vw - 50px);
   }
 }
 
@@ -521,15 +538,6 @@ body.non-touch .column img:hover {
   cursor: n-resize !important;
 }
 
-.inactive {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 50px, 0px);
-          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 50px, 0px);
-  opacity: 0.2;
-  pointer-events: none;
-  -webkit-transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
-  transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
-}
-
 .active {
   -webkit-transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
           transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
@@ -539,50 +547,36 @@ body.non-touch .column img:hover {
   transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
 }
 
-.inactive2 {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10px, 0px);
-          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10px, 0px);
+.inactive {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
+          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
   opacity: 0.2;
   pointer-events: none;
   -webkit-transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
   transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+}
+
+.inactive2 {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
+          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
+  opacity: 0.2;
+  pointer-events: none;
+  -webkit-transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
+  transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
 }
 
 .onLoadPort {
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
   opacity: 0;
-}
-
-.inactive {
-  -moz-filter: blur(8px);
-  -o-filter: blur(8px);
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
-}
-
-.inactive2 {
-  -moz-filter: blur(8px);
-  -o-filter: blur(8px);
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
-}
-
-@media screen and (max-width: 1000px) {
-  .inactive {
-    -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 50px, 0px);
-            transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 50px, 0px);
-    -moz-filter: blur(8px);
-    -o-filter: blur(8px);
-    -webkit-filter: blur(8px);
-    filter: blur(8px);
-  }
-  .inactive2 {
-    -moz-filter: blur(8px);
-    -o-filter: blur(8px);
-    -webkit-filter: blur(8px);
-    filter: blur(8px);
-  }
 }
 
 @media screen and (max-width: 600px) {

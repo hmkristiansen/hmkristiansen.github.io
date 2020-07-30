@@ -100,7 +100,7 @@ section{
     position: relative;
 
     top: 0px;    
-    height: 70vh;
+    height: 75vh;
     width: auto;
     white-space: nowrap;
     position: relative;
@@ -146,14 +146,13 @@ section{
         position: absolute;
         bottom: 20px;
         right: 10%;
-        width: 150px;
+        width: 100px;
         height: auto;
         transform-origin: right bottom !important;
+        cursor: pointer;
     }
 
     #greets{
-        //width: 100vw !important;
-
         p{
             max-width: 80vw;
             position: absolute;
@@ -161,10 +160,16 @@ section{
             left: 15%;
             font-size: 2rem;
         }
+        h5{
+            position: absolute;
+            bottom: 0px;
+            right: 12%;
+            font-size: 0.5rem;
+            opacity: 0.7;
+        }
     }
 
     #intro{
-        //width: 100vw !important;
         p{
             position: absolute;
             top: 10%;
@@ -179,8 +184,6 @@ section{
     }
 
     #bio{
-        //width: 100vw !important;
-        //position: relative;
         #bio_container{
             position: absolute;
             bottom: 20%;
@@ -202,7 +205,6 @@ section{
     }
 
     #cv{
-        //width: 100vw !important;
         ul{
             position: absolute;
             bottom: 10%;
@@ -224,7 +226,6 @@ section{
     }
 
     #contact{
-        //width: 60vw !important;
         ul{
             li{
                 margin: 10px;
@@ -326,7 +327,6 @@ body.non-touch #greeting:hover{
         }
     
         #cv{
-            //width: 100vw !important;
             ul{
                 li{
                     float: none;
@@ -334,7 +334,6 @@ body.non-touch #greeting:hover{
             }
         }
     }
-
 }
 
 
@@ -360,9 +359,9 @@ body.non-touch #greeting:hover{
 
         .greeting_pil{
             position: absolute;
-            bottom: 15px;
+            bottom: 20px;
             right: 5%;
-            width: 100px;
+            width: 50px;
             height: auto;
             transform-origin: right bottom !important;
         }
@@ -372,7 +371,13 @@ body.non-touch #greeting:hover{
                 position: absolute;
                 top: 20%;
                 left: 5%;
-                font-size: 3rem;
+                font-size: 2rem;
+            }
+            h5{
+                position: absolute;
+                bottom: 10px;
+                right: 7%;
+                opacity: 0.7;
             }
         }
 
@@ -384,8 +389,6 @@ body.non-touch #greeting:hover{
         }
 
         #bio{
-            //width: 100vw !important;
-            //scroll-snap-align: none;
             font-size: 1rem;
             padding: 0 !important;
 
@@ -407,6 +410,7 @@ body.non-touch #greeting:hover{
         #cv{
             ul{
                 top:20px;
+                left: 5%;
             }
         }
         
@@ -444,7 +448,6 @@ body.non-touch #greeting:hover{
         max-width: 100%;
         padding: 0 10px;
     }
-
 }
 
 .onLoadBody, .onLoadHeader, .onLoadGreeting, .onLoadPort{

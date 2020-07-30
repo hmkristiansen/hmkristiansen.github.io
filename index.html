@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Henrik M. Kristiansen | design student</title>
-    
-    <!--
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96x96.png">
-    -->
-
     <link rel="shortcut icon" type="image/x-icon" href="assets/fav.ico">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link rel = "stylesheet"type = "text/css" href ="style/reset.css"/>
@@ -69,8 +61,9 @@
         -->
 
         <div class="greeting_page" id="greets">
-            <p>Heisann, I'm Henrik <span id="hand-wave">👋</span></p>
-            <img class="greeting_pil" src="assets/svg/pil1.svg">
+            <p>Heisann,<br> I'm Henrik <span id="hand-wave">👋</span></p>
+            <img class="greeting_pil" id="pil1" src="assets/svg/pil1.svg">
+            <h5>scroll → </h5>
         </div>
 
         <div class="greeting_page" id="intro">
@@ -78,7 +71,7 @@
                 I’m an ever-curious industrial design student with a passion of creating desirable experiences using determination and childishness.
                 Take a look how I've used various tools and methods to solve both conceptual and visual problems.
             </p>
-            <img class="greeting_pil" src="assets/svg/pil2.svg">
+            <img class="greeting_pil" id="pil2" src="assets/svg/pil2.svg">
         </div>
 
         <div class="greeting_page" id="bio">
@@ -93,17 +86,17 @@
                     </li>
                     <li><a id="location" href="https://www.google.com/maps/place/59%C2%B055'43.9%22N+10%C2%B043'50.8%22E/@59.928873,10.7285773,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d59.9288733!4d10.730766" target="_blank">@ 59.928873, 10.730766</a></li>
                     <li>LYR → OSL → TRD → LIS</li>
-                    <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🏃‍♂️}</li>
+                    <li style="color:rgba(200,200,200,1);">👍{🐶,☕️,🏃‍♂️}</li>
                 </ul>
             </div>
-            <img class="greeting_pil" src="assets/svg/pil3.svg">
+            <img class="greeting_pil" id="pil3" src="assets/svg/pil3.svg">
         </div>
 
         <div class="greeting_page" id="cv">
             <ul>
                 <li>
                     <h1>currently</h1>
-                    <p><a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - MS.c Industrial Design student, major in interaction design</p>
+                    <p><a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - MS.c industrial design, major in interaction design</p>
                 </li>
                 <li>
                     <h1>recently</h1>
@@ -117,13 +110,13 @@
                     <p><a href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - lighting technician volunteer</p>
                 </li>
             </ul>
-            <img class="greeting_pil" src="assets/svg/pil4.svg">
+            <img class="greeting_pil" id="pil4" src="assets/svg/pil4.svg">
         </div>
     </section>
 
     <div id="overlay" class="hidden">
-        <div id="close_btn" class="hideCloseBtn"><img src="assets/exit.svg"></div>
-        <div id="exp_btn"><img src="assets/max.svg"></div>
+        <div id="close_btn" class="hideCloseBtn"><img src="assets/svg/exit.svg"></div>
+        <div id="exp_btn"><img src="assets/svg/max.svg"></div>
         <div id="content">
             <div id="imageSelector"></div>
             <h1></h1>
@@ -166,13 +159,12 @@
     <footer>
         <!--<hr>-->
 
-        <img id="footer_hr" src="assets/footer.svg">
+        <img id="footer_hr" src="assets/svg/footle.svg">
 
         <div id="info">
             <ul>
                 <li>Henrik M. Kristiansen</li>
                 <li style="opacity: 0.3;">fifth year design student</li>
-                <!--<li><a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - 5th year design student</li>-->
                 <li>‎
                 </li>
                 <li id="info_link"><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedin</a></li>
@@ -185,26 +177,19 @@
             
             <ul>
                 <li><a href="http://notion.hmkristiansen.no/" target="_blank">more work</a></li>
-                <!--
-                <li>‎
-                </li>
-                <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedin</a></li>
-                <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">instagram</a></li>
-                <li><a href="mailto:heisann@hmkristiansen.no" target="_blank">epost</a></li>
-                -->
             </ul>
         </div>
 
     </footer>
 
     <script src="script/preload.js"></script>
-    <!--
+<!--
     <script src="script/canvas.js"></script>
-    -->
+    <script src="script/settings.js"></script>
+-->
     <script src="script/age.js"></script>
     <script src="script/script.js"></script>
     <script src="script/overlay.js"></script>
-    <script src="script/settings.js"></script>
     <script src="script/colormodes.js"></script>
 
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>

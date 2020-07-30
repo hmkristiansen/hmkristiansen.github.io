@@ -18,23 +18,4 @@ function changeTheme(theme){
 		$('#page').addClass('terribleMode');
 		$('#page').removeClass('darkmode');
 	}
-
-
 }
-
-/*
-function changeTheme(){
-	var target = event.target || event.srcElement;
-	var id = target.id;
-
-	document.getElementById('page').setAttribute("class", "");
-	document.getElementById('page').setAttribute("class", id);
-
-	document.getElementById('goLight').classList.remove("currentTheme");
-	document.getElementById('goGray').classList.remove("currentTheme");
-	document.getElementById('goDark').classList.remove("currentTheme");
-	document.getElementById('goContrast').classList.remove("currentTheme");
-	
-	document.getElementById(id).setAttribute("class", "currentTheme");
-}	
-*/

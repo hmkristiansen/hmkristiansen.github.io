@@ -21,8 +21,8 @@ footer{
 
     #footer_hr{
         position: absolute;
-        width: 90vw;
-        margin-left: 5vw;
+        width: 200px;
+        margin-left: calc(50vw - 100px);
         top:-50px;
     }
 }
@@ -63,8 +63,9 @@ footer{
             margin-left: 0px;
         }
     
-        hr{
-            width: 95vw;
+        #footer_hr{
+            width: 100px;
+            margin-left: calc(50vw - 50px);
         }
     }
 }   
