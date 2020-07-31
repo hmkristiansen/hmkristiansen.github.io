@@ -492,8 +492,13 @@ footer #footer_hr {
 #work {
   padding: 0;
   width: 100%;
+  max-width: 1400px;
   margin-bottom: 100px;
   z-index: 10;
+}
+
+#work h1 {
+  padding: 10px;
 }
 
 #work .row {
@@ -580,6 +585,9 @@ body.non-touch .column img:hover {
 }
 
 @media screen and (max-width: 600px) {
+  #work h1 {
+    padding: 5px;
+  }
   #work .column {
     -ms-flex: 100%;
     -webkit-box-flex: 100%;

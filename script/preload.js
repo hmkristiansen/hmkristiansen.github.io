@@ -4,8 +4,8 @@ var projects = [
 	["ctrl",ctrl],
 	["futura",futura],
 	["nn",nn],
-    ["pb",pb],
-	["bb",bb]
+    //["pb",pb],
+	//["bb",bb]
 	//["boo",boo]
 	//["ss",ss]
 ];

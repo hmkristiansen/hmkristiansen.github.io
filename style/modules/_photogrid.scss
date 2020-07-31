@@ -3,9 +3,14 @@
 
     padding: 0;
     width: 100%;
+    max-width: 1400px;
 
     margin-bottom: 100px;
     z-index: 10;
+
+    h1{
+        padding: 10px;
+    }
 
     .row {
         display: -ms-flexbox; 
@@ -87,7 +92,10 @@ body.non-touch .column img:hover{
 }
   
 @media screen and (max-width: 600px) {
-    #work{        
+    #work{      
+        h1{
+            padding: 5px;
+        }  
         .column {
             -ms-flex: 100%;
             flex: 100%;
