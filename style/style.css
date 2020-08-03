@@ -415,6 +415,7 @@ body.non-touch #greeting:hover #hand-wave {
 
 footer {
   width: 100vw;
+  height: auto;
   padding-bottom: 100px;
   margin: 200px 0;
   z-index: 1;
