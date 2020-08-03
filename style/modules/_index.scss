@@ -29,14 +29,13 @@ body{
     overflow-x: hidden !important;
 }
 
-.body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none !important;
 }
 
 #greeting::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
-
 
 h1{
     font-size: 1.2rem;
@@ -111,6 +110,10 @@ section{
 
     scroll-snap-type: x mandatory;
 
+    //flipping the scrollbar
+    //transform: rotateX(180deg);
+    //overflow-x: auto;
+
     .greeting_page{
         position: relative;
         height: inherit;
@@ -127,26 +130,16 @@ section{
         scroll-snap-align: start;
 
         z-index: 1;
-    }
 
-    #greeting_line{
-        position: absolute;
-        top: -5px !important;
-        left: 5px;
-        width: inherit;
-        max-width: 400vw;
-        transform-origin: left top !important;
-        //padding: 5px;
-        //padding-top: 0px;
-        height: auto;
-        max-height: 100%;
+        //flipping the scrollbar
+        //transform: rotateX(180deg);
     }
 
     .greeting_pil{
         position: absolute;
         bottom: 20px;
         right: 10%;
-        width: 100px;
+        width: 80px;
         height: auto;
         transform-origin: right bottom !important;
         cursor: pointer;
@@ -254,7 +247,6 @@ section{
         z-index: 100;
     }
 }
-
 
 #hand-wave{
     position: relative;
@@ -393,16 +385,19 @@ body.non-touch #greeting:hover{
             padding: 0 !important;
 
             #bio_container{
-                padding: 20px;
-                bottom: 5%;
-                right: 10%;
+                //padding: 20px;
+                bottom: 10%;
+                left: 5%;
+                right: 0;
 
                 img{
-                    max-width: 150px !important;
+                    max-width: 120px !important;
                     margin: 10px;
+                    float: left;
                 }
                 ul{
                     margin: 10px;
+                    float: left;
                 }
             }
         }

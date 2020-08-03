@@ -134,3 +134,40 @@
           text-decoration-color: $hover-link-color-dark;
     }
 }
+
+p::selection {
+    color: white;
+    background-color: $coral;
+}
+h1::selection {
+    color: white;
+    background-color: $coral;
+}
+span::selection {
+    color: white;
+    background-color: $coral;
+}
+br::selection {
+    color: white;
+    background-color: $coral;
+}
+h5::selection {
+    color: white;
+    background-color: $coral;
+}
+ul::selection {
+    color: white;
+    background-color: $coral;
+}
+li::selection {
+    color: white;
+    background-color: $coral;
+}
+a::selection {
+    color: white;
+    background-color: $coral;
+}
+img::selection {
+    color: white;
+    background-color: $coral;
+}

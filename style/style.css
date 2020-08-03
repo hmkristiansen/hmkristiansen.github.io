@@ -29,12 +29,12 @@ body {
   overflow-x: hidden !important;
 }
 
-.body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none !important;
 }
 
 #greeting::-webkit-scrollbar {
-  display: none;
+  display: none !important;
 }
 
 h1 {
@@ -124,23 +124,11 @@ section {
   z-index: 1;
 }
 
-#greeting #greeting_line {
-  position: absolute;
-  top: -5px !important;
-  left: 5px;
-  width: inherit;
-  max-width: 400vw;
-  -webkit-transform-origin: left top !important;
-          transform-origin: left top !important;
-  height: auto;
-  max-height: 100%;
-}
-
 #greeting .greeting_pil {
   position: absolute;
   bottom: 20px;
   right: 10%;
-  width: 100px;
+  width: 80px;
   height: auto;
   -webkit-transform-origin: right bottom !important;
           transform-origin: right bottom !important;
@@ -372,16 +360,18 @@ body.non-touch #greeting:hover #hand-wave {
     padding: 0 !important;
   }
   #greeting #bio #bio_container {
-    padding: 20px;
-    bottom: 5%;
-    right: 10%;
+    bottom: 10%;
+    left: 5%;
+    right: 0;
   }
   #greeting #bio #bio_container img {
-    max-width: 150px !important;
+    max-width: 120px !important;
     margin: 10px;
+    float: left;
   }
   #greeting #bio #bio_container ul {
     margin: 10px;
+    float: left;
   }
   #greeting #cv ul {
     top: 20px;
@@ -974,6 +964,96 @@ body.non-touch #more_link a:hover {
   -webkit-text-decoration-color: #f3f3f3;
   /* Safari */
   text-decoration-color: #f3f3f3;
+}
+
+p::-moz-selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+p::selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+h1::-moz-selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+h1::selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+span::-moz-selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+span::selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+br::-moz-selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+br::selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+h5::-moz-selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+h5::selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+ul::-moz-selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+ul::selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+li::-moz-selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+li::selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+a::-moz-selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+a::selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+img::-moz-selection {
+  color: white;
+  background-color: #ff8552;
+}
+
+img::selection {
+  color: white;
+  background-color: #ff8552;
 }
 
 #settings {
