@@ -9,7 +9,9 @@
     },
     "images": {
         "image1": "assets/ctrl/01.jpg",
-        "image2": "assets/ctrl/02.jpg"
+        "image2": "assets/ctrl/02.jpg",
+        "image3": "assets/ctrl/03.jpg",
+        "image4": "assets/ctrl/04.jpg"
     },
     "text":{
         "text0":"This course taught me to look beyond the ideal micro user-demographic and create something that responds to the current trends. The result was an IOT-device that makes tracking of family expences visible for all members of the family."

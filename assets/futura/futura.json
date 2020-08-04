@@ -8,7 +8,10 @@
         "period": "Period; Spring '20"
     },
     "video":{
-        "video1": "assets/futura/futura.mp4"
+        "video": "assets/futura/futura.mp4"
+    },
+    "poster":{
+        "poster": "assets/futura/poster.jpg"
     },
     "images": {
         "image1": "assets/futura/01.jpeg",
