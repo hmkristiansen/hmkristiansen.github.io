@@ -11,7 +11,7 @@ html{
   
 body {
     margin: 0;
-    font-family: $mono-font;
+    font-family: $body-font;
     color: $text-color-light;
     background-color: $bg-ligth;
     scrollbar-width: none;
@@ -19,8 +19,6 @@ body {
     overflow-x: hidden;
     max-width: 1600px;
     margin: 0 auto !important;
-
-    //transition: all 0.6s;
     opacity: 1;
 }
 
@@ -43,13 +41,6 @@ h1{
     text-align: left;
     padding-top: 10px;
     margin-bottom: 10px;    
-}
-
-h2{
-    font-size: 1rem;
-    font-weight: 400;
-    color: $text-color-light-fade;
-    margin-bottom: 20px;
 }
 
 p{
@@ -212,7 +203,7 @@ section{
                 }
 
                 p{
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                 }
             }
         }
@@ -352,7 +343,7 @@ body.non-touch #greeting:hover{
         .greeting_pil{
             position: absolute;
             bottom: 20px;
-            right: 5%;
+            right: 20px;
             width: 50px;
             height: auto;
             transform-origin: right bottom !important;
@@ -416,13 +407,6 @@ body.non-touch #greeting:hover{
                 right: 5%;
             }
         }
-    }
-
-    h2{
-        font-size: 1rem;
-        font-weight: 400;
-        color: $text-color-light-fade;
-        margin-bottom: 10px;
     }
 
     ul{

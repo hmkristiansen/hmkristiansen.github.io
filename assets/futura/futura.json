@@ -7,18 +7,16 @@
         "role": "Role: Graphic- and Motion Design",
         "period": "Period; Spring '20"
     },
-    "video":{
-        "video": "assets/futura/futura.mp4"
-    },
-    "poster":{
-        "poster": "assets/futura/poster.jpg"
-    },
-    "images": {
+    "content":{
+        "quote":"Expanding the visual properties of the iconic typeface FUTURA.",
+        "text1":"Being an exchange student at IADE thought me how to become more comfortable with using more traditional design tools - in this case Adobe After Effects. My final assignment in the course Motion Design was about expanding the visual properties of a font type. I chose to look at the architectural properties of Futura and present the font with this in mind.",
         "image1": "assets/futura/01.jpeg",
         "image2": "assets/futura/02.jpeg",
-        "image3": "assets/futura/03.jpeg"
-    },
-    "text":{
-        "text0":"Being an exchange student at IADE thought me how to become more comfortable with using more traditional design tools - in this case Adobe After Effects. My final assignment in the course Motion Design was about expanding the visual properties of a font type. I chose to look at the architectural properties of Futura and present the font with this in mind."
+        "image3": "assets/futura/03.jpeg",
+        "h2": "End result",
+        "video":{
+            "video": "assets/futura/futura.mp4",
+            "poster": "assets/futura/poster.jpg"
+        }
     }
 }

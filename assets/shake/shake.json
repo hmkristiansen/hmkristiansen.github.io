@@ -3,16 +3,15 @@
     "header_img": "assets/shake/shake.jpg",
     "h1": "SHAKE",
     "item_info": {
-        "client": "<i>Client;</i> Santander Consumer Bank",
+        "client": "Client; Itera || Santander Consumer Bank",
         "role": "Role; UX & Service Designer",
         "period": "Period; Summer '19"
     },
-    "images": {
+    "content":{
+        "quote":"SHAKE aims to make buying 2nd hand cars a more pleasant experience for all parties.",
+        "text0":"During an internship at Itera ASA in the summer of 2019, I worked in a multidisciplinary team at Santander Consumer Bank with the service SHAKE. My contributions to the project included end-user testing, UI design and some front end development on their online presence. <br>Due to this project still being in development, specific details are not to be disclosed just yet.",
         "image1": "assets/shake/01.jpg",
         "image2": "assets/shake/02.jpg",
         "image3": "assets/shake/03.jpg"
-    },
-    "text":{
-        "text0":"During an internship at Itera ASA in the summer of 2019, I worked in a multidisciplinary team at Santander Consumer Bank with the service SHAKE. My contributions to the project included end-user testing, UI design and some front end development on their online presence. <br>Due to this project still being in development, specific details are not to be disclosed just yet."
     }
 }

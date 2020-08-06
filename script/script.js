@@ -1,7 +1,7 @@
 var currentBrowser;
 
 function fadeInPage(){
-    checkIfDarkmode();
+    //checkIfDarkmode();
     checkIfTouch();
     checkBrowser();
     setTimeout(function(){
@@ -51,14 +51,30 @@ window.addEventListener("scroll", function (event) {
 
         $('#greeting').addClass('active');
         $('#greeting').removeClass('inactive2');
+
+        if(scrollPercentage > 55 && scrollPercentage < 75){
+            updateAgeBool = true;
+        }
+
     }else{
         $('#work').removeClass('inactive');
         $('#work').addClass('active');
 
         $('#greeting').removeClass('active');
         $('#greeting').addClass('inactive2');
+
+        updateAgeBool = false;
     }
 
+});
+
+$('#greeting').scroll(function(){
+    scrollPercentage = 100*this.scrollLeft/this.scrollWidth/(1-this.clientWidth/this.scrollWidth);
+    if(scrollPercentage > 55 && scrollPercentage < 75){
+        updateAgeBool = true;
+    }else{
+        updateAgeBool = false;
+    }
 });
 
 $('.greeting_pil').click(function(){
@@ -72,3 +88,4 @@ $('.greeting_pil').click(function(){
         $('html, body').animate({scrollTop: '+=150px'}, 200);
     }
 });
+

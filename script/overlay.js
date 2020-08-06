@@ -1,10 +1,11 @@
 
 $( "#work img" ).click(function() {
-
+	/*
 	if(currentBrowser == "firefox" || currentBrowser == "chrome"){
 		alert("I'm using an overlay to display the projects, and it is simply broken when using Firefox and Google Chrome 😔\nI'm working on a fix, but in the meanwhile please try Safari, Opera or Microsoft Edge! 🥳");
 		return;
 	}
+	*/
     $('#overlay').removeClass('hidden');
     $('#overlay').addClass('visible');
 	$('body').addClass('noScroll');
@@ -12,23 +13,39 @@ $( "#work img" ).click(function() {
 		$('section, header,footer').addClass('blur');
 	}, 50);
 	renderProject(this);
+
 });
 
 $( "#close_btn" ).click(function() {
-    $('#overlay').addClass('hidden');
+	closeOverlay();
+});
+
+$('#overlay').on('click', function(e) {
+	if (e.target !== this){
+		return;
+	}else{
+		closeOverlay();
+	}
+});
+
+function closeOverlay(){
+	$('#overlay').addClass('hidden');
     $('#overlay').removeClass('visible');
     $('body').removeClass('noScroll');
     $('section, header ,footer').removeClass('blur');
     setTimeout(function() {
 		$("#port_img").remove();
-		$('.extraImage').remove();
-		$('.extraVideo').remove();
-		$('#content').removeClass('exp_overlay');
+		$('.contentQuote').remove();
+		$('.contentText').remove();
+		$('.contentHr').remove();
+		$('.contentCaption').remove();
+		$('.contentHeader').remove();
+		$('.contentImage').remove();
+		$('.contentVideo').remove();
 	}, 300);
-});
+}
 
 $( "#exp_btn" ).click(function() {
-
 	if( $('#content').hasClass('exp_overlay')){
 		$('#content').removeClass('exp_overlay');
 		$('#content').addClass('dexp_overlay');
@@ -38,27 +55,6 @@ $( "#exp_btn" ).click(function() {
 		$('#content').addClass('exp_overlay');
 		$("#exp_btn img").attr("src","assets/svg/min.svg");
 	}
-
-	/*
-    setTimeout(function() {
-		$("#port_img").remove();
-		$('.extraImage').remove();
-	}, 300);*/
-});
-
-$('#overlay').on('click', function(e) {
-	if (e.target !== this){
-		return;
-	}
-    $('#overlay').addClass('hidden');
-    $('#overlay').removeClass('visible');
-    $('body').removeClass('noScroll');
-    $('section, header ,footer').removeClass('blur');
-    setTimeout(function() {
-		$("#port_img").remove();
-		$('.extraImage').remove();
-		$('.extraVideo').remove();
-	}, 300);
 });
 
 function renderProject(event){
@@ -81,34 +77,54 @@ function renderProject(event){
 	$("#content #client").html(targetObj.item_info.client);
 	$("#content #role").html(targetObj.item_info.role);
 	$("#content #period").html(targetObj.item_info.period);
-	$("#content #cont_ing").html(targetObj.text.text0);
 
-	$currentImages = targetObj.images;
-	for (var image in $currentImages) {
-		if ($currentImages.hasOwnProperty(image)) {
-			let img = document.createElement('img');
-			img.className = "extraImage";
-			img.src = $currentImages[image];
 
-			var overlay = document.getElementById("extraImages");
-			overlay.appendChild(img);
+	$currentContent = targetObj.content;
+	var parent = document.getElementById("parentNode");
+
+	for(var item in $currentContent){
+		if ($currentContent.hasOwnProperty(item)) {
+			if(item[0] == "t"){
+				let p = document.createElement('p');
+				p.className="contentText";
+				p.innerHTML = $currentContent[item];
+				parent.appendChild(p);
+			}else if(item[0] == "i"){
+				let img = document.createElement('img');
+				img.className = "contentImage";
+				img.src =$currentContent[item];
+				parent.appendChild(img);
+			}else if(item[0] =="v"){
+				let vid = document.createElement('video');
+				vid.className = "projectVideo";
+				vid.poster = $currentContent[item].poster;
+				vid.src = $currentContent[item].video;
+				vid.type = "video/mp4";
+				vid.className="contentVideo";
+				vid.controls = true;
+				parent.appendChild(vid);
+			}else if(item[0]+item[1] == "h2"){
+				let h2 = document.createElement('h2');
+				h2.className="contentHeader";
+				h2.innerHTML = $currentContent[item];
+				parent.appendChild(h2);
+			}else if(item[0] == "q"){
+				let h3 = document.createElement('h3');
+				h3.className="contentQuote";
+				h3.innerHTML = $currentContent[item];
+				parent.appendChild(h3);
+			}else if(item[0] == "c"){
+				let p = document.createElement('p');
+				p.className="contentCaption";
+				p.innerHTML = $currentContent[item];
+				parent.appendChild(p);
+
+				let hr = document.createElement('hr');
+				hr.className = "contentHr";
+				parent.appendChild(hr);
+			}
 		}
+		//console.log(item);
 	}
 
-	$video = targetObj.video;
-	for (var video in $video) {
-		if ($video.hasOwnProperty(video)) {
-			let vid = document.createElement('video');
-			vid.className = "projectVideo";
-			//vid.('poster', targetObj.poster);
-			vid.poster = targetObj.poster.poster;
-			vid.src = $video[video];
-			vid.type = "video/mp4";
-			vid.className="extraVideo";
-			//vid.width = "400";
-			vid.controls = true;
-			var overlay = document.getElementById("endVideo");
-			overlay.appendChild(vid);
-		}
-	}
 }

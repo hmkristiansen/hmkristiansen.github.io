@@ -1,7 +1,11 @@
+var updateAgeBool = false;
+var scrollPercentage = 0;
 
 var update = setInterval(function() {
-	updateAge();
-}, 500);
+	if(updateAgeBool){
+		updateAge();
+	}
+}, 2000);
 
 var bday = new Date("Nov 19, 1996 05:55:25").getTime();
 var dday = new Date("Nov 19, 2077 12:00:00").getTime();
