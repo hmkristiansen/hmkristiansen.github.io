@@ -12,14 +12,6 @@
     },
     "content":{
         "quote":"ANYWHERE is a new kind of streaming platform for events that aims to be a different experince for artist and audience alike.",
-        "text1":"As a result of the pandemic thousands of music artist, stand-up comics, drag artist and other performers lost their livelihood overnight. Many of them emigrated towards using streaming platforms like Instagram Live and Twitch. However, there are currently two major problems with today’s solutions; there is no stable way of getting payed, and the artist-audience communication is nowhere to be found.",
-        "image1": "assets/aw/01.gif",
-        "caption1":"During my internship we spoke to all kinds of performers and they all said the same thing; the audience atmosphere of live events is a must. Throughout the summer we performed a series trials and experiments to meet this problem; how can we create a feeling of audience presence with limited inputs?",
-        "image2": "assets/aw/02.jpg",
-        "caption2":"Our team was fortunate enough to test a prototype in-house at the office with a local stand-up comic",
-        "video":{
-            "video": "assets/aw/test.mp4",
-            "poster": "assets/aw/poster.jpg"
-        }
+        "text1":"Under development 🥳"
     }
 }
