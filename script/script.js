@@ -10,6 +10,9 @@ function fadeInPage(){
     setTimeout(function(){
         $('#work').removeClass('onLoadPort');
     },1500);
+    setTimeout(function(){
+        $('footer').removeClass('onLoadPort');
+    },3000);
 }
 
 
@@ -49,8 +52,8 @@ window.addEventListener("scroll", function (event) {
         $('#work').removeClass('active');
         $('#work').addClass('inactive');
 
-        $('#greeting').addClass('active');
-        $('#greeting').removeClass('inactive2');
+        $('#greeting').addClass('activeText');
+        $('#greeting').removeClass('inactiveText');
 
         if(scrollPercentage > 55 && scrollPercentage < 75){
             updateAgeBool = true;
@@ -60,8 +63,8 @@ window.addEventListener("scroll", function (event) {
         $('#work').removeClass('inactive');
         $('#work').addClass('active');
 
-        $('#greeting').removeClass('active');
-        $('#greeting').addClass('inactive2');
+        $('#greeting').removeClass('activeText');
+        $('#greeting').addClass('inactiveText');
 
         updateAgeBool = false;
     }

@@ -1,6 +1,7 @@
 
 $( "#work img" ).click(function() {
 	
+	
 	if(currentBrowser == "firefox" || currentBrowser == "chrome"){
 		alert("I'm using an overlay to display the projects, and it is simply broken when using Firefox and Google Chrome 😔\nI'm working on a fix, but in the meanwhile please try Safari, Opera or Microsoft Edge! 🥳");
 		return;
@@ -58,7 +59,6 @@ $( "#exp_btn" ).click(function() {
 });
 
 function renderProject(event){
-    //console.log(event);
 	let targetId = event.id;
 	let targetObj;
 	let currentIndex;	
@@ -66,9 +66,11 @@ function renderProject(event){
 		if(targetId == projects[i][0]){
 			currentIndex = i;
 			targetObj = projects[i][1];
-		}
+		} 
 	}
-	let img = images[currentIndex];
+
+	var img = event.cloneNode(true);
+	img.id="port_img";
 	let ref = document.getElementById("imageSelector");
 	let parentDiv = ref.parentNode;
 	parentDiv.insertBefore(img, ref);
@@ -80,7 +82,7 @@ function renderProject(event){
 
 
 	$currentContent = targetObj.content;
-	var parent = document.getElementById("parentNode");
+	let parent = document.getElementById("parentNode");
 
 	for(var item in $currentContent){
 		if ($currentContent.hasOwnProperty(item)) {
@@ -124,7 +126,5 @@ function renderProject(event){
 				parent.appendChild(hr);
 			}
 		}
-		//console.log(item);
 	}
-
 }
