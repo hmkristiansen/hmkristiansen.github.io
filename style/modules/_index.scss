@@ -60,13 +60,11 @@ a{
 
 body.non-touch a:hover {
     color: $hover-link-color-light;
-    //text-decoration: underline;
     -webkit-text-decoration-color: $hover-link-color-light; /* Safari */  
       text-decoration-color: $hover-link-color-light;
 }
 
 ul{
-
     margin-top: 0px;
     margin-bottom: 40px;
 
@@ -101,15 +99,10 @@ section{
 
     scroll-snap-type: x mandatory;
 
-    //flipping the scrollbar
-    //transform: rotateX(180deg);
-    //overflow-x: auto;
-
     .greeting_page{
         position: relative;
         height: inherit;
         width: 100vw !important;
-        //padding: 40px !important;
         padding: 0;
         margin: 0;
         display: inline-block;
@@ -121,9 +114,6 @@ section{
         scroll-snap-align: start;
 
         z-index: 1;
-
-        //flipping the scrollbar
-        //transform: rotateX(180deg);
     }
 
     .greeting_pil{
@@ -277,14 +267,11 @@ body.non-touch #greeting:hover{
 @media screen and (max-width: 1000px) {
 
     #greeting{
-        //height: 70vh;
-
         .greeting_page{
             font-size: 1rem;
         }
 
         #intro{
-            //width: 100vw !important;
             p{
                 position: absolute;
                 right: 10%;
@@ -293,14 +280,10 @@ body.non-touch #greeting:hover{
         }
     
         #bio{
-            //width: 100vw !important;
             #bio_container{
-                //bottom: 10%;
                 right: 15%;
-
                 img{
                     margin: 15px;
-                    //margin-top: 0;
                     max-width: 200px !important;
                 }
                 ul{
@@ -331,12 +314,8 @@ body.non-touch #greeting:hover{
     }
 
     #greeting{
-
-        height: 50vh;
-        //padding: 0 !important;
-        
+        height: 50vh; 
         .greeting_page{
-            //padding: 20px !important;
             font-size: 1.5rem;
         }
 
@@ -374,10 +353,8 @@ body.non-touch #greeting:hover{
         #bio{
             font-size: 1rem;
             padding: 0 !important;
-
             #bio_container{
-                //padding: 20px;
-                bottom: 10%;
+                bottom: 100px;
                 left: 5%;
                 right: 0;
 

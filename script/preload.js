@@ -1,20 +1,17 @@
 
+var shake,ctrl,futura,nn,aw;
+
 var projects = [
+	["aw",aw],
 	["shake",shake],
-	["ctrl",ctrl],
 	["futura",futura],
-	["nn",nn],
-	["aw",aw]
-    //["pb",pb],
-	//["bb",bb]
-	//["boo",boo]
-	//["ss",ss]
+	["ctrl",ctrl],
+	["nn",nn]
 ];
 
 var images=[];
 
 getProjects();
-preload();
 
 function getProjects(){
 	for(var i = 0; i<projects.length; i++){
@@ -33,9 +30,11 @@ function getProjects(){
 		})(); 
 		projects[i][1] = json;
 	}
+	preloadImages();
+	renderPhotogrid();
 }
 
-function preload(){
+function preloadImages(){
 	for(var i=0; i<projects.length; i++){
 		preloadImage(projects[i][1].header_img);
 	}
@@ -43,8 +42,42 @@ function preload(){
 function preloadImage(url){
     var img = new Image();
     img.src = url;
-    img.id = "port_img";
     images.push(img);
+}
+
+function renderPhotogrid(){
+
+	let workContainer = document.getElementById("work");
+	
+	let header = document.createElement('h1');
+	header.innerHTML = "Selected projects";
+	workContainer.appendChild(header);
+
+	let row = document.createElement('div');
+	row.className = "row";
+
+	var projectCounter = 0;
+
+	for (var i = 0; i<2; i++){
+		let column = document.createElement('div');
+		column.className = "column";
+		for(var j = 0; j<(Math.ceil(projects.length/2)); j++){
+
+			let img = images[projectCounter];
+			img.id = projects[projectCounter][0];
+			img.style.width = "100%";
+
+			column.appendChild(img);
+
+			if(projectCounter<projects.length-1){
+				projectCounter++;
+			}else{
+				break;
+			}
+		}
+		row.appendChild(column);
+	}
+	workContainer.appendChild(row);
 }
 
 

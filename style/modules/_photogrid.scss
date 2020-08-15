@@ -4,8 +4,6 @@
     padding: 0;
     width: 100%;
     max-width: 1400px;
-
-    margin-bottom: 100px;
     z-index: 10;
 
     h1{
@@ -17,6 +15,7 @@
         display: flex;
         -ms-flex-wrap: wrap; 
         flex-wrap: wrap;
+
         padding: 0 5px;
     }
       
@@ -24,6 +23,7 @@
         -ms-flex: 50%; 
         flex: 50%;
         max-width: 50%;
+
         padding: 0 5px;
     }
       
@@ -37,9 +37,10 @@
         border-radius: 5px;
         z-index: 200;
 
-        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
-        -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
-        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+        -webkit-box-shadow: 0px 20px 40px -10px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 20px 40px -10px rgba(0,0,0,0.1);
+        box-shadow: 0px 20px 40px -10px rgba(0,0,0,0.1);
+
 
         cursor: pointer;
         transition: all 0.2s;
@@ -56,15 +57,22 @@ body.non-touch .column img:hover{
     cursor: n-resize !important;
 }
 
-.active{
+.activeText{
     transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
     opacity: 1;
     pointer-events: all;
     transition: $snap-in;
 }
 
+.active{
+    transform: scale3d(1, 1, 1) translate3d(0px, -200px, 0px);
+    opacity: 1;
+    pointer-events: all;
+    transition: $snap-in;
+}
+
 .inactive{
-    transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
+    transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -75px, 0px);
     opacity: 0.2;
     pointer-events: none;
     transition: $snap-in;
@@ -75,7 +83,7 @@ body.non-touch .column img:hover{
     filter:blur(8px);
 }
 
-.inactive2{
+.inactiveText{
     transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
     opacity: 0.2;
     pointer-events: none;
@@ -104,7 +112,7 @@ body.non-touch .column img:hover{
             padding: 0;
 
             img{
-                border-radius: 20px;
+                border-radius: 10px;
             }
         }
 
