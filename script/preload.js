@@ -50,7 +50,7 @@ function renderPhotogrid(){
 	let workContainer = document.getElementById("work");
 	
 	let header = document.createElement('h1');
-	header.innerHTML = "Selected projects";
+	header.innerHTML = "selected projects";
 	workContainer.appendChild(header);
 
 	let row = document.createElement('div');
