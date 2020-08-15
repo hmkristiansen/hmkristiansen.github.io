@@ -120,4 +120,13 @@ body.non-touch .column img:hover{
             padding: 0;
         }
     }
+
+
+    .active{
+        transition: $snap-in-bounce;
+    }
+    
+    .inactive{
+        transition: $snap-in-bounce;
+    }
 }

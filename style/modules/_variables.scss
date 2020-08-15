@@ -29,8 +29,8 @@ $link-color-terrible: #ffd000;
 $hover-link-color-terrible: #ff01d5;
 
 // ---- Animations
-//$snap-in: all 0.55s cubic-bezier(.6,0,.1,1.3);
-//$snap-in-fast: all 0.05s cubic-bezier(.6,0,.1,1.3);
+$snap-in-bounce: all 0.4s cubic-bezier(.6,0,.1,1.3);
+//$snap-in-bounce-fast: all 0.05s cubic-bezier(.6,0,.1,1.3);
 
 $snap-in: all 0.3s cubic-bezier(.71,.53,.31,.97);
 $snap-in-fast: all 0.05s cubic-bezier(.71,.53,.31,.97);
