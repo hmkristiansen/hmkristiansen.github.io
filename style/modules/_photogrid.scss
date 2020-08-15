@@ -61,21 +61,21 @@ body.non-touch .column img:hover{
     transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
     opacity: 1;
     pointer-events: all;
-    transition: $snap-in;
+    transition: $snap-in-bounce;
 }
 
 .active{
     transform: scale3d(1, 1, 1) translate3d(0px, -200px, 0px);
     opacity: 1;
     pointer-events: all;
-    transition: $snap-in;
+    transition: $snap-in-bounce;
 }
 
 .inactive{
     transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -75px, 0px);
     opacity: 0.2;
     pointer-events: none;
-    transition: $snap-in;
+    transition: $snap-in-bounce;
 
     -moz-filter:blur(8px);
     -o-filter:blur(8px);
@@ -87,7 +87,7 @@ body.non-touch .column img:hover{
     transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
     opacity: 0.2;
     pointer-events: none;
-    transition: $snap-in;
+    transition: $snap-in-bounce;
 
     -moz-filter:blur(8px);
     -o-filter:blur(8px);
@@ -123,10 +123,10 @@ body.non-touch .column img:hover{
 
 
     .active{
-        transition: $snap-in-bounce;
+        transform: scale3d(1, 1, 1) translate3d(0px, -100px, 0px);
     }
     
     .inactive{
-        transition: $snap-in-bounce;
+        transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -25px, 0px);
     }
 }

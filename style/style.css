@@ -325,8 +325,8 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting .greeting_pil {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     width: 50px;
     height: auto;
     -webkit-transform-origin: right bottom !important;
@@ -433,7 +433,7 @@ footer #footer_hr {
 @media screen and (max-width: 600px) {
   footer {
     padding-bottom: 100px;
-    margin-top: 0px;
+    margin-top: 50px;
     margin-bottom: 150px;
     width: 100%;
     z-index: 1;
@@ -519,8 +519,8 @@ body.non-touch .column img:hover {
           transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
   opacity: 1;
   pointer-events: all;
-  -webkit-transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
-  transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
+  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
 }
 
 .active {
@@ -528,8 +528,8 @@ body.non-touch .column img:hover {
           transform: scale3d(1, 1, 1) translate3d(0px, -200px, 0px);
   opacity: 1;
   pointer-events: all;
-  -webkit-transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
-  transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
+  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
 }
 
 .inactive {
@@ -537,8 +537,8 @@ body.non-touch .column img:hover {
           transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -75px, 0px);
   opacity: 0.2;
   pointer-events: none;
-  -webkit-transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
-  transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
+  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
   -moz-filter: blur(8px);
   -o-filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -550,8 +550,8 @@ body.non-touch .column img:hover {
           transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
   opacity: 0.2;
   pointer-events: none;
-  -webkit-transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
-  transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
+  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
   -moz-filter: blur(8px);
   -o-filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -582,12 +582,12 @@ body.non-touch .column img:hover {
     padding: 0;
   }
   .active {
-    -webkit-transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
-    transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -100px, 0px);
+            transform: scale3d(1, 1, 1) translate3d(0px, -100px, 0px);
   }
   .inactive {
-    -webkit-transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
-    transition: all 0.4s cubic-bezier(0.6, 0, 0.1, 1.3);
+    -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -25px, 0px);
+            transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -25px, 0px);
   }
 }
 
@@ -603,8 +603,8 @@ body.non-touch .column img:hover {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
 }
 
 #overlay #close_btn {
@@ -816,8 +816,8 @@ body.non-touch #more_link a:hover {
 .hidden {
   pointer-events: none !important;
   opacity: 0 !important;
-  -webkit-transform: scale3d(1, 1, 1) translate3d(0px, 100px, 0px) !important;
-          transform: scale3d(1, 1, 1) translate3d(0px, 100px, 0px) !important;
+  -webkit-transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px) !important;
+          transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px) !important;
 }
 
 .visible {

@@ -9,7 +9,7 @@
     z-index: 1000;
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
-    transition: all 0.3s ease-in-out;
+    transition: $snap-in-bounce;
 
     #close_btn{
         position: absolute;
@@ -226,7 +226,7 @@ body.non-touch #more_link a:hover{
 .hidden{
     pointer-events: none !important;
     opacity: 0 !important;
-    transform: scale3d(1, 1, 1) translate3d(0px, 100px, 0px) !important;
+    transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px) !important;
 }
 
 .visible{
