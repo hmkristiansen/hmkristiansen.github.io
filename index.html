@@ -16,6 +16,11 @@
 </head>
 
 <body class="" onload="fadeInPage();">
+
+    <div id="preloader_container">
+        <div id="preloader"></div>
+    </div>
+
     <section id="greeting" class="onLoadGreeting">
         <div class="greeting_page" id="greets">
             <p>Heisann,<br> I'm Henrik <span id="hand-wave">👋</span></p>
@@ -72,7 +77,7 @@
         </div>
     </section>
 
-    <div id="overlay" class="hidden">
+    <div id="overlay" style="position: fixed !important;" class="hidden">
         <div id="close_btn" class="hideCloseBtn"><img src="assets/svg/exit.svg"></div>
         <div id="exp_btn"><img src="assets/svg/max.svg"></div>
         <div id="content">
@@ -116,11 +121,14 @@
         </div>
     </footer>
 
+    <script src="script/lottie.js" type="text/javascript"></script>
+
     <script src="script/preload.js"></script>
     <script src="script/age.js"></script>
     <script src="script/script.js"></script>
     <script src="script/overlay.js"></script>
     <script src="script/colormodes.js"></script>
+    <script src="script/loadready.js"></script>
 
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript>  

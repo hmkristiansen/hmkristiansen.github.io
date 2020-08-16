@@ -1,0 +1,47 @@
+
+#preloader_container{
+
+    position: fixed !important;
+
+    height: 100vh;
+    width: 100vw;
+
+    top: 0;
+    left: 0;
+
+    background-color: white;
+
+    z-index: 10000;
+
+    #preloader{
+        //padding-top: 56.25%;
+        width: 1000px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    transition: all 1s;
+}
+
+.fadeOut{
+    z-index: -10000 !important;
+    opacity: 0;
+}
+.remove{
+    display: none;
+}
+.noScroll{
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+
+    #preloader_container{
+        #preloader{
+            width: 600px;
+        }
+    }
+}  
+

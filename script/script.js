@@ -1,4 +1,5 @@
 var currentBrowser;
+var overlayFix = false;
 
 function fadeInPage(){
     //checkIfDarkmode();
@@ -29,11 +30,11 @@ function checkBrowser(){
             return regexp.test(window.navigator.userAgent);
         }
         switch (true) {
-            case test(/edg/i): return "edge";
+            case test(/edg/i): overlayFix = true; return "edge";
             case test(/opr/i) && (!!window.opr || !!window.opera): return "opera";
-            case test(/chrome/i) && !!window.chrome: return "chrome";
+            case test(/chrome/i) && !!window.chrome: overlayFix = true; return "chrome";
             case test(/trident/i): return "ie";
-            case test(/firefox/i): return "firefox";
+            case test(/firefox/i): overlayFix = true; return "firefox";
             case test(/safari/i): return "safari";
             default: return "other";
         }
@@ -44,9 +45,17 @@ function checkBrowser(){
 
 var showWork = false;
 
+let s = document.createElement("style");
+document.head.appendChild(s);
+
 window.addEventListener("scroll", function (event) {
 
     let scroll = this.scrollY;
+
+    if(overlayFix){
+        s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
+        "#preloader_container {top:" + scroll + "px !important;}";
+    }
 
     if(scroll < 40){
         $('#work').removeClass('active');

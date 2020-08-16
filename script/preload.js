@@ -1,4 +1,20 @@
 
+preloadAnimation();
+
+function preloadAnimation(){
+
+	$('body,html').addClass("noScroll");
+
+	let container = document.getElementById("preloader");
+	lottie.loadAnimation({
+		container: container, // the dom element that will contain the animation
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: 'script/preloader.json' // the path to the animation json
+	});
+}
+
 var shake,ctrl,futura,nn,aw;
 
 var projects = [
