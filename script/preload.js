@@ -1,6 +1,3 @@
-
-preloadAnimation();
-
 function preloadAnimation(){
 
 	$('body,html').addClass("noScroll");

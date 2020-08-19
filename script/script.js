@@ -3,6 +3,7 @@ var overlayFix = false;
 
 function fadeInPage(){
     //checkIfDarkmode();
+    preloadAnimation();
     checkIfTouch();
     checkBrowser();
     setTimeout(function(){
