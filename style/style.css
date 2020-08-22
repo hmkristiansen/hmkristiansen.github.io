@@ -179,9 +179,10 @@ section {
 
 #greeting #greets h5 {
   position: absolute;
+  text-align: left;
   bottom: 0px;
-  right: 12%;
-  font-size: 0.5rem;
+  right: 10%;
+  font-size: 0.8rem;
   opacity: 0.7;
 }
 
@@ -383,7 +384,7 @@ body.non-touch #greeting:hover #hand-wave {
     position: absolute;
     bottom: 10px;
     right: 7%;
-    opacity: 0.7;
+    opacity: 0.5;
   }
   #greeting #intro p {
     width: 80vw;
