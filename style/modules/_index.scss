@@ -315,7 +315,8 @@ body.non-touch #greeting:hover{
     }
 
     #greeting{
-        height: 50vh; 
+        height: 90vh; 
+
         .greeting_page{
             font-size: 1.5rem;
         }
@@ -334,7 +335,7 @@ body.non-touch #greeting:hover{
                 position: absolute;
                 top: 20%;
                 left: 5%;
-                font-size: 2rem;
+                font-size: 3rem;
             }
             h5{
                 position: absolute;
@@ -346,45 +347,57 @@ body.non-touch #greeting:hover{
 
         #intro{
             p{
-                width: 80vw;
-                font-size: 1rem;
+                font-size: 1.5rem;
+                top: 20%;
+                right: 5%;
+                width: 90vw;
             }
         }
 
         #bio{
             font-size: 1rem;
             padding: 0 !important;
+            
             #bio_container{
-                bottom: 100px;
-                left: 5%;
+                width: 100vw;
+                top: 5vh;
+                left: 0;
                 right: 0;
+                bottom: 0;
 
                 img{
-                    max-width: 120px !important;
-                    margin: 10px;
-                    float: left;
+                    //width: 100%;
+                    //left: 10vw;
+                    position: relative;
+
+                    max-width: 500px !important;
+                    max-height: 300px !important;
+                    width: 90% !important;
+
+                    margin: 5%;
+                    float: none;
                 }
                 ul{
-                    margin: 10px;
-                    float: left;
+                    margin: 5%;
+                    float: none;
+                    font-size: 1.5rem !important;
                 }
             }
         }
 
         #cv{
             ul{
-                top:20px;
+                top:10vh;
                 left: 5%;
+                h1{
+                    font-size: 1.5rem !important;
+                }
+                p{
+                    font-size: 1.4rem !important;
+                }
             }
         }
         
-        #intro{
-            p{
-                font-size: 1rem;
-                top: 10%;
-                right: 5%;
-            }
-        }
     }
 
     ul{

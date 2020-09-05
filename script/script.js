@@ -98,7 +98,7 @@ $('.greeting_pil').click(function(){
             scrollLeft: leftPos + vw
         }, 'slow');
     }else{
-        $('html, body').animate({scrollTop: '+=150px'}, 200);
+        $('html, body').animate({scrollTop: '+=50px'}, 200);
     }
 });
 

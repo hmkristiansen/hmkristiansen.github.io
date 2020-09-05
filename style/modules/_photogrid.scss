@@ -123,10 +123,12 @@ body.non-touch .column img:hover{
 
 
     .active{
-        transform: scale3d(1, 1, 1) translate3d(0px, -100px, 0px);
+        transform: scale3d(1, 1, 1) translate3d(0px, -400px, 0px);
+        transition: $snap-in-bounce-mobile;
     }
     
     .inactive{
-        transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -25px, 0px);
+        transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -150px, 0px);
+        transition: $snap-in-bounce-mobile;
     }
 }
