@@ -7,6 +7,7 @@
 html{
     font-size: 16px;
     scroll-behavior: smooth;
+    transform: translateZ(0);
 }
   
 body {
@@ -147,7 +148,7 @@ section{
     #intro{
         p{
             position: absolute;
-            top: 10%;
+            top: 20%;
             right: 20%;
             text-align: right;
             max-width: 500px;
@@ -356,11 +357,10 @@ body.non-touch #greeting:hover{
 
         #bio{
             font-size: 1rem;
-            padding: 0 !important;
-            
+            padding: 0 !important;        
             #bio_container{
                 width: 100vw;
-                top: 5vh;
+                top: 10vh;
                 left: 0;
                 right: 0;
                 bottom: 0;
@@ -371,16 +371,19 @@ body.non-touch #greeting:hover{
                     position: relative;
 
                     max-width: 500px !important;
-                    max-height: 300px !important;
-                    width: 90% !important;
+                    max-height: 250px !important;
+                    height: 80vh;
+                    width: 75% !important;
 
                     margin: 5%;
+                    margin-top: 0;
                     float: none;
                 }
                 ul{
                     margin: 5%;
                     float: none;
                     font-size: 1.5rem !important;
+                    text-align: right;
                 }
             }
         }

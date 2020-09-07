@@ -30,15 +30,17 @@ function checkBrowser(){
         var test = function(regexp) {
             return regexp.test(window.navigator.userAgent);
         }
+        overlayFix = true; 
+        /*
         switch (true) {
             case test(/edg/i): overlayFix = true; return "edge";
             case test(/opr/i) && (!!window.opr || !!window.opera): return "opera";
             case test(/chrome/i) && !!window.chrome: overlayFix = true; return "chrome";
             case test(/trident/i): return "ie";
             case test(/firefox/i): overlayFix = true; return "firefox";
-            case test(/safari/i): return "safari";
+            case test(/safari/i): overlayFix = true;  return "safari";
             default: return "other";
-        }
+        }*/
     })();
     currentBrowser = browser;
 }
@@ -54,8 +56,10 @@ window.addEventListener("scroll", function (event) {
     let scroll = this.scrollY;
 
     if(overlayFix){
-        s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
-        "#preloader_container {top:" + scroll + "px !important;}";
+        setTimeout(function(){
+            s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
+            "#preloader_container {top:" + scroll + "px !important;}";
+        },350);
     }
 
     if(scroll < 40){
@@ -78,7 +82,6 @@ window.addEventListener("scroll", function (event) {
 
         updateAgeBool = false;
     }
-
 });
 
 $('#greeting').scroll(function(){

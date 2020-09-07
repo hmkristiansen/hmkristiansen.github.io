@@ -3,9 +3,9 @@
     "header_img": "assets/ctrl/ctrl.jpg",
     "h1": "CTRLframe",
     "item_info": {
-        "client": "Course; Trend Driven Design",
-        "role": "Role; Concept Developer",
-        "period": "Period; Fall '19"
+        "client": "Course: Trend Driven Design",
+        "role": "Role: Concept Developer",
+        "period": "Period: Fall '19"
     },
     "content":{
         "quote":"CTRLframe is a minimal IOT-device aimed at families who wishes to be more open about household spendings.",

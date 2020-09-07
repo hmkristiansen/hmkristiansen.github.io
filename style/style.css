@@ -49,6 +49,8 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 body {
@@ -187,7 +189,7 @@ section {
 
 #greeting #intro p {
   position: absolute;
-  top: 10%;
+  top: 20%;
   right: 20%;
   text-align: right;
   max-width: 500px;
@@ -397,7 +399,7 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting #bio #bio_container {
     width: 100vw;
-    top: 5vh;
+    top: 10vh;
     left: 0;
     right: 0;
     bottom: 0;
@@ -405,15 +407,18 @@ body.non-touch #greeting:hover #hand-wave {
   #greeting #bio #bio_container img {
     position: relative;
     max-width: 500px !important;
-    max-height: 300px !important;
-    width: 90% !important;
+    max-height: 250px !important;
+    height: 80vh;
+    width: 75% !important;
     margin: 5%;
+    margin-top: 0;
     float: none;
   }
   #greeting #bio #bio_container ul {
     margin: 5%;
     float: none;
     font-size: 1.5rem !important;
+    text-align: right;
   }
   #greeting #cv ul {
     top: 10vh;
@@ -482,11 +487,12 @@ footer #footer_hr {
 
 @media screen and (max-width: 600px) {
   footer {
-    padding-bottom: 0px;
-    -webkit-transform: translateY(-200px);
-            transform: translateY(-200px);
+    padding-bottom: 100px;
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
     margin-top: 0px;
     margin-bottom: 0px;
+    font-size: 1.3rem;
     width: 100%;
     z-index: 1;
     position: relative;
