@@ -59,7 +59,7 @@ window.addEventListener("scroll", function (event) {
         setTimeout(function(){
             s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
             "#preloader_container {top:" + scroll + "px !important;}";
-        },350);
+        },100);
     }
 
     if(scroll < 40){
