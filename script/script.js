@@ -55,12 +55,19 @@ window.addEventListener("scroll", function (event) {
 
     let scroll = this.scrollY;
 
+    /*
     if(overlayFix){
         setTimeout(function(){
             s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
             "#preloader_container {top:" + scroll + "px !important;}";
         },100);
-    }
+    }*/
+
+    clearTimeout($.data(this, 'scrollTimer'));
+	$.data(this, 'scrollTimer', setTimeout(function() {
+        s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
+        "#preloader_container {top:" + scroll + "px !important;}";
+	}, 100));
 
     if(scroll < 40){
         $('#work').removeClass('active');
