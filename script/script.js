@@ -69,6 +69,13 @@ window.addEventListener("scroll", function (event) {
         $('#greeting').addClass('activeText');
         $('#greeting').removeClass('inactiveText');
 
+        setTimeout(function(){
+            $('#work').addClass('blurGrid');
+        },200);
+        setTimeout(function(){
+            $('#greeting').removeClass('blurGrid');
+        },100);
+
         if(scrollPercentage > 55 && scrollPercentage < 75){
             updateAgeBool = true;
         }
@@ -79,6 +86,13 @@ window.addEventListener("scroll", function (event) {
 
         $('#greeting').removeClass('activeText');
         $('#greeting').addClass('inactiveText');
+
+        setTimeout(function(){
+            $('#greeting').addClass('blurGrid');
+        },200);
+        setTimeout(function(){
+            $('#work').removeClass('blurGrid');
+        },100);
 
         updateAgeBool = false;
     }

@@ -76,11 +76,6 @@ body.non-touch .column img:hover{
     opacity: 0.2;
     pointer-events: none;
     transition: $snap-in-bounce;
-
-    -moz-filter:blur(8px);
-    -o-filter:blur(8px);
-    -webkit-filter:blur(8px);
-    filter:blur(8px);
 }
 
 .inactiveText{
@@ -88,7 +83,9 @@ body.non-touch .column img:hover{
     opacity: 0.2;
     pointer-events: none;
     transition: $snap-in-bounce;
+}
 
+.blurGrid{
     -moz-filter:blur(8px);
     -o-filter:blur(8px);
     -webkit-filter:blur(8px);
