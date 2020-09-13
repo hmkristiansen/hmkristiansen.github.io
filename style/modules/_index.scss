@@ -316,7 +316,7 @@ body.non-touch #greeting:hover{
     }
 
     #greeting{
-        height: 90vh; 
+        height: 85vh; 
 
         .greeting_page{
             font-size: 1.5rem;
@@ -324,9 +324,9 @@ body.non-touch #greeting:hover{
 
         .greeting_pil{
             position: absolute;
-            bottom: 30px;
+            bottom: 20px;
             right: 30px;
-            width: 50px;
+            width: 40px;
             height: auto;
             transform-origin: right bottom !important;
         }
@@ -420,6 +420,21 @@ body.non-touch #greeting:hover{
         flex: 100%;
         max-width: 100%;
         padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #greeting{
+        #bio{
+            #bio_container{
+                img{
+                    max-width: 400px !important;
+                    max-height: 200px !important;
+                    height: 80vh;
+                    width: 75% !important;
+                }
+            }
+        }
     }
 }
 

@@ -67,21 +67,29 @@ window.addEventListener("scroll", function (event) {
 	$.data(this, 'scrollTimer', setTimeout(function() {
         s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
         "#preloader_container {top:" + scroll + "px !important;}";
-	}, 100));
+    }, 100));
+    
 
-    if(scroll < 40){
+    if(scroll < 60){
         $('#work').removeClass('active');
         $('#work').addClass('inactive');
 
         $('#greeting').addClass('activeText');
         $('#greeting').removeClass('inactiveText');
+        $('#greeting').removeClass('blurGrid');
 
+        setTimeout(function(){
+            $('#work').addClass('blurGrid');
+        },100);
+
+        /*
         setTimeout(function(){
             $('#work').addClass('blurGrid');
         },200);
         setTimeout(function(){
             $('#greeting').removeClass('blurGrid');
         },100);
+        */
 
         if(scrollPercentage > 55 && scrollPercentage < 75){
             updateAgeBool = true;
@@ -90,16 +98,18 @@ window.addEventListener("scroll", function (event) {
     }else{
         $('#work').removeClass('inactive');
         $('#work').addClass('active');
+        $('#work').removeClass('blurGrid');
 
         $('#greeting').removeClass('activeText');
         $('#greeting').addClass('inactiveText');
 
         setTimeout(function(){
             $('#greeting').addClass('blurGrid');
-        },200);
-        setTimeout(function(){
-            $('#work').removeClass('blurGrid');
         },100);
+        /*
+        setTimeout(function(){
+            
+        },100);*/
 
         updateAgeBool = false;
     }
