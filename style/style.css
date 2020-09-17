@@ -532,6 +532,7 @@ footer #footer_hr {
   width: 100%;
   max-width: 1400px;
   z-index: 10;
+  will-change: transform;
 }
 
 #work h1 {
@@ -586,8 +587,10 @@ body.non-touch .column img:hover {
           transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
   opacity: 1;
   pointer-events: all;
-  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
-  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  -webkit-transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  will-change: transform;
+  will-change: opacity;
 }
 
 .active {
@@ -595,8 +598,10 @@ body.non-touch .column img:hover {
           transform: scale3d(1, 1, 1) translate3d(0px, -200px, 0px);
   opacity: 1;
   pointer-events: all;
-  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
-  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  -webkit-transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  will-change: transform;
+  will-change: opacity;
 }
 
 .inactive {
@@ -604,8 +609,8 @@ body.non-touch .column img:hover {
           transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -75px, 0px);
   opacity: 0.2;
   pointer-events: none;
-  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
-  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  will-change: transform;
+  will-change: opacity;
 }
 
 .inactiveText {
@@ -613,8 +618,8 @@ body.non-touch .column img:hover {
           transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
   opacity: 0.2;
   pointer-events: none;
-  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
-  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  will-change: transform;
+  will-change: opacity;
 }
 
 .blurGrid {
@@ -622,6 +627,7 @@ body.non-touch .column img:hover {
   -o-filter: blur(8px);
   -webkit-filter: blur(8px);
   filter: blur(8px);
+  will-change: filter;
 }
 
 .onLoadPort {
@@ -650,14 +656,14 @@ body.non-touch .column img:hover {
   .active {
     -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -400px, 0px);
             transform: scale3d(1, 1, 1) translate3d(0px, -400px, 0px);
-    -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.2);
-    transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.2);
+    -webkit-transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
+    transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
   }
   .inactive {
     -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -150px, 0px);
             transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -150px, 0px);
-    -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.2);
-    transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.2);
+    -webkit-transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
+    transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
   }
 }
 
@@ -673,8 +679,8 @@ body.non-touch .column img:hover {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
-  -webkit-transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
-  transition: all 600ms cubic-bezier(0.75, -0.5, 0, 1.75);
+  -webkit-transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
 }
 
 #overlay #close_btn {

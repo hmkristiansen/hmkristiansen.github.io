@@ -1,4 +1,5 @@
 var currentBrowser;
+var vh = document.documentElement.scrollHeight;
 var overlayFix = false;
 
 function fadeInPage(){
@@ -43,6 +44,8 @@ function checkBrowser(){
         }*/
     })();
     currentBrowser = browser;
+
+
 }
 
 
@@ -54,20 +57,18 @@ document.head.appendChild(s);
 window.addEventListener("scroll", function (event) {
 
     let scroll = this.scrollY;
+    //console.log(scroll);
+    //console.log(vh);
 
-    /*
-    if(overlayFix){
-        setTimeout(function(){
+    if(scroll-50<vh){
+        clearTimeout($.data(this, 'scrollTimer'));
+        $.data(this, 'scrollTimer', setTimeout(function() {
             s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
             "#preloader_container {top:" + scroll + "px !important;}";
-        },100);
-    }*/
+            console.log("update");
+        }, 300));
+    }
 
-    clearTimeout($.data(this, 'scrollTimer'));
-	$.data(this, 'scrollTimer', setTimeout(function() {
-        s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
-        "#preloader_container {top:" + scroll + "px !important;}";
-    }, 100));
     
 
     if(scroll < 60){
@@ -77,19 +78,7 @@ window.addEventListener("scroll", function (event) {
         $('#greeting').addClass('activeText');
         $('#greeting').removeClass('inactiveText');
         $('#greeting').removeClass('blurGrid');
-
-        setTimeout(function(){
-            $('#work').addClass('blurGrid');
-        },100);
-
-        /*
-        setTimeout(function(){
-            $('#work').addClass('blurGrid');
-        },200);
-        setTimeout(function(){
-            $('#greeting').removeClass('blurGrid');
-        },100);
-        */
+        $('#work').addClass('blurGrid');
 
         if(scrollPercentage > 55 && scrollPercentage < 75){
             updateAgeBool = true;
@@ -103,13 +92,7 @@ window.addEventListener("scroll", function (event) {
         $('#greeting').removeClass('activeText');
         $('#greeting').addClass('inactiveText');
 
-        setTimeout(function(){
-            $('#greeting').addClass('blurGrid');
-        },100);
-        /*
-        setTimeout(function(){
-            
-        },100);*/
+        $('#greeting').addClass('blurGrid');
 
         updateAgeBool = false;
     }
@@ -130,9 +113,9 @@ $('.greeting_pil').click(function(){
         var leftPos = $('#greeting').scrollLeft();
         $('#greeting').animate({
             scrollLeft: leftPos + vw
-        }, 'slow');
+        }, 'ease-in');
     }else{
-        $('html, body').animate({scrollTop: '+=50px'}, 200);
+        $('html, body').animate({scrollTop: '+=100px'}, 200);
     }
 });
 

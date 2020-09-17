@@ -54,8 +54,8 @@ function preloadImages(){
 }
 function preloadImage(url){
     var img = new Image();
-    img.src = url;
-    images.push(img);
+	img.src = url;
+	images.push(img);
 }
 
 function renderPhotogrid(){
