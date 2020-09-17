@@ -368,7 +368,7 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting .greeting_pil {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     right: 30px;
     width: 40px;
     height: auto;
@@ -377,14 +377,14 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting #greets p {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 5%;
     font-size: 3rem;
   }
   #greeting #greets h5 {
     position: absolute;
-    bottom: 10px;
-    right: 7%;
+    bottom: 15px;
+    right: 5%;
     opacity: 0.5;
   }
   #greeting #intro p {
