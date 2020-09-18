@@ -326,7 +326,7 @@ body.non-touch #greeting:hover{
             position: absolute;
             bottom: 40px;
             right: 30px;
-            width: 40px;
+            width: 50px;
             height: auto;
             transform-origin: right bottom !important;
         }
@@ -334,7 +334,7 @@ body.non-touch #greeting:hover{
         #greets{
             p{
                 position: absolute;
-                top: 10%;
+                top: 20vh;
                 left: 5%;
                 font-size: 3rem;
             }
@@ -373,9 +373,10 @@ body.non-touch #greeting:hover{
                     max-width: 500px !important;
                     max-height: 250px !important;
                     height: 80vh;
-                    width: 75% !important;
+                    width: 70% !important;        
 
                     margin: 5%;
+                    margin-left: 25%;
                     margin-top: 0;
                     float: none;
                 }
@@ -383,7 +384,7 @@ body.non-touch #greeting:hover{
                     margin: 5%;
                     float: none;
                     font-size: 1.5rem !important;
-                    text-align: right;
+                    text-align: left;
                 }
             }
         }

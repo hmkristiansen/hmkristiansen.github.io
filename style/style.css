@@ -370,14 +370,14 @@ body.non-touch #greeting:hover #hand-wave {
     position: absolute;
     bottom: 40px;
     right: 30px;
-    width: 40px;
+    width: 50px;
     height: auto;
     -webkit-transform-origin: right bottom !important;
             transform-origin: right bottom !important;
   }
   #greeting #greets p {
     position: absolute;
-    top: 10%;
+    top: 20vh;
     left: 5%;
     font-size: 3rem;
   }
@@ -409,8 +409,9 @@ body.non-touch #greeting:hover #hand-wave {
     max-width: 500px !important;
     max-height: 250px !important;
     height: 80vh;
-    width: 75% !important;
+    width: 70% !important;
     margin: 5%;
+    margin-left: 25%;
     margin-top: 0;
     float: none;
   }
@@ -418,7 +419,7 @@ body.non-touch #greeting:hover #hand-wave {
     margin: 5%;
     float: none;
     font-size: 1.5rem !important;
-    text-align: right;
+    text-align: left;
   }
   #greeting #cv ul {
     top: 10vh;
@@ -467,10 +468,14 @@ body.non-touch #greeting:hover #hand-wave {
 footer {
   width: 100vw;
   height: auto;
-  padding-bottom: 100px;
-  margin-top: 100px;
-  margin-bottom: 200px;
   z-index: 1;
+  position: relative;
+  padding-bottom: 400px;
+}
+
+footer #footerCont {
+  max-width: 1600px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -490,13 +495,13 @@ footer #more_work {
 footer #footer_hr {
   position: absolute;
   width: 200px;
-  margin-left: calc(50vw - 100px);
-  top: -50px;
+  margin-left: calc(50% - 100px);
+  top: -200px;
 }
 
 @media screen and (max-width: 600px) {
   footer {
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     -webkit-transform: translateY(-150px);
             transform: translateY(-150px);
     margin-top: 0px;
@@ -522,8 +527,9 @@ footer #footer_hr {
     margin-left: 0px;
   }
   footer #footer_hr {
-    width: 100px;
-    margin-left: calc(50vw - 50px);
+    top: -100px;
+    width: 150px;
+    margin-left: calc(50vw - 75px);
   }
 }
 
@@ -594,8 +600,8 @@ body.non-touch .column img:hover {
 }
 
 .active {
-  -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -200px, 0px);
-          transform: scale3d(1, 1, 1) translate3d(0px, -200px, 0px);
+  -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -60vh, 0px);
+          transform: scale3d(1, 1, 1) translate3d(0px, -60vh, 0px);
   opacity: 1;
   pointer-events: all;
   -webkit-transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
@@ -605,8 +611,8 @@ body.non-touch .column img:hover {
 }
 
 .inactive {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -75px, 0px);
-          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -75px, 0px);
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -8vh, 0px);
+          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -8vh, 0px);
   opacity: 0.2;
   pointer-events: none;
   will-change: transform;
@@ -614,12 +620,18 @@ body.non-touch .column img:hover {
 }
 
 .inactiveText {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
-          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10vh, 0px);
+          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10vh, 0px);
   opacity: 0.2;
   pointer-events: none;
   will-change: transform;
   will-change: opacity;
+}
+
+.stickElement {
+  position: -webkit-sticky !important;
+  /* Safari */
+  position: sticky !important;
 }
 
 .blurGrid {
@@ -654,16 +666,20 @@ body.non-touch .column img:hover {
     padding: 0;
   }
   .active {
-    -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -400px, 0px);
-            transform: scale3d(1, 1, 1) translate3d(0px, -400px, 0px);
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -70vh, 0px);
+            transform: scale3d(1, 1, 1) translate3d(0px, -70vh, 0px);
     -webkit-transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
     transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
   }
   .inactive {
-    -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -150px, 0px);
-            transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -150px, 0px);
+    -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -20vh, 0px);
+            transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -20vh, 0px);
     -webkit-transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
     transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  }
+  .inactiveText {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -5vh, 0px);
+            transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -5vh, 0px);
   }
 }
 
@@ -673,8 +689,6 @@ body.non-touch .column img:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   z-index: 1000;
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
@@ -895,6 +909,12 @@ body.non-touch #more_link a:hover {
   -webkit-transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px) !important;
           transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px) !important;
   position: fixed !important;
+  -webkit-transition-property: opacity, -webkit-transform !important;
+  transition-property: opacity, -webkit-transform !important;
+  transition-property: opacity, transform !important;
+  transition-property: opacity, transform, -webkit-transform !important;
+  -webkit-transition: 0.3s !important;
+  transition: 0.3s !important;
 }
 
 .visible {
@@ -904,6 +924,12 @@ body.non-touch #more_link a:hover {
   -webkit-transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px) !important;
           transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px) !important;
   position: fixed !important;
+  -webkit-transition-property: opacity, -webkit-transform !important;
+  transition-property: opacity, -webkit-transform !important;
+  transition-property: opacity, transform !important;
+  transition-property: opacity, transform, -webkit-transform !important;
+  -webkit-transition: 0.3s !important;
+  transition: 0.3s !important;
 }
 
 .remove {

@@ -60,17 +60,16 @@ window.addEventListener("scroll", function (event) {
     //console.log(scroll);
     //console.log(vh);
 
-    if(scroll-50<vh){
+    if(scroll-300<vh){
         clearTimeout($.data(this, 'scrollTimer'));
         $.data(this, 'scrollTimer', setTimeout(function() {
-            s.textContent = "#overlay {top:" + scroll + "px !important;}"  +
-            "#preloader_container {top:" + scroll + "px !important;}";
+            s.textContent = "#overlay {top:" + scroll + "px !important; transition: all none;}"  +
+            "#preloader_container {top:" + scroll + "px !important; transition: all none;}";
             console.log("update");
-        }, 300));
+        }, 150));
     }
 
     
-
     if(scroll < 60){
         $('#work').removeClass('active');
         $('#work').addClass('inactive');
@@ -78,6 +77,8 @@ window.addEventListener("scroll", function (event) {
         $('#greeting').addClass('activeText');
         $('#greeting').removeClass('inactiveText');
         $('#greeting').removeClass('blurGrid');
+        $('#greeting').removeClass('stickElement');
+
         $('#work').addClass('blurGrid');
 
         if(scrollPercentage > 55 && scrollPercentage < 75){
@@ -91,6 +92,11 @@ window.addEventListener("scroll", function (event) {
 
         $('#greeting').removeClass('activeText');
         $('#greeting').addClass('inactiveText');
+
+        setTimeout(function(){
+            $('#greeting').addClass('stickElement');
+        },200);
+
 
         $('#greeting').addClass('blurGrid');
 
