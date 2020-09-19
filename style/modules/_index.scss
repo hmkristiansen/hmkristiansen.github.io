@@ -89,7 +89,7 @@ section{
     position: relative;
 
     top: 0px;    
-    height: 75vh;
+    height: 70vh;
     width: auto;
     white-space: nowrap;
     position: relative;
@@ -153,6 +153,7 @@ section{
             text-align: right;
             max-width: 500px;
             font-size: 1rem;
+            font-weight: bold;
             span{
                 font-weight: bold;
             }
@@ -316,7 +317,7 @@ body.non-touch #greeting:hover{
     }
 
     #greeting{
-        height: 85vh; 
+        height: 70vh; 
 
         .greeting_page{
             font-size: 1.5rem;
@@ -370,9 +371,9 @@ body.non-touch #greeting:hover{
                     //left: 10vw;
                     position: relative;
 
-                    max-width: 500px !important;
-                    max-height: 250px !important;
-                    height: 80vh;
+                    max-width: 400px !important;
+                    min-height: 200px !important;
+                    height: 20vh;
                     width: 70% !important;        
 
                     margin: 5%;

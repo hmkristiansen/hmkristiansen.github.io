@@ -70,9 +70,12 @@ window.addEventListener("scroll", function (event) {
     }
 
     
-    if(scroll < 60){
+    if(scroll < 40){
         $('#work').removeClass('active');
         $('#work').addClass('inactive');
+
+        $('footer').removeClass('active');
+        $('footer').addClass('inactive');
 
         $('#greeting').addClass('activeText');
         $('#greeting').removeClass('inactiveText');
@@ -86,9 +89,14 @@ window.addEventListener("scroll", function (event) {
         }
 
     }else{
+
         $('#work').removeClass('inactive');
         $('#work').addClass('active');
         $('#work').removeClass('blurGrid');
+
+        $('footer').removeClass('inactive');
+        $('footer').addClass('active');
+        $('footer').removeClass('blurGrid');
 
         $('#greeting').removeClass('activeText');
         $('#greeting').addClass('inactiveText');

@@ -15,7 +15,7 @@
 #preloader_container #preloader {
   width: 1000px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -131,7 +131,7 @@ section {
 #greeting {
   position: relative;
   top: 0px;
-  height: 75vh;
+  height: 70vh;
   width: auto;
   white-space: nowrap;
   position: relative;
@@ -194,6 +194,7 @@ section {
   text-align: right;
   max-width: 500px;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 #greeting #intro p span {
@@ -361,7 +362,7 @@ body.non-touch #greeting:hover #hand-wave {
     padding: 10px !important;
   }
   #greeting {
-    height: 85vh;
+    height: 70vh;
   }
   #greeting .greeting_page {
     font-size: 1.5rem;
@@ -406,9 +407,9 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting #bio #bio_container img {
     position: relative;
-    max-width: 500px !important;
-    max-height: 250px !important;
-    height: 80vh;
+    max-width: 400px !important;
+    min-height: 200px !important;
+    height: 20vh;
     width: 70% !important;
     margin: 5%;
     margin-left: 25%;
@@ -470,11 +471,12 @@ footer {
   height: auto;
   z-index: 1;
   position: relative;
-  padding-bottom: 400px;
+  padding-top: 30vh;
 }
 
 footer #footerCont {
   max-width: 1600px;
+  height: auto;
   margin: 0 auto;
   position: relative;
 }
@@ -483,6 +485,7 @@ footer #info {
   top: 30px;
   left: 5vw;
   position: absolute;
+  max-width: 47.5vw;
 }
 
 footer #more_work {
@@ -490,20 +493,20 @@ footer #more_work {
   right: 5vw;
   position: absolute;
   text-align: right;
+  max-width: 47.5vw;
 }
 
 footer #footer_hr {
   position: absolute;
   width: 200px;
   margin-left: calc(50% - 100px);
-  top: -200px;
+  top: -100px;
 }
 
 @media screen and (max-width: 600px) {
   footer {
-    padding-bottom: 150px;
-    -webkit-transform: translateY(-150px);
-            transform: translateY(-150px);
+    padding-top: 30vh;
+    padding-bottom: 0;
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 1.3rem;
@@ -517,7 +520,7 @@ footer #footer_hr {
     width: 70vw;
   }
   footer #info #info_link {
-    margin-bottom: 15px;
+    margin-top: 25px;
   }
   footer ul {
     margin-bottom: 0;
@@ -600,13 +603,14 @@ body.non-touch .column img:hover {
 }
 
 .active {
-  -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -60vh, 0px);
-          transform: scale3d(1, 1, 1) translate3d(0px, -60vh, 0px);
+  -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -40vh, 0px);
+          transform: scale3d(1, 1, 1) translate3d(0px, -40vh, 0px);
   opacity: 1;
   pointer-events: all;
   -webkit-transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
   transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
   will-change: transform;
+  will-change: margin;
   will-change: opacity;
 }
 
@@ -620,8 +624,8 @@ body.non-touch .column img:hover {
 }
 
 .inactiveText {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10vh, 0px);
-          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10vh, 0px);
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
+          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
   opacity: 0.2;
   pointer-events: none;
   will-change: transform;
@@ -666,8 +670,8 @@ body.non-touch .column img:hover {
     padding: 0;
   }
   .active {
-    -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -70vh, 0px);
-            transform: scale3d(1, 1, 1) translate3d(0px, -70vh, 0px);
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -50vh, 0px);
+            transform: scale3d(1, 1, 1) translate3d(0px, -50vh, 0px);
     -webkit-transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
     transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
   }
@@ -864,8 +868,10 @@ body.non-touch .column img:hover {
   margin: 0 auto;
   width: 100%;
   text-align: center;
+  position: relative;
   padding: 40px;
-  padding-bottom: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 #overlay #content #more_link a {
@@ -943,9 +949,9 @@ body.non-touch #more_link a:hover {
 }
 
 .blur {
-  -webkit-transition: all 0.1s !important;
-  transition: all 0.1s !important;
-  opacity: 0.1 !important;
+  -webkit-transition: all 0.2s !important;
+  transition: all 0.2s !important;
+  opacity: 0.2 !important;
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
   -webkit-filter: blur(5px);

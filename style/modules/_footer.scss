@@ -10,6 +10,7 @@ footer{
 
     #footerCont{
         max-width: 1600px;
+        height: auto;
         margin: 0 auto;
         position: relative;
     }
@@ -18,6 +19,7 @@ footer{
         top: 30px;
         left: 5vw;
         position: absolute;
+        max-width: 47.5vw;
     }
 
     #more_work{
@@ -25,15 +27,16 @@ footer{
         right: 5vw;
         position: absolute;
         text-align: right;
+        max-width: 47.5vw;
     }
     #footer_hr{
         position: absolute;
         width: 200px;
         margin-left: calc(50% - 100px);
-        top:-200px;
+        top:-100px;
     }
 
-    padding-bottom: 400px;
+    padding-top: 30vh;
 }
 
 
@@ -41,8 +44,11 @@ footer{
    
     footer{
 
-        padding-bottom: 150px;
-        transform: translateY(-150px);
+        //padding-bottom: 150px;
+        //transform: translateY(-150px);
+        padding-top: 30vh;
+        padding-bottom: 0;
+
         margin-top: 0px;
         margin-bottom: 0px;
 
@@ -57,7 +63,7 @@ footer{
             left: 5vw;
             width: 70vw;
             #info_link{
-                margin-bottom: 15px;
+                margin-top: 25px;
             }
         }
         ul{

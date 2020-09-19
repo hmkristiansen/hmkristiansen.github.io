@@ -12,6 +12,8 @@
     transform: translate3d(0px, 0px, 0px);
     transition: $snap-in-bounce;
 
+    
+
     #close_btn{
         position: absolute;
         top:20px;
@@ -185,6 +187,7 @@
             margin: 0 auto;
             width: 100%;
             text-align: center;
+            position: relative;
 
             a{
                 padding: 10px;
@@ -194,7 +197,8 @@
                 border: 2px solid $bg-ligth-btn;
             }
             padding: 40px;
-            padding-bottom: 50px;
+            padding-top: 100px;
+            padding-bottom: 100px;
         }
 
     } 
@@ -255,8 +259,8 @@ body.non-touch #more_link a:hover{
 }
 
 .blur{
-    transition: all 0.1s !important;
-    opacity: 0.1 !important;
+    transition: all 0.2s !important;
+    opacity: 0.2 !important;
 
     -moz-filter:blur(5px);
     -o-filter:blur(5px);
