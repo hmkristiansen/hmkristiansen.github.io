@@ -124,7 +124,11 @@ section{
         width: 80px;
         height: auto;
         transform-origin: right bottom !important;
-        cursor: pointer;
+        cursor: e-resize;
+    }
+
+    #pil4{
+        cursor: s-resize;
     }
 
     #greets{

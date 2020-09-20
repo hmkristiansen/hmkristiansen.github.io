@@ -167,7 +167,11 @@ section {
   height: auto;
   -webkit-transform-origin: right bottom !important;
           transform-origin: right bottom !important;
-  cursor: pointer;
+  cursor: e-resize;
+}
+
+#greeting #pil4 {
+  cursor: s-resize;
 }
 
 #greeting #greets p {
