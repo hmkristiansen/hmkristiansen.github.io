@@ -100,15 +100,9 @@
             margin: 0;
         }
 
-        .contentText{
-            //margin-top: 10px;
-            text-align: left;
-            font-size: 1rem;
-            margin-bottom: 50px;
-            padding-right: 30%;
-            width: 100%;
-            float: left;
-            clear: both;
+        #item_info{
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
         .contentQuote{
@@ -118,12 +112,29 @@
             text-align: right;
             font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 50px;
-            padding-left: 40%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20%;
             width: 100%;
             float: right;
             clear: both;
             opacity: 1;
+        }
+
+        .contentText{
+            //margin-top: 10px;
+            text-align: left;
+            font-size: 1rem;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            margin: 10vh 0;
+
+            margin-right: 20%;
+            width: 80%;
+            max-width: 800px;
+            float: left;
+            clear: both;
         }
 
         .contentHeader{
@@ -140,24 +151,28 @@
         }
         
         .contentImage{
-            width: 100%;
+            width: 85%;
+            margin-left: 7.5%;
             height: auto;
-            padding: 20px;
-            padding-bottom: 10px;
-            padding-top: 0;
+            padding: 3vw;
+            padding-bottom: 20px;
+            padding-top: 20px;
             clear: both;
         }
 
         .contentCaption{
             //margin-top: 20px;
-            text-align: left;
-            font-size: 1rem;
-            opacity: 0.8;
-            margin-bottom: 40px;
-            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.4;
+            padding-bottom: 40px;
+            padding-top: 20px;
             padding-right: 10%;
             padding-left: 10%;
-            width: 100%;
+            margin-bottom: 5vh;
+            width: 80%;
+            margin-left: 10%;
+            //margin: 0 auto;
             float: left;
             clear: both;
         }
@@ -165,7 +180,7 @@
         hr{
             margin: 0 auto;
             clear: both;
-            width: 80%;
+            width: 75%;
 
             margin-top: 80px;
             margin-bottom: 80px;
@@ -173,7 +188,7 @@
             border: 0;
             height: 0;
             border-top: 1px solid rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
         }
 
@@ -181,6 +196,9 @@
             padding: 20px;
             padding-bottom: 10px;
             clear: both;
+            max-height: 80vh;
+            width: auto;
+            margin: 0 auto;
         }
 
         #more_link{
@@ -278,7 +296,7 @@ body.non-touch #more_link a:hover{
     height: 100% !important;
     margin-top: 0px !important;
     border-radius: 0 !important;
-    max-width: 1800px !important;
+    max-width: 100vw !important;
 
     .contentImage{
         width: 100%;
@@ -349,6 +367,24 @@ body.non-touch #more_link a:hover{
                 margin-bottom: 50px;
                 padding-right: 10%;
                 width: 100%;
+                float: left;
+                clear: both;
+                margin: 5vh 0;
+            }
+
+            .contentCaption{
+                //margin-top: 20px;
+                text-align: center;
+                font-size: 0.8rem;
+                opacity: 0.4;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                padding-right: 5%;
+                padding-left: 5%;
+                margin-bottom: 2vh;
+                width: 90%;
+                margin-left: 5%;
+                //margin: 0 auto;
                 float: left;
                 clear: both;
             }

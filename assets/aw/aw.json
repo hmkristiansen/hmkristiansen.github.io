@@ -3,15 +3,47 @@
     "header_img": "assets/aw/aw.gif",
     "h1": "ANYWHERE",
     "item_info": {
-        "client": "<i>Client;</i> ITERATE || ANYWHERE",
-        "role": "Role; Interaction designer",
-        "period": "Period; Summer '20"
+        "client": "Client: ITERATE | ANYWHERE",
+        "role": "Role: Interaction designer",
+        "period": "Period: Summer '20"
     },
     "quote":{
 
     },
     "content":{
         "quote":"ANYWHERE is a new kind of streaming platform for events that aims to be a different experince for artist and audience alike.",
-        "text1":"Under development 🥳"
+        "text1":"The ongoing pandemic has been and continue to be an ordeal for us all. We have all felt the ramifications caused by the virus, especially the people who rely on social interaction between people to make a living. <br>Thousands of music artist, stand-up comics, drag artist and other performers lost their livelihood overnight. Existing streaming platforms like Instagram Live and Twitch suddenly became the only way for artist to perform and share their art.<br>However, these streaming platform lack two vital features that are necessary for many artists; a way of getting reliable income and ways to get propper audience reactions. <br><br>My team and I were tasked with looking into the latter problem.",
+        "image1": "assets/aw/01.jpg",
+        "caption1":"The first weeks of was spent talking with all kinds of artist and learn what they perceived as the problem with today's streaming options. Even though their artistic form was different, the most important aspect of a performance was the ability to interact with and get feedback from the audience.",
+        "text2":"The need to be able to feel the audience’s reactions became our mission. Anywhere should be an option for all artist, not only a selected few. Because of this we needed to understand how various artist uses audience feedback.",
+        "image2": "assets/aw/02.jpg",
+        "caption2":"My team defined three main categories of artist; music performance and lecture. We soon found that performance artists were the ones who relied the most on 1-1 interaction with the audience. We decided to make this group our target.",
+        "text3":"While gathering insight from people who would consider watching a streamed event we learned that certain conditions had to be met for it to be a interesting experience for the audience; they would most likely watch it in a room with friends, and they would most likely not want to have a camera on. The possible input sources were therefore limited.",
+        "image3": "assets/aw/03.jpg",
+        "catpion3":"How could we simulate audience activity with as few inputs as possible?",
+        "text4":"In an interview with a music artist it was mentioned that the audience acted like the ocean; movement and reactions happens in a wave-like fashion. <br>We tried to replicate this in a more abstract way.",
+        "image4": "assets/aw/01.gif",
+        "catpion4":"The wave was prototyped in After Effects by creating 4 layers in CMYK, blending mode multiply and animating using random postioning to the paths. The size, colors and shapes could be endlessly customized for the artists' needs.",
+        "text5":"To test whether this solution would give any meaningful effect we were fortunate enough to have a comedian to come into the office and stream his performance from one floor. The audience watched the stream from the floor below.",
+        "image5": "assets/aw/05.jpg",
+        "catpion5":"To keep the inputs simple, each member in the audience connected their phone to the stream and each phone spoke to one node on one wave.",
+        "text6":"The test was very much a success! The comedian was able to read the audience and play along with the limited inputs he received from the abstract visualisation.<br>A snippet can be watched here;",
+        "video1":{
+            "video": "assets/aw/awtest.mp4",
+            "poster": "assets/aw/poster.jpg"
+        },
+        "catpion6":"The audience were told to press a button on their phone when they laughed. The wave would react accordingly, and the more activity overall, the faster the wave would move.",
+        "text7":"My team and I were also tasked with making the artist’s view useful and functional.<br>The artist needed to have control of the stream, incoming messages and other technical settings. Part of our delivery was also to propose how this user interface would look.",
+        "image7": "assets/aw/uiel.jpg",
+        "capation7":"It all starts with a system. I wanted to give the abstract visualisation of the crowd the attention it needs, but also create distinct functional layers for better usability. This resulted in a forsted-glass approach where active elements have a readable glow. ",
+        "text8":"Sometimes the artist wanted to be able to tinker with setting sand look at the chat, sometimes they wanted to be in a state of flow and attention. The this need laid the foundation for a switch of modes and, subsequently, functions.",
+        "video2":{
+            "video": "assets/aw/uiani.mp4",
+            "poster": "assets/aw/uiposter.jpg"
+        },
+        "caption8":"A toggle between modes provides easy access to either functional model.<br>Pictured; <a href='https://www.instagram.com/scheieut/' target='_blank'>Kristoffer Scheie.</a><br>Start the video to view the switch.",
+        "image9":"assets/aw/mobileui.jpg",
+        "caption9":"Suggestion for a mobile control panel. Being able to use the smartphone to control the most frequent settings was sought out from the artist. Sadly we did not have time to test this.",
+        "text10":"My team and I were given a lot of freedom to path our own way during the internship. It proved to be a good exercise in concept development and concept testing. The matching interests and skills within the team meant ideas and executions were frequent, and the creative culture at ITERATE provided the support and courage this kind of project needs."
     }
 }

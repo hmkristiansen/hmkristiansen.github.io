@@ -9,9 +9,15 @@
     },
     "content":{
         "quote":"SHAKE aims to make buying 2nd hand cars a more pleasant experience for all parties.",
-        "text0":"During an internship at Itera ASA in the summer of 2019, I worked in a multidisciplinary team at Santander Consumer Bank with the service SHAKE. My contributions to the project included end-user testing, UI design and some front end development on their online presence. <br>Due to this project still being in development, specific details are not to be disclosed just yet.",
-        "image1": "assets/shake/01.jpg",
+        "text0":"During my internship at Itera ASA in the summer of 2019, I worked in a multidisciplinary team at Santander Consumer Bank with the service SHAKE. My contributions to the project included service design, end-user testing, UI design and some front end development of their online presence.",
+        "image3": "assets/shake/03.jpg",
+        "caption0":"In order for the team to best understand the service at hand we started with visualize the buyer- and user journey.",
         "image2": "assets/shake/02.jpg",
-        "image3": "assets/shake/03.jpg"
+        "caption1":"SHAKE had an online presence before my team entred the project. Our task was to create a user flow for the ordering of the service.",
+        "image1": "assets/shake/01.jpg",
+        "caption2":"The result was a complete mobile experience for the service. We underwent weekly usability testing and iterations of the user flow- and interface.",
+        "image4": "assets/shake/04.jpg",
+        "caption4":"Beign interested in front-end development gave me the ability to better communicate with developers for better hand-off between design and implementation.",
+        "text1":"The internship proved be an amazing opportunity to put my education in practice. Working in a multidisciplinary with another UX designer, several developers, a test manager, a market advisor and a dedicated project leader was a really good experience, and one I will look for in later projects."
     }
 }

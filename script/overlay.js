@@ -43,6 +43,7 @@ function closeOverlay(){
 		$('.contentHeader').remove();
 		$('.contentImage').remove();
 		$('.contentVideo').remove();
+		$('#more_link').remove();
 	}, 300);
 }
 
@@ -121,10 +122,23 @@ function renderProject(event){
 				p.innerHTML = $currentContent[item];
 				parent.appendChild(p);
 
+				/*
 				let hr = document.createElement('hr');
 				hr.className = "contentHr";
 				parent.appendChild(hr);
+				*/
 			}
 		}
 	}
+
+	let bottomBtn = document.createElement('div');
+	bottomBtn.id = "more_link";
+	let bottomLink = document.createElement('a');
+	bottomLink.id="notion_link";
+	bottomLink.innerHTML = "Back";
+	bottomBtn.appendChild(bottomLink);
+	parent.appendChild(bottomBtn);
+
+	$('#notion_link').removeAttr('onclick');
+	$('#notion_link').attr('onClick', 'closeOverlay();');
 }

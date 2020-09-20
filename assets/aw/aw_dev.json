@@ -1,0 +1,17 @@
+
+{
+    "header_img": "assets/aw/aw.gif",
+    "h1": "ANYWHERE",
+    "item_info": {
+        "client": "<i>Client;</i> ITERATE || ANYWHERE",
+        "role": "Role; Interaction designer",
+        "period": "Period; Summer '20"
+    },
+    "quote":{
+
+    },
+    "content":{
+        "quote":"ANYWHERE is a new kind of streaming platform for events that aims to be a different experince for artist and audience alike.",
+        "text1":"Under development 🥳"
+    }
+}
