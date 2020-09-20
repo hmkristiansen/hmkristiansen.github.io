@@ -882,11 +882,10 @@ body.non-touch .column img:hover {
 #overlay #content #more_link {
   margin: 0 auto;
   width: 100%;
+  clear: both;
   text-align: center;
   position: relative;
-  padding: 40px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin: 100px 0;
 }
 
 #overlay #content #more_link a {
@@ -896,6 +895,7 @@ body.non-touch .column img:hover {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: 2px solid #eeeeee;
+  cursor: s-resize;
 }
 
 #content::-webkit-scrollbar {
@@ -1071,6 +1071,9 @@ body.non-touch #more_link a:hover {
   #overlay #content hr {
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+  #overlay #content #more_link {
+    margin: 100px 0;
   }
   #overlay #close_btn {
     top: 15px;
