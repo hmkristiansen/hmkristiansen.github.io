@@ -129,7 +129,9 @@ section {
 }
 
 #greeting {
-  position: relative;
+  position: -webkit-sticky !important;
+  /* Safari */
+  position: sticky !important;
   top: 0px;
   height: 70vh;
   width: auto;
@@ -178,7 +180,7 @@ section {
   max-width: 80vw;
   position: absolute;
   top: 40%;
-  left: 15%;
+  left: 10%;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -606,10 +608,12 @@ body.non-touch .column img:hover {
           transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
   opacity: 1;
   pointer-events: all;
-  -webkit-transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
-  transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  -webkit-transition: all 400ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  transition: all 400ms cubic-bezier(0.28, 0.84, 0.42, 1);
   will-change: transform;
   will-change: opacity;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
 }
 
 .active {
@@ -617,25 +621,27 @@ body.non-touch .column img:hover {
           transform: scale3d(1, 1, 1) translate3d(0px, -40vh, 0px);
   opacity: 1;
   pointer-events: all;
-  -webkit-transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
-  transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  -webkit-transition: all 400ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  transition: all 400ms cubic-bezier(0.28, 0.84, 0.42, 1);
   will-change: transform;
   will-change: margin;
   will-change: opacity;
 }
 
-.inactive {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -8vh, 0px);
-          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -8vh, 0px);
+.inactiveText {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10vh, 0px);
+          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10vh, 0px);
   opacity: 0.2;
   pointer-events: none;
   will-change: transform;
   will-change: opacity;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
 }
 
-.inactiveText {
-  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
-          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
+.inactive {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -8vh, 0px);
+          transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -8vh, 0px);
   opacity: 0.2;
   pointer-events: none;
   will-change: transform;
@@ -707,8 +713,8 @@ body.non-touch .column img:hover {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
           transform: translate3d(0px, 0px, 0px);
-  -webkit-transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
-  transition: all 350ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  -webkit-transition: all 400ms cubic-bezier(0.28, 0.84, 0.42, 1);
+  transition: all 400ms cubic-bezier(0.28, 0.84, 0.42, 1);
 }
 
 #overlay #close_btn {
@@ -1406,5 +1412,63 @@ img::selection {
   #settings, #settings_btn {
     display: none;
   }
+}
+
+.crayon {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: crosshair;
+}
+
+body.non-touch .crayon:hover {
+  background-color: #ffeee6;
+  -webkit-box-shadow: 0px 20px 40px -10px #fccaaa;
+  box-shadow: 0px 20px 40px -10px #fccaaa;
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+          transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.activeCrayon {
+  background-color: #ffeee6;
+}
+
+#sketch {
+  display: block;
+}
+
+#sketch #paint {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+}
+
+.hideCanvas {
+  z-index: -10;
+}
+
+@media screen and (max-width: 1000px) {
+  .crayon {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*
+    .crayon{
+        display: none;
+    }
+    #sketch{
+        display: none;
+    }*/
 }
 /*# sourceMappingURL=style.css.map */

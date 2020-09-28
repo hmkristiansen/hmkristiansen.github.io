@@ -5,7 +5,7 @@ var update = setInterval(function() {
 	if(updateAgeBool){
 		updateAge();
 	}
-}, 2000);
+}, 10);
 
 var bday = new Date("Nov 19, 1996 05:55:25").getTime();
 var dday = new Date("Nov 19, 2077 12:00:00").getTime();

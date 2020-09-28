@@ -1,0 +1,62 @@
+
+.crayon{
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+
+    top: 10px;
+    left: 10px;
+
+    z-index: 1000;
+
+    padding: 10px;
+    border-radius: 5px;
+
+    transition: 0.2s;
+    cursor: crosshair;
+}
+
+body.non-touch .crayon:hover{
+    background-color: $crayonBtn;
+    -webkit-box-shadow: 0px 20px 40px -10px rgba(252, 202, 170, 1);
+    -moz-box-shadow: 0px 20px 40px -10px rgba(252, 202, 170, 1);
+    box-shadow: 0px 20px 40px -10px rgba(252, 202, 170, 1);
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.activeCrayon{
+    background-color: $crayonBtn;
+}
+
+#sketch{
+    display: block;
+    #paint{
+        position: absolute;
+        width: 100%;
+        height: inherit;
+    }
+}
+
+.hideCanvas{
+    z-index: -10;
+}
+
+@media screen and (max-width: 1000px){
+    .crayon{
+        top: 20px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    /*
+    .crayon{
+        display: none;
+    }
+    #sketch{
+        display: none;
+    }*/
+}
+

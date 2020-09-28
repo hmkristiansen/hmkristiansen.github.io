@@ -86,7 +86,10 @@ section{
 
 #greeting{
 
-    position: relative;
+    //position: relative;
+
+    position: -webkit-sticky !important; /* Safari */
+    position: sticky !important;
 
     top: 0px;    
     height: 70vh;
@@ -136,7 +139,7 @@ section{
             max-width: 80vw;
             position: absolute;
             top: 40%;
-            left: 15%;
+            left: 10%;
             font-size: 2rem;
             font-weight: bold;
         }

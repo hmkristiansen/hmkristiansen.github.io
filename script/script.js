@@ -23,7 +23,10 @@ function checkIfTouch(){
 	var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
 	if (!touchsupport){
 		$('body').addClass('non-touch');
-	}
+	}else{
+        $( ".crayon" ).remove();
+        $( "#sketch" ).remove();
+    }
 }
 
 function checkBrowser(){
@@ -44,8 +47,6 @@ function checkBrowser(){
         }*/
     })();
     currentBrowser = browser;
-
-
 }
 
 
@@ -100,9 +101,10 @@ window.addEventListener("scroll", function (event) {
         $('#greeting').removeClass('activeText');
         $('#greeting').addClass('inactiveText');
 
+        /*
         setTimeout(function(){
             $('#greeting').addClass('stickElement');
-        },200);
+        },200);*/
 
 
         $('#greeting').addClass('blurGrid');

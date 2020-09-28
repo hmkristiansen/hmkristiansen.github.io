@@ -103,3 +103,13 @@
 	};
 	
 }());
+
+$('.crayon').click(function(){
+	if($('#sketch').hasClass('hideCanvas')){
+		$('.crayon').addClass("activeCrayon");
+		$('#sketch').removeClass("hideCanvas");
+	}else{
+		$('.crayon').removeClass("activeCrayon");
+		$('#sketch').addClass("hideCanvas");
+	}
+});

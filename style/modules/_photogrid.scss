@@ -67,6 +67,8 @@ body.non-touch .column img:hover{
 
     will-change: transform;       
     will-change: opacity; 
+
+    transform-origin: center top;
 }
 
 .active{
@@ -84,6 +86,19 @@ body.non-touch .column img:hover{
     will-change: opacity; 
 }
 
+
+.inactiveText{
+    transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10vh, 0px);
+    opacity: 0.2;
+    pointer-events: none;
+    //transition: $snap-in-bounce;
+
+    will-change: transform;       
+    will-change: opacity; 
+
+    transform-origin: center top;
+}
+
 .inactive{
     transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -8vh, 0px);
     //transform: scale3d(0.8, 0.8, 0.8);
@@ -96,21 +111,11 @@ body.non-touch .column img:hover{
     will-change: opacity;          
 }
 
-.inactiveText{
-    transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, 0px, 0px);
-    opacity: 0.2;
-    pointer-events: none;
-    //transition: $snap-in-bounce;
-
-    will-change: transform;       
-    will-change: opacity; 
-}
 
 .stickElement{
-    
+    //top: -100px !important;
     position: -webkit-sticky !important; /* Safari */
     position: sticky !important;
-    //transition: all 0.2s;
 }
 
 .blurGrid{
