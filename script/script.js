@@ -106,7 +106,6 @@ window.addEventListener("scroll", function (event) {
             $('#greeting').addClass('stickElement');
         },200);*/
 
-
         $('#greeting').addClass('blurGrid');
 
         updateAgeBool = false;

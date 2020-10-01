@@ -92,7 +92,7 @@ section{
     position: sticky !important;
 
     top: 0px;    
-    height: 70vh;
+    height: 80vh;
     width: auto;
     white-space: nowrap;
     position: relative;
@@ -102,6 +102,8 @@ section{
     -webkit-overflow-scrolling: touch;
 
     scroll-snap-type: x mandatory;
+
+    //background-color: #FFFAE3;
 
     .greeting_page{
         position: relative;
@@ -122,7 +124,7 @@ section{
 
     .greeting_pil{
         position: absolute;
-        bottom: 20px;
+        bottom: 40px;
         right: 10%;
         width: 80px;
         height: auto;
@@ -150,7 +152,7 @@ section{
         h5{
             position: absolute;
             text-align: left;
-            bottom: 0px;
+            bottom: 20px;
             right: 10%;
             font-size: 0.8rem;
             opacity: 0.7;
@@ -175,7 +177,7 @@ section{
     #bio{
         #bio_container{
             position: absolute;
-            bottom: 20%;
+            bottom: 20vh;
             right: 30%;
             img{
                 position: relative;
@@ -196,7 +198,7 @@ section{
     #cv{
         ul{
             position: absolute;
-            bottom: 10%;
+            top: 10vh;
             left: 10%;
             li{
                 float: none;
@@ -373,7 +375,7 @@ body.non-touch #greeting:hover{
             padding: 0 !important;        
             #bio_container{
                 width: 100vw;
-                top: 10vh;
+                top: 8vh;
                 left: 0;
                 right: 0;
                 bottom: 0;
@@ -389,7 +391,7 @@ body.non-touch #greeting:hover{
                     width: 70% !important;        
 
                     margin: 5%;
-                    margin-left: 25%;
+                    margin-left: 20%;
                     margin-top: 0;
                     float: none;
                 }
@@ -404,7 +406,7 @@ body.non-touch #greeting:hover{
 
         #cv{
             ul{
-                top:10vh;
+                top:5vh;
                 left: 5%;
                 h1{
                     font-size: 1.5rem !important;

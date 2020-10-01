@@ -19,14 +19,15 @@
 
 body.non-touch .crayon:hover{
     background-color: $crayonBtn;
-    -webkit-box-shadow: 0px 20px 40px -10px rgba(252, 202, 170, 1);
-    -moz-box-shadow: 0px 20px 40px -10px rgba(252, 202, 170, 1);
-    box-shadow: 0px 20px 40px -10px rgba(252, 202, 170, 1);
     transform: scale3d(1.1, 1.1, 1.1);
 }
 
 .activeCrayon{
     background-color: $crayonBtn;
+}
+
+body.non-touch .activeCrayon:hover{
+    cursor: pointer;
 }
 
 #sketch{
