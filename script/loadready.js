@@ -8,5 +8,8 @@ let stateCheck = setInterval(() => {
         setTimeout(function(){
             $("#preloader_container").addClass("remove");
         },2000)
+        setTimeout(function(){
+            updateStatus = true;
+        },3500)
     }
 }, 100);

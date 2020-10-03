@@ -176,7 +176,7 @@ section {
   cursor: s-resize;
 }
 
-#greeting #greets p {
+#greeting #greets #greeting_message {
   max-width: 80vw;
   position: absolute;
   top: 40%;
@@ -185,9 +185,28 @@ section {
   font-weight: bold;
 }
 
-#greeting #greets #heisann {
+#greeting #greets #status_cont {
+  padding: 20px;
+  padding-left: 0;
+  width: 60vw;
+  position: relative;
+}
+
+#greeting #greets .status {
+  display: inline-block;
+  position: absolute;
+  width: inherit;
+  padding-left: 0.5rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  pointer-events: all;
+}
+
+#greeting #greets h3 {
   font-weight: normal;
   font-size: 1.2rem;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 #greeting #greets h5 {
@@ -278,6 +297,22 @@ section {
   top: 0;
   cursor: crosshair;
   z-index: 100;
+}
+
+.carusellOut {
+  -webkit-transform: translateY(-50px) !important;
+          transform: translateY(-50px) !important;
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.carusellIn {
+  -webkit-transform: translateY(50px) !important;
+          transform: translateY(50px) !important;
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
 }
 
 #hand-wave {
@@ -390,7 +425,7 @@ body.non-touch #greeting:hover #hand-wave {
   }
   #greeting #greets p {
     position: absolute;
-    top: 20vh;
+    top: 15vh;
     left: 5%;
     font-size: 3rem;
   }
@@ -399,6 +434,12 @@ body.non-touch #greeting:hover #hand-wave {
     bottom: 15px;
     right: 5%;
     opacity: 0.5;
+  }
+  #greeting #greets #status_cont {
+    padding: 20px;
+    padding-left: 0;
+    width: 60vw;
+    position: relative;
   }
   #greeting #intro p {
     font-size: 1.5rem;
@@ -458,6 +499,16 @@ body.non-touch #greeting:hover #hand-wave {
             flex: 100%;
     max-width: 100%;
     padding: 0 10px;
+  }
+  .carusellOut {
+    -webkit-transform: translateY(-30px) !important;
+            transform: translateY(-30px) !important;
+    opacity: 0;
+  }
+  .carusellIn {
+    -webkit-transform: translateY(30px) !important;
+            transform: translateY(30px) !important;
+    opacity: 0;
   }
 }
 
@@ -1420,7 +1471,7 @@ img::selection {
   width: 40px;
   height: 40px;
   top: 10px;
-  left: 10px;
+  right: 10px;
   z-index: 1000;
   padding: 10px;
   border-radius: 5px;
@@ -1460,7 +1511,7 @@ body.non-touch .activeCrayon:hover {
 @media screen and (max-width: 1000px) {
   .crayon {
     top: 20px;
-    left: 20px;
+    right: 20px;
   }
 }
 

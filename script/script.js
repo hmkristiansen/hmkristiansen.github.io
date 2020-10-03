@@ -86,6 +86,8 @@ window.addEventListener("scroll", function (event) {
 
         if(scrollPercentage > 55 && scrollPercentage < 75){
             updateAgeBool = true;
+        }else if(scrollPercentage < 5){
+            updateStatus = true;
         }
 
     }else{
@@ -109,6 +111,8 @@ window.addEventListener("scroll", function (event) {
         $('#greeting').addClass('blurGrid');
 
         updateAgeBool = false;
+        updateStatus = false;
+
     }
 });
 
@@ -116,9 +120,13 @@ $('#greeting').scroll(function(){
     scrollPercentage = 100*this.scrollLeft/this.scrollWidth/(1-this.clientWidth/this.scrollWidth);
     if(scrollPercentage > 55 && scrollPercentage < 75){
         updateAgeBool = true;
-    }else{
-        updateAgeBool = false;
+    }else if(scrollPercentage < 5){
+        updateStatus = true;
     }
+    else{
+        updateAgeBool = false;
+        updateStatus = false;
+    }    
 });
 
 $('.greeting_pil').click(function(){
