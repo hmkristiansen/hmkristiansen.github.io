@@ -15,7 +15,7 @@ var update = setInterval(function() {
 	if(updateStatus){
 		carusellGreeting();
     }
-}, 2000);
+}, 1500);
 
 
 var teller = 1;
@@ -36,7 +36,6 @@ function carusellGreeting(){
         }else{
             teller++;
         }
-
         let changeEl = $('.getter');
         changeEl.html(sentences[teller]);
     }

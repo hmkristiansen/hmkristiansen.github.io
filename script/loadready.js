@@ -10,6 +10,6 @@ let stateCheck = setInterval(() => {
         },2000)
         setTimeout(function(){
             updateStatus = true;
-        },3500)
+        },3000)
     }
 }, 100);

@@ -143,14 +143,16 @@ section{
             left: 10%;
             font-size: 2rem;
             font-weight: bold;
+
+            #status_cont{
+                padding: 20px;
+                padding-left: 0;
+                width:60vw; 
+                position: relative;
+            }
+    
         }
 
-        #status_cont{
-            padding: 20px;
-            padding-left: 0;
-            width:60vw; 
-            position: relative;
-        }
 
         .status{
             display: inline-block;
@@ -363,7 +365,7 @@ body.non-touch #greeting:hover{
     }
 
     #greeting{
-        height: 70vh; 
+        height: 80vh; 
 
         .greeting_page{
             font-size: 1.5rem;
@@ -379,12 +381,12 @@ body.non-touch #greeting:hover{
         }
 
         #greets{
-            p{
-                position: absolute;
-                top: 15vh;
+
+            #greeting_message{
                 left: 5%;
-                font-size: 3rem;
             }
+                
+            
             h5{
                 position: absolute;
                 bottom: 15px;

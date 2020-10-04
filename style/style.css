@@ -185,7 +185,7 @@ section {
   font-weight: bold;
 }
 
-#greeting #greets #status_cont {
+#greeting #greets #greeting_message #status_cont {
   padding: 20px;
   padding-left: 0;
   width: 60vw;
@@ -409,7 +409,7 @@ body.non-touch #greeting:hover #hand-wave {
     padding: 10px !important;
   }
   #greeting {
-    height: 70vh;
+    height: 80vh;
   }
   #greeting .greeting_page {
     font-size: 1.5rem;
@@ -423,11 +423,8 @@ body.non-touch #greeting:hover #hand-wave {
     -webkit-transform-origin: right bottom !important;
             transform-origin: right bottom !important;
   }
-  #greeting #greets p {
-    position: absolute;
-    top: 15vh;
+  #greeting #greets #greeting_message {
     left: 5%;
-    font-size: 3rem;
   }
   #greeting #greets h5 {
     position: absolute;
