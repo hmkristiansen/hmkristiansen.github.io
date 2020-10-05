@@ -17,7 +17,7 @@ var update = setInterval(function() {
 	if(updateStatus){
 		carusellGreeting();
     }
-}, 2000);
+}, 1500);
 
 
 var teller = 1;
