@@ -446,7 +446,8 @@ body.non-touch #greeting:hover{
 
         #cv{
             ul{
-                top:5vh;
+                top: unset;
+                bottom:10vh;
                 left: 5%;
                 h1{
                     font-size: 1.5rem !important;
