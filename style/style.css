@@ -176,18 +176,6 @@ section {
   cursor: s-resize;
 }
 
-#greeting #greets {
-  /*
-        h5{
-            position: absolute;
-            text-align: left;
-            bottom: 20px;
-            right: 10%;
-            font-size: 0.8rem;
-            opacity: 0.7;
-        }*/
-}
-
 #greeting #greets #greeting_message {
   max-width: 80vw;
   position: absolute;
@@ -230,17 +218,16 @@ section {
   display: inline-block;
   position: absolute;
   width: inherit;
-  padding-left: 0.5rem;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   pointer-events: all;
 }
 
 #greeting #greets h3 {
   font-weight: normal;
   font-size: 1.2rem;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #greeting #intro p {
@@ -351,6 +338,8 @@ section {
 body.non-touch .scrollMe:hover {
   opacity: 0.7 !important;
   background-color: #eeeeee;
+  -webkit-transform-origin: center center !important;
+          transform-origin: center center !important;
   -webkit-transform: scale3d(1.05, 1.05, 1.05);
           transform: scale3d(1.05, 1.05, 1.05);
 }
@@ -461,7 +450,7 @@ body.non-touch #greeting:hover #hand-wave {
   #greeting #greets #status_cont {
     padding: 20px;
     padding-left: 0;
-    width: 60vw;
+    width: 80vw !important;
     position: relative;
   }
   #greeting #greets .scrollMe {

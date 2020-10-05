@@ -177,27 +177,17 @@ section{
             display: inline-block;
             position: absolute;
             width: inherit;
-            padding-left: 0.5rem;
-            transition: 0.4s;
+            //padding-left: 0.5rem;
+            transition: 0.3s;
             pointer-events: all;
         }
 
         h3{
             font-weight: normal;
             font-size: 1.2rem;
-            transition: 0.6s;
+            transition: 0.5s;
         }
 
-
-        /*
-        h5{
-            position: absolute;
-            text-align: left;
-            bottom: 20px;
-            right: 10%;
-            font-size: 0.8rem;
-            opacity: 0.7;
-        }*/
     }
 
     #intro{
@@ -311,6 +301,7 @@ section{
 body.non-touch .scrollMe:hover{
     opacity: 0.7 !important;
     background-color: $bg-ligth-btn;
+    transform-origin: center center !important;
     transform: scale3d(1.05, 1.05, 1.05);
 }
 
@@ -417,7 +408,7 @@ body.non-touch #greeting:hover{
             #status_cont{
                 padding: 20px;
                 padding-left: 0;
-                width:60vw; 
+                width: 80vw !important; 
                 position: relative;
             }
 
