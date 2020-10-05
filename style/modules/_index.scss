@@ -155,12 +155,14 @@ section{
         .scrollMe{
             position: absolute;
             font-size: 0.8rem;
-            opacity: 0.2;
+            opacity: 0.5;
             bottom: 10vh;
             transition: 0.2s;
             padding: 10px;
             border-radius: 5px;
             text-align: center;
+
+            //border: solid 2px $bg-ligth-btn;
         }
 
         #scrollMeRight{

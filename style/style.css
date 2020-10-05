@@ -195,7 +195,7 @@ section {
 #greeting #greets .scrollMe {
   position: absolute;
   font-size: 0.8rem;
-  opacity: 0.2;
+  opacity: 0.5;
   bottom: 10vh;
   -webkit-transition: 0.2s;
   transition: 0.2s;
