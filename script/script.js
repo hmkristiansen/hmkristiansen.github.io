@@ -24,8 +24,8 @@ function checkIfTouch(){
 	if (!touchsupport){
 		$('body').addClass('non-touch');
 	}else{
-        $( ".crayon" ).remove();
-        $( "#sketch" ).remove();
+        //$( ".crayon" ).remove();
+        //$( "#sketch" ).remove();
     }
 }
 
@@ -129,6 +129,19 @@ $('#greeting').scroll(function(){
     }    
 });
 
+function scrollRight(){
+    let vw  = $(window).width();
+    var leftPos = $('#greeting').scrollLeft();
+    $('#greeting').animate({
+        scrollLeft: leftPos + vw
+    }, 'ease-in');
+}
+
+function scrollDown(){
+    $('html, body').animate({scrollTop: '+=100px'}, 200);
+}
+
+/*
 $('.greeting_pil').click(function(){
     if(this.id!="pil4"){  
         let vw  = $(window).width();
@@ -140,4 +153,4 @@ $('.greeting_pil').click(function(){
         $('html, body').animate({scrollTop: '+=100px'}, 200);
     }
 });
-
+*/

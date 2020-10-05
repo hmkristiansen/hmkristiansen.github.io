@@ -21,6 +21,8 @@ body {
     max-width: 1600px;
     margin: 0 auto !important;
     opacity: 1;
+
+    //background-color: #f1ede7;
 }
 
 body{
@@ -92,7 +94,7 @@ section{
     position: sticky !important;
 
     top: 0px;    
-    height: 80vh;
+    height: 90vh;
     width: auto;
     white-space: nowrap;
     position: relative;
@@ -102,8 +104,6 @@ section{
     -webkit-overflow-scrolling: touch;
 
     scroll-snap-type: x mandatory;
-
-    //background-color: #FFFAE3;
 
     .greeting_page{
         position: relative;
@@ -123,9 +123,9 @@ section{
 
     .greeting_pil{
         position: absolute;
-        bottom: 40px;
+        bottom: 10vh;
         right: 10%;
-        width: 80px;
+        width: 40px;
         height: auto;
         transform-origin: right bottom !important;
         cursor: e-resize;
@@ -149,10 +149,29 @@ section{
                 padding-left: 0;
                 width:60vw; 
                 position: relative;
-            }
-    
+            }      
         }
 
+        .scrollMe{
+            position: absolute;
+            font-size: 0.8rem;
+            opacity: 0.2;
+            bottom: 10vh;
+            transition: 0.2s;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #scrollMeRight{
+            right: 10%;
+            cursor: e-resize;
+        }   
+
+        #scrollMeDown{
+            left: 10%;
+            cursor: s-resize;
+        }   
 
         .status{
             display: inline-block;
@@ -168,6 +187,9 @@ section{
             font-size: 1.2rem;
             transition: 0.6s;
         }
+
+
+        /*
         h5{
             position: absolute;
             text-align: left;
@@ -175,7 +197,7 @@ section{
             right: 10%;
             font-size: 0.8rem;
             opacity: 0.7;
-        }
+        }*/
     }
 
     #intro{
@@ -286,6 +308,12 @@ section{
     display: inline-block;
 }
 
+body.non-touch .scrollMe:hover{
+    opacity: 0.7 !important;
+    background-color: $bg-ligth-btn;
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+
 body.non-touch #greeting:hover{
     #hand-wave{
         animation: shake 90ms ease;
@@ -385,20 +413,37 @@ body.non-touch #greeting:hover{
             #greeting_message{
                 left: 5%;
             }
-                
             
-            h5{
-                position: absolute;
-                bottom: 15px;
-                right: 5%;
-                opacity: 0.5;
-            }
             #status_cont{
                 padding: 20px;
                 padding-left: 0;
                 width:60vw; 
                 position: relative;
             }
+
+            .scrollMe{
+                position: absolute;
+                font-size: 0.8rem;
+                opacity: 0.2;
+                bottom: 5vh;
+                transition: 0.2s;
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+
+                opacity: 0.4;
+                //background-color: $bg-ligth-btn;
+            }
+    
+            #scrollMeRight{
+                right: 5%;
+                cursor: e-resize;
+            }   
+    
+            #scrollMeDown{
+                left: 5%;
+                cursor: s-resize;
+            }   
         }
 
         #intro{

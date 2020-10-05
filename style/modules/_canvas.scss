@@ -6,7 +6,7 @@
     height: 40px;
 
     top: 10px;
-    right: 10px;
+    left: 10px;
 
     z-index: 1000;
 
@@ -52,12 +52,12 @@ body.non-touch .activeCrayon:hover{
 
 @media screen and (max-width: 600px){
 
-    /*
+    
     .crayon{
         display: none;
     }
     #sketch{
         display: none;
-    }*/
+    }
 }
 
