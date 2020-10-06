@@ -3,9 +3,9 @@
     "header_img": "assets/futura/futura.gif",
     "h1": "FUTURA",
     "item_info": {
-        "client": "Course: Motion Design",
-        "role": "Role: Graphic- and Motion Design",
-        "period": "Period: Spring '20"
+        "client": "<span>Course:</span> Motion Design",
+        "role": "<span>Role:</span> Graphic- and Motion Design",
+        "period": "<span>Period:</span> Spring '20"
     },
     "content":{
         "quote":"Expanding the visual properties of the iconic typeface FUTURA.",

@@ -886,21 +886,31 @@ body.non-touch .column img:hover {
 }
 
 #overlay #content #item_info {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  clear: both;
+}
+
+#overlay #content #item_info span {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+#overlay #content #item_info li {
+  margin-top: 15px;
 }
 
 #overlay #content .contentQuote {
   margin-top: 10px;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
   line-height: 1.6;
   text-align: right;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 20%;
+  padding-left: 50%;
   width: 100%;
   float: right;
   clear: both;
@@ -910,9 +920,8 @@ body.non-touch .column img:hover {
 #overlay #content .contentText {
   text-align: left;
   font-size: 1rem;
-  padding-top: 20px;
   padding-bottom: 20px;
-  margin: 10vh 0;
+  margin-bottom: 5vh;
   margin-right: 20%;
   width: 80%;
   max-width: 800px;
@@ -921,11 +930,11 @@ body.non-touch .column img:hover {
 }
 
 #overlay #content .contentHeader {
-  margin-top: 40px;
+  margin-top: 15vh;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding-right: 20%;
   width: 100%;
   float: left;
@@ -938,8 +947,7 @@ body.non-touch .column img:hover {
   margin-left: 7.5%;
   height: auto;
   padding: 3vw;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding: 50px 0;
   clear: both;
 }
 
@@ -974,21 +982,21 @@ body.non-touch .column img:hover {
   padding: 20px;
   padding-bottom: 10px;
   clear: both;
-  max-height: 80vh;
-  width: auto;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 
-#overlay #content #more_link {
+#overlay #more_link {
   margin: 0 auto;
   width: 100%;
   clear: both;
   text-align: center;
   position: relative;
-  margin: 100px 0;
+  padding: 100px;
 }
 
-#overlay #content #more_link a {
+#overlay #more_link a {
   padding: 10px;
   color: black;
   border-radius: 10px;
@@ -1152,7 +1160,10 @@ body.non-touch #more_link a:hover {
     width: 100%;
     float: left;
     clear: both;
-    margin: 5vh 0;
+    margin: 3vh 0;
+  }
+  #overlay #content .contentHeader {
+    margin-bottom: 10px;
   }
   #overlay #content .contentCaption {
     text-align: center;
@@ -1171,9 +1182,6 @@ body.non-touch #more_link a:hover {
   #overlay #content hr {
     margin-top: 40px;
     margin-bottom: 40px;
-  }
-  #overlay #content #more_link {
-    margin: 100px 0;
   }
   #overlay #close_btn {
     top: 15px;

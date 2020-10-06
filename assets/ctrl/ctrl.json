@@ -3,9 +3,9 @@
     "header_img": "assets/ctrl/ctrl.jpg",
     "h1": "CTRLframe",
     "item_info": {
-        "client": "Course: Trend Driven Design",
-        "role": "Role: Concept Developer",
-        "period": "Period: Fall '19"
+        "client": "<span>Course:</span> Trend Driven Design",
+        "role": "<span>Role:</span> Concept Developer",
+        "period": "<span>Period:</span> Fall '19"
     },
     "content":{
         "quote":"CTRLframe is a minimal IOT-device aimed at families who wishes to be more open about household spendings.",
@@ -14,11 +14,14 @@
         "caption0":"Early sketches. It proved to be an exercise in how to visualise value in a frugal way.",
         "image01": "assets/ctrl/00.jpg",
         "image1": "assets/ctrl/01.jpg",
+        "h201":"New markets",
         "text2":"The CTRL frame is a product for profamilies that are looking to become more open about household economy and be more aware of spendings. The frame is connected to an application and uses the PSD2 API to gather abstracted and relative information about spendings within selected categories.",
         "image2": "assets/ctrl/02.jpg",
         "image3": "assets/ctrl/03.jpg",
+        "h2":"Redefining design (for myself)",
         "text3":"User-centric design is all about creating solutions towards target end-users. During my studies in Trondheim, these end-users are often the ideal users in an ideal world, observe and tested on in micro-environments. <br>This project challenged me to look broader in the field of user motivations.",
         "image4": "assets/ctrl/04.jpg",
+        "h202":"Discovering new branches",
         "text4":"The project was short, but I taught me to think beyond the audiable needs of users, and instead try to create something that was more a gadget and a nice object.<br>It was also a good exercise in physical product design, a branch of design I wish to be better at."
     }
 }

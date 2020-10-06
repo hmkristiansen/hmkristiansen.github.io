@@ -16,9 +16,9 @@ var shake,ctrl,futura,nn,aw;
 
 var projects = [
 	["aw",aw],
-	["shake",shake],
-	["futura",futura],
 	["ctrl",ctrl],
+	["futura",futura],
+	["shake",shake],
 	["nn",nn]
 ];
 
