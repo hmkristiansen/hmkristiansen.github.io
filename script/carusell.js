@@ -4,9 +4,8 @@ var updateStatus = false;
 var sentences = 
 ["I'm Henrik <span id='hand-wave'>👋</span>",
 "I'm a design student, currently working on <a href='https://apps.apple.com/no/app/lillemini/id1476051095?l=nb' target='_blank'>Lillemini</a>",
-"In my spare time I'm reading <a href='https://www.goodreads.com/book/show/23692271-sapiens' target='_blank'>Sapiens: A Brief History of Humankind</a>",
-"I'm also playing <a href='https://dead-cells.com/' target='_blank'>Dead Cells</a> on my iPad",
-"Right now I'm teaching myself how to do a handstand 🤸‍♂️",
+"For the moment I'm reading <a href='https://www.goodreads.com/book/show/23692271-sapiens' target='_blank'>Sapiens: A Brief History of Humankind</a> and playing <a href='https://dead-cells.com/' target='_blank'>Dead Cells</a> on my iPad",
+"I'm also teaching myself how to do a handstand 🤸‍♂️",
 "Scroll right to learn more about me 👉",
 "Scroll down to see my past projects 👇"
 ];
