@@ -752,7 +752,10 @@ body.non-touch .column img:hover {
   opacity: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+  #work {
+    padding: 10px;
+  }
   #work h1 {
     padding: 5px;
   }

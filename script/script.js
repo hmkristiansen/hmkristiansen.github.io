@@ -1,5 +1,5 @@
 var currentBrowser;
-var vh = document.documentElement.scrollHeight;
+var vh = document.documentElement.scrollHeight*2;
 var overlayFix = false;
 
 function fadeInPage(){
@@ -61,7 +61,7 @@ window.addEventListener("scroll", function (event) {
     //console.log(scroll);
     //console.log(vh);
 
-    if(scroll-300<vh){
+    if(scroll-50<vh){
         clearTimeout($.data(this, 'scrollTimer'));
         $.data(this, 'scrollTimer', setTimeout(function() {
             s.textContent = "#overlay {top:" + scroll + "px !important; transition: all none;}"  +
