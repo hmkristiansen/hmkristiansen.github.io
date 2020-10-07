@@ -1,5 +1,5 @@
 var currentBrowser;
-var vh = document.documentElement.scrollHeight;
+var vh = document.documentElement.scrollHeight*2;
 var overlayFix = false;
 
 function fadeInPage(){
@@ -58,14 +58,12 @@ document.head.appendChild(s);
 window.addEventListener("scroll", function (event) {
 
     let scroll = this.scrollY;
-    //console.log(scroll);
-    //console.log(vh);
-
-    if(scroll-300<vh){
+    if(scroll-100<vh){
         clearTimeout($.data(this, 'scrollTimer'));
         $.data(this, 'scrollTimer', setTimeout(function() {
-            s.textContent = "#overlay {top:" + scroll + "px !important; transition: all none;}"  +
-            "#preloader_container {top:" + scroll + "px !important; transition: all none;}";
+            s.textContent = "#overlay {top:" + scroll + "px !important; transition: all none !important;}"  +
+            "#preloader_container {top:" + scroll + "px !important; transition: all none !important;}";
+            //console.log("moved element");
         }, 150));
     }
 

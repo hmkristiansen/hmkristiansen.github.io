@@ -94,6 +94,8 @@ section{
     position: sticky !important;
 
     top: 0px;    
+
+
     height: 90vh;
     width: auto;
     white-space: nowrap;
@@ -336,9 +338,16 @@ body.non-touch #greeting:hover{
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 
     #greeting{
+
+        height: 80vh;
+
+        .scrollMe{
+            bottom: 5vh !important;
+        }
+
         .greeting_page{
             font-size: 1rem;
         }
@@ -356,7 +365,7 @@ body.non-touch #greeting:hover{
                 right: 15%;
                 img{
                     margin: 15px;
-                    max-width: 200px !important;
+                    max-width: 400px !important;
                 }
                 ul{
                     margin: 15px;
@@ -386,7 +395,7 @@ body.non-touch #greeting:hover{
     }
 
     #greeting{
-        height: 80vh; 
+        height: 75vh; 
 
         .greeting_page{
             font-size: 1.5rem;
@@ -405,6 +414,7 @@ body.non-touch #greeting:hover{
 
             #greeting_message{
                 left: 5%;
+                top: 30%;
             }
             
             #status_cont{

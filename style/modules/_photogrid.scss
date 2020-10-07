@@ -72,7 +72,7 @@ body.non-touch .column img:hover{
 }
 
 .active{
-    transform: scale3d(1, 1, 1) translate3d(0px, -40vh, 0px);
+    transform: scale3d(1, 1, 1) translate3d(0px, -50vh, 0px);
 
     //transform: scale3d(1, 1, 1);
     //margin-top: -60vh;
@@ -132,6 +132,43 @@ body.non-touch .column img:hover{
     opacity: 0;
 }
   
+@media screen and (max-width: 1024px) {
+
+    #work{    
+        padding: 10px !important;  
+        h1{
+            padding: 5px;
+        }  
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+            padding: 0;
+
+            img{
+                border-radius: 10px;
+            }
+        }
+
+        .row{
+            padding: 0;
+        }
+    }
+
+
+    .active{
+        transform: scale3d(1, 1, 1) translate3d(0px, -45vh, 0px) !important;
+        transition: $snap-in-bounce-mobile;
+    }
+    
+    .inactive{
+        transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -30vh, 0px) !important;
+        transition: $snap-in-bounce-mobile;
+    }
+
+}
+
+
 @media screen and (max-width: 600px) {
     #work{      
         h1{
@@ -160,7 +197,7 @@ body.non-touch .column img:hover{
     }
     
     .inactive{
-        transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -15vh, 0px);
+        transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10vh, 0px) !important;
         transition: $snap-in-bounce-mobile;
     }
 
