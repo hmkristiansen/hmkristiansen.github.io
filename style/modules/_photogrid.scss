@@ -131,46 +131,11 @@ body.non-touch .column img:hover{
     transition: all 0.6s;
     opacity: 0;
 }
-  
-@media screen and (max-width: 1024px) {
 
-    #work{    
-        padding: 10px !important;  
-        h1{
-            padding: 5px;
-        }  
-        .column {
-            -ms-flex: 100%;
-            flex: 100%;
-            max-width: 100%;
-            padding: 0;
-
-            img{
-                border-radius: 10px;
-            }
-        }
-
-        .row{
-            padding: 0;
-        }
-    }
-
-
-    .active{
-        transform: scale3d(1, 1, 1) translate3d(0px, -45vh, 0px) !important;
-        transition: $snap-in-bounce-mobile;
-    }
-    
-    .inactive{
-        transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -30vh, 0px) !important;
-        transition: $snap-in-bounce-mobile;
-    }
-
-}
-
-
-@media screen and (max-width: 600px) {
-    #work{      
+@media screen and (max-width: 800px) {
+    #work{   
+        
+        padding: 10px;
         h1{
             padding: 5px;
         }  

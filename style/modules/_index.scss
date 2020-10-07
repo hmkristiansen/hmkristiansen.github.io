@@ -395,7 +395,7 @@ body.non-touch #greeting:hover{
     }
 
     #greeting{
-        height: 75vh; 
+        height: 80vh; 
 
         .greeting_page{
             font-size: 1.5rem;
@@ -428,7 +428,7 @@ body.non-touch #greeting:hover{
                 position: absolute;
                 font-size: 0.8rem;
                 opacity: 0.2;
-                bottom: 5vh;
+                bottom: 10vh;
                 transition: 0.2s;
                 padding: 10px;
                 border-radius: 5px;
