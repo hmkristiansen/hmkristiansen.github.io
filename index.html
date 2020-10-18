@@ -12,7 +12,7 @@
     <link rel = "stylesheet"type = "text/css" href ="style/style.css"/>
 </head>
 
-<body class="" onload="fadeInPage();">
+<body class="disableYScrolling" onload="fadeInPage();">
 
     <div id="preloader_container">
         <div id="preloader"></div>
@@ -20,11 +20,17 @@
 
     <section id="greeting" class="onLoadGreeting">
 
+        <!--
+        <div class="scrollMe" id="scrollMeDown" onclick="scrollDown();">go straight to projects ↓</div>
+
+
         <img class="crayon" src="assets/svg/crayon.svg">
 
         <div id="sketch" class="hideCanvas">
             <canvas id="paint"></canvas>
         </div>
+
+        -->
 
         <div class="greeting_page" id="greets">
 
@@ -37,15 +43,15 @@
                
             </div>
             
-            <div class="scrollMe" id="scrollMeRight" onclick="scrollRight();">more about me →</div>
-            <div class="scrollMe" id="scrollMeDown" onclick="scrollDown();">my projects ↓</div>
         </div>
 
         <div class="greeting_page" id="intro">
             <p>
                 I’m an ever-curious design student with a passion of creating pleasurable experiences using determination, empathy and naivety.
             </p>
+            <!--
             <img class="greeting_pil" id="pil2" src="assets/svg/pil2.svg" onclick="scrollRight();">
+            -->
         </div>
 
         <div class="greeting_page" id="bio">
@@ -63,7 +69,9 @@
                     <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🏃‍♂️}</li>
                 </ul>
             </div>
+            <!--
             <img class="greeting_pil" id="pil3" src="assets/svg/pil1.svg" onclick="scrollRight();">
+            -->
         </div>
 
         <div class="greeting_page" id="cv">
@@ -135,10 +143,13 @@
     <script src="script/preload.js"></script>
     <script src="script/age.js"></script>
     <script src="script/carusell.js"></script>
+    <script src="script/scrolling.js"></script>
     <script src="script/script.js"></script>
     <script src="script/overlay.js"></script>
     <script src="script/colormodes.js"></script>
+    <!--
     <script src="script/canvas.js"></script>
+    -->
     <script src="script/loadready.js"></script>
 
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>

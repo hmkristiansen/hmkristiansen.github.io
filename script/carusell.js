@@ -6,8 +6,7 @@ var sentences =
 "I'm a design student, currently working on <a href='https://apps.apple.com/no/app/lillemini/id1476051095?l=nb' target='_blank'>Lillemini</a>",
 "For the moment I'm reading <a href='https://www.goodreads.com/book/show/23692271-sapiens' target='_blank'>Sapiens: A Brief History of Humankind</a> and playing <a href='https://dead-cells.com/' target='_blank'>Dead Cells</a> on my iPad",
 "I'm also teaching myself how to do a handstand 🤸‍♂️",
-"Scroll right to learn more about me 👉",
-"Scroll down to see my past projects 👇"
+"Continue scrolling to learn more about me 👉"
 ];
 
 //$('#status').innerHTML(sentences[0]);
