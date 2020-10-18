@@ -22,17 +22,14 @@ window.addEventListener('wheel', function(e) {
     var someDiv = document.getElementById('greeting');
     var distanceToTop = someDiv.getBoundingClientRect().top;
 
-    //console.log(distanceToTop);
-
     if((diff!=0) && (distanceToTop == 0)){
-        console.log("hello");
-        greetingContainer.scrollLeft += diff;
+        greetingContainer.scrollLeft += diff/1.5;
         horiGreeting = true;
     }else{
         horiGreeting = false;
     }
 
-    if((variable == set) && (diff>20)){
+    if((variable == set) && (diff>2)){
         horiGreeting = false;
     }else if((distanceToTop < 0)){
         horiGreeting = false;
@@ -62,7 +59,6 @@ function scrollEvents(yScroll){
         $.data(this, 'scrollTimer', setTimeout(function() {
             s.textContent = "#overlay {top:" + yScroll + "px !important; transition: all none !important;}"  +
             "#preloader_container {top:" + yScroll + "px !important; transition: all none !important;}";
-            //console.log("moved element");
         }, 150));
     }
 

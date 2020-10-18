@@ -19,22 +19,6 @@
 
     //scroll-snap-type: x mandatory;
 
-    .scrollMe{
-        position: sticky;
-        position: -webkit-sticky;
-        font-size: 0.8rem;
-        opacity: 0.5;
-        transition: 0.2s;
-        padding: 10px;
-        border-radius: 5px;
-        text-align: center;
-
-        bottom: 0;
-        left: 0;
-        clear: both;
-        cursor: s-resize;
-    }
-
     .greeting_page{
         position: relative;
         height: inherit;
@@ -108,9 +92,9 @@
         p{
             position: absolute;
             top: 20%;
-            right: 10%;
-            text-align: left;
-            max-width: 60%;
+            left: 40%;
+            text-align: right;
+            max-width: 400px;
             font-size: 1rem;
             font-weight: bold;
             span{
@@ -177,7 +161,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 400%;
+        width: inherit;
         height: 100%;
         overflow: hidden;
     }
@@ -203,6 +187,22 @@
     opacity: 0;
     pointer-events: none;
     cursor: default;
+}
+
+.scrollMe{
+    position: absolute;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    transition: 0.2s;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+    bottom: 20%;
+    left: 10%;
+    clear: both;
+    cursor: s-resize;
+    z-index: 2000;
 }
 
 #hand-wave{
@@ -274,6 +274,7 @@ body.non-touch .scrollMe:hover{
         .greeting_page{
             font-size: 1.5rem;
             width: 100vw !important;
+            position: relative;
         }
 
         .greeting_pil{
@@ -325,10 +326,15 @@ body.non-touch .scrollMe:hover{
         }
 
         #intro{
+            position: relative;
             p{
                 font-size: 1.5rem;
                 top: 20%;
                 right: 5%;
+                left:0;
+                right: 0;
+                
+                bottom: 0;
                 width: 90vw;
             }
         }
