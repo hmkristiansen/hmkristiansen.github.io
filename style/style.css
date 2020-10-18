@@ -75,6 +75,10 @@ body::-webkit-scrollbar {
   display: none !important;
 }
 
+.disableYScrolling {
+  overflow-y: hidden !important;
+}
+
 #greeting::-webkit-scrollbar {
   display: none !important;
 }
@@ -126,222 +130,6 @@ section {
   clear: both;
   -webkit-transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
   transition: all 0.3s cubic-bezier(0.71, 0.53, 0.31, 0.97);
-}
-
-#greeting {
-  position: -webkit-sticky !important;
-  /* Safari */
-  position: sticky !important;
-  top: 0px;
-  height: 90vh;
-  width: auto;
-  white-space: nowrap;
-  position: relative;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  /* - - - - - - - */
-}
-
-#greeting .greeting_page {
-  position: relative;
-  height: inherit;
-  width: 100vw !important;
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  zoom: 1;
-  font-size: 1rem;
-  white-space: normal;
-  vertical-align: text-top;
-  vertical-align: middle;
-  scroll-snap-align: start;
-  z-index: 1;
-}
-
-#greeting .greeting_pil {
-  position: absolute;
-  bottom: 10vh;
-  right: 10%;
-  width: 40px;
-  height: auto;
-  -webkit-transform-origin: right bottom !important;
-          transform-origin: right bottom !important;
-  cursor: e-resize;
-}
-
-#greeting #pil4 {
-  cursor: s-resize;
-}
-
-#greeting #greets #greeting_message {
-  max-width: 80vw;
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-#greeting #greets #greeting_message #status_cont {
-  padding: 20px;
-  padding-left: 0;
-  width: 60vw;
-  position: relative;
-}
-
-#greeting #greets .scrollMe {
-  position: absolute;
-  font-size: 0.8rem;
-  opacity: 0.5;
-  bottom: 10vh;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-#greeting #greets #scrollMeRight {
-  right: 10%;
-  cursor: e-resize;
-}
-
-#greeting #greets #scrollMeDown {
-  left: 10%;
-  cursor: s-resize;
-}
-
-#greeting #greets .status {
-  display: inline-block;
-  position: absolute;
-  width: inherit;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  pointer-events: all;
-}
-
-#greeting #greets h3 {
-  font-weight: normal;
-  font-size: 1.2rem;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#greeting #intro p {
-  position: absolute;
-  top: 20%;
-  right: 20%;
-  text-align: right;
-  max-width: 500px;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-#greeting #intro p span {
-  font-weight: bold;
-}
-
-#greeting #bio #bio_container {
-  position: absolute;
-  bottom: 20vh;
-  right: 30%;
-}
-
-#greeting #bio #bio_container img {
-  position: relative;
-  float: left;
-  margin: 20px;
-  max-width: 350px !important;
-  max-height: 300px !important;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-#greeting #bio #bio_container ul {
-  position: relative;
-  margin: 20px;
-  float: left;
-}
-
-#greeting #cv ul {
-  position: absolute;
-  top: 10vh;
-  left: 10%;
-}
-
-#greeting #cv ul li {
-  float: none;
-  max-width: 350px;
-  margin-right: 40px;
-}
-
-#greeting #cv ul li h1 {
-  font-size: 1rem;
-}
-
-#greeting #cv ul li p {
-  font-size: 1rem;
-}
-
-#greeting #contact ul li {
-  margin: 10px;
-  margin-left: 0;
-  font-size: 0.8rem;
-}
-
-#greeting #sketch {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 400%;
-  height: 100%;
-  overflow: hidden;
-}
-
-#greeting #tmp_canvas {
-  position: absolute;
-  left: 0px;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  cursor: crosshair;
-  z-index: 100;
-}
-
-.carusellOut {
-  -webkit-transform: translateY(-50px) !important;
-          transform: translateY(-50px) !important;
-  opacity: 0;
-  pointer-events: none;
-  cursor: default;
-}
-
-.carusellIn {
-  -webkit-transform: translateY(50px) !important;
-          transform: translateY(50px) !important;
-  opacity: 0;
-  pointer-events: none;
-  cursor: default;
-}
-
-#hand-wave {
-  position: relative;
-  top: 0;
-  -webkit-transition: top ease 0.5s;
-  transition: top ease 0.5s;
-  display: inline-block;
-}
-
-body.non-touch .scrollMe:hover {
-  opacity: 0.7 !important;
-  background-color: #eeeeee;
-  -webkit-transform-origin: center center !important;
-          transform-origin: center center !important;
-  -webkit-transform: scale3d(1.05, 1.05, 1.05);
-          transform: scale3d(1.05, 1.05, 1.05);
 }
 
 body.non-touch #greeting:hover #hand-wave {
@@ -398,6 +186,243 @@ body.non-touch #greeting:hover #hand-wave {
   padding: 0;
 }
 
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  section {
+    padding: 10px !important;
+  }
+  ul li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .column {
+    -ms-flex: 100%;
+    -webkit-box-flex: 100%;
+            flex: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+/*
+.onLoadBody, .onLoadHeader, .onLoadGreeting, .onLoadPort{
+	transition: $snap-in-fast;
+    opacity: 0;
+    transform: scale3d(0.95, 0.95, 0.95);
+}*/
+#greeting {
+  position: -webkit-sticky !important;
+  /* Safari */
+  position: sticky !important;
+  top: 0px;
+  height: 90vh;
+  width: auto;
+  white-space: nowrap;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* - - - - - - - */
+}
+
+#greeting .greeting_page {
+  position: relative;
+  height: inherit;
+  width: 70vw !important;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  zoom: 1;
+  font-size: 1rem;
+  white-space: normal;
+  vertical-align: text-top;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+#greeting .greeting_pil {
+  position: absolute;
+  bottom: 10vh;
+  right: 10%;
+  width: 40px;
+  height: auto;
+  -webkit-transform-origin: right bottom !important;
+          transform-origin: right bottom !important;
+  cursor: e-resize;
+}
+
+#greeting #pil4 {
+  cursor: s-resize;
+}
+
+#greeting #greets #greeting_message {
+  max-width: 80%;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#greeting #greets #greeting_message #status_cont {
+  padding: 20px;
+  padding-left: 0;
+  width: 60vw;
+  position: relative;
+}
+
+#greeting #greets .status {
+  display: inline-block;
+  position: absolute;
+  width: inherit;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: all;
+}
+
+#greeting #greets h3 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#greeting #intro p {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  text-align: right;
+  max-width: 400px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#greeting #intro p span {
+  font-weight: bold;
+}
+
+#greeting #bio #bio_container {
+  position: absolute;
+  bottom: 20%;
+  right: 30%;
+}
+
+#greeting #bio #bio_container img {
+  position: relative;
+  float: left;
+  margin: 20px;
+  max-width: 350px !important;
+  max-height: 300px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#greeting #bio #bio_container ul {
+  position: relative;
+  margin: 20px;
+  float: left;
+}
+
+#greeting #cv ul {
+  position: absolute;
+  top: 10vh;
+  left: 10%;
+}
+
+#greeting #cv ul li {
+  float: none;
+  max-width: 350px;
+  margin-right: 40px;
+}
+
+#greeting #cv ul li h1 {
+  font-size: 1rem;
+}
+
+#greeting #cv ul li p {
+  font-size: 1rem;
+}
+
+#greeting #contact ul li {
+  margin: 10px;
+  margin-left: 0;
+  font-size: 0.8rem;
+}
+
+#greeting #sketch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  overflow: hidden;
+}
+
+#greeting #tmp_canvas {
+  position: absolute;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  cursor: crosshair;
+  z-index: 100;
+}
+
+.carusellOut {
+  -webkit-transform: translateY(-50px) !important;
+          transform: translateY(-50px) !important;
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.carusellIn {
+  -webkit-transform: translateY(50px) !important;
+          transform: translateY(50px) !important;
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.scrollMe {
+  position: absolute;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  bottom: 20%;
+  left: 10%;
+  clear: both;
+  cursor: s-resize;
+  z-index: 2000;
+}
+
+#hand-wave {
+  position: relative;
+  top: 0;
+  -webkit-transition: top ease 0.5s;
+  transition: top ease 0.5s;
+  display: inline-block;
+}
+
+body.non-touch .scrollMe:hover {
+  opacity: 0.7 !important;
+  background-color: #eeeeee;
+  -webkit-transform-origin: center center !important;
+          transform-origin: center center !important;
+  -webkit-transform: scale3d(1.05, 1.05, 1.05);
+          transform: scale3d(1.05, 1.05, 1.05);
+}
+
 @media screen and (max-width: 1024px) {
   #greeting {
     height: 80vh;
@@ -429,17 +454,13 @@ body.non-touch #greeting:hover #hand-wave {
 }
 
 @media screen and (max-width: 600px) {
-  html {
-    font-size: 12px;
-  }
-  section {
-    padding: 10px !important;
-  }
   #greeting {
     height: 80vh;
   }
   #greeting .greeting_page {
     font-size: 1.5rem;
+    width: 100vw !important;
+    position: relative;
   }
   #greeting .greeting_pil {
     position: absolute;
@@ -480,10 +501,16 @@ body.non-touch #greeting:hover #hand-wave {
     left: 5%;
     cursor: s-resize;
   }
+  #greeting #intro {
+    position: relative;
+  }
   #greeting #intro p {
     font-size: 1.5rem;
     top: 20%;
     right: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 90vw;
   }
   #greeting #bio {
@@ -525,21 +552,6 @@ body.non-touch #greeting:hover #hand-wave {
   #greeting #cv ul p {
     font-size: 1.4rem !important;
   }
-  ul li {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  p {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  .column {
-    -ms-flex: 100%;
-    -webkit-box-flex: 100%;
-            flex: 100%;
-    max-width: 100%;
-    padding: 0 10px;
-  }
   .carusellOut {
     -webkit-transform: translateY(-30px) !important;
             transform: translateY(-30px) !important;
@@ -559,14 +571,6 @@ body.non-touch #greeting:hover #hand-wave {
     height: 80vh;
     width: 75% !important;
   }
-}
-
-.onLoadBody, .onLoadHeader, .onLoadGreeting, .onLoadPort {
-  -webkit-transition: all 0.05s cubic-bezier(0.71, 0.53, 0.31, 0.97);
-  transition: all 0.05s cubic-bezier(0.71, 0.53, 0.31, 0.97);
-  opacity: 0;
-  -webkit-transform: scale3d(0.95, 0.95, 0.95);
-          transform: scale3d(0.95, 0.95, 0.95);
 }
 
 footer {
@@ -644,6 +648,7 @@ footer #footer_hr {
   width: 100%;
   max-width: 1400px;
   z-index: 10;
+  will-change: filter;
   will-change: transform;
 }
 
@@ -708,8 +713,8 @@ body.non-touch .column img:hover {
 }
 
 .active {
-  -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -50vh, 0px);
-          transform: scale3d(1, 1, 1) translate3d(0px, -50vh, 0px);
+  -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -30vh, 0px);
+          transform: scale3d(1, 1, 1) translate3d(0px, -30vh, 0px);
   opacity: 1;
   pointer-events: all;
   -webkit-transition: all 400ms cubic-bezier(0.28, 0.84, 0.42, 1);
@@ -746,10 +751,10 @@ body.non-touch .column img:hover {
 }
 
 .blurGrid {
-  -moz-filter: blur(8px);
-  -o-filter: blur(8px);
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
   will-change: filter;
 }
 
@@ -780,8 +785,8 @@ body.non-touch .column img:hover {
     padding: 0;
   }
   .active {
-    -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -40vh, 0px);
-            transform: scale3d(1, 1, 1) translate3d(0px, -40vh, 0px);
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0px, -20vh, 0px);
+            transform: scale3d(1, 1, 1) translate3d(0px, -20vh, 0px);
     -webkit-transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
     transition: all 300ms cubic-bezier(0.28, 0.84, 0.42, 1);
   }
@@ -1121,6 +1126,10 @@ body.non-touch #more_link a:hover {
   padding-left: calc(100% - 90%);
   padding-right: calc(100% - 90%);
   margin: 0 auto;
+}
+
+.exp_overlay .contentQuote {
+  padding-left: 20% !important;
 }
 
 .dexp_overlay {
@@ -1547,6 +1556,7 @@ body.non-touch .activeCrayon:hover {
 
 #sketch {
   display: block;
+  overflow: hidden;
 }
 
 #sketch #paint {

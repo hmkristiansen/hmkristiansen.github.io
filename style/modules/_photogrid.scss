@@ -6,6 +6,8 @@
     max-width: 1400px;
     z-index: 10;
 
+    will-change: filter;
+
     h1{
         padding: 10px;
     }
@@ -72,7 +74,7 @@ body.non-touch .column img:hover{
 }
 
 .active{
-    transform: scale3d(1, 1, 1) translate3d(0px, -50vh, 0px);
+    transform: scale3d(1, 1, 1) translate3d(0px, -30vh, 0px);
 
     //transform: scale3d(1, 1, 1);
     //margin-top: -60vh;
@@ -119,11 +121,10 @@ body.non-touch .column img:hover{
 }
 
 .blurGrid{
-    -moz-filter:blur(8px);
-    -o-filter:blur(8px);
-    -webkit-filter:blur(8px);
-    filter:blur(8px);
-
+    -moz-filter:blur(5px);
+    -o-filter:blur(5px);
+    -webkit-filter:blur(5px);
+    filter:blur(5px);
     will-change: filter;
 }
 
@@ -157,7 +158,7 @@ body.non-touch .column img:hover{
 
 
     .active{
-        transform: scale3d(1, 1, 1) translate3d(0px, -40vh, 0px);
+        transform: scale3d(1, 1, 1) translate3d(0px, -20vh, 0px);
         transition: $snap-in-bounce-mobile;
     }
     

@@ -32,6 +32,7 @@ body.non-touch .activeCrayon:hover{
 
 #sketch{
     display: block;
+    overflow: hidden;
     #paint{
         position: absolute;
         width: 100%;
@@ -51,8 +52,6 @@ body.non-touch .activeCrayon:hover{
 }
 
 @media screen and (max-width: 600px){
-
-    
     .crayon{
         display: none;
     }
