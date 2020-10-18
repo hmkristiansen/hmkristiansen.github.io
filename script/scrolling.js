@@ -29,6 +29,10 @@ window.addEventListener('wheel', function(e) {
         horiGreeting = false;
     }
 
+    if(variable == set){
+        $('body').removeClass('disableYScrolling');
+    }
+
     if((variable == set) && (diff>2)){
         horiGreeting = false;
     }else if((distanceToTop < 0)){
