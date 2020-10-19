@@ -37,13 +37,14 @@
         }
         section{
             position: relative;
-            top: 20vh;
+            padding-top: 20vh !important;
             max-width: 400px;
             margin: 0 auto;
             padding: 10px;
+            height: 100%;
         }
         
-        a{
+        ul a{
             position: relative;
             text-decoration: none;
             opacity: 0.7;
@@ -72,7 +73,7 @@
 
             width: auto;
             height: auto;
-           display: inline-block;
+            display: inline-block;
         }
 
         ul li{
@@ -92,13 +93,30 @@
             clear: both;
         }
 
+        #underConstructionLink{
+            padding: 0;
+            margin: 0;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            font-size: 0.8rem;
+            width: 200px;
+            text-align: left;
+            opacity: 0.5;
+        }
+        #underConstructionLink a{
+            opacity: 1;
+            color: black;
+        }
+
         @media only screen and (max-width: 600px){
             html{
                 font-size: 16px;
             }
 
             section{
-                top: 10vh
+                padding-top: 7vh !important;
+                padding: 20px;
             }
 
             a{
@@ -315,6 +333,8 @@
 
         <p><br>Pet your dog from me!<br>
         - Henrik 👋</p>
+
+        <p id="underConstructionLink"> <a href="underConstruction_index.html">Check out</a> the site under construction (beta)</p>
      </section>
  
      <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
