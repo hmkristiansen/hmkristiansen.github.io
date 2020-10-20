@@ -2,6 +2,10 @@ var currentBrowser;
 var vh = document.documentElement.scrollHeight*2;
 var overlayFix = false;
 
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}; 
+
 function fadeInPage(){
     //checkIfDarkmode();
     preloadAnimation();

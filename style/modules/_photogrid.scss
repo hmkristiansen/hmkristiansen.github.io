@@ -74,11 +74,7 @@ body.non-touch .column img:hover{
 }
 
 .active{
-    transform: scale3d(1, 1, 1) translate3d(0px, -30vh, 0px);
-
-    //transform: scale3d(1, 1, 1);
-    //margin-top: -60vh;
-
+    transform: scale3d(1, 1, 1) translate3d(0px, -25vh, 0px);
     opacity: 1;
     pointer-events: all;
     transition: $snap-in-bounce;
@@ -103,19 +99,14 @@ body.non-touch .column img:hover{
 
 .inactive{
     transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -20vh, 0px);
-    //transform: scale3d(0.8, 0.8, 0.8);
-    //margin-top: -8vh;
     opacity: 0.2;
     pointer-events: none;
-    //transition: $snap-in-bounce;
-
     will-change: transform;       
     will-change: opacity;          
 }
 
 
 .stickElement{
-    //top: -100px !important;
     position: -webkit-sticky !important; /* Safari */
     position: sticky !important;
 }
@@ -158,16 +149,16 @@ body.non-touch .column img:hover{
 
 
     .active{
-        transform: scale3d(1, 1, 1) translate3d(0px, -20vh, 0px);
+        transform: scale3d(1, 1, 1) translate3d(0px, -15vh, 0px);
         transition: $snap-in-bounce-mobile;
     }
     
     .inactive{
-        transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -10vh, 0px) !important;
+        transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, -10vh, 0px) !important;
         transition: $snap-in-bounce-mobile;
     }
 
     .inactiveText{
-        transform: scale3d(0.8, 0.8, 0.8) translate3d(0px, -2vh, 0px);
+        transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, -2vh, 0px);
     }
 }

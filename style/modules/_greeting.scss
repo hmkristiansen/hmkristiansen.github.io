@@ -17,12 +17,15 @@
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 
+    padding-right: 8vw;
+
     //scroll-snap-type: x mandatory;
 
     .greeting_page{
         position: relative;
         height: inherit;
         width: 70vw !important;
+        min-width: 600px;
         padding: 0;
         margin: 0;
         display: inline-block;
@@ -87,8 +90,8 @@
     #intro{
         p{
             position: absolute;
-            top: 20%;
-            left: 40%;
+            top: 10%;
+            left: 30%;
             text-align: right;
             max-width: 400px;
             font-size: 1rem;
@@ -102,7 +105,7 @@
     #bio{
         #bio_container{
             position: absolute;
-            bottom: 20%;
+            top: 15%;
             right: 30%;
             img{
                 position: relative;
@@ -114,6 +117,7 @@
             }
             ul{
                 position: relative;
+                top: 200px;
                 margin: 20px;
                 float: left;
             }
@@ -271,6 +275,7 @@ body.non-touch .scrollMe:hover{
             font-size: 1.5rem;
             width: 100vw !important;
             position: relative;
+            min-width: 300px;
         }
 
         .greeting_pil{
@@ -340,12 +345,13 @@ body.non-touch .scrollMe:hover{
             padding: 0 !important;        
             #bio_container{
                 width: 100vw;
-                top: 8vh;
+                top: 5vh;
                 left: 0;
                 right: 0;
-                bottom: 0;
 
                 img{
+
+                    
                     //width: 100%;
                     //left: 10vw;
                     position: relative;
@@ -353,18 +359,19 @@ body.non-touch .scrollMe:hover{
                     max-width: 400px !important;
                     min-height: 200px !important;
                     height: 20vh;
-                    width: 70% !important;        
-
-                    margin: 5%;
-                    margin-left: 20%;
-                    margin-top: 0;
-                    float: none;
+                    width: 70% !important; 
+                    
+                    clear: both;
+                    
                 }
                 ul{
-                    margin: 5%;
+                    top: 0;
                     float: none;
                     font-size: 1.5rem !important;
                     text-align: left;
+
+                    clear: both;
+                    
                 }
             }
         }

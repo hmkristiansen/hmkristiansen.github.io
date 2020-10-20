@@ -33,7 +33,7 @@ window.addEventListener('wheel', function(e) {
         $('body').removeClass('disableYScrolling');
     }
 
-    if((variable == set) && (diff>2)){
+    if((variable == set) && (diff>1)){
         horiGreeting = false;
     }else if((distanceToTop < 0)){
         horiGreeting = false;
@@ -66,7 +66,7 @@ function scrollEvents(yScroll){
         }, 150));
     }
 
-    if(yScroll < 40){
+    if(yScroll < 50){
         horiGreeting = true;
         scrollToGreeting();
     }else{
