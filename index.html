@@ -40,11 +40,29 @@
             position: relative;
             padding-top: 15vh !important;
             max-width: 400px;
-            margin: 0 auto;
+            margin-left: 20vw;
             padding: 10px;
             height: 100%;
         }
         
+        ul{
+            margin-top: 10px;
+            padding: 0;
+            list-style-type: none;
+
+            width: auto;
+            height: auto;
+            display: inline-block;
+
+        }
+
+        ul li{
+            margin: 0;
+            padding: 10px;
+            padding-left: 0;
+            display:inline;
+        }
+
         ul a{
             position: relative;
             text-decoration: none;
@@ -65,25 +83,6 @@
             opacity: 1;
             background-color: rgb(224, 239, 252);
         }
-        
-        #linkContainer{
-            clear: both;
-        }
-
-        ul{
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-
-            width: auto;
-            height: auto;
-            display: inline-block;
-        }
-
-        ul li{
-            padding: 10px;
-            padding-left: 0;
-        }
 
         h1{
 			font-weight: bolder;	
@@ -98,24 +97,24 @@
         }
 
         #underConstructionLink{
-            padding: 0;
+            padding: 10px;
             margin: 0;
             position: fixed;
-            bottom: 10px;
-            left: 10px;
+            bottom: 0;
+            right: 0;
             font-size: 0.8rem;
-            width: 300px;
-            text-align: left;
+            max-width: 300px;
+            text-align: right;
+            transition: 0.2s;
             opacity: 0.3;
+            color: inherit; 
+            text-decoration: underline;
+            background-color: unset;
         }
-        #underConstructionLink a{
-            opacity: 1;
-            color: black;
-            transform: 0.2s;
-        }
+        
 
-        #underConstructionLink a:hover{
-            color: rgb(50, 50, 50);
+        #underConstructionLink:hover{
+            opacity: 1;
         }
 
         @media only screen and (max-width: 600px){
@@ -124,11 +123,21 @@
             }
 
             section{
-                padding-top: 7vh !important;
+                padding-top: 5vh !important;
                 padding: 20px;
+                margin: 0 auto;
             }
 
             a{
+                opacity: 1 !important;
+            }
+            #underConstructionLink{
+                left: 0;
+                text-align: left;
+                opacity: 0.5 !important;
+            }
+
+            #underConstructionLink:hover{
                 opacity: 1 !important;
             }
 
@@ -322,14 +331,11 @@
     </div>
 
     <section>
-        <h1>Ojsann!</h1>
-        <p>I’m sorry to disappoint you, but my website is currently under maintenance 🥺
-            <br>Come back later!
+        <h1>I'm sorry to disappoint 🥺</h1>
+        <p>My website is currently under maintenance.
+            <br>I hope you drop by some other time 🥳
+            <br><br>In the meantime you can learn more about me using these links:
         </p>
-
-        <p><br>Pet your dog from me! 🐶<br>
-            - Henrik 👋            <br><br><br>
-            </p>
 
         <div id="linkContainer">
             <ul>
@@ -338,11 +344,15 @@
             </ul>
             <ul>
                 <li><a href="http://portfolio.hmkristiansen.no/" target="_blank">project archive</a></li>
-                <li><a href="assets/cvhmk.pdf" target="_blank">resume</a></li>
+                <li><a href="assets/cvhmk.pdf" target="_blank">cv</a></li>
             </ul>
         </div>
 
-        <p id="underConstructionLink">If you are one of the really curious visitors you <a href="underConstruction_index.html">check out a work-in-progress version of the site</a></p>
+        <p><br><br>Pet your dog from me! 🐶<br>
+            - Henrik            <br><br><br>
+            </p>
+
+        <a id="underConstructionLink" href="underConstruction_index.html">Take a look at the work in progress 🤫</a>
      </section>
  
      <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
