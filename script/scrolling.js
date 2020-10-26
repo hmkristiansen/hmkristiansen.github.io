@@ -12,6 +12,7 @@ let greetingContainer = document.getElementById("greeting");
 let horiGreeting = true;
 let fromWork = false;
 
+
 window.addEventListener('wheel', function(e) {
     yScroll = window.scrollY;
     diff = e.deltaY;

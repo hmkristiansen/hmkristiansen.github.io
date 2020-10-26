@@ -68,6 +68,7 @@ body {
   opacity: 1;
   max-width: 100%;
   overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 body::-webkit-scrollbar {
@@ -216,9 +217,6 @@ body.non-touch #greeting:hover #hand-wave {
     transform: scale3d(0.95, 0.95, 0.95);
 }*/
 #greeting {
-  position: -webkit-sticky !important;
-  /* Safari */
-  position: sticky !important;
   top: 0px;
   height: 90vh;
   width: auto;
