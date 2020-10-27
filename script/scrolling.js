@@ -12,7 +12,60 @@ let greetingContainer = document.getElementById("greeting");
 let horiGreeting = true;
 let fromWork = false;
 
+if(!touchsupport){
 
+    window.addEventListener('wheel', function(e) {
+        yScroll = window.scrollY;
+        diff = e.deltaY;
+    
+        let variable = greetingContainer.scrollLeft + greetingContainer.clientWidth;
+        let set = greetingContainer.scrollWidth;
+    
+        var someDiv = document.getElementById('greeting');
+        var distanceToTop = someDiv.getBoundingClientRect().top;
+    
+        if((diff!=0) && (distanceToTop == 0)){
+            greetingContainer.scrollLeft += diff/1.5;
+            horiGreeting = true;
+        }else{
+            horiGreeting = false;
+        }
+    
+        if(variable == set){
+            $('body').removeClass('disableYScrolling');
+        }
+    
+        if((variable == set) && (diff>1)){
+            horiGreeting = false;
+        }else if((distanceToTop < 0)){
+            horiGreeting = false;
+        }
+    
+        if(horiGreeting){
+            $('body').addClass('disableYScrolling');
+            updates();
+            
+        }else{
+            $('body').removeClass('disableYScrolling');
+            scrollEvents(yScroll);
+        }
+    
+        ticking = true;
+    
+    }, { passive: true });
+
+    console.log("non-touch!");
+
+}else{
+    window.addEventListener('scroll', function(e){
+        yScroll = window.scrollY;
+        scrollEvents(yScroll);
+    });
+
+    console.log("touch!");
+}
+
+/*
 window.addEventListener('wheel', function(e) {
     yScroll = window.scrollY;
     diff = e.deltaY;
@@ -52,7 +105,7 @@ window.addEventListener('wheel', function(e) {
     ticking = true;
 
 }, { passive: true });
-
+*/
 
 function scrollHori(diff){
     greetingContainer.scrollLeft += diff;

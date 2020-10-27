@@ -1,6 +1,7 @@
 var currentBrowser;
 var vh = document.documentElement.scrollHeight*2;
 var overlayFix = false;
+var touchsupport;
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -24,13 +25,10 @@ function fadeInPage(){
 
 
 function checkIfTouch(){
-	var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
+	touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
 	if (!touchsupport){
 		$('body').addClass('non-touch');
-	}else{
-        //$( ".crayon" ).remove();
-        //$( "#sketch" ).remove();
-    }
+	}
 }
 
 function checkBrowser(){
