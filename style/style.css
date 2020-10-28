@@ -48,6 +48,8 @@
 
 html {
   font-size: 16px;
+  font-size: 16px;
+  font-size: 1vw;
   scroll-behavior: smooth;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -297,7 +299,7 @@ body.non-touch #greeting:hover #hand-wave {
   top: 10%;
   left: 30%;
   text-align: right;
-  max-width: 400px;
+  max-width: 40rem;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -315,17 +317,17 @@ body.non-touch #greeting:hover #hand-wave {
 #greeting #bio #bio_container img {
   position: relative;
   float: left;
-  margin: 20px;
-  max-width: 350px !important;
-  max-height: 300px !important;
+  margin: 2rem;
+  max-width: 40rem !important;
+  max-height: 20rem !important;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 #greeting #bio #bio_container ul {
   position: relative;
-  top: 200px;
-  margin: 20px;
+  top: 10rem;
+  margin: 2rem;
   float: left;
 }
 
@@ -337,7 +339,7 @@ body.non-touch #greeting:hover #hand-wave {
 
 #greeting #cv ul li {
   float: none;
-  max-width: 350px;
+  max-width: 40rem;
   margin-right: 40px;
 }
 
@@ -644,7 +646,6 @@ footer #footer_hr {
 #work {
   padding: 0;
   width: 100%;
-  max-width: 1400px;
   z-index: 10;
   will-change: filter;
   will-change: transform;
@@ -855,7 +856,6 @@ body.non-touch .column img:hover {
   padding: 0;
   margin: 0 auto;
   width: 80vw;
-  max-width: 1000px;
   height: 90vh;
   overflow-y: scroll;
   margin-top: 5vh;

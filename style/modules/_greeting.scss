@@ -93,7 +93,7 @@
             top: 10%;
             left: 30%;
             text-align: right;
-            max-width: 400px;
+            max-width: 40rem;
             font-size: 1rem;
             font-weight: bold;
             span{
@@ -110,15 +110,15 @@
             img{
                 position: relative;
                 float: left;
-                margin: 20px;
-                max-width: 350px !important;
-                max-height: 300px !important;
+                margin: 2rem;
+                max-width: 40rem !important;
+                max-height: 20rem !important;
                 object-fit: cover;
             }
             ul{
                 position: relative;
-                top: 200px;
-                margin: 20px;
+                top: 10rem;
+                margin: 2rem;
                 float: left;
             }
         }
@@ -131,7 +131,7 @@
             left: 10%;
             li{
                 float: none;
-                max-width: 350px;
+                max-width: 40rem;
                 margin-right: 40px;
 
                 h1{
