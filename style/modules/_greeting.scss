@@ -215,6 +215,7 @@
 body.non-touch .scrollMe:hover{
     opacity: 0.7 !important;
     background-color: $bg-ligth-btn;
+    color: black;
     transform-origin: center center !important;
     transform: scale3d(1.05, 1.05, 1.05);
 }

@@ -419,6 +419,7 @@ body.non-touch #greeting:hover #hand-wave {
 body.non-touch .scrollMe:hover {
   opacity: 0.7 !important;
   background-color: #eeeeee;
+  color: black;
   -webkit-transform-origin: center center !important;
           transform-origin: center center !important;
   -webkit-transform: scale3d(1.05, 1.05, 1.05);

@@ -15,6 +15,9 @@ let fromWork = false;
 if(!touchsupport){
 
     window.addEventListener('wheel', function(e) {
+
+        //console.log(e);
+
         yScroll = window.scrollY;
         diff = e.deltaY;
     
@@ -57,8 +60,9 @@ if(!touchsupport){
     console.log("non-touch!");
 
 }else{
-    window.addEventListener('scroll', function(e){
+    window.addEventListener('scroll', function(){
         yScroll = window.scrollY;
+        $('body').removeClass('disableYScrolling');
         scrollEvents(yScroll);
     });
 
