@@ -60,9 +60,9 @@ if(!touchsupport){
     console.log("non-touch!");
 
 }else{
+    $('body').removeClass('disableYScrolling');
     window.addEventListener('scroll', function(){
         yScroll = window.scrollY;
-        $('body').removeClass('disableYScrolling');
         scrollEvents(yScroll);
     });
 
