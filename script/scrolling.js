@@ -13,10 +13,7 @@ let horiGreeting = true;
 let fromWork = false;
 
 if(!touchsupport){
-
     window.addEventListener('wheel', function(e) {
-
-        //console.log(e);
 
         yScroll = window.scrollY;
         diff = e.deltaY;
