@@ -1,17 +1,3 @@
-function preloadAnimation(){
-
-	$('body,html').addClass("noScroll");
-
-	let container = document.getElementById("preloader");
-	lottie.loadAnimation({
-		container: container, // the dom element that will contain the animation
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: 'script/preloader.json' // the path to the animation json
-	});
-}
-
 var shake,ctrl,futura,nn,aw;
 
 var projects = [
@@ -61,11 +47,27 @@ function preloadImage(url){
 function renderPhotogrid(){
 
 	let workContainer = document.getElementById("work");
-	
-	let header = document.createElement('h1');
-	header.innerHTML = "selected projects";
-	workContainer.appendChild(header);
 
+	for(var i=0; i<projects.length; i++){
+
+		let workItem = document.createElement('div');
+		workItem.classList += "workItem";
+
+		let img = images[i];
+		img.id = projects[i][0];
+		workItem.appendChild(img);
+
+		let h1 = document.createElement('h1');
+		h1.innerHTML = projects[i][1].h1;
+		workItem.appendChild(h1);
+
+		workContainer.appendChild(workItem);
+
+	}
+
+
+
+	/*
 	let row = document.createElement('div');
 	row.className = "row";
 
@@ -91,6 +93,8 @@ function renderPhotogrid(){
 		row.appendChild(column);
 	}
 	workContainer.appendChild(row);
+
+	*/
 }
 
 

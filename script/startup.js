@@ -9,18 +9,9 @@ window.onbeforeunload = function () {
 
 function fadeInPage(){
     //checkIfDarkmode();
-    preloadAnimation();
+    //preloadAnimation();
     checkIfTouch();
     checkBrowser();
-    setTimeout(function(){
-        $('#greeting').removeClass('onLoadGreeting');
-    },500);
-    setTimeout(function(){
-        $('#work').removeClass('onLoadPort');
-    },1500);
-    setTimeout(function(){
-        $('footer').removeClass('onLoadPort');
-    },3000);
 }
 
 

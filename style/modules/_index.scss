@@ -6,8 +6,6 @@
 
 html{
     font-size: 16px;
-
-    font-size: 16px;
     font-size: 1vw;
 
     scroll-behavior: smooth;
@@ -23,15 +21,11 @@ body {
     color: $text-color-light;
     background-color: $bg-ligth;
     scrollbar-width: none;
-    will-change: filter;
-    overflow-x: hidden;
-    max-width: 1600px;
     margin: 0 auto !important;
     opacity: 1;
 
-    max-width: 100%;
-    overflow-x: hidden !important;
-
+    overflow: hidden;
+    white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -87,15 +81,21 @@ ul{
     }
 }
 
+#content{
+    overflow-x: scroll;
+    width: auto;
+    height: 100vh;
+}
+
 
 section{
     position: relative;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     clear:both;
-    transition: $snap-in;
+    display: inline-block;
+    white-space: nowrap;
 }
-
 
 body.non-touch #greeting:hover{
     #hand-wave{
@@ -109,23 +109,7 @@ body.non-touch #greeting:hover{
     50% { transform: rotate(-10deg); }
     100% { transform: rotate(10deg); }
 }
-
-.row {
-    display: -ms-flexbox; 
-    display: flex;
-    -ms-flex-wrap: wrap; 
-    flex-wrap: wrap;
-    padding: 0;
-}
-  
-.column {
-    -ms-flex: 50%; 
-    flex: 50%;
-    max-width: 50%;
-    padding: 0;
-}
-
-
+ 
 @media screen and (max-width: 600px) {
 
     html{

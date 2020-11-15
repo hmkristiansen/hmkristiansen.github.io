@@ -1,6 +1,21 @@
  
 #work{
 
+    position: relative;
+
+    display: inline-block;
+
+    .workItem{
+        width: 50vw;
+        display: inline-block;
+
+        img{
+            width: 100%;
+        }
+
+    }
+
+    /*
     padding: 0;
     width: 100%;
     //max-width: 1400px;
@@ -47,6 +62,7 @@
         cursor: pointer;
         transition: all 0.2s;
     }
+    */
 
     will-change: transform;
 }
@@ -61,6 +77,7 @@ body.non-touch .column img:hover{
     cursor: n-resize !important;
 }
 
+/*
 .activeText{
     transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
     opacity: 1;
@@ -104,6 +121,7 @@ body.non-touch .column img:hover{
     will-change: transform;       
     will-change: opacity;          
 }
+*/
 
 
 .stickElement{
@@ -127,24 +145,6 @@ body.non-touch .column img:hover{
 @media screen and (max-width: 800px) {
     #work{   
         
-        padding: 10px;
-        h1{
-            padding: 5px;
-        }  
-        .column {
-            -ms-flex: 100%;
-            flex: 100%;
-            max-width: 100%;
-            padding: 0;
-
-            img{
-                border-radius: 10px;
-            }
-        }
-
-        .row{
-            padding: 0;
-        }
     }
 
 
