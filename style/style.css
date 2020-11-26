@@ -140,6 +140,7 @@ section {
   padding: 0;
   display: inline-block;
   white-space: nowrap;
+  padding: 40px;
 }
 
 #header {
@@ -400,10 +401,6 @@ body.non-touch #greeting:hover #hand-wave {
   float: left;
 }
 
-#greeting #greeting_cont {
-  padding: 40px;
-}
-
 #greeting #greeting_cont #greeting_message {
   padding-left: 5%;
   font-size: 2rem;
@@ -482,6 +479,14 @@ body.non-touch .scrollMe:hover {
 
 #work .workItem img {
   width: 100%;
+}
+
+#about #bio {
+  float: left;
+}
+
+#about #bio img {
+  width: 200px;
 }
 
 #overlay {
