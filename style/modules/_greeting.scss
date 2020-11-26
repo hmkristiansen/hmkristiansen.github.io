@@ -180,41 +180,34 @@
 */
 
 #greeting{
-
     width: 80vw;
-    position: relative;
+    float: left;
 
-    #greeting_message{
-        max-width: 80%;
-        position: relative;
-        font-size: 2rem;
-        font-weight: bold;
+    //padding-top: 100px;
 
-        h3{
-            font-weight: normal;
-            font-size: 1.2rem;
-            transition: 0.5s;
+    #greeting_cont{
+        padding: 40px;
+        #greeting_message{
+            padding-left: 5%;
+            font-size: 2rem;
+            //font-weight: bold;
+
+            margin-top: 25%;
+            
+            #status_cont{
+                width: 40%;
+            }   
+            .status{
+                display: inline-block;
+                position: absolute;
+                width: inherit;
+                white-space: normal;
+                //padding-left: 0.5rem;
+                transition: 0.3s;
+                pointer-events: all;
+            }   
         }
-        
-        #status_cont{
-            padding: 20px;
-            padding-left: 0;
-            position: relative;
-
-            span{
-                width: 100%;
-            }
-        }   
-        .status{
-            display: inline-block;
-            position: absolute;
-            width:60%; 
-            //padding-left: 0.5rem;
-            transition: 0.3s;
-            pointer-events: all;
-        }   
     }
-
 }
 
 .carusellOut{

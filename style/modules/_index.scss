@@ -24,6 +24,11 @@ body {
     margin: 0 auto !important;
     opacity: 1;
 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
     overflow: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -85,16 +90,23 @@ ul{
     overflow-x: scroll;
     width: auto;
     height: 100vh;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
-
 
 section{
     position: relative;
     margin: 0;
     padding: 0;
-    clear:both;
     display: inline-block;
-    white-space: nowrap;
+    white-space: nowrap;    
+}
+
+#header{
+    position: fixed;
+    z-index: 1000;
+    padding: 40px;
 }
 
 body.non-touch #greeting:hover{

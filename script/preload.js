@@ -2,10 +2,10 @@ var shake,ctrl,futura,nn,aw;
 
 var projects = [
 	["aw",aw],
-	["ctrl",ctrl],
-	["futura",futura],
 	["shake",shake],
-	["nn",nn]
+	["nn",nn],
+	["futura",futura],
+	["ctrl",ctrl]
 ];
 
 var images=[];
@@ -52,6 +52,7 @@ function renderPhotogrid(){
 
 		let workItem = document.createElement('div');
 		workItem.classList += "workItem";
+		workItem.id = "item"+i;
 
 		let img = images[i];
 		img.id = projects[i][0];
@@ -64,37 +65,6 @@ function renderPhotogrid(){
 		workContainer.appendChild(workItem);
 
 	}
-
-
-
-	/*
-	let row = document.createElement('div');
-	row.className = "row";
-
-	var projectCounter = 0;
-
-	for (var i = 0; i<2; i++){
-		let column = document.createElement('div');
-		column.className = "column";
-		for(var j = 0; j<(Math.ceil(projects.length/2)); j++){
-
-			let img = images[projectCounter];
-			img.id = projects[projectCounter][0];
-			img.style.width = "100%";
-
-			column.appendChild(img);
-
-			if(projectCounter<projects.length-1){
-				projectCounter++;
-			}else{
-				break;
-			}
-		}
-		row.appendChild(column);
-	}
-	workContainer.appendChild(row);
-
-	*/
 }
 
 
