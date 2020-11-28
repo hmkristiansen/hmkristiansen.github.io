@@ -397,7 +397,7 @@ body.non-touch #greeting:hover #hand-wave {
 
 */
 #greeting {
-  width: 80vw;
+  width: 100vw;
   float: left;
 }
 
