@@ -136,8 +136,9 @@ ul li {
 
 section {
   position: relative;
+  top: 0;
   margin: 0;
-  padding: 0;
+  height: 100%;
   display: inline-block;
   white-space: nowrap;
   padding: 40px;
@@ -404,7 +405,7 @@ body.non-touch #greeting:hover #hand-wave {
 #greeting #greeting_cont #greeting_message {
   padding-left: 5%;
   font-size: 2rem;
-  margin-top: 25%;
+  margin-top: 20%;
 }
 
 #greeting #greeting_cont #greeting_message #status_cont {
