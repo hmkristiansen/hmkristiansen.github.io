@@ -1,0 +1,19 @@
+ 
+#work{
+    //float: left;
+    margin: 0 10vw;
+    .workItem{
+        position: relative;
+        top:0;
+        width: 50vw;
+        display: inline-block;
+
+        padding: 100px;
+
+        cursor: pointer;
+
+        img{
+            width: 100%;
+        }
+    }
+}

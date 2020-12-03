@@ -1,25 +1,11 @@
-function preloadAnimation(){
-
-	$('body,html').addClass("noScroll");
-
-	let container = document.getElementById("preloader");
-	lottie.loadAnimation({
-		container: container, // the dom element that will contain the animation
-		renderer: 'svg',
-		loop: true,
-		autoplay: true,
-		path: 'script/preloader.json' // the path to the animation json
-	});
-}
-
 var shake,ctrl,futura,nn,aw;
 
 var projects = [
 	["aw",aw],
-	["ctrl",ctrl],
-	["futura",futura],
 	["shake",shake],
-	["nn",nn]
+	["nn",nn],
+	["futura",futura],
+	["ctrl",ctrl]
 ];
 
 var images=[];
@@ -61,36 +47,24 @@ function preloadImage(url){
 function renderPhotogrid(){
 
 	let workContainer = document.getElementById("work");
-	
-	let header = document.createElement('h1');
-	header.innerHTML = "selected projects";
-	workContainer.appendChild(header);
 
-	let row = document.createElement('div');
-	row.className = "row";
+	for(var i=0; i<projects.length; i++){
 
-	var projectCounter = 0;
+		let workItem = document.createElement('div');
+		workItem.classList += "workItem";
+		workItem.id = "item"+i;
 
-	for (var i = 0; i<2; i++){
-		let column = document.createElement('div');
-		column.className = "column";
-		for(var j = 0; j<(Math.ceil(projects.length/2)); j++){
+		let img = images[i];
+		img.id = projects[i][0];
+		workItem.appendChild(img);
 
-			let img = images[projectCounter];
-			img.id = projects[projectCounter][0];
-			img.style.width = "100%";
+		let h1 = document.createElement('h1');
+		h1.innerHTML = projects[i][1].h1;
+		workItem.appendChild(h1);
 
-			column.appendChild(img);
+		workContainer.appendChild(workItem);
 
-			if(projectCounter<projects.length-1){
-				projectCounter++;
-			}else{
-				break;
-			}
-		}
-		row.appendChild(column);
 	}
-	workContainer.appendChild(row);
 }
 
 

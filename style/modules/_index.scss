@@ -5,10 +5,8 @@
 }
 
 html{
-    font-size: 16px;
-
-    font-size: 16px;
     font-size: 1vw;
+    font-size: 16px;
 
     scroll-behavior: smooth;
     transform: translateZ(0);
@@ -23,15 +21,16 @@ body {
     color: $text-color-light;
     background-color: $bg-ligth;
     scrollbar-width: none;
-    will-change: filter;
-    overflow-x: hidden;
-    max-width: 1600px;
     margin: 0 auto !important;
     opacity: 1;
 
-    max-width: 100%;
-    overflow-x: hidden !important;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 
+    overflow: hidden;
+    white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -87,15 +86,41 @@ ul{
     }
 }
 
+#content{
+    overflow-x: scroll;
+    width: auto;
+    height: 100vh;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    height: 90vh;
+    width: auto;
+    white-space: nowrap;
+    position: relative;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
 
 section{
     position: relative;
-    margin: 0 auto;
-    padding: 0;
-    clear:both;
-    transition: $snap-in;
+    top:0;
+    margin: 0;
+    height: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 40px; 
+    vertical-align: text-top;
+    vertical-align: middle;
 }
 
+#header{
+    position: fixed;
+    z-index: 1000;
+    padding: 40px;
+}
 
 body.non-touch #greeting:hover{
     #hand-wave{
@@ -109,23 +134,7 @@ body.non-touch #greeting:hover{
     50% { transform: rotate(-10deg); }
     100% { transform: rotate(10deg); }
 }
-
-.row {
-    display: -ms-flexbox; 
-    display: flex;
-    -ms-flex-wrap: wrap; 
-    flex-wrap: wrap;
-    padding: 0;
-}
-  
-.column {
-    -ms-flex: 50%; 
-    flex: 50%;
-    max-width: 50%;
-    padding: 0;
-}
-
-
+ 
 @media screen and (max-width: 600px) {
 
     html{

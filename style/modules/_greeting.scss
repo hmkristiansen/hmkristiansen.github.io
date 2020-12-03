@@ -1,8 +1,9 @@
+/*
 #greeting{
 
     //position: relative;
 
-    //position: -webkit-sticky !important; /* Safari */
+    //position: -webkit-sticky !important; 
     //position: sticky !important;
 
     top: 0px;    
@@ -62,28 +63,31 @@
             font-size: 2rem;
             font-weight: bold;
 
+            h3{
+                font-weight: normal;
+                font-size: 1.2rem;
+                transition: 0.5s;
+            }
+            
             #status_cont{
                 padding: 20px;
                 padding-left: 0;
                 width:60vw; 
                 position: relative;
-            }      
+            }   
+            .status{
+                display: inline-block;
+                position: absolute;
+                width: inherit;
+                //padding-left: 0.5rem;
+                transition: 0.3s;
+                pointer-events: all;
+            }   
         }
 
-        .status{
-            display: inline-block;
-            position: absolute;
-            width: inherit;
-            //padding-left: 0.5rem;
-            transition: 0.3s;
-            pointer-events: all;
-        }
 
-        h3{
-            font-weight: normal;
-            font-size: 1.2rem;
-            transition: 0.5s;
-        }
+
+
 
     }
 
@@ -155,8 +159,6 @@
         }
     }
 
-    /* - - - - - - - */
-
     #sketch {
         position: absolute;
         top: 0;
@@ -175,6 +177,38 @@
     }
 }
 
+*/
+
+#greeting{
+    width: 90vw;
+    float: left;
+
+    //padding-top: 100px;
+
+    #greeting_cont{
+        #greeting_message{
+            padding-left: 5%;
+            font-size: 2rem;
+            //font-weight: bold;
+
+            margin-top: 20%;
+            
+            #status_cont{
+                width: 40%;
+            }   
+            .status{
+                display: inline-block;
+                position: absolute;
+                width: inherit;
+                white-space: normal;
+                //padding-left: 0.5rem;
+                transition: 0.3s;
+                pointer-events: all;
+            }   
+        }
+    }
+}
+
 .carusellOut{
     transform: translateY(-50px) !important;
     opacity: 0;
@@ -189,21 +223,6 @@
     cursor: default;
 }
 
-.scrollMe{
-    position: absolute;
-    font-size: 0.8rem;
-    opacity: 0.5;
-    transition: 0.2s;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-
-    bottom: 20%;
-    left: 10%;
-    clear: both;
-    cursor: s-resize;
-    z-index: 2000;
-}
 
 #hand-wave{
     position: relative;
@@ -224,44 +243,7 @@ body.non-touch .scrollMe:hover{
 
     #greeting{
 
-        height: 80vh;
 
-        .scrollMe{
-            bottom: 5vh !important;
-        }
-
-        .greeting_page{
-            font-size: 1rem;
-        }
-
-        #intro{
-            p{
-                position: absolute;
-                right: 10%;
-                font-size: 1rem;
-            }
-        }
-    
-        #bio{
-            #bio_container{
-                right: 15%;
-                img{
-                    margin: 15px;
-                    max-width: 400px !important;
-                }
-                ul{
-                    margin: 15px;
-                }
-            }
-        }
-    
-        #cv{
-            ul{
-                li{
-                    float: none;
-                }
-            }
-        }
     }
 }
 
@@ -270,127 +252,7 @@ body.non-touch .scrollMe:hover{
 @media screen and (max-width: 600px) {
 
     #greeting{
-        height: 80vh; 
 
-        .greeting_page{
-            font-size: 1.5rem;
-            width: 100vw !important;
-            position: relative;
-            min-width: 300px;
-        }
-
-        .greeting_pil{
-            position: absolute;
-            bottom: 40px;
-            right: 30px;
-            width: 50px;
-            height: auto;
-            transform-origin: right bottom !important;
-        }
-
-        #greets{
-
-            #greeting_message{
-                left: 5%;
-                top: 30%;
-            }
-            
-            #status_cont{
-                padding: 20px;
-                padding-left: 0;
-                width: 80vw !important; 
-                position: relative;
-            }
-
-            .scrollMe{
-                position: absolute;
-                font-size: 0.8rem;
-                opacity: 0.2;
-                bottom: 10vh;
-                transition: 0.2s;
-                padding: 10px;
-                border-radius: 5px;
-                text-align: center;
-
-                opacity: 0.4;
-                //background-color: $bg-ligth-btn;
-            }
-    
-            #scrollMeRight{
-                right: 5%;
-                cursor: e-resize;
-            }   
-    
-            #scrollMeDown{
-                left: 5%;
-                cursor: s-resize;
-            }   
-        }
-
-        #intro{
-            position: relative;
-            p{
-                font-size: 1.5rem;
-                top: 20%;
-                right: 5%;
-                left:0;
-                right: 0;
-                
-                bottom: 0;
-                width: 90vw;
-            }
-        }
-
-        #bio{
-            font-size: 1rem;
-            padding: 0 !important;        
-            #bio_container{
-                width: 100vw;
-                top: 5vh;
-                left: 0;
-                right: 0;
-
-                img{
-
-                    
-                    //width: 100%;
-                    //left: 10vw;
-                    position: relative;
-
-                    max-width: 400px !important;
-                    min-height: 200px !important;
-                    height: 20vh;
-                    width: 70% !important; 
-                    
-                    clear: both;
-                    
-                }
-                ul{
-                    top: 0;
-                    float: none;
-                    font-size: 1.5rem !important;
-                    text-align: left;
-
-                    clear: both;
-                    
-                }
-            }
-        }
-
-        #cv{
-            ul{
-                top: unset;
-                bottom:10vh;
-                left: 5%;
-                h1{
-                    font-size: 1.5rem !important;
-                }
-                p{
-                    font-size: 1.4rem !important;
-                }
-            }
-        }
-        
     }
 
     .carusellOut{
@@ -408,15 +270,6 @@ body.non-touch .scrollMe:hover{
 
 @media screen and (max-width: 350px){
     #greeting{
-        #bio{
-            #bio_container{
-                img{
-                    max-width: 400px !important;
-                    max-height: 200px !important;
-                    height: 80vh;
-                    width: 75% !important;
-                }
-            }
-        }
+
     }
 }

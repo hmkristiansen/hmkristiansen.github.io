@@ -12,44 +12,32 @@
     <link rel = "stylesheet"type = "text/css" href ="style/style.css"/>
 </head>
 
-<body class="disableYScrolling" onload="fadeInPage();">
+<body id="body" class="non-touch">
 
-    <div id="preloader_container">
-        <div id="preloader"></div>
-    </div>
+    <div id="content">
 
-    <section id="greeting" class="onLoadGreeting">
-
-        
-        <!--
-        <img class="crayon" src="assets/svg/crayon.svg">
-
-        <div id="sketch" class="hideCanvas">
-            <canvas id="paint"></canvas>
+        <div id="header">Henrik M. Kristiansen<br>↳ design student
         </div>
-
-        -->
-        <div class="greeting_page" id="greets">
-
-            <div id="greeting_message">
-                <h3>Heisann!</h3>
-                <div id="status_cont">
-                    <span class="status" id="status0">I'm Henrik <span id='hand-wave'>👋</span></span>
-                    <span class="status carusellIn getter" id="status1">Test1</span>
+        <section id="greeting">
+            <div id="greeting_cont">
+                <div id="greeting_message">
+                    <h3>Heisann!</h3>
+                    <div id="status_cont">
+                        <span class="status" id="status0">I'm Henrik <span id='hand-wave'>👋</span></span>
+                        <span class="status carusellIn getter" id="status1">Test1</span>
+                    </div>
                 </div>
             </div>
+            
+        </section>
 
-            <div class="scrollMe" id="scrollMeDown" onclick="scrollDown();">go straight to projects ↓</div>  
-        </div>
 
-        <div class="greeting_page" id="intro">
-            <p>
-                I’m an ever-curious design student with a passion of creating pleasurable experiences using determination, empathy and naivety.
-            </p>
-        </div>
+        <section id="work" class="">
+        </section>
 
-        <div class="greeting_page" id="bio">
-            <div id="bio_container">
+        <section id="about" class="">
+            
+            <div id="bio">
                 <img src="assets/hug.jpg">
                 <ul>
                     <li style="font-weight: bold;">Henrik M. Kristiansen</li>
@@ -63,30 +51,44 @@
                     <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🏃‍♂️}</li>
                 </ul>
             </div>
-        </div>
 
-        <div class="greeting_page" id="cv">
-            <ul>
-                <li>
-                    <h1>currently</h1>
-                    <p><a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - MS.c industrial design, major in interaction design</p>
-                    <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - consultant</p>
-                </li>
-                <li>
-                    <h1>recently</h1>
-                    <p><a href="https://www.iterate.no/" target="_blank">ITERATE</a> - summer intern</p>
-                    <p><a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a> - ERASMUS exchange student</p>
-                </li>
-                <li>
-                    <h1>previously</h1>
-                    <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - summer intern</p>
-                    <p><a href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - lighting technician</p>
-                </li>
-            </ul>
-            <img class="greeting_pil" id="pil4" src="assets/svg/pil4.svg" onclick="scrollDown();">
-        </div>
+            <div id="cv">
+                <ul>
+                    <li>
+                        <h1>currently</h1>
+                        <p><a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - MS.c industrial design, major in interaction design</p>
+                        <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - consultant</p>
+                    </li>
+                    <li>
+                        <h1>recently</h1>
+                        <p><a href="https://www.iterate.no/" target="_blank">ITERATE</a> - summer intern</p>
+                        <p><a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a> - ERASMUS exchange student</p>
+                    </li>
+                    <li>
+                        <h1>previously</h1>
+                        <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - summer intern</p>
+                        <p><a href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - lighting technician</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    </section>
+        <section id="contact">
+            <div id="info">
+                <ul>
+                    <li style="font-weight: bold;">Elsewhere</li>
+                    <li>‎
+                    </li>
+                    <li><a href="http://portfolio.hmkristiansen.no/" target="_blank">→ notion project archive</a></li>
+                    <li id="info_link"><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">→ linkedin</a></li>
+                    <li id="info_link"><a href="https://www.instagram.com/hmkristiansen/" target="_blank">→ instagram</a></li>
+                    <li id="info_link"><a href="mailto:heisann@hmkristiansen.no?subject=Heisann, Henrik!"" target="_blank">→ epost</a></li>
+                    <li id="info_link"><a href="assets/cvhmk.pdf" target="_blank">→ cv</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
 
     <div id="overlay" style="position: fixed !important;" class="hidden">
         <div id="close_btn" class="hideCloseBtn"><img src="assets/svg/exit.svg"></div>
@@ -105,45 +107,18 @@
         </div>
     </div>
 
-    <section id="work" class="onLoadPort inactive blurGrid">
-    </section>
+    <div id="links">
+        <a href="" target="_blank"></a>
+        <a href="" target="_blank"></a>
+        <a href="" target="_blank"></a>
+    </div>
 
-    <footer class="onLoadPort">
-        <div id="footerCont">
-            <img id="footer_hr" src="assets/svg/footle.svg">
-            <div id="info">
-                <ul>
-                    <li style="font-weight: bold;">Henrik M. Kristiansen</li>
-                    <li style="opacity: 0.3;">senior year design student</li>
-                    <li>‎
-                    </li>
-                    <li id="info_link"><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedin</a></li>
-                    <li id="info_link"><a href="https://www.instagram.com/hmkristiansen/" target="_blank">instagram</a></li>
-                    <li id="info_link"><a href="mailto:heisann@hmkristiansen.no?subject=Heisann, Henrik!"" target="_blank">epost</a></li>
-                    <li id="info_link"><a href="assets/cvhmk.pdf" target="_blank">cv</a></li>
-                </ul>
-            </div>
-            <div id="more_work">
-                <ul>
-                    <li><a href="http://portfolio.hmkristiansen.no/" target="_blank">project archive</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script/lottie.js" type="text/javascript"></script>
     <script src="script/preload.js"></script>
-    <script src="script/script.js"></script>
+    <script src="script/startup.js"></script>
     <script src="script/age.js"></script>
     <script src="script/carusell.js"></script>
     <script src="script/scrolling.js"></script>
     <script src="script/overlay.js"></script>
-    <script src="script/colormodes.js"></script>
-    
-    <!--
-    <script src="script/canvas.js"></script>
--->
-
     <script src="script/loadready.js"></script>
 
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>

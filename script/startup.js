@@ -9,25 +9,16 @@ window.onbeforeunload = function () {
 
 function fadeInPage(){
     //checkIfDarkmode();
-    preloadAnimation();
+    //preloadAnimation();
     checkIfTouch();
     checkBrowser();
-    setTimeout(function(){
-        $('#greeting').removeClass('onLoadGreeting');
-    },500);
-    setTimeout(function(){
-        $('#work').removeClass('onLoadPort');
-    },1500);
-    setTimeout(function(){
-        $('footer').removeClass('onLoadPort');
-    },3000);
 }
 
 
 function checkIfTouch(){
 	touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
 	if (!touchsupport){
-		$('body').addClass('non-touch');
+		$('#body').addClass('non-touch');
 	}
 }
 

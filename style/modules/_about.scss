@@ -1,0 +1,24 @@
+#about{
+    width: 100vw;
+    #bio{
+        float: left;
+        padding: 20px;
+        padding-top: 10vh;
+        height: 100%;
+        img{
+            width: 200px;
+        }
+    }
+    #cv{
+        float: left;
+        padding: 20px;
+        height: 100%;
+        position: relative;
+
+        ul{
+            position: absolute;
+            bottom: 10vh;
+            left: 20vw;
+        }
+    }
+}
