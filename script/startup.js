@@ -18,7 +18,7 @@ function fadeInPage(){
 function checkIfTouch(){
 	touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
 	if (!touchsupport){
-		$('body').addClass('non-touch');
+		$('#body').addClass('non-touch');
 	}
 }
 

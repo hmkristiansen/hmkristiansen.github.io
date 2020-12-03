@@ -47,8 +47,8 @@
 }
 
 html {
-  font-size: 16px;
   font-size: 1vw;
+  font-size: 16px;
   scroll-behavior: smooth;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -132,6 +132,13 @@ ul li {
   white-space: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
+  height: 90vh;
+  width: auto;
+  white-space: nowrap;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 section {
@@ -142,6 +149,8 @@ section {
   display: inline-block;
   white-space: nowrap;
   padding: 40px;
+  vertical-align: text-top;
+  vertical-align: middle;
 }
 
 #header {
@@ -398,7 +407,7 @@ body.non-touch #greeting:hover #hand-wave {
 
 */
 #greeting {
-  width: 100vw;
+  width: 90vw;
   float: left;
 }
 
@@ -469,6 +478,10 @@ body.non-touch .scrollMe:hover {
   }
 }
 
+#work {
+  margin: 0 10vw;
+}
+
 #work .workItem {
   position: relative;
   top: 0;
@@ -482,12 +495,37 @@ body.non-touch .scrollMe:hover {
   width: 100%;
 }
 
+#about {
+  width: 100vw;
+}
+
 #about #bio {
   float: left;
+  padding: 20px;
+  padding-top: 10vh;
+  height: 100%;
 }
 
 #about #bio img {
   width: 200px;
+}
+
+#about #cv {
+  float: left;
+  padding: 20px;
+  height: 100%;
+  position: relative;
+}
+
+#about #cv ul {
+  position: absolute;
+  bottom: 10vh;
+  left: 20vw;
+}
+
+#contact {
+  width: 100vw;
+  padding-top: 30vh;
 }
 
 #overlay {
