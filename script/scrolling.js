@@ -10,11 +10,12 @@ window.addEventListener('wheel', function(e) {
     yScroll = window.scrollY;
     diff = e.deltaY;
 
-    console.log(diff);
-
-    content.scrollLeft += diff;
-
-    ticking = true;
+    if(document.getElementById("body").classList.contains("mobile")){
+        content.scrollTop += diff/3;
+    }else{
+        content.scrollLeft += diff/2;
+        ticking = true;
+    }
 
 }, { passive: true });
 

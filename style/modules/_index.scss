@@ -87,14 +87,8 @@ ul{
 }
 
 #content{
-    overflow-x: scroll;
     width: auto;
     height: 100vh;
-    white-space: nowrap;
-    overflow-x: scroll;
-    overflow-y: hidden;
-
-    height: 90vh;
     width: auto;
     white-space: nowrap;
     position: relative;
@@ -122,12 +116,38 @@ section{
     padding: 40px;
 }
 
+body.mobile #header{
+    padding: 20px;
+}
+
 body.non-touch #greeting:hover{
     #hand-wave{
         animation: shake 90ms ease;
         animation-iteration-count: 8; 
     }
 }
+
+body.mobile #content{
+    width: 100%;
+    height: 100%;
+    white-space:initial;
+    position: relative;
+
+    overflow-x: hidden;
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.mobile section{
+    position: relative;
+    top:0;
+    margin: 0;
+    height: auto;
+    display: block;
+    white-space: initial;
+    padding: 40px; 
+}
+
 
 @keyframes shake {
     0% { transform: rotate(10deg); }
@@ -155,13 +175,6 @@ body.non-touch #greeting:hover{
     p{
         margin-top: 5px;
         margin-bottom: 5px;
-    }
-
-    .column {
-        -ms-flex: 100%; 
-        flex: 100%;
-        max-width: 100%;
-        padding: 0 10px;
     }
 }
 

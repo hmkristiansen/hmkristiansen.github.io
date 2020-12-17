@@ -126,13 +126,8 @@ ul li {
 }
 
 #content {
-  overflow-x: scroll;
   width: auto;
   height: 100vh;
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  height: 90vh;
   width: auto;
   white-space: nowrap;
   position: relative;
@@ -159,11 +154,35 @@ section {
   padding: 40px;
 }
 
+body.mobile #header {
+  padding: 20px;
+}
+
 body.non-touch #greeting:hover #hand-wave {
   -webkit-animation: shake 90ms ease;
           animation: shake 90ms ease;
   -webkit-animation-iteration-count: 8;
           animation-iteration-count: 8;
+}
+
+body.mobile #content {
+  width: 100%;
+  height: 100%;
+  white-space: initial;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.mobile section {
+  position: relative;
+  top: 0;
+  margin: 0;
+  height: auto;
+  display: block;
+  white-space: initial;
+  padding: 40px;
 }
 
 @-webkit-keyframes shake {
@@ -210,13 +229,6 @@ body.non-touch #greeting:hover #hand-wave {
   p {
     margin-top: 5px;
     margin-bottom: 5px;
-  }
-  .column {
-    -ms-flex: 100%;
-    -webkit-box-flex: 100%;
-            flex: 100%;
-    max-width: 100%;
-    padding: 0 10px;
   }
 }
 
@@ -414,7 +426,7 @@ body.non-touch #greeting:hover #hand-wave {
 #greeting #greeting_cont #greeting_message {
   padding-left: 5%;
   font-size: 2rem;
-  margin-top: 20%;
+  margin-top: 25vh;
 }
 
 #greeting #greeting_cont #greeting_message #status_cont {
@@ -422,6 +434,31 @@ body.non-touch #greeting:hover #hand-wave {
 }
 
 #greeting #greeting_cont #greeting_message .status {
+  display: inline-block;
+  position: absolute;
+  width: inherit;
+  white-space: normal;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: all;
+}
+
+body.mobile #greeting {
+  width: 100%;
+  height: 80%;
+  float: none;
+}
+
+body.mobile #greeting #greeting_cont {
+  margin-top: 25vh;
+}
+
+body.mobile #greeting #greeting_cont #greeting_message #status_cont {
+  width: 80%;
+  max-width: 600px;
+}
+
+body.mobile #greeting #greeting_cont #greeting_message .status {
   display: inline-block;
   position: absolute;
   width: inherit;
@@ -486,12 +523,31 @@ body.non-touch .scrollMe:hover {
   position: relative;
   top: 0;
   width: 50vw;
+  height: 100%;
   display: inline-block;
-  padding: 100px;
+  padding: 2%;
   cursor: pointer;
 }
 
 #work .workItem img {
+  width: 100%;
+}
+
+body.mobile #work {
+  margin: 0 10px;
+}
+
+body.mobile #work .workItem {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 2%;
+  cursor: pointer;
+}
+
+body.mobile #work .workItem img {
   width: 100%;
 }
 
@@ -521,6 +577,29 @@ body.non-touch .scrollMe:hover {
   position: absolute;
   bottom: 10vh;
   left: 20vw;
+}
+
+body.mobile #about {
+  width: 100%;
+  position: relative;
+}
+
+body.mobile #about #bio {
+  float: none;
+}
+
+body.mobile #about #bio img {
+  width: 200px;
+}
+
+body.mobile #about #cv {
+  float: none;
+}
+
+body.mobile #about #cv ul {
+  position: relative;
+  bottom: unset;
+  left: unset;
 }
 
 #contact {

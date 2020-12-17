@@ -22,3 +22,23 @@
         }
     }
 }
+
+body.mobile #about{
+    width: 100%;
+    position: relative;
+    #bio{
+        float: none;
+        img{
+            width: 200px;
+        }
+    }
+    #cv{
+        float: none;
+        ul{
+            position: relative;
+            bottom: unset;
+            left: unset;
+        }
+    }
+
+}
