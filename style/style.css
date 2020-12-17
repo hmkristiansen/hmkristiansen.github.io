@@ -656,14 +656,14 @@ body.mobile #about #cv ul {
   cursor: nesw-resize !important;
 }
 
-#overlay #content {
+#overlay #port_content {
   position: relative;
-  margin: 0;
   padding: 0;
   margin: 0 auto;
-  width: 80vw;
-  height: 90vh;
+  width: 80%;
+  height: 90%;
   overflow-y: scroll;
+  overflow-x: hidden;
   margin-top: 5vh;
   opacity: 1 !important;
   background-color: #ffffff;
@@ -673,15 +673,22 @@ body.mobile #about #cv ul {
   box-shadow: 0px 0px 20px 0px rgba(122, 122, 122, 0.2);
 }
 
-#overlay #content h1, #overlay #content h2, #overlay #content h3, #overlay #content p, #overlay #content ul {
+#overlay #port_content #parentNode {
+  position: relative;
+  width: 100% !important;
+  height: auto;
+}
+
+#overlay #port_content h1, #overlay #port_content h2, #overlay #port_content h3, #overlay #port_content p, #overlay #port_content ul {
   margin: 0;
   padding: 0;
   padding-left: 5%;
   padding-right: 5%;
   margin: 0 auto;
+  width: inherit;
 }
 
-#overlay #content img {
+#overlay #port_content img {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -690,7 +697,7 @@ body.mobile #about #cv ul {
      object-fit: cover;
 }
 
-#overlay #content h1 {
+#overlay #port_content h1 {
   font-size: 2rem;
   margin: 0;
   margin-top: 40px;
@@ -698,28 +705,28 @@ body.mobile #about #cv ul {
   text-align: left;
 }
 
-#overlay #content ul {
+#overlay #port_content ul {
   font-size: 1rem;
   font-weight: 100;
   margin: 0;
 }
 
-#overlay #content #item_info {
+#overlay #port_content #item_info {
   margin-top: 40px;
   margin-bottom: 20px;
   clear: both;
 }
 
-#overlay #content #item_info span {
+#overlay #port_content #item_info span {
   font-weight: bold;
   padding-right: 5px;
 }
 
-#overlay #content #item_info li {
+#overlay #port_content #item_info li {
   margin-top: 15px;
 }
 
-#overlay #content .contentQuote {
+#overlay #port_content .contentQuote {
   margin-top: 10px;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
@@ -736,7 +743,7 @@ body.mobile #about #cv ul {
   opacity: 1;
 }
 
-#overlay #content .contentText {
+#overlay #port_content .contentText {
   text-align: left;
   font-size: 1rem;
   padding-bottom: 20px;
@@ -748,7 +755,7 @@ body.mobile #about #cv ul {
   clear: both;
 }
 
-#overlay #content .contentHeader {
+#overlay #port_content .contentHeader {
   margin-top: 15vh;
   text-align: left;
   font-size: 1.4rem;
@@ -761,7 +768,7 @@ body.mobile #about #cv ul {
   opacity: 1;
 }
 
-#overlay #content .contentImage {
+#overlay #port_content .contentImage {
   width: 85%;
   margin-left: 7.5%;
   height: auto;
@@ -770,7 +777,7 @@ body.mobile #about #cv ul {
   clear: both;
 }
 
-#overlay #content .contentCaption {
+#overlay #port_content .contentCaption {
   text-align: center;
   font-size: 0.8rem;
   opacity: 0.4;
@@ -785,7 +792,7 @@ body.mobile #about #cv ul {
   clear: both;
 }
 
-#overlay #content hr {
+#overlay #port_content hr {
   margin: 0 auto;
   clear: both;
   width: 75%;
@@ -797,7 +804,7 @@ body.mobile #about #cv ul {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#overlay #content .contentVideo {
+#overlay #port_content .contentVideo {
   padding: 20px;
   padding-bottom: 10px;
   clear: both;
@@ -825,11 +832,11 @@ body.mobile #about #cv ul {
   cursor: s-resize;
 }
 
-#content::-webkit-scrollbar {
+#port_content::-webkit-scrollbar {
   display: none;
 }
 
-#content {
+#port_content {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -961,21 +968,21 @@ body.non-touch #more_link a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  #overlay #content {
+  #overlay #port_content {
     width: 100%;
     height: 100%;
     margin-top: 0px;
     border-radius: 0;
     border: solid 0px #eaeaea;
   }
-  #overlay #content .contentQuote {
+  #overlay #port_content .contentQuote {
     margin-top: 20px;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     line-height: 1.2;
     padding-left: 20%;
   }
-  #overlay #content .contentText {
+  #overlay #port_content .contentText {
     text-align: left;
     font-size: 1rem;
     margin-bottom: 50px;
@@ -985,10 +992,10 @@ body.non-touch #more_link a:hover {
     clear: both;
     margin: 3vh 0;
   }
-  #overlay #content .contentHeader {
+  #overlay #port_content .contentHeader {
     margin-bottom: 10px;
   }
-  #overlay #content .contentCaption {
+  #overlay #port_content .contentCaption {
     text-align: center;
     font-size: 0.8rem;
     opacity: 0.4;
@@ -1002,7 +1009,7 @@ body.non-touch #more_link a:hover {
     float: left;
     clear: both;
   }
-  #overlay #content hr {
+  #overlay #port_content hr {
     margin-top: 40px;
     margin-bottom: 40px;
   }

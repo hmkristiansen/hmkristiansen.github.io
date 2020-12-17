@@ -10,11 +10,13 @@ window.addEventListener('wheel', function(e) {
     yScroll = window.scrollY;
     diff = e.deltaY;
 
-    if(document.getElementById("body").classList.contains("mobile")){
-        content.scrollTop += diff/3;
-    }else{
-        content.scrollLeft += diff/2;
-        ticking = true;
+    if(document.getElementById("overlay").classList.contains("visible") != true){
+        if(document.getElementById("body").classList.contains("mobile")){
+            content.scrollTop += diff/3;
+        }else{
+            content.scrollLeft += diff/2;
+            ticking = true;
+        }
     }
 
 }, { passive: true });

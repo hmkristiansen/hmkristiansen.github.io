@@ -48,13 +48,13 @@ function closeOverlay(){
 }
 
 $( "#exp_btn" ).click(function() {
-	if( $('#content').hasClass('exp_overlay')){
-		$('#content').removeClass('exp_overlay');
-		$('#content').addClass('dexp_overlay');
+	if( $('#port_content').hasClass('exp_overlay')){
+		$('#port_content').removeClass('exp_overlay');
+		$('#port_content').addClass('dexp_overlay');
 		$("#exp_btn img").attr("src","assets/svg/max.svg");
 	}else{
-		$('#content').removeClass('dexp_overlay');
-		$('#content').addClass('exp_overlay');
+		$('#port_content').removeClass('dexp_overlay');
+		$('#port_content').addClass('exp_overlay');
 		$("#exp_btn img").attr("src","assets/svg/min.svg");
 	}
 });
@@ -76,10 +76,10 @@ function renderProject(event){
 	let parentDiv = ref.parentNode;
 	parentDiv.insertBefore(img, ref);
 
-	$("#content h1").html(targetObj.h1);
-	$("#content #client").html(targetObj.item_info.client);
-	$("#content #role").html(targetObj.item_info.role);
-	$("#content #period").html(targetObj.item_info.period);
+	$("#port_content h1").html(targetObj.h1);
+	$("#port_content #client").html(targetObj.item_info.client);
+	$("#port_content #role").html(targetObj.item_info.role);
+	$("#port_content #period").html(targetObj.item_info.period);
 
 
 	$currentContent = targetObj.content;
