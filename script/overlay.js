@@ -11,7 +11,7 @@ $( "#work img" ).click(function() {
     $('#overlay').addClass('visible');
 	$('body').addClass('noScroll');
 	setTimeout(function() {
-		$('section, header,footer').addClass('blur');
+		$('#content').addClass('blur');
 	}, 50);
 	renderProject(this);
 
@@ -33,7 +33,7 @@ function closeOverlay(){
 	$('#overlay').addClass('hidden');
     $('#overlay').removeClass('visible');
     $('body').removeClass('noScroll');
-    $('section, header ,footer').removeClass('blur');
+    $('#content').removeClass('blur');
     setTimeout(function() {
 		$("#port_img").remove();
 		$('.contentQuote').remove();

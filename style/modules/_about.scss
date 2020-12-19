@@ -1,25 +1,35 @@
 #about{
     width: 100vw;
+    white-space: normal;
+    margin-left: 20%;
     #bio{
+        width: 50%;
         float: left;
         padding: 20px;
         padding-top: 10vh;
         height: 100%;
         img{
             width: 200px;
+            float: left;
+        }
+        ul{
+            float: left;
+            padding: 20px;
         }
     }
     #cv{
+        width: 50%;
         float: left;
         padding: 20px;
         height: 100%;
         position: relative;
-
+        
         ul{
             position: absolute;
-            bottom: 10vh;
-            left: 20vw;
+            bottom: 5%;
+            right: 10%;
         }
+        
     }
 }
 
