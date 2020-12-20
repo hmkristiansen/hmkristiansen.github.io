@@ -1,6 +1,7 @@
-var shake,ctrl,futura,nn,aw;
+var shake,ctrl,futura,nn,aw,play;
 
 var projects = [
+	["play",play],
 	["aw",aw],
 	["shake",shake],
 	["nn",nn],
@@ -50,6 +51,9 @@ function renderPhotogrid(){
 
 	for(var i=0; i<projects.length; i++){
 
+		let workItemContainer = document.createElement('div');
+		workItemContainer.classList += "workItemContainer";
+
 		let workItem = document.createElement('div');
 		workItem.classList += "workItem";
 		workItem.id = "item"+i;
@@ -62,7 +66,9 @@ function renderPhotogrid(){
 		h1.innerHTML = projects[i][1].h1;
 		workItem.appendChild(h1);
 
-		workContainer.appendChild(workItem);
+		workItemContainer.appendChild(workItem);
+
+		workContainer.appendChild(workItemContainer);
 
 	}
 }

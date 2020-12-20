@@ -180,21 +180,19 @@
 */
 
 #greeting{
-    width: 90vw;
-    float: left;
-
+    width: 80vw;
     //padding-top: 100px;
 
     #greeting_cont{
         #greeting_message{
-            padding-left: 5%;
-            font-size: 2rem;
+            padding-left: 3vw;
+            font-size: 3rem;
             //font-weight: bold;
 
-            margin-top: 25vh;
+            margin-top: 40vh;
             
             #status_cont{
-                width: 40%;
+                width: 80%;
             }   
             .status{
                 display: inline-block;
@@ -215,7 +213,7 @@ body.mobile #greeting{
     float: none;
 
     #greeting_cont{
-        margin-top: 25vh;
+        margin-top: 10vh;
         #greeting_message{
             
             #status_cont{
@@ -233,6 +231,10 @@ body.mobile #greeting{
             }   
         }
     }
+}
+
+#status0{
+    z-index: 1000;
 }
 
 .carusellOut{
@@ -255,6 +257,20 @@ body.mobile #greeting{
     top: 0;
     transition: top ease 0.5s;
     display: inline-block;
+}
+
+#replayGreeting{
+    position: relative;
+    top: 0;
+    display: inline-block;
+    font-size: 1rem;
+    opacity: 0.5;
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+body.non-touch #replayGreeting:hover{
+    opacity: 1;
 }
 
 body.non-touch .scrollMe:hover{

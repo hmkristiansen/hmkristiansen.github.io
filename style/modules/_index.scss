@@ -104,8 +104,7 @@ section{
     margin: 0;
     height: 100%;
     display: inline-block;
-    white-space: nowrap;
-    padding: 40px; 
+    white-space: nowrap; 
     vertical-align: text-top;
     vertical-align: middle;
 }
@@ -113,7 +112,7 @@ section{
 #header{
     position: fixed;
     z-index: 1000;
-    padding: 40px;
+    padding: 3vw;
 }
 
 body.mobile #header{

@@ -1,14 +1,11 @@
 
 {
     "header_img": "assets/aw/aw.gif",
-    "h1": "ANYWHERE",
+    "h1": "Interaction designer and concept developer for ITERATE",
     "item_info": {
         "client": "<span>Client:</span> ITERATE | ANYWHERE",
         "role": "<span>Role:</span> Interaction designer",
         "period": "<span>Period:</span> Summer '20"
-    },
-    "quote":{
-
     },
     "content":{
         "quote":"ANYWHERE is a new kind of streaming platform for events that aims to be a different experince for artist and audience alike.",

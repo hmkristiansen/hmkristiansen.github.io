@@ -143,7 +143,6 @@ section {
   height: 100%;
   display: inline-block;
   white-space: nowrap;
-  padding: 40px;
   vertical-align: text-top;
   vertical-align: middle;
 }
@@ -151,7 +150,7 @@ section {
 #header {
   position: fixed;
   z-index: 1000;
-  padding: 40px;
+  padding: 3vw;
 }
 
 body.mobile #header {
@@ -419,18 +418,17 @@ body.mobile section {
 
 */
 #greeting {
-  width: 90vw;
-  float: left;
+  width: 80vw;
 }
 
 #greeting #greeting_cont #greeting_message {
-  padding-left: 5%;
-  font-size: 2rem;
-  margin-top: 25vh;
+  padding-left: 3vw;
+  font-size: 3rem;
+  margin-top: 40vh;
 }
 
 #greeting #greeting_cont #greeting_message #status_cont {
-  width: 40%;
+  width: 80%;
 }
 
 #greeting #greeting_cont #greeting_message .status {
@@ -450,7 +448,7 @@ body.mobile #greeting {
 }
 
 body.mobile #greeting #greeting_cont {
-  margin-top: 25vh;
+  margin-top: 10vh;
 }
 
 body.mobile #greeting #greeting_cont #greeting_message #status_cont {
@@ -466,6 +464,10 @@ body.mobile #greeting #greeting_cont #greeting_message .status {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   pointer-events: all;
+}
+
+#status0 {
+  z-index: 1000;
 }
 
 .carusellOut {
@@ -490,6 +492,21 @@ body.mobile #greeting #greeting_cont #greeting_message .status {
   -webkit-transition: top ease 0.5s;
   transition: top ease 0.5s;
   display: inline-block;
+}
+
+#replayGreeting {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  font-size: 1rem;
+  opacity: 0.5;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+body.non-touch #replayGreeting:hover {
+  opacity: 1;
 }
 
 body.non-touch .scrollMe:hover {
@@ -519,18 +536,95 @@ body.non-touch .scrollMe:hover {
   margin: 0 10vw;
 }
 
-#work .workItem {
-  position: relative;
-  top: 0;
+#work .workItemContainer {
+  margin: 0;
+  padding: 0;
   width: 70vw;
+  top: 0;
   height: 100%;
   display: inline-block;
   padding: 1%;
-  cursor: pointer;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
-#work .workItem img {
+#work .workItemContainer .workItem {
+  height: auto;
+  position: absolute;
+  cursor: pointer;
+  white-space: normal;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+#work .workItemContainer .workItem img {
+  position: relative;
+  -webkit-transition: inherit;
+  transition: inherit;
   width: 100%;
+  max-height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 10px -10px rgba(122, 122, 122, 0.6);
+  box-shadow: 0px 5px 10px -10px rgba(122, 122, 122, 0.6);
+}
+
+#work .workItemContainer .workItem h1 {
+  position: relative;
+  -webkit-transition: inherit;
+  transition: inherit;
+  opacity: 0;
+  width: 50%;
+}
+
+#work .workItemContainer #item0 {
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(0.7, 0.7);
+          transform: scale(0.7, 0.7);
+}
+
+#work .workItemContainer #item1 {
+  bottom: 5%;
+  right: 0;
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+}
+
+#work .workItemContainer #item2 {
+  top: -5%;
+  left: 0;
+  -webkit-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+}
+
+#work .workItemContainer #item3 {
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scale(0.7, 0.7);
+          transform: scale(0.7, 0.7);
+}
+
+#work .workItemContainer #item4 {
+  top: 10%;
+  right: 0;
+  -webkit-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
+}
+
+body.non-touch .workItem:hover img {
+  -webkit-box-shadow: 0px 10px 30px -10px rgba(122, 122, 122, 0.6) !important;
+  box-shadow: 0px 10px 30px -10px rgba(122, 122, 122, 0.6) !important;
+  -webkit-transform: translateY(-5px) rotate(0.5deg);
+          transform: translateY(-5px) rotate(0.5deg);
+}
+
+body.non-touch .workItem:hover h1 {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  opacity: 1 !important;
 }
 
 body.mobile #work {

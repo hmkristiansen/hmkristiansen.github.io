@@ -76,7 +76,7 @@ function renderProject(event){
 	let parentDiv = ref.parentNode;
 	parentDiv.insertBefore(img, ref);
 
-	$("#port_content h1").html(targetObj.h1);
+	//$("#port_content h1").html(targetObj.h1);
 	$("#port_content #client").html(targetObj.item_info.client);
 	$("#port_content #role").html(targetObj.item_info.role);
 	$("#port_content #period").html(targetObj.item_info.period);
