@@ -153,6 +153,20 @@ section {
   padding: 3vw;
 }
 
+#header ul li {
+  position: relative;
+  display: inline;
+  -webkit-transition: ease 200ms;
+  transition: ease 200ms;
+  top: 0;
+}
+
+#header ul .hidden_nav {
+  opacity: 0;
+  top: 5px;
+  pointer-events: none;
+}
+
 body.mobile #header {
   padding: 20px;
 }
@@ -181,7 +195,7 @@ body.mobile section {
   height: auto;
   display: block;
   white-space: initial;
-  padding: 40px;
+  padding: 0;
 }
 
 @-webkit-keyframes shake {
@@ -418,7 +432,7 @@ body.mobile section {
 
 */
 #greeting {
-  width: 80vw;
+  width: 75vw;
 }
 
 #greeting #greeting_cont #greeting_message {
@@ -502,7 +516,7 @@ body.mobile #greeting #greeting_cont #greeting_message .status {
   opacity: 0.5;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
-  cursor: pointer;
+  cursor: copy;
 }
 
 body.non-touch #replayGreeting:hover {
@@ -554,8 +568,8 @@ body.non-touch .scrollMe:hover {
   position: absolute;
   cursor: pointer;
   white-space: normal;
-  -webkit-transition: ease-in-out 300ms;
-  transition: ease-in-out 300ms;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
 }
 
 #work .workItemContainer .workItem img {
@@ -614,6 +628,13 @@ body.non-touch .scrollMe:hover {
           transform: scale(0.9, 0.9);
 }
 
+#work .workItemContainer #item5 {
+  bottom: 10%;
+  right: 0;
+  -webkit-transform: scale(0.6, 0.6);
+          transform: scale(0.6, 0.6);
+}
+
 body.non-touch .workItem:hover img {
   -webkit-box-shadow: 0px 10px 30px -10px rgba(122, 122, 122, 0.6) !important;
   box-shadow: 0px 10px 30px -10px rgba(122, 122, 122, 0.6) !important;
@@ -628,21 +649,29 @@ body.non-touch .workItem:hover h1 {
 }
 
 body.mobile #work {
-  margin: 0 10px;
+  margin: 0;
+  padding: 0 !important;
 }
 
-body.mobile #work .workItem {
+body.mobile #work .workItemContainer {
   position: relative;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: auto;
-  display: block;
-  padding: 2%;
-  cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
-body.mobile #work .workItem img {
+body.mobile #work .workItemContainer .workItem {
+  position: relative;
   width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body.mobile #work .workItemContainer .workItem img {
+  width: 100%;
+  max-height: unset;
 }
 
 #about {
@@ -651,22 +680,27 @@ body.mobile #work .workItem img {
   margin-left: 20%;
 }
 
-#about #bio {
+#about #bioContainer {
   width: 50%;
   float: left;
   padding: 20px;
-  padding-top: 10vh;
   height: 100%;
 }
 
-#about #bio img {
-  width: 200px;
-  float: left;
+#about #bioContainer #bio {
+  position: absolute;
+  top: 10%;
 }
 
-#about #bio ul {
-  float: left;
-  padding: 20px;
+#about #bioContainer #bio img {
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 25%;
+}
+
+#about #bioContainer #bio ul {
+  margin-top: 20px;
 }
 
 #about #cv {
@@ -679,8 +713,8 @@ body.mobile #work .workItem img {
 
 #about #cv ul {
   position: absolute;
-  bottom: 5%;
-  right: 10%;
+  width: 80%;
+  bottom: 10%;
 }
 
 body.mobile #about {
@@ -708,8 +742,26 @@ body.mobile #about #cv ul {
 
 #contact {
   width: 100vw;
-  padding-top: 20%;
-  padding-left: 20%;
+}
+
+#contact #info {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+#contact #easter {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.5;
+  cursor: w-resize;
+  -webkit-transition: ease 200ms;
+  transition: ease 200ms;
+}
+
+body.non-touch #easter:hover {
+  opacity: 1 !important;
 }
 
 #overlay {

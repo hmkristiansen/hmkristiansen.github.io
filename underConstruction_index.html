@@ -16,8 +16,15 @@
 
     <div id="content">
 
-        <div id="header">Henrik M. Kristiansen<br>↳ design student
+        <div id="header">Henrik M. Kristiansen<br>
+            <ul>
+                <li id="greetig_nav" onclick="goToSection(this.id);">↳ greeting</li>
+                <li class="hidden_nav" id="work_nav" onclick="goToSection(this.id);">→ work</li>
+                <li class="hidden_nav" id="about_nav" onclick="goToSection(this.id);">→ about</li>
+                <li class="hidden_nav" id="contact_nav" onclick="goToSection(this.id);">→ contact</li>
+            </ul>
         </div>
+
         <section id="greeting">
             <div id="greeting_cont">
                 <div id="greeting_message">
@@ -36,19 +43,21 @@
 
         <section id="about" class="">
             
-            <div id="bio">
-                <img src="assets/hug.jpg">
-                <ul>
-                    <li style="font-weight: bold;">Henrik M. Kristiansen</li>
-                    <li id="life_counter">
-                        <div id="life_wrapper">
-                            <span id="age">23.71121266889751</span>
-                        </div>
-                    </li>
-                    <li>curr: TRD</li>
-                    <li>prev: LYR · OSL · LIS</li>
-                    <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🏃‍♂️}</li>
-                </ul>
+            <div id="bioContainer">
+                <div id="bio">
+                    <img src="assets/hug.jpg">
+                    <ul>
+                        <li style="font-weight: bold;">Henrik M. Kristiansen</li>
+                        <li id="life_counter">
+                            <div id="life_wrapper">
+                                <span id="age">23.71121266889751</span>
+                            </div>
+                        </li>
+                        <li>curr: OSL</li>
+                        <li>prev: LYR · LIS · TRD</li>
+                        <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🏃‍♂️}</li>
+                    </ul>
+                </div>
             </div>
 
             <div id="cv">
@@ -83,6 +92,7 @@
                     <li id="info_link"><a href="assets/cvhmk.pdf" target="_blank">→ cv</a></li>
                 </ul>
             </div>
+            <p id="easter" onclick="goBackToStart();">The End 🥺</p>
         </section>
 
     </div>

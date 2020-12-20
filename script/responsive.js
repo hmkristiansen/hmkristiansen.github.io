@@ -16,5 +16,7 @@ function checkWindowRatio(){
     }else{
         document.getElementById('body').classList.remove("desktop");
         document.getElementById('body').classList.add("mobile");
+        
+        document.getElementById("greetig_nav").innerHTML = "↳ design student";
     }
 }

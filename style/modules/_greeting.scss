@@ -180,7 +180,7 @@
 */
 
 #greeting{
-    width: 80vw;
+    width: 75vw;
     //padding-top: 100px;
 
     #greeting_cont{
@@ -266,7 +266,7 @@ body.mobile #greeting{
     font-size: 1rem;
     opacity: 0.5;
     transition: ease 0.3s;
-    cursor: pointer;
+    cursor: copy;
 }
 
 body.non-touch #replayGreeting:hover{

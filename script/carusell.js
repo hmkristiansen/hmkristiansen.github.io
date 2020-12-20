@@ -3,10 +3,10 @@ var updateStatus = false;
 
 var sentences = 
 ["Heisann, I'm Henrik <span id='hand-wave'>👋</span>",
-"I'm a design student, currently preparing myself for my next adventure in København, Danmark</a>",
-"For the moment I'm reading <a href='https://www.goodreads.com/book/show/23692271-sapiens' target='_blank'>Sapiens: A Brief History of Humankind</a> and playing <a href='https://dead-cells.com/' target='_blank'>Dead Cells</a> on my iPad",
+"I'm a design student, preparing for my next adventure in København, Danmark</a>",
+"Currently I'm reading <a href='https://www.goodreads.com/book/show/23692271-sapiens' target='_blank'>Sapiens: A Brief History of Humankind</a> and playing <a href='https://dead-cells.com/' target='_blank'>Dead Cells</a> on my iPad",
 "I'm also teaching myself how to do a handstand 🤸‍♂️",
-"Continue scrolling to learn more about me 👉<br><span id='replayGreeting' onClick='replayGreeting();'>replay ↺</span>"
+"Scroll to learn more about me ✌️<br><span id='replayGreeting' onClick='replayGreeting();'>replay ↺</span>"
 ];
 
 //$('#status').innerHTML(sentences[0]);

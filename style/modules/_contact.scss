@@ -1,5 +1,22 @@
 #contact{
     width: 100vw;
-    padding-top: 20%;
-    padding-left: 20%;
+    #info{
+        position: absolute;
+        top: 30%;
+        left: 30%;
+    }
+
+    #easter{
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        opacity: 0.5;
+        cursor: w-resize;
+        transition: ease 200ms;
+    }
+
+}
+
+body.non-touch #easter:hover{
+    opacity: 1 !important;
 }

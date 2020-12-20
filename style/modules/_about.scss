@@ -2,21 +2,37 @@
     width: 100vw;
     white-space: normal;
     margin-left: 20%;
-    #bio{
+
+    #bioContainer{
+
         width: 50%;
         float: left;
         padding: 20px;
-        padding-top: 10vh;
+        //padding-top: 10vh;
         height: 100%;
-        img{
-            width: 200px;
-            float: left;
+
+        #bio{
+            
+            position: absolute;
+
+            top: 10%;
+
+            img{
+                height: 40vh;
+                object-fit: cover;
+                width: 25%;
+                //float: left;
+            }
+            ul{
+                margin-top: 20px;
+                //text-align: right;
+                //float: left;
+                //padding: 20px;
+            }
         }
-        ul{
-            float: left;
-            padding: 20px;
-        }
+
     }
+
     #cv{
         width: 50%;
         float: left;
@@ -26,8 +42,9 @@
         
         ul{
             position: absolute;
-            bottom: 5%;
-            right: 10%;
+            width: 80%;
+            bottom: 10%;
+            //left: 10%;
         }
         
     }

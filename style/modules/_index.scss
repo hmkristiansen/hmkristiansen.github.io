@@ -113,6 +113,24 @@ section{
     position: fixed;
     z-index: 1000;
     padding: 3vw;
+
+    ul{
+        li{
+            position: relative;
+            display: inline;
+            transition: ease 200ms;
+            top:0;
+            //cursor: pointer;
+        }
+
+        .hidden_nav{
+            opacity: 0;
+            //transform: translateY(5px) !important;
+            top: 5px;
+            pointer-events: none;
+        }
+    }
+    
 }
 
 body.mobile #header{
@@ -144,7 +162,7 @@ body.mobile section{
     height: auto;
     display: block;
     white-space: initial;
-    padding: 40px; 
+    padding: 0; 
 }
 
 
