@@ -8,15 +8,47 @@
 
     #easter{
         position: absolute;
-        right: 20px;
-        bottom: 20px;
+        right: 10px;
+        bottom: 10px;
         opacity: 0.5;
         cursor: w-resize;
         transition: ease 200ms;
+        padding: 10px;
     }
 
 }
 
 body.non-touch #easter:hover{
     opacity: 1 !important;
+}
+
+body.mobile #contact{
+    //margin-top: 20vh;
+    //background-color: red;
+    padding: 10px;
+    position: relative;
+    top: 20vh;
+    #info{
+        position: relative;
+        top: unset;
+        left: unset;
+
+        ul{
+            li{
+                font-size: 1.2rem;
+                margin: 20px 0;
+            }
+        }
+    }
+
+    #easter{
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        opacity: 0.7;
+        cursor: n-resize;
+        padding: 10px;
+    }
+
+    padding-bottom: 40vh !important;
 }

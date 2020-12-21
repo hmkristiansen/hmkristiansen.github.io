@@ -4,46 +4,34 @@
     margin-left: 20%;
 
     #bioContainer{
-
         width: 50%;
         float: left;
         padding: 20px;
-        //padding-top: 10vh;
-        height: 100%;
+        height: auto;
 
         #bio{
-            
             position: absolute;
-
             top: 10%;
-
             img{
                 height: 40vh;
                 object-fit: cover;
                 width: 25%;
-                //float: left;
             }
             ul{
                 margin-top: 20px;
-                //text-align: right;
-                //float: left;
-                //padding: 20px;
             }
         }
-
     }
 
     #cv{
         width: 50%;
         float: left;
         padding: 20px;
-        height: 100%;
-        position: relative;
-        
+        height: auto;        
         ul{
             position: absolute;
             width: 80%;
-            bottom: 10%;
+            bottom: 5%;
             //left: 10%;
         }
         
@@ -51,18 +39,47 @@
 }
 
 body.mobile #about{
-    width: 100%;
     position: relative;
-    #bio{
-        float: none;
-        img{
-            width: 200px;
+    margin: 0;
+    padding: 0 10px;
+    white-space: unset;
+    width: 100%;
+    height: auto;
+    clear:both;
+
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+
+    #bioContainer{
+        position: inherit;
+
+        width: 50%;
+        float: left;
+        padding: 0;
+        //padding-top: 10vh;
+        height: 100%;
+
+        #bio{
+            position: inherit;
+            float: none;
+            img{
+                height: auto;
+                object-fit: cover;
+                width: 90%;
+                //float: left;
+            }
         }
     }
     #cv{
-        float: none;
+        position: inherit;
+        width: 50%;
+        height: 100%;
+        float: left;
+        padding: 0;
+        padding-top: 20vh;
         ul{
-            position: relative;
+            width: 100%;
+            position: inherit;
             bottom: unset;
             left: unset;
         }

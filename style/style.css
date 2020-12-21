@@ -196,6 +196,7 @@ body.mobile section {
   display: block;
   white-space: initial;
   padding: 0;
+  clear: both;
 }
 
 @-webkit-keyframes shake {
@@ -462,7 +463,11 @@ body.mobile #greeting {
 }
 
 body.mobile #greeting #greeting_cont {
-  margin-top: 10vh;
+  margin-top: 5vh;
+}
+
+body.mobile #greeting #greeting_cont #greeting_message {
+  font-size: 2rem;
 }
 
 body.mobile #greeting #greeting_cont #greeting_message #status_cont {
@@ -601,14 +606,14 @@ body.non-touch .scrollMe:hover {
 }
 
 #work .workItemContainer #item1 {
-  bottom: 5%;
+  bottom: 2%;
   right: 0;
   -webkit-transform: scale(0.8, 0.8);
           transform: scale(0.8, 0.8);
 }
 
 #work .workItemContainer #item2 {
-  top: -5%;
+  top: -1%;
   left: 0;
   -webkit-transform: scale(0.8, 0.8);
           transform: scale(0.8, 0.8);
@@ -659,19 +664,79 @@ body.mobile #work .workItemContainer {
   width: 100vw;
   height: auto;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
 }
 
 body.mobile #work .workItemContainer .workItem {
   position: relative;
-  width: 100%;
+  scale: unset;
   padding: 0;
-  margin: 0;
+  margin-bottom: 10vh;
 }
 
 body.mobile #work .workItemContainer .workItem img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: unset;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
   width: 100%;
   max-height: unset;
+}
+
+body.mobile #work .workItemContainer .workItem h1 {
+  position: relative;
+  -webkit-transition: inherit;
+  transition: inherit;
+  opacity: 1;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+body.mobile #work .workItemContainer #item0 {
+  top: unset;
+  left: unset;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+body.mobile #work .workItemContainer #item1 {
+  top: unset;
+  left: unset;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+body.mobile #work .workItemContainer #item2 {
+  top: unset;
+  left: unset;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+body.mobile #work .workItemContainer #item3 {
+  top: unset;
+  left: unset;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+body.mobile #work .workItemContainer #item4 {
+  top: unset;
+  left: unset;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+body.mobile #work .workItemContainer #item5 {
+  top: unset;
+  left: unset;
+  -webkit-transform: unset;
+          transform: unset;
 }
 
 #about {
@@ -684,7 +749,7 @@ body.mobile #work .workItemContainer .workItem img {
   width: 50%;
   float: left;
   padding: 20px;
-  height: 100%;
+  height: auto;
 }
 
 #about #bioContainer #bio {
@@ -707,35 +772,59 @@ body.mobile #work .workItemContainer .workItem img {
   width: 50%;
   float: left;
   padding: 20px;
-  height: 100%;
-  position: relative;
+  height: auto;
 }
 
 #about #cv ul {
   position: absolute;
   width: 80%;
-  bottom: 10%;
+  bottom: 5%;
 }
 
 body.mobile #about {
-  width: 100%;
   position: relative;
+  margin: 0;
+  padding: 0 10px;
+  white-space: unset;
+  width: 100%;
+  height: auto;
+  clear: both;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 
-body.mobile #about #bio {
+body.mobile #about #bioContainer {
+  position: inherit;
+  width: 50%;
+  float: left;
+  padding: 0;
+  height: 100%;
+}
+
+body.mobile #about #bioContainer #bio {
+  position: inherit;
   float: none;
 }
 
-body.mobile #about #bio img {
-  width: 200px;
+body.mobile #about #bioContainer #bio img {
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 90%;
 }
 
 body.mobile #about #cv {
-  float: none;
+  position: inherit;
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 0;
+  padding-top: 20vh;
 }
 
 body.mobile #about #cv ul {
-  position: relative;
+  width: 100%;
+  position: inherit;
   bottom: unset;
   left: unset;
 }
@@ -752,16 +841,44 @@ body.mobile #about #cv ul {
 
 #contact #easter {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 10px;
+  bottom: 10px;
   opacity: 0.5;
   cursor: w-resize;
   -webkit-transition: ease 200ms;
   transition: ease 200ms;
+  padding: 10px;
 }
 
 body.non-touch #easter:hover {
   opacity: 1 !important;
+}
+
+body.mobile #contact {
+  padding: 10px;
+  position: relative;
+  top: 20vh;
+  padding-bottom: 40vh !important;
+}
+
+body.mobile #contact #info {
+  position: relative;
+  top: unset;
+  left: unset;
+}
+
+body.mobile #contact #info ul li {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+body.mobile #contact #easter {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  opacity: 0.7;
+  cursor: n-resize;
+  padding: 10px;
 }
 
 #overlay {
@@ -863,13 +980,9 @@ body.non-touch #easter:hover {
   text-align: left;
 }
 
-#overlay #port_content ul {
-  font-size: 1rem;
-  font-weight: 100;
-  margin: 0;
-}
-
 #overlay #port_content #item_info {
+  padding: 0;
+  margin: 0;
   margin-top: 40px;
   margin-bottom: 20px;
   clear: both;
@@ -880,7 +993,15 @@ body.non-touch #easter:hover {
   padding-right: 5px;
 }
 
-#overlay #port_content #item_info li {
+#overlay #port_content #item_info ul {
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+#overlay #port_content #item_info ul li {
+  padding: 0;
+  margin: 0;
   margin-top: 15px;
 }
 

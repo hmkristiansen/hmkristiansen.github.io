@@ -1,7 +1,9 @@
 checkWindowRatio();
+var mobileRatio = false;
 
 $(window).resize(function() { 
     checkWindowRatio();
+    scrollToDefault();
 });
 
 function checkWindowRatio(){
@@ -10,13 +12,17 @@ function checkWindowRatio(){
     let ratio = w/h;
     //console.log(ratio);
     if(ratio >= 1){
-        console.log("desktop");
         document.getElementById('body').classList.remove("mobile");
         document.getElementById('body').classList.add("desktop");
+        mobileRatio = false;
     }else{
         document.getElementById('body').classList.remove("desktop");
         document.getElementById('body').classList.add("mobile");
-        
+        mobileRatio = true;
         document.getElementById("greetig_nav").innerHTML = "↳ design student";
     }
+}
+
+function scrollToDefault(){
+    document.getElementById('content').scrollTo(0, 0);
 }

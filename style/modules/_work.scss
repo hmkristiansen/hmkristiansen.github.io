@@ -53,12 +53,12 @@
             transform: scale(0.7,0.7);
         }
         #item1{
-            bottom:5%;
+            bottom:2%;
             right: 0;
             transform: scale(0.8,0.8);
         }
         #item2{
-            top:-5%;
+            top:-1%;
             left: 0;
             transform: scale(0.8,0.8);
         }
@@ -106,21 +106,68 @@ body.mobile #work{
         //display: block;
 
         margin: 0;
-        padding: 0;
+        padding: 0 10px;
         
 
         .workItem{
             position: relative;
 
-            width: 100%;
+            scale: unset;
 
             padding: 0;
-            margin: 0;
+            margin-bottom: 10vh;
 
             img{
+                position: relative;
+                object-fit: cover;
+                border-radius: unset;
+                -webkit-box-shadow: unset;
+                box-shadow: unset;
                 width: 100%;
                 max-height: unset;
             }
+
+            h1{
+                position: relative;
+                transition: inherit;
+                opacity: 1;
+                width: 75%;
+                margin: 0 auto;
+                text-align: center;
+                font-weight: normal;
+                margin-top: 20px;
+            }
+        }
+
+        #item0{
+            top: unset;
+            left: unset;
+            transform: unset;
+        }
+        #item1{
+            top: unset;
+            left: unset;
+            transform: unset;
+        }
+        #item2{
+            top: unset;
+            left: unset;
+            transform: unset;
+        }
+        #item3{
+            top: unset;
+            left: unset;
+            transform: unset;
+        }
+        #item4{
+            top: unset;
+            left: unset;
+            transform: unset;
+        }
+        #item5{
+            top: unset;
+            left: unset;
+            transform: unset;
         }
     }
 }
