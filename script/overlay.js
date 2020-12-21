@@ -50,10 +50,10 @@ function closeOverlay(){
 $( "#exp_btn" ).click(function() {
 	if( $('#port_content').hasClass('exp_overlay')){
 		$('#port_content').removeClass('exp_overlay');
-		$('#port_content').addClass('dexp_overlay');
+		//$('#port_content').addClass('dexp_overlay');
 		$("#exp_btn img").attr("src","assets/svg/max.svg");
 	}else{
-		$('#port_content').removeClass('dexp_overlay');
+		//$('#port_content').removeClass('dexp_overlay');
 		$('#port_content').addClass('exp_overlay');
 		$("#exp_btn img").attr("src","assets/svg/min.svg");
 	}
