@@ -35,8 +35,10 @@
 
                 border-radius: 10px;
 
-                -webkit-box-shadow: 0px 5px 10px -10px rgba(122,122,122,0.6); 
-                box-shadow: 0px 5px 10px -10px rgba(122,122,122,0.6);
+                border: 0.5px solid rgb(233, 233, 233);
+
+                -webkit-box-shadow: 0px 5px 15px -10px rgba(122,122,122,0.6); 
+                box-shadow: 0px 5px 15px -10px rgba(122,122,122,0.6);
             }
 
             h1{
@@ -120,7 +122,7 @@ body.mobile #work{
             img{
                 position: relative;
                 object-fit: cover;
-                border-radius: unset;
+                border-radius: 5px;
                 -webkit-box-shadow: unset;
                 box-shadow: unset;
                 width: 100%;

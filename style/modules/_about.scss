@@ -27,7 +27,12 @@
         width: 50%;
         float: left;
         padding: 20px;
-        height: auto;        
+        height: auto;    
+        
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+        
         ul{
             position: absolute;
             width: 80%;
@@ -53,11 +58,13 @@ body.mobile #about{
     #bioContainer{
         position: inherit;
 
-        width: 50%;
-        float: left;
+        width: 100%;
+        //float: left;
         padding: 0;
         //padding-top: 10vh;
-        height: 100%;
+        height: auto;
+
+        margin-left: 5%;
 
         #bio{
             position: inherit;
@@ -65,23 +72,33 @@ body.mobile #about{
             img{
                 height: auto;
                 object-fit: cover;
-                width: 90%;
+                width: 75%;
                 //float: left;
             }
         }
     }
     #cv{
         position: inherit;
-        width: 50%;
-        height: 100%;
-        float: left;
+        width: 100%;
+        height: auto;
+        //float: left;
         padding: 0;
-        padding-top: 20vh;
+        //padding-top: 20vh;
+        margin-left: 35%;
+        margin-right: 5%;
         ul{
-            width: 100%;
+            width: 60%;
             position: inherit;
             bottom: unset;
             left: unset;
+            li{
+                h1{
+                    text-align: right;
+                }
+                p{
+                    text-align: right;
+                }
+            }
         }
     }
 

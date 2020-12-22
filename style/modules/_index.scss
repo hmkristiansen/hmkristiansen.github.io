@@ -4,6 +4,10 @@
     -webkit-box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 html{
     font-size: 1vw;
     font-size: 16px;
@@ -114,13 +118,19 @@ section{
     z-index: 1000;
     padding: 3vw;
 
+    font-weight: bold;
+    font-size: 1rem;
+
     ul{
+        margin-top: 5px;
+        font-weight: normal;
         li{
             position: relative;
             display: inline;
             transition: ease 200ms;
             top:0;
-            //cursor: pointer;
+            cursor: w-resize;
+            color: $link-color-light;
         }
 
         .hidden_nav{
@@ -133,8 +143,18 @@ section{
     
 }
 
+body.non-touch #header ul li:hover{
+    color: $hover-link-color-light;
+}
+
 body.mobile #header{
     padding: 20px;
+
+    ul{
+        li{
+            cursor: n-resize;
+        }
+    }
 }
 
 body.non-touch #greeting:hover{

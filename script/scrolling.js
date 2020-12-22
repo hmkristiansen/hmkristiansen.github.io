@@ -23,7 +23,7 @@ window.addEventListener('wheel', function(e) {
         }else{
             content.scrollLeft += diff/2;
         }
-        checkAndUpdateHeader();
+        //checkAndUpdateHeader();
         ticking = true;
     }
 
@@ -31,10 +31,17 @@ window.addEventListener('wheel', function(e) {
 }, { passive: true });
 
 function checkAndUpdateHeader(){
+
+    if(!document.getElementById("about_nav").classList.contains("hidden_nav")){
+        updateAgeBool = true;
+    }else{
+        updateAgeBool = false;
+    }
+
+
     for(var i = 0; i<subContent.length; i++){
         let currElement = subContent[i];
         if(mobileRatio){
-            console.log("mobile nav");
             let offset = currElement.getBoundingClientRect().top;
             let navElement = document.getElementById(currElement.id + "_nav");
             if (offset > -200 && offset < 200) {
@@ -50,7 +57,7 @@ function checkAndUpdateHeader(){
             //console.log("desktop nav");
             let offset = currElement.getBoundingClientRect().left;
             let navElement = document.getElementById(currElement.id + "_nav");
-            if (offset > -400 && offset < 400) {
+            if (offset > -400 && offset < 800) {
                 if(navElement.classList.contains("hidden_nav")){
                     navElement.classList.remove("hidden_nav");
                 }
@@ -64,7 +71,6 @@ function checkAndUpdateHeader(){
 }
 
 function goBackToStart(){
-    //content.scrollLeft = 0;
     if(mobileRatio){
         $(content).animate({scrollTop:0});
     }else{
@@ -77,7 +83,8 @@ function goBackToStart(){
 }
 
 function goToSection(clicked_id){
-    //console.log(clicked_id);
     let idArr = clicked_id.split("_");
-    //console.log(idArr);
+    let selSec = document.getElementById(idArr[0]);
+    selSec.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+
 }
