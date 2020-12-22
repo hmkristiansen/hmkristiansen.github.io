@@ -1,6 +1,4 @@
 var updateAgeBool = false;
-var scrollPercentage = 0;
-
 var update = setInterval(function() {
 	if(updateAgeBool){
 		updateAge();

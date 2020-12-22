@@ -9,7 +9,7 @@ window.onbeforeunload = function () {
 
 function fadeInPage(){
     //checkIfDarkmode();
-    //preloadAnimation();
+    preloadAnimation();
     checkIfTouch();
     checkBrowser();
     scrollToDefault();
