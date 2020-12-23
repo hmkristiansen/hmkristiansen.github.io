@@ -1,30 +1,46 @@
+
+// -- FONTS --
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
-$body-font: 'Karla', sans-serif;
+$sans-font: 'Karla', sans-serif;
 $mono-font: 'Roboto Mono', monospace;
+$serif-font: 'Playfair Display', serif;
+$display-font: 'Bebas Neue', cursive;
+$hand-font: 'Caveat', cursive;
+$cyber-font: 'Orbitron', sans-serif;
 
+// -- COLOR STYLES --
+// light
 $text-color-light: #353638;
 $text-color-light-fade: rgb(202, 202, 202);
 $link-color-light: #6a6a6a;
 $hover-link-color-light: #9193a5;
 
 $bg-ligth: #ffffff;
-//$bg-ligth: #F4F4F6;
+$border-light: rgb(234, 234, 234);
+$drop-shadow-light: rgba(122,122,122,0.2);
+
 $bg-ligth-btn: #eeeeee;
 $hover-bg-ligth-btn: #e4e4e4;
 
-$crayonBtn: #ffeee6;
 
 
-// --- Darkmode
-//$bg-dark: #181818;
-$bg-dark: black;
+// dark
+$bg-dark: rgb(10, 10, 10);
 $text-color-dark: #ebebeb;
 $link-color-dark: #cacaca;
 $hover-link-color-dark: #f3f3f3;
 
-// --- TerribleMode
+//warm
+
+//cold
+
+// neon
 $bg-terrible: #cf0000;
 $text-color-terrible: #001aff;
 $link-color-terrible: #ffd000;

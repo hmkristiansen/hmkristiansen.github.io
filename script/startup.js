@@ -29,16 +29,6 @@ function checkBrowser(){
             return regexp.test(window.navigator.userAgent);
         }
         overlayFix = true; 
-        /*
-        switch (true) {
-            case test(/edg/i): overlayFix = true; return "edge";
-            case test(/opr/i) && (!!window.opr || !!window.opera): return "opera";
-            case test(/chrome/i) && !!window.chrome: overlayFix = true; return "chrome";
-            case test(/trident/i): return "ie";
-            case test(/firefox/i): overlayFix = true; return "firefox";
-            case test(/safari/i): overlayFix = true;  return "safari";
-            default: return "other";
-        }*/
     })();
     currentBrowser = browser;
 }

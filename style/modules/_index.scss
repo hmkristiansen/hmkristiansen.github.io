@@ -21,9 +21,6 @@ html{
   
 body {
     margin: 0;
-    font-family: $body-font;
-    color: $text-color-light;
-    background-color: $bg-ligth;
     scrollbar-width: none;
     margin: 0 auto !important;
     opacity: 1;
@@ -231,4 +228,11 @@ body.mobile section{
     position: fixed;
     top:0;
     left:0;
+}
+
+#settings_container{
+    position: fixed;
+    z-index: 2000;
+    bottom: 10px;
+    left: 10px;
 }

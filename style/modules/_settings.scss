@@ -1,0 +1,179 @@
+
+#settings_container{
+
+    position: fixed;
+
+    width: auto;
+    height: auto;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    bottom: calc(2vw - 10px);
+    left: calc(2vw - 10px);
+
+    background-color: $bg-ligth;
+
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.2);
+
+    transition: all 100ms;
+    z-index: 5000;
+
+    .settings_section{
+        padding: 0;
+        margin: 0;
+        padding: 10px 0px;
+        position: relative;
+
+        h1{
+            margin: 0;
+            padding: 0;
+            margin-bottom: 5px;
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+
+            li{
+
+            }
+        }
+    }
+
+    #settings_reset{
+        margin-top: 20px;
+        padding: 5px 10px;
+        color: $bg-dark;
+        border-radius: 5px;
+        transition: all 0.2s;
+        border: 2px solid $bg-ligth-btn;
+        cursor: pointer;
+    }
+}
+
+body.non-touch #settings_reset:hover{ 
+    text-decoration: none;
+    background-color: $bg-ligth-btn !important;
+}
+
+.settingsCollapsed{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 100ms;
+    pointer-events: none;
+    z-index: -10000;
+}
+
+#settings_toggle{
+    position: fixed;
+    bottom: calc(2vw - 10px);
+    left: calc(2vw - 10px);
+    padding: 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    z-index: 10000;
+    opacity: 0.4;
+
+    transition: 200ms;
+}
+
+#settings_toggle::after{
+    content: "open settings";
+    margin-left: 5px;
+    opacity: 0;
+}
+.openSettings{
+    
+}
+.openSettings::after{
+    content: "close settings" !important;
+    opacity: 1 !important;
+}
+
+body.non-touch #settings_toggle:hover{
+    opacity: 1;
+}
+
+body.non-touch #settings_toggle:hover::after{
+    opacity: 1;
+}
+
+body.mobile #settings_container{
+    padding: 10px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+
+    bottom: calc(2vw - 5px);
+    left: calc(2vw - 5px);
+}
+
+/**/
+
+
+//Fonts 
+.sans{
+    font-family: $sans-font;
+}
+
+.serif{
+    font-family: $serif-font;
+}
+
+.disp{
+    font-family: $display-font;
+}
+
+.hand{
+    font-family: $hand-font;
+}
+
+.mono{
+    font-family: $mono-font;
+}
+
+.cyber{
+    font-family: $cyber-font;
+}
+
+//Styles
+.light{
+    color: $text-color-light;
+    background-color: $bg-ligth;
+
+    #overlay{
+        #port_content{
+            background-color: $bg-ligth;
+            border: solid 1px $border-light;
+            -webkit-box-shadow: 0px 0px 20px 0px $drop-shadow-light;
+            -moz-box-shadow: 0px 0px 20px 0px $drop-shadow-light;
+            box-shadow: 0px 0px 20px 0px $drop-shadow-light;
+        }
+    }
+}
+
+.dark{
+    background-color: $bg-dark;
+    color: $text-color-dark;
+
+    #overlay{
+        #port_content{
+            background-color: $bg-dark;
+        }
+    }
+}
+
+.warm{
+    background-color: rgb(243, 217, 177);
+}
+
+.cold{
+    background-color: aliceblue;
+}
+
+.neon{
+    background-color: greenyellow;
+}
