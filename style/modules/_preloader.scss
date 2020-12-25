@@ -2,19 +2,14 @@
 #preloader_container{
 
     position: fixed !important;
-
     height: 100vh;
     width: 100vw;
 
     top: 0;
     left: 0;
-
-    background-color: white;
-
     z-index: 10000;
 
     #preloader{
-        //padding-top: 56.25%;
         width: 1000px;
         position: absolute;
         top: 45%;
@@ -36,13 +31,9 @@
     overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
-
-    #preloader_container{
-        #preloader{
-            width: 600px;
-            //top: 30%;
-        }
+body.mobile #preloader_container{
+    #preloader{
+        width: 600px;
     }
-}  
+}
 

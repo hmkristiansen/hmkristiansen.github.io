@@ -1,10 +1,7 @@
  
 #work{
-    //float: left;
     margin: 0 10vw;
-    
     .workItemContainer{
-
         margin: 0;
         padding: 0;
         width: 70vw;
@@ -34,11 +31,6 @@
                 object-fit: cover;
 
                 border-radius: 10px;
-
-                border: 0.5px solid rgb(233, 233, 233);
-
-                -webkit-box-shadow: 0px 5px 15px -10px rgba(122,122,122,0.6); 
-                box-shadow: 0px 5px 15px -10px rgba(122,122,122,0.6);
             }
 
             h1{
@@ -84,9 +76,6 @@
 
 body.non-touch .workItem:hover{
     img{
-        -webkit-box-shadow: 0px 10px 30px -10px rgba(122,122,122,0.6) !important; 
-        box-shadow: 0px 10px 30px -10px rgba(122,122,122,0.6) !important;
-
         transform: translateY(-5px) rotate(0.5deg);
     }
     h1{
@@ -96,7 +85,6 @@ body.non-touch .workItem:hover{
 }
 
 body.mobile #work{
-        //float: left;
     margin: 0;
     padding: 0 !important;
 
@@ -113,9 +101,7 @@ body.mobile #work{
 
         .workItem{
             position: relative;
-
             scale: unset;
-
             padding: 0;
             margin-bottom: 10vh;
 

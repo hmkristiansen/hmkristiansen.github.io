@@ -5,7 +5,6 @@
         top: 30%;
         left: 30%;
     }
-
     #easter{
         position: absolute;
         right: 10px;
@@ -15,7 +14,6 @@
         transition: ease 200ms;
         padding: 10px;
     }
-
 }
 
 body.non-touch #easter:hover{
@@ -23,8 +21,6 @@ body.non-touch #easter:hover{
 }
 
 body.mobile #contact{
-    //margin-top: 20vh;
-    //background-color: red;
     padding: 10px;
     position: relative;
     top: 20vh;
@@ -32,7 +28,6 @@ body.mobile #contact{
         position: relative;
         top: unset;
         left: unset;
-
         ul{
             li{
                 font-size: 1.2rem;

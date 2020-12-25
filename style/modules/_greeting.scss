@@ -1,15 +1,10 @@
 #greeting{
     width: 75vw;
-    //padding-top: 100px;
-
     #greeting_cont{
         #greeting_message{
             padding-left: 3vw;
             font-size: 3rem;
-            //font-weight: bold;
-
             margin-top: 30%;
-            
             #status_cont{
                 width: 100%;
                 max-width: 1200px;
@@ -19,8 +14,7 @@
                 position: absolute;
                 width: inherit;
                 white-space: normal;
-                //padding-left: 0.5rem;
-                transition: 0.3s;
+                transition: opacity 0.3s;
                 pointer-events: all;
             }   
         }
@@ -31,7 +25,6 @@ body.mobile #greeting{
     width: 100%;
     height: 60%;
     float: none;
-
     #greeting_cont{
         margin-top: 40%;
         #greeting_message{
@@ -45,8 +38,7 @@ body.mobile #greeting{
                 position: absolute;
                 width: inherit;
                 white-space: normal;
-                //padding-left: 0.5rem;
-                transition: 0.3s;
+                transition: opacity 0.3s;
                 pointer-events: all;
             }   
         }
@@ -91,47 +83,4 @@ body.mobile #greeting{
 
 body.non-touch #replayGreeting:hover{
     opacity: 1;
-}
-
-body.non-touch .scrollMe:hover{
-    opacity: 0.7 !important;
-    background-color: $bg-ligth-btn;
-    color: black;
-    transform-origin: center center !important;
-    transform: scale3d(1.05, 1.05, 1.05);
-}
-
-@media screen and (max-width: 1024px) {
-
-    #greeting{
-
-
-    }
-}
-
-
-
-@media screen and (max-width: 600px) {
-
-    #greeting{
-
-    }
-
-    .carusellOut{
-        transform: translateY(-30px) !important;
-        opacity: 0;
-    }
-    
-    .carusellIn{
-        transform: translateY(30px) !important;
-        opacity: 0;
-    }
-}
-
-
-
-@media screen and (max-width: 350px){
-    #greeting{
-
-    }
 }

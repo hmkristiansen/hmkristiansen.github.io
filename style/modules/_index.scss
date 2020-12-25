@@ -65,16 +65,13 @@ p{
 
 a{
     text-decoration: none;
-    color: $link-color-light;
     cursor: alias;
-    transition: all 0.1s;
+    transition: opacity .2s;
 }
 
 
 body.non-touch a:hover {
-    color: $hover-link-color-light;
-    -webkit-text-decoration-color: $hover-link-color-light; /* Safari */  
-      text-decoration-color: $hover-link-color-light;
+    opacity: 0.5;
 }
 
 ul{
@@ -127,12 +124,11 @@ section{
             transition: ease 200ms;
             top:0;
             cursor: w-resize;
-            color: $link-color-light;
+            transition: opacity .2s;
         }
 
         .hidden_nav{
             opacity: 0;
-            //transform: translateY(5px) !important;
             top: 5px;
             pointer-events: none;
         }
@@ -141,7 +137,7 @@ section{
 }
 
 body.non-touch #header ul li:hover{
-    color: $hover-link-color-light;
+    opacity: 0.7;
 }
 
 body.mobile #header{

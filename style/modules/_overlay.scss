@@ -9,7 +9,6 @@
     z-index: 1000;
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
-    transition: $snap-in-bounce;
 
     #close_btn{
         position: absolute;
@@ -219,10 +218,8 @@
 
         a{
             padding: 10px;
-            color: $bg-dark;
             border-radius: 10px;
             transition: all 0.2s;
-            border: 2px solid $bg-ligth-btn;
             cursor: s-resize;
         }
 
@@ -240,6 +237,7 @@
     scrollbar-width: none;
 }
 
+/*
 body.non-touch #close_btn:hover{
     background-color:$bg-ligth-btn;
     transform: scale(0.9) !important;
@@ -253,7 +251,7 @@ body.non-touch #exp_btn:hover{
 body.non-touch #more_link a:hover{ 
     text-decoration: none;
     background-color: $bg-ligth-btn !important;
-}
+}*/
 
 .hidden{
     pointer-events: none !important;
@@ -289,10 +287,10 @@ body.non-touch #more_link a:hover{
     transition: all 0.2s !important;
     opacity: 0.2 !important;
 
-    -moz-filter:blur(5px);
-    -o-filter:blur(5px);
-    -webkit-filter:blur(5px);
-    filter:blur(5px);
+    -moz-filter:blur(1px);
+    -o-filter:blur(1px);
+    -webkit-filter:blur(1px);
+    filter:blur(1px);
 }
 
 .darken{
@@ -338,7 +336,7 @@ body.mobile #overlay{
         height: 100%;
         margin-top: 0px;
         border-radius: 0;
-        border: solid 0px rgb(234, 234, 234);
+        border: solid 0px;
         top:0;
         left:0;
 
@@ -387,27 +385,14 @@ body.mobile #overlay{
             margin-bottom: 40px;
         }
 
-        #more_link{
-            //margin: 100px 0;
-        }
     }
 
     #close_btn{
         top: 15px;
         left: 15px;
-        background-color: $bg-ligth-btn;
     }
 
     #exp_btn{
         display: none;
     }
 }
-.blur{
-    
-    -moz-filter:blur(0px);
-    -o-filter:blur(0px);
-    -webkit-filter:blur(0px);
-    filter:blur(0px);
-}
-
-

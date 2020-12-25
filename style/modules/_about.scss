@@ -37,7 +37,6 @@
             position: absolute;
             width: 80%;
             bottom: 5%;
-            //left: 10%;
         }
         
     }
@@ -59,11 +58,8 @@ body.mobile #about{
         position: inherit;
 
         width: 100%;
-        //float: left;
         padding: 0;
-        //padding-top: 10vh;
         height: auto;
-
         margin-left: 5%;
 
         #bio{
@@ -73,7 +69,6 @@ body.mobile #about{
                 height: auto;
                 object-fit: cover;
                 width: 75%;
-                //float: left;
             }
         }
     }
@@ -81,9 +76,7 @@ body.mobile #about{
         position: inherit;
         width: 100%;
         height: auto;
-        //float: left;
         padding: 0;
-        //padding-top: 20vh;
         margin-left: 35%;
         margin-right: 5%;
         ul{
@@ -101,5 +94,4 @@ body.mobile #about{
             }
         }
     }
-
 }

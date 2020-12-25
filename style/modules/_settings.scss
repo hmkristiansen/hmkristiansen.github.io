@@ -11,11 +11,7 @@
     bottom: calc(2vw - 10px);
     left: calc(2vw - 10px);
 
-    background-color: $bg-ligth;
-
-    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.2);
+    //background-color: $bg-ligth;
 
     transition: all 100ms;
     z-index: 5000;
@@ -45,7 +41,6 @@
     #settings_reset{
         margin-top: 20px;
         padding: 5px 10px;
-        color: $bg-dark;
         border-radius: 5px;
         transition: all 0.2s;
         border: 2px solid $bg-ligth-btn;
@@ -77,7 +72,6 @@ body.non-touch #settings_reset:hover{
     text-align: center;
     z-index: 10000;
     opacity: 0.4;
-
     transition: 200ms;
 }
 
@@ -141,28 +135,188 @@ body.mobile #settings_container{
 
 //Styles
 .light{
+
+    /*GLOBAL*/
     color: $text-color-light;
     background-color: $bg-ligth;
 
+    a{
+        color: $link-color-light;
+    }
+
+    /*HEADER*/
+    #header{
+        ul{
+            li{
+                color: $link-color-light;
+            }
+        }
+    }
+
+    /*WORK*/
+    #work{
+        .workItemContainer{
+            .workItem{
+                img{
+                    border: 0.5px solid $border-light;
+
+                    -webkit-box-shadow: 0px 5px 15px -10px  $drop-shadow-light;
+                    -moz-box-shadow: 0px 5px 15px -10px  $drop-shadow-light;
+                    box-shadow: 0px 5px 15px -10px  $drop-shadow-light;
+                }
+            }
+        }
+
+        .workItem:hover{
+            img{
+                -webkit-box-shadow: 0px 10px 30px 0px  $drop-shadow-light;
+                -moz-box-shadow: 0px 10px 30px 0px  $drop-shadow-light;
+                box-shadow: 0px 10px 30px 0px  $drop-shadow-light;
+            }
+        }
+    }
+
+    /*OVERLAY*/
     #overlay{
         #port_content{
             background-color: $bg-ligth;
             border: solid 1px $border-light;
+
             -webkit-box-shadow: 0px 0px 20px 0px $drop-shadow-light;
             -moz-box-shadow: 0px 0px 20px 0px $drop-shadow-light;
             box-shadow: 0px 0px 20px 0px $drop-shadow-light;
         }
+
+        #more_link{
+            a{
+                color: $text-color-light;
+                border: 2px solid $bg-ligth-btn;
+            }
+        }
+    }
+
+    #close_btn:hover{
+        background-color:$bg-ligth-btn;
+        transform: scale(0.9) !important;
+    }
+    #exp_btn:hover{
+        background-color:$bg-ligth-btn;
+        transform: scale(1.1) !important;
+    }
+    #more_link a:hover{ 
+        opacity: 1;
+        background-color: $bg-ligth-btn !important;
+    }
+
+
+    /*SETTINGS*/
+    #settings_container{
+        background-color: $bg-ligth;
+        -webkit-box-shadow: 0px 0px 20px 0px $drop-shadow-light;
+        -moz-box-shadow: 0px 0px 20px 0px $drop-shadow-light;
+        box-shadow: 0px 0px 20px 0px $drop-shadow-light;
+    }
+
+    #settings_reset{
+        color: $text-color-light;
+    }
+
+    /*PRELOADER*/
+    #preloader_container{
+        background-color: $bg-ligth;
     }
 }
 
 .dark{
-    background-color: $bg-dark;
+   
+    /*GLOBAL*/
     color: $text-color-dark;
+    background-color: $bg-dark;
 
+    a{
+        color: $link-color-dark;
+    }
+
+    /*HEADER*/
+    #header{
+        ul{
+            li{
+                color: $link-color-dark;
+            }
+        }
+    }
+
+    /*WORK*/
+    #work{
+        .workItemContainer{
+            .workItem{
+                img{
+                    border: 0.5px solid $border-dark;
+
+                    -webkit-box-shadow: 0px 5px 15px -10px  $drop-shadow-dark;
+                    -moz-box-shadow: 0px 5px 15px -10px  $drop-shadow-dark;
+                    box-shadow: 0px 5px 15px -10px  $drop-shadow-dark;
+                }
+            }
+        }
+
+        .workItem:hover{
+            img{
+                -webkit-box-shadow: 0px 10px 30px 0px  $drop-shadow-dark;
+                -moz-box-shadow: 0px 10px 30px 0px  $drop-shadow-dark;
+                box-shadow: 0px 10px 30px 0px  $drop-shadow-dark;
+            }
+        }
+    }
+
+    /*OVERLAY*/
     #overlay{
         #port_content{
             background-color: $bg-dark;
+            border: solid 1px $border-dark;
+
+            -webkit-box-shadow: 0px 0px 20px 0px $drop-shadow-dark;
+            -moz-box-shadow: 0px 0px 20px 0px $drop-shadow-dark;
+            box-shadow: 0px 0px 20px 0px $drop-shadow-dark;
         }
+
+        #more_link{
+            a{
+                color: $text-color-dark;
+                border: 2px solid $bg-dark-btn;
+            }
+        }
+    }
+
+    #close_btn:hover{
+        background-color:$bg-dark-btn;
+        transform: scale(0.9) !important;
+    }
+    #exp_btn:hover{
+        background-color:$bg-dark-btn;
+        transform: scale(1.1) !important;
+    }
+    #more_link a:hover{ 
+        opacity: 1;
+        background-color: $bg-dark-btn !important;
+    }
+
+
+    /*SETTINGS*/
+    #settings_container{
+        background-color: $bg-dark;
+        -webkit-box-shadow: 0px 0px 20px 0px $drop-shadow-dark;
+        -moz-box-shadow: 0px 0px 20px 0px $drop-shadow-dark;
+        box-shadow: 0px 0px 20px 0px $drop-shadow-dark;
+    }
+
+    #settings_reset{
+        color: $text-color-dark;
+    }
+
+    /*PRELOADER*/
+    #preloader_container{
+        background-color: $bg-dark;
     }
 }
 
