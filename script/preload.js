@@ -79,7 +79,6 @@ function renderPhotogrid(){
 		workItemContainer.appendChild(workItem);
 
 		workContainer.appendChild(workItemContainer);
-
 	}
 }
 

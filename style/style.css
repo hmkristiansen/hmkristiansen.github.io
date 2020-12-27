@@ -71,6 +71,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
   overflow: hidden;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
@@ -130,6 +132,9 @@ ul li {
   width: auto;
   white-space: nowrap;
   position: relative;
+  opacity: 1;
+  -webkit-transition: opacity 1000ms;
+  transition: opacity 1000ms;
   overflow-x: scroll;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -263,12 +268,6 @@ body.mobile section {
   }
 }
 
-/*
-.onLoadBody, .onLoadHeader, .onLoadGreeting, .onLoadPort{
-	transition: $snap-in-fast;
-    opacity: 0;
-    transform: scale3d(0.95, 0.95, 0.95);
-}*/
 #preloader_container {
   width: 100%;
   height: 100%;
@@ -282,6 +281,11 @@ body.mobile section {
   z-index: 2000;
   bottom: 10px;
   left: 10px;
+}
+
+.hideOnLoad {
+  pointer-events: none !important;
+  opacity: 0 !important;
 }
 
 #greeting {
@@ -996,6 +1000,7 @@ body.non-touch #more_link a:hover{
   -webkit-transition: all 0.2s !important;
   transition: all 0.2s !important;
   opacity: 0.2 !important;
+  pointer-events: none !important;
   -moz-filter: blur(1px);
   -o-filter: blur(1px);
   -webkit-filter: blur(1px);
@@ -1396,14 +1401,20 @@ body.mobile #settings_container {
   border: 2px solid #696969;
 }
 
-.dark #close_btn:hover {
+.dark #close_btn {
   background-color: #696969;
+}
+
+.dark #exp_btn {
+  background-color: #696969;
+}
+
+.dark #close_btn:hover {
   -webkit-transform: scale(0.9) !important;
           transform: scale(0.9) !important;
 }
 
 .dark #exp_btn:hover {
-  background-color: #696969;
   -webkit-transform: scale(1.1) !important;
           transform: scale(1.1) !important;
 }

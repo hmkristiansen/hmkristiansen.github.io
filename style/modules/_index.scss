@@ -30,6 +30,8 @@ body {
     margin: 0;
     padding: 0;
 
+    transition: opacity 200ms;
+
     overflow: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -90,6 +92,9 @@ ul{
     width: auto;
     white-space: nowrap;
     position: relative;
+
+    opacity: 1;
+    transition: opacity 1000ms;
 
     overflow-x: scroll;
     overflow-y: hidden;
@@ -209,15 +214,6 @@ body.mobile section{
     }
 }
 
-
-/*
-.onLoadBody, .onLoadHeader, .onLoadGreeting, .onLoadPort{
-	transition: $snap-in-fast;
-    opacity: 0;
-    transform: scale3d(0.95, 0.95, 0.95);
-}*/
-
-
 #preloader_container{
     width: 100%;
     height: 100%;
@@ -231,4 +227,9 @@ body.mobile section{
     z-index: 2000;
     bottom: 10px;
     left: 10px;
+}
+
+.hideOnLoad{
+    pointer-events: none !important;
+    opacity: 0 !important;
 }

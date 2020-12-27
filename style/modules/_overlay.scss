@@ -287,6 +287,8 @@ body.non-touch #more_link a:hover{
     transition: all 0.2s !important;
     opacity: 0.2 !important;
 
+    pointer-events: none !important;
+
     -moz-filter:blur(1px);
     -o-filter:blur(1px);
     -webkit-filter:blur(1px);

@@ -344,12 +344,17 @@ body.mobile #settings_container{
         }
     }
 
-    #close_btn:hover{
+    #close_btn{
         background-color:$bg-dark-btn;
+    }
+    #exp_btn{
+        background-color:$bg-dark-btn;
+    }
+
+    #close_btn:hover{
         transform: scale(0.9) !important;
     }
     #exp_btn:hover{
-        background-color:$bg-dark-btn;
         transform: scale(1.1) !important;
     }
     #more_link a:hover{ 

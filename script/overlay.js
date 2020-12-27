@@ -1,20 +1,14 @@
 
 $( "#work img" ).click(function() {
-	
-	/*
-	if(currentBrowser == "firefox" || currentBrowser == "chrome"){
-		alert("I'm using an overlay to display the projects, and it is simply broken when using Firefox and Google Chrome 😔\nI'm working on a fix, but in the meanwhile please try Safari, Opera or Microsoft Edge! 🥳");
-		return;
-	}*/
-
     $('#overlay').removeClass('hidden');
     $('#overlay').addClass('visible');
 	$('body').addClass('noScroll');
+	if(settingsVisible){toggleSettings()};
 	setTimeout(function() {
 		$('#content').addClass('blur');
+		$('#settings_toggle').addClass('blur');
 	}, 50);
 	renderProject(this);
-
 });
 
 $( "#close_btn" ).click(function() {
@@ -33,7 +27,8 @@ function closeOverlay(){
 	$('#overlay').addClass('hidden');
     $('#overlay').removeClass('visible');
     $('body').removeClass('noScroll');
-    $('#content').removeClass('blur');
+	$('#content').removeClass('blur');
+	$('#settings_toggle').removeClass('blur');
     setTimeout(function() {
 		$("#port_img").remove();
 		$('.contentQuote').remove();

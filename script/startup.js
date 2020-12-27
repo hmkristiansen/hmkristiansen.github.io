@@ -7,12 +7,17 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }; 
 
-function fadeInPage(){
+function onLoadPage(){
     //checkIfDarkmode();
     preloadAnimation();
     checkIfTouch();
     checkBrowser();
-    scrollToDefault();
+    //fadeInPage();
+    //scrollToDefault();
+}
+
+function fadeInPage(){
+    document.getElementById("body").classList.remove("hideOnLoad");
 }
 
 

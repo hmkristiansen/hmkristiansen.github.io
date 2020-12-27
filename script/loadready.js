@@ -3,10 +3,11 @@ let stateCheck = setInterval(() => {
         clearInterval(stateCheck);
         setTimeout(function(){
             $("#preloader_container").addClass("fadeOut");
-            $('body,html').removeClass("noScroll");
         },1500);
         setTimeout(function(){
             $("#preloader_container").addClass("remove");
+            document.getElementById("content").classList.remove("hideOnLoad");
+            document.getElementById("settings_toggle").classList.remove("hideOnLoad");
         },2000)
         setTimeout(function(){
             updateStatus = true;

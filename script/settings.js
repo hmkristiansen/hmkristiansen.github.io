@@ -59,7 +59,7 @@ document.getElementById('settings_style').onclick = function() {
 }
 
 var settingsVisible = false;
-document.getElementById("settings_toggle").onclick = function(){
+function toggleSettings(){
   if(settingsVisible){
     document.getElementById("settings_container").classList.add('settingsCollapsed');
     document.getElementById("settings_toggle").classList.remove("openSettings");

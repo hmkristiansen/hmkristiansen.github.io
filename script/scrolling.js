@@ -26,8 +26,6 @@ window.addEventListener('wheel', function(e) {
         //checkAndUpdateHeader();
         ticking = true;
     }
-
-
 }, { passive: true });
 
 function checkAndUpdateHeader(){
@@ -37,8 +35,6 @@ function checkAndUpdateHeader(){
     }else{
         updateAgeBool = false;
     }
-
-
     for(var i = 0; i<subContent.length; i++){
         let currElement = subContent[i];
         if(mobileRatio){

@@ -12,13 +12,13 @@
     <link rel = "stylesheet"type = "text/css" href ="style/style.css"/>
 </head>
 
-<body id="body" class="non-touch" onload="fadeInPage();">
+<body id="body" class="non-touch" onload="onLoadPage();">
 
     <div id="preloader_container">
         <div id="preloader"></div>
     </div>
 
-    <div id="settings_toggle">⚙️</div>
+    <div id="settings_toggle" onclick="toggleSettings();" class="hideOnLoad">⚙️</div>
     <div id="settings_container" class="settingsCollapsed">
         <div class="settings_section" id="settings_font">
             <h1>Typeface</h1>
@@ -97,7 +97,7 @@
         -->
     </div>
 
-    <div id="content" onscroll="checkAndUpdateHeader();">
+    <div id="content" class="hideOnLoad" onscroll="checkAndUpdateHeader();">
 
         <div id="header">Henrik Kristiansen - design student<br>
             <ul>
