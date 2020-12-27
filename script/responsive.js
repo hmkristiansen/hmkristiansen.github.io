@@ -1,4 +1,3 @@
-checkWindowRatio();
 var mobileRatio = false;
 
 $(window).resize(function() { 

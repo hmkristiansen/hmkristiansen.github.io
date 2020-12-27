@@ -12,6 +12,7 @@ function onLoadPage(){
     preloadAnimation();
     checkIfTouch();
     checkBrowser();
+    checkWindowRatio();
     //fadeInPage();
     //scrollToDefault();
 }

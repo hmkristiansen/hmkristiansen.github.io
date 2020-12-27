@@ -38,9 +38,10 @@ function checkAndUpdateHeader(){
     for(var i = 0; i<subContent.length; i++){
         let currElement = subContent[i];
         if(mobileRatio){
+            //console.log("updating");
             let offset = currElement.getBoundingClientRect().top;
             let navElement = document.getElementById(currElement.id + "_nav");
-            if (offset > -200 && offset < 200) {
+            if (offset > -200 && offset < 400) {
                 if(navElement.classList.contains("hidden_nav")){
                     navElement.classList.remove("hidden_nav");
                 }

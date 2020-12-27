@@ -20,6 +20,14 @@
             ul{
                 margin-top: 20px;
             }
+
+            #life_wrapper{
+                //max-width: 100px;
+                width: 200px;
+                #age{
+                    cursor: pointer;
+                }  
+            }
         }
     }
 
@@ -36,7 +44,7 @@
         ul{
             position: absolute;
             width: 80%;
-            bottom: 5%;
+            bottom: 10%;
         }
         
     }

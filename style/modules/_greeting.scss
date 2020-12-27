@@ -4,7 +4,7 @@
         #greeting_message{
             padding-left: 3vw;
             font-size: 3rem;
-            margin-top: 30%;
+            margin-top: 45vh;
             #status_cont{
                 width: 100%;
                 max-width: 1200px;
@@ -23,12 +23,12 @@
 
 body.mobile #greeting{
     width: 100%;
-    height: 60%;
+    height: 60vh;
     float: none;
     #greeting_cont{
-        margin-top: 40%;
         #greeting_message{
             font-size: 2rem;
+            margin-top: 25vh;
             #status_cont{
                 width: 80%;
                 max-width: 600px;

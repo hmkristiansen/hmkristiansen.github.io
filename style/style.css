@@ -53,8 +53,8 @@ body.mobile #preloader_container #preloader {
 }
 
 html {
-  font-size: 1vw;
   font-size: 16px;
+  font-size: 1vw;
   scroll-behavior: smooth;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
@@ -295,7 +295,7 @@ body.mobile section {
 #greeting #greeting_cont #greeting_message {
   padding-left: 3vw;
   font-size: 3rem;
-  margin-top: 30%;
+  margin-top: 45vh;
 }
 
 #greeting #greeting_cont #greeting_message #status_cont {
@@ -315,16 +315,13 @@ body.mobile section {
 
 body.mobile #greeting {
   width: 100%;
-  height: 60%;
+  height: 60vh;
   float: none;
-}
-
-body.mobile #greeting #greeting_cont {
-  margin-top: 40%;
 }
 
 body.mobile #greeting #greeting_cont #greeting_message {
   font-size: 2rem;
+  margin-top: 25vh;
 }
 
 body.mobile #greeting #greeting_cont #greeting_message #status_cont {
@@ -598,6 +595,14 @@ body.mobile #work .workItemContainer #item5 {
   margin-top: 20px;
 }
 
+#about #bioContainer #bio #life_wrapper {
+  width: 200px;
+}
+
+#about #bioContainer #bio #life_wrapper #age {
+  cursor: pointer;
+}
+
 #about #cv {
   width: 50%;
   float: left;
@@ -613,7 +618,7 @@ body.mobile #work .workItemContainer #item5 {
 #about #cv ul {
   position: absolute;
   width: 80%;
-  bottom: 5%;
+  bottom: 10%;
 }
 
 body.mobile #about {
@@ -1246,7 +1251,7 @@ body.non-touch #settings_toggle:hover::after {
 }
 
 body.mobile #settings_container {
-  padding: 10px;
+  padding: 15px;
   padding-bottom: 30px;
   border-radius: 5px;
   bottom: calc(10px);
