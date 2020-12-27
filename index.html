@@ -1,361 +1,218 @@
 <!DOCTYPE html>
+<html id="page">
 <head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Henrik M. Kristiansen | design student </title>
+    <title>Henrik M. Kristiansen - design student</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/fav.ico">
-
-    <style>
-        /*Clouds from https://codepen.io/Mark_Bowley/pen/xEbuI */
-
-		@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-		
-        * {
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-        }
-
-        html{
-            padding:  0;
-            margin:  0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        body{
-            background-color: #f5f9ff;
-            width: 100%;
-            height: 100%;
-            font-family:'Karla', sans-serif;
-            color:rgb(78, 82, 94);
-            overflow-x: hidden;
-            overflow-y: scroll;
-
-            margin: 0;
-            padding: 0;
-        }
-        section{
-            position: relative;
-            padding-top: 15vh !important;
-            max-width: 400px;
-            margin-left: 20vw;
-            padding: 10px;
-            height: 100%;
-        }
-        
-        ul{
-            margin-top: 10px;
-            padding: 0;
-            list-style-type: none;
-
-            width: auto;
-            height: auto;
-            display: inline-block;
-
-        }
-
-        ul li{
-            margin: 0;
-            padding: 10px;
-            padding-left: 0;
-            display:inline;
-        }
-
-        ul a{
-            position: relative;
-            text-decoration: none;
-            opacity: 0.7;
-            color: inherit;
-
-            padding: 5px 10px;
-            border-radius: 5px;
-            border: 1px solid rgb(190, 221, 247);
-            background-color: aliceblue;
-
-            transition: 0.2s all;
-
-            cursor: alias;
-        }
-
-        a:hover{
-            opacity: 1;
-            background-color: rgb(224, 239, 252);
-        }
-
-        h1{
-			font-weight: bolder;	
-            font-size: 2.5rem;
-        }
-
-        p{
-			font-weight: 300;
-            font-size: 1rem;
-            width: 100%;
-            clear: both;
-        }
-
-        #underConstructionLink{
-            padding: 10px;
-            margin: 0;
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            font-size: 0.8rem;
-            max-width: 300px;
-            text-align: right;
-            transition: 0.2s;
-            opacity: 0.3;
-            color: inherit; 
-            text-decoration: underline;
-            background-color: unset;
-        }
-        
-
-        #underConstructionLink:hover{
-            opacity: 1;
-        }
-
-        @media only screen and (max-width: 600px){
-            html{
-                font-size: 16px;
-            }
-
-            section{
-                padding-top: 5vh !important;
-                padding: 20px;
-                margin: 0 auto;
-            }
-
-            a{
-                opacity: 1 !important;
-            }
-            #underConstructionLink{
-                left: 0;
-                text-align: left;
-                opacity: 0.5 !important;
-            }
-
-            #underConstructionLink:hover{
-                opacity: 1 !important;
-            }
-
-            /*
-            a{
-                font-size: 1.3rem;
-            }*/
-
-            @-webkit-keyframes animateCloud {
-            0% {
-                margin-left: -500px;
-            }
-            100% {
-                margin-left: 100%;
-            }
-            }
-
-            @-moz-keyframes animateCloud {
-                0% {
-                    margin-left: -500px;
-                }
-                100% {
-                    margin-left: 100%;
-                }
-            }
-
-            @keyframes animateCloud {
-                0% {
-                    margin-left: -500px;
-                }
-                100% {
-                    margin-left: 100%;
-                }
-            }
-        }
-
-        #background-wrap {
-            position: relative;
-            bottom: 0;
-            left: 0;
-            padding-top: 50px;
-            position: fixed;
-            right: 0;
-            top: 0;
-            z-index: -1;
-        }
-
-        @-webkit-keyframes animateCloud {
-            0% {
-                margin-left: -1000px;
-            }
-            100% {
-                margin-left: 100%;
-            }
-        }
-
-        @-moz-keyframes animateCloud {
-            0% {
-                margin-left: -1000px;
-            }
-            100% {
-                margin-left: 100%;
-            }
-        }
-
-        @keyframes animateCloud {
-            0% {
-                margin-left: -1000px;
-            }
-            100% {
-                margin-left: 100%;
-            }
-        }
-
-
-        .x1 {
-            -webkit-animation: animateCloud 40s linear infinite;
-            -moz-animation: animateCloud 40s linear infinite;
-            animation: animateCloud 40s linear infinite;
-            
-            -webkit-transform: scale(0.65);
-            -moz-transform: scale(0.65);
-            transform: scale(0.65);
-        }
-
-        .x2 {
-            -webkit-animation: animateCloud 20s linear infinite;
-            -moz-animation: animateCloud 20s linear infinite;
-            animation: animateCloud 20s linear infinite;
-            
-            -webkit-transform: scale(0.3);
-            -moz-transform: scale(0.3);
-            transform: scale(0.3);
-        }
-
-        .x3 {
-            -webkit-animation: animateCloud 32s linear infinite;
-            -moz-animation: animateCloud 32s linear infinite;
-            animation: animateCloud 32s linear infinite;
-            
-            -webkit-transform: scale(0.55);
-            -moz-transform: scale(0.55);
-            transform: scale(0.55);
-        }
-
-        .x4 {
-            -webkit-animation: animateCloud 18s linear infinite;
-            -moz-animation: animateCloud 18s linear infinite;
-            animation: animateCloud 18s linear infinite;
-            
-            -webkit-transform: scale(0.4);
-            -moz-transform: scale(0.4);
-            transform: scale(0.4);
-        }
-
-        .x5 {
-            -webkit-animation: animateCloud 25s linear infinite;
-            -moz-animation: animateCloud 25s linear infinite;
-            animation: animateCloud 25s linear infinite;
-            
-            -webkit-transform: scale(0.55);
-            -moz-transform: scale(0.55);
-            transform: scale(0.55);
-        }
-
-        .cloud {
-            background: #fff;
-            
-            -webkit-border-radius: 100px;
-            -moz-border-radius: 100px;
-            border-radius: 100px;
-            
-            height: 120px;
-            position: relative;
-            width: 350px;
-        }
-
-        .cloud:after, .cloud:before {
-            background: #fff;
-            content: '';
-            position: absolute;
-            z-indeX: -1;
-        }
-
-        .cloud:after {
-            -webkit-border-radius: 100px;
-            -moz-border-radius: 100px;
-            border-radius: 100px;
-
-            height: 100px;
-            left: 50px;
-            top: -50px;
-            width: 100px;
-        }
-
-        .cloud:before {
-            -webkit-border-radius: 200px;
-            -moz-border-radius: 200px;
-            border-radius: 200px;
-
-            width: 180px;
-            height: 180px;
-            right: 50px;
-            top: -90px;
-        }
-    </style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel = "stylesheet"type = "text/css" href ="style/reset.css"/>
+    <link rel = "stylesheet"type = "text/css" href ="style/style.css"/>
+    <noscript>Your browser needs to support JavaScript in order to run my website :)</noscript>
 </head>
-<body>
 
-    <div id="background-wrap">
-            <div class="x1">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x2">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x3">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x4">
-                <div class="cloud"></div>
-            </div>
-        
-            <div class="x5">
-                <div class="cloud"></div>
-            </div>
+<body id="body" class="non-touch" onload="onLoadPage();">
+
+    <div id="preloader_container">
+        <div id="preloader"></div>
     </div>
 
-    <section>
-        <h1>I'm sorry to disappoint 🥺</h1>
-        <p>My website is currently under maintenance.
-            <br>I hope you drop by some other time 🥳
-            <br><br>In the meantime you can learn more about me using these links:
-        </p>
+    <div id="settings_toggle" onclick="toggleSettings();" class="hideOnLoad">⚙️</div>
+    <div id="settings_container" class="settingsCollapsed">
+        <div class="settings_section" id="settings_font">
+            <h1>Typeface</h1>
+            <ul>
+                <li style="font-family: 'Karla', sans-serif;">
+                    <input type="radio" name="font" value="sans" id="radioSans">
+                    <label for="radioSans">Sans Serif</label>
+                </li>
 
-        <div id="linkContainer">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedin</a></li>
-                <li><a href="https://www.instagram.com/hmkristiansen/" target="_blank">instagram</a></li>
+                <li style="font-family: 'Playfair Display', serif;">
+                    <input type="radio" name="font" value="serif" id="radioSerif">
+                    <label for="radioSerif">Serif</label>
+                </li> 
+                <li style="font-family: 'Roboto Mono', monospace;">
+                    <input type="radio" name="font" value="mono" id="radioMono">
+                    <label for="radioMono">Monospace</label>
+                </li>
+                <!--
+                <li style="font-family: 'Bebas Neue', cursive;">
+                    <input type="radio" name="font" value="disp" id="radioDisp">
+                    <label for="radioDisp">Display</label>
+                </li>
+                <li style="font-family: 'Caveat', cursive;">
+                    <input type="radio" name="font" value="hand" id="radioHand">
+                    <label for="radioHand">Handwritten</label>
+                </li>
+
+                <li style="font-family: 'Orbitron', sans-serif;">
+                    <input type="radio" name="font" value="cyber" id="radioCyber">
+                    <label for="radioCyber">Cyber</label>
+                </li>
+            -->
             </ul>
+        </div>
+        <div class="settings_section" id="settings_style">
+            <h1>Style</h1>
             <ul>
-                <li><a href="http://portfolio.hmkristiansen.no/" target="_blank">project archive</a></li>
-                <li><a href="assets/cvhmk.pdf" target="_blank">cv</a></li>
+                <li>
+                    <input type="radio" name="color" value="light" id="radioLight">
+                    <label for="radioLight">Light</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="color" value="dark" id="radioDark">
+                    <label for="radioDark">Dark</label>
+                </li>
+                <!--
+                <li>
+                    <input type="radio" name="color" value="warm" id="radioWarm">
+                    <label for="radioWarm">Warm</label>
+                </li>
+                <li>
+                    <input type="radio" name="color" value="cold" id="radioCold">
+                    <label for="radioCold">Cold</label>
+                </li>
+                <li>
+                    <input type="radio" name="color" value="neon" id="radioNeon">
+                    <label for="radioNeon">Neon</label>
+                </li>
+                -->
+            </ul>
+        </div>
+        <!--
+        <div class="settings_section" id="settings_adOn">
+            <h2>Add-ons:</h2>
+            <label>
+                <input type="checkbox" name="draw">  Drawing mode
+            </label>
+        </div>
+        -->
+
+        <!--
+        <div id="settings_reset" onclick="resetSettings();">
+            Reset to default
+        </div>
+        -->
+    </div>
+
+    <div id="content" class="hideOnLoad" onscroll="checkAndUpdateHeader();">
+
+        <div id="header">Henrik Kristiansen - design student<br>
+            <ul>
+                <li id="greeting_nav" onclick="goToSection(this.id);">↳ greeting</li>
+                <li class="hidden_nav" id="work_nav" onclick="goToSection(this.id);">→ works</li>
+                <li class="hidden_nav" id="about_nav" onclick="goToSection(this.id);">→ about</li>
+                <li class="hidden_nav" id="contact_nav" onclick="goToSection(this.id);">→ links</li>
             </ul>
         </div>
 
-        <p><br><br>Pet your dog from me! 🐶<br>
-            - Henrik            <br><br><br>
+        <section id="greeting">
+            <div id="greeting_cont">
+                <div id="greeting_message">
+                    <div id="status_cont">
+                        <span class="status" id="status0">Heisann, I'm Henrik <span id='hand-wave'>👋</span></span>
+                        <span class="status carusellIn getter" id="status1">Test1</span>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <section id="work" class="">
+        </section>
+
+        <section id="about" class="">
+            
+            <div id="bioContainer">
+                <div id="bio">
+                    <img src="assets/hug.jpg">
+                    <ul>
+                        <li style="font-weight: bold;">Henrik M. Kristiansen</li>
+                        <li id="life_counter">
+                            <div id="life_wrapper">
+                                <span id="age">24.091407102536316</span>
+                            </div>
+                        </li>
+                        <li>curr: OSL</li>
+                        <li>prev: LYR · LIS · TRD</li>
+                        <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🏃‍♂️}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="cv">
+                <ul>
+                    <li>
+                        <h1>currently</h1>
+                        <p><a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - MS.c industrial design<br>major in interaction design</p>
+                    </li>
+                    <li>
+                        <h1>recently</h1>
+                        <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - consultant</p>
+                        <p><a href="https://www.iterate.no/" target="_blank">ITERATE</a> - summer intern</p>
+                    </li>
+                    <li>
+                        <h1>previously</h1>
+                        <p><a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a> - ERASMUS exchange student</p>
+                        <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - summer intern</p>
+                        <p><a href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - lighting technician</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div id="info">
+                <ul>
+                    <h1>other stuff</h1>
+                    <li><a href="http://portfolio.hmkristiansen.no/" target="_blank">→ notion project archive</a></li>
+                    <li id="info_link"><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">→ linkedin</a></li>
+                    <li id="info_link"><a href="https://www.instagram.com/hmkristiansen/" target="_blank">→ instagram</a></li>
+                    <li id="info_link"><a href="mailto:heisann@hmkristiansen.no?subject=Heisann, Henrik!"" target="_blank">→ epost</a></li>
+                    <li id="info_link"><a href="assets/cvhmk.pdf" target="_blank">→ cv</a></li>
+                </ul>
+            </div>
+            <p id="easter" onclick="goBackToStart();">
+                the end 🥺
             </p>
 
-        <a id="underConstructionLink" href="underConstruction_index.html">Take a look at the work in progress 🤫</a>
-     </section>
- 
-     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript>
+        </section>
 
+    </div>
+
+    <div id="overlay" style="position: fixed !important;" class="hidden">
+        <div id="close_btn" class="hideCloseBtn"><img src="assets/svg/exit.svg"></div>
+        <div id="exp_btn"><img src="assets/svg/max.svg"></div>
+        <div id="port_content">
+            <div id="imageSelector"></div>
+            <h1></h1>
+            <div id="item_info">
+                <ul>
+                    <li id="client"></li>
+                    <li id="role"></li>
+                    <li id="period"></li>
+                </ul>
+            </div>
+            <div id="parentNode"></div>
+        </div>
+    </div>
+
+    <script src="script/lottie.js"></script>
+    <script src="script/preload.js"></script>
+    <script src="script/startup.js"></script>
+    <script src="script/settings.js"></script>
+    <script src="script/responsive.js"></script>
+    <script src="script/age.js"></script>
+    <script src="script/carusell.js"></script>
+    <script src="script/scrolling.js"></script>
+    <script src="script/overlay.js"></script>
+    <script src="script/loadready.js"></script>
+
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript>  
 </body>
+
+</html>
