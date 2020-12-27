@@ -92,16 +92,6 @@
     }*/
 }
 
-#settings_style{
-
-    label:before{
-        width: 20px;
-        height: 20px;
-        background-color: $bg-dark;
-        position: relative;
-        display: block;
-    }
-}
 
 /*
 body.non-touch #settings_reset:hover{ 
@@ -156,8 +146,14 @@ body.mobile #settings_container{
     padding-bottom: 30px;
     border-radius: 5px;
 
-    bottom: calc(2vw - 5px);
-    left: calc(2vw - 5px);
+    bottom: calc(10px);
+    left: calc(10px);
+}
+
+body.mobile #settings_toggle{
+    bottom: calc(10px);
+    left: calc(10px);
+    font-size: 1rem;
 }
 
 /**/

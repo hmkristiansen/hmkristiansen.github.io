@@ -1195,14 +1195,6 @@ body.mobile #overlay #exp_btn {
   opacity: 0.5;
 }
 
-#settings_style label:before {
-  width: 20px;
-  height: 20px;
-  background-color: #0a0a0a;
-  position: relative;
-  display: block;
-}
-
 /*
 body.non-touch #settings_reset:hover{ 
     text-decoration: none;
@@ -1257,8 +1249,14 @@ body.mobile #settings_container {
   padding: 10px;
   padding-bottom: 30px;
   border-radius: 5px;
-  bottom: calc(2vw - 5px);
-  left: calc(2vw - 5px);
+  bottom: calc(10px);
+  left: calc(10px);
+}
+
+body.mobile #settings_toggle {
+  bottom: calc(10px);
+  left: calc(10px);
+  font-size: 1rem;
 }
 
 /**/
