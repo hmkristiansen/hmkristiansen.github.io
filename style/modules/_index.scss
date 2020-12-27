@@ -37,7 +37,6 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-
 body::-webkit-scrollbar {
     display: none !important;
 }
@@ -190,15 +189,12 @@ body.mobile section{
     50% { transform: rotate(-10deg); }
     100% { transform: rotate(10deg); }
 }
- 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 1024px) {
 
     html{
         font-size: 12px;
-    }
-
-    section{
-        padding: 10px !important;
     }
 
     ul{

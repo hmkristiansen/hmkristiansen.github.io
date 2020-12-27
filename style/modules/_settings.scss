@@ -355,6 +355,7 @@ body.mobile #settings_toggle{
     }
     #more_link a:hover{ 
         opacity: 1;
+        color: $bg-dark !important;
         background-color: $bg-dark-btn !important;
     }
 

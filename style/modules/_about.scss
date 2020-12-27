@@ -53,7 +53,7 @@
 body.mobile #about{
     position: relative;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 5% !important;
     white-space: unset;
     width: 100%;
     height: auto;
@@ -68,15 +68,19 @@ body.mobile #about{
         width: 100%;
         padding: 0;
         height: auto;
-        margin-left: 5%;
+        //margin-left: 5%;
+        //margin-right: 5%;
+        //padding: 0 5%;
 
         #bio{
             position: inherit;
             float: none;
+            //padding: inherit;
             img{
-                height: auto;
+                width: auto;
+                height: 40vh;
                 object-fit: cover;
-                width: 75%;
+                //padding-right: 5%;
             }
         }
     }
@@ -85,13 +89,14 @@ body.mobile #about{
         width: 100%;
         height: auto;
         padding: 0;
-        margin-left: 35%;
-        margin-right: 5%;
+        //padding-left: 35%;
+        //margin-right: 5%;
         ul{
             width: 60%;
             position: inherit;
             bottom: unset;
             left: unset;
+            float: right;
             li{
                 h1{
                     text-align: right;
