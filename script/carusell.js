@@ -21,7 +21,7 @@ var update = setInterval(function() {
 	if(updateStatus && runCarusell){
 		carusellGreeting();
     }
-}, 1200);
+}, 1400);
 
 function carusellGreeting(){
 
