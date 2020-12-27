@@ -17,79 +17,87 @@
     <div id="preloader_container">
         <div id="preloader"></div>
     </div>
-    <div id="content" onscroll="checkAndUpdateHeader();">
 
-        <div id="settings_toggle">⚙️</div>
+    <div id="settings_toggle">⚙️</div>
+    <div id="settings_container" class="settingsCollapsed">
+        <div class="settings_section" id="settings_font">
+            <h1>Typeface</h1>
+            <ul>
+                <li style="font-family: 'Karla', sans-serif;">
+                    <input type="radio" name="font" value="sans" id="radioSans">
+                    <label for="radioSans">Sans Serif</label>
+                </li>
 
-        <div id="settings_container" class="settingsCollapsed">
+                <li style="font-family: 'Playfair Display', serif;">
+                    <input type="radio" name="font" value="serif" id="radioSerif">
+                    <label for="radioSerif">Serif</label>
+                </li> 
+                <li style="font-family: 'Roboto Mono', monospace;">
+                    <input type="radio" name="font" value="mono" id="radioMono">
+                    <label for="radioMono">Monospace</label>
+                </li>
+                <!--
+                <li style="font-family: 'Bebas Neue', cursive;">
+                    <input type="radio" name="font" value="disp" id="radioDisp">
+                    <label for="radioDisp">Display</label>
+                </li>
+                <li style="font-family: 'Caveat', cursive;">
+                    <input type="radio" name="font" value="hand" id="radioHand">
+                    <label for="radioHand">Handwritten</label>
+                </li>
 
-            <div class="settings_section" id="settings_font">
-                <h1>Font</h1>
-                <ul>
-                    <li>
-                        <input type="radio" name="font" value="sans" id="radioSans">
-                        <label for="radioSans">Sans</label>
-                    </li>
-
-                    <li>
-                        <input type="radio" name="font" value="serif" id="radioSerif">
-                        <label for="radioSerif">Serif</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="font" value="disp" id="radioDisp">
-                        <label for="radioDisp">Display</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="font" value="hand" id="radioHand">
-                        <label for="radioHand">Handwritten</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="font" value="mono" id="radioMono">
-                        <label for="radioMono">Mono</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="font" value="cyber" id="radioCyber">
-                        <label for="radioCyber">Cyber</label>
-                    </li>
-                </ul>
-            </div>
-            <div class="settings_section" id="settings_style">
-                <h1>Color:</h1>
-                <ul>
-                    <li>
-                        <input type="radio" name="color" value="light" id="radioLight">
-                        <label for="radioLight">Light</label>
-                    </li>
-
-                    <li>
-                        <input type="radio" name="color" value="dark" id="radioDark">
-                        <label for="radioDark">Dark</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="color" value="warm" id="radioWarm">
-                        <label for="radioWarm">Warm</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="color" value="cold" id="radioCold">
-                        <label for="radioCold">Cold</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="color" value="neon" id="radioNeon">
-                        <label for="radioNeon">Neon</label>
-                    </li>
-                </ul>
-            </div>
-            <div class="settings_section" id="settings_adOn">
-                <h1>Add-ons:</h1>
-                <label>
-                    <input type="checkbox" name="draw">  Drawing mode
-                </label>
-            </div>
-
-            <div id="settings_reset" onclick="resetSettings();">
-                Reset to default
-            </div>
+                <li style="font-family: 'Orbitron', sans-serif;">
+                    <input type="radio" name="font" value="cyber" id="radioCyber">
+                    <label for="radioCyber">Cyber</label>
+                </li>
+            -->
+            </ul>
         </div>
+        <div class="settings_section" id="settings_style">
+            <h1>Style</h1>
+            <ul>
+                <li>
+                    <input type="radio" name="color" value="light" id="radioLight">
+                    <label for="radioLight">Light</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="color" value="dark" id="radioDark">
+                    <label for="radioDark">Dark</label>
+                </li>
+                <!--
+                <li>
+                    <input type="radio" name="color" value="warm" id="radioWarm">
+                    <label for="radioWarm">Warm</label>
+                </li>
+                <li>
+                    <input type="radio" name="color" value="cold" id="radioCold">
+                    <label for="radioCold">Cold</label>
+                </li>
+                <li>
+                    <input type="radio" name="color" value="neon" id="radioNeon">
+                    <label for="radioNeon">Neon</label>
+                </li>
+                -->
+            </ul>
+        </div>
+        <!--
+        <div class="settings_section" id="settings_adOn">
+            <h2>Add-ons:</h2>
+            <label>
+                <input type="checkbox" name="draw">  Drawing mode
+            </label>
+        </div>
+        -->
+
+        <!--
+        <div id="settings_reset" onclick="resetSettings();">
+            Reset to default
+        </div>
+        -->
+    </div>
+
+    <div id="content" onscroll="checkAndUpdateHeader();">
 
         <div id="header">Henrik Kristiansen - design student<br>
             <ul>
@@ -167,7 +175,10 @@
                     <li id="info_link"><a href="assets/cvhmk.pdf" target="_blank">→ cv</a></li>
                 </ul>
             </div>
-            <p id="easter" onclick="goBackToStart();">the end 🥺</p>
+            <p id="easter" onclick="goBackToStart();">
+                the end 🥺
+            </p>
+
         </section>
 
     </div>

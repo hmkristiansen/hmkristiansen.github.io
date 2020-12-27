@@ -9,10 +9,10 @@
 
 // -- FONT STYLES --
 $sans-font: 'Karla', sans-serif;
-$mono-font: 'Roboto Mono', monospace;
 $serif-font: 'Playfair Display', serif;
 $display-font: 'Bebas Neue', cursive;
 $hand-font: 'Caveat', cursive;
+$mono-font: 'Roboto Mono', monospace;
 $cyber-font: 'Orbitron', sans-serif;
 
 /*--------*/
@@ -43,6 +43,16 @@ $bg-dark-btn: #696969;
 $hover-bg-dark-btn: #474747;
 
 //warm
+$text-color-warm: #383635;
+$link-color-warm: #5b5858;
+$hover-link-color-warm: #f3f3f3;
+
+$bg-warm: rgb(249, 230, 200);
+$border-warm: rgb(29, 29, 29);
+$drop-shadow-warm: rgba(178, 178, 178, 0.2);
+
+$bg-warm-btn: #696969;
+$hover-bg-warm-btn: #474747;
 
 //cold
 

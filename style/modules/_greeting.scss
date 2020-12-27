@@ -14,7 +14,7 @@
                 position: absolute;
                 width: inherit;
                 white-space: normal;
-                transition: opacity 0.3s;
+                transition: all 0.3s;
                 pointer-events: all;
             }   
         }
@@ -38,7 +38,7 @@ body.mobile #greeting{
                 position: absolute;
                 width: inherit;
                 white-space: normal;
-                transition: opacity 0.3s;
+                transition: all 0.3s;
                 pointer-events: all;
             }   
         }
