@@ -22,6 +22,7 @@ var projects = [
 ];
 
 var images=[];
+getProjects();
 
 function getProjects(){
 	for(var i = 0; i<projects.length; i++){
@@ -504,7 +505,6 @@ if(stateBool){
     }, 10);
 }
 
-getProjects();
 
 
 /*
