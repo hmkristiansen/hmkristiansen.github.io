@@ -1,4 +1,3 @@
-
 let diff = 0;
 let ticking = false;
 let yScroll = 0;

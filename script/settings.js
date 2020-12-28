@@ -1,4 +1,3 @@
-
 var bodyElement = document.getElementById("body");
 setStartStyle();
 

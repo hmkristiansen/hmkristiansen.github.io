@@ -1,6 +1,5 @@
 
 var updateStatus = false;
-
 var sentences = 
 ["Heisann, I'm Henrik <span id='hand-wave'>👋</span>",
 "I'm a design student, preparing for my next adventure in København, Danmark</a>",
