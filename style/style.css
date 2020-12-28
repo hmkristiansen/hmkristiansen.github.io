@@ -186,7 +186,7 @@ body.non-touch #header ul li:hover {
 }
 
 body.mobile #header {
-  padding: 20px;
+  padding: 10px;
 }
 
 body.mobile #header ul li {
