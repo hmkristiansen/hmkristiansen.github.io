@@ -16,8 +16,8 @@ var projects = [
 	["play",play],
 	["aw",aw],
 	["shake",shake],
-	["nn",nn],
 	["futura",futura],
+	["nn",nn],
 	["ctrl",ctrl]
 ];
 
