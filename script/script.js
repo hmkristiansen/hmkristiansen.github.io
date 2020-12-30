@@ -83,6 +83,8 @@ function renderPhotogrid(){
 
 /* ---- STARTUP ---- */
 
+var bodyElement = document.getElementById("body");
+
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }; 
@@ -96,16 +98,14 @@ function onLoadPage(){
 function checkIfTouch(){
 	let touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
 	if (!touchsupport){
-		$('#body').addClass('non-touch');
+		bodyElement.classList.add("non-touch");
 	}
 }
 
 
 /* ---- SETTINGS ---- */
 
-var bodyElement = document.getElementById("body");
 setStartStyle();
-
 function setStartStyle(){
   bodyElement.classList.add("sans");
   document.getElementById("radioSans").checked = true;
@@ -157,10 +157,17 @@ function toggleSettings(){
 /* ---- RESPONSIVE ---- */
 
 var mobileRatio = false;
-$(window).resize(function() { 
+
+window.addEventListener('resize', function(){
     checkWindowRatio();
     scrollToDefault();
 });
+
+/*
+$(window).resize(function() { 
+    checkWindowRatio();
+    scrollToDefault();
+});*/
 
 function checkWindowRatio(){
     let w = window.innerWidth;
@@ -195,7 +202,7 @@ var bday = new Date("Nov 19, 1996 05:55:25").getTime();
 var dday = new Date("Nov 19, 2077 12:00:00").getTime();
 var dayBool = true;
 
-$("#life_wrapper").hover(function() {
+$("#life_wrapper").hover(function() { // FIX THIS
 	if(dayBool){
 		dayBool = false;
 	}else{
@@ -286,7 +293,6 @@ window.addEventListener('wheel', function(e) {
         }else{
             content.scrollLeft += diff/2;
         }
-        //checkAndUpdateHeader();
         ticking = true;
     }
 }, { passive: true });
@@ -303,25 +309,27 @@ function checkAndUpdateHeader(){
     for(var i = 0; i<subContent.length; i++){
         let currElement = subContent[i];
         if(mobileRatio){
-            let offset = currElement.getBoundingClientRect().top;
+			let offset = currElement.getBoundingClientRect().top;
+			let vh = window.innerHeight;
             let navElement = document.getElementById(currElement.id + "_nav");
-            if (offset > -200 && offset < 400) {
+            if (offset > (-vh*0.1) && offset < (vh*0.5)) {
                 if(navElement.classList.contains("hidden_nav")){
                     navElement.classList.remove("hidden_nav");
                 }
-            } else if(offset > 400){
+            } else if(offset > (vh*0.5)){
                 if(!navElement.classList.contains("hidden_nav")){
                     navElement.classList.add("hidden_nav");
                 }
             }
         }else{
-            let offset = currElement.getBoundingClientRect().left;
+			let offset = currElement.getBoundingClientRect().left;
+			let vw = window.innerWidth;
             let navElement = document.getElementById(currElement.id + "_nav");
-            if (offset > -400 && offset < 800) {
+            if (offset > (-vw*0.1) && offset < (vw*0.5)) {
                 if(navElement.classList.contains("hidden_nav")){
                     navElement.classList.remove("hidden_nav");
                 }
-            } else if(offset > 400){
+            } else if(offset > (vw*0.5)){
                 if(!navElement.classList.contains("hidden_nav")){
                     navElement.classList.add("hidden_nav");
                 }
