@@ -143,6 +143,7 @@ ul li {
 section {
   position: relative;
   top: 0;
+  padding: 0;
   margin: 0;
   height: 100%;
   display: inline-block;
@@ -156,7 +157,7 @@ section {
   z-index: 1000;
   padding: 3vw;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 #header ul {
@@ -186,7 +187,7 @@ body.non-touch #header ul li:hover {
 }
 
 body.mobile #header {
-  padding: 10px;
+  padding: 5%;
 }
 
 body.mobile #header ul li {
@@ -287,6 +288,7 @@ body.mobile section {
 
 #greeting {
   width: 80vw;
+  padding: 5%;
   padding-top: 45vh;
 }
 
@@ -484,7 +486,7 @@ body.mobile #work .workItemContainer {
   width: 100vw;
   height: auto;
   margin: 0;
-  padding: 0 10px;
+  padding: 0 3%;
 }
 
 body.mobile #work .workItemContainer .workItem {
@@ -514,7 +516,7 @@ body.mobile #work .workItemContainer .workItem h1 {
   margin: 0 auto;
   text-align: center;
   font-weight: normal;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 body.mobile #work .workItemContainer #item0 {
@@ -693,7 +695,7 @@ body.non-touch #easter:hover {
 }
 
 body.mobile #contact {
-  padding: 20px;
+  padding: 5%;
   position: relative;
   top: 20vh;
   padding-bottom: 40vh !important;
