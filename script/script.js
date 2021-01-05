@@ -349,7 +349,27 @@ function goBackToStart(){
         navElement.classList.add("hidden_nav");
     });
 }
+/*
+document
+    .querySelectorAll('header li')
+    .forEach(trigger => {
+        trigger.onclick = function(e) {
+            e.preventDefault();
+			let hash = this.getAttribute('id');
+			let idArr = this.split("_");
+			let selSec = document.getElementById(idArr[0]);
+            let target = document.querySelector(hash);
+            let headerOffset = 100;
+            let elementPosition = target.offsetTop;
+            let offsetPosition = elementPosition - headerOffset;
 
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        };
+    });
+*/
 function goToSection(clicked_id){
     let idArr = clicked_id.split("_");
     let selSec = document.getElementById(idArr[0]);
