@@ -2,6 +2,9 @@
     width: 80vw;
     padding: 5%;
     padding-top: 45vh;
+
+    cursor: default !important;
+
     #greeting_cont{
         #greeting_message{
             padding-left: 3vw;
@@ -54,15 +57,15 @@ body.mobile #greeting{
 .carusellOut{
     transform: translateY(-50px) !important;
     opacity: 0;
-    pointer-events: none;
-    cursor: default;
+    pointer-events: none !important;
+    cursor: default !important;
 }
 
 .carusellIn{
     transform: translateY(50px) !important;
     opacity: 0;
-    pointer-events: none;
-    cursor: default;
+    pointer-events: none !important;
+    cursor: default !important;
 }
 
 

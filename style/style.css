@@ -290,6 +290,7 @@ body.mobile section {
   width: 80vw;
   padding: 5%;
   padding-top: 45vh;
+  cursor: default !important;
 }
 
 #greeting #greeting_cont #greeting_message {
@@ -346,16 +347,16 @@ body.mobile #greeting #greeting_cont #greeting_message .status {
   -webkit-transform: translateY(-50px) !important;
           transform: translateY(-50px) !important;
   opacity: 0;
-  pointer-events: none;
-  cursor: default;
+  pointer-events: none !important;
+  cursor: default !important;
 }
 
 .carusellIn {
   -webkit-transform: translateY(50px) !important;
           transform: translateY(50px) !important;
   opacity: 0;
-  pointer-events: none;
-  cursor: default;
+  pointer-events: none !important;
+  cursor: default !important;
 }
 
 #hand-wave {
