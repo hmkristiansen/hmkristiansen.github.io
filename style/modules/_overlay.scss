@@ -154,6 +154,28 @@
             max-width: 800px;
             //float: left;
             //clear: both;
+
+            b{
+                margin: 0;
+                padding: 2px 5px;
+                font-weight: bold;
+            }
+            #part1{
+                background-color: #F470C9;
+                color: white;
+            }
+            #part2{
+                background-color: #FC8552;
+                color: white;
+            }
+            #part3{
+                background-color: #29A3CC;
+                color: white;
+            }
+            #part4{
+                background-color: #00A87C;
+                color: white;
+            }
         }
 
         .contentHeader{
@@ -206,6 +228,12 @@
             height: auto;
             margin: 0 auto;
         }
+
+        /*
+        .projectPDF{
+            width: 100%;
+            height: 70vh;
+        }*/
 
     } 
 

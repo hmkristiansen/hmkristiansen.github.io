@@ -419,6 +419,7 @@ function closeOverlay(){
 		$('.contentImage').remove();
 		$('.contentVideo').remove();
 		$('#more_link').remove();
+		$('.projectPDF').remove();
 	}, 300);
 }
 
@@ -493,6 +494,15 @@ function renderProject(event){
 				p.className="contentCaption";
 				p.innerHTML = $currentContent[item];
 				parent.appendChild(p);
+			}else if(item[0] == "p"){
+				let iframe = document.createElement('iframe');
+				iframe.className = "projectPDF";
+				iframe.src = $currentContent.pdf;
+				iframe.style.height = "90vh";
+				iframe.style.width = "90%";
+				iframe.style.margin = "0 0 0 5%";
+				iframe.innerHTML="If you are reading this you probably can't read the PDF :( <br><a href='https://drive.google.com/file/d/1zukV9AQP2CRKlKjQuhlE5fFpQYjimZxf/view?usp=sharing' target='_blank'>Download it here instead :)</a>";
+				parent.appendChild(iframe);
 			}
 		}
 	}
