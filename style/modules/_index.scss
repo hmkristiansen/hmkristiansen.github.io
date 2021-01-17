@@ -121,8 +121,10 @@ section{
     font-size: 1.3rem;
 
     ul{
-        margin-top: 5px;
+        margin-left: 5px;
         font-weight: normal;
+        display: inline;
+        
         li{
             position: relative;
             display: inline;
@@ -150,6 +152,9 @@ body.mobile #header{
     padding: 5%;
 
     ul{
+        margin-top: 5px;
+        font-weight: normal;
+        display: block;
         li{
             cursor: n-resize;
         }

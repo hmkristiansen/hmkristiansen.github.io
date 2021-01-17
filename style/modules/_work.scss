@@ -2,7 +2,7 @@
 #work{
     //margin: 0 10vw;
     .workItemContainer{
-        margin: 0;
+        margin: 0 10vw;
         padding: 0;
         width: 70vw;
         top:0;
@@ -21,16 +21,18 @@
             cursor: pointer;
             white-space: normal;
 
+            margin-top: 7.5vh;
+
             transition: ease-in-out 200ms;
 
             img{
                 position: relative;
                 transition: inherit;
                 width: 100%;
-                max-height: 80vh;
+                height: 70vh;
                 object-fit: cover;
 
-                border-radius: 10px;
+                border-radius: 5px;
             }
 
             h1{
@@ -41,6 +43,7 @@
             }
         }
 
+        /*
         #item0{
             bottom: 0;
             left: 0;
@@ -71,6 +74,7 @@
             right: 0;
             transform: scale(0.6,0.6);
         }
+        */
     }
 }
 
@@ -126,7 +130,7 @@ body.mobile #work{
                 margin-top: 10px;
             }
         }
-
+        /*
         #item0{
             top: unset;
             left: unset;
@@ -157,5 +161,6 @@ body.mobile #work{
             left: unset;
             transform: unset;
         }
+        */
     }
 }

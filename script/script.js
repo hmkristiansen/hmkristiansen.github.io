@@ -12,13 +12,14 @@ function preloadAnimation(){
 }
 
 var shake,ctrl,futura,nn,aw,play;
+
 var projects = [
 	["play",play],
 	["aw",aw],
 	["shake",shake],
-	["futura",futura],
-	["nn",nn],
-	["ctrl",ctrl]
+	//["futura",futura],
+	["nn",nn]
+	//["ctrl",ctrl]
 ];
 
 var images=[];

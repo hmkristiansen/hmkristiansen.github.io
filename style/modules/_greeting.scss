@@ -1,5 +1,5 @@
 #greeting{
-    width: 80vw;
+    width: 100vw;
     padding: 5%;
     padding-top: 45vh;
 
@@ -10,7 +10,7 @@
             padding-left: 3vw;
             font-size: 3rem;
             #status_cont{
-                width: 80%;
+                width: 60%;
                 max-width: 1200px;
             }   
             .status{
@@ -28,7 +28,7 @@
 body.mobile #greeting{
     width: 100%;
     height: 80vh;
-    padding-top: 30vh;
+    padding-top: 40vh;
     float: none;
     #greeting_cont{
         #greeting_message{
