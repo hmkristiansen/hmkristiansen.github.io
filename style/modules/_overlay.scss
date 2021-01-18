@@ -98,10 +98,8 @@
         }
 
         #item_info{
-
             padding: 0;
             margin: 0;
-
             margin-top: 40px;
             margin-bottom: 20px;
             clear: both;
@@ -135,25 +133,16 @@
             padding-bottom: 20px;
             padding-left: 30%;
             width: 100%;
-            //float: right;
-            //clear: both;
             opacity: 1;
         }
 
         .contentText{
-            //margin-top: 10px;
             text-align: left;
             font-size: 1rem;
-            //padding-top: 20px;
             padding-bottom: 20px;
-
-            //margin: 10vh 0;
-            margin-bottom: 5vh;
-            margin-right: 20vw;
+            margin-bottom: 5%;
+            margin-right: 20%;
             width: 80%;
-            //max-width: 800px;
-            //float: left;
-            //clear: both;
 
             b{
                 margin: 0;
@@ -183,12 +172,9 @@
             text-align: left;
             font-size: 1.4rem;
             font-weight: 700;
-            margin-bottom: 15px;
-            margin-right: 20vw;
+            margin-bottom: 5%;
+            margin-right: 20%;
             width: 80%;
-            //max-width: 800px;
-            //float: left;
-            //clear: both;
             opacity: 1;
         }
         
@@ -196,45 +182,31 @@
             width: 85%;
             margin-left: 7.5%;
             height: auto;
-            padding: 3vw;
-            padding: 50px 0;
-            //clear: both;
+            padding: 3%;
+            padding: 5% 0;
         }
 
         .contentCaption{
-            //margin-top: 20px;
             text-align: center;
             font-size: 0.8rem;
             opacity: 0.4;
-            padding-bottom: 40px;
-            padding-top: 20px;
+            padding-bottom: 5%;
+            padding-top: 2%;
             padding-right: 10%;
             padding-left: 10%;
             margin-bottom: 5vh;
             width: 80%;
             margin-left: 10%;
-            //margin: 0 auto;
-            //float: left;
-            //clear: both;
         }
 
         .contentVideo{
             padding: 20px;
             padding-bottom: 10px;
             clear: both;
-            //max-height: 80vh;
-            //width: auto;
             width: 100%;
             height: auto;
             margin: 0 auto;
         }
-
-        /*
-        .projectPDF{
-            width: 100%;
-            height: 70vh;
-        }*/
-
     } 
 
     #more_link{
@@ -250,10 +222,8 @@
             transition: all 0.2s;
             cursor: s-resize;
         }
-
         padding: 100px;
     }
-
 }
 
 #port_content::-webkit-scrollbar {
@@ -264,22 +234,6 @@
     -ms-overflow-style: none; 
     scrollbar-width: none;
 }
-
-/*
-body.non-touch #close_btn:hover{
-    background-color:$bg-ligth-btn;
-    transform: scale(0.9) !important;
-}
-
-body.non-touch #exp_btn:hover{
-    background-color:$bg-ligth-btn;
-    transform: scale(1.1) !important;
-}
-
-body.non-touch #more_link a:hover{ 
-    text-decoration: none;
-    background-color: $bg-ligth-btn !important;
-}*/
 
 .hidden{
     pointer-events: none !important;
@@ -394,7 +348,6 @@ body.mobile #overlay{
         }
 
         .contentCaption{
-            //margin-top: 20px;
             text-align: center;
             font-size: 0.8rem;
             opacity: 0.4;
@@ -405,7 +358,6 @@ body.mobile #overlay{
             margin-bottom: 2vh;
             width: 90%;
             margin-left: 5%;
-            //margin: 0 auto;
             float: left;
             clear: both;
         }
