@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html id="page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Henrik M. Kristiansen - design student</title>
+
+    <noscript>Your browser needs to support JavaScript in order to run my website :)</noscript>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/lottie.js"></script>
+
+    <link rel = "stylesheet"type = "text/css" href ="style/reset.css"/>
+    <link rel = "stylesheet"type = "text/css" href ="style/style.css"/>
+
+</head>
+
+<body id="body" class="" onload="onLoadPage();">
+
+    <div id="preloader_container">
+        <div id="preloader"></div>
+    </div>
+
+    <div id="settings_toggle" onclick="toggleSettings();" class="hideOnLoad">⚙️</div>
+    <div id="settings_container" class="settingsCollapsed">
+        <div class="settings_section" id="settings_font">
+            <h1>Typeface</h1>
+            <ul>
+                <li style="font-family: 'Karla', sans-serif;">
+                    <input type="radio" name="font" value="sans" id="radioSans">
+                    <label for="radioSans">Sans Serif</label>
+                </li>
+                <li style="font-family: 'Playfair Display', serif;">
+                    <input type="radio" name="font" value="serif" id="radioSerif">
+                    <label for="radioSerif">Serif</label>
+                </li> 
+                <li style="font-family: 'Roboto Mono', monospace;">
+                    <input type="radio" name="font" value="mono" id="radioMono">
+                    <label for="radioMono">Monospace</label>
+                </li>
+            </ul>
+        </div>
+        <div class="settings_section" id="settings_style">
+            <h1>Style</h1>
+            <ul>
+                <li>
+                    <input type="radio" name="color" value="light" id="radioLight">
+                    <label for="radioLight">Light</label>
+                </li>
+                <li>
+                    <input type="radio" name="color" value="dark" id="radioDark">
+                    <label for="radioDark">Dark</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content" class="hideOnLoad" onscroll="checkAndUpdateHeader();">
+
+        <div id="header">Henrik M. Kristiansen   
+            <ul>
+                <li id="greeting_nav" onclick="goToSection(this.id);"> → greeting</li>
+                <li class="hidden_nav" id="work_nav" onclick="goToSection(this.id);"> → works</li>
+                <li class="hidden_nav" id="about_nav" onclick="goToSection(this.id);"> → about</li>
+                <li class="hidden_nav" id="contact_nav" onclick="goToSection(this.id);"> → links</li>
+            </ul>
+        </div>
+
+        <section id="greeting">
+            <div id="greeting_cont">
+                <div id="greeting_message">
+                    <div id="status_cont">
+                        <span class="status" id="status0">Heisann, I'm Henrik <span id='hand-wave'>👋</span></span>
+                        <span class="status carusellIn getter" id="status1">Test1</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="">
+        </section>
+
+        <section id="about" class="">
+            <div id="bioContainer">
+                <div id="bio">
+                    <img src="assets/hug.jpg">
+                    <ul>
+                        <li style="font-weight: bold;">Henrik M. Kristiansen</li>
+                        <li id="life_counter">
+                            <div id="life_wrapper">
+                                <span id="age">24.091407102536316</span>
+                            </div>
+                        </li>
+                        <li>curr: CPH</li>
+                        <li>prev: LYR · LIS · TRD  · OSL</li>
+                        <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🏃‍♂️}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="cv">
+                <ul>
+                    <li>
+                        <h1>currently</h1>
+                        <p><a href="https://eggsdesign.com" target="_blank">EGGS Design</a> - junior digital design intern</p>
+                        <p><a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - MS.c industrial design<br>major in interaction design</p>
+                    </li>
+                    <li>
+                        <h1>recently</h1>
+                        <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - consultant</p>
+                        <p><a href="https://www.iterate.no/" target="_blank">ITERATE</a> - summer intern</p>
+                    </li>
+                    <li>
+                        <h1>previously</h1>
+                        <p><a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a> - ERASMUS exchange student</p>
+                        <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - summer intern</p>
+                        <p><a href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - lighting technician</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div id="info">
+                <ul>
+                    <li><a href="http://portfolio.hmkristiansen.no/" target="_blank">→ project archive</a></li>
+                    <li id="info_link"><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">→ linkedin</a></li>
+                    <li id="info_link"><a href="https://www.instagram.com/hmkristiansen/" target="_blank">→ instagram</a></li>
+                    <li id="info_link"><a href="mailto:heisann@hmkristiansen.no?subject=Heisann, Henrik!"" target="_blank">→ epost</a></li>
+                    <li id="info_link"><a href="assets/cvhmk.pdf" target="_blank">→ cv</a></li>
+                </ul>
+            </div>
+            <p id="easter" onclick="goBackToStart();">
+                the end 🥺
+            </p>
+        </section>
+
+    </div>
+
+    <div id="overlay" style="position: fixed !important;" class="hidden">
+        <div id="close_btn" class="hideCloseBtn"><img src="assets/svg/exit.svg"></div>
+        <div id="exp_btn"><img src="assets/svg/max.svg"></div>
+        <div id="port_content">
+            <div id="imageSelector"></div>
+            <h1></h1>
+            <div id="item_info">
+                <ul>
+                    <li id="client"></li>
+                    <li id="role"></li>
+                    <li id="period"></li>
+                </ul>
+            </div>
+            <div id="parentNode"></div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+</body>
+
+</html>

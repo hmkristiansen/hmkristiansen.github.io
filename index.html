@@ -1,170 +1,359 @@
-<!DOCTYPE html>
-<html id="page">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Henrik M. Kristiansen - design student</title>
 
-    <noscript>Your browser needs to support JavaScript in order to run my website :)</noscript>
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+                <link rel="icon" type="image/png" sizes="32x32" href="const_assets/favicon-32x32.png">
+                <link rel="icon" type="image/png" sizes="96x96" href="const_assets/favicon-96x96.png">
+                <link rel="icon" type="image/png" sizes="16x16" href="const_assets/favicon-16x16.png">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script/lottie.js"></script>
+                <noscript>Your browser needs to support JavaScript in order to run my website :)</noscript>
 
-    <link rel = "stylesheet"type = "text/css" href ="style/reset.css"/>
-    <link rel = "stylesheet"type = "text/css" href ="style/style.css"/>
+                <style>
 
-</head>
+                    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
 
-<body id="body" class="" onload="onLoadPage();">
+                    body { 
+                        width: 100%; 
+                        height: 100%; 
+                        margin: 0; 
+                        position: fixed; 
+                        background: rgba(30,30,30, 1); 
+                        color: white;
+                        font-family: 'IBM Plex Sans', sans-serif;
+                        overflow: scroll;
+                    }
+                    canvas { 
+                        width: 100%; 
+                        height: 100%; 
+                        outline: none; 
+                        cursor: grab;
+                        z-index: 0;
+                    }
+                    #container { 
+                        width: 100%; 
+                        height: 100%; 
+                        position: relative; 
+                    }
 
-    <div id="preloader_container">
-        <div id="preloader"></div>
-    </div>
+                    ul{
+                        margin-top: 15px;
+                        padding: 0;
+                        list-style-type: none;
 
-    <div id="settings_toggle" onclick="toggleSettings();" class="hideOnLoad">⚙️</div>
-    <div id="settings_container" class="settingsCollapsed">
-        <div class="settings_section" id="settings_font">
-            <h1>Typeface</h1>
-            <ul>
-                <li style="font-family: 'Karla', sans-serif;">
-                    <input type="radio" name="font" value="sans" id="radioSans">
-                    <label for="radioSans">Sans Serif</label>
-                </li>
-                <li style="font-family: 'Playfair Display', serif;">
-                    <input type="radio" name="font" value="serif" id="radioSerif">
-                    <label for="radioSerif">Serif</label>
-                </li> 
-                <li style="font-family: 'Roboto Mono', monospace;">
-                    <input type="radio" name="font" value="mono" id="radioMono">
-                    <label for="radioMono">Monospace</label>
-                </li>
-            </ul>
-        </div>
-        <div class="settings_section" id="settings_style">
-            <h1>Style</h1>
-            <ul>
-                <li>
-                    <input type="radio" name="color" value="light" id="radioLight">
-                    <label for="radioLight">Light</label>
-                </li>
-                <li>
-                    <input type="radio" name="color" value="dark" id="radioDark">
-                    <label for="radioDark">Dark</label>
-                </li>
-            </ul>
-        </div>
-    </div>
+                        width: auto;
+                        height: auto;
+                        display: inline-block;
 
-    <div id="content" class="hideOnLoad" onscroll="checkAndUpdateHeader();">
+                    }
 
-        <div id="header">Henrik M. Kristiansen   
-            <ul>
-                <li id="greeting_nav" onclick="goToSection(this.id);"> → greeting</li>
-                <li class="hidden_nav" id="work_nav" onclick="goToSection(this.id);"> → works</li>
-                <li class="hidden_nav" id="about_nav" onclick="goToSection(this.id);"> → about</li>
-                <li class="hidden_nav" id="contact_nav" onclick="goToSection(this.id);"> → links</li>
-            </ul>
-        </div>
+                    ul li{
+                        margin: 0;
+                        padding: 5px;
+                        padding-left: 0;
+                        
+                    }
 
-        <section id="greeting">
-            <div id="greeting_cont">
-                <div id="greeting_message">
-                    <div id="status_cont">
-                        <span class="status" id="status0">Heisann, I'm Henrik <span id='hand-wave'>👋</span></span>
-                        <span class="status carusellIn getter" id="status1">Test1</span>
+                    a{
+                        text-decoration: none;
+                        position: relative;
+                        
+                        cursor: ne-resize;
+
+                        font-size: 1.2rem;
+                        color: rgb(201, 201, 201);
+                        transition: all 0.2s;
+                    }
+
+                    a:hover{
+                        filter: brightness(150%);
+                    }
+
+                    ::-moz-selection { 
+                        color: black;
+                        background: #FFA800;
+                    }
+
+                    ::selection {
+                        color: black;
+                        background: #FFA800;
+                    }
+                    /*
+                    #linkedin_link:hover{
+                        filter: unset;
+                        color: dodgerblue;
+                        text-shadow: 0px 2px 10px rgba(30, 143, 255, 0.658);
+                    }
+
+                    #insta_link:hover{
+                        filter: unset;
+                        background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        text-shadow: 0px 2px 10px rgba(240, 149, 51, 0.76);
+                    }
+
+                    #notion_link:hover{
+                        color: black;
+                        text-shadow: 0px 2px 10px rgba(255, 255, 255, 0.76);
+                    }
+                    */
+
+                    #meImg{
+                        position: absolute;
+                        top: 10%;
+                        left: 20%;
+                        transform: rotate(5deg);
+                        z-index: 1;
+                        transition: all 0.5s cubic-bezier(0.87, 0, 0.13, 1);
+                    }
+
+                    #meImg img{
+                        width: 300px;
+                        height: auto;
+                        object-fit: cover;
+                    }
+
+                    .imgHide{
+                        transform: scale(0.8) rotate(10deg) !important;
+                        opacity: 0.1;
+                        -webkit-filter: blur(5px);
+                        -moz-filter: blur(5px);
+                        -o-filter: blur(5px);
+                        -ms-filter: blur(5px);
+                        filter: blur(5px);
+                    }
+
+                    #content{
+                        position: absolute;
+                        bottom: 20%;
+                        left: 15%;
+                        z-index: 1;
+
+                        width: fit-content;
+                        max-width: 500px;
+                    }
+
+
+                    #content *{
+                        margin-bottom: 20px;
+                    }
+
+                    #content #header{
+                        font-size: 1.5rem;
+                        cursor: help;
+                        /*font-weight: bold;*/
+                    }
+
+                    #content #text{
+                        font-size: 1.2rem;
+                    }
+
+                    .btn{
+                        cursor: pointer;
+                    }
+
+                    .btn img{
+                        width: 15px;
+                        height: 15px;
+                        object-fit: cover;
+                        padding: 8px;
+                        border: 1px solid white;
+                        border-radius: 200px;
+                        transition: all 0.1s;
+                    }
+
+                    .btn:hover img{
+                        transform: scale(0.9);
+                        background-color: #FFA800;
+                    }
+
+                    #openMore{
+                        left: 1rem;
+                        bottom: 1rem;
+                        position: absolute;
+                    }
+
+                    #closeMore{
+                        position: absolute;
+                        top: 1rem;
+                        left: 1rem;
+                    }
+
+                    #moreContainer{
+                        position: absolute;
+                        max-width: 800px;
+                        max-height: fit-content;
+                        width: 80%;
+                        /*height: 50%;*/
+
+                        overflow: scroll;
+
+                        font-size: 1.3rem;
+
+                        color: rgb(238, 238, 238);
+
+                        padding: 40px;
+
+                        border: solid 1px rgb(100, 100, 100);
+                        border-radius: 10px;
+
+                        background-color: rgba(41, 41, 41, 0.5);
+                        backdrop-filter: blur(10px);
+
+                        left: 50%;
+                        top: 50%;
+                        -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+
+                        transition: all 0.5s !important;
+                        opacity: 1;
+                        z-index: 1000;
+                        pointer-events: all;
+                    }
+
+                    #moreContent{
+                        position: relative;
+                        margin-top: 40px;
+                    }
+
+                    
+                    #moreContainer #signOff{
+                        margin-top: 40px;
+                    }
+
+                    .hideMore{
+                        top: 52% !important;
+                        opacity: 0 !important;
+                        z-index: -1000 !important;
+                        pointer-events: none !important;
+                    }
+
+                    /*Supporting classes*/
+                    .noselect {
+                        -webkit-touch-callout: none; /* iOS Safari */
+                            -webkit-user-select: none; /* Safari */
+                            -khtml-user-select: none; /* Konqueror HTML */
+                            -moz-user-select: none; /* Old versions of Firefox */
+                                -ms-user-select: none; /* Internet Explorer/Edge */
+                                    user-select: none; /* Non-prefixed version, currently
+                                                        supported by Chrome, Edge, Opera and Firefox */
+                    }
+
+
+                    @media only screen and (max-width: 600px){
+
+                        html{
+                            font-size: 12px;
+                        }
+
+                        a{
+                            text-decoration: underline;
+                        }
+
+                        #meImg{
+                            display: none;
+                        }
+
+                        #content{
+                            top:10%;
+                            left: 0;
+                            padding: 5%;
+                        }
+                    }
+ 
+                </style>
+                <title>Henrik M. Kristiansen → digital designer</title>
+            </head>
+            <body>
+
+                <div id='container'>  
+                    <canvas id="canvas3d"></canvas>
+                </div>
+
+                <div id="meImg" class="imgHide">
+                    <img src="const_assets/hug.jpg">
+                </div>
+
+                <div id="content">
+                    <div id="header">
+                        <b>Henrik M. Kristiansen</b><br>↳ digital designer
+                    </div>
+                    <div id="text">
+                        I create, break, fix, mess around, code and occasionally design stuff. Currently I’m interning at <a href="https://eggsdesign.com/" target="_blank" >EGGS Design</a> in Copenhagen. You can often find me photographing minor details or create seemingly useless concepts and websites.
+                    </div>
+                    <div id="holla">
+                        <a href="mailto:heisann@hmkristiansen.no?subject=Heisann Henrik!">Want to say hi? 📬</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="work" class="">
-        </section>
-
-        <section id="about" class="">
-            <div id="bioContainer">
-                <div id="bio">
-                    <img src="assets/hug.jpg">
-                    <ul>
-                        <li style="font-weight: bold;">Henrik M. Kristiansen</li>
-                        <li id="life_counter">
-                            <div id="life_wrapper">
-                                <span id="age">24.091407102536316</span>
-                            </div>
-                        </li>
-                        <li>curr: CPH</li>
-                        <li>prev: LYR · LIS · TRD  · OSL</li>
-                        <li style="color:rgba(200,200,200,1);">👍 {🐶,☕️,🏃‍♂️}</li>
-                    </ul>
+                <div id="openMore" class="btn noselect" onclick="showMoreInfo();">
+                    <img src="const_assets/open_white.svg">
                 </div>
-            </div>
 
-            <div id="cv">
-                <ul>
-                    <li>
-                        <h1>currently</h1>
-                        <p><a href="https://eggsdesign.com" target="_blank">EGGS Design</a> - junior digital design intern</p>
-                        <p><a href="https://www.ntnu.no/studier/mtdesig" target="_blank">NTNU</a> - MS.c industrial design<br>major in interaction design</p>
-                    </li>
-                    <li>
-                        <h1>recently</h1>
-                        <p><a href="https://www.designhjelpen.com" target="_blank">Designhjelpen</a> - consultant</p>
-                        <p><a href="https://www.iterate.no/" target="_blank">ITERATE</a> - summer intern</p>
-                    </li>
-                    <li>
-                        <h1>previously</h1>
-                        <p><a href="https://www.iade.europeia.pt/en" target="_blank">IADE</a> - ERASMUS exchange student</p>
-                        <p><a href="https://www.itera.no/en/" target="_blank">Itera</a> - summer intern</p>
-                        <p><a href="https://www.samfundet.no" target="_blank">Studentersamfundet</a> - lighting technician</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                <div id="moreContainer" class="hideMore">
+                    <div id="closeMore" class="btn" onclick="showMoreInfo();">
+                        <img src="const_assets/close_white.svg">
+                    </div>
+                    <div id="moreContent">
+                        <b>Hush, you're backstage 🤫</b><br><br>
+                        This page is a temporary set-up as I'm recreating my site using <a href="https://nextjs.org/" target="_blank">Next.js</a>, <a href="https://vercel.com/" target="_blank">Vercel</a> and <a href="https://www.sanity.io/" target="_blank">Sanity</a>. It is made using vanilla html, css and js, hosted on <a href="https://github.com/hmkristiansen/hmkristiansen.github.io" target="_blank">GitHub Pages</a>. The interactive block-thingy was made using <a href="https://spline.design/" target="_blank">Spline</a>.<br><br>
+                        If you're curious to learn more about me and/or my projects, here are some links:
+                    </div>
 
-        <section id="contact">
-            <div id="info">
-                <ul>
-                    <li><a href="http://portfolio.hmkristiansen.no/" target="_blank">→ project archive</a></li>
-                    <li id="info_link"><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">→ linkedin</a></li>
-                    <li id="info_link"><a href="https://www.instagram.com/hmkristiansen/" target="_blank">→ instagram</a></li>
-                    <li id="info_link"><a href="mailto:heisann@hmkristiansen.no?subject=Heisann, Henrik!"" target="_blank">→ epost</a></li>
-                    <li id="info_link"><a href="assets/cvhmk.pdf" target="_blank">→ cv</a></li>
-                </ul>
-            </div>
-            <p id="easter" onclick="goBackToStart();">
-                the end 🥺
-            </p>
-        </section>
+                    <div id="links">
+                        <ul>
+                            <li><a id="linkedin_link" href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">LinkedIn</a></li>
+                            <li><a id="insta_link" href="https://www.instagram.com/hmkristiansen/" target="_blank">Instagram</a></li>
+                            <li><a id="notion_link" href="http://portfolio.hmkristiansen.no/" target="_blank">Notion project archive</a></li>
+                            <li><a id="old_link" href="old_index.html" target="_blank">Old site 🕸</a></li>
+                        </ul>
+                    </div>
 
-    </div>
+                    <div id="signOff">
+                        Say hi to your dog from me 🐶<br>
+                        - Henrik
+                    </div>
+                    
+                </div>
+                <script>
+                    var SPE = {};
+                </script>
 
-    <div id="overlay" style="position: fixed !important;" class="hidden">
-        <div id="close_btn" class="hideCloseBtn"><img src="assets/svg/exit.svg"></div>
-        <div id="exp_btn"><img src="assets/svg/max.svg"></div>
-        <div id="port_content">
-            <div id="imageSelector"></div>
-            <h1></h1>
-            <div id="item_info">
-                <ul>
-                    <li id="client"></li>
-                    <li id="role"></li>
-                    <li id="period"></li>
-                </ul>
-            </div>
-            <div id="parentNode"></div>
-        </div>
-    </div>
+                <script>
+                    function showMoreInfo(){
+                        let moreInfo = document.getElementById("moreContainer");
+                        if(moreInfo.classList.contains("hideMore")){
+                            moreInfo.classList.remove("hideMore");
+                        }else{
+                            moreInfo.classList.add("hideMore");
+                        }
+                    }
 
-    <script src="script/script.js"></script>
-    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-</body>
+                    document.getElementById("header").addEventListener("mouseover", mouseOver);
+                    document.getElementById("header").addEventListener("mouseout", mouseOut);
 
-</html>
+                    function mouseOver() {
+                        document.getElementById("meImg").classList.remove("imgHide");
+                    }
+
+                    function mouseOut() {
+                        document.getElementById("meImg").classList.add("imgHide");
+                    }
+
+                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+                <script src="https://cdn.spline.design/lib/anime.min.js"></script>
+                <script src="https://cdn.spline.design/lib/spline.runtime.min.js"></script>
+                <script src="const_js/assets.js"></script>
+                <script src="const_js/scene.js"></script>
+                <script src="const_js/main.js"></script>
+
+                <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+                <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript>
+
+            </body>
+        </html>
+        
