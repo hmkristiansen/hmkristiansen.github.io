@@ -4,10 +4,13 @@
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="Personal website for Henrik Kristiansen, a Norwegian digital designer currently interning at EGGS Design.">
 
                 <link rel="icon" type="image/png" sizes="32x32" href="const_assets/favicon-32x32.png">
                 <link rel="icon" type="image/png" sizes="96x96" href="const_assets/favicon-96x96.png">
                 <link rel="icon" type="image/png" sizes="16x16" href="const_assets/favicon-16x16.png">
+
+                <title>Henrik M. Kristiansen → digital designer</title>
 
                 <noscript>Your browser needs to support JavaScript in order to run my website :)</noscript>
 
@@ -166,6 +169,7 @@
                     #holla #holla_text{
                         text-decoration: underline;
                         transition: all 0.1s ease-in-out;
+                        z-index: 1;
                     }
 
                     #holla #holla_text:hover{
@@ -178,38 +182,31 @@
                         top:0;
                         opacity:0;
                         font-size: 1rem;
+                        z-index: 0;
                     }
 
                     .toggleToolTip{
-                        animation: dispTooltip 0.9s ease-in-out;
-                        -webkit-animation: dispTooltip 0.9s ease-in-out;
-                        -webkit-animation-iteration-count: 1;
-                        -webkit-animation-fill-mode: forwards;
-                    }
-
-/*
-                    #holla:hover #tooltip{
                         animation: dispTooltip 0.5s ease-in-out;
                         -webkit-animation: dispTooltip 0.5s ease-in-out;
                         -webkit-animation-iteration-count: 1;
                         -webkit-animation-fill-mode: forwards;
                     }
-*/
+
                     @keyframes dispTooltip {
                         0% {
                             top: 0;
                             opacity:0;
                         }
-                        30%{
-                            top: -2rem;
+                        50%{
+                            top: 2rem;
                             opacity:1;
                         }
                         80%{
-                            top: -2rem;
+                            top: 2rem;
                             opacity:1;
                         }
                         100% {
-                            top: -3rem;
+                            top: 2.5rem;
                             opacity:0;
                         }
                     }
@@ -250,7 +247,6 @@
                         max-width: 800px;
                         max-height: fit-content;
                         width: 80%;
-                        /*height: 50%;*/
 
                         overflow: scroll;
 
@@ -342,7 +338,6 @@
                     }
  
                 </style>
-                <title>Henrik M. Kristiansen → digital designer</title>
             </head>
             <body>
 
@@ -362,7 +357,7 @@
                         I create, break, fix, mess around, code and occasionally design stuff. Currently I’m interning at <a href="https://eggsdesign.com/" target="_blank" >EGGS Design</a> in Copenhagen. You can often find me photographing small details, doodling seemingly useless concepts and/or applying bézier curves to almost anything.
                     </div>
                     <div id="holla">
-                        <div id="holla_text">heisann@hmkristiansen.no</div>
+                        <div id="holla_text" onclick="copyMail();">heisann@hmkristiansen.no</div>
                         <span id="tooltip">Copied 🎉</span>
                     </div>
                 </div>
@@ -422,27 +417,54 @@
                         document.getElementById("meImg").classList.add("imgHide");
                     }
 
-                    const mail = document.getElementById("holla_text");
-                    mail.onclick = function() {
-                        document.execCommand("copy");
-                    }
-                    mail.addEventListener("copy", function(event) {
-                        event.preventDefault();
-                        if (event.clipboardData) {
-                            event.clipboardData.setData("text/plain", mail.textContent);
-                            //console.log(event.clipboardData.getData("text"))
-                            //document.getElementById("tooltip").classList.add("toggleToolTip");
+                    
+                    const mailTarget = document.getElementById('holla_text');
+                    mailTarget.addEventListener('mouseleave', e => {
+                        document.getElementById("tooltip").classList.remove("toggleToolTip");
+                    });
 
-                            if(document.getElementById("tooltip").classList.contains("toggleToolTip")){
-                                document.getElementById("tooltip").classList.remove("toggleToolTip");
-                                //document.getElementById("tooltip").classList.add("toggleToolTip");
-                            }else{
-                                document.getElementById("tooltip").classList.add("toggleToolTip");
-                                //document.getElementById("tooltip").classList.remove("toggleToolTip");
+                    function copyMail() {
+                        var copyText = document.getElementById("holla_text");
+                        copyToClipboard(copyText.innerText);
+                        document.getElementById("tooltip").classList.add("toggleToolTip");
+                    }
+
+                    function copyToClipboard(textToCopy) {
+                        var textArea;
+                        function isOS() {
+                            return navigator.userAgent.match(/ipad|iphone/i);
+                        }
+
+                        function createTextArea(text) {
+                            textArea = document.createElement('textArea');
+                            textArea.readOnly = true;
+                            textArea.contentEditable = true;
+                            textArea.value = text;
+                            document.body.appendChild(textArea);
+                        }
+
+                        function selectText() {
+                            var range, selection;
+                            if (isOS()) {
+                                range = document.createRange();
+                                range.selectNodeContents(textArea);
+                                selection = window.getSelection();
+                                selection.removeAllRanges();
+                                selection.addRange(range);
+                                textArea.setSelectionRange(0, 999999);
+                            } else {
+                                textArea.select();
                             }
                         }
 
-                    });
+                        function copyTo() {
+                            document.execCommand('copy');
+                            document.body.removeChild(textArea);
+                        }
+                        createTextArea(textToCopy);
+                        selectText();
+                        copyTo();
+                    }
 
                 </script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
