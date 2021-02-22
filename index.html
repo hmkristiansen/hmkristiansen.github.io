@@ -19,15 +19,6 @@
         html, body {
             width: 100%;
             height: 100%;
-            -webkit-font-smoothing: antialiased;
-            -webkit-font-smoothing: subpixel-antialiased;
-
-            -webkit-transform: translate3d(0,0,1px);
-            -moz-transform: translate3d(0,0,1px);
-            -ms-transform: translate3d(0,0,1px);
-            -o-transform: translate3d(0,0,1px);
-            transform: translate3d(0,0,1px);
-            transform: translateZ(0);
         }
         body{
 
@@ -38,7 +29,16 @@
             /*background: rgb(255, 255, 255);*/
             background-color: #F2F1ED;
             -webkit-transition-duration: 0.2s;
-        
+
+            -webkit-transform: translate3d(0,0,1px) !important;
+            -moz-transform: translate3d(0,0,1px) !important;
+            -ms-transform: translate3d(0,0,1px) !important;
+            -o-transform: translate3d(0,0,1px) !important;
+             transform: translate3d(0,0,1px) !important;
+
+             -webkit-font-smoothing: antialiased !important;
+            -webkit-font-smoothing: subpixel-antialiased !important;            
+
             width: 100%;
             min-height: 100vh;
             margin: 0;
@@ -58,7 +58,7 @@
             text-decoration: none;
             color: dimgray;
             cursor: alias;
-            transition: color 0.2s;
+            transition: all 0.2s;
         }
 
         a:hover{
@@ -86,10 +86,20 @@
             color: black;
         }
 
+        #iterateLink:hover{
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #iteraLink:hover{
+            color: #D10F0E;
+        }
+
         .container{
             perspective: 5px;
-            width: 540px;
-            height: 300px;
+            width: 600px;
+            height: 350px;
         }
         .inner{
             perspective: 1000px;
@@ -139,7 +149,7 @@
 
         .card-front h1 {
             font-weight: normal;
-            font-size: 1.2rem;
+            font-size: 1rem;
             padding: 30px;
         }
 
@@ -148,11 +158,11 @@
         }
 
         .card-back p{
-            width: 46%;
+            width: 40%;
             text-align: justify;
             top: 30px;
             left: 30px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
 
         .card-back p a{
@@ -160,16 +170,17 @@
         }
 
         .card-back ul{
-            font-size: 0.8rem;
+            font-size: 0.7rem;
+            font-weight: bold;
             list-style-type: none;
-            bottom: 20px;
+            bottom: 30px;
             left: 30px;
         }
 
         .card-back ul li{
             position: relative;
             display: inline-block;
-            margin-left: 8px;
+            margin-right: 8px;
         }
 
         .card-back ul li a{
@@ -178,11 +189,13 @@
 
 
         .card-back img{
-            height: calc(100% - 120px);
-            width: 30%;
+            /*height: calc(100% - 120px);*/
+            height: 100%;
+            width: 45%;
             object-fit: cover;
-            top: 60px;
-            right: 50px;
+            /*top: 60px;*/
+            right: 0px;
+            border-radius: 0 5px 5px 0px;
         }
 
         .flipCard{
@@ -257,10 +270,10 @@
         <div class="inner" id="inner"> 
             <div class="card dynamic-shadow">
                 <div class="card-front">
-                    <h1><b>Henrik M. Kristiansen</b><br>Digital Design Student</h1>
+                    <h1><b>Henrik M. Kristiansen</b><br>Digital Designer</h1>
                 </div>
                 <div class="card-back">
-                    <p>I break, fix, mess around, code and occasionally design stuff. Currently I’m interning at <a href="" traget="_blank" id="eggsLink">EGGS Design</a> in Copenhagen. You can often find me photographing small details, prototyping seemingly useless concepts and/or playing with bézier curves when I'm bored.<br> <br> This site will soon be replaced 👨‍💻</p>
+                    <p>I break, fix, mess around, code and occasionally design stuff. Right now I’m an intern at <a href="https://eggsdesign.com/" target="_blank" id="eggsLink">EGGS</a> in Copenhagen, previously at <a href="https://www.iterate.no/" target="_blank" id="iterateLink">ITERATE</a> and <a href="https://www.itera.no/" target="_blank" id="iteraLink">Itera</a>. <br> You can often find me photographing small details, prototyping seemingly useless concepts and/or playing with bézier curves.<br> <br> This site will soon be replaced 👨‍💻</p>
                     <ul>
                         <li><a href="https://www.notion.so/hmkristiansen-project-archive-fa5f979269fa4b7bafdee0cec43eff2e" target="_blank" id="projectLink">Projects</a></li>
                         <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank" id="liLink">LinkedIn</a></li>
