@@ -6,7 +6,14 @@
     <meta name="description" content="Henrik M. Kristiansen - Digital Designer">
     <title>Henrik M. Kristiansen | Design Student</title>
     <noscript>You need to support Javascript to run my page :)</noscript>
-    <link rel="icon" type="image/png" sizes="96x96" href="card_assets/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="card_assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="card_assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="card_assets/favicon-16x16.png">
+    <link rel="manifest" href="card_assets/site.webmanifest">
+    <link rel="mask-icon" href="card_assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
@@ -19,9 +26,9 @@
         html, body {
             width: 100%;
             height: 100%;
+            font-size: 16px;
         }
         body{
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,25 +52,30 @@
 
         a{
             text-decoration: none;
-            color: dimgray;
+            color: rgb(88, 88, 88);
             cursor: pointer;
             transition: all 0.2s;
         }
 
+        a:hover{
+            color: black;
+        }
+
+        
         #eggsLink:hover{
             color: #27C5DA;
+            opacity: 1;
         }
 
-        #projectLink:hover{
-            color: #D64045;
-        }
-
-        #liLink:hover{
-            color: #79B3DF;
+        #mailLink{
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            font-weight: bold;
         }
 
         #mailLink:hover{
-            color: #6BA292;
+            color: black;
         }
 
         #oldLink:hover{
@@ -82,8 +94,12 @@
 
         .container{
             perspective: 5px;
-            width: 600px;
+            width: 630px;
             height: 350px;
+
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
         }
 
         .inner{
@@ -92,6 +108,10 @@
             height: 100%;
             transition: transform 0.2s;
             cursor: alias;
+
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
         }
         .card {
             position: relative; 
@@ -116,19 +136,24 @@
             -moz-border-radius: 5px;
             border-radius: 5px;
 
-            border: solid 0.2px rgb(236, 236, 236);
+            outline: solid 0.2px rgb(236, 236, 236);
         }
-        .card-back {
-            transform: rotateX(180deg);
-        }
-
 
         .card-front{
-            background-image: url("/card_assets/card.png");
+            background-image: url("/card_assets/cardFront.png");
             background-position: center; 
             background-repeat: no-repeat;
             background-size: cover; 
-            color: black;
+            color: rgb(41, 41, 41);
+        }
+
+        .card-back {
+            transform: rotateX(180deg);
+            background-image: url("/card_assets/cardBack.png");
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-size: cover; 
+            color: rgb(41, 41, 41);
         }
 
         .card-front h1 {
@@ -137,51 +162,112 @@
             padding: 30px;
         }
 
+        /*
         .card-back *{
             position: absolute;
-        }
+        }*/
 
-        .card-back p{
+        .card-back .backContent{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 30px;
             width: 40%;
-            text-align: justify;
-            top: 30px;
-            left: 30px;
-            font-size: 0.7rem;
+            height: calc(100% - 60px);
         }
 
-        .card-back p a{
+        .card-back .backContent *{
             position: relative;
         }
 
+        .card-back p{
+            text-align: justify;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
         .card-back ul{
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             font-weight: bold;
             list-style-type: none;
-            bottom: 30px;
-            left: 30px;
+            transition: opacity 0.2s;
         }
 
         .card-back ul li{
             position: relative;
             display: inline-block;
             margin-right: 8px;
+            transition: opacity 0.2s;
         }
 
-        .card-back ul li a{
-            position: relative;
+        .card-back ul:hover li{
+            opacity: 0.5;
         }
 
-
-        .card-back img{
-            height: 100%;
-            width: 45%;
-            object-fit: cover;
-            right: 0px;
-            border-radius: 0 5px 5px 0px;
+        .card-back ul li:hover{
+            opacity: 1;
         }
 
         .flipCard{
             transform: rotateX(180deg);
+        }
+
+        #holla{
+            cursor: copy;
+            position: relative;
+            font-size: .8rem;
+            top: 60px;
+            width: fit-content;
+        }
+
+        #holla #holla_text{
+            /*text-decoration: underline;*/
+            position: relative;
+            transition: all 0.1s ease-in-out;
+            z-index: 1;
+        }
+
+        #holla #holla_text:hover{
+            filter: brightness(50%);
+        }
+
+        #holla span{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            color: #333;
+            width: 200px;
+            left: 0;
+            top: -5px;
+            opacity:0;
+            font-size: 0.6rem;
+            z-index: 0;
+        }
+
+        .toggleToolTip{
+            animation: dispTooltip 0.6s ease-in-out;
+            -webkit-animation: dispTooltip 0.6s ease-in-out;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @keyframes dispTooltip {
+            0% {
+                top: -5px;
+                opacity:0;
+            }
+            40%{
+                top: 15px;
+                opacity:1;
+            }
+            80%{
+                top: 15px;
+                opacity:1;
+            }
+            100% {
+                top: 20px;
+                opacity:0;
+            }
         }
 
         @media (prefers-color-scheme: dark) {
@@ -189,7 +275,11 @@
         }
 
     
-        @media only screen and (max-width: 630px) {
+        @media only screen and (max-width: 650px) {
+
+            html{
+                font-size: 12px;
+            }
 
             body{
                 display: block;
@@ -208,7 +298,7 @@
             }
 
             .card-front{
-                background-image: url("/card_assets/card_m.png");
+                background-image: url("/card_assets/cardFront_m.png");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -217,41 +307,29 @@
 
             .card-back {
                 transform: rotateY(180deg);
+                background-image: url("/card_assets/cardBack_m.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: black;
             }
 
             .flipCard{
                 transform: rotateY(180deg);
             }
 
-            .card-back p{
-                width: calc(85% - 40px);
-                left: 20px;
+            .card-back .backContent{
+                position: absolute;
                 top: 50%;
-                margin: 0;
-                padding: 0;
+                left: 0;
+                padding: 30px;
+                width: calc(100% - 60px); 
+                height: calc(50% - 60px);
             }
 
-            .card-back img{
-                width: 100%;
-                height: 45%;
-                top: 0px;
-                object-position: 100% 15%;
-                border-radius: 5px 5px 0px 0px;
+            #holla{
+                top: 30px;
             }
-
-            .card-back ul{
-                left: 20px;
-                bottom: 30px;
-            }
-
-            .card-back ul li{
-                font-size: 0.8rem;
-                margin-bottom: unset;
-                margin-right: 10px;
-                margin-top: 5px;
-                display: inline-block;
-            }
-
         }
     </style>
 </head>
@@ -263,16 +341,25 @@
                     <h1><b>Henrik M. Kristiansen</b><br>Design Student</h1>
                 </div>
                 <div class="card-back">
-                    <p>I break, fix, experiment, code and occasionally design stuff. Right now I’m interning at <a href="https://eggsdesign.com/" target="_blank" id="eggsLink">EGGS</a> in Copenhagen, previously at <a href="https://www.iterate.no/" target="_blank" id="iterateLink">ITERATE</a> and <a href="https://www.itera.no/" target="_blank" id="iteraLink">Itera</a>. <br> You can often find me photographing small details, prototyping seemingly useless concepts and/or playing with bézier curves.<br> <br>This site will soon ble replaced 🤙</p>
-                    <ul>
-                        <li><a href="https://www.notion.so/hmkristiansen-project-archive-fa5f979269fa4b7bafdee0cec43eff2e" target="_blank" id="projectLink">Projects</a></li>
-                        <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank" id="liLink">LinkedIn</a></li>
-                        <li>
-                            <a href="mailto:heisann@hmkristiansen.no?subject=Heisann Henrik!" id="mailLink">Email me</a>
-                        </li>
-                        <li><a href="old_index.html" target="_blank" id="oldLink">Old site</a></li>
-                    </ul>
-                    <img src="/card_assets/hug.jpg">
+                    <div class="backContent">
+                        <p>I break, fix, experiment, code and occasionally design stuff. Right now I’m interning at <a href="https://eggsdesign.com/" target="_blank" id="eggsLink">EGGS</a> in Copenhagen, previously at <a href="https://www.iterate.no/" target="_blank" id="iterateLink">ITERATE</a> and <a href="https://www.itera.no/" target="_blank" id="iteraLink">Itera</a>. <br>I like photographing small details, prototyping seemingly useless concepts and playing with bézier curves.</p>
+                        <p>This site will soon ble replaced 🤙</p>
+                        <p><br>Complementary links:</p>
+                        <ul>
+                            <li><a href="https://www.notion.so/hmkristiansen-project-archive-fa5f979269fa4b7bafdee0cec43eff2e" target="_blank" id="projectLink">Projects</a></li>
+                            <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank" id="liLink">LinkedIn</a></li>
+                            <li><a href="old_index.html" target="_blank" id="oldLink">Old site</a></li>
+                        </ul>
+
+                        <a id="holla">
+                            <div id="holla_text" onclick="copyMail();">heisann@hmkristiansen.no</div>
+                            <span id="tooltip">Copied 🎉</span>
+                        </a>
+                        <!--
+                        <a href="mailto:heisann@hmkristiansen.no?subject=Heisann Henrik!" id="mailLink">heisann@hmkristiansen</a>
+                        -->
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -391,13 +478,68 @@
         }
 
         // supporting functions
-        $("#container").click(function(){
-            $('.card').toggleClass("flipCard");
-            $('.inner').css('transform-style','unset');
+        $("#container").click(function(e){
+
+            if($(e.target).closest('a').length){
+                return;
+            }
+            else{
+                $('.card').toggleClass("flipCard");
+                $('.inner').css('transform-style','unset');
+                setTimeout(function() { 
+                    $('.inner').css('transform-style','preserve-3d');
+                }, 350);
+            }
+
+
+        });  
+        
+        function copyMail() {
+            var copyText = document.getElementById("holla_text");
+            copyToClipboard(copyText.innerText);
+            document.getElementById("tooltip").classList.add("toggleToolTip");
             setTimeout(function() { 
-                $('.inner').css('transform-style','preserve-3d');
-            }, 350);
-        });      
+                document.getElementById("tooltip").classList.remove("toggleToolTip");
+            }, 600);
+        }
+
+        function copyToClipboard(textToCopy) {
+            var textArea;
+            function isOS() {
+                return navigator.userAgent.match(/ipad|iphone/i);
+            }
+
+            function createTextArea(text) {
+                textArea = document.createElement('textArea');
+                textArea.readOnly = true;
+                textArea.contentEditable = true;
+                textArea.value = text;
+                document.body.appendChild(textArea);
+            }
+
+            function selectText() {
+                var range, selection;
+                if (isOS()) {
+                    range = document.createRange();
+                    range.selectNodeContents(textArea);
+                    selection = window.getSelection();
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                    textArea.setSelectionRange(0, 999999);
+                } else {
+                    textArea.select();
+                }
+            }
+
+            function copyTo() {
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+            }
+            createTextArea(textToCopy);
+            selectText();
+            copyTo();
+        }
+
     </script>
 </body>
 </html>
