@@ -215,9 +215,9 @@
 
         #holla{
             cursor: copy;
-            position: relative;
+            position: absolute;
             font-size: .8rem;
-            top: 60px;
+            bottom: 30px;
             width: fit-content;
         }
 
@@ -269,12 +269,9 @@
                 transform: translateY(4vh) rotate(-2deg);
             }
             80% {
-                transform: translateY(0) rotate(0deg);
+                transform: translateY(-0.5vh) rotate(1deg);
             }
-            95%{
-                transform: rotate(0.5deg);
-            }
-            100% {
+            80% {
                 transform: translateY(0) rotate(0deg);
             }
         }
@@ -359,10 +356,6 @@
                 padding: 30px;
                 width: calc(100% - 60px); 
                 height: calc(50% - 60px);
-            }
-
-            #holla{
-                top: 30px;
             }
         }
     </style>
@@ -506,7 +499,7 @@
                         if(darkmode){
                             shadow = vf[0] * shadowLength + 'px ' + vf[1] * shadowLength + 'px 40px rgba(200,230,200,0.2)';
                         }else{
-                            shadow = vf[0] * shadowLength + 'px ' + vf[1] * shadowLength + 'px 40px rgba(10,0,50,0.1)';
+                            shadow = vf[0] * shadowLength + 'px ' + vf[1] * shadowLength + 'px 40px rgba(10,0,10,0.15)';
                         }
                         self.css('box-shadow', shadow);
                     })
