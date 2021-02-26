@@ -120,7 +120,7 @@
             position: relative; 
             width: 100%;
             height: 100%;
-            transition: transform 0.3s;
+            transition: transform 0.25s;
 
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
@@ -222,7 +222,6 @@
         }
 
         #holla #holla_text{
-            /*text-decoration: underline;*/
             position: relative;
             transition: all 0.1s ease-in-out;
             z-index: 1;
@@ -350,7 +349,7 @@
         }
     </style>
 </head>
-<body>
+<body id="body">
     <div class="container" id="container">
         <div class="inner" id="inner" style="transform-style: preserve-3d;"> 
             <div class="card" style="transform-style: preserve-3d;">
@@ -371,11 +370,7 @@
                         <a id="holla">
                             <div id="holla_text" onclick="copyMail();">heisann@hmkristiansen.no</div>
                             <span id="tooltip">Copied 🎉</span>
-                        </a>
-                        <!--
-                        <a href="mailto:heisann@hmkristiansen.no?subject=Heisann Henrik!" id="mailLink">heisann@hmkristiansen</a>
-                        -->
-                        
+                        </a>                        
                     </div>
                 </div>
             </div>
@@ -442,10 +437,15 @@
                 };
             
                 var onMouseMoveHandler = function(event) {
-                if (isTimeToUpdate()) {
-                    update(event);
-                }
+                    if (isTimeToUpdate()) {
+                        update(event);
+                    }
                 };
+
+                var onWindowResize = function(event){
+                    mouse.updatePosition(event);
+                    mouse.setOrigin(container);
+                }
             
                 //----------------------------------------------------
             
@@ -465,7 +465,8 @@
                     inner.style.msTransform = style;
                     inner.style.oTransform = style;
                 };
-            
+
+                window.addEventListener('resize', onWindowResize);
                 container.onmousemove = onMouseMoveHandler;
                 container.onmouseleave = onMouseLeaveHandler;
                 container.onmouseenter = onMouseEnterHandler;
@@ -512,10 +513,8 @@
                 $('.inner').css('transform-style','unset');
                 setTimeout(function() { 
                     $('.inner').css('transform-style','preserve-3d');
-                }, 350);
+                }, 300);
             }
-
-
         });  
         
         function copyMail() {
