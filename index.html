@@ -52,7 +52,7 @@
 
         a{
             text-decoration: none;
-            color: rgb(88, 88, 88);
+            color: rgb(124, 124, 124);
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -142,6 +142,7 @@
             border-radius: 5px;
 
             border: solid 1px rgb(236, 236, 236);
+            color: rgb(61, 61, 61);
         }
 
         .card-front{
@@ -149,7 +150,6 @@
             background-position: center; 
             background-repeat: no-repeat;
             background-size: cover; 
-            color: rgb(41, 41, 41);
         }
 
         .card-back {
@@ -158,7 +158,6 @@
             background-position: center; 
             background-repeat: no-repeat;
             background-size: cover; 
-            color: rgb(41, 41, 41);
         }
 
         .card-front h1 {
@@ -183,12 +182,19 @@
 
         .card-back p{
             text-align: justify;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
+            margin-bottom: 10px;
+        }
+
+        .card-back h2{
+            font-weight: normal;
+            font-size: 0.7rem;
+            margin-top: 20px;
             margin-bottom: 10px;
         }
 
         .card-back ul{
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: bold;
             list-style-type: none;
             transition: opacity 0.2s;
@@ -214,17 +220,23 @@
         }
 
         #holla{
-            cursor: copy;
             position: absolute;
-            font-size: .8rem;
+            font-size: .7rem;
             bottom: 30px;
             width: fit-content;
+            cursor: alias;
+        }
+
+        #holla:hover{
+            color: rgb(124, 124, 124);
         }
 
         #holla #holla_text{
             position: relative;
+            cursor: copy;
             transition: all 0.1s ease-in-out;
             z-index: 1;
+            width: 100%;
         }
 
         #holla #holla_text:hover{
@@ -299,7 +311,7 @@
         @media only screen and (max-width: 650px) {
 
             html{
-                font-size: 12px;
+                font-size: 14px;
             }
 
             body{
@@ -358,17 +370,16 @@
                 </div>
                 <div class="card-back">
                     <div class="backContent">
-                        <p>I break, fix, experiment, code and occasionally design stuff. Right now I’m interning at <a href="https://eggsdesign.com/" target="_blank" id="eggsLink">EGGS</a> in Copenhagen, previously at <a href="https://www.iterate.no/" target="_blank" id="iterateLink">ITERATE</a> and <a href="https://www.itera.no/" target="_blank" id="iteraLink">Itera</a>. <br>I like photographing small details, prototyping seemingly useless concepts and playing with bézier curves.</p>
-                        <p>This site will soon be replaced 🤙</p>
-                        <p><br>Complementary links:</p>
+                        <p>I break, fix, experiment, code and occasionally design stuff. Currently an intern at <a href="https://eggsdesign.com/" target="_blank" id="eggsLink">EGGS</a>, recently at <a href="https://www.iterate.no/" target="_blank" id="iterateLink">ITERATE</a> and previously <a href="https://www.itera.no/" target="_blank" id="iteraLink">Itera</a>. You can often find me photographing minor details, prototyping seemingly useless concepts and playing with bézier curves.</p>
+                        <h2>Some links:</h2>
                         <ul>
                             <li><a href="https://www.notion.so/hmkristiansen-project-archive-fa5f979269fa4b7bafdee0cec43eff2e" target="_blank" id="projectLink">Projects</a></li>
                             <li><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank" id="liLink">LinkedIn</a></li>
                             <li><a href="old_index.html" target="_blank" id="oldLink">Old site</a></li>
                         </ul>
 
-                        <a id="holla">
-                            <div id="holla_text" onclick="copyMail();">heisann@hmkristiansen.no</div>
+                        <a id="holla" onclick="copyMail();">
+                            <div id="holla_text">heisann@hmkristiansen.no</div>
                             <span id="tooltip">Copied 🎉</span>
                         </a>                        
                     </div>
