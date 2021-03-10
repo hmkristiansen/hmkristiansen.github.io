@@ -101,7 +101,7 @@
             -moz-border-radius: 5px;
             border-radius: 5px;
 
-            animation: cardAppear 1.5s forwards;
+            animation: cardAppear 2.3s forwards;
         }
 
         .inner{
@@ -266,15 +266,18 @@
 
         @keyframes cardAppear {
             0% {
-                transform: translateY(-200vh) rotate(90deg);
+                transform: translateY(-200vh) rotate(180deg);
             }
-            40% {
+            30% {
+                transform: translateY(-200vh) rotate(180deg);
+            }
+            60% {
                 transform: translateY(4vh) rotate(-2deg);
             }
-            80% {
+            90% {
                 transform: translateY(-0.5vh) rotate(1deg);
             }
-            80% {
+            90% {
                 transform: translateY(0) rotate(0deg);
             }
         }
