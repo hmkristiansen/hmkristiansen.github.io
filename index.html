@@ -40,14 +40,14 @@
             margin: 0;
         }
 
-        ::-moz-selection { 
-            color: black;
-            background: #FF9900;
-        }
-
-        ::selection {
-            color: black;
-            background: #FF9900;
+        .noselect {
+            -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Old versions of Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                        user-select: none; /* Non-prefixed version, currently
+                                            supported by Chrome, Edge, Opera and Firefox */
         }
 
         a{
@@ -365,7 +365,7 @@
         }
     </style>
 </head>
-<body id="body">
+<body id="body" class="noselect">
     <div class="container" id="container">
         <div class="inner" id="inner" style="transform-style: preserve-3d;"> 
             <div class="card" style="transform-style: preserve-3d;">
