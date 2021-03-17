@@ -109,8 +109,8 @@
             width: 100%;
             height: 100%;
             transition: transform 0.2s;
-            cursor: alias;
 
+            cursor: alias;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             border-radius: 5px;
@@ -120,7 +120,7 @@
             position: relative; 
             width: 100%;
             height: 100%;
-            transition: transform 0.25s;
+            transition: transform 0.2s;
 
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
@@ -218,6 +218,10 @@
 
         .flipCard{
             transform: rotateX(180deg);
+        }
+
+        .bezierFlip{
+            transition: transform 0.4s cubic-bezier(1,-0.3,0,1.3);
         }
 
         #holla{
@@ -375,7 +379,7 @@
                 <div class="card-back">
                     <div class="backContent">
                         <p>I break, fix, experiment, code and occasionally design stuff. Currently I'm interning at <a href="https://eggsdesign.com/" target="_blank" id="eggsLink">EGGS</a>, recently at <a href="https://www.iterate.no/" target="_blank" id="iterateLink">ITERATE</a>, previously <a href="https://www.itera.no/" target="_blank" id="iteraLink">Itera</a>. I like photographing minor details, prototyping seemingly useless concepts and playing with bézier curves.</p>
-                        <h2>Some links:</h2>
+                        <h2>More me:</h2>
                         <ul>
                             <li><a href="https://www.notion.so/hmkristiansen-project-archive-fa5f979269fa4b7bafdee0cec43eff2e" target="_blank" id="projectLink">project archive</a></li>
                             <li><a href="https://codepen.io/collection/XEBoNE" target="_blank" id="codeLink">code playground</a></li>
@@ -528,9 +532,11 @@
             else{
                 $('.card').toggleClass("flipCard");
                 $('.inner').css('transform-style','unset');
+                $('.card').addClass("bezierFlip");
                 setTimeout(function() { 
                     $('.inner').css('transform-style','preserve-3d');
-                }, 300);
+                    $('.card').removeClass("bezierFlip");
+                }, 400);
             }
         });  
         
