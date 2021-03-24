@@ -164,6 +164,7 @@
             font-weight: normal;
             font-size: 1.5rem;
             padding: 30px;
+            padding-top: 150px;
         }
 
 
@@ -345,6 +346,13 @@
                 color: black;
             }
 
+            .card-front h1 {
+                font-weight: normal;
+                font-size: 1.5rem;
+                padding: 30px;
+                padding-top: 60px;
+            }
+
             .card-back {
                 transform: rotateY(180deg);
                 background-image: url("/card_assets/cardBack_m.png");
@@ -374,7 +382,9 @@
         <div class="inner" id="inner" style="transform-style: preserve-3d;"> 
             <div class="card" style="transform-style: preserve-3d;">
                 <div class="card-front">
+                    
                     <h1><b>Henrik Kristiansen</b><br>Designer</h1>
+                    
                 </div>
                 <div class="card-back">
                     <div class="backContent">
@@ -524,22 +534,30 @@
             });
         }
 
-        // supporting functions
         $("#container").click(function(e){
-
             if($(e.target).closest('a').length){
                 return;
             }
             else{
-                $('.card').toggleClass("flipCard");
-                $('.inner').css('transform-style','unset');
-                $('.card').addClass("bezierFlip");
-                setTimeout(function() { 
-                    $('.inner').css('transform-style','preserve-3d');
-                    $('.card').removeClass("bezierFlip");
-                }, 400);
+                flipCardFunc();
             }
-        });  
+        });
+
+        document.body.onkeyup = function(e){
+            if(e.keyCode == 32){
+                flipCardFunc();
+            }
+        }  
+
+        function flipCardFunc(){
+            $('.card').toggleClass("flipCard");
+            $('.inner').css('transform-style','unset');
+            $('.card').addClass("bezierFlip");
+            setTimeout(function() { 
+                $('.inner').css('transform-style','preserve-3d');
+                $('.card').removeClass("bezierFlip");
+            }, 400);
+        }
         
         function copyMail() {
             var copyText = document.getElementById("holla_text");
