@@ -223,6 +223,7 @@
 
         .bezierFlip{
             transition: transform 0.4s cubic-bezier(.6,-0.2,.4,1.2);
+            pointer-events: none !important;
         }
 
         #holla{
@@ -465,7 +466,12 @@
                 };
             
                 var onMouseLeaveHandler = function() {
-                    inner.style = "transform-style: preserve-3d;";
+                    if(cardFlipping){
+                        updateTransformStyle(0,0);
+                        return;
+                    }else{
+                        inner.style = "transform-style: preserve-3d;";
+                    }
                 };
             
                 var onMouseMoveHandler = function(event) {
@@ -534,12 +540,16 @@
             });
         }
 
+        var cardFlipping = false;
+
         $("#container").click(function(e){
             if($(e.target).closest('a').length){
                 return;
             }
-            else{
+            else if(!cardFlipping){
                 flipCardFunc();
+            }else{
+                return;
             }
         });
 
@@ -553,9 +563,11 @@
             $('.card').toggleClass("flipCard");
             $('.inner').css('transform-style','unset');
             $('.card').addClass("bezierFlip");
+            cardFlipping = true;
             setTimeout(function() { 
                 $('.inner').css('transform-style','preserve-3d');
                 $('.card').removeClass("bezierFlip");
+                cardFlipping = false;
             }, 400);
         }
         
