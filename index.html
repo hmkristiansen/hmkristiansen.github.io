@@ -40,6 +40,18 @@
             margin: 0;
         }
 
+        #whitespace{
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            background-color: none;
+            opacity: 0;
+            user-select: none;
+            width: 100%;
+            height: 1px;
+        }
+
         .noselect {
             -webkit-touch-callout: none; /* iOS Safari */
                 -webkit-user-select: none; /* Safari */
@@ -48,6 +60,10 @@
                     -ms-user-select: none; /* Internet Explorer/Edge */
                         user-select: none; /* Non-prefixed version, currently
                                             supported by Chrome, Edge, Opera and Firefox */
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
         }
 
         a{
@@ -338,17 +354,18 @@
 
             body{
                 display: block;
-                overflow: hidden;
             }
 
             .container{
                 margin: 0 auto;
-                margin-top: calc(45vh - 220px);
+                top: calc(45vh - 220px);
+                left: calc(50vw - 150px);
                 perspective: 5px;
                 max-width: 300px;
                 max-height: 500px;
-                width: 80%;
-                height: 80%;
+                width: 100%;
+                height: 100%;
+                position: fixed;
             }
 
             .card-front{
@@ -367,7 +384,7 @@
             }
 
             .card-back {
-                transform: rotateY(180deg);
+                /*transform: rotateY(180deg);*/
                 background-image: url("/card_assets/cardBack_m.png");
                 background-position: center;
                 background-repeat: no-repeat;
@@ -376,7 +393,7 @@
             }
 
             .flipCard{
-                transform: rotateY(180deg);
+                /*transform: rotateY(180deg);*/
             }
 
             .card-back .backContent{
@@ -440,9 +457,6 @@
                 </div>
                 <div class="card-back">
                     <div class="backContent">
-                        <!--
-                        <p>I break, fix, experiment, code and occasionally design stuff. Currently I'm interning at <a href="https://eggsdesign.com/" target="_blank" id="eggsLink">EGGS</a>, recently at <a href="https://www.iterate.no/" target="_blank" id="iterateLink">ITERATE</a>, previously <a href="https://www.itera.no/" target="_blank" id="iteraLink">Itera</a>. I like photographing minor details, prototyping seemingly useless concepts and playing with bézier curves.</p>
-                        -->
                         <p>I develop, break, fix, experiment, code and occasionally design stuff. Currently a Junior Digital Design intern at <a href="https://eggsdesign.com/" target="_blank" id="eggsLink">EGGS Design</a>.<br><br> I like photographing minor details, obsessing over beagles and playing with bézier curves.</p>
                         <h2>More me:</h2>
                         <ul>
@@ -464,6 +478,9 @@
         </div>
     </div>
 
+    
+    <div id="whitespace"></div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <script>
@@ -594,7 +611,8 @@
             });
         }
 
-        var cardFlipping = false;
+        let cardFlipping = false;
+        let frontUp = true;
 
         $("#container").click(function(e){
             if($(e.target).closest('a').length){
@@ -607,63 +625,63 @@
             }
         });
 
+        window.addEventListener("keydown", function(e) {
+            if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+
         document.body.onkeyup = function(e){
             if((e.keyCode == 32) && !cardFlipping){
                 flipCardFunc();
+            }else if((e.keyCode == 13) && !cardFlipping){
+                flipCardFunc();
+            }else if(((e.keyCode == 38)||(e.keyCode == 33)) && !cardFlipping && frontUp){
+                flipCardFunc();
+            }else if(((e.keyCode == 40)||(e.keyCode == 34)) && !cardFlipping && !frontUp){
+                flipCardFunc();
             }
         }  
-        
 
-        /*
-        let diff = 0;
-        let yScroll = 0;
+        var scrollPos = 0;
+        window.addEventListener('scroll', debounce(detectScroll, 100));
 
-
-        let prevDiff = 0;
-        let brake = 0;
-
-
-
-        let scrollStop = false;
-        let frontSideUp = true;
-
-
-        window.addEventListener('wheel', function(e) {
-
-            yScroll = window.scrollY;
-            prevDiff = diff;
-            diff = e.deltaY;
-
-            if((diff < 10) && (prevDiff == diff)){
-                brake++;
-                console.log(brake);
+        function detectScroll(){
+            if (((document.body.getBoundingClientRect()).top > scrollPos) && !frontUp){
+                flipCardFunc();
+                console.log("up");
+            }else if(frontUp){
+                flipCardFunc();
+                console.log("down");
             }
-
-          
-
-            
-            if($('.card').hasClass("flipCard")){
-                frontSideUp = false;
-            }
-            if(!cardFlipping){
-                if((diff>0) && frontSideUp && !scrollStop){
-                    flipCardFunc();
-                }else if((diff<0) && !frontSideUp && !scrollStop){
-                    flipCardFunc();
-                }
-            }
-            
-
-        }, { passive: true });
-      
-        */
+            scrollPos = (document.body.getBoundingClientRect()).top; 
+        }
+  
+        function debounce(func, wait, immediate) {
+            var timeout;
+            return function() {
+                var context = this, args = arguments;
+                var later = function() {
+                    timeout = null;
+                    if (!immediate) func.apply(context, args);
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) func.apply(context, args);
+            };
+        };
 
         function flipCardFunc(){
             $('.card').toggleClass("flipCard");
             $('.inner').css('transform-style','unset');
             $('.card').addClass("bezierFlip");
             cardFlipping = true;
-            scrollStop = true;
+            if($('.card').hasClass("flipCard")){
+                frontUp = false;
+            }else{
+                frontUp = true;
+            }
             setTimeout(function() { 
                 $('.inner').css('transform-style','preserve-3d');
                 $('.card').removeClass("bezierFlip");
