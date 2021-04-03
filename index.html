@@ -300,6 +300,88 @@
             -webkit-animation-fill-mode: forwards;
         }
 
+        #help_container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            transition: all 0.05s;
+        }
+
+        #help_container #backdrop{
+            position: inherit;
+            width: 100vw;
+            height: 100vh;
+            top:0;
+            left:0;
+            background-color: rgba(41, 41, 41, 0.8);
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+            
+            z-index: 1000;
+        }
+
+        #help_container img{
+            position: inherit;
+            object-fit: cover;
+            z-index: 1001;
+        }
+
+        #help_desktop{
+            left: calc(50vw - 200px);
+            top: calc(50vh);
+            width: 400px;
+            height: auto;
+            display: block;
+        }
+
+        #help_mobile{
+            left: calc(50vw - 100px);
+            top: calc(50vh - 200px);
+            width: 200px;
+            height: auto;
+            display: none;
+        }
+
+        .hideHelp{
+            z-index: -1000;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #help_btn{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+
+            z-index: 1002;
+
+            background-color: rgb(200, 200, 200);
+            border-radius: 100px;
+
+            transition: background-color .1s;
+
+            cursor: help;
+        }
+
+        .activeHelpBtn{
+            background-color: rgb(34, 34, 34);
+        }
+
+        #help_btn img{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #help_btn:hover{
+            background-color: rgb(90, 90, 90);
+        }
+
         @keyframes cardAppear {
             0% {
                 transform: translateY(-200vh) rotate(180deg);
@@ -446,79 +528,15 @@
                 left: 5px;
                 top: 5px;
             }
+
+            #help_desktop{
+                display: none;
+            }
+
+            #help_mobile{
+                display: block;
+            }
         }
-
-
-        #help_container{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: auto;
-            height: auto;
-            transition: all 0.05s;
-        }
-
-        #help_container #backdrop{
-            position: inherit;
-            width: 100vw;
-            height: 100vh;
-            top:0;
-            left:0;
-            background-color: rgba(41, 41, 41, 0.8);
-            -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
-            
-            z-index: 1000;
-        }
-
-        #help_container img{
-            position: inherit;
-            left: calc(50vw - 300px);
-            top: calc(50vh);
-            width: 600px;
-            height: auto;
-            object-fit: cover;
-            z-index: 1001;
-        }
-
-        .hideHelp{
-            z-index: -1000;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        #help_btn{
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            width: 15px;
-            height: 15px;
-            padding: 5px;
-
-            z-index: 1002;
-
-            background-color: rgb(200, 200, 200);
-            border-radius: 100px;
-
-            transition: background-color .1s;
-
-            cursor: help;
-        }
-
-        .activeHelpBtn{
-            background-color: rgb(34, 34, 34);
-        }
-
-        #help_btn img{
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        #help_btn:hover{
-            background-color: rgb(90, 90, 90);
-        }
-
 
     </style>
 </head>
@@ -560,7 +578,8 @@
     
     <div id="help_container" class="hideHelp">
         <div id="backdrop"></div>
-        <img src="card_assets/help.png">
+        <img id="help_desktop" src="card_assets/help_desktop.png">
+        <img id="help_mobile" src="card_assets/help_mobile.png">
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
