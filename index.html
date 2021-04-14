@@ -55,13 +55,12 @@
         }
 
         .noselect {
-            -webkit-touch-callout: none; /* iOS Safari */
-                -webkit-user-select: none; /* Safari */
-                -khtml-user-select: none; /* Konqueror HTML */
-                -moz-user-select: none; /* Old versions of Firefox */
-                    -ms-user-select: none; /* Internet Explorer/Edge */
-                        user-select: none; /* Non-prefixed version, currently
-                                            supported by Chrome, Edge, Opera and Firefox */
+            -webkit-touch-callout: none; 
+                -webkit-user-select: none; 
+                -khtml-user-select: none; 
+                -moz-user-select: none; 
+                    -ms-user-select: none; 
+                        user-select: none;
         }
 
         ::-webkit-scrollbar {
@@ -101,16 +100,6 @@
 
         #oldLink:hover{
             color: black;
-        }
-
-        #iterateLink:hover{
-            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        #iteraLink:hover{
-            color: #FF4C33;
         }
 
         .container{
@@ -296,7 +285,9 @@
         .toggleToolTip{
             animation: dispTooltip 0.6s ease-in-out;
             -webkit-animation: dispTooltip 0.6s ease-in-out;
+            animation-iteration-count: 1;
             -webkit-animation-iteration-count: 1;
+            animation-fill-mode: forwards;
             -webkit-animation-fill-mode: forwards;
         }
 
@@ -474,16 +465,11 @@
             }
 
             .card-back {
-                /*transform: rotateY(180deg);*/
                 background-image: url("/assets/cardfaces/cardBack_m.png");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 color: black;
-            }
-
-            .flipCard{
-                /*transform: rotateY(180deg);*/
             }
 
             .card-back .backContent{
@@ -842,23 +828,6 @@
             }
             scrollPos = (document.body.getBoundingClientRect()).top; 
         }
-
-        /*
-        function debounce(func, wait, immediate) {
-            var timeout;
-            return function() {
-                var context = this, args = arguments;
-                var later = function() {
-                    timeout = null;
-                    if (!immediate) func.apply(context, args);
-                };
-                var callNow = immediate && !timeout;
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-                if (callNow) func.apply(context, args);
-            };
-        };
-        */
 
         function flipCardFunc(){
             $('.card').toggleClass("flipCard");
