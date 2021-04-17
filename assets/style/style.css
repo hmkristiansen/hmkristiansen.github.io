@@ -1,0 +1,570 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    background-color: #F2F1ED;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow-y: scroll;
+}
+
+#whitespace{
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-color: none;
+    opacity: 0;
+    user-select: none;
+    width: 100%;
+    height: 1px;
+}
+
+.noselect {
+    -webkit-touch-callout: none; 
+        -webkit-user-select: none; 
+        -khtml-user-select: none; 
+            -moz-user-select: none; 
+            -ms-user-select: none; 
+                user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(124, 124, 124);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+a:hover{
+    color: black;
+}
+
+#eggsLink{
+    font-weight: bold;
+} 
+
+#eggsLink:hover{
+    color: #27C5DA;
+    opacity: 1;
+}
+
+#mailLink{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-weight: bold;
+}
+
+#mailLink:hover{
+    color: black;
+}
+
+#oldLink:hover{
+    color: black;
+}
+
+.container{
+    perspective: 5px;
+    width: 600px;
+    height: 360px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    animation: cardAppear 2.3s forwards;
+}
+
+.inner{
+    perspective: 1000px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s;
+    cursor: alias;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.card {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(10, 0, 50, 0.1) 0px 10px 40px;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: solid 1px rgb(236, 236, 236);
+    color: rgb(61, 61, 61);
+}
+
+.card-front{
+    background-image: url("/assets/cardfaces/cardFront.png");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.card-back {
+    transform: rotateX(180deg);
+    background-image: url("/assets/cardfaces/cardBack.png");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.card-front h1 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    padding: 30px;
+    padding-top: 150px;
+}
+
+.card-back .backContent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    width: 40%;
+    height: calc(100% - 60px);
+}
+
+.card-back .backContent *{
+    position: relative;
+}
+
+.card-back p{
+    text-align: justify;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.card-back h2{
+    font-weight: normal;
+    font-size: 0.7rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card-back ul{
+    font-size: 0.7rem;
+    font-weight: bold;
+    list-style-type: none;
+    transition: opacity 0.2s;
+    margin-left: -8px;
+}
+
+.card-back ul li{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: opacity 0.2s;
+}
+
+.card-back ul li a{
+    padding: 8px;
+}
+
+.card-back ul:hover li{
+    opacity: 0.5;
+}
+
+.card-back ul li:hover{
+    opacity: 1;
+}
+
+.flipCard{
+    transform: rotateX(180deg);
+}
+
+.bezierFlip{
+    transition: transform 0.4s cubic-bezier(.6,-0.2,.4,1.2);
+    pointer-events: none !important;
+}
+
+#holla{
+    position: absolute;
+    font-size: .7rem;
+    bottom: 22px;
+    left: 22px;
+    width: fit-content;
+    cursor: alias;
+}
+
+#holla:hover{
+    color: rgb(124, 124, 124);
+}
+
+#holla #holla_text{
+    position: relative;
+    cursor: copy;
+    padding: 8px;
+    transition: filter 0.1s ease-in-out;
+    z-index: 1;
+    width: 100%;
+}
+
+#holla #holla_text:hover{
+    filter: brightness(50%);
+}
+
+#holla span{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    color: #333;
+    width: 200px;
+    left: 8px;
+    top: 0px;
+    opacity:0;
+    font-size: 0.6rem;
+    z-index: 0;
+}
+
+.toggleToolTip{
+    animation: dispTooltip 0.6s ease-in-out;
+    -webkit-animation: dispTooltip 0.6s ease-in-out;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+#help_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    transition: all 0.05s;
+}
+
+#help_container #backdrop{
+    position: inherit;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-color: rgba(41, 41, 41, 0.8);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    z-index: 1000;
+}
+
+#help_container img{
+    position: inherit;
+    object-fit: cover;
+    z-index: 1001;
+}
+
+#help_desktop{
+    left: calc(50vw - 200px);
+    top: calc(50vh);
+    width: 400px;
+    height: auto;
+    display: block;
+}
+
+#help_mobile{
+    left: calc(50vw - 100px);
+    top: calc(50vh - 200px);
+    width: 200px;
+    height: auto;
+    display: none;
+}
+
+.hideHelp{
+    z-index: -1000;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#help_btn{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    z-index: 1002;
+    background-color: rgb(200, 200, 200);
+    border-radius: 100px;
+    transition: background-color .1s;
+    cursor: help;
+}
+
+.activeHelpBtn{
+    background-color: rgb(34, 34, 34);
+}
+
+#help_btn img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#help_btn:hover{
+    background-color: rgb(90, 90, 90);
+}
+
+@keyframes cardAppear {
+    0% {
+        transform: translateY(-200vh) rotate(180deg);
+    }
+    30% {
+        transform: translateY(-200vh) rotate(180deg);
+    }
+    60% {
+        transform: translateY(4vh) rotate(-2deg);
+    }
+    90% {
+        transform: translateY(-0.5vh) rotate(1deg);
+    }
+    90% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes dispTooltip {
+    0% {
+        top: -5px;
+        opacity:0;
+    }
+    40%{
+        top: -15px;
+        opacity:1;
+    }
+    80%{
+        top: -15px;
+        opacity:1;
+    }
+    100% {
+        top: -25px;
+        opacity:0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body  { 
+        background:  #333; 
+    }
+    .card{
+        box-shadow: rgba(200,230,200,0.2);
+    }
+    #help_btn{
+        background-color: rgb(126, 126, 126);
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+
+    html{
+        font-size: 14px;
+    }
+
+    body{
+        display: block;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container{
+        margin: 0 auto;
+        top: calc(8vh + 10vw);
+        left: calc(50vw - 150px);
+        perspective: 5px;
+        max-width: 300px;
+        max-height: 500px;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+
+    .card-front{
+        background-image: url("/assets/cardfaces/cardFront_m.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: black;
+    }
+
+    .card-front h1 {
+        font-weight: normal;
+        font-size: 1.5rem;
+        padding: 30px;
+        padding-top: 60px;
+    }
+
+    .card-back {
+        background-image: url("/assets/cardfaces/cardBack_m.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: black;
+    }
+
+    .card-back .backContent{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        padding: 25px;
+        width: calc(100% - 50px); 
+        height: calc(50% - 50px);
+    }
+
+    .card-back p{
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
+
+    .card-back h2{
+        font-size: 0.7rem;
+        margin-top: 12px;
+        margin-bottom: 8px;
+    }
+
+    .card-back ul{
+        font-size: 0.7rem;
+        margin-left: -6px;
+        margin-right: 40px;
+    }
+
+    .card-back ul li a{
+        padding: 6px;
+    }
+
+    #holla{
+        position: absolute;
+        font-size: .6rem;
+        bottom: 15px;
+        left: unset;
+        right: 15px;
+    }
+
+    #holla #holla_text{
+        padding: 5px;
+    }
+
+    #holla span{
+        left: 5px;
+        top: 5px;
+    }
+
+    @keyframes dispTooltip {
+        0% {
+            top: -5px;
+            opacity:0;
+        }
+        40%{
+            top: -10px;
+            opacity:1;
+        }
+        80%{
+            top: -10px;
+            opacity:1;
+        }
+        100% {
+            top: -15px;
+            opacity:0;
+        }
+    }
+
+    #help_desktop{
+        display: none;
+    }
+
+    #help_mobile{
+        display: block;
+    }
+
+    #help_container{
+        width: 100%;
+        height: 100%;
+    }
+
+    #help_container #backdrop{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .container{
+        top: calc(8vh + 5vw);
+        left: calc(50vw - 125px);
+        max-width: 250px;
+        max-height: 417px;
+    }
+
+    .card-front h1 {
+        font-size: 1rem;
+        padding: 20px;
+        padding-top: 30px;
+    }
+
+    .card-back .backContent{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        padding: 15px;
+        width: calc(100% - 30px); 
+        height: calc(50% - 30px);
+    }
+
+    .card-back p{
+        font-size: 0.6rem;
+        margin-bottom: 5px;
+    }
+
+    .card-back h2{
+        font-size: 0.6rem;
+        margin-top: 12px;
+        margin-bottom: 8px;
+    }
+
+    .card-back ul{
+        font-size: 0.6rem;
+        margin-left: -6px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-height: 600px){
+    .container{
+        top: 20px;
+    }
+}
