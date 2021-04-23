@@ -8,10 +8,12 @@
         "period": "<span>Period:</span> Spring '19"
     },
     "content":{
-        "quote":"Neurotiske Nevroner is a board game for children who suffer from school refusal.",
+        "quote":"Board game for children who suffer from school refusal.",
         "text0":"During the spring of 2019 I was tasked with my hardest problem to date; making a game aimed at kids who suffer from school refusal. The game is rooted in Cognitive Behavioural Therapy (CBT) and is designed to be a catalyst for conversation around difficult topics.<br><br><a href='https://medium.com/tackl/verktøy-for-en-bedre-skolehverdag-30f1b7e96bbc' target='_blank'>Read more about the project in the Medium post</a> written by TACKL founder, Sindre Holme.",
         "image1": "assets/nn/01.jpg",
         "caption1":"The game features several situation and reaction whiteboard-cards, meaning the players decide what they want to tackle when playing.",
+        "image5":"assets/nn/teori1.png",
+        "caption5":"Cognitive Behavioural Therapy is rooted in the idea that emotions (følelser), behaviour (adferd) and thoughts (tanker) are deeply connected",
         "image2": "assets/nn/02.jpg",
         "caption2":"Cognetive Behavioral Therapy is a process where a person is exposed to a troublesome situation in controlled enviroments. In this case; if you are afraid of dogs but spend more and more time with them you can turn the 'bad' thought to a good thought.",
         "image3": "assets/nn/03.jpg",
@@ -19,6 +21,6 @@
         "image4": "assets/nn/04.jpg",
         "caption4":"The game is meant to be played along side the child's own psychologist, a sketch of an application for communication and notes between the parties was made was made.",
         "h2":"No right solution",
-        "text1":"Being a designer means solving complex problems with simple solutions. This problem was entirely new for me. There is not nor ever will be one solution for this problem. The best I could do was make a tool for the child and the people around the child to use and hope it works. The main goal was to make a catalyst for conversation, and that goal was met."
+        "text1":"Being a designer means solving complex problems with simple solutions. This kind problem was entirely new for me. There is not nor ever will be one solution for this problem. The best I could do was make a tool for the child and the people around the child to use and hope it works. The main goal was to make a catalyst for conversation, and that goal was met.<br><br>Feel free to check out the <a target='_blank' href='assets/nn/final_report.pdf'>final report</a> :)"
     }
 }
