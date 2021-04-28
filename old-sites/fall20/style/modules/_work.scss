@@ -2,9 +2,10 @@
 #work{
     //margin: 0 10vw;
     .workItemContainer{
-        margin: 0 10vw;
+        margin: 3vh 10vw;
         padding: 0;
-        width: 70vw;
+        width: 40vw;
+        min-width: 1000px;
         top:0;
         height: 100%;
         display: inline-block;
@@ -32,14 +33,15 @@
                 height: 70vh;
                 object-fit: cover;
 
-                border-radius: 5px;
+                border-radius: 20px;
             }
 
             h1{
                 position: relative;
                 transition: inherit;
                 opacity: 0;
-                width: 50%;
+                width: 100%;
+                text-align: center;
             }
         }
 
@@ -80,7 +82,8 @@
 
 body.non-touch .workItem:hover{
     img{
-        transform: translateY(-5px) rotate(0.5deg);
+        // transform: translateY(-5px) rotate(0.5deg);
+        transform: scale(0.98);
     }
     h1{
         transform: translateY(5px);
@@ -96,6 +99,7 @@ body.mobile #work{
         position: relative;
         top:0;
         width: 100vw;
+        min-width: unset;
         height: auto;
         //display: block;
 
