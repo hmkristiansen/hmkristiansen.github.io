@@ -54,7 +54,7 @@
         width: 75%;
         height: 90%;
         opacity: 1 !important;
-        border-radius: 10px;
+        border-radius: 20px;
         transition: all 0.2s;
 
         overflow-y: scroll;
@@ -237,7 +237,7 @@
 .hidden{
     pointer-events: none !important;
     opacity: 0 !important;
-    transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 100px, 0px) !important;
+    transform: scale3d(0.9, 0.9, 0.9) translate3d(0px, 0px, 0px) !important;
 
     position: fixed !important;
     transition-property: opacity, transform !important;
@@ -252,7 +252,7 @@
 
     position: fixed !important;
     transition-property: opacity, transform !important;
-    transition: 0.2s !important;
+    transition: 0.1s !important;
 }
 
 .remove{
