@@ -149,7 +149,8 @@ a:hover{
     font-weight: normal;
     font-size: 1.5rem;
     padding: 30px;
-    padding-top: 150px;
+    padding-top: 75px;
+    padding-left: 50px;
 }
 
 .card-back .backContent{
@@ -453,7 +454,7 @@ a:hover{
 
     .card-back h2{
         font-size: 0.7rem;
-        margin-top: 12px;
+        margin-top: 15px;
         margin-bottom: 8px;
     }
 
