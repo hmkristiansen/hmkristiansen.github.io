@@ -280,6 +280,7 @@ let content = document.getElementById("content");
 let work = document.getElementById("work");
 let about = document.getElementById("about");
 let contact = document.getElementById("contact");
+let hugImg = document.getElementById("hugImg");
 
 let subContent = [work, about, contact];
 
@@ -289,13 +290,23 @@ window.addEventListener('wheel', function(e) {
     diff = e.deltaY;
 
     if(document.getElementById("overlay").classList.contains("visible") != true){
+		if(mobileRatio){
+			// work.style.transform = "skewY(" + diff*0.01 + "deg)";
+			// hugImg.style.transform = "skewY(" + diff*0.01 + "deg)";
+		}else{
+			// work.style.transform = "skewX(" + diff*0.005 + "deg)";
+			// hugImg.style.transform = "skewX(" + diff*0.005 + "deg)";
+		}
         if(document.getElementById("body").classList.contains("mobile")){
             content.scrollTop += diff/3;
         }else{
             content.scrollLeft += diff/2;
         }
         ticking = true;
-    }
+    }else{
+		// work.style.transform = "skewY(" + 0 + "deg)";
+		// hugImg.style.transform = "skewY(" + 0 + "deg)";
+	}
 }, { passive: true });
 
 function checkAndUpdateHeader(){
