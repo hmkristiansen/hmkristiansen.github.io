@@ -10,7 +10,7 @@
         top:0;
         height: 100%;
         display: inline-block;
-        //padding: 1%;
+        margin: 0 5vw;
         position: relative;
 
         -webkit-transform-style: preserve-3d;
@@ -103,18 +103,19 @@ body.mobile #work{
         top:0;
         width: 100vw;
         min-width: unset;
-        height: auto;
+        height: unset;
+        max-height: unset;
         //display: block;
 
         margin: 0;
-        padding: 0 3%;
+        padding: 0 1%;
         
 
         .workItem{
             position: relative;
             scale: unset;
             padding: 0;
-            margin-bottom: 10vh;
+            margin-bottom: 2vh;
 
             img{
                 position: relative;
@@ -123,6 +124,7 @@ body.mobile #work{
                 -webkit-box-shadow: unset;
                 box-shadow: unset;
                 width: 100%;
+                height: 50vh;
                 max-height: unset;
             }
 

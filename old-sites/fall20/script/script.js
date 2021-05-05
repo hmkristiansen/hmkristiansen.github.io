@@ -291,11 +291,11 @@ window.addEventListener('wheel', function(e) {
 
     if(document.getElementById("overlay").classList.contains("visible") != true){
 		if(mobileRatio){
-			work.style.transform = "skewY(" + diff*0.1 + "deg)";
-			hugImg.style.transform = "skewY(" + diff*0.1 + "deg)";
+			// work.style.transform = "skewY(" + diff*0.01 + "deg)";
+			// hugImg.style.transform = "skewY(" + diff*0.01 + "deg)";
 		}else{
-			work.style.transform = "skewX(" + diff*0.05 + "deg)";
-			hugImg.style.transform = "skewX(" + diff*0.05 + "deg)";
+			// work.style.transform = "skewX(" + diff*0.005 + "deg)";
+			// hugImg.style.transform = "skewX(" + diff*0.005 + "deg)";
 		}
         if(document.getElementById("body").classList.contains("mobile")){
             content.scrollTop += diff/3;
@@ -304,8 +304,8 @@ window.addEventListener('wheel', function(e) {
         }
         ticking = true;
     }else{
-		work.style.transform = "skewY(" + 0 + "deg)";
-		hugImg.style.transform = "skewY(" + 0 + "deg)";
+		// work.style.transform = "skewY(" + 0 + "deg)";
+		// hugImg.style.transform = "skewY(" + 0 + "deg)";
 	}
 }, { passive: true });
 
