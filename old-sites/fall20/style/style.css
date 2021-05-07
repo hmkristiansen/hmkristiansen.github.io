@@ -1097,6 +1097,14 @@ body.mobile #overlay #port_content hr {
   margin-bottom: 40px;
 }
 
+body.mobile #overlay #port_content h1, body.mobile #overlay #port_content h2, body.mobile #overlay #port_content h3, body.mobile #overlay #port_content p, body.mobile #overlay #port_content ul {
+  width: 100% !important;
+  max-width: 1200px !important;
+  padding-left: calc(100% - 95%) !important;
+  padding-right: calc(100% - 95%) !important;
+  margin: 3vh auto !important;
+}
+
 body.mobile #overlay #close_btn {
   top: 15px;
   left: 15px;

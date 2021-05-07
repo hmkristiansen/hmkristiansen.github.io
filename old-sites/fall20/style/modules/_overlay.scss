@@ -366,6 +366,14 @@ body.mobile #overlay{
             margin-bottom: 40px;
         }
 
+        h1, h2, h3, p, ul {
+            width: 100% !important;
+            max-width: 1200px !important;
+            padding-left: calc(100% - 95%) !important;
+            padding-right: calc(100% - 95%) !important;
+            margin: 3vh auto !important;
+        }
+
     }
 
     #close_btn{
