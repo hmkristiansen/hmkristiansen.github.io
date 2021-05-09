@@ -7,7 +7,8 @@
 
 body{
     font-family: sans-serif;
-    background-color: rgb(22, 22, 22);
+    /* background-color: rgb(22, 22, 22); */
+    background-color: rgb(253, 178, 65);
 }
 
 .content{
@@ -15,17 +16,25 @@ body{
 }
 
 .window{
-    max-width: 300px;
-    height: auto;
-    color: rgb(224, 224, 224);
+    width: 300px;
+    min-height: 500px;
+    /* color: rgb(224, 224, 224); */
+    color: black;
     position: absolute;
-    background-color: rgb(22, 22, 22);
+    /* background-color: rgb(22, 22, 22); */
+    /* background-color: rgb(253, 178, 65); */
+
+    top: calc(50vh - 250px);
+    left: calc(50vw - 150px);
+
 }
 
 .window h1, .window .cont{
+    background-color: white;
     font-size: 1rem;
     padding: 20px;
-    border:  1px solid rgb(224, 224, 224);
+    /* border:  1px solid rgb(224, 224, 224); */
+    border: 1px solid black;
 }
 
 .window h1{
@@ -42,19 +51,15 @@ body{
 
 
 #about{
-    top:0;
-    left: 0;
-    z-index: 2;
+    top: calc(50vh - 250px + 100px);
+    left: calc(50vw - 150px - 50px);
 }
 
 #work{
-    top: 30vh;
-    right: 0;
-    z-index: 1;
+    top: calc(50vh - 250px + 50px);
+    left: calc(50vw - 150px - 25px);
 }
 
 #contact{
-    bottom: 0;
-    left: 0;
-    z-index: 0;
+
 }

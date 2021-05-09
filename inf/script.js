@@ -55,9 +55,9 @@ let renderContact = () =>{
 }
 
 let renderContent = () =>{
-    renderAbout()
-    renderWork()
     renderContact()
+    renderWork()
+    renderAbout()
     body.appendChild(content)
 }
 
@@ -65,20 +65,13 @@ renderContent()
 
 
 //Make the DIV element draggagle:
+
 dragElement(document.getElementById("about"));
 dragElement(document.getElementById("work"));
 dragElement(document.getElementById("contact"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-//   if (document.getElementById(elmnt.id + "header")) {
-//     /* if present, the header is where you move the DIV from:*/
-//     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-//   } else {
-//     /* otherwise, move the DIV from anywhere inside the DIV:*/
-//     elmnt.onmousedown = dragMouseDown;
-//   }
-
   elmnt.onmousedown = dragMouseDown;
   console.log("hello")
 
@@ -107,7 +100,6 @@ function dragElement(elmnt) {
   }
 
   function closeDragElement() {
-    /* stop moving when mouse button is released:*/
     document.onmouseup = null;
     document.onmousemove = null;
   }
