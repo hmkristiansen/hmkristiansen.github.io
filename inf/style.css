@@ -8,7 +8,7 @@
 body{
     font-family: sans-serif;
     /* background-color: rgb(22, 22, 22); */
-    background-color: rgb(253, 178, 65);
+    background-color: rgb(245, 161, 35);
 }
 
 .content{
@@ -17,14 +17,15 @@ body{
 
 .window{
     width: 300px;
-    min-height: 500px;
+    /* min-height: 500px; */
+    height: min-content;
     /* color: rgb(224, 224, 224); */
     color: black;
     position: absolute;
     /* background-color: rgb(22, 22, 22); */
     /* background-color: rgb(253, 178, 65); */
 
-    top: calc(50vh - 250px);
+    top: calc(50vh - 150px);
     left: calc(50vw - 150px);
 
 }
@@ -41,6 +42,7 @@ body{
     cursor: move;
     transform: translateY(1px);
     padding: 10px 20px;
+    font-weight: normal;
 }
 
 .window h1::after{
@@ -51,13 +53,13 @@ body{
 
 
 #about{
-    top: calc(50vh - 250px + 100px);
-    left: calc(50vw - 150px - 50px);
+    top: calc(50vh - 150px + 60px);
+    left: calc(50vw - 150px - 20px);
 }
 
 #work{
-    top: calc(50vh - 250px + 50px);
-    left: calc(50vw - 150px - 25px);
+    top: calc(50vh - 150px + 30px);
+    left: calc(50vw - 150px - 10px);
 }
 
 #contact{

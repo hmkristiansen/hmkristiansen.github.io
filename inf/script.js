@@ -14,7 +14,7 @@ let renderAbout = () =>{
     cont.classList.add("cont")
 
     title.innerText = "About"
-    cont.innerHTML = "I create, break, fix, experiment, code and occasionally design digital stuff.<br>Currently doing a Junior Digital Designer internship at EGGS Design.<br>I like running, video games and beagles."
+    cont.innerHTML = "Hi, I'm Henrik!<br><br>I create, break, fix, experiment, code and occasionally design stuff. Currently doing an internship at EGGS Design.<br><br>Also, I like running, video games and beagles."
     about.appendChild(title)
     about.appendChild(cont)
     content.appendChild(about)
@@ -30,7 +30,7 @@ let renderWork = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Work"
-    cont.innerHTML = "I’ve been fortunate enough to work on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Novozymes Tackl, Statens Vegvesen, Lillemini, Trondheim Climathon - just to mention a few.<br><a href='#'>Check out my public portfolio</a>"
+    cont.innerHTML = "I’ve been fortunate enough to work on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Novozymes, Tackl, Statens Vegvesen, Lillemini, Trondheim Climathon - just to mention a few.<br><br><a href='https://portfolio.hmkristiansen.no' target='_blank'>Check out my public portfolio</a>"
 
     work.appendChild(title)
     work.appendChild(cont)
@@ -47,7 +47,7 @@ let renderContact = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Contact"
-    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a>@hmkristiansen</a></li><li>Twitter: <a>@_hmkristiansen</a></li><li>LinkedIn: <a>@hmkristiansen</a></li><li>Epost: <a>heisann@hmkristiansen.no</a></li></ul><br>Feel free to get in touch!"
+    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a>@hmkristiansen</a></li><li>Twitter: <a>@_hmkristiansen</a></li><li>LinkedIn: <a>@hmkristiansen</a></li><li>Epost: <a>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger!"
 
     contact.appendChild(title)
     contact.appendChild(cont)
