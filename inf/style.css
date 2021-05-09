@@ -1,0 +1,60 @@
+*{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(22, 22, 22);
+}
+
+.content{
+    height: auto;
+}
+
+.window{
+    max-width: 300px;
+    height: auto;
+    color: rgb(224, 224, 224);
+    position: absolute;
+    background-color: rgb(22, 22, 22);
+}
+
+.window h1, .window .cont{
+    font-size: 1rem;
+    padding: 20px;
+    border:  1px solid rgb(224, 224, 224);
+}
+
+.window h1{
+    cursor: move;
+    transform: translateY(1px);
+    padding: 10px 20px;
+}
+
+.window h1::after{
+    content: 'X';
+    position: absolute;
+    right: 15px;
+}
+
+
+#about{
+    top:0;
+    left: 0;
+    z-index: 2;
+}
+
+#work{
+    top: 30vh;
+    right: 0;
+    z-index: 1;
+}
+
+#contact{
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
