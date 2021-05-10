@@ -6,7 +6,7 @@
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     /* background-color: rgb(22, 22, 22); */
     background-color: rgb(245, 161, 35);
 }
@@ -27,7 +27,6 @@ body{
 
     top: calc(50vh - 150px);
     left: calc(50vw - 150px);
-
 }
 
 .window h1, .window .cont{
@@ -65,13 +64,15 @@ body{
 #about{
     top: calc(50vh - 150px + 40px);
     left: calc(50vw - 150px - 20px);
+    transform: rotate(1deg);
 }
 
 #work{
     top: calc(50vh - 150px + 20px);
     left: calc(50vw - 150px - 10px);
+    transform: rotate(-1deg);
 }
 
 #contact{
-
+    transform: rotate(2deg);
 }
