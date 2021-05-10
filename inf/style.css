@@ -6,13 +6,28 @@
 }
 
 body{
+    width: 100%;
+    /* min-height: 150vh; */
+    height: 100%;
     font-family: 'Inter', sans-serif;
     /* background-color: rgb(22, 22, 22); */
     background-color: rgb(245, 161, 35);
 }
 
+a{
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a:hover{
+    opacity: 0.3;
+}
+
 .content{
     height: auto;
+    position: relative;
+    display: block;
 }
 
 .window{
@@ -27,6 +42,8 @@ body{
 
     top: calc(50vh - 150px);
     left: calc(50vw - 150px);
+
+    cursor: move;
 }
 
 .window h1, .window .cont{
@@ -38,7 +55,6 @@ body{
 }
 
 .window h1{
-    cursor: move;
     transform: translateY(1px);
     padding: 10px 20px;
     font-weight: normal;
@@ -63,8 +79,8 @@ body{
 
 #about{
     top: calc(50vh - 150px + 40px);
-    left: calc(50vw - 150px - 20px);
-    transform: rotate(1deg);
+    left: calc(50vw - 150px + 15px);
+    transform: rotate(1.5deg);
 }
 
 #work{
@@ -74,5 +90,7 @@ body{
 }
 
 #contact{
-    transform: rotate(2deg);
+    top: calc(50vh - 150px);
+    left: calc(50vw - 150px);
+    transform: rotate(1deg);
 }
