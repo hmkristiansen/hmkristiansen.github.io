@@ -12,6 +12,7 @@ let renderAbout = () =>{
     let title = document.createElement('h1')
     let cross = document.createElement('img')
     cross.src = "cross.svg"
+    cross.classList.add("closeWindow")
     let cont = document.createElement('div')
     cont.classList.add("cont")
 
@@ -32,6 +33,7 @@ let renderWork = () =>{
     let title = document.createElement('h1')
     let cross = document.createElement('img')
     cross.src = "cross.svg"
+    cross.classList.add("closeWindow")
     let cont = document.createElement('div')
     cont.classList.add("cont")
 
@@ -52,11 +54,12 @@ let renderContact = () =>{
     let title = document.createElement('h1')
     let cross = document.createElement('img')
     cross.src = "cross.svg"
+    cross.classList.add("closeWindow")
     let cont = document.createElement('div')
     cont.classList.add("cont")
 
     title.innerText = "Contact"
-    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a>@hmkristiansen</a></li><li>Twitter: <a>@_hmkristiansen</a></li><li>LinkedIn: <a>@hmkristiansen</a></li><li>Epost: <a>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger!"
+    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Twitter: <a>@_hmkristiansen</a></li><li>LinkedIn: <a>@hmkristiansen</a></li><li>Epost: <a>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger!"
 
     contact.appendChild(title)
     contact.appendChild(cross)
@@ -78,7 +81,7 @@ $(function(){
     $(".draggable").draggableTouch()
 })
 
-$(".window img").click(function(){
+$(".closeWindow").click(function(){
   console.log("Hello")
   $(this).closest('.window').remove()
 });

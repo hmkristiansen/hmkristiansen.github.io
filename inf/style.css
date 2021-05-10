@@ -45,7 +45,7 @@ body{
     font-weight: normal;
 }
 
-.window img{
+.window .closeWindow{
     position: absolute;
     right: 5px;
     top: 1px;
