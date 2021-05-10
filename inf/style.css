@@ -45,20 +45,30 @@ body{
     font-weight: normal;
 }
 
-.window h1::after{
+.window img{
+    position: absolute;
+    right: 5px;
+    top: 1px;
+    width: 10px;
+    height: 10px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+/* .window h1::after{
     content: 'X';
     position: absolute;
     right: 15px;
-}
+} */
 
 
 #about{
-    top: calc(50vh - 150px + 60px);
+    top: calc(50vh - 150px + 40px);
     left: calc(50vw - 150px - 20px);
 }
 
 #work{
-    top: calc(50vh - 150px + 30px);
+    top: calc(50vh - 150px + 20px);
     left: calc(50vw - 150px - 10px);
 }
 
