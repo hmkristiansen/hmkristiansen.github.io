@@ -61,7 +61,7 @@ let renderContact = () =>{
 
 let renderImage = () =>{
   let img = document.createElement('img')
-  img.src = "hug.jpg"
+  img.src = "assets/hug.jpg"
   img.id = "hug"
   img.classList.add("window", "draggable")
   content.appendChild(img)
@@ -91,7 +91,6 @@ $(function(){
     $(".draggable").draggableTouch()
 })
 
-
 // Supporting functions for window-close
 
 $(".closeWindow").click(function closeWindow(){
@@ -101,7 +100,7 @@ $(".closeWindow").click(function closeWindow(){
 function addCross(parent){
   if (window.ontouchstart === undefined) {
     let cross = document.createElement('img')
-    cross.src = "cross.svg"
+    cross.src = "assets/cross.svg"
     cross.classList.add("closeWindow")
     parent.appendChild(cross)
   }else{
