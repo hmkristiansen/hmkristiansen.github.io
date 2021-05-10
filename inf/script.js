@@ -51,7 +51,7 @@ let renderContact = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Contact"
-    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Twitter: <a>@_hmkristiansen</a></li><li>LinkedIn: <a>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger!"
+    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://www.instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Twitter: <a href='https://www.twitter.com/_hmkristiansen' target='_blank' >@_hmkristiansen</a></li><li>LinkedIn: <a href='https://www.linkedin.com/in/hmkristiansen/' target='_blank'>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger :)"
 
     contact.appendChild(title)
     addCross(contact)
@@ -59,11 +59,29 @@ let renderContact = () =>{
     content.appendChild(contact)
 }
 
+let renderImage = () =>{
+  let img = document.createElement('img')
+  img.src = "hug.jpg"
+  img.id = "hug"
+  img.classList.add("window", "draggable")
+  content.appendChild(img)
+}
+
+let renderEasterEgg = () => {
+  let egg = document.createElement('p')
+  egg.innerText = "hi :)"
+  egg.id = "easteregg"
+  egg.classList.add("window")
+  content.appendChild(egg)
+}
+
 let renderContent = () =>{
-    renderContact()
-    renderWork()
-    renderAbout()
-    body.appendChild(content)
+  renderEasterEgg()
+  renderImage()
+  renderContact()
+  renderWork()
+  renderAbout()
+  body.appendChild(content)
 }
 renderContent()
 

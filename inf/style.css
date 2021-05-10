@@ -9,9 +9,10 @@ body{
     width: 100%;
     /* min-height: 150vh; */
     height: 100%;
+    overflow: hidden;
     font-family: 'Inter', sans-serif;
     /* background-color: rgb(22, 22, 22); */
-    background-color: rgb(245, 161, 35);
+    background-color: #f5a123;
 }
 
 a{
@@ -32,17 +33,11 @@ a:hover{
 
 .window{
     width: 300px;
-    /* min-height: 500px; */
     height: min-content;
-    /* color: rgb(224, 224, 224); */
     color: black;
     position: absolute;
-    /* background-color: rgb(22, 22, 22); */
-    /* background-color: rgb(253, 178, 65); */
-
     top: calc(50vh - 150px);
     left: calc(50vw - 150px);
-
     cursor: move;
 }
 
@@ -70,13 +65,6 @@ a:hover{
     cursor: pointer;
 }
 
-/* .window h1::after{
-    content: 'X';
-    position: absolute;
-    right: 15px;
-} */
-
-
 #about{
     top: calc(50vh - 150px + 40px);
     left: calc(50vw - 150px + 15px);
@@ -92,5 +80,21 @@ a:hover{
 #contact{
     top: calc(50vh - 150px);
     left: calc(50vw - 150px);
-    transform: rotate(1deg);
+    transform: rotate(2deg);
+}
+
+#hug{
+    top: calc(50vh - 150px);
+    left: calc(50vw - 100px);
+    transform: rotate(-2deg);
+
+    width: 175px;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+#easteregg{
+    text-align: center;
+    padding: 120px 0;
 }
