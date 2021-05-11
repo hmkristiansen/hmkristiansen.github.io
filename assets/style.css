@@ -66,14 +66,14 @@ a:hover{
 }
 
 #about{
-    top: calc(50vh - 150px + 40px);
-    left: calc(50vw - 150px + 15px);
-    transform: rotate(1.5deg);
+    top: calc(50vh - 150px);
+    left: calc(50vw - 150px);
+    transform: rotate(1deg);
 }
 
 #work{
-    top: calc(50vh - 150px + 20px);
-    left: calc(50vw - 150px - 10px);
+    top: calc(50vh - 150px);
+    left: calc(50vw - 150px);
     transform: rotate(-1deg);
 }
 
