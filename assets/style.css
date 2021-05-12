@@ -38,7 +38,7 @@ a:hover{
     position: absolute;
     top: calc(50vh - 150px);
     left: calc(50vw - 150px);
-    cursor: move;
+    cursor: grabbing;
 }
 
 .window h1, .window .cont{
