@@ -69,7 +69,7 @@ let renderImage = () =>{
 
 let renderEasterEgg = () => {
   let egg = document.createElement('p')
-  egg.innerText = "hi :)"
+  egg.innerText = ":)"
   egg.id = "easteregg"
   egg.classList.add("window")
   content.appendChild(egg)

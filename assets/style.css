@@ -66,25 +66,25 @@ a:hover{
 }
 
 #about{
-    top: calc(50vh - 150px);
+    top: calc(50vh - 150px + 15px);
     left: calc(50vw - 150px);
-    transform: rotate(1deg);
+    transform: rotate(2deg);
 }
 
 #work{
     top: calc(50vh - 150px);
     left: calc(50vw - 150px);
-    transform: rotate(-1deg);
+    transform: rotate(-2deg);
 }
 
 #contact{
     top: calc(50vh - 150px);
     left: calc(50vw - 150px);
-    transform: rotate(2deg);
+    transform: rotate(1deg);
 }
 
 #hug{
-    top: calc(50vh - 150px);
+    top: calc(50vh - 150px + 5px);
     left: calc(50vw - 100px);
     transform: rotate(-2deg);
 
