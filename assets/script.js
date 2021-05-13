@@ -3,6 +3,52 @@ let content = document.createElement('div')
 content.classList.add("content")
 const body = document.getElementById('body')
 
+// Init
+let renderContent = () =>{
+  renderEasterEgg()
+  renderImage()
+  renderContact()
+  renderWork()
+  renderAbout()
+  body.appendChild(content)
+  renderReRun()
+  setStage()
+}
+
+// set the stage and do stuff
+let setStage = () =>{
+  let bgs = ["F5A123", "F97068", "57C4E5", "BCD39C", "FFCB47", "EC4E20"]
+  let i = Math.floor(Math.random() * bgs.length);
+  let j = Math.floor(Math.random() * 10 + 1);
+
+  let bin =["+","-"] 
+
+  body.style.setProperty("background-color", "#"+bgs[i])
+
+  console.log("rotate(" +bin[Math.round(Math.random())] + " " + (j/2) + "deg)")
+
+  // Set random about
+  document.getElementById("about").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + j + "vh)"
+  document.getElementById("about").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + j + "vw)"
+  document.getElementById("about").style.transform = "rotate("+bin[Math.round(Math.random())]+ (j/2)+"deg)"
+
+  // Set random work
+  document.getElementById("work").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + j + "vh)"
+  document.getElementById("work").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + j + "vw)"
+  document.getElementById("work").style.transform = "rotate("+bin[Math.round(Math.random())]+ (j/2)+"deg)"
+
+  // Set random contact
+  document.getElementById("contact").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + j + "vh)"
+  document.getElementById("contact").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + j + "vw)"
+  document.getElementById("contact").style.transform = "rotate("+bin[Math.round(Math.random())]+ (j/2)+"deg)"
+
+  // Set random image
+  document.getElementById("hug").style.transform = "rotate("+bin[Math.round(Math.random())]+ (j/2)+"deg)"
+  document.getElementById("hug").style.top = "calc(50vh - 150px + 5px"
+  document.getElementById("hug").style.left = "calc(50vw - 100px"
+
+}
+
 // Render content
 
 let renderAbout = () =>{
@@ -16,7 +62,7 @@ let renderAbout = () =>{
 
     title.innerText = "About"
     cont.innerHTML = "Hi, I'm Henrik!<br><br>I create, break, fix, experiment, code and occasionally design stuff. Currently doing an internship at EGGS Design.<br><br>I also like running, video games and beagles."
-    
+
     about.appendChild(title)
     addCross(about)
     about.appendChild(cont)
@@ -75,17 +121,16 @@ let renderEasterEgg = () => {
   content.appendChild(egg)
 }
 
-let renderContent = () =>{
-  renderEasterEgg()
-  renderImage()
-  renderContact()
-  renderWork()
-  renderAbout()
-  body.appendChild(content)
+let renderReRun = () =>{
+  let redo = document.createElement("p")
+  redo.innerText = "⤾"
+  redo.id = "redo"
+  body.appendChild(redo)
 }
+
 renderContent()
 
-// Make content draggable 
+// Make content draggable
 
 $(function(){
     $(".draggable").draggableTouch()
@@ -95,7 +140,7 @@ $(function(){
 
 $(".closeWindow").click(function closeWindow(){
   $(this).closest('.window').remove()
-});
+})
 
 function addCross(parent){
   if (window.ontouchstart === undefined) {
@@ -108,6 +153,19 @@ function addCross(parent){
   }
 }
 
+let rotatecounter = 1
+$("#redo").click(function(){
+  setStage()
+  let div = this, deg = 360*rotatecounter
+
+  div.style.webkitTransform = 'rotate('+deg+'deg)'
+  div.style.mozTransform    = 'rotate('+deg+'deg)'
+  div.style.msTransform     = 'rotate('+deg+'deg)'
+  div.style.oTransform      = 'rotate('+deg+'deg)'
+  div.style.transform       = 'rotate('+deg+'deg)'
+
+  rotatecounter++
+})
 
 // Add more content on scroll
 
@@ -122,7 +180,6 @@ window.addEventListener("scroll", (event) => {
     let cln = content.cloneNode(true)
     body.appendChild(cln)
   }
-
   console.log(scroll)
 })
 
