@@ -12,7 +12,7 @@ let renderContent = () =>{
   renderAbout()
   body.appendChild(content)
   renderReRun()
-  setStage()
+  // setStage()
 }
 
 // set the stage and do stuff
