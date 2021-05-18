@@ -16,41 +16,44 @@ let renderContent = () =>{
 }
 
 // set the stage and do stuff
+
+let oldI = 0;
 let setStage = () =>{
-  let bgs = ["F5A123", "F97068", "57C4E5", "BCD39C", "FFCB47", "EC4E20"]
-  let i = Math.floor(Math.random() * bgs.length);
-  let j = Math.floor(Math.random() * 10 + 1);
+  let bgs = ["F97068", "57C4E5", "BCD39C", "FFCB47", "EC4E20"]
+  let i = Math.floor(Math.random() * bgs.length)
+
+  while(i == oldI){
+    i = Math.floor(Math.random() * bgs.length)
+  }
 
   let bin =["+","-"] 
 
   body.style.setProperty("background-color", "#"+bgs[i])
 
-  console.log("rotate(" +bin[Math.round(Math.random())] + " " + (j/2) + "deg)")
-
   // Set random about
-  document.getElementById("about").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + j + "vh)"
-  document.getElementById("about").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + j + "vw)"
-  document.getElementById("about").style.transform = "rotate("+bin[Math.round(Math.random())]+ (j/2)+"deg)"
+  document.getElementById("about").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+  document.getElementById("about").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+  document.getElementById("about").style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
 
   // Set random work
-  document.getElementById("work").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + j + "vh)"
-  document.getElementById("work").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + j + "vw)"
-  document.getElementById("work").style.transform = "rotate("+bin[Math.round(Math.random())]+ (j/2)+"deg)"
+  document.getElementById("work").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+  document.getElementById("work").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+  document.getElementById("work").style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
 
   // Set random contact
-  document.getElementById("contact").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + j + "vh)"
-  document.getElementById("contact").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + j + "vw)"
-  document.getElementById("contact").style.transform = "rotate("+bin[Math.round(Math.random())]+ (j/2)+"deg)"
+  document.getElementById("contact").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+  document.getElementById("contact").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+  document.getElementById("contact").style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
 
   // Set random image
-  document.getElementById("hug").style.transform = "rotate("+bin[Math.round(Math.random())]+ (j/2)+"deg)"
+  document.getElementById("hug").style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
   document.getElementById("hug").style.top = "calc(50vh - 150px + 5px"
   document.getElementById("hug").style.left = "calc(50vw - 100px"
 
+  oldI = i
 }
 
 // Render content
-
 let renderAbout = () =>{
     let about = document.createElement('div')
     about.classList.add("window","draggable")
@@ -127,21 +130,17 @@ let renderReRun = () =>{
   redo.id = "redo"
   body.appendChild(redo)
 }
-
 renderContent()
 
 // Make content draggable
-
 $(function(){
     $(".draggable").draggableTouch()
 })
 
 // Supporting functions for window-close
-
 $(".closeWindow").click(function closeWindow(){
   $(this).closest('.window').remove()
 })
-
 function addCross(parent){
   if (window.ontouchstart === undefined) {
     let cross = document.createElement('img')
@@ -152,18 +151,15 @@ function addCross(parent){
     return true
   }
 }
-
 let rotatecounter = 1
 $("#redo").click(function(){
   setStage()
   let div = this, deg = 360*rotatecounter
-
   div.style.webkitTransform = 'rotate('+deg+'deg)'
   div.style.mozTransform    = 'rotate('+deg+'deg)'
   div.style.msTransform     = 'rotate('+deg+'deg)'
   div.style.oTransform      = 'rotate('+deg+'deg)'
   div.style.transform       = 'rotate('+deg+'deg)'
-
   rotatecounter++
 })
 
@@ -171,7 +167,6 @@ $("#redo").click(function(){
 
 let h = window.innerHeight
 let counter = 1;
-// console.log(h)
 
 window.addEventListener("scroll", (event) => {
   let scroll = this.scrollY
