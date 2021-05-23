@@ -17,7 +17,7 @@ let renderContent = () =>{
 
 // set the stage and do stuff
 let eggs = ["I don't like strawberries","I'm effectively tone deaf","I grew up among polar bears on Svalbard", "My favorite color is #ff7f50", "My most played song on Spotify is Fragments of Time by Daft Punk"]
-let bgs = ["F97068", "57C4E5", "BCD39C", "FFCB47", "EC4E20"]
+let bgs = ["F97068", "57C4E5", "BCD39C", "FFCB47", "EC4E20","ff7f50"]
 
 let oldI = 0;
 let oldJ = 0;
@@ -31,6 +31,13 @@ let setStage = () =>{
   }
   while(j == oldJ){
     j = Math.floor(Math.random() * bgs.length)
+  }
+
+  if(j == 3){
+    i = 5
+  }
+  if((i == 5) && (j !=3)){
+    i = Math.floor(Math.random() * bgs.length)
   }
 
   document.getElementById("easteregg").innerHTML = eggs[j]
