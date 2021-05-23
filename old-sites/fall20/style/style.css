@@ -158,6 +158,7 @@ section {
   padding: 3vw;
   font-weight: bold;
   font-size: 1.3rem;
+  width: 100vw;
 }
 
 #header ul {
@@ -622,29 +623,29 @@ body.mobile #about {
 }
 
 body.mobile #about #bioContainer {
-  position: inherit;
+  position: relative;
   width: 100%;
   padding: 0;
   height: auto;
 }
 
 body.mobile #about #bioContainer #bio {
-  position: inherit;
+  position: relative;
   float: none;
+  margin-bottom: 20vh;
 }
 
 body.mobile #about #bioContainer #bio img {
   width: auto;
-  height: 40vh;
+  height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 body.mobile #about #cv {
-  position: inherit;
+  position: relative;
   width: 100%;
   height: auto;
-  margin-top: 5vh;
   padding: 0;
 }
 

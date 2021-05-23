@@ -57,41 +57,34 @@ body.mobile #about{
     white-space: unset;
     width: 100%;
     height: auto;
-    clear:both;
+    clear: both;
 
     margin-top: 10vh;
     margin-bottom: 10vh;
 
     #bioContainer{
-        position: inherit;
+        position: relative;
 
         width: 100%;
         padding: 0;
         height: auto;
-        //margin-left: 5%;
-        //margin-right: 5%;
-        //padding: 0 5%;
 
         #bio{
-            position: inherit;
+            position: relative;
             float: none;
-            //padding: inherit;
+            margin-bottom: 20vh;
             img{
                 width: auto;
-                height: 40vh;
+                height: 30vh;
                 object-fit: cover;
-                //padding-right: 5%;
             }
         }
     }
     #cv{
-        position: inherit;
+        position: relative;
         width: 100%;
         height: auto;
-        margin-top: 5vh;
         padding: 0;
-        //padding-left: 35%;
-        //margin-right: 5%;
         ul{
             width: 60%;
             position: inherit;

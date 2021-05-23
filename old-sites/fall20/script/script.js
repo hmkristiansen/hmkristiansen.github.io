@@ -228,8 +228,8 @@ function updateAge(){
 var updateStatus = false;
 var sentences = 
 ["Heisann, I'm Henrik <span id='hand-wave'>👋</span>",
-"I'm a norwegian design student, currently familiarising myself with the city of København 🇩🇰</a>",
-"Nowadays I'm reading <a href='https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow' target='_blank'>Thinking, Fast and Slow</a> and playing <a href='https://dinopoloclub.com/games/mini-motorways/' target='_blank'>Mini Motorways</a> on my iPad",
+"I'm a digital design student, currently interning at <a href='https://eggsdesign.com/' target='_blank'>EGGS Design</a> in København 🇩🇰</a>",
+"Nowadays I'm reading <a href='https://www.goodreads.com/book/show/35068803-rebel-talent' target='_blank'>Rebel Talent</a> and playing <a href='https://www.animal-crossing.com/new-horizons/' target='_blank'>Animal Crossing</a>",
 "I'm also teaching myself how to do a handstand 🤸‍♂️",
 "Scroll to learn more about me ✌️<br><span id='replayGreeting' onClick='replayGreeting();'>replay ↺</span>"
 ];
@@ -244,7 +244,7 @@ var update = setInterval(function() {
 	if(updateStatus && runCarusell){
 		carusellGreeting();
     }
-}, 1500);
+}, 1400);
 
 function carusellGreeting(){
     $('#greeting_message h3').addClass('carusellOut');
@@ -361,27 +361,7 @@ function goBackToStart(){
         navElement.classList.add("hidden_nav");
     });
 }
-/*
-document
-    .querySelectorAll('header li')
-    .forEach(trigger => {
-        trigger.onclick = function(e) {
-            e.preventDefault();
-			let hash = this.getAttribute('id');
-			let idArr = this.split("_");
-			let selSec = document.getElementById(idArr[0]);
-            let target = document.querySelector(hash);
-            let headerOffset = 100;
-            let elementPosition = target.offsetTop;
-            let offsetPosition = elementPosition - headerOffset;
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
-        };
-    });
-*/
 function goToSection(clicked_id){
     let idArr = clicked_id.split("_");
     let selSec = document.getElementById(idArr[0]);

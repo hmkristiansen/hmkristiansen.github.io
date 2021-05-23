@@ -64,7 +64,7 @@ let renderAbout = () =>{
     cont.classList.add("cont")
 
     title.innerText = "About"
-    cont.innerHTML = "Hi, I'm Henrik!<br><br>I create, break, fix, experiment, code and occasionally design stuff. Currently doing an internship at EGGS Design.<br><br>I also like running, video games and beagles."
+    cont.innerHTML = "Hi, I'm Henrik! 👋<br><br>I create, break, fix, experiment, code and occasionally design stuff. Currently doing an internship at EGGS Design.<br><br>I also like running, video games and beagles."
 
     about.appendChild(title)
     addCross(about)
@@ -82,7 +82,7 @@ let renderWork = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Work"
-    cont.innerHTML = "I’ve been fortunate enough to work on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Novozymes, Tackl, Statens Vegvesen, Lillemini, Trondheim Climathon - just to mention a few.<br><br><a href='https://portfolio.hmkristiansen.no' target='_blank'>Check out my public portfolio</a>"
+    cont.innerHTML = "I’ve been fortunate to have worked on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Novozymes, Tackl, Statens Vegvesen, Lillemini and Climathon - among others.<br><br><a href='/old-sites/fall20/index.html' target='_blank'>Check out projects on my old site</a>"
 
     work.appendChild(title)
     addCross(work)
@@ -100,7 +100,7 @@ let renderContact = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Contact"
-    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://www.instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Twitter: <a href='https://www.twitter.com/_hmkristiansen' target='_blank' >@_hmkristiansen</a></li><li>LinkedIn: <a href='https://www.linkedin.com/in/hmkristiansen/' target='_blank'>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger :)"
+    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://www.instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Twitter: <a href='https://www.twitter.com/_hmkristiansen' target='_blank' >@_hmkristiansen</a></li><li>LinkedIn: <a href='https://www.linkedin.com/in/hmkristiansen/' target='_blank'>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger ✌️"
 
     contact.appendChild(title)
     addCross(contact)
@@ -117,8 +117,11 @@ let renderImage = () =>{
 }
 
 let renderEasterEgg = () => {
+  let eggs = ["I don't like strawberries"]
+
   let egg = document.createElement('p')
-  egg.innerText = ":)"
+  egg.innerText = "heisann :)"
+  egg.innerHTML = eggs[0]
   egg.id = "easteregg"
   egg.classList.add("window")
   content.appendChild(egg)
