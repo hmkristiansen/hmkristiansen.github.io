@@ -16,41 +16,66 @@ let renderContent = () =>{
 }
 
 // set the stage and do stuff
+let eggs = ["I don't like strawberries","I'm effectively tone deaf","I grew up among polar bears on Svalbard", "My favorite color is #ff7f50", "My most played song on Spotify is Fragments of Time by Daft Punk"]
+let bgs = ["F97068", "57C4E5", "BCD39C", "FFCB47", "EC4E20"]
 
 let oldI = 0;
+let oldJ = 0;
+
 let setStage = () =>{
-  let bgs = ["F97068", "57C4E5", "BCD39C", "FFCB47", "EC4E20"]
   let i = Math.floor(Math.random() * bgs.length)
+  let j = Math.floor(Math.random() * eggs.length)
 
   while(i == oldI){
     i = Math.floor(Math.random() * bgs.length)
   }
+  while(j == oldJ){
+    j = Math.floor(Math.random() * bgs.length)
+  }
+
+  document.getElementById("easteregg").innerHTML = eggs[j]
 
   let bin =["+","-"] 
 
   body.style.setProperty("background-color", "#"+bgs[i])
 
   // Set random about
-  document.getElementById("about").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
-  document.getElementById("about").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
-  document.getElementById("about").style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
+  let about =  document.getElementById('about')
+  if (typeof(about) != 'undefined' && about != null)
+  {
+    console.log("hello")
+    about.style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+    about.style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+    about.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
+  }
 
   // Set random work
-  document.getElementById("work").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
-  document.getElementById("work").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
-  document.getElementById("work").style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
+  let work =  document.getElementById('work')
+  if (typeof(work) != 'undefined' && work != null)
+  {
+    work.style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+    work.style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+    work.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
+  }
 
   // Set random contact
-  document.getElementById("contact").style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
-  document.getElementById("contact").style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
-  document.getElementById("contact").style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
+  let contact = document.getElementById('contact')
+  if (typeof(contact) != 'undefined' && contact != null){
+    contact.style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+    contact.style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+    contact.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
+  }
 
   // Set random image
-  document.getElementById("hug").style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
-  document.getElementById("hug").style.top = "calc(50vh - 150px + 5px"
-  document.getElementById("hug").style.left = "calc(50vw - 100px"
+  let image = document.getElementById('hug')
+  if (typeof(image) != 'undefined' && image != null){
+    image.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
+    // image.style.top = "calc(50vh - 150px + 5px"
+    // image.style.left = "calc(50vw - 100px"
+  }
 
   oldI = i
+  oldJ = j
 }
 
 // Render content
@@ -117,11 +142,9 @@ let renderImage = () =>{
 }
 
 let renderEasterEgg = () => {
-  let eggs = ["I don't like strawberries"]
-
   let egg = document.createElement('p')
   egg.innerText = "heisann :)"
-  egg.innerHTML = eggs[0]
+  egg.innerHTML = eggs[Math.floor(Math.random() * eggs.length)]
   egg.id = "easteregg"
   egg.classList.add("window")
   content.appendChild(egg)
