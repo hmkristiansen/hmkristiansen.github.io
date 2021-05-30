@@ -37,7 +37,9 @@ let setStage = () =>{
     i = 5
   }
   if((i == 5) && (j !=3)){
-    i = Math.floor(Math.random() * bgs.length)
+    while(i == 5){
+      i = Math.floor(Math.random() * bgs.length)
+    }
   }
 
   document.getElementById("easteregg").innerHTML = eggs[j]
