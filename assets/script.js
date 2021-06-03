@@ -12,7 +12,6 @@ let renderContent = () =>{
   renderAbout()
   body.appendChild(content)
   renderReRun()
-  // setStage()
 }
 
 // set the stage and do stuff
@@ -52,7 +51,6 @@ let setStage = () =>{
   let about =  document.getElementById('about')
   if (typeof(about) != 'undefined' && about != null)
   {
-    console.log("hello")
     about.style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
     about.style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
     about.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
@@ -188,15 +186,25 @@ function addCross(parent){
 }
 let rotatecounter = 1
 $("#redo").click(function(){
+  randomize()
+})
+
+document.body.onkeyup = function(e){
+  if(e.keyCode == 32){
+      randomize()
+  }
+}
+
+function randomize(){
   setStage()
-  let div = this, deg = 360*rotatecounter
+  let div = document.getElementById('redo'), deg = 360*rotatecounter
   div.style.webkitTransform = 'rotate('+deg+'deg)'
   div.style.mozTransform    = 'rotate('+deg+'deg)'
   div.style.msTransform     = 'rotate('+deg+'deg)'
   div.style.oTransform      = 'rotate('+deg+'deg)'
   div.style.transform       = 'rotate('+deg+'deg)'
   rotatecounter++
-})
+}
 
 // Add more content on scroll
 
@@ -210,6 +218,5 @@ window.addEventListener("scroll", (event) => {
     let cln = content.cloneNode(true)
     body.appendChild(cln)
   }
-  console.log(scroll)
 })
 
