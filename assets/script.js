@@ -51,8 +51,8 @@ let setStage = () =>{
   let about =  document.getElementById('about')
   if (typeof(about) != 'undefined' && about != null)
   {
-    about.style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
-    about.style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+    about.style.top = "calc(50vh - 160px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+    about.style.left = "calc(50vw - 160px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
     about.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
   }
 
@@ -60,16 +60,16 @@ let setStage = () =>{
   let work =  document.getElementById('work')
   if (typeof(work) != 'undefined' && work != null)
   {
-    work.style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
-    work.style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+    work.style.top = "calc(50vh - 160px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+    work.style.left = "calc(50vw - 160px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
     work.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
   }
 
   // Set random contact
   let contact = document.getElementById('contact')
   if (typeof(contact) != 'undefined' && contact != null){
-    contact.style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
-    contact.style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+    contact.style.top = "calc(50vh - 160px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+    contact.style.left = "calc(50vw - 160px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
     contact.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
   }
 
@@ -77,8 +77,8 @@ let setStage = () =>{
   let image = document.getElementById('hug')
   if (typeof(image) != 'undefined' && image != null){
     image.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
-    image.style.top = "calc(50vh - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
-    image.style.left = "calc(50vw - 150px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
+    image.style.top = "calc(50vh - 160px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vh)"
+    image.style.left = "calc(50vw - 100px " + bin[Math.round(Math.random())] + " " + Math.floor(Math.random() * 10 + 1) + "vw)"
     image.style.transform = "rotate("+bin[Math.round(Math.random())]+ ((Math.floor(Math.random() * 10 + 1))/2)+"deg)"
   }
 
@@ -97,7 +97,7 @@ let renderAbout = () =>{
     cont.classList.add("cont")
 
     title.innerText = "About"
-    cont.innerHTML = "Heisann, I'm Henrik! 👋<br><br>I create, break, fix, experiment, develop and occasionally design stuff. Currently doing an internship at EGGS Design.<br><br>I like running, video games, coffee and beagles."
+    cont.innerHTML = "Hi hello I'm Henrik! 👋<br>I create, break, fix, experiment, develop and occasionally design stuff. Currently doing an internship at EGGS Design.<br><br>I like running, video games, coffee and beagles."
 
     about.appendChild(title)
     addCross(about)
@@ -115,7 +115,7 @@ let renderWork = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Work"
-    cont.innerHTML = "I’ve been fortunate to have worked on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Novozymes, Tackl, Statens Vegvesen, Lillemini and Climathon - among others.<br><br><a href='/old-sites/fall20/index.html' target='_blank'>Check out projects on my old site</a>"
+    cont.innerHTML = "I’ve been fortunate to have worked on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Tackl, Statens Vegvesen, Lillemini and Trondheim Climathon - among others.<br><br><a href='/old-sites/fall20/index.html' target='_blank'>Check out some projects</a>"
 
     work.appendChild(title)
     addCross(work)
@@ -133,7 +133,7 @@ let renderContact = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Contact"
-    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://www.instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Twitter: <a href='https://www.twitter.com/_hmkristiansen' target='_blank' >@_hmkristiansen</a></li><li>LinkedIn: <a href='https://www.linkedin.com/in/hmkristiansen/' target='_blank'>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger 🕶"
+    cont.innerHTML = "Currently: CPH<br>Previosly: OSL, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://www.instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Twitter: <a href='https://www.twitter.com/_hmkristiansen' target='_blank' >@_hmkristiansen</a></li><li>LinkedIn: <a href='https://www.linkedin.com/in/hmkristiansen/' target='_blank'>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul>Don't be a stranger 🕶"
 
     contact.appendChild(title)
     addCross(contact)

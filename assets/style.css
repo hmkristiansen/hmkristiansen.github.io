@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 *{
     list-style-type: none;
     padding: 0;
@@ -11,6 +14,8 @@ body{
     height: 100%;
     overflow: hidden;
     font-family: 'Inter', sans-serif;
+    /* font-family: 'VT323', monospace; */
+    /* font-family: 'Courier Prime', monospace; */
     /* background-color: rgb(22, 22, 22); */
     background-color: #f5a123;
 }
@@ -32,12 +37,12 @@ a:hover{
 }
 
 .window{
-    width: 300px;
-    height: min-content;
+    width: 320px;
+    height: max-content; 
     color: black;
     position: absolute;
-    top: calc(50vh - 150px);
-    left: calc(50vw - 150px);
+    top: calc(50vh - 160px);
+    left: calc(50vw - 160px);
     cursor: grabbing;
 }
 
@@ -46,13 +51,19 @@ a:hover{
     font-size: 1rem;
     padding: 20px;
     /* border:  1px solid rgb(224, 224, 224); */
-    border: 1px solid black;
+    border: 0.5px solid black;
+}
+
+.window .cont{
+    border-radius: 0px 0px 5px 5px;
 }
 
 .window h1{
     transform: translateY(1px);
     padding: 10px 20px;
     font-weight: normal;
+
+    border-radius: 5px 5px 0px 0px;
 }
 
 .window .closeWindow{
@@ -66,41 +77,43 @@ a:hover{
 }
 
 #about{
-    top: calc(50vh - 150px + 15px); 
-    left: calc(50vw - 150px);
+    top: calc(50vh - 160px + 15px); 
+    left: calc(50vw - 160px);
     transform: rotate(2deg);
 }
 
 #work{
-    top: calc(50vh - 150px);
-    left: calc(50vw - 150px);
+    top: calc(50vh - 160px);
+    left: calc(50vw - 160px);
     transform: rotate(-2deg); 
 }
 
 #contact{
-    top: calc(50vh - 150px);
-    left: calc(50vw - 150px);
+    top: calc(50vh - 160px);
+    left: calc(50vw - 160px);
     transform: rotate(1deg);
 }
 
 #hug{
-    top: calc(50vh - 150px + 5px);
+    top: calc(50vh - 160px + 5px);
     left: calc(50vw - 100px);
     transform: rotate(-2deg);
 
-    width: 175px;
+    width: 200px;
     height: 250px;
     object-fit: cover;
     border: 1px solid black;
+
+    border-radius: 5px;
 }
 
 #easteregg{
     text-align: center;
     padding: 120px 0;
-    margin: 0 50px;
+    margin: 0 87.5px;
     cursor: default;
     font-size: 0.8rem;
-    width: 175px;
+    width: 160px;
     text-align: center;
 }
 
