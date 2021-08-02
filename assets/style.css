@@ -44,6 +44,8 @@ a:hover{
     top: calc(50vh - 160px);
     left: calc(50vw - 160px);
     cursor: grabbing;
+
+    transition: all 0.05s;
 }
 
 .window h1, .window .cont{
@@ -78,6 +80,14 @@ a:hover{
 
 #about{
     top: calc(50vh - 160px + 15px); 
+    /* top: 110vh;  */
+    left: calc(50vw - 160px);
+    transform: rotate(2deg);
+    transition: 0.2s;
+}
+
+.aboutStart{
+    top: calc(50vh - 160px + 15px) !important; 
     left: calc(50vw - 160px);
     transform: rotate(2deg);
 }

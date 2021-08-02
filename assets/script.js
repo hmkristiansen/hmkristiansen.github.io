@@ -97,7 +97,7 @@ let renderAbout = () =>{
     cont.classList.add("cont")
 
     title.innerText = "About"
-    cont.innerHTML = "Hi hello I'm Henrik! 👋<br>I create, break, fix, experiment, develop and occasionally design stuff. Currently doing an internship at EGGS Design.<br><br>I like running, video games, coffee and beagles."
+    cont.innerHTML = "Heisann I'm Henrik 👋<br>I create, break, fix, experiment, develop and occasionally design stuff. Currently doing my master's at NTNU.<br><br>I like running, video games, coffee and beagles."
 
     about.appendChild(title)
     addCross(about)
@@ -115,7 +115,7 @@ let renderWork = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Work"
-    cont.innerHTML = "I’ve been fortunate to have worked on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Tackl, Statens Vegvesen, Lillemini and Trondheim Climathon - among others.<br><br><a href='/old-sites/fall20/index.html' target='_blank'>Check out some projects</a>"
+    cont.innerHTML = "I’ve been fortunate to have worked on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Tackl, Statens Vegvesen, Lillemini and Trondheim Climathon - among others.<br><br><a href='http://portfolio.hmkristiansen.no' target='_blank'>Check out some projects</a>"
 
     work.appendChild(title)
     addCross(work)
@@ -133,7 +133,7 @@ let renderContact = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Contact"
-    cont.innerHTML = "Currently: OSL<br>Previosly: CPH, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://www.instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Twitter: <a href='https://www.twitter.com/_hmkristiansen' target='_blank' >@_hmkristiansen</a></li><li>LinkedIn: <a href='https://www.linkedin.com/in/hmkristiansen/' target='_blank'>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul>Don't be a stranger 🕶"
+    cont.innerHTML = "Currently: OSL<br>Previosly: CPH, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://www.instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>LinkedIn: <a href='https://www.linkedin.com/in/hmkristiansen/' target='_blank'>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger 🕶"
 
     contact.appendChild(title)
     addCross(contact)
@@ -164,7 +164,17 @@ let renderReRun = () =>{
   redo.id = "redo"
   body.appendChild(redo)
 }
+
+let startupAni = () =>{
+  let about =  document.getElementById('about')
+  about.classList.add('aboutStart')
+}
+
 renderContent()
+
+// setTimeout( function(){ 
+//   startupAni()
+// }  , 1000 );
 
 // Make content draggable
 $(function(){
