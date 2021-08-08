@@ -25,6 +25,10 @@ let setStage = () =>{
   let i = Math.floor(Math.random() * bgs.length)
   let j = Math.floor(Math.random() * eggs.length)
 
+  $(".window").each(function() {
+    $(this).addClass("windowTransition")
+  })  
+
   while(i == oldI){
     i = Math.floor(Math.random() * bgs.length)
   }
@@ -84,6 +88,12 @@ let setStage = () =>{
 
   oldI = i
   oldJ = j
+
+  setTimeout( function(){ 
+    $(".window").each(function() {
+      $(this).removeClass("windowTransition")
+    })
+  },101)
 }
 
 // Render content
@@ -97,7 +107,7 @@ let renderAbout = () =>{
     cont.classList.add("cont")
 
     title.innerText = "About"
-    cont.innerHTML = "Heisann I'm Henrik 👋<br>I create, break, fix, experiment, develop and occasionally design stuff. Currently doing my master's at NTNU.<br><br>I like running, video games, coffee and beagles."
+    cont.innerHTML = "Heisann I'm Henrik 👋<br>I create, break, fix, experiment, develop and occasionally design stuff. Currently doing my master's at NTNU.<br><br>I like running, video games, coffee and joyful interfaces."
 
     about.appendChild(title)
     addCross(about)
@@ -115,7 +125,7 @@ let renderWork = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Work"
-    cont.innerHTML = "I’ve been fortunate to have worked on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Tackl, Statens Vegvesen, Lillemini and Trondheim Climathon - among others.<br><br><a href='http://portfolio.hmkristiansen.no' target='_blank'>Check out some projects</a>"
+    cont.innerHTML = "I’ve been fortunate to have worked on some cool projects with Cognite, FARA, Anywhere, Santander, Engage NTNU, Tackl, Statens Vegvesen, Lillemini and Trondheim Climathon - among others.<br><br><a href='http://portfolio.hmkristiansen.no' target='_blank'>Check out some projects →</a>"
 
     work.appendChild(title)
     addCross(work)
