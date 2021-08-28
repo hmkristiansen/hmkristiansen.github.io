@@ -39,11 +39,17 @@ a:hover{
 .window{
     width: 320px;
     height: max-content; 
-    color: black;
+    /* color: black; */
+    color: rgb(30, 30, 30);
     position: absolute;
     top: calc(50vh - 160px);
     left: calc(50vw - 160px);
     cursor: grabbing;
+
+    border-radius: 2.5px;
+
+    -webkit-box-shadow: 0px 5px 20px -5px rgba(97,97,97,0.4); 
+    box-shadow: 0px 5px 20px -5px rgba(97,97,97,0.4);
 }
 
 .window h1, .window .cont{
@@ -51,11 +57,12 @@ a:hover{
     font-size: 1rem;
     padding: 20px;
     /* border:  1px solid rgb(224, 224, 224); */
-    border: 1.2px solid black;
+    /* border: 1.2px solid black; */
+    border: 1.2px solid rgb(30, 30, 30);
 }
 
 .window .cont{
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 2.5px 2.5px;
 }
 
 .window h1{
@@ -63,7 +70,7 @@ a:hover{
     padding: 10px 20px;
     font-weight: normal;
 
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 2.5px 2.5px 0px 0px;
 }
 
 .window .closeWindow{
@@ -126,6 +133,9 @@ a:hover{
     font-size: 0.8rem;
     width: 160px;
     text-align: center;
+
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
 }
 
 #redo{
@@ -140,4 +150,8 @@ a:hover{
     font-weight: bolder;
 }
 
-
+.appendIn{
+    top: 100vh;
+    left: calc(50vw - 100px);
+    transform: rotate(0);
+}
