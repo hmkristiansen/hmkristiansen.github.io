@@ -107,7 +107,7 @@ let renderAbout = () =>{
     cont.classList.add("cont")
 
     title.innerText = "About"
-    cont.innerHTML = "Heisann I'm Henrik 👋<br>I create, break, fix, experiment, develop and occasionally design stuff. Currently at EGGS while doing my master's at NTNU.<br><br>I like running, video games, coffee and joyful interfaces."
+    cont.innerHTML = "Heisann I'm Henrik 👋<br>I create, break, fix, experiment, develop and occasionally design stuff. Currently at <a href='https://eggsdesign.com' target='_blank'> EGGS Design</a> while doing my master's at NTNU.<br><br>I like running, video games, coffee and joyful interfaces."
 
     about.appendChild(title)
     addCross(about)
