@@ -22,7 +22,7 @@ body{
 
 a{
     color: black;
-    cursor: pointer;
+    cursor: alias;
     text-decoration: underline;
 }
 
