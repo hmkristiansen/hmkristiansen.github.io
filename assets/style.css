@@ -21,7 +21,7 @@ body{
 }
 
 a{
-    color: black;
+    color: rgb(60, 60, 60);
     cursor: alias;
     text-decoration: underline;
 }
@@ -40,7 +40,7 @@ a:hover{
     width: 320px;
     height: max-content; 
     /* color: black; */
-    color: rgb(30, 30, 30);
+    color: rgb(60, 60, 60);
     position: absolute;
     top: calc(50vh - 160px);
     left: calc(50vw - 160px);
@@ -58,28 +58,29 @@ a:hover{
     padding: 20px;
     /* border:  1px solid rgb(224, 224, 224); */
     /* border: 1.2px solid black; */
-    border: 1.2px solid rgb(30, 30, 30);
+
+    /* border: 1.2px solid rgb(30, 30, 30); */
 }
 
 .window .cont{
-    border-radius: 0px 0px 2.5px 2.5px;
+    border-radius: 0px 0px 1.5px 1.5px;
 }
 
 .window h1{
     transform: translateY(1.2px);
-    padding: 10px 20px;
-    font-weight: normal;
+    padding: 20px 20px 10px 20px;
+    font-weight: bold;
 
-    border-radius: 2.5px 2.5px 0px 0px;
+    border-radius: 1.5px 1.5px 0px 0px;
 }
 
 .window .closeWindow{
     position: absolute;
-    right: 5px;
+    right: 2.5px;
     top: 2.5px;
     width: 10px;
     height: 10px;
-    padding: 15px;
+    padding: 20px;
     cursor: pointer;
 }
 
@@ -120,9 +121,9 @@ a:hover{
     width: 200px;
     height: 250px;
     object-fit: cover;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
-    border-radius: 5px;
+    border-radius: 1.5px; 
 }
 
 #easteregg{
@@ -133,6 +134,7 @@ a:hover{
     font-size: 0.8rem;
     width: 160px;
     text-align: center;
+    color: black;
 
     -webkit-box-shadow: unset;
     box-shadow: unset;
