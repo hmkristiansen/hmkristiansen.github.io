@@ -40,6 +40,8 @@ function initDragElement() {
         document.onmouseup = closeDragElement;
         // call a function whenever the cursor moves:
         document.onmousemove = elementDrag;
+
+        elmnt.classList.add('windowShadow');
     }
   
     function elementDrag(e) {
@@ -62,6 +64,7 @@ function initDragElement() {
         /* stop moving when mouse button is released:*/
         document.onmouseup = null;
         document.onmousemove = null;
+        elmnt.classList.remove('windowShadow');
     }
 
     function getHeader(element) {

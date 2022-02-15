@@ -19,6 +19,10 @@
     }
 
     .menu_list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
         ul{
             li{
                 margin: 8px 0 8px 0;
