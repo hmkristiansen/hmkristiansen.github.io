@@ -34,16 +34,25 @@
     flex-direction: row;
     align-items: center;
 
-    .cross{
-        width: 10px;
-        height: 10px;
-        background-color: dimgray;
-
+    .cross, .exp{
+        width: 15px;
+        height: 15px;
+        
         flex: none;
         order: 0;
         flex-grow: 0;
-        margin: 0px 8px;
+        margin: 4px 4px;
+
+        align-items: center;
+
+        img{
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            transform: rotate(-90deg);
+        }
     }
+
     .spacer{
         //width: auto;
         flex: none;

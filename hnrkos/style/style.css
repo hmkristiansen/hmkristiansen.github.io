@@ -56,10 +56,9 @@ ul {
           align-items: center;
 }
 
-.popup-header .cross {
-  width: 10px;
-  height: 10px;
-  background-color: dimgray;
+.popup-header .cross, .popup-header .exp {
+  width: 15px;
+  height: 15px;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
@@ -68,7 +67,18 @@ ul {
           order: 0;
   -ms-flex-positive: 0;
       flex-grow: 0;
-  margin: 0px 8px;
+  margin: 4px 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-header .cross img, .popup-header .exp img {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .popup-header .spacer {
