@@ -130,5 +130,17 @@ function initResizeElement() {
         document.documentElement.removeEventListener("mouseup", stopDrag, false);
     }
 }
-  
+
+//document.getElementById("demo").addEventListener("click", myFunction);
+
+function expWindow(event) {
+  console.log("jello");
+  console.log(event.target.parentElement.parentElement.parentElement);
+  let window = event.target.parentElement.parentElement.parentElement;
+
+  window.style.width = "100vw";
+  window.style.height = "100vh";
+  window.style.top="0";
+  window.style.left="0";
+}
   

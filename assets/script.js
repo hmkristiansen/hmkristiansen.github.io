@@ -107,7 +107,7 @@ let renderAbout = () =>{
     cont.classList.add("cont")
 
     title.innerText = "About"
-    cont.innerHTML = "Heisann I'm Henrik 👋<br>I create, break, fix, experiment, develop and occasionally design stuff. Currently at <a href='https://eggsdesign.com' target='_blank'> EGGS Design</a> while doing my master's at <a href='https://www.ntnu.no/studier/mtdesig' target='_blank'>NTNU</a>.<br><br>I like running, video games, coffee and joyful interfaces."
+    cont.innerHTML = "Heisann I'm Henrik 👋<br>I create, break, fix, experiment, develop and occasionally design stuff. Currently at <a href='https://iterate.no' target='_blank'> ITERATE</a>, previolsy at <a href='https://eggsdesign.com' target='_blank'>EGGS Design</a>.<br><br>I like running, video games, coffee and joyful interfaces."
 
     about.appendChild(title)
     addCross(about)
@@ -143,7 +143,7 @@ let renderContact = () =>{
     cont.classList.add("cont")
 
     title.innerText = "Contact"
-    cont.innerHTML = "Currently: TRD<br>Previosly: CPH, LYR, OSL, LIS<br><br><ul><li>Instagram: <a href='https://www.instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Resume: <a href='https://read.cv/hmkristiansen' target='_blank'>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger 🕶"
+    cont.innerHTML = "Currently: OSL<br>Previosly: CPH, LYR, TRD, LIS<br><br><ul><li>Instagram: <a href='https://www.instagram.com/hmkristiansen' target='_blank'>@hmkristiansen</a></li><li>Resume: <a href='https://read.cv/hmkristiansen' target='_blank'>hmkristiansen</a></li><li>Epost: <a href='mailto:heisann@hmkristiansen.no'>heisann@hmkristiansen.no</a></li></ul><br>Don't be a stranger 🕶"
 
     contact.appendChild(title)
     addCross(contact)
