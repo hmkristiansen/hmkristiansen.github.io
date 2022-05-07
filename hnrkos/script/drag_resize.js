@@ -134,8 +134,6 @@ function initResizeElement() {
 //document.getElementById("demo").addEventListener("click", myFunction);
 
 function expWindow(event) {
-  console.log("jello");
-  console.log(event.target.parentElement.parentElement.parentElement);
   let window = event.target.parentElement.parentElement.parentElement;
 
   window.style.width = "100vw";
@@ -143,4 +141,8 @@ function expWindow(event) {
   window.style.top="0";
   window.style.left="0";
 }
-  
+
+function closeWindow(event){
+    let window = event.target.parentElement.parentElement.parentElement;
+    window.remove()
+}
