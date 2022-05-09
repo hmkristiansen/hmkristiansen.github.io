@@ -1,3 +1,3 @@
-# henkrist.github.io
+# hnrk.github.io
 
-Personal portfolio page for H.M. Kristiansen
+Personal portfolio page for Henrik Kristiansen
