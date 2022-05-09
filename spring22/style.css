@@ -29,12 +29,15 @@ a{
     color: inherit;
     font-size: 0.9rem;
     display: inline-block;
-    transition: opacity 0.16s;
+    transition: all 0.1s;
+    text-decoration: none;
+    opacity: 0.9;
 }
 
 a:hover{
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: alias;
+    text-decoration: underline;
 }
 
 a:active{
