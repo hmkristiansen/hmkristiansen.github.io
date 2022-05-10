@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
 
 body, html{
-    background-color: black;
+    background-color: white;
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -111,20 +111,19 @@ p{
 
 #intro_section{
     background-color: white;
-    color: black;
+    color: rgb(40, 40, 40);
 }
 
 #project_section{
     background-color: black;
-    color: white;
+    color: rgb(225, 225, 225);
 }
 
 .content{
     width: 350px;
     margin: 0 auto;
     padding: 4px;
-    
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .cta{
