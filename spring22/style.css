@@ -7,6 +7,8 @@ body, html{
     margin: 0;
     -webkit-font-smoothing: antialiased;
     font-family: 'Rubik', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
 body{
@@ -32,6 +34,17 @@ a{
     transition: all 0.1s;
     text-decoration: none;
     opacity: 0.9;
+}
+
+ul li a::before{
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin-right: 8px;
+    margin-bottom: 3px;
+    border-radius: 100;
+    background-color: black;
 }
 
 a:hover{
@@ -84,7 +97,7 @@ p{
 
 .section{
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
     scroll-snap-align: start;
 
     display: flex;
