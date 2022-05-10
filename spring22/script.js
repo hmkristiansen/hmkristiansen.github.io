@@ -5,7 +5,7 @@ for(let i=0; i<intro_content.length; i++){
     intro_content[i].classList.add("fadeStart")
 }
 
-setInterval(displayContent, 150)
+setInterval(displayContent, 120)
 j=0;
 
 function displayContent() {

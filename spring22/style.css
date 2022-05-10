@@ -31,7 +31,7 @@ a{
     color: inherit;
     font-size: 0.9rem;
     display: inline-block;
-    transition: all 0.1s;
+    transition: opacity 0.15s;
     text-decoration: none;
     opacity: 0.9;
 }
@@ -48,9 +48,9 @@ ul li a::before{
 }
 
 a:hover{
-    opacity: 0.5;
+    opacity: 0.4;
     cursor: alias;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 a:active{
