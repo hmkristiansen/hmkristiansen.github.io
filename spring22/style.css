@@ -24,7 +24,7 @@ ul{
 
 ul li{
     display: inline-block;
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 a{
@@ -33,7 +33,7 @@ a{
     display: inline-block;
     transition: opacity 0.15s;
     text-decoration: none;
-    opacity: 0.9;
+    opacity: 0.6;
 }
 
 ul li a::before{
@@ -48,7 +48,7 @@ ul li a::before{
 }
 
 a:hover{
-    opacity: 0.4;
+    opacity: 1;
     cursor: alias;
     /* text-decoration: underline; */
 }
