@@ -16,3 +16,19 @@ function displayContent() {
     }
     j++
 }
+
+
+const [red, green, blue] = [240, 240, 240]
+const body = document.querySelector('body')
+
+window.addEventListener('scroll', () => {
+  const y = 1 + (window.scrollY || window.pageYOffset) / 100
+  console.log(y)
+  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
+  body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+})
+
+
+function scrollToProjects() {
+    document.querySelector('#project_section').scrollIntoView({behavior: 'smooth'});
+  }
