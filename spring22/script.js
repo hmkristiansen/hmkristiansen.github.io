@@ -18,7 +18,7 @@ function displayContent() {
 }
 
 
-const [red, green, blue] = [240, 240, 240]
+const [red, green, blue] = [250, 250, 250]
 const body = document.querySelector('body')
 
 window.addEventListener('scroll', () => {
