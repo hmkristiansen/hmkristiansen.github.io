@@ -81,6 +81,7 @@ h1{
 h2{
     font-weight: 400;
     opacity: 0.6;
+    
 }
 
 h1,h2{
@@ -131,4 +132,5 @@ p{
 .cta{
     position: absolute;
     bottom: 16px;
+    opacity: 0.6;
 }
