@@ -31,4 +31,4 @@ window.addEventListener('scroll', () => {
 
 function scrollToProjects() {
     document.querySelector('#project_section').scrollIntoView({behavior: 'smooth'});
-  }
+}

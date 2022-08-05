@@ -63,16 +63,11 @@ a:active{
     background: cyan;
 }
 
-.fadeStart{
-    transform: translateY(8px);
-    opacity: 0;
+.cta{
+    position: absolute;
+    bottom: 16px;
+    opacity: 0.6;
 }
-.fadeStop{
-    transform: translateY(0px);
-    opacity: 1;
-    transition: all 0.8s;
-}
-
 
 h1{
     font-weight: 500;
@@ -129,8 +124,12 @@ p{
     opacity: 1;
 }
 
-.cta{
-    position: absolute;
-    bottom: 16px;
-    opacity: 0.6;
+.fadeStart{
+    transform: translateY(8px);
+    opacity: 0;
+}
+.fadeStop{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 0.8s;
 }
