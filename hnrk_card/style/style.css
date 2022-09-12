@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #F5F5F5;
+  font-size: 16px;
+  height: calc(100% + 1px);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popup {
+  z-index: 9;
+  background-color: #fff;
+  border: 1px solid #4F4F4F;
+  text-align: left;
+  border-radius: 4px;
+  min-height: 150px;
+  min-width: 150px;
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 300px;
+  height: 180px;
+  left: calc(50vw - 150px);
+  top: calc(50vh - 90px);
+}
+
+/*Drgable */
+.popup {
+  position: absolute;
+  /*resize: both; !*enable this to css resize*! */
+  overflow: auto;
+}
+
+.popup .popup-header {
+  padding: 8px;
+  cursor: move;
+  z-index: 10;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup .cardContent {
+  padding: 1rem;
+}
+
+.popup .cardContent h1, .popup .cardContent h2, .popup .cardContent p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.windowShadow {
+  -webkit-box-shadow: 5px 5px 0px 0px #4F4F4F;
+  box-shadow: 5px 5px 0px 0px #4F4F4F;
+}
+
+/*Resizeable*/
+.popup .resizer-right {
+  width: 5px;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: e-resize;
+}
+
+.popup .resizer-bottom {
+  width: 100%;
+  height: 5px;
+  background: transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: n-resize;
+}
+
+.popup .resizer-both {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: nw-resize;
+}
+
+/*NOSELECT*/
+.popup * {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.noSelect * {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+/*# sourceMappingURL=style.css.map */

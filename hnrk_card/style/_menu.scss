@@ -1,0 +1,32 @@
+
+.sitemenu{
+    position: absolute;
+
+    .menu{
+        font-weight: bold;
+        font-size: 1.2rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 16px;
+
+        .chev_cont{
+            img{
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .menu_list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        ul{
+            li{
+                margin: 8px 0 8px 0;
+            }
+        }
+    }
+}
