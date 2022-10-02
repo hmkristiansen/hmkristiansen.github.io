@@ -23,6 +23,7 @@
     /*resize: both; !*enable this to css resize*! */
     overflow: auto;
 
+
     .popup-header {
         padding: 8px;
         cursor: move;
@@ -38,7 +39,7 @@
         align-items: center;
     }
 
-    .cardContent{
+    .cardFront{
         padding: 1rem;
 
         h1, h2, p{

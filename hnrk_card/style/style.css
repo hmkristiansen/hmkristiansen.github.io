@@ -61,11 +61,11 @@ ul {
           align-items: center;
 }
 
-.popup .cardContent {
+.popup .cardFront {
   padding: 1rem;
 }
 
-.popup .cardContent h1, .popup .cardContent h2, .popup .cardContent p {
+.popup .cardFront h1, .popup .cardFront h2, .popup .cardFront p {
   margin: 0;
   padding: 0;
   font-size: 1rem;
