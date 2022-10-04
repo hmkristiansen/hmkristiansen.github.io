@@ -8,11 +8,16 @@ class Card {
         let card = document.createElement('div')
         let cardHeader = document.createElement('div')
         cardHeader.className = "popup-header"
+        cardHeader.innerHTML = "header"
+
+        console.log(cardHeader)
 
 
         // defining card faces
         let front = document.createElement('div')
         front.className = "cardFront"
+        front.appendChild(cardHeader)
+
         let back = document.createElement('div')
         back.className = "cardBack"
 
@@ -32,30 +37,30 @@ class Card {
         
         let igLink = document.createElement('a')
         igLink.innerText = "Instagram"
-        igLink.href = "instagram.com/hmkristiansen"
+        igLink.href = "https://instagram.com/hmkristiansen"
         igLink.target = "_blank"
 
         let liLink = document.createElement('a')
         liLink.innerText = "LinkedIn"
-        liLink.href = "linkedin.com/hmkristiansen"
+        liLink.href = "https://linkedin.com/hmkristiansen"
         liLink.target = "_blank"
 
         let twLink = document.createElement('a')
         twLink.innerText = "Twitter"
-        twLink.href = "twitter.com/hmkristiansen"
+        twLink.href = "https://twitter.com/_hmkristiansen"
         twLink.target = "_blank"
 
         let links1 = [emailLink, igLink, liLink, twLink]
         for(let i=0; i<links1.length; i++){
-            let liElement  =document.createElement('li')
+            let liElement = document.createElement('li')
             liElement.appendChild(links1[i])
             frontLinks.appendChild(liElement)
         }
 
+        front.appendChild(cardHeader)
         front.appendChild(frontTitle)
         front.appendChild(frontSubtitle)
         front.appendChild(frontLinks)
-        front.appendChild(cardHeader)
 
         // setting back content
         let backSubtitle = document.createElement('h2')
@@ -116,12 +121,14 @@ function getRandomInt(max) {
 }
 
 function handleOnScroll() {
-    console.log("scroll");
-    let scrollCard = new Card(i)
 
-    scrollCard.getCard().style.top = "calc(" + "50vh" + "-" + getRandomInt(200) + "px" + ")"
-    scrollCard.getCard().style.left = getRandomInt(200) + "px"
+    // console.log("scroll");
+    // let scrollCard = new Card(i)
 
-    document.body.appendChild(scrollCard.getCard())
-    i++
+    // scrollCard.getCard().style.top = "calc(" + "50vh" + "-" + getRandomInt(200) + "px" + ")"
+    // scrollCard.getCard().style.left = getRandomInt(200) + "px"
+
+    // document.body.appendChild(scrollCard.getCard())
+    // i++
+
 }
