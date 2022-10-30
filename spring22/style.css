@@ -133,3 +133,16 @@ p{
     opacity: 1;
     transition: all 0.8s;
 }
+
+#life_wrapper{
+    opacity: 0.6;
+    position: relative;
+}
+
+#life_wrapper span{
+    display: block;
+    /* position: absolute; */
+    transition: opacity 0.2s;
+    cursor: wait;
+}
+

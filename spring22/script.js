@@ -5,7 +5,10 @@ for(let i=0; i<intro_content.length; i++){
     intro_content[i].classList.add("fadeStart")
 }
 
-setInterval(displayContent, 120)
+function loadPage(){
+    setInterval(displayContent, 120)
+}
+
 j=0;
 
 function displayContent() {
@@ -17,13 +20,12 @@ function displayContent() {
     j++
 }
 
-
 const [red, green, blue] = [250, 250, 250]
 const body = document.querySelector('body')
 
 window.addEventListener('scroll', () => {
   const y = 1 + (window.scrollY || window.pageYOffset) / 100
-  console.log(y)
+  //console.log(y)
   const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
   body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
 })
@@ -31,4 +33,67 @@ window.addEventListener('scroll', () => {
 
 function scrollToProjects() {
     document.querySelector('#project_section').scrollIntoView({behavior: 'smooth'});
+}
+
+/*
+var since = new Date("11-19-1996");
+var now = new Date();
+console.log(now.getTime() - since.getTime() + " ms")
+
+// Assuming you count every 1/100th of a second
+setInterval(() => {
+  now = new Date();
+  console.clear()
+  console.log(now.getTime() - since.getTime() + " ms")
+}, 10)*/
+
+
+var updateAgeBool = true;
+var update = setInterval(function() {
+	if(updateAgeBool){
+		updateAge()
+	}
+}, 10)
+
+var bday = new Date("Nov 19, 1996 05:55:25").getTime();
+var dday = new Date("Nov 19, 2078 12:00:00").getTime();
+var dayBool = true;
+
+
+function changeDate(){
+    if(dayBool){
+        dayBool = false;
+    }else{
+        dayBool = true;
+    }
+}
+
+function changeBack(){
+    if(!dayBool){
+        dayBool = true;
+    }else{
+        dayBool = false;
+    }
+}
+
+// $("#life_wrapper").hover(function() {
+// 	if(dayBool){
+// 		dayBool = false;
+// 	}else{
+// 		dayBool = true;
+// 	}
+// });
+
+function updateAge(){
+	let now = new Date().getTime(); 
+	let diffTime1 = Math.abs(now - bday);
+	let diffTime2 = Math.abs(dday - now);
+    // document.getElementById("date").innerHTML =(diffTime1/31557600000);
+    
+	if(dayBool){
+		document.getElementById("date").innerHTML =(diffTime1/31557600000);
+	}else{
+		document.getElementById("date").innerHTML ="- " + (diffTime2/31557600000);
+	}
+    
 }
