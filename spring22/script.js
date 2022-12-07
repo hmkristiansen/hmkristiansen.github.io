@@ -6,7 +6,7 @@ for(let i=0; i<intro_content.length; i++){
 }
 
 function loadPage(){
-    setInterval(displayContent, 250)
+    setInterval(displayContent, 400)
 }
 
 j=0;
