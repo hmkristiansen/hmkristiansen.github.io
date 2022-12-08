@@ -6,7 +6,7 @@ for(let i=0; i<intro_content.length; i++){
 }
 
 function loadPage(){
-    setInterval(displayContent, 400)
+    setInterval(displayContent, 300)
 }
 
 j=0;
@@ -20,6 +20,7 @@ function displayContent() {
     j++
 }
 
+/*
 const [red, green, blue] = [250, 250, 250]
 const body = document.querySelector('body')
 
@@ -34,19 +35,7 @@ window.addEventListener('scroll', () => {
 function scrollToProjects() {
     document.querySelector('#project_section').scrollIntoView({behavior: 'smooth'});
 }
-
-/*
-var since = new Date("11-19-1996");
-var now = new Date();
-console.log(now.getTime() - since.getTime() + " ms")
-
-// Assuming you count every 1/100th of a second
-setInterval(() => {
-  now = new Date();
-  console.clear()
-  console.log(now.getTime() - since.getTime() + " ms")
-}, 10)*/
-
+*/
 
 var updateAgeBool = true;
 var update = setInterval(function() {
@@ -76,19 +65,10 @@ function changeBack(){
     }
 }
 
-// $("#life_wrapper").hover(function() {
-// 	if(dayBool){
-// 		dayBool = false;
-// 	}else{
-// 		dayBool = true;
-// 	}
-// });
-
 function updateAge(){
 	let now = new Date().getTime(); 
 	let diffTime1 = Math.abs(now - bday);
 	let diffTime2 = Math.abs(dday - now);
-    // document.getElementById("date").innerHTML =(diffTime1/31557600000);
     
 	if(dayBool){
 		document.getElementById("date").innerHTML =(diffTime1/31557600000);
