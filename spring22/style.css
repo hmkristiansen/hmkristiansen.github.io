@@ -126,13 +126,14 @@ p{
 }
 
 .fadeStart{
-    transform: translateY(8px);
+    transform: translateY(16px);
     opacity: 0;
+    filter: blur(8px);
 }
 .fadeStop{
     transform: translateY(0px);
     opacity: 1;
-    transition: all 1.5s;
+    transition: all 2s ease;
 }
 
 #life_wrapper span{
@@ -140,3 +141,23 @@ p{
     cursor: wait;
 }
 
+@media (prefers-color-scheme: dark) {
+    body{
+        color:rgb(245, 245, 245);
+        background-color: rgb(25, 25, 25);
+    }
+    #intro_section{
+        color: inherit;
+    }
+
+    ul li a::before{
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        margin-right: 8px;
+        margin-bottom: 3px;
+        border-radius: 100;
+        background-color: rgb(245, 245, 245);
+    }
+}
