@@ -155,6 +155,11 @@ p{
     transition: 0.1s;
     scale: 0.9;
     border-radius: 4px;
+
+    border: solid 2px rgba(255,255,255,0.2);
+
+    -webkit-box-shadow: 0px 2px 8px -2px rgba(0,0,0,0.5); 
+    box-shadow: 0px 2px 8px -2px rgba(0,0,0,0.5);
 }
 
 .showMe{
@@ -180,5 +185,30 @@ p{
         margin-bottom: 3px;
         border-radius: 100;
         background-color: rgb(245, 245, 245);
+    }
+}
+
+#rb:hover{
+    background: -webkit-linear-gradient( 92deg, #95d7e3, #eb76ff );
+    background-size:600vw 600vw;
+
+    opacity: 1;
+    cursor: crosshair;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textAnimate 3s linear infinite alternate;
+}
+  
+@keyframes textAnimate {
+    from {
+        filter: hue-rotate(0deg);
+        background-position-x: 0%;
+        
+    }
+    to {
+        filter: hue-rotate(360deg);
+        background-position-x: 600vw;
+        
     }
 }
