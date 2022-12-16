@@ -72,12 +72,12 @@ a:active{
 
 h1{
     font-weight: 400;
+    cursor: help;
 }
 
 h2{
     font-weight: 400;
     opacity: 0.5;
-    
 }
 
 h1,h2{
@@ -98,6 +98,7 @@ p{
     /* width: 100vw; */
     /* scroll-snap-align: start; */
     background-color: none;
+    position: relative;
 
     display: flex;
     justify-content: center;
@@ -111,6 +112,7 @@ p{
 #intro_section{
     /* background-color: white; */
     color: rgb(40, 40, 40);
+    position: relative;
 }
 
 #project_section{
@@ -139,6 +141,25 @@ p{
 #life_wrapper span{
     display: block;
     cursor: wait;
+}
+
+#me_img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    top: calc(50vh - 200px);
+    left: calc(50vw - 50px);
+    transform: rotate(-2deg);
+    opacity: 0;
+    transition: 0.1s;
+    scale: 0.9;
+    border-radius: 4px;
+}
+
+.showMe{
+    opacity: 1 !important;
+    scale: 1 !important;
 }
 
 @media (prefers-color-scheme: dark) {
