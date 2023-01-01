@@ -135,7 +135,7 @@ p{
 .fadeStop{
     transform: translateY(0px);
     opacity: 1;
-    transition: all 2s ease;
+    transition: all 1.6s ease;
 }
 
 #life_wrapper span{
