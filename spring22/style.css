@@ -61,7 +61,7 @@ a:active{
 
 ::selection {
     color: black;
-    background: cyan;
+    background: rgb(255, 187, 0);
 }
 
 .cta{
@@ -130,7 +130,7 @@ p{
 .fadeStart{
     transform: translateY(16px);
     opacity: 0;
-    filter: blur(8px);
+    filter: blur(16px);
 }
 .fadeStop{
     transform: translateY(0px);
@@ -209,6 +209,5 @@ p{
     to {
         filter: hue-rotate(360deg);
         background-position-x: 600vw;
-        
     }
 }
