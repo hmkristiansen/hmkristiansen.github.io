@@ -43,7 +43,7 @@ ul li a::before{
     display: inline-block;
     width: 4px;
     height: 4px;
-    margin-right: 8px;
+    margin-right: 6px;
     margin-bottom: 3px;
     border-radius: 100;
     background-color: black;

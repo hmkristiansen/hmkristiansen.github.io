@@ -78,11 +78,11 @@ function updateAge(){
 }
 
 function displayMe(){
-    console.log("hover in");
+    // console.log("hover in");
     document.getElementById("me_img").classList.add("showMe");
 }
 
 function hideMe(){
-    console.log("hover out");
+    // console.log("hover out");
     document.getElementById("me_img").classList.remove("showMe");
 }
