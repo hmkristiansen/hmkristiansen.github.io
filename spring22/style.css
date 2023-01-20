@@ -1,5 +1,9 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
 
 body, html{
     /* background-color: white; */
@@ -188,6 +192,10 @@ p{
     }
 }
 
+#rb{
+    line-height: 1.1;
+}
+
 #rb:hover{
     background: -webkit-linear-gradient( 92deg, #95d7e3, #eb76ff );
     background-size:600vw 600vw;
@@ -200,13 +208,34 @@ p{
     animation: textAnimate 3s linear infinite alternate;
 }
   
-@keyframes textAnimate {
+/* @keyframes textAnimate {
     from {
         filter: hue-rotate(0deg);
         background-position-x: 0%;
-        
     }
     to {
+        filter: hue-rotate(360deg);
+        background-position-x: 600vw;
+    }
+} */
+
+@keyframes textAnimate {
+    0% {
+        filter: hue-rotate(0deg);
+        background-position-x: 0%;
+        font-family: 'Comic Neue', cursive;
+    }
+    25%{
+        font-family: 'Lora', serif;
+        /* filter: hue-rotate(90deg); */
+    }
+    50%{
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+    75%{
+        font-family: 'Source Code Pro', monospace;
+    }
+    100% {  
         filter: hue-rotate(360deg);
         background-position-x: 600vw;
     }
