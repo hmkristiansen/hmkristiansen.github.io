@@ -205,7 +205,7 @@ p{
     
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: textAnimate 3s linear infinite alternate;
+    animation: textAnimate 1.5s linear infinite alternate;
 }
   
 /* @keyframes textAnimate {

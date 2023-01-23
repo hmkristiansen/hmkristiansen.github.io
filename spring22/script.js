@@ -1,4 +1,6 @@
 
+// Fade in page animation
+
 let intro_content = document.querySelector('#intro_content').children
 
 for(let i=0; i<intro_content.length; i++){
@@ -10,32 +12,13 @@ function loadPage(){
 }
 
 j=0;
-
 function displayContent() {
-    //console.log(intro_content[j])
     if(j<intro_content.length){
         intro_content[j].classList.add("fadeStop")
         intro_content[j].classList.remove("fadeStart")
     }
     j++
 }
-
-/*
-const [red, green, blue] = [250, 250, 250]
-const body = document.querySelector('body')
-
-window.addEventListener('scroll', () => {
-  const y = 1 + (window.scrollY || window.pageYOffset) / 100
-  //console.log(y)
-  const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-  body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-})
-
-
-function scrollToProjects() {
-    document.querySelector('#project_section').scrollIntoView({behavior: 'smooth'});
-}
-*/
 
 var updateAgeBool = true;
 var update = setInterval(function() {
@@ -44,10 +27,12 @@ var update = setInterval(function() {
 	}
 }, 10)
 
+
+// Update age ticker
+
 var bday = new Date("Nov 19, 1996 05:55:25").getTime();
 var dday = new Date("Nov 19, 2078 12:00:00").getTime();
 var dayBool = true;
-
 
 function changeDate(){
     if(dayBool){
@@ -77,12 +62,39 @@ function updateAge(){
 	}
 }
 
+
+// Show / hide image
 function displayMe(){
-    // console.log("hover in");
     document.getElementById("me_img").classList.add("showMe");
 }
 
 function hideMe(){
-    // console.log("hover out");
     document.getElementById("me_img").classList.remove("showMe");
+}
+
+
+/// confetti https://www.npmjs.com/package/canvas-confetti
+
+var myCanvas = document.createElement('canvas');
+document.body.appendChild(myCanvas);
+
+var myConfetti = confetti.create(myCanvas, { resize: true });
+
+myConfetti();
+
+setTimeout(() => {
+  myConfetti.reset();
+}, 100);
+
+function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+function makeConfetti(){
+    confetti({
+        angle: randomInRange(55, 125),
+        spread: randomInRange(50, 70),
+        particleCount: randomInRange(50, 100),
+        origin: { y: 0.6 }
+    });
 }
