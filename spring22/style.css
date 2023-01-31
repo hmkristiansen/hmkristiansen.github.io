@@ -176,6 +176,19 @@ p{
     scale: 1 !important;
 }
 
+#locations{
+    text-transform: lowercase;
+    cursor: all-scroll;
+    width: fit-content;
+}
+
+#locations span{
+    margin-right: 4px;
+}
+.strike{
+    text-decoration: line-through;
+}
+
 @media (prefers-color-scheme: dark) {
     body{
         color:rgb(245, 245, 245);
