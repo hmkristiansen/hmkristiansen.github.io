@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description" content="Henrik M. Kristiansen - Designer">
+        <meta property="og:description" content="Henrik M. Kristiansen - Designer">
+        <meta name="keywords" content="Design,Digital Design,UI,UX,Produktdesign,Industriell design,Interaksjonsdesign,Systemdesign">
+        <title>Henrik Kristiansen - Interaction Designer</title>
+        <noscript>Your browser needs to support Javascript to run my page :)</noscript>
+        <link rel="icon" type="image/png" sizes="32x32" href="spring22/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="spring22/style.css">
+    </head>
+
+    <body id="body" onload="loadPage()">
+        <img id="me_img" src="spring22/me.jpeg">
+        <div class="section" id="intro_section">
+            <div class="content" id="intro_content">
+                <div id="header">
+                    <h1 onmouseover="displayMe()" onmouseout="hideMe()">Henrik Kristiansen</h1>
+                    <h2 id="rb" onmouseover="makeConfetti()">interaction designer</h2>
+                    <h2 id="life_wrapper" onmouseover="changeDate()" onmouseout="changeBack()">
+                        <span id="date">24.091407102536316</span>
+                    </h2>
+                    <h2 id="locations"><span>osl</span><span class="strike">cph</span><span class="strike">lis</span><span class="strike">trd</span><span class="strike">lyr</span></h2>
+                </div>
+                <p>Currently with <a href="https://www.iterate.no" target="_blank">ITERATE</a> and <a href="https://squads-workouts.com" target="_blank">Squads</a>.<br>Previously at <a href="https://eggsdesign.com/" target="_blank">EGGS Design</a>.</p>
+                <ul>
+                    <li>
+                        <a href="https://hmkristiansen.notion.site/Henrik-s-Project-Archive-fa5f979269fa4b7bafdee0cec43eff2e" target="_blank">Work</a>
+                    </li>                 
+                    <li>
+                        <a href="https://read.cv/hmkristiansen" target="_blank">CV</a>
+                    </li>
+                    <li>
+                        <a href="mailto:heisann@hmkristiansen.no">Email</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">LinkedIn</a>
+                    </li>
+                </ul>
+                <div class="waiter"></div>
+                <div class="waiter"></div>
+                <div class="waiter"></div>
+                <div class="waiter"></div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <script src="spring22/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    </body>
+</html>

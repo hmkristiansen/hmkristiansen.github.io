@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body, html{
+    /* background-color: white; */
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+body{
+    /* scroll-snap-type: y mandatory; */
+    font-size: 14px;
+    background-color: rgb(250, 250, 250);
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+body > div, body > ul{
+    padding: 16px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a{
+    color: inherit;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: all 0.05s;
+    text-decoration: none;
+    opacity: 1;
+    border-radius: 10000px;
+    padding: 4px 8px;
+}
+
+
+a:hover{
+    background-color: black;
+    color: white;
+}
+
+a:active{
+    opacity: 1;
+}
+
+span a{
+    border: unset;
+    border: unset;
+    padding: unset;
+}
+
+span a:hover{
+    text-decoration: underline;
+    background-color: unset;
+    color: unset;
+    border: unset;
+    cursor: alias;
+}
+
+::selection {
+    color: black;
+    background: rgb(255, 187, 0);
+}
+
+.cta{
+    position: absolute;
+    bottom: 16px;
+    opacity: 0.6;
+}
+
+h1{
+    font-weight: 400;
+    /* cursor: help; */
+    width: fit-content;
+}
+
+h2{
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+h1,h2{
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+p{
+    font-size: 0.9rem;
+
+    font-weight: 400;
+    line-height: 120%;
+}
+
+
+#life_wrapper{
+    width: fit-content;
+}
+
+#life_wrapper span{
+    display: block;
+    cursor: wait;
+}
+
+
+#locations{
+    text-transform: lowercase;
+    /* cursor: all-scroll; */
+    width: fit-content;
+}
+
+#locations span{
+    margin-right: 4px;
+}
+.strike{
+    text-decoration: line-through;
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        color:rgb(245, 245, 245);
+        background-color: rgb(25, 25, 25);
+    }
+    #intro_section{
+        color: inherit;
+    }
+
+    a:hover{
+        background-color: white;
+        color: black;
+    }
+}
