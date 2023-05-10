@@ -77,10 +77,6 @@ a.active{
     content: " ↑";
 }
 
-#work_toggle.active{
-    content: " x";
-}
-
 span a{
     border: unset;
     border: unset;
