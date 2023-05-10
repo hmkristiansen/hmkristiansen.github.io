@@ -236,19 +236,16 @@ p{
     opacity: 0.75;
 }
 
-/* Styles for desktop screens */
 @media only screen and (min-width: 768px) {
     .image_container:hover .caption {
         opacity: 1;
     }
 
-    /* Increase the opacity of the overlay when the caption is visible */
     .image_container:hover::before {
         opacity: 1;
     }
 }
 
-/* Styles for mobile screens */
 @media only screen and (max-width: 767px) {
     .caption {
         opacity: 0;
