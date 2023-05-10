@@ -39,3 +39,25 @@ function updateAge(){
 		document.getElementById("date").innerHTML ="- " + (diffTime2/31557600000);
 	}
 }
+
+
+
+// ---
+
+
+const imageContainers = document.querySelectorAll('.image_container');
+
+	imageContainers.forEach((container) => {
+	container.addEventListener('click', () => {
+		container.classList.toggle('active');
+	});
+});
+
+
+const workToggle = document.querySelector('#work_toggle');
+const workContainer = document.querySelector('#work');
+
+workToggle.addEventListener('click', function() {
+  workContainer.classList.toggle('visible');
+  this.classList.toggle('active');
+});
