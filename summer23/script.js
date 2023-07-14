@@ -99,7 +99,7 @@ content.addEventListener('click', function() {
 	let scrollPosition = window.pageYOffset;
 	if(scrollPosition<40){
 		window.scroll({
-			top: window.pageYOffset + 80,
+			top: window.pageYOffset + 100,
 			behavior: 'smooth'
 		});
 	}
