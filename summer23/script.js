@@ -4,21 +4,6 @@
 const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();
 
-
-// On load
-window.addEventListener('load', function() {
-	var overlay = document.getElementById('overlay');
-	
-	setTimeout(function() {
-		overlay.style.opacity = '0';
-	  }, 10); 
-
-	setTimeout(function() {
-	  overlay.style.display = 'none';
-	}, 500); 
-});
-
-
 var updateAgeBool = true;
 var update = setInterval(function() {
 	if(updateAgeBool){
@@ -132,3 +117,17 @@ function openContent(evt, tab) {
 	document.getElementById(tab).style.display = "block";
 	evt.currentTarget.className += " active";
 }
+
+
+// On load
+window.addEventListener('load', function() {
+	var overlay = document.getElementById('overlay');
+	
+	setTimeout(function() {
+		overlay.style.opacity = '0';
+	}, 1000); 
+
+	setTimeout(function() {
+	  overlay.style.display = 'none';
+	}, 1500); 
+});
