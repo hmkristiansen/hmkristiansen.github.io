@@ -29,19 +29,21 @@ body, html{
     margin: 0;
     -webkit-font-smoothing: antialiased;
     font-family: 'Inter', sans-serif;
-    height: -webkit-fill-available; 
     box-sizing: content-box;
     background-color: rgb(250, 250, 250);
+    position: relative;
 }
 
 body{
     font-size: 14px;
     color: black;
     min-height: -webkit-fill-available;
+    width: 100%;
+    height: 100%;
 }
 
 body > div, body > ul, body > section{
-    padding: 16px;
+    padding: 8px;
 }
 
 #overlay{
@@ -136,6 +138,7 @@ span a:hover{
 
 #content{
     display: block;
+    position: relative;
 }
 
 .section *{
@@ -303,7 +306,7 @@ button{
 }
 
 @media (prefers-color-scheme: dark) {
-    body{
+    body, html{
         color:rgb(250, 250, 250);
         background-color: rgb(25, 25, 25);
     }
