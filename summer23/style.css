@@ -151,13 +151,28 @@ span a:hover{
   
 .scroll-in {
     filter: blur(0px); 
-    transform: translateY(20px) scale(1);
+    transform: translateY(-20px) scale(1);
     opacity: 1;
 }
 
 .scroll-in *{
     pointer-events: all;
 }
+
+#header{
+    transition: opacity 0.5s ease, filter 0.3s ease, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.blurHeader{
+    filter: blur(8px); 
+    transform: translateY(0px) scale(0.95);
+    opacity: 0.4;
+}
+
+.blurHeader * {
+    pointer-events: none;
+}
+
 
 /* Tab selector */
 
@@ -305,3 +320,14 @@ button{
     }
 }
 
+/* body {
+    scroll-snap-type: y mandatory;
+}
+  
+#header {
+    scroll-snap-align: start;
+}
+
+#content {
+    scroll-snap-align: start;
+} */
