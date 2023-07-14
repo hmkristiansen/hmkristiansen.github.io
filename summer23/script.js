@@ -1,3 +1,9 @@
+// Lazy Load images
+// https://apoorv.pro/lozad.js/
+
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+
 
 // On load
 window.addEventListener('load', function() {
@@ -9,7 +15,7 @@ window.addEventListener('load', function() {
 
 	setTimeout(function() {
 	  overlay.style.display = 'none';
-	}, 1000); 
+	}, 500); 
 });
 
 
