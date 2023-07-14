@@ -9,12 +9,13 @@
         <title>Henrik Kristiansen - Interaction Designer</title>
         <noscript>Your browser needs to support Javascript to run my page 😊</noscript>
         <link rel="icon" type="image/png" sizes="32x32" href="spring22/favicon-32x32.png">
-        <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="summer23/style.css">
     </head>
 
     <body id="body">
+        <div id="overlay"></div>
         <div id="header">
             <h1>Henrik Kristiansen</h1>
             <h2>interaction designer</h2>
@@ -26,59 +27,65 @@
             <h2><span><a href="mailto:heisann@hmkristiansen.no">email</a></span> / <span><a href="https://www.linkedin.com/in/hmkristiansen/" target="_blank">linkedIn</a></span> / <span><a href="https://www.instagram.com/hmkristiansen/" target="_blank">instagram</a></span></h2>
         </div>
 
-        <!-- <section>
-            <ul id="menu">
-                <li id="work_toggle" class="menu_item active">work</li>
-                <li id="foto_toggle" class="menu_item">foto</li>
-                <li id="word_toggle" class="menu_item">words</li>
-            </ul>
-
-            <div id="work_container">
-                <div class="row"> 
-                    <div class="column">
-                      <img src="summer23/img/squads.png" style="width:100%">
-                      <img src="summer23/img/squads.png" style="width:100%">
-                      <img src="summer23/img/squads.png" style="width:100%">
-                      <img src="summer23/img/squads.png" style="width:100%">
-                      <img src="summer23/img/squads.png" style="width:100%">
-                      <img src="summer23/img/squads.png" style="width:100%">
-                      <img src="summer23/img/squads.png" style="width:100%">
-                    </div>
-                    <div class="column">
-                        <img src="summer23/img/squads.png" style="width:100%">
-                        <img src="summer23/img/squads.png" style="width:100%">
-                        <img src="summer23/img/squads.png" style="width:100%">
-                        <img src="summer23/img/squads.png" style="width:100%">
-                        <img src="summer23/img/squads.png" style="width:100%">
-                        <img src="summer23/img/squads.png" style="width:100%">
-                    </div>  
-                    <div class="column">
-                      <img src="/w3images/wedding.jpg" style="width:100%">
-                      <img src="/w3images/rocks.jpg" style="width:100%">
-                      <img src="/w3images/falls2.jpg" style="width:100%">
-                      <img src="/w3images/paris.jpg" style="width:100%">
-                      <img src="/w3images/nature.jpg" style="width:100%">
-                      <img src="/w3images/mist.jpg" style="width:100%">
-                      <img src="/w3images/paris.jpg" style="width:100%">
-                    </div>
-                    <div class="column">
-                      <img src="/w3images/underwater.jpg" style="width:100%">
-                      <img src="/w3images/ocean.jpg" style="width:100%">
-                      <img src="/w3images/wedding.jpg" style="width:100%">
-                      <img src="/w3images/mountainskies.jpg" style="width:100%">
-                      <img src="/w3images/rocks.jpg" style="width:100%">
-                      <img src="/w3images/underwater.jpg" style="width:100%">
-                    </div>
-                  </div>
+        <div id="content" class="section">
+            <div class="tab">
+                <button class="tablinks active" onclick="openCity(event, 'Work')">Design</button>
+                <button class="tablinks" onclick="openCity(event, 'Foto')">Foto</button>
             </div>
-
-            <div id="foto_container">
-                
-            </div> 
-
-        </section>
-        -->
-
+            <div id="Work" class="tabcontent" style="display: block;">
+                <div id="work" class="row"> 
+                    <div class="column">
+                        <div class="img_container">
+                            <p class="onLight">Inspera Test Experience<br><span>Consultant, 2022</span></p>
+                            <img src="summer23/img/work/inspera.png">
+                        </div>
+                        <div class="img_container">
+                            <p class="onDark">HOPS<br><span>Startup, 2022-23</span></p>
+                            <img src="summer23/img/work/hops.png">
+                        </div>
+                        <div class="img_container">
+                            <p class="onLight">Cognite Vision<br><span>Consultant, 2021</span></p>
+                            <img src="summer23/img/work/cognite.png">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="img_container">
+                            <p class="onLight">Byks (prev. Squads)<br><span>Startup, 2022-23</span></p>
+                            <img src="summer23/img/work/squads.png">
+                        </div>
+                        <div class="img_container">
+                            <p class="onLight">Hjærnelæring<br><span>Startup, 2022</span></p>
+                            <img src="summer23/img/work/brain.png">
+                        </div>
+                        <div class="img_container">
+                            <p class="onLight">Parkdressen.no<br><span>Consultant, 2022</span></p>
+                            <img src="summer23/img/work/parkdressen.png">
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div id="Foto" class="tabcontent">
+                <div id="foto" class="row"> 
+                    <div class="column">
+                        <img src="summer23/img/foto/cph.jpeg">
+                        <img src="summer23/img/foto/heimen.jpeg">
+                        <img src="summer23/img/foto/lines.jpeg">
+                        <img src="summer23/img/foto/oslo_sommer.jpeg">
+                    </div>
+                    <div class="column">
+                        <img src="summer23/img/foto/oslo.jpeg">
+                        <img src="summer23/img/foto/pallette.jpeg">
+                        <img src="summer23/img/foto/reflection.jpeg">
+                        <img src="summer23/img/foto/barn.jpeg">
+                        <img src="summer23/img/foto/sorreisa.jpeg">
+                        <img src="summer23/img/foto/iron.jpeg">
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            Copyright © Henrik Kristiansen<br>All rights reserved
+        </div>
         <script src="summer23/script.js"></script>
     </body>
 </html>

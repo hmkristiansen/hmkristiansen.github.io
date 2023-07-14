@@ -40,3 +40,59 @@ function updateAge(){
 	}
 }
 
+
+window.addEventListener("scroll", function() {
+	var section = document.getElementById("content");
+	var sectionOffset = section.offsetTop;
+	var scrollPosition = window.pageYOffset;
+
+	var element = document.getElementById("header");
+	var elementHeight = element.offsetHeight;
+  
+	if (scrollPosition > (sectionOffset-elementHeight+4)) {
+	  section.classList.add("scroll-in");
+	} else {
+	  section.classList.remove("scroll-in");
+	}
+});
+
+const element = document.getElementById('content');
+
+element.addEventListener('click', function() {
+
+	let scrollPosition = window.pageYOffset;
+
+	if(scrollPosition<8){
+		window.scroll({
+			top: window.pageYOffset + 24,
+			behavior: 'smooth'
+		});
+	}
+});
+
+function openCity(evt, tab) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+	  tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+	  tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(tab).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+  
+
+window.addEventListener('load', function() {
+	var overlay = document.getElementById('overlay');
+	
+	setTimeout(function() {
+		overlay.style.opacity = '0';
+	  }, 100); 
+
+	setTimeout(function() {
+	  overlay.style.display = 'none';
+	}, 1000); 
+});

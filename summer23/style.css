@@ -1,7 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+/* ----- GLOBAL AND META ----- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+::selection {
+    color: black;
+    background: rgb(255, 187, 0);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ----- BODY AND HTML -----*/
+
 body, html{
-    /* background-color: white; */
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -14,11 +37,6 @@ body{
     font-size: 14px;
     background-color: rgb(250, 250, 250);
     color: black;
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-
     min-height: -webkit-fill-available;
 }
 
@@ -26,35 +44,35 @@ body > div, body > ul, body > section{
     padding: 16px;
 }
 
-ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+#overlay{
+    position: absolute;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
-section{
-    position: relative;
-    display: block;
-}
-
-#menu{
-    position: relative;
-    display: block;
-}
-
-#menu li{
-    float: left;
-    margin-right: 8px;
-}
-
-#menu .active{
-    text-decoration: underline;
-}
+/* ----- HEADER ----- */
 
 #header *{
     margin-bottom: 2px;
 }
 
+h1{
+    font-weight: 400;
+    width: fit-content;
+}
+
+h2{
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+h1,h2{
+    font-size: 0.9rem;
+}
 
 a{
     color: inherit;
@@ -68,7 +86,6 @@ a{
     cursor: pointer;
     border: 1px solid transparent;
 }
-
 
 a:hover{
     border: 1px solid black;
@@ -93,32 +110,6 @@ span a:hover{
     cursor: alias;
 }
 
-::selection {
-    color: black;
-    background: rgb(255, 187, 0);
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-h1{
-    font-weight: 400;
-    /* cursor: help; */
-    width: fit-content;
-}
-
-h2{
-    font-weight: 400;
-    opacity: 0.5;
-}
-
-h1,h2{
-    margin: 0;
-    padding: 0;
-    font-size: 0.9rem;
-}
-
 #life_wrapper{
     width: fit-content;
 }
@@ -130,7 +121,6 @@ h1,h2{
 
 #locations{
     text-transform: lowercase;
-    /* cursor: all-scroll; */
     width: fit-content;
 }
 
@@ -142,60 +132,151 @@ h1,h2{
 }
 
 
+/* CONTENT */
 
-
-
-
-
-#work_container{
+#content{
     display: block;
 }
 
+.section *{
+    pointer-events: none;
+}
+
+.section {
+    transition: opacity 0.5s ease, filter 0.3s ease, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: blur(16px); 
+    transform: translateY(50px) scale(0.95);
+    opacity: 0.2;
+}
+  
+.scroll-in {
+    filter: blur(0px); 
+    transform: translateY(20px) scale(1);
+    opacity: 1;
+}
+
+.scroll-in *{
+    pointer-events: all;
+}
+
+/* Tab selector */
+
+.tab {
+    overflow: hidden;
+    transform: translateX(-4px);
+}
+
+button{
+    background-color: unset;
+    font-size: 1rem;
+}
+  
+.tab button {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 8px;
+    margin-right: 0px;
+    transition: 0.3s;
+    opacity: 0.4;
+}
+  
+.tab button:hover {
+    
+    opacity: 1;
+}
+
+.tab button.active {
+    text-decoration: underline;
+    opacity: 1;
+}
+  
+.tabcontent {
+    display: none;    
+}
+
+#footer{
+    opacity: 0.5;
+    margin-top: 50px;
+}
+
+/* Galleries */
+
 .row {
-    display: -ms-flexbox; /* IE10 */
+    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding: 0 4px;
-  }
+}
   
-  /* Create four equal columns that sits next to each other */
-  .column {
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-    max-width: 25%;
+.column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
     padding: 0 4px;
-  }
+}
   
-  .column img {
+.column img {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-  }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
+}
+
+.img_container{
+    position: relative;
+}
+
+.img_container p{
+    position: absolute;
+    z-index: 1000;
+    top: 24px;
+    left: 16px;
+    opacity: 0.9;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.img_container p span{
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.onLight{
+    color: rgb(25, 25, 25);
+}
+
+.onDark{
+    color: rgb(245, 245, 245);
+}
+
+
+@media screen and (max-width: 1000px) {
     .column {
-      -ms-flex: 50%;
-      flex: 50%;
-      max-width: 50%;
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
+
+    .section {
+        transform: translateY(10px) scale(0.95);
+    }
+
+    .scroll-in {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@media screen and (max-width: 600px) {
     .column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
-  }
+}
+  
 
-
-
-
-
-
+/* ----- MEDIA QUIERIES ----- */
 
 @media only screen and (min-width: 768px) {
 
@@ -204,7 +285,6 @@ h1,h2{
 @media only screen and (max-width: 767px) {
 
 }
-
 
 @media (prefers-color-scheme: dark) {
     body{
@@ -219,4 +299,8 @@ h1,h2{
         background-color: white;
         color: black;
     }
+    button{
+        color: rgb(245, 245, 245);
+    }
 }
+
