@@ -133,6 +133,13 @@ span a:hover{
     text-decoration: line-through;
 }
 
+/* FOOTER */
+
+#footer{
+    opacity: 0.5;
+    padding-top: 56px;
+    padding-bottom: 16px;
+}
 
 /* CONTENT */
 
@@ -215,10 +222,6 @@ button{
     display: none;    
 }
 
-#footer{
-    opacity: 0.5;
-    margin-top: 50px;
-}
 
 /* Galleries */
 
