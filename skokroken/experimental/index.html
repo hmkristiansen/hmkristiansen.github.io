@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Store the opening hours of the store
+        const openingHours = {
+            monday: { start: '09:30', end: '16:30' },
+            tuesday: { start: '09:30', end: '16:30' },
+            wednesday: { start: '09:30', end: '16:30' },
+            thursday: { start: '09:30', end: '17:00' },
+            friday: { start: '09:30', end: '16:30' },
+            saturday: { start: '09:30', end: '14:00' },
+            sunday: { start: 'Closed', end: 'Closed' }
+        };
+
+        // Function to update the div based on the current day and time in Oslo
+        function updateStoreStatus() {
+        const now = new Date();
+        const options = { timeZone: 'Europe/Oslo', hour: '2-digit', minute: '2-digit' };
+
+        // Get the current day of the week in lowercase
+        const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+        const currentDay = days[now.getDay()];
+
+        const currentTime = now.toLocaleTimeString('en-US', options);
+        const currentOpeningHours = openingHours[currentDay];
+
+        let status;
+
+        if (!currentOpeningHours || currentOpeningHours.start === 'Closed') {
+            status = 'Stengt i dag';
+        } else {
+            status = `Åpent i dag fra ${currentOpeningHours.start} til ${currentOpeningHours.end}`;
+        }
+
+        // Update the div with the store status
+        const statusDiv = document.getElementById('storeStatus');
+        statusDiv.textContent = status;
+        }
+
+        // Call the function when the page loads
+        window.addEventListener('DOMContentLoaded', updateStoreStatus);
+    </script>
+
+    <style>
+        #storeStatus{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="storeStatus"></div>
+</body>
+</html>
