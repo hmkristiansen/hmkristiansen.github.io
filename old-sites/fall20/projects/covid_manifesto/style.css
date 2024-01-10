@@ -16,18 +16,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
-  background: #ffebf4;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ffebf4), to(#e2f0ff));
-  background: linear-gradient(0deg, #ffebf4 0%, #e2f0ff 100%);
-  -webkit-transition: all 0.2s;
+  font-family: "Karla", sans-serif;
+  background: rgb(255, 235, 244);
+  background: linear-gradient(0deg, rgb(255, 235, 244) 0%, rgb(226, 240, 255) 100%);
   transition: all 0.2s;
 }
 
 .blur {
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
-  -webkit-filter: blur(5px);
   filter: blur(5px);
 }
 
@@ -43,10 +40,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 #overlay #overlayContent {
   position: absolute;
   width: 600px;
@@ -59,7 +54,6 @@ body {
   left: calc(50% - 300px);
   top: calc(50% - 250px);
 }
-
 #overlay #overlayContent #close_overlay_btn {
   position: absolute;
   cursor: pointer;
@@ -68,20 +62,15 @@ body {
   border-radius: 10px;
   background-color: #ff7f50;
   padding: 10px 15px;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 #overlay #overlayContent #close_overlay_btn:hover {
   background-color: #dd7048;
 }
-
 #overlay a {
   color: dimgray;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 #overlay a:hover {
   color: black;
 }
@@ -96,83 +85,68 @@ body {
 #greeting {
   width: 100%;
   height: 100%;
-  -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-  font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
   color: #2c2c2c;
   font-size: 1.5rem;
   position: fixed;
 }
-
 #greeting .svgArrow {
   width: 200px;
   height: 30px;
   position: relative;
 }
-
 #greeting .svgArrow svg {
   width: inherit;
   height: inherit;
 }
-
 #greeting .svgArrow p {
   text-align: left;
 }
-
 #greeting #datePickerArrow {
   left: 40%;
   top: 100px;
 }
-
 #greeting #arrowC {
   left: calc(50% - 400px);
   top: calc(50% - 100px);
 }
-
 #greeting #arrowC p {
   position: absolute;
   left: -20px;
   top: -50px;
 }
-
 #greeting #arrowH {
   left: calc(50% + 150px);
   top: calc(50% + 50px);
 }
-
 #greeting #arrowH p {
   position: absolute;
   left: 150px;
   top: 0px;
 }
-
 #greeting #timeline {
   position: absolute;
   width: 50%;
   left: 25%;
   bottom: 20%;
 }
-
 #greeting #timeline p {
   width: 30%;
   position: absolute;
 }
-
 #greeting #timeline #timeline0 {
   left: -10%;
 }
-
 #greeting #timeline #timeline1 {
   right: -15%;
 }
-
 #greeting #split {
   width: 15px;
   position: absolute;
   bottom: 10%;
   left: calc(50% - 7.5px);
 }
-
 #greeting #scroll {
   text-align: center;
   width: 200px;
@@ -200,32 +174,25 @@ body {
   position: fixed;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
+  transform: translate(-50%, -50%);
   transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
   z-index: 0;
 }
 
 #blobH {
-  -webkit-transform: translateX(200px);
-          transform: translateX(200px);
+  transform: translateX(200px);
   width: 100px;
   height: 100px;
 }
 
 #blobC {
-  -webkit-transform: translateX(-300px);
-          transform: translateX(-300px);
+  transform: translateX(-300px);
   width: 100px;
   height: 100px;
 }
 
 .blob svg {
   position: absolute;
-  -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
 
@@ -246,7 +213,6 @@ body {
   border-radius: 20px;
   z-index: 1;
   background-color: #F5F5F5;
-  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -260,7 +226,6 @@ body {
   border-radius: 20px;
   z-index: 1;
   background-color: #FFFAFF;
-  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -304,5 +269,4 @@ body {
         background-color: brown;
     }
 }
-*/
-/*# sourceMappingURL=style.css.map */
+*//*# sourceMappingURL=style.css.map */

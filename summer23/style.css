@@ -183,6 +183,9 @@ span a:hover{
     pointer-events: none;
 }
 
+#work_info{
+    margin: 16px 0;
+}
 
 /* Tab selector */
 

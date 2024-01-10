@@ -2,7 +2,7 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #F5F5F5;
   font-size: 16px;
   height: calc(100% + 1px);
@@ -40,31 +40,20 @@ ul {
   /*resize: both; !*enable this to css resize*! */
   overflow: auto;
 }
-
 .popup .popup-header {
   padding: 8px;
   cursor: move;
   z-index: 10;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
 }
-
 .popup .cardFront {
   padding: 1rem;
 }
-
 .popup .cardFront h1, .popup .cardFront h2, .popup .cardFront p {
   margin: 0;
   padding: 0;
@@ -73,7 +62,6 @@ ul {
 }
 
 .windowShadow {
-  -webkit-box-shadow: 5px 5px 0px 0px #4F4F4F;
   box-shadow: 5px 5px 0px 0px #4F4F4F;
 }
 
@@ -111,32 +99,17 @@ ul {
 
 /*NOSELECT*/
 .popup * {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+             supported by Chrome and Opera */
 }
 
 .noSelect * {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
-}
-/*# sourceMappingURL=style.css.map */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+             supported by Chrome and Opera */
+}/*# sourceMappingURL=style.css.map */
